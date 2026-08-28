@@ -1,7 +1,6 @@
 ---
 const base = import.meta.env.BASE_URL;
 const images = `${base}/images/bikes/wonder-saint-etienne`;
-const videos = `${base}/videos/bikes/wonder-saint-etienne`;
 const facts = [
   ['År', '1937'],
   ['Mærke', 'Wonder'],
@@ -113,14 +112,6 @@ const facts = [
         <section class="wonder-details">
           <figure><img src={`${images}/cockpit.webp`} alt="Wonder-cyklens styr, flaske og bremsegreb" loading="lazy" /><figcaption>Styr, bremsegreb og drikkeflaske i tidstypisk udtryk.</figcaption></figure>
           <figure><img src={`${images}/bottle.webp`} alt="Nærbillede af drikkeflaske og cockpit på Wonder-cyklen" loading="lazy" /><figcaption>Detaljerne er bevaret som en del af helheden.</figcaption></figure>
-        </section>
-
-        <section class="wonder-video-section">
-          <div><p class="section-label">Cyklen i bevægelse</p><h2>Se mekanikken tæt på</h2><p>De korte optagelser viser cyklens detaljer og den restaurerede opbygning fra flere vinkler.</p></div>
-          <div class="wonder-videos">
-            <video controls playsinline preload="metadata"><source src={`${videos}/wonder-detaljer-1.mp4`} type="video/mp4" />Din browser kan ikke afspille videoen.</video>
-            <video controls playsinline preload="metadata"><source src={`${videos}/wonder-detaljer-2.mp4`} type="video/mp4" />Din browser kan ikke afspille videoen.</video>
-          </div>
         </section>
 
         <section class="wonder-brand-history">

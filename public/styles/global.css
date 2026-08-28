@@ -47,6 +47,53 @@ h1 em { color: var(--rust); font-weight: 400; }
 .story { margin: 0 clamp(24px, 8vw, 130px) 110px; padding: 70px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .story blockquote { max-width: 900px; font-size: clamp(38px, 4.5vw, 64px); line-height: 1.15; margin: 35px 0; }
 .story > a { color: var(--rust); font-size: 13px; text-underline-offset: 5px; }
+.featured-bike { display: grid; grid-template-columns: 1.2fr 1fr; min-height: 650px; background: var(--cream); }
+.featured-bike-image { min-height: 650px; overflow: hidden; }
+.featured-bike-image img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.72) contrast(.95); }
+.featured-bike-copy { padding: 90px clamp(36px, 7vw, 110px); display: flex; flex-direction: column; justify-content: center; }
+.featured-year { margin: 30px 0 8px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+.featured-bike h2 { margin: 0 0 30px; font-size: clamp(52px, 6vw, 88px); line-height: .9; }
+.featured-bike-copy > p:not(.section-label):not(.featured-year) { max-width: 480px; line-height: 1.75; }
+.text-link { margin-top: 25px; color: var(--rust); text-underline-offset: 5px; font-size: 13px; }
+
+.bike-page { overflow: hidden; }
+.bike-hero { padding: 80px clamp(24px, 8vw, 130px) 65px; }
+.bike-kicker { display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; letter-spacing: .15em; }
+.bike-kicker a { color: var(--rust); text-underline-offset: 5px; }
+.bike-hero h1 { font-size: clamp(70px, 11vw, 165px); margin: 75px 0 35px; }
+.bike-lead { max-width: 750px; font-family: 'Libre Caslon Display', serif; font-size: clamp(24px, 3vw, 40px); line-height: 1.25; }
+.bike-hero-image { margin: 0; background: var(--ink); }
+.bike-hero-image img { display: block; width: 100%; max-height: 82vh; object-fit: cover; object-position: center 55%; filter: saturate(.78); }
+.bike-hero-image figcaption, .detail-figure figcaption { padding: 14px clamp(24px, 4vw, 64px); color: #aeb5ad; background: var(--ink); font-size: 11px; letter-spacing: .04em; }
+.bike-intro { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; padding: 110px clamp(24px, 8vw, 130px); }
+.bike-prose { max-width: 680px; }
+.bike-prose p { line-height: 1.85; }
+.bike-prose-large p { font-family: 'Libre Caslon Display', serif; font-size: clamp(27px, 3vw, 43px); line-height: 1.35; margin-top: 0; }
+.bike-facts { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0 clamp(24px, 8vw, 130px) 110px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.bike-facts div { min-height: 125px; padding: 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.bike-facts dt { color: var(--rust); text-transform: uppercase; letter-spacing: .12em; font-size: 10px; }
+.bike-facts dd { margin: 34px 0 0; font-family: 'Libre Caslon Display', serif; font-size: 21px; }
+.bike-story-split { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(40px, 8vw, 130px); padding: 100px clamp(24px, 8vw, 130px); background: var(--cream); }
+.bike-story-split.reverse { background: var(--paper); }
+.bike-story-split h2, .artifact-band h2 { font-family: 'Libre Caslon Display', serif; font-size: clamp(42px, 5vw, 72px); font-weight: 400; line-height: 1; margin: 28px 0; }
+.detail-figure { margin: 0; }
+.detail-figure img { display: block; width: 100%; max-height: 680px; object-fit: cover; }
+.detail-duo { position: relative; padding: 0 0 70px 45px; }
+.detail-inset { position: absolute; width: 42%; left: 0; bottom: 0; border: 8px solid var(--cream); }
+.detail-inset img { aspect-ratio: 4 / 5; }
+.badge-figure img { object-position: center 43%; }
+.artifact-band { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: clamp(40px, 8vw, 130px); padding: 100px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
+.artifact-band figure { margin: 0; }
+.artifact-band img { width: 100%; display: block; }
+.uncertainty { padding-left: 18px; border-left: 2px solid var(--rust); color: #aeb5ad; font-size: 13px; }
+.restoration-note { padding: 120px clamp(24px, 15vw, 240px); text-align: center; }
+.restoration-note blockquote { margin: 35px auto; font-size: clamp(52px, 7vw, 100px); line-height: 1; }
+.restoration-note > p:last-child { margin: auto; max-width: 700px; line-height: 1.8; }
+.period-note { display: grid; grid-template-columns: 1fr 3fr; gap: 40px; margin: 0 clamp(24px, 8vw, 130px) 100px; padding: 40px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.period-note span { color: var(--rust); text-transform: uppercase; letter-spacing: .14em; font-size: 11px; }
+.period-note p { max-width: 820px; margin: 0; line-height: 1.8; }
+.bike-bottom-nav { padding: 0 clamp(24px, 8vw, 130px) 100px; display: flex; justify-content: space-between; font-size: 12px; }
+.bike-bottom-nav a { color: var(--rust); }
 footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; align-items: end; padding: 70px clamp(24px, 6vw, 96px); font-size: 13px; line-height: 1.7; }
 .copyright { text-align: right; }
 
@@ -57,6 +104,17 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .wheel { width: 620px; right: -390px; top: 120px; }
   .intro { grid-template-columns: 1fr; }
   .decades, .content-grid { grid-template-columns: 1fr; }
+  .featured-bike, .bike-story-split, .artifact-band, .bike-intro { grid-template-columns: 1fr; }
+  .featured-bike-image { min-height: 420px; }
+  .featured-bike-copy { padding: 65px 24px; }
+  .bike-hero { padding-top: 55px; }
+  .bike-kicker { align-items: flex-start; gap: 20px; }
+  .bike-facts { grid-template-columns: repeat(2, 1fr); margin-left: 24px; margin-right: 24px; }
+  .bike-story-split, .artifact-band { padding-left: 24px; padding-right: 24px; }
+  .detail-duo { padding-left: 25px; }
+  .bike-story-split.reverse .detail-figure { order: 2; }
+  .period-note { grid-template-columns: 1fr; }
+  .bike-bottom-nav { gap: 30px; align-items: flex-start; }
   .decades article { border-right: 1px solid rgba(241,238,228,.2); border-bottom: 0; }
   .decades article:last-child { border-bottom: 1px solid rgba(241,238,228,.2); }
   footer { grid-template-columns: 1fr; }

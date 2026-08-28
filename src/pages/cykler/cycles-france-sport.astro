@@ -1,0 +1,144 @@
+---
+const base = import.meta.env.BASE_URL;
+const images = `${base}/images/bikes/cycles-france-sport`;
+const facts = [
+  ['Datering', 'ca. 1916–1920'],
+  ['Mærke', 'Cycles France-Sport'],
+  ['Oprindelse', 'Toulouse, Frankrig'],
+  ['Materiale', 'Stål'],
+  ['Vægt', 'ca. 14 kg'],
+  ['Gear', 'Vendbart baghjul, 2 tandhjul'],
+  ['Stand', 'Restaureret med bevaret patina'],
+];
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Historien om en Cycles France-Sport racercykel fra omkring 1919, fundet i en lade nord for Toulouse." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cycles France-Sport omkring 1919" />
+    <meta property="og:description" content="Cyklen, der ventede næsten 100 år i en lade nord for Toulouse." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/bikes/cycles-france-sport/hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Cycles France-Sport ca. 1919 · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside">
+        <span class="brand-mark">E<span>B</span></span>
+        <span>The Evolution<br />of Bikes</span>
+      </a>
+      <nav aria-label="Hovedmenu">
+        <a href={`${base}/#samlingen`}>Samlingen</a>
+        <a href={`${base}/#historier`}>Historier</a>
+        <a href={`${base}/#viden`}>Viden</a>
+        <a href={`${base}/#om`}>Om</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="bike-page">
+        <header class="bike-hero">
+          <div class="bike-kicker">
+            <a href={`${base}/#samlingen`}>← Samlingen</a>
+            <span>Frankrig · ca. 1919</span>
+          </div>
+          <h1>Cycles<br /><em>France-Sport</em></h1>
+          <p class="bike-lead">Cyklen, der ventede næsten 100 år bagerst i en lade nord for Toulouse.</p>
+        </header>
+
+        <figure class="bike-hero-image">
+          <img src={`${images}/hero.webp`} alt="Cycles France-Sport racercyklen som den blev fundet, komplet og med tydelig patina" />
+          <figcaption>Cyklen før restaureringen — støvet, komplet og stadig med sin historie siddende i metallet.</figcaption>
+        </figure>
+
+        <section class="bike-intro">
+          <p class="section-label">Fundet</p>
+          <div class="bike-prose bike-prose-large">
+            <p>I 2019 stod den bagerst i en lade nord for Toulouse. Dækket af et tykt lag støv, men overraskende komplet og i god stand.</p>
+            <p>Det er en gammel Cycles France-Sport, som foreløbig dateres til omkring 1916–1920. Mærket var knyttet til René Bancal i Toulouse og var registreret allerede i 1909.</p>
+          </div>
+        </section>
+
+        <dl class="bike-facts" aria-label="Fakta om cyklen">
+          {facts.map(([label, value]) => (
+            <div><dt>{label}</dt><dd>{value}</dd></div>
+          ))}
+        </dl>
+
+        <section class="bike-story-split">
+          <div class="bike-prose">
+            <p class="section-label">Et navn i messing</p>
+            <h2>Hvem var Alfred?</h2>
+            <p>Omkring sadelpinden sad et lille, hjemmelavet messingstykke med håndskrift. På pladen kan navnet <strong>Alfred</strong> læses sammen med en henvisning til Alba ved Réalville i Tarn-et-Garonne.</p>
+            <p>Hvem Alfred var, ved vi endnu ikke. Men pladen giver cyklen et menneskeligt spor: et navn på en person, der sandsynligvis engang har kørt på den.</p>
+          </div>
+          <div class="detail-duo">
+            <figure class="detail-figure">
+              <img src={`${images}/owner-plate.webp`} alt="Den hjemmelavede messingplade omkring sadelpinden" loading="lazy" />
+              <figcaption>Den håndskrevne ejerplade sad stadig på cyklen.</figcaption>
+            </figure>
+            <figure class="detail-figure detail-inset">
+              <img src={`${images}/owner-plate-detail.webp`} alt="Nærbillede af skriften på messingpladen med navnet Alfred" loading="lazy" />
+            </figure>
+          </div>
+        </section>
+
+        <section class="artifact-band">
+          <figure>
+            <img src={`${images}/flyer.webp`} alt="Den slidte franske flyer, som blev fundet inde i styret" loading="lazy" />
+          </figure>
+          <div class="bike-prose">
+            <p class="section-label">Skjult i styret</p>
+            <h2>En flyer fra en forårsfest</h2>
+            <p>Da cyklen kom til Danmark og restaureringen begyndte, ventede endnu en overraskelse. Inde i styret lå denne flyer fra en fransk forårsfest.</p>
+            <p>Flyeren angiver <em>dimanche 31 mars</em> — søndag den 31. marts. Den bedste foreløbige kalenderdatering er 1957. Hvis det holder, havde cyklen allerede omkring 40 år på bagen, da papiret blev gemt i styret.</p>
+            <p class="uncertainty">Dateringen er foreløbig. Årstallet er ikke bevaret på den del af flyeren, der er fundet.</p>
+          </div>
+        </section>
+
+        <section class="bike-story-split reverse">
+          <figure class="detail-figure badge-figure">
+            <img src={`${images}/badge.webp`} alt="Det originale emaljerede Cycles France-Sport kronrørsemblem" loading="lazy" />
+            <figcaption>Det originale kronrørsemblem med mærkets franske farver.</figcaption>
+          </figure>
+          <div class="bike-prose">
+            <p class="section-label">Teknikken</p>
+            <h2>To gear — og en pause på vejen</h2>
+            <p>Cyklen har ikke et moderne gearsystem. Baghjulet er vendbart og har et tandhjul på hver side: et tungere gear til flad vej og et lettere til bakker.</p>
+            <p>For at skifte gearing måtte rytteren standse, løsne baghjulet, vende det og montere det igen. Det var enkelt, robust og en vigtig udvikling fra cykler med kun ét fast udvekslingsforhold.</p>
+          </div>
+        </section>
+
+        <section class="restoration-note">
+          <p class="section-label">Restaureringen</p>
+          <blockquote>Restaureret — men ikke gjort ny.</blockquote>
+          <p>Cyklen er sat i stand med respekt for de originale overflader. Patinaen, sporene efter brug og det gamle udtryk er bevaret, fordi de er en væsentlig del af fortællingen.</p>
+        </section>
+
+        <section class="period-note">
+          <span>Perioden</span>
+          <p>Da cyklen blev bygget, var belgieren Philippe Thys blandt sportens store navne. Han vandt Tour de France i 1913, 1914 og igen i 1920. Hans cykler var ikke denne Cycles France-Sport, men teknikken og arbejdsbetingelserne hørte til samme epoke.</p>
+        </section>
+
+        <nav class="bike-bottom-nav" aria-label="Navigation mellem cykler">
+          <a href={`${base}/`}>← Tilbage til forsiden</a>
+          <span>Første cykel i samlingen · 01</span>
+        </nav>
+      </article>
+    </main>
+
+    <footer id="om">
+      <div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div>
+      <p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p>
+      <p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p>
+    </footer>
+  </body>
+</html>

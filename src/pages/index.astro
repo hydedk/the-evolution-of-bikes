@@ -1,0 +1,100 @@
+---
+const collectionHighlights = [
+  { year: '1930’erne', title: 'Håndværk og stål', text: 'Klassiske stel, fine samlinger og detaljer skabt til at holde i generationer.' },
+  { year: '1950’erne', title: 'Hverdag på to hjul', text: 'Cykler til arbejde, fritid og de små historier, der følger med et langt liv.' },
+  { year: '1970’erne', title: 'Sport og fart', text: 'Lettere komponenter, nye geargrupper og racercyklens store gennembrud.' },
+];
+
+const sections = [
+  { number: '01', title: 'Cykler i samlingen', text: 'Se cyklerne, deres historie, detaljer, komponenter og restaurering.', link: '#samlingen' },
+  { number: '02', title: 'Historier og anekdoter', text: 'Personlige fortællinger fra landevejen, værkstedet og jagten på sjældne fund.', link: '#historier' },
+  { number: '03', title: 'Mærker og komponenter', text: 'Et voksende opslagsværk over producenter, dele, årgange og kendetegn.', link: '#viden' },
+];
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="En personlig samling af vintagecykler, cykelhistorier, mærker og komponenter." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Evolution of Bikes" />
+    <meta property="og:description" content="En personlig samling af vintagecykler, cykelhistorier, mærker og komponenter." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Evolution of Bikes" />
+    <meta name="twitter:description" content="Vintagecykler, historier og godt håndværk." />
+    <meta name="twitter:image" content="https://hydedk.github.io/the-evolution-of-bikes/og.png" />
+    <title>The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={import.meta.env.BASE_URL} aria-label="The Evolution of Bikes, forside">
+        <span class="brand-mark">E<span>B</span></span>
+        <span>The Evolution<br />of Bikes</span>
+      </a>
+      <nav aria-label="Hovedmenu">
+        <a href="#samlingen">Samlingen</a>
+        <a href="#historier">Historier</a>
+        <a href="#viden">Viden</a>
+        <a href="#om">Om</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Et levende arkiv over cykler og cykelkultur</p>
+        <h1>Hver cykel bærer<br />på en <em>historie.</em></h1>
+        <p class="hero-copy">Fra håndbyggede stålstel til komponenter med årtiers patina. Her samles cyklerne, menneskene og fortællingerne, der har sat hjul i bevægelse.</p>
+        <a class="button" href="#samlingen">Gå på opdagelse <span aria-hidden="true">→</span></a>
+        <div class="wheel" aria-hidden="true"><div class="wheel-hub"></div></div>
+      </section>
+
+      <section class="intro" id="samlingen">
+        <p class="section-label">Samlingen</p>
+        <div>
+          <h2>Cykler er mere end transport.</h2>
+          <p>De fortæller om deres tid, om godt håndværk og om de mennesker, der har kørt på dem. Samlingen dokumenteres én cykel og én fortælling ad gangen.</p>
+        </div>
+      </section>
+
+      <section class="decades" aria-label="Udvalgte perioder">
+        {collectionHighlights.map((item) => (
+          <article>
+            <p>{item.year}</p>
+            <h3>{item.title}</h3>
+            <span>{item.text}</span>
+          </article>
+        ))}
+      </section>
+
+      <section class="content-grid" id="historier">
+        {sections.map((item) => (
+          <a class="content-card" href={item.link}>
+            <span class="card-number">{item.number}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </a>
+        ))}
+      </section>
+
+      <section class="story" id="viden">
+        <p class="section-label">Fra arkivet</p>
+        <blockquote>“Det interessante er ikke kun, hvor gammel en cykel er — men hvilke veje den har kørt, og hvem der har passet på den.”</blockquote>
+        <a href="https://velovintagehyde.blogspot.com/">Besøg det tidligere arkiv på Velo Vintage Hyde <span aria-hidden="true">→</span></a>
+      </section>
+    </main>
+
+    <footer id="om">
+      <div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div>
+      <p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p>
+      <p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p>
+    </footer>
+  </body>
+</html>

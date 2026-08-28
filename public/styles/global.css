@@ -235,6 +235,58 @@ h1 em { color: var(--rust); font-weight: 400; }
 .component-closing .section-label { color: var(--ink); }
 .component-closing blockquote { max-width: 1100px; margin: 38px 0; font-size: clamp(48px, 7vw, 100px); line-height: 1; }
 .component-closing > p:last-child { max-width: 700px; line-height: 1.85; }
+
+.archive-hero { padding: 100px clamp(24px, 8vw, 130px); }
+.archive-hero h1 { font-size: clamp(70px, 10vw, 145px); margin: 35px 0; }
+.archive-hero > p:last-child { max-width: 600px; font-size: 17px; line-height: 1.75; }
+.story-archive { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 0 clamp(24px, 8vw, 130px) 110px; }
+.story-archive > a { display: grid; grid-template-rows: 360px 1fr; text-decoration: none; background: var(--cream); transition: transform .2s; }
+.story-archive > a:hover { transform: translateY(-5px); }
+.story-archive img { width: 100%; height: 100%; object-fit: cover; }
+.story-archive > a > div { padding: 30px; display: flex; flex-direction: column; }
+.story-archive span { color: var(--rust); font-size: 11px; letter-spacing: .14em; }
+.story-archive h2 { margin: 45px 0 16px; font-family: 'Libre Caslon Display', serif; font-size: clamp(34px, 4vw, 55px); font-weight: 400; line-height: 1.05; }
+.story-archive p { line-height: 1.7; }
+.story-archive b { margin-top: auto; padding-top: 30px; color: var(--rust); font-size: 12px; font-weight: 500; }
+.eroica-page { overflow: hidden; }
+.eroica-hero { padding: 100px clamp(24px, 8vw, 130px) 85px; }
+.eroica-hero h1 { font-size: clamp(65px, 9vw, 135px); margin: 35px 0; }
+.eroica-hero > p:last-child { max-width: 770px; font-family: 'Libre Caslon Display', serif; font-size: clamp(25px, 3vw, 41px); line-height: 1.28; }
+.eroica-bike { margin: 0; padding: 55px clamp(24px, 8vw, 130px) 0; background: var(--ink); }
+.eroica-bike img { display: block; width: min(100%, 1500px); margin: 0 auto; }
+.eroica-bike figcaption, .eroica-landscape figcaption { padding: 14px 0; color: #aeb5ad; font-size: 11px; }
+.eroica-opening { display: grid; grid-template-columns: 1fr 3fr; gap: 45px; padding: 110px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
+.eroica-opening > div p { max-width: 950px; margin: 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(40px, 5vw, 72px); line-height: 1.14; }
+.eroica-story { display: grid; grid-template-columns: minmax(0, 760px) 250px; justify-content: center; gap: clamp(60px, 10vw, 150px); padding: 120px 24px; }
+.eroica-copy { font-size: 17px; line-height: 1.9; }
+.eroica-copy p { margin: 0 0 32px; }
+.eroica-story aside { align-self: center; text-align: center; padding: 50px 20px; border-top: 1px solid var(--rust); border-bottom: 1px solid var(--rust); }
+.eroica-story aside strong { display: block; color: var(--rust); font-family: 'Libre Caslon Display', serif; font-size: 100px; font-weight: 400; line-height: .8; }
+.eroica-story aside span { display: block; margin-top: 28px; font-size: 10px; line-height: 1.6; text-transform: uppercase; letter-spacing: .12em; }
+.eroica-landscape { margin: 0; padding: 60px clamp(24px, 8vw, 130px) 0; background: var(--cream); }
+.eroica-landscape img { display: block; width: min(100%, 1450px); aspect-ratio: 16 / 9; margin: auto; object-fit: cover; }
+.eroica-landscape figcaption { color: #59625b; }
+.eroica-rules { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(50px, 9vw, 150px); padding: 120px clamp(24px, 8vw, 130px); }
+.eroica-rules h2, .strade-section h2 { font-family: 'Libre Caslon Display', serif; font-size: clamp(50px, 6vw, 86px); font-weight: 400; line-height: 1; margin: 30px 0; }
+.eroica-rules > div > p:last-child { max-width: 600px; line-height: 1.85; }
+.eroica-rules dl { margin: 0; border-top: 1px solid var(--line); }
+.eroica-rules dl div { display: grid; grid-template-columns: 1fr 1.4fr; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.eroica-rules dt { color: var(--rust); text-transform: uppercase; font-size: 10px; letter-spacing: .12em; }
+.eroica-rules dd { margin: 0; font-family: 'Libre Caslon Display', serif; font-size: 23px; }
+.eroica-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; padding: 110px clamp(24px, 8vw, 130px); background: var(--ink); }
+.eroica-detail-grid figure { margin: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; background: #0f1612; }
+.eroica-detail-grid img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.eroica-detail-grid .detail-portrait img { aspect-ratio: 4 / 5; }
+.eroica-detail-grid figcaption { padding: 13px 16px; color: #aeb5ad; font-size: 10px; }
+.collection-ready { padding: 110px clamp(24px, 13vw, 210px); background: var(--rust); color: var(--paper); }
+.collection-ready .section-label { color: var(--ink); }
+.collection-ready blockquote { margin: 40px 0; font-size: clamp(52px, 7vw, 100px); line-height: 1; }
+.collection-ready > p:last-child { max-width: 620px; line-height: 1.8; }
+.strade-section { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(60px, 10vw, 150px); padding: 120px clamp(24px, 8vw, 130px); }
+.strade-section > div:last-child { align-self: end; font-size: 16px; line-height: 1.9; }
+.eroica-closing { padding: 100px clamp(24px, 10vw, 160px); background: var(--ink); color: var(--paper); }
+.eroica-closing blockquote { margin: 0; font-size: clamp(52px, 7vw, 105px); line-height: 1; }
+.eroica-closing em { color: var(--rust); font-weight: 400; }
 footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; align-items: end; padding: 70px clamp(24px, 6vw, 96px); font-size: 13px; line-height: 1.7; }
 .copyright { text-align: right; }
 
@@ -295,6 +347,15 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .component-narrative aside i { width: 100%; height: 1px; }
   .component-copy blockquote { margin-left: -24px; margin-right: -24px; }
   .catalog-spread { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
+  .story-archive, .eroica-opening, .eroica-story, .eroica-rules, .strade-section { grid-template-columns: 1fr; }
+  .story-archive > a { grid-template-rows: 260px 1fr; }
+  .eroica-hero { padding-top: 70px; }
+  .eroica-bike { padding: 24px 24px 0; }
+  .eroica-story aside { width: min(100%, 280px); justify-self: center; }
+  .eroica-landscape { padding: 24px 24px 0; }
+  .eroica-landscape img { aspect-ratio: 4 / 3; }
+  .eroica-detail-grid { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
+  .eroica-detail-grid img, .eroica-detail-grid .detail-portrait img { aspect-ratio: 4 / 3; max-height: 420px; }
   .decades article { border-right: 1px solid rgba(241,238,228,.2); border-bottom: 0; }
   .decades article:last-child { border-bottom: 1px solid rgba(241,238,228,.2); }
   footer { grid-template-columns: 1fr; }

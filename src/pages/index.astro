@@ -1,7 +1,7 @@
 ---
 const base = import.meta.env.BASE_URL;
 const collectionHighlights = [
-  { year: '1930’erne', title: 'Håndværk og stål', text: 'Klassiske stel, fine samlinger og detaljer skabt til at holde i generationer.' },
+  { year: '1900–1920’erne', title: 'Pionerer og udholdenhed', text: 'Tour de France, grusveje og ryttere, der selv måtte reparere deres cykler.', link: `${base}/perioder/1900-1920/` },
   { year: '1950’erne', title: 'Hverdag på to hjul', text: 'Cykler til arbejde, fritid og de små historier, der følger med et langt liv.' },
   { year: '1970’erne', title: 'Sport og fart', text: 'Lettere komponenter, nye geargrupper og racercyklens store gennembrud.' },
 ];
@@ -66,10 +66,11 @@ const sections = [
 
       <section class="decades" aria-label="Udvalgte perioder">
         {collectionHighlights.map((item) => (
-          <article>
+          <article class:list={{ 'has-link': item.link }}>
             <p>{item.year}</p>
             <h3>{item.title}</h3>
             <span>{item.text}</span>
+            {item.link && <a href={item.link} aria-label={`Læs om ${item.year}`}>Læs perioden <span aria-hidden="true">→</span></a>}
           </article>
         ))}
       </section>

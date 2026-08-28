@@ -1,0 +1,120 @@
+---
+const base = import.meta.env.BASE_URL;
+const facts = [
+  ['1903', 'Det første Tour de France'],
+  ['1910', 'Tourmalet kommer med i løbet'],
+  ['1919', 'Den første gule førertrøje'],
+  ['5.560 km', 'Tour de France 1919'],
+  ['482 km', 'Længste etape i 1919'],
+  ['18.54.07', 'Jean Alavoines vindertid'],
+];
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="1900 til 1920’erne: pionerer, udholdenhed og Tour de France i cykelsportens hårde ungdom." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="1900 til 1920’erne · Pionerer og udholdenhed" />
+    <meta property="og:description" content="Da Tour de France var en brutal prøve for både mennesker og maskiner." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/periods/1900-1920/rytter-velodrom.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>1900 til 1920’erne · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
+      <nav aria-label="Hovedmenu"><a href={`${base}/#samlingen`}>Samlingen</a><a href={`${base}/#historier`}>Historier</a><a href={`${base}/#viden`}>Viden</a><a href={`${base}/om/`}>Om</a></nav>
+    </header>
+
+    <main>
+      <article class="era-page">
+        <header class="era-hero">
+          <div class="era-heading">
+            <p class="section-label">1900 til 1920’erne</p>
+            <h1>Pionerer og<br /><em>udholdenhed</em></h1>
+          </div>
+          <p class="era-deck">En tid, hvor cyklen var enkel, vejene ubarmhjertige, og rytterne selv måtte bringe både krop og maskine hele vejen hjem.</p>
+        </header>
+
+        <figure class="era-main-image">
+          <img src={`${base}/images/periods/1900-1920/rytter-velodrom.webp`} alt="Udmattet Tour de France-rytter står ved sin cykel på en velodrom" />
+          <figcaption>En rytter efter strabadserne — støv, reservedele og slanger blev båret på kroppen. Arkivfoto fra periodens Tour de France.</figcaption>
+        </figure>
+
+        <section class="era-opening">
+          <p class="section-label">Tour de France</p>
+          <p>Tour de France i denne periode var en brutal prøve for både mennesker og maskiner. Rytterne startede ofte før daggry og kørte gennem mørke, kulde, støv og regn på veje, der mange steder bestod af grus eller brosten.</p>
+        </section>
+
+        <section class="era-facts" aria-label="Fakta om perioden">
+          {facts.map(([number, label]) => <div><strong>{number}</strong><span>{label}</span></div>)}
+        </section>
+
+        <section class="era-story">
+          <div class="era-copy">
+            <p class="section-label">Løbet vender tilbage</p>
+            <h2>5.560 kilometer gennem et land mærket af krig</h2>
+            <p>Touren i 1919 var den første efter Første Verdenskrig. Den blev kørt fra 29. juni til 27. juli over 15 etaper og i alt 5.560 kilometer. Startfeltet bestod i høj grad af tidligere soldater, og løbet gik gennem et Frankrig, der stadig bar tydelige spor efter krigen.</p>
+            <p>Den længste etape gik fra Les Sables-d’Olonne til Bayonne: 482 kilometer på én dag. Jean Alavoine vandt efter 18 timer, 54 minutter og 7 sekunder i sadlen — en afstand og en køretid, der i dag virker næsten ufattelig.</p>
+          </div>
+          <figure class="map-figure">
+            <img src={`${base}/images/periods/1900-1920/tour-1920-kort.webp`} alt="Historisk kort over de 15 etaper i Tour de France 1920" loading="lazy" />
+            <figcaption>Kort over de 15 etaper i Tour de France 1920. Kortet angiver en samlet distance på 5.519 kilometer.</figcaption>
+          </figure>
+        </section>
+
+        <section class="yellow-jersey">
+          <p class="section-label">En ny farve bliver historie</p>
+          <blockquote>Den gule trøje blev født i 1919.</blockquote>
+          <p>Eugène Christophe blev den første rytter, der bar den gule førertrøje. Han fik den på om morgenen før etapen fra Grenoble til Genève. Farven gjorde løbets leder synlig for publikum — og blev siden det stærkeste symbol i Tour de France.</p>
+        </section>
+
+        <section class="era-gallery">
+          <figure class="gallery-tall"><img src={`${base}/images/periods/1900-1920/rytter-ved-maal.webp`} alt="Udmattet og forslået cykelrytter bliver hjulpet ved målet" loading="lazy" /><figcaption>Målet kunne ligne mere en redningsaktion end en sportslig triumf.</figcaption></figure>
+          <figure><img src={`${base}/images/periods/1900-1920/tourmalet.webp`} alt="Albert Dejonghe cykler på en grusvej ved Tourmalet" loading="lazy" /><figcaption>Arkivfoto angivet som Albert Dejonghe på Tourmalet.</figcaption></figure>
+          <figure><img src={`${base}/images/periods/1900-1920/ryttere-hviler.webp`} alt="Henri Colle og Charles Parel hviler med deres cykler" loading="lazy" /><figcaption>Arkivfoto angivet som Henri Colle og Charles Parel under et hvil.</figcaption></figure>
+        </section>
+
+        <section class="mechanics-section">
+          <div>
+            <p class="section-label">Rytter og mekaniker</p>
+            <h2>Ingen følgebil.<br />Ingen hurtig hjælp.</h2>
+          </div>
+          <div class="mechanics-copy">
+            <p>Rytterne måtte selv klare punkteringer og mekaniske fejl. Tidens regler krævede, at de gennemførte på den samme cykel og udførte reparationerne uden hjælp. Reservedele, værktøj og ekstra slanger måtte derfor medbringes på cyklen eller over skuldrene.</p>
+            <p>Gearskift var lige så fysisk. Mange cykler havde et vendbart baghjul med et tandhjul på hver side. Før en stigning måtte rytteren standse, løsne baghjulet, vende det, stramme kæden og fortsætte i den lettere gearing.</p>
+            <p>Det gør periodens cykel til mere end et sportsredskab: Den er et vidnesbyrd om opfindsomhed, håndværk og en næsten ufattelig udholdenhed.</p>
+          </div>
+        </section>
+
+        <figure class="era-wide-photo"><img src={`${base}/images/periods/1900-1920/jean-rossius-1920.webp`} alt="Jean Rossius og en hjælper ved en racercykel under Tour de France 1920" loading="lazy" /><figcaption>Arkivfoto angivet som Jean Rossius ved Tour de France 1920. Cyklen viser det sparsomme udstyr og de medbragte forsyninger.</figcaption></figure>
+
+        <section class="thys-section">
+          <p class="section-label">1920</p>
+          <div>
+            <h2>Philippe Thys skriver historie</h2>
+            <p>Belgieren Philippe Thys vandt Tour de France i 1920. Efter sejrene i 1913 og 1914 blev han dermed løbets første tredobbelte vinder. Hans resultat knytter førkrigstidens pionerer sammen med den nye generation, der genoptog cykelsporten efter 1918.</p>
+            <a class="text-link" href={`${base}/cykler/cycles-france-sport/`}>Se samlingens cykel fra perioden <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+
+        <section class="period-sources">
+          <p class="section-label">Kilder og billednoter</p>
+          <div><p>Historiske data er kontrolleret mod Tour de Frances historiske materiale og samtidige løbsresultater. Billederne stammer fra samlingens arkiv; hvor identiteten ikke kan dokumenteres direkte, er billedteksten formuleret som arkivets angivelse.</p>
+          <ul><li><a href="https://www.letour.fr/en/news/2019/life-in-yellow/1275993">Tour de France: Life in Yellow</a></li><li><a href="https://netstorage.lequipe.fr/ASO/cycling_tdf/guide-historique-v3.pdf">Tour de France: Historisk guide</a></li><li><a href="https://www.cyclingranking.com/races/1919/tour-de-france/stages/stage-5">Resultat, 5. etape 1919</a></li></ul></div>
+        </section>
+
+        <nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/`}>← Tilbage til forsiden</a><a href={`${base}/cykler/cycles-france-sport/`}>Næste: Cycles France-Sport →</a></nav>
+      </article>
+    </main>
+
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

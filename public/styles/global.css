@@ -287,6 +287,38 @@ h1 em { color: var(--rust); font-weight: 400; }
 .eroica-closing { padding: 100px clamp(24px, 10vw, 160px); background: var(--ink); color: var(--paper); }
 .eroica-closing blockquote { margin: 0; font-size: clamp(52px, 7vw, 105px); line-height: 1; }
 .eroica-closing em { color: var(--rust); font-weight: 400; }
+
+.bini-page { overflow: hidden; }
+.bini-hero { padding: 100px clamp(24px, 8vw, 130px) 85px; }
+.bini-hero h1 { font-size: clamp(58px, 8vw, 122px); margin: 35px 0; }
+.bini-hero > p:last-child { max-width: 720px; font-family: 'Libre Caslon Display', serif; font-size: clamp(25px, 3vw, 42px); line-height: 1.28; }
+.bini-portrait { margin: 0; padding: 70px clamp(24px, 8vw, 130px) 0; background: var(--ink); text-align: center; }
+.bini-portrait img { display: block; width: auto; max-width: 100%; max-height: 760px; margin: auto; }
+.bini-portrait figcaption, .maglia-scene figcaption { padding: 14px 0; color: #aeb5ad; font-size: 11px; text-align: left; }
+.bini-opening { display: grid; grid-template-columns: 1fr 3fr; gap: 45px; padding: 110px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
+.bini-opening > p:last-child { max-width: 980px; margin: 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.15; }
+.bini-before, .giro-1948 { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(60px, 10vw, 150px); padding: 120px clamp(24px, 8vw, 130px); }
+.bini-before h2, .bini-crash h2, .giro-1948 h2 { margin: 30px 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(48px, 6vw, 84px); font-weight: 400; line-height: 1; }
+.bini-before > div:last-child, .giro-1948 > div:last-child { align-self: end; font-size: 16px; line-height: 1.9; }
+.maglia-scene { margin: 0; padding: 55px clamp(24px, 8vw, 130px) 0; background: var(--cream); }
+.maglia-scene img { display: block; width: min(100%, 1500px); aspect-ratio: 16 / 9; margin: auto; object-fit: cover; }
+.maglia-scene figcaption { color: #59625b; }
+.black-jersey { padding: 110px clamp(24px, 13vw, 210px); background: #111512; color: var(--paper); }
+.black-jersey blockquote { max-width: 1100px; margin: 40px 0; font-size: clamp(48px, 7vw, 98px); line-height: 1; }
+.black-jersey > div { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; max-width: 1000px; color: #b8beb8; line-height: 1.8; }
+.bini-crash { display: grid; grid-template-columns: 240px minmax(0, 800px); justify-content: center; gap: clamp(60px, 10vw, 150px); padding: 120px 24px; }
+.bini-crash aside { align-self: center; padding: 40px 0; border-top: 1px solid var(--rust); border-bottom: 1px solid var(--rust); text-align: center; }
+.bini-crash aside strong { display: block; color: var(--rust); font-family: 'Libre Caslon Display', serif; font-size: 65px; font-weight: 400; }
+.bini-crash aside span { font-size: 10px; text-transform: uppercase; letter-spacing: .12em; }
+.bini-crash > div > p:not(.section-label) { font-size: 16px; line-height: 1.9; }
+.bini-facts { display: grid; grid-template-columns: repeat(4, 1fr); padding: 90px clamp(24px, 8vw, 130px); background: var(--cream); }
+.bini-facts div { min-height: 160px; padding: 26px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); display: flex; flex-direction: column; justify-content: space-between; }
+.bini-facts div:last-child { border-right: 1px solid var(--line); }
+.bini-facts strong { color: var(--rust); font-family: 'Libre Caslon Display', serif; font-size: clamp(35px, 4vw, 58px); font-weight: 400; }
+.bini-facts span { font-size: 10px; text-transform: uppercase; letter-spacing: .12em; }
+.bini-closing { padding: 110px clamp(24px, 12vw, 190px); background: var(--rust); color: var(--paper); }
+.bini-closing blockquote { margin: 0; font-size: clamp(55px, 8vw, 115px); line-height: .98; }
+.bini-closing em { color: var(--ink); font-weight: 400; }
 footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; align-items: end; padding: 70px clamp(24px, 6vw, 96px); font-size: 13px; line-height: 1.7; }
 .copyright { text-align: right; }
 
@@ -356,6 +388,15 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .eroica-landscape img { aspect-ratio: 4 / 3; }
   .eroica-detail-grid { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
   .eroica-detail-grid img, .eroica-detail-grid .detail-portrait img { aspect-ratio: 4 / 3; max-height: 420px; }
+  .bini-hero { padding-top: 70px; }
+  .bini-opening, .bini-before, .giro-1948, .bini-crash, .black-jersey > div { grid-template-columns: 1fr; }
+  .bini-portrait { padding: 28px 24px 0; }
+  .bini-portrait img { max-height: 580px; }
+  .maglia-scene { padding: 24px 24px 0; }
+  .maglia-scene img { aspect-ratio: 4 / 3; }
+  .bini-crash aside { width: min(100%, 260px); justify-self: center; }
+  .bini-facts { grid-template-columns: 1fr 1fr; }
+  .bini-facts div:nth-child(2n) { border-right: 1px solid var(--line); }
   .decades article { border-right: 1px solid rgba(241,238,228,.2); border-bottom: 0; }
   .decades article:last-child { border-bottom: 1px solid rgba(241,238,228,.2); }
   footer { grid-template-columns: 1fr; }

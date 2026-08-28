@@ -1,0 +1,114 @@
+---
+const base = import.meta.env.BASE_URL;
+const image = `${base}/images/stories/michelin-navnet/michelin-aftalen.webp`;
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Historien om Stella Veneta, den italienske Michelin-familie og navnet, der siden blev til MICHE." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Da Michelin-navnet næsten blev et problem" />
+    <meta property="og:description" content="Fra Stella Veneta og Cambio Corsa til MICHE-navnets tilblivelse." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/stories/michelin-navnet/michelin-aftalen.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Da Michelin-navnet næsten blev et problem · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside">
+        <span class="brand-mark">E<span>B</span></span>
+        <span>The Evolution<br />of Bikes</span>
+      </a>
+      <nav aria-label="Hovedmenu">
+        <a href={`${base}/#samlingen`}>Samlingen</a>
+        <a href={`${base}/#historier`}>Historier</a>
+        <a href={`${base}/#viden`}>Viden</a>
+        <a href={`${base}/#om`}>Om</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="anecdote-page">
+        <header class="anecdote-hero">
+          <div class="bike-kicker">
+            <a href={`${base}/#historier`}>← Historier og anekdoter</a>
+            <span>Veneto · Italien</span>
+          </div>
+          <p class="section-label">Et navn, to familier</p>
+          <h1>Da Michelin-navnet<br />næsten blev <em>et problem</em></h1>
+          <p class="anecdote-deck">På min Stella Veneta står der et navn med en noget større historie, end man umiddelbart skulle tro: Michelin.</p>
+        </header>
+
+        <figure class="anecdote-image">
+          <img src={image} alt="Illustration af den italienske og den franske Michelin-families aftale om navnet MICHE" />
+          <figcaption>Illustration af den overleverede fortælling om navneaftalen. Billedet er ikke et historisk dokument.</figcaption>
+        </figure>
+
+        <div class="anecdote-layout">
+          <aside class="anecdote-timeline" aria-label="Tidslinje">
+            <div><strong>1919</strong><span>Ciclo Piave grundlægges</span></div>
+            <div><strong>1936</strong><span>Stella Veneta etableres</span></div>
+            <div><strong>1948</strong><span>F.M.C. oprettes</span></div>
+            <div><strong>1970</strong><span>Navnet bliver F.A.C. di Michelin</span></div>
+            <div><strong>1986</strong><span>MICHE-mærket introduceres</span></div>
+          </aside>
+
+          <div class="anecdote-copy">
+            <p class="dropcap">Men vi er ikke i Frankrig hos dækmanden Bibendum. Vi er i Veneto i Norditalien.</p>
+
+            <h2>Fra Ciclo Piave til Stella Veneta</h2>
+            <p>I 1919 grundlagde brødrene Augusto og Ferdinando Michelin cykelfabrikken Ciclo Piave i Santa Lucia di Piave. I 1936 gik de hver til sit, og Ferdinando oprettede en ny fabrik i Conegliano. Navnet blev Stella Veneta — omtrent “Venetos stjerne”. Fabrikken byggede både cykler og mindre motorcykler.</p>
+
+            <div class="anecdote-pullquote">Et efternavn, der kunne åbne døre — og skabe problemer.</div>
+
+            <h2>Gearskifte med begge hænder</h2>
+            <p>Min Stella Veneta er udstyret med et af periodens mest fascinerende gearsystemer: Campagnolo Cambio Corsa. Gearskiftet foregik ikke med et lille greb. Rytteren skulle betjene to lange stænger ved baghjulet, løsne navet, flytte kæden og samtidig få baghjulet til at finde den rigtige position.</p>
+            <p>Cambio Corsa hører til den korte overgangsperiode, før den moderne bagskifter slog igennem. Det er et system, der gør selve gearskiftet synligt: mekanik, balance og timing samlet i én manøvre.</p>
+
+            <h2>Et nyt firma og et gammelt navn</h2>
+            <p>I 1948 oprettede Ferdinando Michelin også komponentfirmaet F.M.C. — Ferdinando Michelin Conegliano. Virksomheden fremstillede blandt andet låse, bagagebærere og hurtigspænd til hjul. I 1970 blev navnet ændret til F.A.C. di Michelin, og i 1986 introducerede virksomheden mærket MICHE.</p>
+
+            <h2>Aftalen, der ikke kom i retten</h2>
+            <p>Her bliver den dokumenterede virksomhedshistorie til familieanekdote. Ifølge Michelin-familiens egen overlevering reagerede det franske dækfirma på italienernes internationale brug af navnet.</p>
+            <p>Sagen skulle ikke være endt i retten, men i en næsten gammeldags <em>gentlemen’s agreement</em>: Italienerne måtte bruge navnet MICHE, hvis de lovede aldrig at fremstille dæk. Et brev fra det franske Michelin skulle fortsat befinde sig i familiens arkiv.</p>
+
+            <div class="source-note">
+              <strong>Hvad ved vi sikkert?</strong>
+              <p>MICHEs officielle historik dokumenterer Ciclo Piave i 1919, Stella Veneta i 1936, F.M.C. i 1948, F.A.C. di Michelin i 1970 og introduktionen af MICHE-navnet i 1986. Selve gentlemen’s agreement og løftet om aldrig at fremstille dæk er en familieberetning, som ikke er dokumenteret i de offentligt tilgængelige primærkilder.</p>
+            </div>
+
+            <h2>Navnet lever videre</h2>
+            <p>MICHE eksisterer stadig som italiensk producent af cykelkomponenter. I 2022 blev F.A.C. Michelin en del af gruppen omkring Wilier Triestina.</p>
+            <p>Der findes også fortællinger om, at den italienske Michelin-familie og den franske dækfamilie skulle være fjernt beslægtede. Det har jeg ikke kunnet dokumentere sikkert. Det dokumenterede er næsten lige så godt: de to Michelin-navne kom så tæt på hinanden, at identiteten måtte forhandles.</p>
+
+            <section class="story-sources">
+              <p class="section-label">Kilder og videre læsning</p>
+              <ul>
+                <li><a href="https://www.miche.it/en/company">MICHE — virksomhedens officielle historik</a></li>
+                <li><a href="https://www.registrostoricocicli.com/registri/registro-storico/ciclo-piave-stella-veneta/">Registro Storico Cicli — Ciclo Piave / Stella Veneta</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <nav class="bike-bottom-nav" aria-label="Navigation mellem historier">
+          <a href={`${base}/`}>← Tilbage til forsiden</a>
+          <span>Historier og anekdoter · 01</span>
+        </nav>
+      </article>
+    </main>
+
+    <footer id="om">
+      <div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div>
+      <p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p>
+      <p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p>
+    </footer>
+  </body>
+</html>

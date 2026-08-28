@@ -1,0 +1,111 @@
+---
+const base = import.meta.env.BASE_URL;
+const facts = [
+  ['Introduceret', '1978'],
+  ['Producent', 'Shimano'],
+  ['Land', 'Japan'],
+  ['Serie', '600 EX · 6200'],
+  ['Gearskifte', 'Friktion'],
+  ['Typisk opsætning', '2 × 5 eller 2 × 6'],
+];
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Shimano 600 EX Arabesque: da japansk præcision, mekanisk nytænkning og dekorative mønstre mødtes i én komponentgruppe." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Shimano 600 EX Arabesque · The Evolution of Bikes" />
+    <meta property="og:description" content="Da Shimano gjorde mekanik til dekoration." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/components/shimano-600-ex-arabesque/group-illustration.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Shimano 600 EX Arabesque · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
+      <nav aria-label="Hovedmenu"><a href={`${base}/#samlingen`}>Samlingen</a><a href={`${base}/#historier`}>Historier</a><a href={`${base}/#viden`} aria-current="page">Viden</a><a href={`${base}/om/`}>Om</a></nav>
+    </header>
+
+    <main>
+      <article class="component-page">
+        <header class="component-hero">
+          <div>
+            <p class="section-label">Komponentarkivet · 1978</p>
+            <h1>Shimano 600 EX<br /><em>Arabesque</em></h1>
+          </div>
+          <p>Da Shimano gjorde mekanik til dekoration.</p>
+        </header>
+
+        <figure class="component-hero-image">
+          <img src={`${base}/images/components/shimano-600-ex-arabesque/group-illustration.webp`} alt="Historisk illustration af komponenterne i Shimano 600 EX Arabesque-gruppen" />
+          <figcaption>Shimano 600 EX-serien samlet: krank, gearskiftere, bagskifter, forskifter, bremser, nav, pedaler og kæde. Historisk katalogillustration.</figcaption>
+        </figure>
+
+        <section class="component-opening">
+          <p class="section-label">Form og funktion</p>
+          <div>
+            <p>Se lige på detaljerne. De små slyngede mønstre på bagskifteren, krankarmen og geargrebene ligner næsten noget, der hører hjemme på et italiensk håndbygget stel — og det var faktisk hele pointen.</p>
+          </div>
+        </section>
+
+        <section class="component-facts" aria-label="Fakta om Shimano 600 EX Arabesque">
+          {facts.map(([label, value]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}
+        </section>
+
+        <section class="component-narrative">
+          <aside><span>Japan</span><strong>1978</strong><i></i><span>Europa</span></aside>
+          <div class="component-copy">
+            <p class="dropcap">I 1978 lancerede Shimano 600 EX Arabesque. Den japanske producent var stadig i gang med at slå sit navn fast på det europæiske marked, hvor især Campagnolo stod stærkt på de finere racercykler. Shimano valgte derfor en interessant vej: Gruppen skulle ikke bare fungere godt. Den skulle også være smuk.</p>
+
+            <p>De karakteristiske arabesque-mønstre blev skabt for visuelt at passe til tidens håndbyggede europæiske stålstel. Shimanos egen produkthistorie beskriver netop ønsket om at skabe en samlet gruppe, der harmonerede med krom-molybdæn-stellenes elegante håndværk.</p>
+
+            <blockquote>Japansk præcision klædt på til den europæiske racercykel.</blockquote>
+
+            <h2>Et lille mekanisk trick</h2>
+            <p>Under udsmykningen gemte der sig samtidig moderne teknik. Bagskifterens såkaldte <em>Hatch-Plate Mechanism</em> gjorde det muligt at frigøre kæden og afmontere skifteren uden først at skille kæden ad eller fjerne en pulleybolt. Det gjorde arbejdet lettere for mekanikeren.</p>
+
+            <p>Shimano tilbød også et kassettebaseret Freehub-system, der gav mulighed for flere kombinationer af tandhjul og et bredere udvalg af gearinger. De historiske katalogsider viser både fem- og seksdelte udgaver.</p>
+          </div>
+        </section>
+
+        <section class="catalog-spread">
+          <figure><img src={`${base}/images/components/shimano-600-ex-arabesque/catalog-drivetrain.webp`} alt="Shimano-katalogside med bagskifter, geargreb, forskifter, krank og kæde" loading="lazy" /><figcaption>Drivlinjen: RD-6200 bagskifter, SL-6200/6210 geargreb, FD-6200 forskifter og FC-6200/6210 krank.</figcaption></figure>
+          <figure><img src={`${base}/images/components/shimano-600-ex-arabesque/catalog-brakes-freehub.webp`} alt="Shimano-katalogside med Freehub, bremser og styrfittings" loading="lazy" /><figcaption>Freehub, bremser og styrfittings fra samme 600 EX-serie.</figcaption></figure>
+        </section>
+
+        <section class="friction-section">
+          <div>
+            <p class="section-label">Fornemmelsen i fingerspidserne</p>
+            <h2>Rytteren skulle selv finde gearet</h2>
+          </div>
+          <div>
+            <p>Gearskiftet var stadig friktionsbaseret. Der var ingen faste klik og ingen automatisk indeksering: Med grebet på skrårøret flyttede rytteren bagskifteren, indtil kæden løb rent på det ønskede tandhjul.</p>
+            <p>Det krævede øvelse og føling, men gav også en direkte forbindelse mellem hånd, kabel, bagskifter og kæde. Den klikbaserede SIS-indeksering kom først senere i 600-seriens udvikling.</p>
+          </div>
+        </section>
+
+        <section class="component-closing">
+          <p class="section-label">Eftermæle</p>
+          <blockquote>Moderne komponenter er lettere, hurtigere og mere præcise — men er de egentlig smukkere?</blockquote>
+          <p>600 EX Arabesque blev noget særligt: en gruppe, hvor dekorationen ikke skjulte teknikken, men gjorde opmærksom på den. Derfor skiller den sig stadig ud blandt klassiske racercykelkomponenter.</p>
+        </section>
+
+        <section class="period-sources">
+          <p class="section-label">Kilder og billednoter</p>
+          <div><p>Årstal, formål og tekniske detaljer er kontrolleret mod Shimanos egen produkthistorie, servicemateriale og katalogmaterialet vist på siden.</p><ul><li><a href="https://www.shimano.com/en/100th/history/products/17.html">Shimano: 100 Products History — Shimano 600</a></li><li><a href="https://si.shimano.com/en/pdfs/si/N-92/SI-N-92-000-00-ENG.pdf">Shimano: 600 EX Freehub service instruction</a></li></ul></div>
+        </section>
+
+        <nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/`}>← Tilbage til forsiden</a><a href={`${base}/perioder/1900-1920/`}>Læs om 1900–1920’erne →</a></nav>
+      </article>
+    </main>
+
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

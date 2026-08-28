@@ -1,0 +1,147 @@
+---
+const base = import.meta.env.BASE_URL;
+const images = `${base}/images/bikes/wonder-saint-etienne`;
+const videos = `${base}/videos/bikes/wonder-saint-etienne`;
+const facts = [
+  ['År', '1937'],
+  ['Mærke', 'Wonder'],
+  ['Oprindelse', 'Saint-Étienne, Frankrig'],
+  ['Første ejer', 'Monsieur Paubert, Vannes'],
+  ['Gear', 'Super Champion Course'],
+  ['Anvendelse', 'Landevej og bane'],
+  ['Restaurering', 'Original lak og bevaret patina'],
+  ['Dokumentation', 'Original købskvittering'],
+];
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Historien om Monsieur Pauberts veldokumenterede Wonder-racercykel fra Saint-Étienne, købt i Vannes i 1937." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Wonder Saint-Étienne 1937" />
+    <meta property="og:description" content="En fransk racer til både landevej og bane — restaureret med original lak og tidstypiske komponenter." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/bikes/wonder-saint-etienne/hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Wonder Saint-Étienne 1937 · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
+      <nav aria-label="Hovedmenu"><a href={`${base}/cykler/`}>Samlingen</a><a href={`${base}/historier/`}>Historier</a><a href={`${base}/#viden`}>Viden</a><a href={`${base}/om/`}>Om</a></nav>
+    </header>
+
+    <main>
+      <article class="wonder-page">
+        <header class="wonder-hero">
+          <div class="bike-kicker"><a href={`${base}/cykler/`}>← Cykler i samlingen</a><span>Frankrig · 1937</span></div>
+          <h1>Wonder<br /><em>Saint-Étienne</em></h1>
+          <p>En fransk racer til både landevej og bane — med én familiehistorie, original købskvittering og næsten ni årtiers spor i lakken.</p>
+        </header>
+
+        <figure class="wonder-main-image">
+          <img src={`${images}/hero.webp`} alt="Den restaurerede Wonder Saint-Étienne racercykel fra 1937 set fra siden" />
+          <figcaption>Wonder fra 1937 efter den nænsomme restaurering. Den originale lak og cyklens patina er bevaret.</figcaption>
+        </figure>
+
+        <section class="wonder-opening">
+          <p class="section-label">En kendt begyndelse</p>
+          <div>
+            <p>Cyklen blev købt i 1937 af Monsieur Paubert i Vannes i det vestlige Frankrig. Før krigen kørte han enkelte løb på både landevej og bane.</p>
+            <p>Mange gamle racercykler har mistet navnene på de mennesker, der brugte dem. Her følger ejerens navn og købspapiret stadig med cyklen.</p>
+          </div>
+        </section>
+
+        <dl class="bike-facts wonder-facts" aria-label="Fakta om Wonder-cyklen">
+          {facts.map(([label, value]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}
+        </dl>
+
+        <section class="wonder-provenance">
+          <div class="wonder-copy">
+            <p class="section-label">Proveniens</p>
+            <h2>Et navn på kvitteringen</h2>
+            <p>Cyklen blev købt af Monsieur Pauberts barnebarn sammen med den originale kvittering fra 1937. Den er udstedt af cykelhandler M. Rio, La Madeleine i Vannes, som blandt andet var forhandler af Wonder.</p>
+            <p>Dokumentet binder cykel, sted og ejer sammen og giver den en usædvanligt veldokumenteret historie.</p>
+          </div>
+          <figure>
+            <img src={`${images}/receipt.webp`} alt="Original fransk købskvittering fra 1937 med navnet Monsieur Paubert" loading="lazy" />
+            <figcaption>Den originale kvittering fra Vannes, dateret 1937.</figcaption>
+          </figure>
+        </section>
+
+        <section class="wonder-before">
+          <figure>
+            <img src={`${images}/before.webp`} alt="Wonder-cyklen som den så ud, da den blev købt, med et nyere gearsystem" loading="lazy" />
+            <figcaption>Sådan så cyklen ud ved købet. Gearsystemet var på det tidspunkt blevet udskiftet med en nyere løsning fra omkring 1947.</figcaption>
+          </figure>
+          <div class="wonder-copy">
+            <p class="section-label">Som den blev fundet</p>
+            <h2>Ti år for moderne</h2>
+            <p>Da cyklen kom til samlingen, sad der et nyere gearsystem fra 1947 på den. Det fungerede som et synligt kapitel i cyklens brugshistorie, men svarede ikke til dens oprindelige udstyr fra 1937.</p>
+            <p>Det tog flere år at finde de komponenter, som passede til cyklens alder og oprindelige opbygning. Restaureringen blev udført nænsomt: teknikken blev ført tilbage mod 1937, mens lak, mærker og brugsspor blev bevaret.</p>
+          </div>
+        </section>
+
+        <section class="wonder-component">
+          <div class="wonder-copy">
+            <p class="section-label">Super Champion Course</p>
+            <h2>Gearskift før bagskifteren</h2>
+            <p>Oscar Egg lancerede Champion-systemet i begyndelsen af 1930’erne, efterfulgt af Super Champion. På denne cykel arbejder Super Champion Course med en kædefører ved baghjulet og en separat kædestrammer nær kranken.</p>
+            <p>Rytteren flyttede kæden mellem tandhjulene med et greb på stellet. Skiftet krævede teknik og et kort øjebliks baglæns pedalbevægelse — langt fra et moderne klikskift, men et afgørende trin på vejen mod den kendte bagskifter.</p>
+          </div>
+          <div class="wonder-detail-grid">
+            <figure><img src={`${images}/drivetrain.webp`} alt="Super Champion Course gearsystem og kædefører ved baghjulet" loading="lazy" /><figcaption>Super Champion Course-systemet og den særlige bagende.</figcaption></figure>
+            <figure><img src={`${images}/shifter.webp`} alt="Geargreb og kædestrammer på Wonder-cyklen" loading="lazy" /><figcaption>Den separate betjening og kædestrammer tæt ved kranken.</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="wonder-era">
+          <p class="section-label">1937</p>
+          <blockquote>Året hvor gearet fik lov til at køre med i Tour de France.</blockquote>
+          <div>
+            <p>I 1937 tillod Tour de France for første gang gearsystemer. Super Champion blev valgt til løbet, og Roger Lapébie vandt Touren med systemet. Monsieur Pauberts Wonder stammer dermed fra netop det år, hvor gearskiftet for alvor blev accepteret på sportens største scene.</p>
+            <p>Den særlige Oscar Egg/Super Champion-bagende gjorde det muligt at indrette cyklen til gear på landevejen eller fast nav på banen. Én ramme kunne således følge rytteren mellem to forskellige discipliner.</p>
+          </div>
+        </section>
+
+        <section class="wonder-details">
+          <figure><img src={`${images}/cockpit.webp`} alt="Wonder-cyklens styr, flaske og bremsegreb" loading="lazy" /><figcaption>Styr, bremsegreb og drikkeflaske i tidstypisk udtryk.</figcaption></figure>
+          <figure><img src={`${images}/bottle.webp`} alt="Nærbillede af drikkeflaske og cockpit på Wonder-cyklen" loading="lazy" /><figcaption>Detaljerne er bevaret som en del af helheden.</figcaption></figure>
+        </section>
+
+        <section class="wonder-video-section">
+          <div><p class="section-label">Cyklen i bevægelse</p><h2>Se mekanikken tæt på</h2><p>De korte optagelser viser cyklens detaljer og den restaurerede opbygning fra flere vinkler.</p></div>
+          <div class="wonder-videos">
+            <video controls playsinline preload="metadata"><source src={`${videos}/wonder-detaljer-1.mp4`} type="video/mp4" />Din browser kan ikke afspille videoen.</video>
+            <video controls playsinline preload="metadata"><source src={`${videos}/wonder-detaljer-2.mp4`} type="video/mp4" />Din browser kan ikke afspille videoen.</video>
+          </div>
+        </section>
+
+        <section class="wonder-brand-history">
+          <div><p class="section-label">Mærket</p><h2>Fra cykelbyen Saint-Étienne</h2></div>
+          <div><p>Wonder blev fremstillet af Jules Ravat i Saint-Étienne, et af Frankrigs vigtigste centre for cykelindustri. Wonder-navnet blev registreret i byen i 1910.</p><p>Historiske samlerarkiver angiver, at fabrikken omkring 1926 nåede en produktion på cirka 40.000 cykler om året og beskæftigede omkring 1.200 mennesker. Monsieur Pauberts racer kom altså fra en stor producent — men har overlevet som et helt personligt eksemplar.</p></div>
+        </section>
+
+        <section class="wonder-sources">
+          <p class="section-label">Kilder og noter</p>
+          <ul>
+            <li>Cykelens proveniens, restaurering og anvendelse bygger på samlingens originale kvittering og ejerhistorie.</li>
+            <li><a href="https://archives.saint-etienne.fr/histoires-stephanoises-1/tranches-dhistoire/sport/a-bicyclette-1">Archives municipales de Saint-Étienne</a> om byens cykelindustri.</li>
+            <li><a href="https://httpcyclomotosloire.e-monsite.com/pages/marque-en-a/wonder.html">Historisk mærkeregister for Wonder/Jules Ravat</a>.</li>
+            <li><a href="https://velo.outsideonline.com/road/road-racing/how-tour-de-france-embraced-derailleurs/">Velo: Tour de France og indførelsen af gear i 1937</a>.</li>
+          </ul>
+        </section>
+
+        <nav class="bike-bottom-nav" aria-label="Navigation mellem cykler"><a href={`${base}/cykler/cycles-france-sport/`}>← Cycles France-Sport</a><a href={`${base}/cykler/`}>Alle cykler →</a></nav>
+      </article>
+    </main>
+
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

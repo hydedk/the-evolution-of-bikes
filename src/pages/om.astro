@@ -1,0 +1,124 @@
+---
+const base = import.meta.env.BASE_URL;
+const facts = [
+  ['Periode', 'ca. 1919–2013'],
+  ['Cykler udstillet', '12'],
+  ['Lande', 'Frankrig, Italien og Danmark'],
+  ['Materialer', 'Stål, aluminium og kulfiber'],
+  ['Tema', 'Teknik, håndværk og cykelsport'],
+  ['Udvikling', 'Fra vendbart baghjul til moderne racerteknologi'],
+];
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Historien om samlingen The Evolution of Bikes — årtier på to hjul." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tilblivelsen af samlingen · The Evolution of Bikes" />
+    <meta property="og:description" content="En passion for cykling, historie og teknik." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/about/vaerksted.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Om samlingen · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside">
+        <span class="brand-mark">E<span>B</span></span>
+        <span>The Evolution<br />of Bikes</span>
+      </a>
+      <nav aria-label="Hovedmenu">
+        <a href={`${base}/#samlingen`}>Samlingen</a>
+        <a href={`${base}/#historier`}>Historier</a>
+        <a href={`${base}/#viden`}>Viden</a>
+        <a href={`${base}/om/`} aria-current="page">Om</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="about-page">
+        <header class="about-hero">
+          <p class="section-label">Tilblivelsen af samlingen</p>
+          <h1>En passion for<br /><em>cykling, historie</em><br />og teknik</h1>
+          <p class="about-subtitle">The Evolution of Bikes · Årtier på to hjul</p>
+        </header>
+
+        <figure class="about-image">
+          <img src={`${base}/images/about/vaerksted.webp`} alt="Illustration af en cykelmekaniker og en dreng i et klassisk cykelværksted" />
+          <figcaption>Illustration af håndværket og den viden, der går fra generation til generation. Billedet er ikke et historisk dokument.</figcaption>
+        </figure>
+
+        <section class="about-opening">
+          <p class="section-label">Samlingen</p>
+          <div>
+            <p class="about-intro">The Evolution of Bikes — Årtier på to hjul — er vokset frem af min store passion for cykling, cykelsportens historie og teknikken bag racercyklen.</p>
+          </div>
+        </section>
+
+        <div class="about-body">
+          <aside>
+            <span>Fra det enkle</span>
+            <strong>1919</strong>
+            <i></i>
+            <strong>2013</strong>
+            <span>til det moderne</span>
+          </aside>
+          <div class="about-copy">
+            <p>Jeg har gennem mange år været fascineret af, hvordan racercyklen har udviklet sig fra de tidlige, enkle stålcykler med vendbart baghjul til moderne, lette og aerodynamiske racermaskiner. Hver periode har sine særlige løsninger, materialer og ideer, og hver cykel fortæller noget om den tid, den blev skabt i.</p>
+
+            <p>Cyklerne i samlingen er fundet og samlet gennem mange år. Flere er hentet hjem på ture til Frankrig og Italien, hvor cykelhistorien stadig lever i små værksteder, gamle lader, kældre og hos familier, som har gemt cyklerne gennem generationer.</p>
+
+            <blockquote>Hver cykel fortæller noget om den tid, den blev skabt i.</blockquote>
+
+            <p>Nogle cykler er fundet næsten komplette. Andre er blevet bygget op lidt efter lidt. Rammer, gear, hjul, styr, sadler, bremser og andre komponenter er hentet fra mange forskellige lande.</p>
+
+            <p>Det kunne tage flere år at finde alle de rigtige dele til én cykel — især når den skulle opbygges så korrekt og tidstypisk som muligt.</p>
+
+            <h2>Mere end en samling</h2>
+            <p>Arbejdet har derfor ikke kun handlet om at samle cykler. Det har også været en rejse gennem cykelindustriens historie og gennem fortællingerne om de opfindere, rammebyggere, mekanikere og ryttere, som hele tiden forsøgte at gøre cyklen lettere, hurtigere og mere driftssikker.</p>
+
+            <p>Samlingen viser udviklingen fra tunge stålrammer og enkle gearsystemer til aluminium, kulfiber, aerodynamiske hjul og moderne komponentgrupper. Det er netop sammenhængen mellem teknik, håndværk og cykelsport, som udstillingen ønsker at fortælle.</p>
+
+            <p>Jeg håber, at mange vil få glæde af den, og at den kan skabe genkendelse, nysgerrighed og interesse for cyklingens historie. Hvert skilt forbinder derfor den udstillede cykel med en central historie fra sin tid.</p>
+          </div>
+        </div>
+
+        <section class="about-facts">
+          <p class="section-label">Fakta</p>
+          <dl>
+            {facts.map(([label, value]) => (
+              <div><dt>{label}</dt><dd>{value}</dd></div>
+            ))}
+          </dl>
+        </section>
+
+        <section class="exhibition-contact">
+          <div>
+            <p class="section-label">Udstilling</p>
+            <h2>Har du lyst til at<br />udstille samlingen?</h2>
+          </div>
+          <div class="contact-copy">
+            <p>Samlingen kan udstilles i butikker, kulturhuse, museer, virksomheder, ved cykelløb eller andre arrangementer.</p>
+            <address>
+              <strong>Henning Renita Yde</strong>
+              <a href="mailto:hyde@hyde.dk">hyde@hyde.dk</a>
+              <a href="tel:+4520192695">+45 20 19 26 95</a>
+            </address>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div>
+      <p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p>
+      <p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p>
+    </footer>
+  </body>
+</html>

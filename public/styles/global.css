@@ -118,6 +118,39 @@ h1 em { color: var(--rust); font-weight: 400; }
 .story-sources { margin-top: 90px; padding-top: 30px; border-top: 1px solid var(--line); }
 .story-sources ul { padding-left: 18px; font-size: 13px; }
 .story-sources a { text-underline-offset: 5px; }
+
+.about-hero { padding: 100px clamp(24px, 8vw, 130px) 85px; }
+.about-hero h1 { font-size: clamp(65px, 9vw, 135px); margin: 35px 0; }
+.about-subtitle { text-transform: uppercase; letter-spacing: .18em; font-size: 11px; }
+.about-image { margin: 0; background: var(--ink); }
+.about-image img { width: 100%; display: block; max-height: 82vh; object-fit: cover; filter: contrast(1.04); }
+.about-image figcaption { padding: 14px clamp(24px, 8vw, 130px); color: #aeb5ad; font-size: 11px; }
+.about-opening { display: grid; grid-template-columns: 1fr 3fr; gap: 40px; padding: 110px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
+.about-intro { margin: 0; max-width: 980px; font-family: 'Libre Caslon Display', serif; font-size: clamp(36px, 5vw, 72px); line-height: 1.15; }
+.about-body { display: grid; grid-template-columns: 190px minmax(0, 760px); justify-content: center; gap: clamp(50px, 8vw, 130px); padding: 120px 24px; }
+.about-body aside { align-self: start; display: grid; justify-items: center; gap: 12px; position: sticky; top: 30px; }
+.about-body aside span { text-transform: uppercase; letter-spacing: .14em; font-size: 9px; }
+.about-body aside strong { font-family: 'Libre Caslon Display', serif; font-size: 36px; font-weight: 400; }
+.about-body aside i { display: block; height: 180px; width: 1px; background: var(--rust); position: relative; }
+.about-body aside i::before, .about-body aside i::after { content: ''; position: absolute; left: -4px; width: 9px; height: 9px; border: 1px solid var(--rust); border-radius: 50%; background: var(--paper); }
+.about-body aside i::after { bottom: 0; }
+.about-copy { font-size: 17px; line-height: 1.9; }
+.about-copy > p { margin: 0 0 34px; }
+.about-copy blockquote { margin: 80px -8vw; padding: 65px 8vw; background: var(--cream); font-size: clamp(38px, 5vw, 66px); line-height: 1.1; }
+.about-copy h2 { font-family: 'Libre Caslon Display', serif; font-size: clamp(45px, 5vw, 70px); font-weight: 400; margin: 90px 0 28px; }
+.about-facts { padding: 100px clamp(24px, 8vw, 130px); background: var(--cream); }
+.about-facts dl { display: grid; grid-template-columns: repeat(3, 1fr); margin: 35px 0 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.about-facts dl div { min-height: 150px; padding: 26px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.about-facts dt { color: var(--rust); text-transform: uppercase; letter-spacing: .13em; font-size: 10px; }
+.about-facts dd { margin: 42px 0 0; font-family: 'Libre Caslon Display', serif; font-size: 25px; }
+.exhibition-contact { display: grid; grid-template-columns: 1.25fr 1fr; gap: 60px; padding: 110px clamp(24px, 8vw, 130px); background: var(--rust); color: var(--paper); }
+.exhibition-contact h2 { font-family: 'Libre Caslon Display', serif; font-size: clamp(50px, 6.5vw, 95px); font-weight: 400; line-height: .95; margin: 35px 0 0; }
+.exhibition-contact .section-label { color: var(--ink); }
+.contact-copy { align-self: end; max-width: 520px; }
+.contact-copy > p { line-height: 1.8; }
+.contact-copy address { margin-top: 55px; display: grid; gap: 8px; font-style: normal; }
+.contact-copy address strong { margin-bottom: 6px; }
+.contact-copy address a { width: fit-content; text-underline-offset: 5px; }
 footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; align-items: end; padding: 70px clamp(24px, 6vw, 96px); font-size: 13px; line-height: 1.7; }
 .copyright { text-align: right; }
 
@@ -142,6 +175,13 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .anecdote-layout { grid-template-columns: 1fr; padding-top: 70px; }
   .anecdote-timeline { position: static; }
   .anecdote-pullquote { margin-left: -24px; margin-right: -24px; }
+  .about-opening, .about-body, .exhibition-contact { grid-template-columns: 1fr; }
+  .about-body aside { position: static; grid-template-columns: auto auto 1fr auto auto; align-items: center; justify-items: start; }
+  .about-body aside i { width: 100%; height: 1px; }
+  .about-body aside i::before, .about-body aside i::after { top: -4px; }
+  .about-body aside i::after { left: auto; right: -4px; }
+  .about-copy blockquote { margin-left: -24px; margin-right: -24px; }
+  .about-facts dl { grid-template-columns: 1fr 1fr; }
   .decades article { border-right: 1px solid rgba(241,238,228,.2); border-bottom: 0; }
   .decades article:last-child { border-bottom: 1px solid rgba(241,238,228,.2); }
   footer { grid-template-columns: 1fr; }

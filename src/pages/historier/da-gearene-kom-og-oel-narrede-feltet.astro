@@ -1,0 +1,91 @@
+---
+const base = import.meta.env.BASE_URL;
+const facts = [
+  ['1935', 'Moineaus udbrud mod Bordeaux'],
+  ['224 km', 'Fra Pau til Bordeaux'],
+  ['15:33', 'Forspringet ved målstregen'],
+  ['1937', 'Gear tillades for landsholdene'],
+];
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Historien om gearenes indtog i Tour de France og Julien Moineaus usædvanlige etapesejr i 1935." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Da gearene kom til Tour de France – og øl narrede feltet" />
+    <meta property="og:description" content="Teknisk modstand, kolde øl og et forspring på 15 minutter og 33 sekunder." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/stories/tour-gears-beer/drikkestation.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Da gearene kom – og øl narrede feltet · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/cykler/`}>Samlingen</a><a href={`${base}/historier/`} aria-current="page">Historier</a><a href={`${base}/#viden`}>Viden</a><a href={`${base}/om/`}>Om</a></nav></header>
+
+    <main><article class="beer-story-page">
+      <header class="beer-story-hero">
+        <p class="section-label">Tour de France · 1935–1937</p>
+        <h1>Da gearene kom<br />– og <em>øl narrede feltet</em></h1>
+        <p>To fortællinger fra en tid, hvor Touren balancerede mellem rå styrke, ny teknik og en forfriskning i vejkanten.</p>
+      </header>
+
+      <figure class="beer-story-image">
+        <img src={`${base}/images/stories/tour-gears-beer/drikkestation.webp`} alt="Cykelryttere ved en improviseret drikkestation på en bjergvej" />
+        <figcaption>Stemningsbillede fra en senere cykelepoke. Det illustrerer den åbne forplejning langs ruten, men viser ikke Julien Moineau eller etapen Pau–Bordeaux i 1935.</figcaption>
+      </figure>
+
+      <section class="beer-story-opening">
+        <p class="section-label">Teknisk modstand</p>
+        <p>I 1937 tog Tour de France et historisk og længe ventet skridt: Rytterne på de officielle landshold fik for første gang lov til at bruge udvendige gearskiftere.</p>
+      </section>
+
+      <section class="beer-story-copy">
+        <aside><strong>1937</strong><span>Gearene får<br />adgang til Touren</span></aside>
+        <div>
+          <p>Derailleur-systemet havde eksisteret i mange år, men Tourens grundlægger og mangeårige chef, Henri Desgrange, havde længe modarbejdet det. Han mente, at løbet først og fremmest skulle være en prøve i rå styrke, udholdenhed og personlig vilje. Moderne hjælpemidler risikerede efter hans opfattelse at gøre løbet for let.</p>
+          <p>Gear blev derfor ofte fremstillet som noget for ældre cyklister, turister og ryttere, der ikke var stærke nok til at klare stigningerne med deres egne ben.</p>
+          <h2>Gearskiftet foregik ved vejkanten</h2>
+          <p>Før derailleurens indførelse var rytterne ikke nødvendigvis begrænset til ét gear. Mange cykler havde flere tandhjul på baghjulet, men rytteren kunne ikke skifte mellem dem under kørslen.</p>
+          <p>Når terrænet ændrede sig, måtte han stå af, løsne baghjulets vingemøtrikker og flytte kæden til et andet tandhjul. I nogle tilfælde skulle hele hjulet vendes, fordi der sad forskellige tandhjul på hver side. På vej mod et bjerg kostede skiftet derfor både tid og kræfter — og efter bjerget måtte proceduren gentages.</p>
+          <blockquote>For Desgrange var besværet en del af prøven. For rytterne var det tid tabt i vejkanten.</blockquote>
+          <h2>De gule L’Auto-cykler</h2>
+          <p>Siden 1930 havde arrangørerne udstyret landsholdenes ryttere med ensartede, gule cykler mærket med navnet på arrangøravisen <em>L’Auto</em>. Ordningen skulle mindske cykelfabrikkernes indflydelse og understrege, at sejren tilhørte rytteren — ikke producenten.</p>
+          <p>Da Jacques Goddet gradvist overtog ledelsen efter den aldrende og sygdomssvækkede Desgrange, blev reglerne moderniseret. I 1937 fik landsholdsrytterne endelig lov til at skifte gear uden at stå af. Det ændrede især kampen i bjergene og markerede begyndelsen på den moderne Tour-cykel.</p>
+        </div>
+      </section>
+
+      <section class="beer-story-turn"><p class="section-label">To år tidligere</p><blockquote>Mens teknikken blev holdt tilbage,<br />kunne en kold øl stadig <em>ændre et cykelløb.</em></blockquote></section>
+
+      <section class="beer-story-copy beer-chapter-two">
+        <aside><strong>24. juli</strong><span>Pau–Bordeaux<br />Touren 1935</span></aside>
+        <div>
+          <p>Tour de France i 1930’erne var langt mere kaotisk og improviseret end det stramt organiserede arrangement, vi kender i dag. Rytterne kunne få mad og drikke fra tilskuere, handle undervejs og undertiden standse ved caféer. Vin og øl blev betragtet som almindelig forplejning, og på varme dage kunne et bord med kolde drikke være næsten umuligt at modstå.</p>
+          <p>Det førte i 1935 til en af Tour-historiens mest berømte og omdiskuterede episoder.</p>
+          <h2>Et bord ved Le Barp</h2>
+          <p>Den 24. juli kørte rytterne den 224 kilometer lange 17. etape fra Pau til Bordeaux. Det var en lang, varm tur gennem det flade landskab i det sydvestlige Frankrig. Den 31-årige franskmand Julien Moineau deltog som individuel rytter. Han var ikke blandt løbets største stjerner, men kendte området og havde stærke forbindelser til Arcachon-egnen nær Bordeaux.</p>
+          <p>Moineau forsøgte tidligt at slippe væk, men blev hentet af det belgiske hold. Senere angreb han igen. Omkring Le Barp, cirka 50 kilometer før mål, ventede et usædvanligt syn: Lokale tilskuere stod klar med kolde øl og andre drikkevarer.</p>
+          <p>Fristelsen blev for stor. Mange ryttere satte farten ned eller standsede helt for at gribe flaskerne. Moineau kørte derimod videre alene mod Bordeaux, mens konkurrenterne blev forsinket af traktementet og forvirringen omkring udskænkningen.</p>
+          <h2>Plan eller enestående chance?</h2>
+          <p>Ifølge historien, som hurtigt bredte sig i pressen, havde Moineau på forhånd fået venner fra området til at opstille drikkebordet. Formålet skulle have været at lokke konkurrenterne til at standse og sørge for, at serveringen tog så lang tid som muligt.</p>
+          <p>Om planen virkelig var aftalt, er aldrig blevet endeligt bevist. Den senere Tour-journalist Félix Lévitan fortalte, at Moineau havde placeret venner ved vejen, men Moineau selv benægtede et komplot. Måske genkendte han blot en enestående chance — og havde disciplin nok til at køre forbi.</p>
+        </div>
+      </section>
+
+      <section class="beer-facts">{facts.map(([number, label]) => <div><strong>{number}</strong><span>{label}</span></div>)}</section>
+
+      <section class="beer-finish">
+        <p class="section-label">Alene til Bordeaux</p>
+        <div><p>Julien Moineau nåede frem efter 7 timer, 34 minutter og 30 sekunder. Den belgiske sprinter Jean Aerts vandt feltets spurt om andenpladsen hele <strong>15 minutter og 33 sekunder</strong> senere. Det blev Moineaus tredje og sidste etapesejr i Tour de France.</p><p>Historien siger noget om en svunden cykeltid, hvor grænsen mellem tilskuere, hjælpere og ryttere var langt mere flydende end i dag. Moderne regler, officielle forplejningszoner og minutiøs tv-dækning ville gøre et lignende nummer næsten umuligt. I 1935 kunne nogle flasker øl i vejkanten være nok til at afgøre en Tour-etape.</p></div>
+      </section>
+
+      <section class="beer-story-closing"><blockquote>Først kørte Moineau fra feltet.<br />Så sørgede øllet for, at feltet <em>blev væk.</em></blockquote></section>
+      <nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a><a href={`${base}/historier/campagnolo-quick-release/`}>Historien om quick release →</a></nav>
+    </article></main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

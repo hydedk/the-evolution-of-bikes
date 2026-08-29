@@ -402,6 +402,38 @@ h1 em { color: var(--rust); font-weight: 400; }
 .wonder-sources { display: grid; grid-template-columns: 1fr 3fr; gap: 50px; padding: 80px clamp(24px, 8vw, 130px); }
 .wonder-sources ul { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.8; }
 .wonder-sources a { text-underline-offset: 4px; }
+.beer-story-page { overflow: hidden; }
+.beer-story-hero { padding: 100px clamp(24px, 8vw, 130px) 85px; }
+.beer-story-hero h1 { margin: 35px 0; font-size: clamp(58px, 8vw, 122px); }
+.beer-story-hero > p:last-child { max-width: 790px; font-family: 'Libre Caslon Display', serif; font-size: clamp(25px, 3vw, 42px); line-height: 1.28; }
+.beer-story-image { margin: 0; padding: 55px clamp(24px, 8vw, 130px) 0; background: var(--ink); }
+.beer-story-image img { display: block; width: auto; max-width: 100%; max-height: 820px; margin: auto; object-fit: contain; }
+.beer-story-image figcaption { padding: 14px 0; color: #aeb5ad; font-size: 11px; }
+.beer-story-opening { display: grid; grid-template-columns: 1fr 3fr; gap: 45px; padding: 110px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
+.beer-story-opening > p:last-child { max-width: 980px; margin: 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.15; }
+.beer-story-copy { display: grid; grid-template-columns: 220px minmax(0, 790px); justify-content: center; gap: clamp(60px, 9vw, 140px); padding: 120px 24px; }
+.beer-story-copy aside { align-self: start; position: sticky; top: 30px; padding: 38px 0; border-top: 1px solid var(--rust); border-bottom: 1px solid var(--rust); text-align: center; }
+.beer-story-copy aside strong { display: block; color: var(--rust); font-family: 'Libre Caslon Display', serif; font-size: 54px; font-weight: 400; }
+.beer-story-copy aside span { font-size: 10px; line-height: 1.6; text-transform: uppercase; letter-spacing: .12em; }
+.beer-story-copy > div { font-size: 17px; line-height: 1.9; }
+.beer-story-copy > div > p { margin: 0 0 32px; }
+.beer-story-copy h2 { margin: 95px 0 28px; font-family: 'Libre Caslon Display', serif; font-size: clamp(48px, 6vw, 80px); font-weight: 400; line-height: 1; }
+.beer-story-copy blockquote { margin: 75px -8vw; padding: 65px 8vw; background: var(--cream); font-size: clamp(38px, 5vw, 66px); line-height: 1.1; }
+.beer-story-turn { padding: 110px clamp(24px, 10vw, 160px); background: var(--rust); color: var(--paper); }
+.beer-story-turn .section-label { color: var(--ink); }
+.beer-story-turn blockquote { max-width: 1200px; margin: 40px 0 0; font-size: clamp(48px, 7vw, 100px); line-height: 1; }
+.beer-story-turn em, .beer-story-closing em { color: var(--ink); font-weight: 400; }
+.beer-chapter-two { background: var(--cream); }
+.beer-facts { display: grid; grid-template-columns: repeat(4, 1fr); padding: 90px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
+.beer-facts div { min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; padding: 26px; border: 1px solid rgba(241,238,228,.24); border-right: 0; }
+.beer-facts div:last-child { border-right: 1px solid rgba(241,238,228,.24); }
+.beer-facts strong { color: var(--rust); font-family: 'Libre Caslon Display', serif; font-size: clamp(36px, 4vw, 60px); font-weight: 400; }
+.beer-facts span { font-size: 10px; line-height: 1.5; text-transform: uppercase; letter-spacing: .12em; }
+.beer-finish { display: grid; grid-template-columns: 1fr 2.5fr; gap: 50px; padding: 110px clamp(24px, 8vw, 130px); }
+.beer-finish > div { max-width: 900px; font-size: 17px; line-height: 1.9; }
+.beer-finish strong { color: var(--rust); font-weight: 500; }
+.beer-story-closing { padding: 110px clamp(24px, 10vw, 160px); background: var(--rust); color: var(--paper); }
+.beer-story-closing blockquote { margin: 0; font-size: clamp(50px, 7vw, 105px); line-height: 1; }
 footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; align-items: end; padding: 70px clamp(24px, 6vw, 96px); font-size: 13px; line-height: 1.7; }
 .copyright { text-align: right; }
 
@@ -500,6 +532,14 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .wonder-facts { margin-top: 70px; }
   .wonder-detail-grid, .wonder-details { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
   .wonder-detail-grid img, .wonder-details img { width: 100%; height: auto; max-height: 420px; object-fit: cover; }
+  .beer-story-hero { padding-top: 70px; }
+  .beer-story-image { padding: 24px 24px 0; }
+  .beer-story-image img { width: 100%; height: auto; max-height: none; }
+  .beer-story-opening, .beer-story-copy, .beer-finish { grid-template-columns: 1fr; }
+  .beer-story-copy aside { position: static; width: min(100%, 260px); justify-self: center; }
+  .beer-story-copy blockquote { margin-left: -24px; margin-right: -24px; }
+  .beer-facts { grid-template-columns: 1fr 1fr; }
+  .beer-facts div:nth-child(2n) { border-right: 1px solid rgba(241,238,228,.24); }
   .decades article { border-right: 1px solid rgba(241,238,228,.2); border-bottom: 0; }
   .decades article:last-child { border-bottom: 1px solid rgba(241,238,228,.2); }
   footer { grid-template-columns: 1fr; }

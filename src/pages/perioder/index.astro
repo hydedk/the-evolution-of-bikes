@@ -1,0 +1,18 @@
+---
+const base = import.meta.env.BASE_URL;
+const periods = [{
+  years: '1900–1920’erne', title: 'Pionerer og udholdenhed',
+  text: 'Tour de France bliver til, den gule trøje får sin farve, og rytterne kæmper mod veje, mørke og mekanik.',
+  image: `${base}/images/periods/1900-1920/rytter-velodrom.webp`, href: `${base}/perioder/1900-1920/`,
+  articles: [
+    { label: 'Del 1', title: 'Da cykelsporten var et vildt vesten på to hjul', text: 'Heltene, maskinerne, seksdagesløbene og kroppens grænser.', href: `${base}/perioder/1900-1920/cykelsportens-vilde-vesten-1/` },
+    { label: 'Del 2', title: 'Snyd, søm og Tour de France i kaos', text: 'Skandalen i 1904 og vejen fra omrejsende cirkus til organiseret sport.', href: `${base}/perioder/1900-1920/cykelsportens-vilde-vesten-2/` },
+  ],
+}];
+---
+<!doctype html><html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="Cykelløb og cykelkultur fortalt periode for periode – med hovedartikler og de historier, der hører til tiden." /><meta property="og:type" content="website" /><meta property="og:title" content="Perioder · The Evolution of Bikes" /><meta property="og:description" content="Gå på opdagelse i cykelløb, mennesker, teknik og kultur årti for årti." /><title>Perioder · The Evolution of Bikes</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} /></head>
+<body><header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`} aria-current="page">Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav></header>
+<main><header class="archive-hero periods-archive-hero"><p class="section-label">Cykelløb og kulturhistorie</p><h1>Perioder</h1><p>Historien er ordnet efter tid, men fortalt gennem mennesker, løb, cykler og de detaljer, som gør hvert årti levende.</p></header>
+<section class="periods-archive">{periods.map((period) => <article class="period-overview"><a class="period-overview-main" href={period.href}><img src={period.image} alt="Udmattet rytter på velodromen i cykelsportens pionertid" /><div><span>{period.years}</span><h2>{period.title}</h2><p>{period.text}</p><b>Læs hovedsiden for perioden →</b></div></a><div class="period-article-list"><header><span>Artikler i perioden</span><strong>{period.articles.length}</strong></header>{period.articles.map((article, index) => <a href={article.href}><span>{String(index + 1).padStart(2, '0')} · {article.label}</span><h3>{article.title}</h3><p>{article.text}</p><b>Læs artiklen →</b></a>)}</div></article>)}</section>
+<section class="periods-coming"><p class="section-label">Arkivet vokser</p><blockquote>Flere perioder kommer til, efterhånden som cyklerne og historierne bliver dokumenteret.</blockquote></section></main>
+<footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer></body></html>

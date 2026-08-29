@@ -1,15 +1,10 @@
 ---
 const base = import.meta.env.BASE_URL;
-const collectionHighlights = [
-  { year: '1900–1920’erne', title: 'Pionerer og udholdenhed', text: 'Tour de France, grusveje og ryttere, der selv måtte reparere deres cykler.', link: `${base}/perioder/1900-1920/` },
-  { year: '1950’erne', title: 'Hverdag på to hjul', text: 'Cykler til arbejde, fritid og de små historier, der følger med et langt liv.' },
-  { year: '1970’erne', title: 'Sport og fart', text: 'Lettere komponenter, nye geargrupper og racercyklens store gennembrud.' },
-];
-
-const sections = [
-  { number: '01', title: 'Cykler i samlingen', text: 'Se cyklerne, deres historie, detaljer, komponenter og restaurering.', link: `${base}/cykler/` },
-  { number: '02', title: 'Historier og anekdoter', text: 'Personlige fortællinger fra landevejen, værkstedet og jagten på sjældne fund.', link: `${base}/historier/` },
-  { number: '03', title: 'Komponenter', text: 'Opfindelser, tekniske mellemtrin og dele, der ændrede måden, man cyklede på.', link: `${base}/komponenter/` },
+const gateways = [
+  { number: '01', label: 'Fortællingerne', title: 'Historier og anekdoter', text: 'Skæve øjeblikke, glemte ryttere og de historier, resultatlisten ikke fortæller.', image: `${base}/images/stories/aldo-bini/aldo-bini-archive.webp`, link: `${base}/historier/` },
+  { number: '02', label: 'Cykelløb og kulturhistorie', title: 'Perioder', text: 'Gå på opdagelse årti for årti i løbene, menneskene, vejene og cykelkulturen.', image: `${base}/images/periods/1900-1920/wild-west/track-racing.webp`, link: `${base}/perioder/` },
+  { number: '03', label: 'Det fysiske arkiv', title: 'Cykler i samlingen', text: 'Cyklerne er indgangen til deres tid, tidligere ejere og det håndværk, der har bevaret dem.', image: `${base}/images/bikes/wonder-saint-etienne/hero.webp`, link: `${base}/cykler/` },
+  { number: '04', label: 'Mekanik med betydning', title: 'Komponenter', text: 'Udvalgte opfindelser og mekaniske mellemtrin, der ændrede måden, man cyklede på.', image: `${base}/images/components/campagnolo-cambio-corsa/two-levers.webp`, link: `${base}/komponenter/` },
 ];
 ---
 
@@ -40,39 +35,33 @@ const sections = [
         <span>The Evolution<br />of Bikes</span>
       </a>
       <nav aria-label="Hovedmenu">
-        <a href="#samlingen">Samlingen</a>
-        <a href="#historier">Historier</a>
-        <a href="#viden">Viden</a>
+        <a href={`${base}/historier/`}>Historier</a>
+        <a href={`${base}/perioder/`}>Perioder</a>
+        <a href={`${base}/cykler/`}>Cykler</a>
+        <a href={`${base}/komponenter/`}>Komponenter</a>
         <a href={`${base}/om/`}>Om</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <p class="eyebrow">Et levende arkiv over cykler og cykelkultur</p>
-        <h1>Hver cykel bærer<br />på en <em>historie.</em></h1>
-        <p class="hero-copy">Fra håndbyggede stålstel til komponenter med årtiers patina. Her samles cyklerne, menneskene og fortællingerne, der har sat hjul i bevægelse.</p>
-        <a class="button" href="#samlingen">Gå på opdagelse <span aria-hidden="true">→</span></a>
+        <p class="eyebrow">Vintagecykling fortalt gennem cyklerne, løbene og menneskene</p>
+        <h1>Kom for cyklerne.<br /><em>Bliv for historierne.</em></h1>
+        <p class="hero-copy">Et levende arkiv over cyklingens kultur – fra håndbyggede stålstel og dristig mekanik til rytterne, hjælperne og de øjeblikke, resultatlisten ikke viser.</p>
+        <a class="button" href="#fire-indgange">Vælg din indgang <span aria-hidden="true">↓</span></a>
         <div class="wheel" aria-hidden="true"><div class="wheel-hub"></div></div>
       </section>
 
-      <section class="intro" id="samlingen">
-        <p class="section-label">Samlingen</p>
+      <section class="home-gateways" id="fire-indgange" aria-label="Hjemmesidens fire hovedindgange">
+        <header><p class="section-label">Fire veje ind i arkivet</p><h2>Hvad er du nysgerrig på?</h2></header>
         <div>
-          <h2>Cykler er mere end transport.</h2>
-          <p>De fortæller om deres tid, om godt håndværk og om de mennesker, der har kørt på dem. Samlingen dokumenteres én cykel og én fortælling ad gangen.</p>
+          {gateways.map((item) => (
+            <a class="home-gateway" href={item.link}>
+              <img src={item.image} alt="" loading="lazy" />
+              <span class="home-gateway-number">{item.number}</span><p>{item.label}</p><h3>{item.title}</h3><b>{item.text}</b><i>Gå på opdagelse →</i>
+            </a>
+          ))}
         </div>
-      </section>
-
-      <section class="decades" aria-label="Udvalgte perioder">
-        {collectionHighlights.map((item) => (
-          <article class:list={{ 'has-link': item.link }}>
-            <p>{item.year}</p>
-            <h3>{item.title}</h3>
-            <span>{item.text}</span>
-            {item.link && <a href={item.link} aria-label={`Læs om ${item.year}`}>Læs perioden <span aria-hidden="true">→</span></a>}
-          </article>
-        ))}
       </section>
 
       <section class="featured-bike">
@@ -88,18 +77,7 @@ const sections = [
         </div>
       </section>
 
-      <section class="content-grid" id="historier">
-        {sections.map((item) => (
-          <a class="content-card" href={item.link}>
-            <span class="card-number">{item.number}</span>
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-            <span class="card-arrow" aria-hidden="true">↗</span>
-          </a>
-        ))}
-      </section>
-
-      <section class="story" id="viden">
+      <section class="story">
         <p class="section-label">Fra arkivet</p>
         <blockquote>“Det interessante er ikke kun, hvor gammel en cykel er — men hvilke veje den har kørt, og hvem der har passet på den.”</blockquote>
         <a href="https://velovintagehyde.blogspot.com/">Besøg det tidligere arkiv på Velo Vintage Hyde <span aria-hidden="true">→</span></a>

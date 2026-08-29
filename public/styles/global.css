@@ -434,6 +434,55 @@ h1 em { color: var(--rust); font-weight: 400; }
 .beer-finish strong { color: var(--rust); font-weight: 500; }
 .beer-story-closing { padding: 110px clamp(24px, 10vw, 160px); background: var(--rust); color: var(--paper); }
 .beer-story-closing blockquote { margin: 0; font-size: clamp(50px, 7vw, 105px); line-height: 1; }
+.component-archive { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 0 clamp(24px, 8vw, 130px) 110px; }
+.component-archive > a { display: grid; grid-template-rows: 380px 1fr; background: var(--cream); text-decoration: none; transition: transform .2s; }
+.component-archive > a:hover { transform: translateY(-5px); }
+.component-archive img { width: 100%; height: 100%; object-fit: cover; }
+.component-archive > a:nth-child(2) img { object-fit: contain; padding: 20px; mix-blend-mode: multiply; }
+.component-archive > a > div { display: flex; flex-direction: column; padding: 30px; }
+.component-archive span { color: var(--rust); font-size: 11px; letter-spacing: .13em; }
+.component-archive h2 { margin: 42px 0 16px; font-family: 'Libre Caslon Display', serif; font-size: clamp(38px, 4vw, 58px); font-weight: 400; line-height: 1; }
+.component-archive p { line-height: 1.7; }
+.component-archive b { margin-top: auto; padding-top: 28px; color: var(--rust); font-size: 12px; font-weight: 500; }
+.cambio-page { overflow: hidden; }
+.cambio-hero { padding: 100px clamp(24px, 8vw, 130px) 85px; }
+.cambio-hero h1 { margin: 35px 0; font-size: clamp(65px, 10vw, 150px); }
+.cambio-hero > p:last-child { max-width: 820px; font-family: 'Libre Caslon Display', serif; font-size: clamp(25px, 3vw, 42px); line-height: 1.28; }
+.cambio-main-image { margin: 0; padding: 55px clamp(24px, 8vw, 130px) 0; background: var(--ink); }
+.cambio-main-image img { display: block; width: auto; max-width: 100%; max-height: 82vh; margin: auto; object-fit: contain; }
+.cambio-main-image figcaption, .cambio-race figcaption, .cambio-gallery figcaption { padding: 14px 0; color: #aeb5ad; font-size: 11px; }
+.cambio-opening { display: grid; grid-template-columns: 1fr 3fr; gap: 45px; padding: 110px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
+.cambio-opening > p:last-child { max-width: 980px; margin: 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.15; }
+.cambio-story { display: grid; grid-template-columns: 220px minmax(0, 790px); justify-content: center; gap: clamp(60px, 9vw, 140px); padding: 120px 24px; }
+.cambio-story aside { align-self: start; padding: 40px 0; border-top: 1px solid var(--rust); border-bottom: 1px solid var(--rust); text-align: center; }
+.cambio-story aside strong { display: block; color: var(--rust); font-family: 'Libre Caslon Display', serif; font-size: 47px; font-weight: 400; }
+.cambio-story aside span { font-size: 10px; line-height: 1.6; text-transform: uppercase; letter-spacing: .12em; }
+.cambio-story > div { font-size: 17px; line-height: 1.9; }
+.cambio-story blockquote { margin: 75px -8vw 0; padding: 65px 8vw; background: var(--cream); font-size: clamp(42px, 6vw, 72px); line-height: 1.05; }
+.cambio-mechanism { padding: 110px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
+.cambio-mechanism h2, .cambio-risk h2, .cambio-coppi h2, .cambio-evolution h2 { margin: 30px 0 60px; font-family: 'Libre Caslon Display', serif; font-size: clamp(48px, 6vw, 84px); font-weight: 400; line-height: 1; }
+.cambio-steps { display: grid; grid-template-columns: repeat(4, 1fr); }
+.cambio-steps > div { min-height: 260px; padding: 26px; border: 1px solid rgba(241,238,228,.22); border-right: 0; }
+.cambio-steps > div:last-child { border-right: 1px solid rgba(241,238,228,.22); }
+.cambio-steps span { color: var(--rust); font-size: 11px; }
+.cambio-steps h3 { margin: 70px 0 18px; font-family: 'Libre Caslon Display', serif; font-size: 32px; font-weight: 400; }
+.cambio-steps p { color: #aeb5ad; font-size: 13px; line-height: 1.7; }
+.cambio-risk, .cambio-coppi, .cambio-evolution { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(60px, 10vw, 150px); padding: 120px clamp(24px, 8vw, 130px); }
+.cambio-risk > div:last-child, .cambio-coppi > div:last-child, .cambio-evolution > div:last-child { align-self: end; font-size: 16px; line-height: 1.9; }
+.cambio-race { margin: 0; padding: 55px clamp(24px, 8vw, 130px) 0; background: var(--cream); }
+.cambio-race img { display: block; width: min(100%, 1200px); max-height: 760px; margin: auto; object-fit: contain; }
+.cambio-race figcaption { color: #59625b; }
+.cambio-era { padding: 110px clamp(24px, 10vw, 160px); background: var(--rust); color: var(--paper); }
+.cambio-era .section-label { color: var(--ink); }
+.cambio-era blockquote { max-width: 1100px; margin: 35px 0 70px; font-size: clamp(50px, 7vw, 102px); line-height: 1; }
+.cambio-era em, .cambio-closing em { color: var(--ink); font-weight: 400; }
+.cambio-era > div { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; max-width: 1000px; line-height: 1.85; }
+.cambio-coppi { background: var(--cream); }
+.cambio-gallery { display: grid; grid-template-columns: 1.5fr .65fr; gap: 18px; padding: 110px clamp(24px, 8vw, 130px); background: var(--ink); }
+.cambio-gallery figure { margin: 0; }
+.cambio-gallery img { display: block; width: 100%; height: 590px; object-fit: contain; background: #eeeae0; }
+.cambio-closing { padding: 110px clamp(24px, 10vw, 160px); background: var(--rust); color: var(--paper); }
+.cambio-closing blockquote { margin: 0; font-size: clamp(50px, 7vw, 105px); line-height: 1; }
 footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; align-items: end; padding: 70px clamp(24px, 6vw, 96px); font-size: 13px; line-height: 1.7; }
 .copyright { text-align: right; }
 
@@ -540,6 +589,18 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .beer-story-copy blockquote { margin-left: -24px; margin-right: -24px; }
   .beer-facts { grid-template-columns: 1fr 1fr; }
   .beer-facts div:nth-child(2n) { border-right: 1px solid rgba(241,238,228,.24); }
+  .component-archive { grid-template-columns: 1fr; }
+  .component-archive > a { grid-template-rows: 260px 1fr; }
+  .cambio-hero { padding-top: 70px; }
+  .cambio-main-image, .cambio-race { padding: 24px 24px 0; }
+  .cambio-main-image img, .cambio-race img { width: 100%; height: auto; max-height: none; }
+  .cambio-opening, .cambio-story, .cambio-risk, .cambio-coppi, .cambio-evolution, .cambio-era > div { grid-template-columns: 1fr; }
+  .cambio-story aside { width: min(100%, 260px); justify-self: center; }
+  .cambio-story blockquote { margin-left: -24px; margin-right: -24px; }
+  .cambio-steps { grid-template-columns: 1fr 1fr; }
+  .cambio-steps > div:nth-child(2n) { border-right: 1px solid rgba(241,238,228,.22); }
+  .cambio-gallery { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
+  .cambio-gallery img { width: 100%; height: auto; max-height: 430px; }
   .decades article { border-right: 1px solid rgba(241,238,228,.2); border-bottom: 0; }
   .decades article:last-child { border-bottom: 1px solid rgba(241,238,228,.2); }
   footer { grid-template-columns: 1fr; }

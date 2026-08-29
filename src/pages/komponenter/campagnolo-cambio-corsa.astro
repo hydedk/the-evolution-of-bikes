@@ -1,0 +1,54 @@
+---
+const base = import.meta.env.BASE_URL;
+const images = `${base}/images/components/campagnolo-cambio-corsa`;
+const steps = [
+  ['01', 'Løsn akslen', 'Det øverste håndtag frigør hurtigspændet omkring bagakslen.'],
+  ['02', 'Flyt kæden', 'Den anden stang fører kæden til et større eller mindre tandhjul.'],
+  ['03', 'Træd baglæns', 'Kæden vandrer over tandhjulene, mens cyklen fortsat ruller.'],
+  ['04', 'Placér og spænd', 'Kædens kraft og bremsen flytter hjulet, før akslen låses igen.'],
+];
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Historien om Campagnolo Cambio Corsa, gearsystemet hvor rytteren løsnede baghjulet og skiftede gear i fart." />
+    <meta property="og:type" content="article" /><meta property="og:title" content="Campagnolo Cambio Corsa – gearskiftet, der krævede mod og balance" /><meta property="og:description" content="To lange håndtag, et løst baghjul og et gearskift udført i fart." /><meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/components/campagnolo-cambio-corsa/two-levers.webp" /><meta name="twitter:card" content="summary_large_image" />
+    <title>Campagnolo Cambio Corsa · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/cykler/`}>Samlingen</a><a href={`${base}/historier/`}>Historier</a><a href={`${base}/komponenter/`} aria-current="page">Komponenter</a><a href={`${base}/om/`}>Om</a></nav></header>
+    <main><article class="cambio-page">
+      <header class="cambio-hero"><p class="section-label">Campagnolo · Italien · 1946</p><h1>Cambio Corsa</h1><p>Gearskiftet, der krævede både mod og balance — og som lod rytteren løsne sit eget baghjul, mens cyklen var i bevægelse.</p></header>
+
+      <figure class="cambio-main-image"><img src={`${images}/two-levers.webp`} alt="De to lange Campagnolo Cambio Corsa-håndtag på Stella Venetas højre bagstræber" /><figcaption><em>Due leve</em> — de to håndtag på samlingens Stella Veneta viser, hvorfor systemet ikke kunne betjenes uden øvelse.</figcaption></figure>
+
+      <section class="cambio-opening"><p class="section-label">Et mekanisk mellemtrin</p><p>I årene efter Anden Verdenskrig gennemgik racercyklen en teknisk revolution. Cambio Corsa lod rytteren skifte gear uden at stå af — men betjeningen virker i dag næsten ufatteligt risikabel.</p></section>
+
+      <section class="cambio-story"><aside><strong>due leve</strong><span>Italiensk for<br />“to håndtag”</span></aside><div>
+        <p>Campagnolo lancerede systemet i 1946. Det var hverken en moderne bagskifter eller et simpelt kabeltrukket greb. Cambio Corsa flyttede både kæden og selve baghjulet.</p>
+        <p>Der var ingen fjederbelastet bagskifter til at holde kæden stram. Bagakslen sad i særlige vandrette, tandede udfaldsender, så hjulet kunne bevæge sig frem og tilbage. Når kæden blev flyttet til et større eller mindre tandhjul, ændrede den nødvendige kædelængde sig — og derfor måtte hjulets placering også ændres.</p>
+        <blockquote>Alt dette foregik, mens cyklen var i bevægelse.</blockquote>
+      </div></section>
+
+      <section class="cambio-mechanism"><div><p class="section-label">Sådan foregik skiftet</p><h2>Højre hånd bagud.<br />Baghjulet løs.</h2></div><div class="cambio-steps">{steps.map(([number,title,text]) => <div><span>{number}</span><h3>{title}</h3><p>{text}</p></div>)}</div></section>
+
+      <section class="cambio-risk"><div><p class="section-label">Mod og balance</p><h2>Et dårligt skift kunne koste mere end fart</h2></div><div><p>Rytteren måtte fjerne højre hånd fra styret, række armen bagud, løsne sit eget baghjul og træde baglæns — ofte på en ujævn vej eller midt i et felt. Hvis akslen ikke blev spændt rigtigt, kunne hjulet forskubbe sig eller gå skævt i stellet.</p><p>Derfor omtales konstruktionen i dag ofte som “selvmordsgearet”. Det var næppe systemets almindelige navn i samtiden. For professionelle ryttere var det et avanceret konkurrenceværktøj, der gav en reel fordel, hvis de beherskede teknikken.</p><p>Erfarne ryttere lærte at bruge kædens kraft til at trække hjulet frem og bremsen til at føre det tilbage. Bevægelserne skulle udføres i den rigtige rækkefølge; ellers ventede en slap kæde, et skævt hjul eller tabt fart.</p></div></section>
+
+      <figure class="cambio-race"><img src={`${images}/race.webp`} alt="Historisk cykelrytter, der rækker ned mod gearhåndtagene ved baghjulet" loading="lazy" /><figcaption>Det krævede balance: Rytteren måtte række helt ned til baghjulet, mens cyklen rullede.</figcaption></figure>
+
+      <section class="cambio-era"><p class="section-label">Tre eller fire tandhjul</p><blockquote>Beskedent i dag.<br />Et stort spring <em>dengang.</em></blockquote><div><p>Kun få år tidligere måtte rytterne standse, løsne hjulet og flytte kæden med hænderne eller vende hele baghjulet. Cambio Corsa gjorde det muligt at fortsætte fremad under skiftet.</p><p>Gino Bartali og Fausto Coppi forbindes med denne generation af italienske gearsystemer. Deres rivalisering gjorde alt — fra kost og træning til rammer, dæk og gear — til genstand for intens debat i Italien.</p></div></section>
+
+      <section class="cambio-coppi"><div><p class="section-label">Myten skal have modstand</p><h2>Coppi, Bartali og Touren</h2></div><div><p>Det er ikke korrekt, at Coppi og Bartali udkæmpede en Cambio Corsa-duel i Pyrenæerne i Tour de France 1948. Coppi deltog slet ikke det år. Bartali fik kaptajnrollen og vandt efter sine berømte angreb i Alperne.</p><p>I 1949 rejste de til Frankrig som fælles kaptajner under Alfredo Binda. Coppi vandt både Giroen og Touren, men kilder peger på, at han i denne periode også benyttede franske Simplex-komponenter. Hans Tour-sejr bør derfor ikke uden videre tilskrives Cambio Corsa.</p></div></section>
+
+      <section class="cambio-gallery"><figure><img src={`${images}/stella-veneta.webp`} alt="Rød Stella Veneta racercykel med Campagnolo Cambio Corsa" loading="lazy" /><figcaption>Samlingens Stella Veneta med Cambio Corsa — en fysisk forbindelse til efterkrigstidens italienske cykelteknik.</figcaption></figure><figure><img src={`${images}/drawing.webp`} alt="Teknisk patenttegning af Campagnolo Cambio Corsa" loading="lazy" /><figcaption>Den tekniske tegning viser håndtag, kædefører, nav og de tandede udfaldsender som ét samlet system.</figcaption></figure></section>
+
+      <section class="cambio-evolution"><div><p class="section-label">Vejen videre</p><h2>Paris–Roubaix og Gran Sport</h2></div><div><p>I 1949 kom en ny model med ét betjeningshåndtag. Den blev senere kendt som Paris–Roubaix-gearet, efter at Coppi vandt klassikeren i 1950 med denne type system. Bagakslen skulle stadig løsnes, og rytteren skulle stadig træde baglæns, men betjeningen var enklere.</p><p>Den egentlige løsning kom med Campagnolo Gran Sport. Her blev hjulet siddende fast, mens en fjederbelastet bagskifter flyttede kæden og automatisk holdt den spændt. I begyndelsen af 1950’erne gjorde Gran Sport hurtigt de gamle stangsystemer forældede.</p></div></section>
+
+      <section class="cambio-closing"><blockquote>Ikke blot et “selvmordsgear” —<br />men et dristigt mellemtrin på vej mod <em>den moderne racercykel.</em></blockquote></section>
+      <nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/komponenter/`}>← Alle komponenter</a><a href={`${base}/komponenter/shimano-600-ex-arabesque/`}>Shimano 600 EX Arabesque →</a></nav>
+    </article></main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

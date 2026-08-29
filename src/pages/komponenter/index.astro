@@ -1,0 +1,11 @@
+---
+const base = import.meta.env.BASE_URL;
+const components = [
+  { year: '1946', title: 'Campagnolo Cambio Corsa', text: 'To håndtag, et løst baghjul og et gearskift, der krævede både mod og balance.', image: 'images/components/campagnolo-cambio-corsa/two-levers.webp', link: 'komponenter/campagnolo-cambio-corsa/' },
+  { year: '1978', title: 'Shimano 600 EX Arabesque', text: 'Japansk præcision klædt på til den europæiske racercykel.', image: 'images/components/shimano-600-ex-arabesque/group-illustration.webp', link: 'komponenter/shimano-600-ex-arabesque/' },
+];
+---
+<!doctype html><html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="Komponenter med en historie fra The Evolution of Bikes." /><title>Komponenter · The Evolution of Bikes</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} /></head><body>
+<header class="site-header"><a class="brand" href={`${base}/`}><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav><a href={`${base}/cykler/`}>Samlingen</a><a href={`${base}/historier/`}>Historier</a><a href={`${base}/komponenter/`} aria-current="page">Komponenter</a><a href={`${base}/om/`}>Om</a></nav></header>
+<main><header class="archive-hero"><p class="section-label">Teknik med en fortælling</p><h1>Komponenter</h1><p>Ikke et komplet katalog, men udvalgte dele, opfindelser og mekaniske mellemtrin, der ændrede måden, man cyklede på.</p></header><section class="component-archive">{components.map((item) => <a href={`${base}/${item.link}`}><img src={`${base}/${item.image}`} alt={item.title} /><div><span>{item.year}</span><h2>{item.title}</h2><p>{item.text}</p><b>Læs historien →</b></div></a>)}</section></main>
+<footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer></body></html>

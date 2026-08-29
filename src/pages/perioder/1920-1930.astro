@@ -1,5 +1,7 @@
 ---
 const base = import.meta.env.BASE_URL;
+import { storiesForPeriod } from '../../data/stories';
+const relatedStories = storiesForPeriod('1920-1930');
 const facts = [['5.745 km', 'Tour de France 1926'], ['17 etaper', 'I den længste Tour'], ['ca. 239 timer', 'Lucien Buysses vindertid'], ['482 km', 'Les Sables-d’Olonne–Bayonne 1924']];
 ---
 <!doctype html><html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="1920’ernes barske guldalder: enorme Tour-etaper, primitive bjergveje, vendbare baghjul og ryttere, der måtte være deres egne mekanikere." /><meta property="og:type" content="article" /><meta property="og:title" content="Cykelsportens barske guldalder · 1920–1930" /><meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/periods/1920-1930/mountain-stop.webp" /><title>Cykelsportens barske guldalder · 1920–1930</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} /></head>
@@ -25,6 +27,8 @@ const facts = [['5.745 km', 'Tour de France 1926'], ['17 etaper', 'I den længst
   <figure class="decade1920-wide repair"><img src={`${base}/images/periods/1920-1930/christophe-roadside.webp`} alt="Eugène Christophe reparerer sin cykel ved vejkanten" loading="lazy" /><figcaption>Eugène Christophe ved en reparation i vejkanten. Pumpen, reservedækkene og værktøjet var en del af rytterens oppakning.</figcaption></figure>
 
   <section class="wildwest-copy rust"><div><p class="section-label">Reservedele på kroppen</p><h2>Ingen radio. Ingen garanti for hjælp.</h2></div><div><p>Holdledere, mekanikere og biler fandtes allerede, så 1920’erne var ikke helt en tid før holdbilen. Men hjælpen var langt mindre tilgængelig, og Tourens regler byggede fortsat på personlig selvhjulpenhed.</p><p>Ekstra ringdæk blev båret som et ottetal over skuldrene. Ved en punktering måtte rytteren rive dækket af, montere et nyt og pumpe det med en håndpumpe. Han kunne også blive nødt til at samle en kæde, rette et hjul eller gøre en beskadiget pedal brugbar.</p><p>Stod han alene mellem to landsbyer, var valget enkelt: Reparér med det medbragte værktøj – eller begynd at gå. Det er måske dér, 1920’ernes cykelsport viser sit sande ansigt: teknisk raffineret og folkeligt berømt, men stadig ubarmhjertig tæt på pionertiden.</p></div></section>
+
+  <section class="period-feature"><div><p class="section-label">Historier fra perioden</p><h2>De enkelte øjeblikke</h2><p>Perioden giver overblikket. Herfra kan du gå videre til de selvstændige historier om mennesker og begivenheder i 1920’erne.</p></div><div class="period-feature-links">{relatedStories.map((story) => <a href={`${base}/historier/${story.slug}/`}><span>Relateret historie · {story.year}</span><strong>{story.title}</strong><b>Læs historien →</b></a>)}</div></section>
 
   <nav class="wildwest-next" aria-label="Videre navigation"><a href={`${base}/perioder/`}>← Alle perioder</a><a href={`${base}/perioder/1900-1920/`}>Forrige periode: 1900–1920’erne →</a></nav>
 </article></main>

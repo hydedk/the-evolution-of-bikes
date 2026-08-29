@@ -1,5 +1,7 @@
 ---
 const base = import.meta.env.BASE_URL;
+import { storiesForPeriod } from '../../data/stories';
+const relatedStories = storiesForPeriod('1900-1920');
 const facts = [
   ['1903', 'Det første Tour de France'],
   ['1910', 'Tourmalet kommer med i løbet'],
@@ -30,7 +32,7 @@ const facts = [
   <body>
     <header class="site-header">
       <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
-      <nav aria-label="Hovedmenu"><a href={`${base}/#samlingen`}>Samlingen</a><a href={`${base}/#historier`}>Historier</a><a href={`${base}/#viden`}>Viden</a><a href={`${base}/om/`}>Om</a></nav>
+      <nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`} aria-current="page">Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav>
     </header>
 
     <main>
@@ -55,14 +57,11 @@ const facts = [
 
         <section class="period-feature">
           <div>
-            <p class="section-label">Ny fortælling · To dele</p>
+            <p class="section-label">Relaterede historier</p>
             <h2>Da cykelsporten var et vildt vesten på to hjul</h2>
-            <p>Før regler, følgebiler og holdradioer var cykelsporten et omrejsende eksperiment i fart, udholdenhed og opfindsomhed. Læs historien i to kapitler.</p>
+            <p>Før regler, følgebiler og holdradioer var cykelsporten et omrejsende eksperiment i fart, udholdenhed og opfindsomhed. Herfra kan du gå videre til periodens selvstændige fortællinger.</p>
           </div>
-          <div class="period-feature-links">
-            <a href={`${base}/perioder/1900-1920/cykelsportens-vilde-vesten-1/`}><span>Del 1</span><strong>Heltene, maskinerne og seks døgn uden rigtig søvn</strong><b>Læs første del →</b></a>
-            <a href={`${base}/perioder/1900-1920/cykelsportens-vilde-vesten-2/`}><span>Del 2</span><strong>Snyd, søm og Tour-skandalen i 1904</strong><b>Læs anden del →</b></a>
-          </div>
+          <div class="period-feature-links">{relatedStories.map((story) => <a href={`${base}/historier/${story.slug}/`}><span>Relateret historie · {story.year}</span><strong>{story.title}</strong><b>Læs historien →</b></a>)}</div>
         </section>
 
         <section class="era-facts" aria-label="Fakta om perioden">

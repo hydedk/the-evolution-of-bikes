@@ -1,0 +1,49 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Før Tour de France var cykelsporten et råt eksperiment med primitive veje, seksdagesløb, motorpacing og ryttere på grænsen." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Da cykelsporten var et vildt vesten på to hjul" />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/periods/1900-1920/wild-west/exhausted-rider.webp" />
+    <title>Da cykelsporten var et vildt vesten · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`} aria-current="page">Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav></header>
+    <main>
+      <article class="wildwest-page">
+        <header class="wildwest-hero">
+          <div><p class="section-label">Historie · Cykelsportens pionertid</p><h1>Da cykelsporten var et <em>vildt vesten</em> på to hjul</h1></div>
+          <p>Før Tour de France samlede heltene og skandalerne i ét mægtigt løb, fandtes allerede en rå cykelverden af udholdenhed, hasard og tekniske eksperimenter.</p>
+        </header>
+        <figure class="wildwest-hero-image"><img src={`${base}/images/periods/1900-1920/wild-west/exhausted-rider.webp`} alt="Udmattet banerytter på en trævelodrom" /><figcaption>Banecyklingen gjorde udmattelse til folkelig underholdning. Billedets præcise datering og rytter er ikke dokumenteret i arkivet.</figcaption></figure>
+
+        <section class="wildwest-lead"><p class="section-label">Før Touren</p><p>Jo længere løbet var, jo dårligere vejene var, og jo mere udmattede rytterne blev, desto bedre var historien ofte for de aviser og promotorer, der betalte gildet. Rytterne kæmpede mod mørke, søvnmangel, støv, kulde og primitive cykler – men også mod konkurrenter, der ikke altid mente, at hele ruten nødvendigvis skulle tilbagelægges på cykel.</p></section>
+
+        <section class="wildwest-copy"><div><p class="section-label">En ny slags helt</p><h2>Fra værkstedet til avisspalterne</h2></div><div><p>I slutningen af 1800-tallet blev cyklen et symbol på den moderne tidsalder. Den gav almindelige mennesker en bevægelsesfrihed, der tidligere havde krævet en hest eller en togbillet, og skabte samtidig en helt ny sportsstjerne: den professionelle cykelrytter.</p><p>Mange kom fra arbejdermiljøer, hvor præmiepengene kunne overstige en almindelig årsløn. Maurice Garin havde arbejdet som skorstensfejer og blev kendt som <em>Le Petit Ramoneur</em> – den lille skorstensfejer. Hans vej til berømmelse blev selve billedet på den hårdføre arbejder, der kunne cykle sig til et andet liv.</p><p>Men kontrakterne var korte, og en skade kunne afslutte karrieren fra den ene dag til den anden. Derfor accepterede rytterne risici, som i dag ville være utænkelige.</p></div></section>
+
+        <section class="wildwest-image-row"><figure><img src={`${base}/images/periods/1900-1920/wild-west/bouhours-1900.webp`} alt="Émile Bouhours på racercykel omkring 1900" loading="lazy" /><figcaption>Émile Bouhours, vinder af Paris–Roubaix i 1900, på periodens enkle racercykel.</figcaption></figure><figure><img src={`${base}/images/periods/1900-1920/wild-west/sprint-1900.webp`} alt="Cyklister i en sprint omkring 1900" loading="lazy" /><figcaption>En banesprint omkring år 1900. Små billeder som dette var med til at gøre rytterne til genkendelige sportsstjerner.</figcaption></figure></section>
+
+        <section class="wildwest-copy dark"><div><p class="section-label">Klassikerne opstår</p><h2>Løb før Tour de France</h2></div><div><p>Tour de France opstod ikke ud af ingenting. Liège–Bastogne–Liège blev kørt første gang i 1892. Kun 17 ryttere nåede målet, og den sidste kom ind mere end fem timer efter vinderen Léon Houa.</p><p>I 1896 fulgte det første Paris–Roubaix: omkring 280 kilometer på primitive landeveje og brosten. Tyskeren Josef Fischer vandt efter 9 timer og 17 minutter, mens Maurice Garin blev nummer tre. Brostenene var ikke romantiske kulisser. I regn blev fugerne fyldt med mudder; i tørvejr lå støvet som en sky over feltet.</p><p>Den første udgave blev desuden kørt med pacing. Cyklister – og på dele af ruten motordrevne pacere – kunne reducere vindmodstanden foran rytterne. Grænsen mellem individuel præstation, holdarbejde og mekanisk hjælp var endnu ikke fastlagt.</p></div></section>
+
+        <section class="wildwest-copy"><div><p class="section-label">Menneske og maskine</p><h2>Ét gear til hele dagen</h2></div><div><p>En racercykel omkring 1900 havde stålramme, ofte træfælge og enkle bremser – hvis den overhovedet havde bremser. Mange kørte med fastnav eller ét friløb og én udveksling. Rytteren valgte derfor gear før start og håbede, at det passede nogenlunde til både flad vej og bakker.</p><p>Asfalt var sjælden. Uden for byerne bestod vejene af jord, grus og løse sten; efter regn blev de til mudder med dybe hjulspor. Punkterede rytteren, måtte han i vidt omfang selv klare reparationen. For vild han om natten, var eneste navigation et vejskilt eller en lokal beboer.</p></div></section>
+
+        <figure class="wildwest-wide"><img src={`${base}/images/periods/1900-1920/wild-west/track-racing.webp`} alt="Stort felt på en udendørs cykelbane omkring år 1900" loading="lazy" /><figcaption>Banecykling foran et stort publikum omkring århundredskiftet. Velodromen var både sportsarena og moderne folkeforlystelse.</figcaption></figure>
+
+        <section class="wildwest-copy"><div><p class="section-label">Seks døgn i en træskål</p><h2>Udmattelse som forestilling</h2></div><div><p>De tidlige seksdagesløb var individuelle udholdenhedskonkurrencer. I Madison Square Garden kunne publikum følge rytterne døgnet rundt, mens cigarrøg, støv og varme hang over træbanen. Hvert minut væk fra banen gav konkurrenterne mulighed for at øge forspringet.</p><p>Efter flere dages søvnmangel blev nogle ryttere desorienterede, hallucinerede eller fortsatte næsten mekanisk. Da myndigheder i New York og Illinois i 1898 begrænsede den enkelte til 12 timers kørsel om dagen, satte arrangørerne rytterne sammen parvis. Den ene kunne hvile, mens den anden kørte. Herfra kom parløbsdisciplinen <em>Madison</em>.</p><p>Stayerløbene lagde motorlarm og udstødningsrøg oveni. Rytterne lå tæt bag store pacing-motorcykler og nåede hastigheder, som ellers var umulige. Publikum elskede kombinationen af fart, teknik og fare.</p></div></section>
+
+        <section class="wildwest-copy rust"><div><p class="section-label">Den lille sorte flaske</p><h2>Kroppen skulle bare fortsætte</h2></div><div><p>Der fandtes ingen moderne antidopingregler. Koffein, alkohol, æter, kokain og små doser stryknin optræder i periodens beretninger, men dokumentationen bag de enkelte historier er ofte usikker. Grænsen mellem medicin, opkvikker og gift var uklar.</p><p>Rytteren vidste ikke altid, hvad trænerens hemmelige blanding indeholdt. Englænderen James “Choppy” Warburton blev berygtet for sin lille sorte flaske, men indholdet er aldrig fastslået sikkert. Midlerne gjorde næppe kroppen stærkere; de kunne gøre det muligt at ignorere advarselssignalerne lidt længere.</p><p>Arthur Linton omtales ofte som sportens første dopingoffer, men hans død i 1896 skyldtes ifølge samtidige oplysninger sandsynligvis sygdom. Det er en vigtig påmindelse: Pionertidens historier er dramatiske nok uden at gøre usikre myter til sikre fakta.</p></div></section>
+
+        <nav class="wildwest-next" aria-label="Artikelnavigation"><a href={`${base}/historier/`}>← Alle historier</a><a href={`${base}/historier/snyd-soem-tour-de-france-1904/`}>Næste: Snyd og søm i Touren →</a></nav>
+      </article>
+    </main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

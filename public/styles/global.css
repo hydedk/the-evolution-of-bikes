@@ -251,6 +251,7 @@ h1 em { color: var(--rust); font-weight: 400; }
 .periods-archive-hero h1 { font-size: clamp(78px, 12vw, 180px); }
 .periods-archive { padding: 0 clamp(24px, 8vw, 130px) 120px; }
 .period-overview { border-top: 1px solid var(--line); }
+.period-overview + .period-overview { margin-top: 70px; }
 .period-overview-main { display: grid; grid-template-columns: 1.15fr .85fr; min-height: 590px; background: var(--ink); color: var(--paper); text-decoration: none; }
 .period-overview-main img { width: 100%; height: 100%; max-height: 680px; object-fit: cover; filter: grayscale(1) contrast(1.05); }
 .period-overview-main > div { display: flex; flex-direction: column; justify-content: center; padding: clamp(35px, 6vw, 85px); }
@@ -269,6 +270,23 @@ h1 em { color: var(--rust); font-weight: 400; }
 .periods-coming { padding: 110px clamp(24px, 10vw, 165px); background: var(--rust); color: var(--paper); }
 .periods-coming .section-label { color: var(--ink); }
 .periods-coming blockquote { max-width: 1050px; margin: 35px 0 0; font-size: clamp(44px, 6vw, 86px); line-height: 1; }
+
+.decade1920-hero-image { margin: 0; padding: 50px clamp(24px, 8vw, 130px) 0; background: var(--ink); }
+.decade1920-hero-image img { display: block; width: min(100%, 1120px); max-height: 700px; margin: auto; object-fit: contain; filter: grayscale(1) contrast(1.04); }
+.decade1920-hero-image figcaption, .decade1920-wide figcaption, .decade1920-mountains figcaption { padding: 13px 0; color: #aeb5ad; font-size: 10px; }
+.decade1920-facts { grid-template-columns: repeat(4, 1fr); }
+.decade1920-wide { margin: 0; padding: 85px clamp(24px, 8vw, 130px); background: var(--cream); }
+.decade1920-wide img { display: block; width: min(100%, 1120px); max-height: 680px; margin: auto; object-fit: contain; filter: grayscale(1) contrast(1.04); }
+.decade1920-wide.repair { background: var(--ink); }
+.decade1920-mountains { display: grid; grid-template-columns: 1fr 1.25fr; gap: 18px; padding: 90px clamp(24px, 8vw, 130px); background: var(--ink); }
+.decade1920-mountains figure { margin: 0; }
+.decade1920-mountains img { display: block; width: 100%; height: 520px; object-fit: contain; background: #111914; filter: grayscale(1) contrast(1.04); }
+.decade1920-gear { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(50px, 9vw, 140px); align-items: center; padding: 110px clamp(24px, 10vw, 165px); background: var(--cream); }
+.decade1920-gear figure { margin: 0; }
+.decade1920-gear img { display: block; width: 100%; max-height: 520px; object-fit: contain; mix-blend-mode: multiply; }
+.decade1920-gear figcaption { padding-top: 12px; font-size: 10px; }
+.decade1920-gear h2 { margin: 28px 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(48px, 6vw, 84px); font-weight: 400; line-height: 1; }
+.decade1920-gear > div p:not(.section-label) { line-height: 1.85; }
 
 .component-page { overflow: hidden; }
 .component-hero { display: grid; grid-template-columns: 1.7fr .7fr; align-items: end; gap: 70px; padding: 100px clamp(24px, 8vw, 130px) 85px; }
@@ -568,6 +586,13 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .period-overview-main img { height: auto; max-height: 440px; }
   .period-article-list { grid-template-columns: 1fr; }
   .period-article-list > a + a { border-left: 0; border-top: 1px solid var(--line); }
+  .decade1920-hero-image { padding: 24px 24px 0; }
+  .decade1920-hero-image img { width: 100%; max-height: 440px; }
+  .decade1920-facts { grid-template-columns: 1fr 1fr; }
+  .decade1920-wide { padding-left: 24px; padding-right: 24px; }
+  .decade1920-wide img { width: 100%; max-height: 460px; }
+  .decade1920-mountains, .decade1920-gear { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
+  .decade1920-mountains img { height: auto; max-height: 420px; }
   .intro { grid-template-columns: 1fr; }
   .decades, .content-grid { grid-template-columns: 1fr; }
   .featured-bike, .bike-story-split, .artifact-band, .bike-intro { grid-template-columns: 1fr; }

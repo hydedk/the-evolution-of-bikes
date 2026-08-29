@@ -200,6 +200,40 @@ h1 em { color: var(--rust); font-weight: 400; }
 .era-bottom-nav { display: flex; justify-content: space-between; padding: 35px clamp(24px, 8vw, 130px) 90px; border-top: 1px solid var(--line); font-size: 12px; }
 .era-bottom-nav a { color: var(--rust); }
 
+.period-feature { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(50px, 8vw, 120px); padding: 110px clamp(24px, 8vw, 130px); background: #d8d1c2; }
+.period-feature h2 { margin: 28px 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(48px, 6vw, 86px); font-weight: 400; line-height: 1; }
+.period-feature > div:first-child > p:last-child { max-width: 560px; line-height: 1.8; }
+.period-feature-links { display: grid; gap: 16px; }
+.period-feature-links a { display: flex; min-height: 220px; flex-direction: column; padding: 30px; background: var(--paper); text-decoration: none; }
+.period-feature-links span { color: var(--rust); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.period-feature-links strong { max-width: 580px; margin: 30px 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 400; line-height: 1.12; }
+.period-feature-links b { margin-top: auto; color: var(--rust); font-size: 12px; font-weight: 500; }
+
+.wildwest-page { overflow: hidden; }
+.wildwest-hero { display: grid; grid-template-columns: 1.45fr .55fr; gap: 70px; align-items: end; padding: 100px clamp(24px, 8vw, 130px) 75px; }
+.wildwest-hero h1 { max-width: 1050px; margin: 32px 0 0; font-size: clamp(60px, 8vw, 120px); line-height: .95; }
+.wildwest-hero > p { max-width: 430px; margin: 0 0 10px; font-family: 'Libre Caslon Display', serif; font-size: clamp(24px, 2.5vw, 36px); line-height: 1.25; }
+.wildwest-hero-image { margin: 0; padding: 0 clamp(24px, 8vw, 130px); background: var(--ink); }
+.wildwest-hero-image img { display: block; width: min(100%, 1120px); max-height: 720px; margin: auto; object-fit: contain; filter: grayscale(1) contrast(1.04); }
+.wildwest-hero-image.second img { max-width: 760px; }
+.wildwest-hero-image figcaption, .wildwest-wide figcaption, .wildwest-image-row figcaption { padding: 13px 0; color: #aeb5ad; font-size: 10px; }
+.wildwest-lead { display: grid; grid-template-columns: 1fr 3fr; gap: 45px; padding: 105px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
+.wildwest-lead > p:last-child { max-width: 1000px; margin: 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(34px, 4.4vw, 64px); line-height: 1.15; }
+.wildwest-copy { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(50px, 9vw, 145px); padding: 115px clamp(24px, 10vw, 165px); }
+.wildwest-copy h2 { max-width: 620px; margin: 28px 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(46px, 6vw, 84px); font-weight: 400; line-height: 1; }
+.wildwest-copy > div:last-child { max-width: 760px; font-size: 16px; line-height: 1.9; }
+.wildwest-copy.dark { background: var(--ink); color: var(--paper); }
+.wildwest-copy.rust { background: var(--rust); color: var(--paper); }
+.wildwest-copy.rust .section-label { color: var(--ink); }
+.wildwest-image-row { display: grid; grid-template-columns: .8fr 1.2fr; gap: 18px; padding: 90px clamp(24px, 10vw, 165px); background: var(--ink); }
+.wildwest-image-row figure { margin: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+.wildwest-image-row img { width: 100%; height: 470px; object-fit: contain; background: #e7e2d8; filter: grayscale(1); }
+.wildwest-wide { margin: 0; padding: 90px clamp(24px, 8vw, 130px); background: var(--ink); }
+.wildwest-wide img { display: block; width: min(100%, 1200px); max-height: 680px; margin: auto; object-fit: contain; filter: grayscale(1) contrast(1.03); }
+.wildwest-wide.poster img { max-width: 760px; }
+.wildwest-next { display: flex; justify-content: space-between; gap: 30px; padding: 40px clamp(24px, 8vw, 130px) 90px; border-top: 1px solid var(--line); font-size: 12px; }
+.wildwest-next a { color: var(--rust); }
+
 .component-page { overflow: hidden; }
 .component-hero { display: grid; grid-template-columns: 1.7fr .7fr; align-items: end; gap: 70px; padding: 100px clamp(24px, 8vw, 130px) 85px; }
 .component-hero h1 { font-size: clamp(65px, 9vw, 138px); margin: 35px 0 0; }
@@ -514,7 +548,7 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .about-body aside i::after { left: auto; right: -4px; }
   .about-copy blockquote { margin-left: -24px; margin-right: -24px; }
   .about-facts dl { grid-template-columns: 1fr 1fr; }
-  .era-hero, .era-opening, .era-story, .mechanics-section, .thys-section, .period-sources { grid-template-columns: 1fr; }
+  .era-hero, .era-opening, .era-story, .mechanics-section, .thys-section, .period-sources, .period-feature, .wildwest-hero, .wildwest-lead, .wildwest-copy { grid-template-columns: 1fr; }
   .era-hero { padding-top: 70px; }
   .era-facts { grid-template-columns: 1fr 1fr; }
   .era-facts div:nth-child(3n) { border-right: 0; }
@@ -531,6 +565,15 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .era-wide-photo { padding-top: 28px; }
   .era-wide-photo img { width: auto; max-width: calc(100% - 48px); max-height: 480px; }
   .era-bottom-nav { gap: 30px; align-items: flex-start; }
+  .wildwest-hero { padding-top: 70px; }
+  .wildwest-hero-image { padding: 0; }
+  .wildwest-hero-image img { width: 100%; max-height: 480px; }
+  .wildwest-hero-image figcaption { padding-left: 24px; padding-right: 24px; }
+  .wildwest-image-row { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
+  .wildwest-image-row img { height: auto; max-height: 390px; }
+  .wildwest-wide { padding-left: 24px; padding-right: 24px; }
+  .wildwest-wide img { width: 100%; max-height: 460px; }
+  .wildwest-next { flex-direction: column; }
   .component-hero, .component-opening, .friction-section { grid-template-columns: 1fr; }
   .component-hero { padding-top: 70px; }
   .component-facts { grid-template-columns: 1fr 1fr; }

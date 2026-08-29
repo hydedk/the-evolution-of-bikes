@@ -53,6 +53,18 @@ const facts = [
           <p>Tour de France i denne periode var en brutal prøve for både mennesker og maskiner. Rytterne startede ofte før daggry og kørte gennem mørke, kulde, støv og regn på veje, der mange steder bestod af grus eller brosten.</p>
         </section>
 
+        <section class="period-feature">
+          <div>
+            <p class="section-label">Ny fortælling · To dele</p>
+            <h2>Da cykelsporten var et vildt vesten på to hjul</h2>
+            <p>Før regler, følgebiler og holdradioer var cykelsporten et omrejsende eksperiment i fart, udholdenhed og opfindsomhed. Læs historien i to kapitler.</p>
+          </div>
+          <div class="period-feature-links">
+            <a href={`${base}/perioder/1900-1920/cykelsportens-vilde-vesten-1/`}><span>Del 1</span><strong>Heltene, maskinerne og seks døgn uden rigtig søvn</strong><b>Læs første del →</b></a>
+            <a href={`${base}/perioder/1900-1920/cykelsportens-vilde-vesten-2/`}><span>Del 2</span><strong>Snyd, søm og Tour-skandalen i 1904</strong><b>Læs anden del →</b></a>
+          </div>
+        </section>
+
         <section class="era-facts" aria-label="Fakta om perioden">
           {facts.map(([number, label]) => <div><strong>{number}</strong><span>{label}</span></div>)}
         </section>

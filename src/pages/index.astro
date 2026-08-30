@@ -1,5 +1,16 @@
 ---
+import { stories } from '../data/stories';
+
 const base = import.meta.env.BASE_URL;
+const featuredStories = stories.map((story) => ({
+  slug: story.slug,
+  year: story.year,
+  title: story.title,
+  text: story.text,
+  image: `${base}/${story.image}`,
+  link: `${base}/historier/${story.slug}/`,
+}));
+const featuredFallback = featuredStories[0];
 const gateways = [
   { number: '01', label: 'Fortællingerne', title: 'Historier og anekdoter', text: 'Skæve øjeblikke, glemte ryttere og de historier, resultatlisten ikke fortæller.', image: `${base}/images/stories/aldo-bini/aldo-bini-archive.webp`, link: `${base}/historier/` },
   { number: '02', label: 'Cykelløb og kulturhistorie', title: 'Perioder', text: 'Gå på opdagelse årti for årti i løbene, menneskene, vejene og cykelkulturen.', image: `${base}/images/periods/1900-1920/wild-west/track-racing.webp`, link: `${base}/perioder/` },
@@ -64,18 +75,39 @@ const gateways = [
         </div>
       </section>
 
-      <section class="featured-bike">
+      <section class="featured-bike" data-random-story>
         <div class="featured-bike-image">
-          <img src={`${base}/images/bikes/cycles-france-sport/hero.webp`} alt="Cycles France-Sport racercykel fra omkring 1919 før restaureringen" loading="lazy" />
+          <img src={featuredFallback.image} alt={featuredFallback.title} loading="lazy" data-random-story-image />
         </div>
         <div class="featured-bike-copy">
-          <p class="section-label">Første cykel i arkivet</p>
-          <p class="featured-year">ca. 1919 · Toulouse, Frankrig</p>
-          <h2>Cycles<br />France-Sport</h2>
-          <p>Cyklen, der ventede næsten 100 år bagerst i en lade — med et navn i messing og en gammel flyer skjult i styret.</p>
-          <a class="text-link" href={`${base}/cykler/cycles-france-sport/`}>Læs hele historien <span aria-hidden="true">→</span></a>
+          <p class="section-label">Tilfældig historie fra arkivet</p>
+          <p class="featured-year" data-random-story-year>{featuredFallback.year}</p>
+          <h2 data-random-story-title>{featuredFallback.title}</h2>
+          <p data-random-story-text>{featuredFallback.text}</p>
+          <a class="text-link" href={featuredFallback.link} data-random-story-link>Læs historien <span aria-hidden="true">→</span></a>
         </div>
       </section>
+
+      <script define:vars={{ featuredStories }}>
+        const section = document.querySelector('[data-random-story]');
+        if (section && featuredStories.length > 1) {
+          const storageKey = 'eob-last-featured-story';
+          let previousSlug = null;
+          try { previousSlug = localStorage.getItem(storageKey); } catch {}
+
+          const choices = featuredStories.filter((story) => story.slug !== previousSlug);
+          const story = choices[Math.floor(Math.random() * choices.length)];
+
+          section.querySelector('[data-random-story-image]').src = story.image;
+          section.querySelector('[data-random-story-image]').alt = story.title;
+          section.querySelector('[data-random-story-year]').textContent = story.year;
+          section.querySelector('[data-random-story-title]').textContent = story.title;
+          section.querySelector('[data-random-story-text]').textContent = story.text;
+          section.querySelector('[data-random-story-link]').href = story.link;
+
+          try { localStorage.setItem(storageKey, story.slug); } catch {}
+        }
+      </script>
 
       <section class="story">
         <p class="section-label">Fra arkivet</p>

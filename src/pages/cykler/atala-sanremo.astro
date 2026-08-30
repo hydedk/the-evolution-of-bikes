@@ -1,0 +1,102 @@
+---
+const base = import.meta.env.BASE_URL;
+const imageRoot = `${base}/images/bikes/atala-sanremo`;
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Atala Sanremo fra slutningen af 1970’erne eller begyndelsen af 1980’erne — en italiensk stålcykel med Campagnolo, Gipiemme og spor af Atalas lange løbshistorie." />
+    <meta property="og:title" content="Atala Sanremo · The Evolution of Bikes" />
+    <meta property="og:description" content="En italiensk stålcykel, hvor lak, geargreb og komponenter fortæller en større historie om Atala." />
+    <meta property="og:image" content={`${imageRoot}/hero.webp`} />
+    <title>Atala Sanremo · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`}><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
+      <nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`} aria-current="page">Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav>
+    </header>
+
+    <main class="atala-page">
+      <header class="atala-hero">
+        <div>
+          <p class="section-label">Tidligere i samlingen · ca. 1978–1982</p>
+          <h1>Atala<br /><em>Sanremo</em></h1>
+          <p>Da mærket bag den første Giro-sejr skabte en italiensk racer, der bar sin tids stil helt ud i geargrebene.</p>
+        </div>
+        <figure><img src={`${imageRoot}/hero.webp`} alt="Fronten af den røde Atala Sanremo med orange styrbånd" /><figcaption>Atala Sanremo. Cyklen er ikke længere i samlingen.</figcaption></figure>
+      </header>
+
+      <section class="atala-facts" aria-label="Nøgleoplysninger">
+        <div><strong>Atala</strong><span>Mærke</span></div>
+        <div><strong>Sanremo</strong><span>Model</span></div>
+        <div><strong>ca. 1978–82</strong><span>Forsigtig datering</span></div>
+        <div><strong>52 cm</strong><span>Stelstørrelse</span></div>
+      </section>
+
+      <section class="atala-opening">
+        <p class="section-label">En cykel med personlighed</p>
+        <p>Den røde lak glider over i gult og sort. De lange, riflede geargreb står frit på skrårøret, og det orange styrbånd gør ikke noget forsøg på at være diskret. Atala Sanremo er ikke nødvendigvis en sjælden professionel holdcykel. Dens styrke er noget andet: Den viser, hvordan en god italiensk landevejscykel kunne se ud omkring overgangen til 1980’erne.</p>
+      </section>
+
+      <figure class="atala-wide"><img src={`${imageRoot}/full-bike.webp`} alt="Atala Sanremo set fra siden" /><figcaption>Den komplette Atala Sanremo med klassisk diamantstel, smalle rør og italienske komponenter.</figcaption></figure>
+
+      <section class="atala-story">
+        <div>
+          <p class="section-label">Fra murer til Giro-vinder</p>
+          <h2>Et navn med løb i blodet</h2>
+        </div>
+        <div>
+          <p>Atala blev grundlagt i Milano i 1907 af Angelo Gatti, der tidligere havde arbejdet for Bianchi. Allerede to år senere fik mærket en plads i italiensk cykelhistorie, da Luigi Ganna vandt den første Giro d’Italia på en Atala.</p>
+          <p>Ganna var tidligere murer og havde cyklet lange afstande til arbejde. I Giroen i 1909 vandt han tre etaper og den samlede sejr, som dengang blev afgjort på point. Han forbindes også med den jordnære bemærkning om, at hans bagdel brændte efter løbet. Om ordene er gengivet helt præcist eller ej, passer anekdoten godt til sportens rå pionertid.</p>
+          <p>Carlo Galetti fulgte med en ny Giro-sejr for Atala i 1910, og i 1912 vandt mærkets hold den særlige holdudgave af løbet. Sanremo-navnet på denne langt senere cykel peger på samme kultur: Milano–Sanremo, foråret og den italienske landevej.</p>
+        </div>
+      </section>
+
+      <section class="atala-details">
+        <figure><img src={`${imageRoot}/shifters.webp`} alt="To friktionsgear på Atalaens skrårør" /><figcaption>Friktionsgrebene kræver, at rytteren selv mærker kædens placering.</figcaption></figure>
+        <figure><img src={`${imageRoot}/columbus.webp`} alt="Columbus-mærkat på Atalaens stelrør" /><figcaption>Columbus-mærkatet er et tydeligt italiensk spor på stellet.</figcaption></figure>
+        <figure><img src={`${imageRoot}/drivetrain.webp`} alt="Atalaens bagskifter, kranksæt og baghjul" /><figcaption>Et blandet italiensk komponentvalg var helt almindeligt.</figcaption></figure>
+      </section>
+
+      <section class="atala-components">
+        <div>
+          <p class="section-label">Stål og friktion</p>
+          <h2>Teknik, der kan ses og forstås</h2>
+        </div>
+        <div>
+          <p>Stellet er samlet med muffer, og de slanke stålrør giver cyklen den lette silhuet, som prægede italienske racere før aluminiums- og kulfiberstel blev dominerende.</p>
+          <p>Gearskiftet forbindes med Campagnolo Nuovo Record-generationen. Grebene arbejder uden faste klik: Rytteren flytter dem en anelse, lytter til kæden og finder selv den rigtige position. Gipiemme-bremser og -kranksæt føjer endnu et italiensk navn til cyklen. Blandede komponentgrupper var ikke et kompromis, der skulle skjules, men ofte den naturlige måde at bygge en velfungerende racer på.</p>
+          <p>En præcis årgang kræver kontrol af stelnummer, datokoder og samtidige kataloger. Derfor dateres denne cykel forsigtigt til slutningen af 1970’erne eller begyndelsen af 1980’erne.</p>
+        </div>
+      </section>
+
+      <section class="atala-detail-pair">
+        <figure><img src={`${imageRoot}/crank.webp`} alt="Gipiemme-kranksæt og krankboks på Atala Sanremo" /><figcaption>Gipiemme ved krankboksen.</figcaption></figure>
+        <figure><img src={`${imageRoot}/seat-cluster.webp`} alt="Atala-logo ved cyklens sadelrør og overrør" /><figcaption>Små logoer og stafferinger giver stellet sin egen karakter.</figcaption></figure>
+      </section>
+
+      <section class="atala-era">
+        <p class="section-label">Tilbage i feltet</p>
+        <blockquote>Atala-navnet vendte tilbage til den store scene i <em>1980’erne.</em></blockquote>
+        <div>
+          <p>Fra 1982 optrådte Atala–Campagnolo igen som professionelt hold under Franco Cribiori. Holdet blev især synligt gennem den schweiziske sprinter og banerytter Urs Freuler, der vandt 14 Giro-etaper for Atala og pointkonkurrencen i 1984.</p>
+          <p>Det gør ikke denne Sanremo til en holdcykel. Men forbindelsen giver den en ramme: Den stammer fra en tid, hvor Atala igen kunne ses i tv-billederne fra Giroen, og hvor italiensk cykelindustri stadig satte et umiskendeligt præg på både feltet og landevejene udenfor.</p>
+        </div>
+      </section>
+
+      <section class="atala-closing">
+        <p>Atala Sanremo er interessant, fordi den ikke behøver at være en berømt mesters cykel. Den er et smukt og genkendeligt stykke italiensk cykelkultur — bygget til at blive kørt, justeret med fingerspidserne og set på.</p>
+        <a href={`${base}/cykler/`}>← Tilbage til cyklerne</a>
+      </section>
+    </main>
+
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

@@ -408,6 +408,36 @@ h1 em { color: var(--rust); font-weight: 400; }
 .bini-closing blockquote { margin: 0; font-size: clamp(55px, 8vw, 115px); line-height: .98; }
 .bini-closing em { color: var(--ink); font-weight: 400; }
 
+.skibby-page { overflow: hidden; }
+.skibby-hero { padding: 100px clamp(24px, 8vw, 130px) 85px; }
+.skibby-hero h1 { margin: 35px 0; font-size: clamp(60px, 9vw, 132px); }
+.skibby-hero h1 em { color: var(--rust); font-weight: 400; }
+.skibby-hero > p:last-child { max-width: 790px; font-family: 'Libre Caslon Display', serif; font-size: clamp(25px, 3vw, 42px); line-height: 1.28; }
+.skibby-image { margin: 0; padding: 58px clamp(24px, 8vw, 130px) 0; background: var(--ink); }
+.skibby-image img { display: block; width: min(100%, 1500px); aspect-ratio: 16 / 9; margin: auto; object-fit: contain; }
+.skibby-image figcaption { padding: 14px 0; color: #aeb5ad; font-size: 11px; }
+.skibby-opening { display: grid; grid-template-columns: 1fr 3fr; gap: 45px; padding: 110px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
+.skibby-opening > p:last-child { max-width: 980px; margin: 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(38px, 5vw, 70px); line-height: 1.15; }
+.skibby-story { display: grid; grid-template-columns: 220px minmax(0, 790px); justify-content: center; gap: clamp(60px, 9vw, 140px); padding: 120px 24px; }
+.skibby-story aside { align-self: start; position: sticky; top: 30px; padding: 40px 0; border-top: 1px solid var(--rust); border-bottom: 1px solid var(--rust); text-align: center; }
+.skibby-story aside strong { display: block; color: var(--rust); font-family: 'Libre Caslon Display', serif; font-size: 62px; font-weight: 400; }
+.skibby-story aside span { font-size: 10px; line-height: 1.6; text-transform: uppercase; letter-spacing: .12em; }
+.skibby-story > div { font-size: 17px; line-height: 1.9; }
+.skibby-story h2, .skibby-context h2, .skibby-finish h2 { margin: 0 0 30px; font-family: 'Libre Caslon Display', serif; font-size: clamp(48px, 6vw, 82px); font-weight: 400; line-height: 1; }
+.skibby-story h2:not(:first-child) { margin-top: 90px; }
+.skibby-story blockquote { margin: 75px -8vw; padding: 60px 8vw; background: var(--cream); font-size: clamp(38px, 5vw, 65px); line-height: 1.1; }
+.skibby-facts { display: grid; grid-template-columns: repeat(5, 1fr); padding: 90px clamp(24px, 8vw, 130px); background: var(--rust); color: var(--paper); }
+.skibby-facts div { min-height: 160px; padding: 25px; border: 1px solid rgba(241,238,228,.3); border-right: 0; display: flex; flex-direction: column; justify-content: space-between; }
+.skibby-facts div:last-child { border-right: 1px solid rgba(241,238,228,.3); }
+.skibby-facts strong { font-family: 'Libre Caslon Display', serif; font-size: clamp(32px, 4vw, 55px); font-weight: 400; }
+.skibby-facts span { font-size: 10px; line-height: 1.5; text-transform: uppercase; letter-spacing: .12em; }
+.skibby-context, .skibby-finish { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(60px, 10vw, 150px); padding: 120px clamp(24px, 8vw, 130px); }
+.skibby-context > div:last-child, .skibby-finish > div:last-child { align-self: end; font-size: 16px; line-height: 1.9; }
+.skibby-return { padding: 110px clamp(24px, 12vw, 190px); background: var(--ink); color: var(--paper); }
+.skibby-return blockquote { max-width: 1100px; margin: 40px 0 70px; font-size: clamp(46px, 7vw, 96px); line-height: 1; }
+.skibby-return > div { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; max-width: 1000px; color: #b8beb8; line-height: 1.85; }
+.skibby-finish { background: var(--cream); }
+
 .quick-page { overflow: hidden; }
 .quick-hero { padding: 100px clamp(24px, 8vw, 130px) 85px; }
 .quick-hero h1 { font-size: clamp(65px, 9vw, 138px); margin: 35px 0; }
@@ -711,6 +741,15 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .bini-crash aside { width: min(100%, 260px); justify-self: center; }
   .bini-facts { grid-template-columns: 1fr 1fr; }
   .bini-facts div:nth-child(2n) { border-right: 1px solid var(--line); }
+  .skibby-hero { padding-top: 70px; }
+  .skibby-image { padding: 24px 24px 0; }
+  .skibby-image img { width: 100%; height: auto; aspect-ratio: auto; }
+  .skibby-opening, .skibby-story, .skibby-context, .skibby-finish, .skibby-return > div { grid-template-columns: 1fr; }
+  .skibby-story aside { position: static; width: min(100%, 260px); justify-self: center; }
+  .skibby-story blockquote { margin-left: -24px; margin-right: -24px; }
+  .skibby-facts { grid-template-columns: 1fr 1fr; }
+  .skibby-facts div:nth-child(2n) { border-right: 1px solid rgba(241,238,228,.3); }
+  .skibby-facts div:last-child { grid-column: 1 / -1; }
   .quick-hero { padding-top: 70px; }
   .quick-pass { padding: 24px 24px 0; }
   .quick-pass img { aspect-ratio: 4 / 3; }

@@ -287,6 +287,22 @@ h1 em { color: var(--rust); font-weight: 400; }
 .decade1920-gear figcaption { padding-top: 12px; font-size: 10px; }
 .decade1920-gear h2 { margin: 28px 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(48px, 6vw, 84px); font-weight: 400; line-height: 1; }
 .decade1920-gear > div p:not(.section-label) { line-height: 1.85; }
+.decade1970-hero-image { margin: 0; padding: 42px clamp(24px, 8vw, 130px) 0; background: #322e27; }
+.decade1970-hero-image img { display: block; width: min(100%, 1280px); margin: auto; }
+.decade1970-hero-image figcaption { width: min(100%, 1280px); margin: auto; padding: 13px 0 20px; color: #c5bba6; font-size: 10px; }
+.decade1970-lead { background: #d8d1c2; }
+.decade1970-facts { grid-template-columns: repeat(4, 1fr); }
+.decade1970-mechanics { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(50px, 9vw, 140px); padding: 110px clamp(24px, 10vw, 165px); background: #e5dccb; }
+.decade1970-mechanics h2 { margin: 28px 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(48px, 6vw, 84px); font-weight: 400; line-height: 1; }
+.decade1970-mechanics p:not(.section-label) { max-width: 720px; line-height: 1.85; }
+.decade1970-mechanics aside { display: grid; align-content: center; border-top: 1px solid #9e8c73; }
+.decade1970-mechanics aside span { padding: 20px 4px; border-bottom: 1px solid #9e8c73; color: var(--rust); font-family: 'Libre Caslon Display', serif; font-size: clamp(24px, 3vw, 38px); }
+.decade1970-callouts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding: 100px clamp(24px, 8vw, 130px); background: var(--ink); }
+.decade1970-callouts article { padding: clamp(30px, 5vw, 66px); background: #e5dccb; }
+.decade1970-callouts article:last-child { background: #a64b32; color: #fff8eb; }
+.decade1970-callouts span { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.decade1970-callouts h2 { margin: 45px 0 28px; font-family: 'Libre Caslon Display', serif; font-size: clamp(38px, 5vw, 68px); font-weight: 400; line-height: 1; }
+.decade1970-callouts p { line-height: 1.8; }
 
 .component-page { overflow: hidden; }
 .component-hero { display: grid; grid-template-columns: 1.7fr .7fr; align-items: end; gap: 70px; padding: 100px clamp(24px, 8vw, 130px) 85px; }
@@ -662,6 +678,8 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .decade1920-wide img { width: 100%; max-height: 460px; }
   .decade1920-mountains, .decade1920-gear { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
   .decade1920-mountains img { height: auto; max-height: 420px; }
+  .decade1970-facts { grid-template-columns: 1fr 1fr; }
+  .decade1970-mechanics, .decade1970-callouts { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
   .intro { grid-template-columns: 1fr; }
   .decades, .content-grid { grid-template-columns: 1fr; }
   .featured-bike, .bike-story-split, .artifact-band, .bike-intro { grid-template-columns: 1fr; }

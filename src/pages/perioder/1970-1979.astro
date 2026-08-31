@@ -1,0 +1,93 @@
+---
+const base = import.meta.env.BASE_URL;
+const facts = [
+  ['1975', 'Første Tour-afslutning på Champs-Élysées'],
+  ['1975', 'Den prikkede bjergtrøje indføres'],
+  ['1978', 'Hinault vinder sin første Tour'],
+  ['4 sejre', 'De Vlaeminck i Paris–Roubaix'],
+];
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="1970’ernes cykelsport: stålrammer, friktionsgear, stærkere holdorganisation og skiftet fra Eddy Merckx til Bernard Hinault." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Mellem Kannibalen og Grævlingen · 1970–1979" />
+    <meta property="og:description" content="Et årti med stålrammer, friktionsgear og et professionelt felt i forandring." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/periods/1970-1979/felt-illustration.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Mellem Kannibalen og Grævlingen · 1970–1979</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
+      <nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`} aria-current="page">Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav>
+    </header>
+    <main>
+      <article class="wildwest-page decade1970-page">
+        <header class="wildwest-hero decade1970-hero">
+          <div><p class="section-label">Perioden 1970–1979</p><h1>Mellem Kannibalen<br />og <em>Grævlingen</em></h1></div>
+          <p>Et årti med stålrammer, friktionsgear og et professionelt felt på vej fra Merckx’ dominans til Hinaults nye orden.</p>
+        </header>
+
+        <figure class="decade1970-hero-image">
+          <img src={`${base}/images/periods/1970-1979/felt-illustration.jpg`} alt="Illustration af et professionelt cykelfelt på stålcykler i 1970’erne" />
+          <figcaption>En generel, tidstypisk scene fra 1970’ernes professionelle cykelsport. AI-genereret illustration – ikke et billede af et bestemt løb.</figcaption>
+        </figure>
+
+        <section class="wildwest-lead decade1970-lead"><p class="section-label">Hånden ned til skrårøret</p><p>Gearskiftet gav ikke et klik. Rytteren flyttede grebet, lyttede til kæden og rettede en anelse, hvis den støjede. Cyklerne lignede allerede moderne racercykler, men de krævede mere af hænderne.</p></section>
+
+        <section class="era-facts decade1970-facts" aria-label="Nedslag fra 1970’ernes cykelsport">{facts.map(([number, label]) => <div><strong>{number}</strong><span>{label}</span></div>)}</section>
+
+        <section class="wildwest-copy">
+          <div><p class="section-label">Et årti mellem to regenter</p><h2>Merckx kunne næsten det hele</h2></div>
+          <div><p>Da 1970’erne begyndte, stod Eddy Merckx midt i sin mest dominerende periode. Han kunne vinde etapeløb, klassikere, enkeltstarter og spurter og lod sjældent en mulighed ligge. Tilnavnet Kannibalen var ikke svært at forstå.</p><p>Men årtiet blev ikke én lang Merckx-parade. I klassikerne fandtes specialister, som kunne møde ham på deres eget terræn. Roger De Vlaeminck havde en baggrund i cykelcross og en særlig sikkerhed på brostenene. I Paris–Roubaix blev forskellen mellem ham og Merckx langt mindre end i de store etapeløb.</p><p>I 1975 mistede Merckx også grebet om Tour de France. Bernard Thévenet tog den gule trøje efter Merckx’ nedtur på vej mod Pra-Loup og beholdt den til Paris.</p></div>
+        </section>
+
+        <section class="decade1970-mechanics">
+          <div><p class="section-label">Stål, håndværk og faste vaner</p><h2>Cyklen skulle mærkes</h2><p>De bedste racercykler blev fortsat bygget af tyndvæggede stålrør. Campagnolo stod stærkt på de finere europæiske cykler, og blankt aluminium passede til de slanke stel.</p><p>Gearskiftet var uden faste trin. Fødderne blev holdt i pedalerne med tåclips og remme. Ringdækket var limet til fælgen, så mekanikerens forarbejde havde betydning, længe før et hjul blev rakt ud fra servicebilen.</p></div>
+          <aside aria-label="Typiske detaljer på en racercykel fra 1970’erne"><span>Stålramme</span><span>Friktionsgear</span><span>Ringdæk</span><span>Tåclips og remme</span><span>Udvendige kabler</span></aside>
+        </section>
+
+        <section class="wildwest-copy dark">
+          <div><p class="section-label">Teknikken flytter sig</p><h2>Japan banker på døren</h2></div>
+          <div><p>Det var gennemprøvet teknik, men ikke stillestående teknik. Lettere materialer, bedre konstruktioner og nye komponentproducenter pressede sig på. Japansk udstyr blev sværere at afvise som et billigere alternativ til det europæiske.</p><p>Shimano 600 EX Arabesque fra 1978 står som et godt billede på overgangen: teknisk ambitiøs, tydeligt dekoreret og skabt til en kunde, som stadig forbandt en god racercykel med synligt metal og mekanik.</p><p>Forandringen var endnu ikke et farvel til stål og friktionsgear. Den foregik midt i dem.</p></div>
+        </section>
+
+        <section class="decade1970-callouts" aria-label="To nedslag i perioden">
+          <article><span>Paris–Roubaix · 1975</span><h2>De Vlaeminck mod Merckx</h2><p>Roger De Vlaeminck slog Eddy Merckx i spurten på velodromen. Det blev hans tredje af fire sejre i løbet og gjorde forbindelsen til navnet Monsieur Paris–Roubaix endnu stærkere.</p></article>
+          <article><span>Tour de France · 1978</span><h2>Hinault tager magten</h2><p>Bernard Hinault vandt sin første Tour. Undervejs var han også en tydelig kraft i rytternes protest i Valence-d’Agen, hvor feltet krydsede målstregen samlet, og etapen blev annulleret.</p></article>
+        </section>
+
+        <section class="wildwest-copy rust">
+          <div><p class="section-label">Holdet omkring rytteren</p><h2>Flere hænder bag den ene mand</h2></div>
+          <div><p>Den professionelle cykelrytter var ikke alene på vejen, selv om billederne ofte får det til at se sådan ud. Bag feltet arbejdede mekanikere med hjul, gear og bremser. Soigneurer stod for mad, drikke, massage og alt det praktiske gennem et etapeløb. Holdlederen fordelte opgaverne fra bilen.</p><p>Rollerne blev tydeligere. En kaptajn skulle beskyttes, en hjælperytter hente flasker, føre feltet eller afgive sit hjul. Specialiseringen var ikke udviklet som i dag, og de største ryttere kørte stadig et omfattende program. Merckx’ særkende var netop, at han tilsyneladende specialiserede sig i det hele.</p></div>
+        </section>
+
+        <section class="wildwest-copy">
+          <div><p class="section-label">Et moderne udtryk</p><h2>Løbene flytter ind i stuen</h2></div>
+          <div><p>Fjernsynet var blevet en fast del af cykelsporten. Holdtrøjer, førertrøjer og målstregen på Champs-Élysées gav løbene et tydeligere visuelt sprog. Det gjorde ikke brostenene glattere eller bjergene lavere, men sporten blev lettere at følge hjemmefra.</p><p>I 1975 sluttede Touren for første gang på Champs-Élysées, og bjergkonkurrencen fik den prikkede trøje. Ved årtiets slutning kom Bernard Hinault og vandt sin første Tour i 1978. Rytteren skiftede stadig gear ved at række ned til skrårøret. Rundt om ham var næsten alt andet begyndt at flytte sig.</p></div>
+        </section>
+
+        <section class="period-feature decade1970-related">
+          <div><p class="section-label">Cykler og komponenter</p><h2>Se årtiet i metallet</h2><p>Perioden får fysisk form i cyklerne og de mekaniske løsninger. De følgende sider uddyber konkrete genstande uden at gentage periodehistorien.</p></div>
+          <div class="period-feature-links">
+            <a href={`${base}/cykler/atala-sanremo/`}><span>Cykel · ca. 1978–1982</span><strong>Atala Sanremo</strong><b>Se cyklen →</b></a>
+            <a href={`${base}/komponenter/shimano-600-ex-arabesque/`}><span>Komponentgruppe · 1978</span><strong>Shimano 600 EX Arabesque</strong><b>Se komponenterne →</b></a>
+          </div>
+        </section>
+
+        <section class="period-sources"><p class="section-label">Kilder</p><h2>Grundlaget for perioden</h2><ul><li>Tour de France: historikken om 1975, Champs-Élysées og den prikkede bjergtrøje.</li><li>INA: samtidig tv-optagelse af rytterprotesten i Valence-d’Agen i 1978.</li><li>Paris–Roubaix: løbets officielle vinderhistorik.</li></ul></section>
+
+        <nav class="wildwest-next" aria-label="Videre navigation"><a href={`${base}/perioder/`}>← Alle perioder</a><a href={`${base}/komponenter/shimano-600-ex-arabesque/`}>Videre til Shimano 600 EX Arabesque →</a></nav>
+      </article>
+    </main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+---
+const base = import.meta.env.BASE_URL;
+const imageRoot = `${base}/images/bikes/koga-miyata-gentsracer-aero`;
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Koga-Miyata Gentsracer-Aero GR-A fra 1983: sølvgrøn japansk-hollandsk stålcykel med Shimano 600 AX og Dyna-Drive." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Koga-Miyata Gentsracer-Aero · The Evolution of Bikes" />
+    <meta property="og:description" content="En stålcykel bygget omkring Shimanos korte forsøg på at gøre næsten hver eneste komponent mere aerodynamisk." />
+    <meta property="og:image" content={`https://hydedk.github.io/the-evolution-of-bikes/images/bikes/koga-miyata-gentsracer-aero/hero-right-side.jpg`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Koga-Miyata Gentsracer-Aero · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
+      <nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`} aria-current="page">Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav>
+    </header>
+
+    <main class="koga-page">
+      <header class="koga-hero">
+        <div><p class="section-label">Tidligere i samlingen · 1983-model</p><h1>Koga-Miyata<br /><em>Gentsracer-Aero</em></h1></div>
+        <p>En hollandsk-japansk stålcykel bygget omkring Shimanos korte forsøg på at gøre næsten hver eneste komponent mere aerodynamisk.</p>
+      </header>
+
+      <figure class="koga-hero-image"><img src={`${imageRoot}/hero-right-side.jpg`} alt="Sølvgrøn Koga-Miyata Gentsracer-Aero set fra højre side" /><figcaption>Koga-Miyata Gentsracer-Aero fra drivsiden. Cyklen er ikke længere i samlingen.</figcaption></figure>
+
+      <section class="atala-facts" aria-label="Nøgleoplysninger">
+        <div><strong>1983</strong><span>Sandsynligt modelår</span></div>
+        <div><strong>54 cm</strong><span>Størrelse CT</span></div>
+        <div><strong>G-61</strong><span>Sølvgrøn metallic</span></div>
+        <div><strong>ca. 10 kg</strong><span>Katalogvægt</span></div>
+      </section>
+
+      <section class="atala-opening koga-opening"><p class="section-label">Alt skulle gennem luften</p><p>Geargrebene sidder tæt sammen oven på skrårøret. Bremser, nav, pedaler og kranksæt følger samme tanke. Om det gjorde den store forskel på en almindelig søndagstur, kan diskuteres. Shimano havde i hvert fald været grundig.</p></section>
+
+      <section class="atala-story koga-dating">
+        <div><p class="section-label">Kataloget retter årgangen</p><h2>1983 – muligvis købt i 1984</h2></div>
+        <div><p>Cyklen har tidligere været oplyst som en 1984-model. Koga-Miyatas egne kataloger peger på en lidt anden forklaring.</p><p>I kataloget for 1983 står <strong>Gentsracer-Aero GR-A</strong> i netop farven G-61 sølvgrøn metallic. Billedet, stafferingerne, stelmaterialerne og Shimano 600 AX-udstyret svarer til cyklen her. I 1984-kataloget er Aero-navnet væk. Her hedder modellen Gentsracer GR, har en anden lakering og Shimano New 600 EX.</p><p>Det sikreste er derfor at kalde den en 1983-model. Den kan godt være solgt eller taget i brug i 1984. Uden stelnummer kommer dateringen ikke tættere på, og det behøver den sådan set heller ikke.</p></div>
+      </section>
+
+      <section class="koga-detail-grid">
+        <figure><img src={`${imageRoot}/model-shifters.jpg`} alt="Gentsracer-Aero-navn, Tange-mærkat og geargreb oven på skrårøret" loading="lazy" /><figcaption>Modelnavnet og de to geargreb samlet oven på skrårøret. Placeringen var en del af Aero-idéen.</figcaption></figure>
+        <figure><img src={`${imageRoot}/left-side.jpg`} alt="Koga-Miyata Gentsracer-Aero set fra venstre side" loading="lazy" /><figcaption>Den komplette cykel fra venstre. Lakken er velbevaret med mindre afslag og brugsspor.</figcaption></figure>
+      </section>
+
+      <section class="atala-components koga-frame">
+        <div><p class="section-label">Hollandsk navn, japansk stel</p><h2>Tange og Miyata under lakken</h2></div>
+        <div><p>Koga blev grundlagt i 1974 af Andries Gaastra, som tidligere havde været salgschef hos Batavus. Navnet blev dannet af de første bogstaver i hans kone Marion Kowalliks efternavn og hans eget.</p><p>Koga stod for udvikling, specifikation og samling i Holland, mens Miyata fremstillede rammerne i Japan. På Gentsracer-Aero er hovedrørene Tange Champion No. 2 i dobbeltreduceret chrommolybdænstål. Bagstag og forgaffel er ifølge kataloget af Miyata Hi-Manga specialstål.</p><p>Dobbeltreduceret betyder, at rørene har mere gods ved samlingerne og tyndere vægge på midten. Det sparer vægt, hvor stålet ikke behøver samme tykkelse.</p></div>
+      </section>
+
+      <figure class="koga-wide-mechanics"><img src={`${imageRoot}/drivetrain.jpg`} alt="Shimano 600 AX-drivlinje med bagskifter, forskifter og kranksæt" loading="lazy" /><figcaption>600 AX fra bagskifter til kranksæt. Formen blev gjort glattere, og flere bevægelige dele blev pakket ind.</figcaption></figure>
+
+      <section class="atala-story koga-ax">
+        <div><p class="section-label">Shimano 600 AX</p><h2>Aerodynamik helt ned i pedalen</h2></div>
+        <div><p>Shimano lancerede 600 AX omkring 1980–81 som den næstøverste del af sit Aerodynamic System Components-program. Gruppen lå under Dura-Ace AX og forsøgte at reducere fremspring og urolig luft omkring cyklens dele.</p><p>Bagskifterens fjeder ligger bag et stort, rundt dæksel. Bremserne har en lav og afrundet profil. De særlige Dyna-Drive-pedaler bruger et stort pedalgevind, så pedalens platform kan ligge omkring akslen i stedet for oven på den. Foden kom lidt længere ned, og frontarealet blev mindre.</p><p>Løsningen krævede sit eget kranksæt og sine egne pedaler. Den blev ikke en langvarig standard. Det er netop derfor, den er interessant nu: AX viser et tidspunkt, hvor Shimano var villig til at ændre velkendte dele for at følge én samlet idé.</p></div>
+      </section>
+
+      <section class="atala-details koga-details">
+        <figure><img src={`${imageRoot}/dyna-drive.jpg`} alt="Shimano 600 AX Dyna-Drive-kranksæt og pedal med tåclips" loading="lazy" /><figcaption>Dyna-Drive placerede pedalplatformen lavt omkring den usædvanligt store pedalaksel.</figcaption></figure>
+        <figure><img src={`${imageRoot}/rear-derailleur.jpg`} alt="Nærbillede af Shimano 600 AX-bagskifter" loading="lazy" /><figcaption>Det runde fjederhus giver 600 AX-bagskifteren dens karakteristiske profil.</figcaption></figure>
+        <figure><img src={`${imageRoot}/front-brake.jpg`} alt="Shimano 600 AX-forbremse på den sølvgrønne forgaffel" loading="lazy" /><figcaption>Forbremsen ligger tæt omkring hjulet. Egerne viser tydelig overfladerust.</figcaption></figure>
+      </section>
+
+      <section class="koga-specs">
+        <div><p class="section-label">Det, billederne og kataloget viser</p><h2>Kort specifikation</h2></div>
+        <dl>
+          <div><dt>Model</dt><dd>Gentsracer-Aero GR-A</dd></div><div><dt>Stel</dt><dd>Tange Champion No. 2 / Miyata Hi-Manga</dd></div>
+          <div><dt>Gruppe</dt><dd>Overvejende Shimano 600 AX</dd></div><div><dt>Krank</dt><dd>600 AX Dyna-Drive, katalogført 42/52</dd></div>
+          <div><dt>Nav</dt><dd>Shimano 600 AX</dd></div><div><dt>Fælge</dt><dd>Mavic, præcis model ikke bekræftet</dd></div>
+          <div><dt>Dæk på billederne</dt><dd>Michelin Hi-Lite Road 700 × 20C</dd></div><div><dt>Status</dt><dd>Tidligere i samlingen</dd></div>
+        </dl>
+      </section>
+
+      <section class="atala-era koga-era"><p class="section-label">Tæt på kataloget – men ikke urørt</p><blockquote>En samlet AX-cykel med <em>senere sliddele.</em></blockquote><div><p>1983-kataloget angiver Mavic-fælge og 32 eger. Den præcise fælgmodel kan ikke læses på billederne og registreres derfor kun som Mavic. Katalogets kranksæt havde 42/52 tænder og seks tætsiddende gear bagpå; de konkrete tandantal bør tælles, før de beskrives som sikkert originale.</p><p>Michelin Hi-Lite Road 700 × 20C-dækkene er sandsynligvis senere erstatninger, og sadlen ser nyere ud end Koga-Miyata 80-S-DX-sadlen i kataloget. Cyklen er meget perioderigtig og har en bemærkelsesværdigt samlet 600 AX-bestykning. Helt katalogoriginal skal den ikke kaldes.</p></div></section>
+
+      <section class="period-sources koga-sources"><p class="section-label">Kilder</p><h2>Kataloget som kontrol</h2><ul><li>Koga-Miyata, hollandsk produktkatalog 1983, Gentsracer-Aero GR-A og specifikationsoversigt.</li><li>Koga-Miyata, hollandsk produktkatalog 1984, Gentsracer GR.</li><li>Koga, officiel virksomhedshistorie om grundlæggelsen og samarbejdet med Miyata.</li><li>Shimano, 100 Products History: Shimano 600 og 600 AX.</li></ul></section>
+
+      <section class="atala-closing koga-closing"><p>Gentsracer-Aero viser en kort periode, hvor aerodynamik ikke kun betød en ny rammeform. Selv pedalgevindet måtte flyttes.</p><a href={`${base}/cykler/`}>← Tilbage til cyklerne</a></section>
+    </main>
+
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

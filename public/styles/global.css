@@ -658,6 +658,36 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
 .atala-closing { padding: 120px clamp(24px, 11vw, 180px); background: var(--ink); color: var(--paper); }
 .atala-closing p { max-width: 1100px; margin: 0 0 70px; font-family: 'Libre Caslon Display', serif; font-size: clamp(44px, 6vw, 85px); line-height: 1.06; }
 .atala-closing a { color: var(--rust); font-size: 12px; text-decoration: none; }
+.koga-page { overflow: hidden; }
+.koga-hero { display: grid; grid-template-columns: 1.45fr .55fr; gap: clamp(45px, 8vw, 120px); align-items: end; padding: 105px clamp(24px, 8vw, 130px) 90px; background: #d9d8b6; }
+.koga-hero h1 { margin: 35px 0 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(64px, 9vw, 132px); font-weight: 400; line-height: .86; }
+.koga-hero h1 em { color: var(--rust); font-weight: 400; }
+.koga-hero > p { margin: 0 0 8px; font-family: 'Libre Caslon Display', serif; font-size: clamp(25px, 3vw, 42px); line-height: 1.2; }
+.koga-hero-image { margin: 0; padding: 70px clamp(24px, 9vw, 145px) 28px; background: var(--ink); }
+.koga-hero-image img { display: block; width: min(100%, 1280px); margin: auto; }
+.koga-hero-image figcaption { width: min(100%, 1280px); margin: 12px auto 0; color: #aeb5ad; font-size: 10px; }
+.koga-opening { background: var(--cream); }
+.koga-dating { background: #eee9dd; }
+.koga-detail-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; padding: 100px clamp(24px, 8vw, 130px); background: var(--ink); }
+.koga-detail-grid figure { margin: 0; }
+.koga-detail-grid img { width: 100%; height: 430px; object-fit: cover; }
+.koga-detail-grid figcaption { padding-top: 12px; color: #aeb5ad; font-size: 10px; }
+.koga-frame { background: #d9d8b6; }
+.koga-wide-mechanics { margin: 0; padding: 80px clamp(24px, 8vw, 130px); background: var(--rust); }
+.koga-wide-mechanics img { display: block; width: min(100%, 1150px); margin: auto; }
+.koga-wide-mechanics figcaption { width: min(100%, 1150px); margin: 12px auto 0; color: rgba(255,255,255,.78); font-size: 10px; }
+.koga-ax { background: var(--paper); }
+.koga-details { background: #222923; }
+.koga-specs { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(50px, 9vw, 140px); padding: 115px clamp(24px, 8vw, 130px); background: var(--cream); }
+.koga-specs h2 { margin: 30px 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(48px, 6vw, 82px); font-weight: 400; line-height: 1; }
+.koga-specs dl { display: grid; grid-template-columns: 1fr 1fr; margin: 0; }
+.koga-specs dl div { padding: 25px 20px; border-top: 1px solid var(--line); }
+.koga-specs dt { color: var(--rust); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.koga-specs dd { margin: 20px 0 0; line-height: 1.5; }
+.koga-era { background: #7d8361; }
+.koga-era blockquote em { color: #292e2a; }
+.koga-sources { background: #eee9dd; }
+.koga-closing { background: #292e2a; }
 
 @media (max-width: 760px) {
   .site-header { height: auto; padding-top: 20px; padding-bottom: 20px; align-items: flex-start; }
@@ -819,6 +849,11 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .atala-details img { height: auto; max-height: 420px; }
   .atala-detail-pair { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
   .atala-detail-pair img { height: auto; max-height: 480px; }
+  .koga-hero, .koga-detail-grid, .koga-specs { grid-template-columns: 1fr; }
+  .koga-hero { padding-top: 70px; }
+  .koga-detail-grid { padding-left: 24px; padding-right: 24px; }
+  .koga-detail-grid img { height: auto; max-height: 420px; }
+  .koga-specs dl { grid-template-columns: 1fr; }
   .decades article { border-right: 1px solid rgba(241,238,228,.2); border-bottom: 0; }
   .decades article:last-child { border-bottom: 1px solid rgba(241,238,228,.2); }
   footer { grid-template-columns: 1fr; }

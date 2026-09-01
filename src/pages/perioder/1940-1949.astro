@@ -1,0 +1,56 @@
+---
+const base = import.meta.env.BASE_URL;
+const facts = [
+  ['1940', 'Coppi vinder Giroen som 20-årig'],
+  ['1946', 'Giro d’Italia vender tilbage'],
+  ['1947', 'Tour de France vender tilbage'],
+  ['1949', 'Coppi tager den første Giro–Tour-double'],
+];
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="1940’ernes cykelsport: krigens afbrydelse, Giroens og Tourens genkomst, rivaliseringen mellem Bartali og Coppi og Campagnolos mekaniske mellemtrin." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Da krigen lukkede landevejen · 1940–1949" />
+    <meta property="og:description" content="Et årti, hvor de store løb forsvandt og vendte tilbage til et forandret Europa." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/periods/1940-1949/efterkrigsfelt-illustration.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Da krigen lukkede landevejen · 1940–1949</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`} aria-current="page">Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav></header>
+    <main><article class="wildwest-page decade1940-page">
+      <header class="wildwest-hero decade1940-hero"><div><p class="section-label">Perioden 1940–1949</p><h1>Da krigen lukkede<br /><em>landevejen</em></h1></div><p>De store etapeløb forsvandt. Da de vendte tilbage, blev cykelsporten et billede på både kontinuitet og genopbygning.</p></header>
+
+      <figure class="decade1970-hero-image"><img src={`${base}/images/periods/1940-1949/efterkrigsfelt-illustration.jpg`} alt="Illustration af et cykelfelt på en slidt italiensk landevej kort efter Anden Verdenskrig" /><figcaption>Et generelt efterkrigsmotiv med tidstypiske cykler og dragter. AI-genereret illustration – ikke et billede af et bestemt løb eller navngivne ryttere.</figcaption></figure>
+
+      <section class="wildwest-lead decade1940-lead"><p class="section-label">Et brud midt i kalenderen</p><p>Et årti er normalt en fortsættelse. 1940’erne blev først en afbrydelse. Løbene, fabrikkerne, aviserne og rytternes liv blev trukket ind i krigen – og sporten måtte senere bygge sin rytme op igen.</p></section>
+
+      <section class="era-facts decade1970-facts" aria-label="Nedslag fra 1940’ernes cykelsport">{facts.map(([number, label]) => <div><strong>{number}</strong><span>{label}</span></div>)}</section>
+
+      <section class="wildwest-copy"><div><p class="section-label">1940–1945</p><h2>De store rundture forsvinder</h2></div><div><p>Fausto Coppi vandt Giro d’Italia i 1940, blot 20 år gammel. Derefter blev løbet indstillet til 1946. Tour de France var sidst blevet kørt i 1939 og vendte først tilbage i 1947.</p><p>Cykelsporten ophørte ikke fuldstændigt. Lokale og nationale løb blev arrangeret, når forholdene tillod det, men den internationale kalender var brudt op. Grænser, transport, brændstof, materialer og sikkerhed satte helt andre rammer end før krigen.</p><p>For mange ryttere var de tabte sæsoner mere end et hul i en resultatliste. De lå midt i de få år, hvor en professionel normalt havde sin bedste fysik.</p></div></section>
+
+      <section class="wildwest-copy dark"><div><p class="section-label">1946</p><h2>Giroen vender tilbage</h2></div><div><p>Da Giro d’Italia igen blev kørt i 1946, gik ruten gennem et land med synlige krigsskader og dybe politiske spændinger. Gazzetta dello Sport havde genoptaget udgivelsen i 1945 og annoncerede løbets tilbagekomst i januar 1946.</p><p>Gino Bartali vandt foran Fausto Coppi. Rivaliseringen havde rødder før krigen, men fik nu en betydning, der rakte ud over de to ryttere. Bartali blev ofte fremstillet som den traditionsbundne og troende helt; Coppi som den slanke, moderne og metodiske udfordrer. Virkeligheden var mere sammensat, men modsætningen var god avisstof.</p><p>Året efter vandt Coppi Giroen. I 1949 vandt han både Giro d’Italia og Tour de France og blev den første til at tage de to store etapeløb samme år.</p></div></section>
+
+      <section class="decade1940-return"><div><span>1947</span><h2>Touren finder en ny vinder</h2><p>Jean Robic kom til den sidste etape uden nogensinde at have båret den gule trøje. Et angreb på vejen mod Paris vendte klassementet, og han vandt Tourens første udgave efter krigen.</p></div><div><span>1948</span><h2>Bartali ti år senere</h2><p>Gino Bartali vandt Tour de France for anden gang – ti år efter sin sejr i 1938. Hans angreb i Alperne afgjorde løbet efter regn, kulde og sne i bjergene.</p></div></section>
+
+      <section class="decade1970-mechanics"><div><p class="section-label">Mekanikken mellem to tider</p><h2>Hjulet skulle stadig løsnes</h2><p>I 1946 satte Campagnolo navnet Cambio Corsa på sit tostangssystem. Rytteren kunne skifte mellem tandhjul uden at stå af, men måtte række tilbage, frigøre bagakslen, flytte kæden og spænde hjulet igen, mens cyklen rullede.</p><p>Konstruktionen kaldes ofte “selvmordsgearet” i dag. Det var ikke dens almindelige navn i samtiden. For datidens professionelle var det et krævende, men brugbart trin mellem det vendbare baghjul og den fjederbelastede bagskifter.</p><p>I 1949 fulgte enkeltstangssystemet, der senere blev kendt som Paris–Roubaix. Det forenklede betjeningen, men baghjulet skulle fortsat flytte sig for at holde kæden spændt.</p></div><aside aria-label="Typiske detaljer på en racercykel fra 1940’erne"><span>Stålramme</span><span>Ringdæk</span><span>Få tandhjul</span><span>Stangbetjent gear</span><span>Uldtrøje</span></aside></section>
+
+      <section class="wildwest-copy rust"><div><p class="section-label">Sidstepladsen bliver synlig</p><h2>Den sorte trøje</h2></div><div><p>Ved Giroens tilbagekomst i 1946 blev den sorte trøje knyttet til rytteren nederst i klassementet. Luigi Malabrocca endte sidst i både 1946 og 1947 og blev den første store figur i trøjens mærkelige efterliv.</p><p>Præmier og omtale gjorde sidstepladsen attraktiv nok til, at nogle ryttere forsøgte at tabe tid uden at overskride tidsgrænsen. Fortællingerne om gemmesteder, punkteringer og bevidst langsom kørsel er mange, men de enkelte episoder bør undersøges som selvstændige historier.</p><p>I 1948 endte Aldo Bini sidst efter at have gennemført løbet med en brækket hånd. Hans placering var derfor noget ganske andet end en komisk kamp om at komme langsomst frem.</p></div></section>
+
+      <section class="wildwest-copy"><div><p class="section-label">Mad, medicin og erfaring</p><h2>Før sportsvidenskaben blev et system</h2></div><div><p>Rytternes kost byggede mere på tradition, holdets vaner og det, der kunne skaffes, end på præcise planer for kulhydrat og væske. Brød, ris, pasta, æg og kød indgik i store måltider, mens kaffe, vin og andre drikke også kunne følge rytterne gennem lange dage.</p><p>Det er fristende at gøre perioden til en parade af bøffer og rødvin, men krigstidens og efterkrigstidens rationering gjorde virkeligheden langt mindre ensartet. Adgangen til mad var i sig selv en del af vilkårene.</p><p>Stimulanser havde længe været brugt i udholdenhedssport. Under krigen blev amfetamin anvendt militært, og efter 1945 bredte stoffet sig i civilsamfundet og i sporten. Der fandtes endnu ikke et effektivt antidopingsystem, men det betyder ikke, at alle præcise cocktailopskrifter eller senere rytterreplikker kan bruges som sikker dokumentation for 1940’erne.</p></div></section>
+
+      <section class="period-feature decade1940-related"><div><p class="section-label">Se perioden i metallet</p><h2>Fra overblik til genstand</h2><p>Perioden står som sin egen fortælling. De relaterede sider går tættere på konkrete cykler, komponenter og mennesker uden at blive kopieret ind i periodekapitlet.</p></div><div class="period-feature-links"><a href={`${base}/komponenter/campagnolo-cambio-corsa/`}><span>Komponent · 1946</span><strong>Campagnolo Cambio Corsa</strong><b>Se mekanikken →</b></a><a href={`${base}/historier/aldo-bini-maglia-nera-1948/`}><span>Historie · Giroen 1948</span><strong>Aldo Bini og den sorte trøje</strong><b>Læs historien →</b></a></div></section>
+
+      <section class="period-sources"><p class="section-label">Kilder</p><h2>Grundlaget for perioden</h2><ul><li><a href="https://archivio.giroditalia.it/eng/editions/1933-1947/">Giro d’Italia: officielt historisk arkiv, 1933–1947</a></li><li><a href="https://archivio.giroditalia.it/it/edizioni/1948-1957/">Giro d’Italia: officielt historisk arkiv, 1948–1957</a></li><li><a href="https://www.letour.fr/fr/actus/2024/arrivee-finale-arrivee-capitale-parc-des-princes-le-temple-du-velo-ii-iv/1316958">Tour de France: Tourens genkomst og Robics sejr i 1947</a></li><li><a href="https://www.disraeligears.co.uk/site/documents_-_campagnolo.html">Disraeli Gears: Campagnolo-dokumenter og gearhistorik</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/22073434/">Journal of the History of Medicine: militær brug af amfetamin under Anden Verdenskrig</a></li></ul></section>
+
+      <nav class="wildwest-next" aria-label="Videre navigation"><a href={`${base}/perioder/`}>← Alle perioder</a><a href={`${base}/komponenter/campagnolo-cambio-corsa/`}>Videre til Cambio Corsa →</a></nav>
+    </article></main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

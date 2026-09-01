@@ -1,0 +1,73 @@
+---
+const base = import.meta.env.BASE_URL;
+const images = `${base}/images/components/campagnolo-valentino`;
+const facts = [
+  ['Første Valentino', 'Valentino Super · katalog 15 (1967)'],
+  ['Valentino Extra', 'Præsenteret 1968'],
+  ['Producent', 'Campagnolo · Vicenza, Italien'],
+  ['Type', 'Friktionsgear'],
+  ['Bagskifter', 'Model 2170'],
+  ['Forskifter', 'Model 2050'],
+];
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Campagnolo Valentino: den billigere gearserie, der bragte Campagnolos navn ud på almindelige sportscykler fra slutningen af 1960'erne." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Campagnolo Valentino · The Evolution of Bikes" />
+    <meta property="og:description" content="Da Campagnolo forsøgte at bygge til andre end eliten." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/components/campagnolo-valentino/bagskifter.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Campagnolo Valentino · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`} aria-current="page">Komponenter</a><a href={`${base}/om/`}>Om</a></nav></header>
+    <main><article class="component-page">
+      <header class="component-hero"><div><p class="section-label">Komponentarkivet · 1967–1980'erne</p><h1>Campagnolo<br /><em>Valentino</em></h1></div><p>Da Campagnolo byggede til andre end eliten.</p></header>
+
+      <figure class="component-hero-image component-photo"><img src={`${images}/bagskifter.jpg`} alt="Campagnolo Valentino Extra-bagskifter monteret på en grøn racercykel" /><figcaption>Valentino Extra-bagskifteren på en cykel i samlingen. Navnet er præget direkte i den forreste plade. Foto: The Evolution of Bikes.</figcaption></figure>
+
+      <section class="component-opening"><p class="section-label">Et andet Campagnolo</p><div><p>Valentino var ikke Record i billig forklædning. Det var Campagnolos forsøg på at nå de sportscykler, hvor pris, enkelhed og et kendt navn vejede tungere end professionel prestige.</p></div></section>
+
+      <section class="component-facts" aria-label="Fakta om Campagnolo Valentino">{facts.map(([label, value]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</section>
+
+      <section class="component-narrative">
+        <aside><span>Vicenza</span><strong>1967</strong><i></i><span>Lavere pris</span></aside>
+        <div class="component-copy">
+          <p class="dropcap">Campagnolo stod i 1960'erne for noget nær det fineste, en europæisk racercykel kunne udstyres med. Record-komponenterne sad på professionelle cykler og på dyre maskiner for ambitiøse amatører. Men under dette marked fandtes langt flere hverdagscykler og prisvenlige sportscykler.</p>
+          <p>I katalog 15 fra 1967 optrådte <em>Valentino Super</em>. Året efter blev <em>Valentino Extra</em> præsenteret som en billig bagskifter, og modellen fortsatte i Campagnolos kataloger gennem 1970'erne og ind i 1980'erne.</p>
+
+          <blockquote>Det vingede logo kom længere ned i cykelbutikkens prisklasser.</blockquote>
+
+          <h2>Billigere – men ikke bare blik</h2>
+          <p>Valentino omtales ofte som en bagskifter af stanset stål. Det er for enkelt. På den viste Valentino Extra er konstruktionen en blanding af formede metaldele, støbte dele og en pladekasse omkring pulleyhjulene. Den var tydeligt mindre raffineret end Nuovo Record, men den var ikke blot et par tynde blikplader sat sammen.</p>
+          <p>Forskellen kunne mærkes i brug. Gearskiftet var friktionsbaseret, og rytteren skulle selv føre grebet til det sted, hvor kæden løb rent. Mere slør og mindre stivhed gjorde en Valentino vanskeligere at få til at skifte præcist end Campagnolos dyrere modeller. Den kunne fungere, men den belønnede en omhyggelig indstilling.</p>
+
+          <h2>Forskifteren fra en ældre verden</h2>
+          <p>Forskifteren, model 2050, ser næsten mere særpræget ud end bagskifteren. Kabeltrækket påvirker en udvendig arm, der skubber mekanismen fra side til side. Konstruktionen har rødder i Campagnolos tidlige forskiftere og virker grovere end de kompakte parallelogrammer, der senere blev normen.</p>
+          <p>På billedet sidder Valentino-forskifteren sammen med et kranksæt fra en anden producent. Det understreger noget typisk for mange cykler i denne klasse: Valentino var ofte en del af et blandet udstyr, ikke nødvendigvis en komplet, ensartet gruppe.</p>
+        </div>
+      </section>
+
+      <section class="catalog-spread component-photo-pair">
+        <figure><img src={`${images}/frontskifter.jpg`} alt="Campagnolo Valentino-forskifter med den udvendige betjeningsarm" loading="lazy" /><figcaption>Forskifteren viser den lange udvendige arm og Campagnolos indgraverede logo. Kranksættet er ikke en Valentino-del. Foto: The Evolution of Bikes.</figcaption></figure>
+        <figure><img src={`${images}/bagskifter.jpg`} alt="Detalje af Campagnolo Valentino Extra-bagskifter, frikrans og kabel" loading="lazy" /><figcaption>Bagskifterens åbne konstruktion, returfjeder og pulleykasse er tydelige på samlingens eksemplar. Foto: The Evolution of Bikes.</figcaption></figure>
+      </section>
+
+      <section class="friction-section"><div><p class="section-label">“Den onde og den grimme”?</p><h2>En senere dom – ikke et samtidigt navn</h2></div><div><p>Valentino har fået hårde ord med på vejen fra samlere og mekanikere, og den kaldes undertiden “the bad and the ugly”. Der er ikke belæg for at behandle det som et almindeligt øgenavn fra 1960'erne eller 1970'erne. Det er snarere en senere og spids vurdering af forskellen mellem Valentino og Campagnolos dyrere modeller.</p><p>Den sammenligning er heller ikke helt retfærdig. Valentino skulle ikke slå Record i vægt, finish eller præcision. Den skulle give en billigere cykel et Campagnolo-gear, som kunne holdes i drift med almindelig mekanisk vedligeholdelse.</p></div></section>
+
+      <section class="component-closing"><p class="section-label">Hvad delen fortæller</p><blockquote>Valentino er interessant, netop fordi den ikke var Campagnolos bedste.</blockquote><p>Den viser et mærke, der forsøgte at bevæge sig fra løbsfeltets top og ud på et større marked. Resultatet blev ikke en ny Record, men en enkel og genkendelig gearserie, som i årtier sad på almindelige europæiske sportscykler. Derfor hører den med i historien.</p></section>
+
+      <section class="period-sources"><p class="section-label">Kilder og billednoter</p><div><p>Modelnavne og datering er kontrolleret mod Campagnolos kataloger. Vurderinger af skiftekvalitet er holdt adskilt fra de dokumenterbare katalogoplysninger.</p><ul><li><a href="https://www.campyonly.com/history/catalogs/catalog_15.pdf">Campagnolo katalog 15 (1967): Valentino Super</a></li><li><a href="https://www.disraeligears.co.uk/site/campagnolo_-_catalogues_newsletters.html">Disraeli Gears: oversigt over Campagnolo-kataloger</a></li><li><a href="https://www.campyonly.com/history/catalogs/catalog_17a.pdf">Campagnolo katalog 17a (1975): Valentino Extra, model 2170</a></li><li><a href="https://www.campyonly.com/history/catalogs/catalog_17a_supp.pdf">Campagnolo katalogtillæg: Nuovo Valentino-forskifter</a></li></ul><p>Begge fotografier er brugerens egne. De dokumenterer de konkrete dele, men daterer ikke i sig selv cyklen.</p></div></section>
+
+      <nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/komponenter/`}>← Alle komponenter</a><a href={`${base}/perioder/1970-1979/`}>Læs om 1970–1979 →</a></nav>
+    </article></main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

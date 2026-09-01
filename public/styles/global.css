@@ -311,6 +311,7 @@ h1 em { color: var(--rust); font-weight: 400; }
 .component-hero-image { margin: 0; padding: 70px clamp(24px, 10vw, 170px) 0; background: #e8e5dc; }
 .component-hero-image img { display: block; width: min(100%, 960px); max-height: 620px; margin: auto; object-fit: contain; mix-blend-mode: multiply; }
 .component-hero-image figcaption { padding: 16px 0; border-top: 1px solid var(--line); font-size: 11px; }
+.component-hero-image.component-photo img { width: min(100%, 1050px); max-height: 720px; object-fit: cover; mix-blend-mode: normal; }
 .component-opening { display: grid; grid-template-columns: 1fr 3fr; gap: 45px; padding: 110px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
 .component-opening > div p { max-width: 980px; margin: 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(38px, 5vw, 72px); line-height: 1.14; }
 .component-facts { display: grid; grid-template-columns: repeat(3, 1fr); padding: 90px clamp(24px, 8vw, 130px); background: var(--cream); }
@@ -332,6 +333,7 @@ h1 em { color: var(--rust); font-weight: 400; }
 .catalog-spread figure { margin: 0; padding: 24px; background: var(--paper); }
 .catalog-spread img { display: block; width: 100%; height: 100%; max-height: 520px; object-fit: contain; mix-blend-mode: multiply; }
 .catalog-spread figcaption { padding-top: 18px; color: #59625b; font-size: 10px; }
+.component-photo-pair img { aspect-ratio: 4 / 3; object-fit: cover; mix-blend-mode: normal; }
 .friction-section { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(50px, 9vw, 150px); padding: 120px clamp(24px, 8vw, 130px); }
 .friction-section h2 { margin: 30px 0 0; font-family: 'Libre Caslon Display', serif; font-size: clamp(50px, 6vw, 88px); font-weight: 400; line-height: 1; }
 .friction-section > div:last-child { align-self: end; max-width: 600px; font-size: 16px; line-height: 1.9; }
@@ -573,6 +575,8 @@ h1 em { color: var(--rust); font-weight: 400; }
 .component-archive > a:hover { transform: translateY(-5px); }
 .component-archive img { width: 100%; height: 100%; object-fit: cover; }
 .component-archive > a:nth-child(2) img { object-fit: contain; padding: 20px; mix-blend-mode: multiply; }
+.component-archive > a:nth-child(2) img { object-fit: cover; padding: 0; mix-blend-mode: normal; }
+.component-archive > a:nth-child(3) img { object-fit: contain; padding: 20px; mix-blend-mode: multiply; }
 .component-archive > a > div { display: flex; flex-direction: column; padding: 30px; }
 .component-archive span { color: var(--rust); font-size: 11px; letter-spacing: .13em; }
 .component-archive h2 { margin: 42px 0 16px; font-family: 'Libre Caslon Display', serif; font-size: clamp(38px, 4vw, 58px); font-weight: 400; line-height: 1; }

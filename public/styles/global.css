@@ -135,6 +135,8 @@ h1 em { color: var(--rust); font-weight: 400; }
 .story-sources { margin-top: 90px; padding-top: 30px; border-top: 1px solid var(--line); }
 .story-sources ul { padding-left: 18px; font-size: 13px; }
 .story-sources a { text-underline-offset: 5px; }
+.diet-story-sources { max-width: 940px; margin: 90px auto 0; padding: 30px 24px 90px; }
+.diet-story-sources li { margin-bottom: 12px; line-height: 1.65; }
 
 .about-hero { padding: 100px clamp(24px, 8vw, 130px) 85px; }
 .about-hero h1 { font-size: clamp(65px, 9vw, 135px); margin: 35px 0; }

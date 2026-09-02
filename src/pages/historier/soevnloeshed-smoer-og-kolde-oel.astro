@@ -1,0 +1,94 @@
+---
+const base = import.meta.env.BASE_URL;
+const facts = [
+  ['24 timer', 'Garin kørte 701 km'],
+  ['45', 'koteletter i den berømte menu'],
+  ['1935', 'Moineau vandt mod Bordeaux'],
+  ['Ingen facitliste', 'erfaring blev til ernæringslære'],
+];
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Koteletter, varm kakao, cigaretter og kolde øl: om kost, overtro og efterligning i cykelsportens tidlige årtier." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Søvnløshed, smør og kolde øl" />
+    <meta property="og:description" content="Da én rytters måltid kunne blive til hele feltets ernæringslære." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/stories/kost-overtro/kost-overtro-illustration.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Søvnløshed, smør og kolde øl · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`} aria-current="page">Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav></header>
+
+    <main><article class="beer-story-page">
+      <header class="beer-story-hero">
+        <p class="section-label">Kost, overtro og lange løbsdage · 1890’erne–1930’erne</p>
+        <h1>Søvnløshed, smør<br />og <em>kolde øl</em></h1>
+        <p>Da rytterne ikke havde en ernæringsplan, kunne én mands sejr gøre hans aftensmad til hele feltets nye lov.</p>
+      </header>
+
+      <figure class="beer-story-image">
+        <img src={`${base}/images/stories/kost-overtro/kost-overtro-illustration.jpg`} alt="Illustration af tre tidlige landevejsryttere med kotelet, øl, brød og æg ved en improviseret forplejning" />
+        <figcaption>AI-genereret illustration af tidlig forplejning i landevejscykling. Motivet viser ikke et bestemt løb eller navngivne ryttere.</figcaption>
+      </figure>
+
+      <section class="beer-story-opening">
+        <p class="section-label">Før gram og energigeler</p>
+        <p>Mad var ikke et regnestykke. Den var proviant, vane, trøst – og undertiden en forklaring, man fandt på, efter at nogen havde vundet.</p>
+      </section>
+
+      <section class="beer-story-copy">
+        <aside><strong>701 km</strong><span>Maurice Garin<br />på 24 timer</span></aside>
+        <div>
+          <p>De tidlige landevejs- og baneryttere kunne være i gang gennem en hel dag og nat. De spiste derfor ikke små, nøje beregnede portioner, men det, der kunne skaffes, bæres og holdes nede. Brød, ris, æg, kød, suppe, kaffe, te, vin og øl optræder igen og igen i periodens beretninger.</p>
+          <p>Det er fristende at beskrive dem som rene amatører i ernæring. Men rytterne vidste naturligvis, at sult og tørst ødelagde et løb. Det, de manglede, var et fælles sprog for kulhydrater, væskebalance og restitution. Erfaringen var personlig – og erfaring gled let over i overtro.</p>
+
+          <h2>Garin og de 45 koteletter</h2>
+          <p>Den mest berømte menu forbindes med Maurice Garin, der senere vandt den første Tour de France. Under et 24-timersløb i Paris i 1890’erne kørte han 701 kilometer. I en senere gengivet optegnelse består hans forplejning blandt andet af 45 koteletter, 19 liter varm kakao, syv liter te, otte æg, tapioka, risengrød, østers og kaffe blandet med champagne.</p>
+          <p>Tallene er så voldsomme, at de bør læses som en historisk beretning – ikke som en moderne kostregistrering med køkkenvægt og stopur. Men de fortæller noget væsentligt: Kød blev forbundet med styrke, varme drikke med udholdenhed, og store mængder var i sig selv et bevis på en rytters format.</p>
+          <blockquote>Når en mand kunne køre et døgn på koteletter og kakao, var det nærliggende at tro, at hemmeligheden lå i tallerkenen.</blockquote>
+
+          <h2>Hvis vinderen spiste det, virkede det</h2>
+          <p>En egentlig “mimetisk diæt” var ikke et officielt begreb i feltet. Det er en nyttig betegnelse for en velkendt mekanisme: Ryttere og hjælpere kopierede det, der tilsyneladende virkede for en stærk mand. En bøf til morgenmad, rå æg, smør på brødet eller vin i flasken kunne få status som opskrift, længe før nogen havde undersøgt hvorfor.</p>
+          <p>Det gav en ernæringskultur, hvor den seneste vinder ofte var mere overbevisende end lægen. Samtidig var de lange etaper så krævende, at næsten enhver kalorierig mad kunne gøre reel nytte. Overtroen og det praktiske behov lå oven i hinanden.</p>
+        </div>
+      </section>
+
+      <section class="beer-story-turn"><p class="section-label">Lunger, mod og nikotin</p><blockquote>En cigaret kunne være vane.<br />Senere blev den til en historie om at <em>“åbne lungerne”.</em></blockquote></section>
+
+      <section class="beer-story-copy beer-chapter-two">
+        <aside><strong>?</strong><span>Vane eller<br />mirakelkur</span></aside>
+        <div>
+          <p>Fotografier og beretninger viser cykelryttere med cigaretter, og rygning var en almindelig del af hverdagen i perioden. Den populære forklaring om, at rytterne røg før bjergene for at udvide lungerne, bliver ofte gentaget. Derimod er det vanskeligere at knytte den præcise forestilling til bestemte ryttere og samtidige udsagn.</p>
+          <p>Historien skal derfor behandles som folklore med et sandsynligt udgangspunkt i tidens rygevaner – ikke som dokumentation for, at hele feltet fulgte en fælles medicinsk teori. Cigaretten kunne lige så godt være nervemedicin, social pause eller simpel afhængighed.</p>
+
+          <h2>Vand var ikke altid bare vand</h2>
+          <p>Rytterne kunne købe eller få mad og drikke undervejs. Øl og vin gav kalorier, smag og en velkendt vare, når kvaliteten af det lokale vand var usikker. Alkohol kunne også opleves som opmuntrende eller smertedæmpende. Det betyder ikke, at alle ryttere kørte berusede, men flasken fra kroen var ikke et fremmed syn.</p>
+          <p>Den bedste ølhistorie kommer fra Tour de France 1935. På den 224 kilometer lange etape fra Pau til Bordeaux angreb Julien Moineau. Omkring Le Barp stod folk klar med kolde øl, og flere konkurrenter lod sig forsinke, mens Moineau fortsatte og vandt i Bordeaux.</p>
+          <p>Senere fortællinger gør drikkebordet til et planlagt lokkemiddel, som Moineaus venner havde stillet op. Moineau benægtede selv et egentligt komplot. Det sikre er sejren og det enorme forspring; den snedige ølplan er den del, der gør historien bedre – og mere usikker.</p>
+        </div>
+      </section>
+
+      <section class="beer-facts">{facts.map(([number, label]) => <div><strong>{number}</strong><span>{label}</span></div>)}</section>
+
+      <section class="beer-finish">
+        <p class="section-label">Fra erfaring til videnskab</p>
+        <div><p>Der fandtes ikke én tidlig cykelkost. Et seksdagesløb på bane, en Tour-etape gennem bjergene og en endagsklassiker stillede forskellige krav, og rytterne kom fra forskellige lande og køkkener. Fælles var, at forklaringerne ofte kom bagefter: Vinderen havde gjort noget rigtigt, og derfor måtte hans mad også have været rigtig.</p><p>Det er netop det skæve ved historien. Koteletterne, smørret, cigaretterne og øllet var både almindelige varer og små talismaner. Nogle gav energi. Nogle dulmede ubehaget. Andre gjorde mest gavn som fortælling ved næste morgens morgenbord.</p></div>
+      </section>
+
+      <section class="beer-story-closing"><blockquote>Feltets kostplan blev ikke skrevet af en ernæringsekspert.<br />Den blev ofte skrevet af <em>gårsdagens vinder.</em></blockquote></section>
+
+      <section class="story-sources diet-story-sources"><p class="section-label">Kilder og forbehold</p><ul><li>Maurice Garins 24-timersløb og den berømte menu er gengivet i flere historiske oversigter; de præcise mængder behandles her som en senere overleveret optegnelse.</li><li>L’Équipes resultatarkiv: Tour de France 1935, 17. etape, Pau–Bordeaux.</li><li>Historien om Julien Moineaus ølbord bygger på senere journalistiske gengivelser. Etapen og forspringet er dokumenteret; et aftalt komplot er ikke endeligt bevist.</li><li>Påstanden om rygning for at “åbne lungerne” præsenteres som udbredt cykelfolklore, ikke som en dokumenteret praksis for hele feltet.</li></ul></section>
+
+      <nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a><a href={`${base}/historier/da-gearene-kom-og-oel-narrede-feltet/`}>Hele historien om Moineaus øl →</a></nav>
+    </article></main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+---
+const base = import.meta.env.BASE_URL;
+const facts = [
+  ['1950', 'Koblet bliver Giroens første udenlandske vinder'],
+  ['1951', 'Mont Ventoux kommer med i Touren'],
+  ['1952', 'Første Tour-mål på Alpe d’Huez'],
+  ['1956', 'Magni styrer med et ringdæk mellem tænderne'],
+];
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="1950’ernes cykelsport: moderne bagskiftere, nye bjergscener, et internationalt felt og løbet, der flyttede ind i radioen og fjernsynet." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Da cykelløbet flyttede ind i stuen · 1950–1959" />
+    <meta property="og:description" content="Gran Sport, Monte Bondone, Walkowiak og kameraet, der kom tættere på feltet." />
+    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/periods/1950-1959/felt-og-filmhold-illustration.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Da cykelløbet flyttede ind i stuen · 1950–1959</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`} aria-current="page">Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav></header>
+    <main><article class="wildwest-page decade1950-page">
+      <header class="wildwest-hero decade1940-hero"><div><p class="section-label">Perioden 1950–1959</p><h1>Da cykelløbet<br /><em>flyttede ind i stuen</em></h1></div><p>Moderne gear, nye bjergscener, radio og fjernsyn gjorde sporten hurtigere, mere international og langt mere synlig.</p></header>
+
+      <figure class="decade1970-hero-image"><img src={`${base}/images/periods/1950-1959/felt-og-filmhold-illustration.jpg`} alt="Illustration af et cykelfelt og en kameramotorcykel på en europæisk bjergvej i 1950’erne" /><figcaption>Et generelt motiv med tidstypiske stålcykler, filmkamera og følgekaravane. AI-genereret illustration – ikke et billede af et bestemt løb eller navngivne ryttere.</figcaption></figure>
+
+      <section class="wildwest-lead decade1940-lead"><p class="section-label">Fra efterkrigshelte til mediesport</p><p>Bartali og Coppi var stadig store navne. Men omkring dem forandrede selve sporten sig: Nye lande vandt de gamle løb, bjergene blev scener med egne navne, og kameraet begyndte at følge med.</p></section>
+
+      <section class="era-facts decade1970-facts" aria-label="Nedslag fra 1950’ernes cykelsport">{facts.map(([number, label]) => <div><strong>{number}</strong><span>{label}</span></div>)}</section>
+
+      <section class="wildwest-copy"><div><p class="section-label">1950</p><h2>Da italienerne rejste hjem</h2></div><div><p>Tour de France begyndte årtiet med en konflikt, der rakte ud over resultatlisten. Efter fjendtlighed og episoder omkring det italienske hold i Pyrenæerne besluttede Gino Bartali, at både Italiens A- og B-hold skulle forlade løbet.</p><p>Tour-chef Jacques Goddet opsøgte selv delegationen og forsøgte at overtale Bartali til at fortsætte. Beslutningen stod fast. I landsholdenes Tour var rytterne ikke kun sportsfolk. De repræsenterede nationer i et Europa, hvor krigen stadig lå tæt på overfladen.</p><p>Samme år brød schweizeren Hugo Koblet et andet mønster. Han blev den første udenlandske vinder af Giro d’Italia. Året efter vandt han Touren og blev et billede på en ny international elegance i feltet.</p></div></section>
+
+      <section class="decade1970-mechanics"><div><p class="section-label">Mekanikken finder sin form</p><h2>Parallelogrammet ændrer gearskiftet</h2><p>Campagnolo havde vist en prototype på Gran Sport i 1949. I 1951 kom den enkeltkablede udgave, der gjorde det moderne bagskifterprincip synligt på racercyklen.</p><p>Et leddelt parallelogram flyttede skifteren sidelæns, mens to pulleyhjul førte kæden og holdt den spændt. Rytteren betjente stadig et friktionsgreb på skrårøret, men baghjulet skulle ikke længere løsnes og flyttes under gearskiftet.</p><p>Gran Sport afløste ikke straks Simplex, Huret og andre systemer. Men den gav den fine italienske racercykel et nyt teknisk centrum og pegede frem mod årtiers mekaniske bagskiftere.</p></div><aside aria-label="Typiske detaljer på en fin racercykel fra 1950’erne"><span>Stålramme</span><span>Dobbelt klinge</span><span>Fem tandhjul</span><span>Friktionsgear</span><span>Ringdæk</span><span>Tåclips</span></aside></section>
+
+      <section class="wildwest-copy dark"><div><p class="section-label">1951–1953</p><h2>Bjergene får deres egne navne</h2></div><div><p>Mont Ventoux kom første gang med på Tour-ruten i 1951. Året efter lagde arrangørerne for første gang et etape­mål på toppen af en Tour-stigning. Fausto Coppi vandt alene på Alpe d’Huez.</p><p>I Giro d’Italia kom Stelvio med i 1953. Coppi angreb på det nye pas og vendte et løb, Hugo Koblet så ud til at have vundet. De høje veje var ikke blot terræn. De blev dramatiske scener, som aviser, radio og billeder kunne give deres egen identitet.</p><p>Arrangørerne havde fundet en opskrift, der stadig bruges: Giv bjerget et navn, lad klassementet blive afgjort på dets vej, og lad stedet blive en del af løbets hukommelse.</p></div></section>
+
+      <section class="decade1940-return"><div><span>1956</span><h2>Magni og ringdækket</h2><p>Fiorenzo Magni kørte Giroen med et brækket kraveben. Hans mekaniker fastgjorde et stykke ringdæk til styret, så Magni kunne aflaste armen ved at holde cyklen med tænderne.</p></div><div><span>242 km</span><h2>Sneslaget på Bondone</h2><p>På etapen Merano–Monte Bondone ramte sne og voldsom kulde. Charly Gaul vandt, mens Magni med den skadede skulder nåede frem som nummer tre.</p></div></section>
+
+      <section class="wildwest-copy rust"><div><p class="section-label">En løsning fra værkstedet</p><h2>At styre med tænderne</h2></div><div><p>Billedet af Magni med ringdækket mellem tænderne samler meget af 1950’ernes cykelsport. Læger, soigneurs og mekanikere fandtes omkring rytteren, men løsningerne kunne stadig blive improviseret med det materiale, der lå i bilen.</p><p>Et stykke af cyklens eget dæk blev til støtte for kroppen. Det var opfindsomt og brutalt på samme tid. Historien bør ikke gøre skaden romantisk; den viser snarere, hvor langt en rytter kunne blive forventet at fortsætte.</p><p>På Monte Bondone var det ikke kun smerte, men også kulde, der sorterede feltet. Aviser blev stukket under trøjerne, varme drikke blev rakt frem, og hjælpere forsøgte at få frosne ryttere tilbage til almindelig kropstemperatur.</p></div></section>
+
+      <section class="wildwest-copy"><div><p class="section-label">Radio, billeder og nærvær</p><h2>Feltet kunne opleves på afstand</h2></div><div><p>Giroen oprettede Radio-Giro i 1951, så RAI kunne sende aktuelle meldinger fra løbet. Touren havde allerede fået sin afslutning sendt direkte i fjernsynet i 1948, og gennem 1950’erne blev etaperne i stigende grad en del af nyhedsudsendelser og aftenresuméer.</p><p>Der var endnu langt til nutidens direkte billeder fra hver kilometer. Alligevel ændrede kameraet sportens hukommelse. Publikum kunne se rytternes ansigter, deres kørestil og sammenbrud i stedet for kun at læse navnene næste morgen.</p><p>Kameramotorcyklen og følgekaravanen blev derfor lige så karakteristiske for den moderne cykelsport som den nye bagskifter.</p></div></section>
+
+      <section class="wildwest-copy dark"><div><p class="section-label">Kroppen uden sikkerhedsnet</p><h2>Ventoux gav advarsler</h2></div><div><p>På Mont Ventoux i Touren 1955 kollapsede Jean Malléjac og måtte behandles ved vejkanten. Ferdi Kübler led også voldsomt og opgav senere løbet. Hede, udmattelse og tidens brug af stimulanser blev blandet sammen i forklaringerne.</p><p>Malléjac mente selv, at han var blevet dopet uden sin viden. Det kan ikke omsættes til en enkel forklaring på alle hændelserne. Episoden viser dog et felt uden moderne antidopingkontrol og med en kultur, hvor rytteren ikke altid havde fuldt overblik over det, han fik udleveret.</p><p>1950’ernes professionalisering gjorde løbene bedre organiserede. Den gjorde ikke automatisk behandlingen af kroppen moderne eller sikker.</p></div></section>
+
+      <section class="wildwest-copy"><div><p class="section-label">1956</p><h2>Vinderen uden en etapesejr</h2></div><div><p>Roger Walkowiak var ikke udtaget til det franske landshold og begyndte Touren på regionalholdet Nord-Est–Centre. Han kom med i et udbrud, favoritterne lod få for meget tid, og pludselig var han en del af kampen om løbet.</p><p>Walkowiak vandt ingen etape. Til gengæld forsvarede han sig i bjergene og generobrede den gule trøje fire dage før Paris. Hans navn blev senere brugt nedsættende om en tilfældig eller uværdig vinder.</p><p>Det overser historiens bedste pointe. Da favoritterne opdagede deres fejl, var Walkowiak stærk nok til, at de ikke kunne rette den. Han vandt gennem opmærksomhed, udholdenhed og taktisk stædighed – ikke ved ét stort triumfbillede.</p></div></section>
+
+      <section class="period-feature decade1940-related"><div><p class="section-label">Et årti åbner sig</p><h2>Fra overblik til menneske</h2><p>Perioden står som sin egen fortælling. Den relaterede historie går tættere på arbejdet bag feltet uden at blive brugt som byggesten i periodekapitlet.</p></div><div class="period-feature-links"><a href={`${base}/historier/ivo-faltoni-mekaniker-giro-1954/`}><span>Historie · Giroen 1954</span><strong>Den 16-årige mekaniker</strong><b>Læs historien →</b></a></div></section>
+
+      <section class="period-sources"><p class="section-label">Kilder</p><h2>Grundlaget for perioden</h2><ul><li><a href="https://www.letour.fr/fr/actus/2020/1950-divorce-a-litalienne-5-10/1283550">Tour de France: det italienske holds exit i 1950</a></li><li><a href="https://www.letour.fr/en/news/2015/alpe-d-huez-french-territory-5-5/1263787">Tour de France: Alpe d’Huez og den første bjergafslutning</a></li><li><a href="https://archivio.giroditalia.it/eng/editions/1948-1957/">Giro d’Italia: historisk arkiv 1948–1957</a></li><li><a href="https://www.giroditalia.it/news/ricordi-dal-monte-bondone-1956-luomo-portato-ai-suoi-limiti/">Giro d’Italia: Monte Bondone 1956 og Magnis ringdæk</a></li><li><a href="https://www.giroditalia.it/stelvio/">Giro d’Italia: Stelvios debut i 1953</a></li><li><a href="https://www.letour.fr/en/news/2017/one-last-breakaway-for-walko/1263971">Tour de France: Roger Walkowiaks sejr i 1956</a></li><li><a href="https://www.museociclismo.it/content/articoli/4885-Storia%2Bdi%2BGentullio%2BCampagnolo/index.html">Museo del Ciclismo: Campagnolo Gran Sport</a></li></ul></section>
+
+      <nav class="wildwest-next" aria-label="Videre navigation"><a href={`${base}/perioder/`}>← Alle perioder</a><a href={`${base}/historier/ivo-faltoni-mekaniker-giro-1954/`}>Videre til Giroens unge mekaniker →</a></nav>
+    </article></main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

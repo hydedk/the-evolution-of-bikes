@@ -1,43 +1,52 @@
 ---
 const base = import.meta.env.BASE_URL;
 import { storiesForPeriod } from '../../data/stories';
-const earlyStories = storiesForPeriod('1900-1920');
-const twentiesStories = storiesForPeriod('1920-1930');
+const articlesFor = (period) => storiesForPeriod(period).map((story) => ({ label: `Historie · ${story.year}`, title: story.title, text: story.text, href: `${base}/historier/${story.slug}/` }));
 const periods = [{
   years: '1900–1920’erne', title: 'Pionerer og udholdenhed',
   text: 'Tour de France bliver til, den gule trøje får sin farve, og rytterne kæmper mod veje, mørke og mekanik.',
   image: `${base}/images/periods/1900-1920/rytter-velodrom.webp`, href: `${base}/perioder/1900-1920/`,
-  articles: earlyStories.map((story) => ({ label: 'Historie', title: story.title, text: story.text, href: `${base}/historier/${story.slug}/` })),
+  articles: articlesFor('1900-1920'),
 }, {
   years: '1920–1930', title: 'Cykelsportens barske guldalder',
   text: 'Enorme Tour-etaper, primitive bjergveje, vendbare baghjul og ryttere, der måtte være deres egne mekanikere.',
   image: `${base}/images/periods/1920-1930/mountain-stop.webp`, href: `${base}/perioder/1920-1930/`,
-  articles: twentiesStories.map((story) => ({ label: 'Historie', title: story.title, text: story.text, href: `${base}/historier/${story.slug}/` })),
+  articles: articlesFor('1920-1930'),
 }, {
   years: '1930–1939', title: 'Da racercyklen blev moderne',
   text: 'Nationalhold, reklamekaravane, den første Vuelta og gearskift uden at vende baghjulet.',
   image: `${base}/images/periods/1930-1939/romain-maes-cannes-1935.jpg`, href: `${base}/perioder/1930-1939/`,
-  articles: [],
+  articles: articlesFor('1930-1939'),
 }, {
   years: '1940–1949', title: 'Da krigen lukkede landevejen',
   text: 'De store etapeløb forsvandt og vendte tilbage til et Europa præget af krig, genopbygning og nye mekaniske løsninger.',
   image: `${base}/images/periods/1940-1949/efterkrigsfelt-illustration.jpg`, href: `${base}/perioder/1940-1949/`,
-  articles: [],
+  articles: articlesFor('1940-1949'),
 }, {
   years: '1950–1959', title: 'Da cykelløbet flyttede ind i stuen',
   text: 'Moderne bagskiftere, nye bjergscener, radio og fjernsyn gjorde sporten hurtigere, mere international og mere synlig.',
   image: `${base}/images/periods/1950-1959/felt-og-filmhold-illustration.jpg`, href: `${base}/perioder/1950-1959/`,
-  articles: [],
+  articles: articlesFor('1950-1959'),
 }, {
   years: '1970–1979', title: 'Mellem Kannibalen og Grævlingen',
   text: 'Stålrammer, friktionsgear og et professionelt felt på vej fra Merckx’ dominans til Hinaults nye orden.',
   image: `${base}/images/periods/1970-1979/felt-illustration.jpg`, href: `${base}/perioder/1970-1979/`,
-  articles: [],
+  articles: articlesFor('1970-1979'),
+}, {
+  years: '1980–1989', title: 'Stål, brosten og nye magtforhold',
+  text: 'Aerodynamik og nye materialer nærmede sig, men løbene blev stadig afgjort på stålcykler, brosten og smalle bjergveje.',
+  image: `${base}/images/stories/skibby-koppenberg-1987/illustration.webp`, href: null,
+  articles: articlesFor('1980-1989'),
+}, {
+  years: '1990–1999', title: 'Nye cykler og en sport under pres',
+  text: 'Vintagecykling fandt nye veje, mens professionel cykelsport blev ramt af sin største dopingsag.',
+  image: `${base}/images/stories/leroica/toscana-illustration.webp`, href: null,
+  articles: articlesFor('1990-1999'),
 }];
 ---
 <!doctype html><html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="Cykelløb og cykelkultur fortalt periode for periode – med hovedartikler og de historier, der hører til tiden." /><meta property="og:type" content="website" /><meta property="og:title" content="Perioder · The Evolution of Bikes" /><meta property="og:description" content="Gå på opdagelse i cykelløb, mennesker, teknik og kultur årti for årti." /><title>Perioder · The Evolution of Bikes</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} /></head>
 <body><header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`} aria-current="page">Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav></header>
 <main><header class="archive-hero periods-archive-hero"><p class="section-label">Den store, sammenhængende historie</p><h1>Perioder</h1><p>Hvert kapitel giver kronologisk overblik over løb, veje, regler, teknik og kultur – og samler links til periodens selvstændige historier.</p></header>
-<section class="periods-archive">{periods.map((period) => <article class="period-overview"><a class="period-overview-main" href={period.href}><img src={period.image} alt={`Illustration fra perioden ${period.years}`} /><div><span>{period.years}</span><h2>{period.title}</h2><p>{period.text}</p><b>Læs hovedsiden for perioden →</b></div></a>{period.articles.length > 0 && <div class="period-article-list"><header><span>Artikler i perioden</span><strong>{period.articles.length}</strong></header>{period.articles.map((article, index) => <a href={article.href}><span>{String(index + 1).padStart(2, '0')} · {article.label}</span><h3>{article.title}</h3><p>{article.text}</p><b>Læs artiklen →</b></a>)}</div>}</article>)}</section>
+<section class="periods-archive">{periods.map((period) => <article class="period-overview">{period.href ? <a class="period-overview-main" href={period.href}><img src={period.image} alt={`Illustration fra perioden ${period.years}`} /><div><span>{period.years}</span><h2>{period.title}</h2><p>{period.text}</p><b>Læs hovedsiden for perioden →</b></div></a> : <div class="period-overview-main period-overview-upcoming"><img src={period.image} alt={`Illustration fra perioden ${period.years}`} /><div><span>{period.years}</span><h2>{period.title}</h2><p>{period.text}</p><b>Hovedside for perioden er på vej</b></div></div>}{period.articles.length > 0 && <div class="period-article-list"><header><span>Historier i perioden</span><strong>{period.articles.length}</strong></header>{period.articles.map((article, index) => <a href={article.href}><span>{String(index + 1).padStart(2, '0')} · {article.label}</span><h3>{article.title}</h3><p>{article.text}</p><b>Læs historien →</b></a>)}</div>}</article>)}</section>
 <section class="periods-coming"><p class="section-label">Arkivet vokser</p><blockquote>Flere perioder kommer til, efterhånden som cyklerne og historierne bliver dokumenteret.</blockquote></section></main>
 <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer></body></html>

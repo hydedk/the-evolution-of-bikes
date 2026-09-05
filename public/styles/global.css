@@ -254,9 +254,9 @@ h1 em { color: var(--rust); font-weight: 400; }
 .periods-archive { padding: 0 clamp(24px, 8vw, 130px) 120px; }
 .period-overview { border-top: 1px solid var(--line); }
 .period-overview + .period-overview { margin-top: 70px; }
-.period-overview-main { display: grid; grid-template-columns: 1.15fr .85fr; min-height: 590px; background: var(--ink); color: var(--paper); text-decoration: none; }
-.period-overview-main img { width: 100%; height: 100%; max-height: 680px; object-fit: cover; filter: grayscale(1) contrast(1.05); }
-.period-overview-main > div { display: flex; flex-direction: column; justify-content: center; padding: clamp(35px, 6vw, 85px); }
+.period-overview-main { display: grid; grid-template-columns: 1.15fr .85fr; min-height: 470px; background: var(--ink); color: var(--paper); text-decoration: none; }
+.period-overview-main img { width: 100%; height: 100%; max-height: 540px; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+.period-overview-main > div { display: flex; flex-direction: column; justify-content: center; padding: clamp(32px, 4.5vw, 64px); }
 .period-overview-main > div > span { color: #e0a58f; font-family: 'Libre Caslon Display', serif; font-size: clamp(44px, 5vw, 76px); line-height: .9; letter-spacing: -.03em; }
 .period-article-list span { color: var(--rust); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
 .period-overview-upcoming { cursor: default; }
@@ -730,7 +730,8 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .home-gateways > div { grid-template-columns: 1fr; }
   .home-gateway { min-height: 470px; }
   .periods-archive { padding-left: 24px; padding-right: 24px; }
-  .period-overview-main img { height: auto; max-height: 440px; }
+  .period-overview-main { min-height: 0; }
+  .period-overview-main img { height: auto; max-height: none; aspect-ratio: 16 / 9; object-fit: cover; }
   .period-article-list { grid-template-columns: 1fr; }
   .period-article-list > a + a { border-left: 0; border-top: 1px solid var(--line); }
   .decade1920-hero-image { padding: 24px 24px 0; }

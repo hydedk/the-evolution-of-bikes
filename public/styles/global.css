@@ -132,6 +132,9 @@ h1 em { color: var(--rust); font-weight: 400; }
 .source-note { margin: 70px 0; padding: 36px; background: var(--cream); border-left: 3px solid var(--rust); }
 .source-note strong { font-family: 'Libre Caslon Display', serif; font-size: 28px; }
 .source-note p { font-size: 14px; line-height: 1.75; margin-bottom: 0; }
+.collection-detail { margin: 65px 0 80px; background: var(--ink); }
+.collection-detail img { display: block; width: 100%; max-height: 760px; object-fit: contain; }
+.collection-detail figcaption { padding: 14px 18px; color: #aeb5ad; font-size: 11px; line-height: 1.55; }
 .story-sources { margin-top: 90px; padding-top: 30px; border-top: 1px solid var(--line); }
 .story-sources ul { padding-left: 18px; font-size: 13px; }
 .story-sources a { text-underline-offset: 5px; }

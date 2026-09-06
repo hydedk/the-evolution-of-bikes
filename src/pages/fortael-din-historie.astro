@@ -1,0 +1,64 @@
+---
+const base = import.meta.env.BASE_URL;
+const submissionUrl = import.meta.env.PUBLIC_STORY_SUBMISSION_URL ?? '';
+---
+<!doctype html>
+<html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="Indsend din egen historie om en cykel, en rytter, et værksted eller en særlig oplevelse." /><title>Fortæl din historie · The Evolution of Bikes</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} /></head>
+<body><header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav></header>
+<main><article class="reader-story-page">
+  <header class="reader-story-hero"><p class="section-label">Læsernes fortællinger</p><h1>Fortæl din<br /><em>historie</em></h1><p>Har du en fortælling om en cykel, en rytter, et værksted eller en oplevelse på landevejen? Send det, du ved. Det må gerne være en færdig historie eller blot stikord.</p></header>
+  <div class="reader-story-layout">
+    <form class="reader-story-form" aria-describedby="form-status" data-submission-url={submissionUrl}>
+      <label class="form-honeypot" aria-hidden="true">Hjemmeside<input name="website" tabindex="-1" autocomplete="off" /></label>
+      <fieldset><legend>Selve historien</legend>
+        <label>Overskrift <span>påkrævet</span><input name="title" required maxlength="140" autocomplete="off" /></label>
+        <div class="form-pair"><label>Hvor fandt det sted? <span>påkrævet</span><input name="place" required maxlength="160" /></label><label>År eller periode <small>valgfrit</small><input name="period" maxlength="80" placeholder="Fx omkring 1978" /></label></div>
+        <label>Din historie eller dine stikord <span>påkrævet</span><textarea name="story" required minlength="20" rows="12" placeholder="Skriv alt det, du kan huske. Vi hjælper med at undersøge, strukturere og skrive historien."></textarea></label>
+      </fieldset>
+      <fieldset><legend>Om dig</legend><div class="form-pair"><label>Navn <span>påkrævet</span><input name="name" required autocomplete="name" /></label><label>E-mail <span>påkrævet</span><input name="email" type="email" required autocomplete="email" /></label></div>
+        <label>Hvordan må dit navn bruges? <select name="credit" required><option value="">Vælg</option><option value="name">Mit navn må vises ved historien</option><option value="anonymous">Jeg vil gerne være anonym</option><option value="ask">Aftal det med mig først</option></select></label>
+      </fieldset>
+      <fieldset><legend>Billeder</legend><p class="field-help">Du kan vælge op til 8 billeder i JPG, PNG eller WebP. Højst 10 MB pr. billede.</p><label class="file-field">Vælg billeder<input id="story-images" name="images" type="file" accept="image/jpeg,image/png,image/webp" multiple /></label><p id="file-summary" class="file-summary" aria-live="polite">Ingen billeder valgt.</p><label>Oplysninger om billederne <small>valgfrit</small><textarea name="image_notes" rows="4" placeholder="Hvem eller hvad ses? Hvornår er billedet taget, og hvem er fotografen?"></textarea></label></fieldset>
+      <fieldset class="consents"><legend>Tilladelse og privatliv</legend><label><input name="rights_confirmed" value="yes" type="checkbox" required /> Jeg har selv rettighederne til materialet eller tilladelse til at dele det.</label><label><input name="editorial_consent" value="yes" type="checkbox" required /> The Evolution of Bikes må undersøge, redigere og eventuelt offentliggøre materialet. En indsendelse er ikke en garanti for udgivelse.</label><label><input name="privacy_consent" value="yes" type="checkbox" required /> Jeg accepterer, at navn, e-mail, tekst og billeder behandles som beskrevet i privatlivsoplysningerne. E-mailadressen offentliggøres aldrig.</label></fieldset>
+      <p class="form-privacy-link"><span>Sådan passer vi på dine oplysninger</span><a href={`${base}/privatliv/`}>Læs om privatliv og dine rettigheder <span aria-hidden="true">→</span></a></p>
+      <div id="form-status" class="form-notice" aria-live="polite">{submissionUrl ? <><strong>Klar til indsendelse.</strong> Materialet bliver gemt privat og gennemgået før en eventuel udgivelse.</> : <><strong>Formularen er under klargøring.</strong> Afsendelse åbnes først, når den private og sikre lagring er tilsluttet og testet.</>}</div><button type="submit" disabled={!submissionUrl}>Send historien</button>
+    </form>
+    <aside class="reader-story-aside"><p class="section-label">Hvad sker der bagefter?</p><ol><li><strong>Vi læser materialet</strong><span>Indsendelsen bliver ikke vist offentligt.</span></li><li><strong>Vi undersøger historien</strong><span>Navne, årstal og tekniske detaljer bliver kontrolleret.</span></li><li><strong>Vi skriver en kladde</strong><span>Erindringer og usikre oplysninger bliver markeret tydeligt.</span></li><li><strong>Ejeren godkender</strong><span>Historien udgives først efter en særskilt godkendelse.</span></li></ol><p>Vi kan kontakte dig, hvis der mangler oplysninger om historien eller billederne.</p></aside>
+  </div>
+</article></main>
+<footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+<script>
+  const input = document.querySelector('#story-images');
+  const summary = document.querySelector('#file-summary');
+  const form = document.querySelector('.reader-story-form');
+  const status = document.querySelector('#form-status');
+  input?.addEventListener('change', () => {
+    const files = Array.from(input.files ?? []);
+    const invalid = files.filter((file) => file.size > 10 * 1024 * 1024);
+    if (files.length > 8 || invalid.length) {
+      input.value = '';
+      summary.textContent = files.length > 8 ? 'Vælg højst 8 billeder.' : 'Mindst ét billede er større end 10 MB.';
+      return;
+    }
+    summary.textContent = files.length ? `${files.length} ${files.length === 1 ? 'billede valgt' : 'billeder valgt'}.` : 'Ingen billeder valgt.';
+  });
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const endpoint = form.dataset.submissionUrl;
+    const button = form.querySelector('button[type="submit"]');
+    if (!endpoint || !(button instanceof HTMLButtonElement) || !(status instanceof HTMLElement)) return;
+    button.disabled = true;
+    status.innerHTML = '<strong>Sender historien…</strong> Vent, mens tekst og billeder overføres sikkert.';
+    try {
+      const response = await fetch(endpoint, { method: 'POST', body: new FormData(form) });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || 'Indsendelsen mislykkedes.');
+      form.reset();
+      if (summary) summary.textContent = 'Ingen billeder valgt.';
+      status.innerHTML = `<strong>Tak for din historie.</strong> Den er modtaget med nummer ${result.id}. Vi kontakter dig, hvis der mangler oplysninger.`;
+    } catch (error) {
+      status.innerHTML = `<strong>Historien blev ikke sendt.</strong> ${error instanceof Error ? error.message : 'Prøv igen senere.'}`;
+      button.disabled = false;
+    }
+  });
+</script></body></html>

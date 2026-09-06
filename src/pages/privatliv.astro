@@ -1,0 +1,42 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Sådan behandler The Evolution of Bikes personoplysninger, når du indsender en historie." />
+    <title>Privatliv ved indsendelse · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
+      <nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav>
+    </header>
+    <main>
+      <article class="privacy-page">
+        <header class="privacy-hero">
+          <p class="section-label">Privatliv</p>
+          <h1>Når du sender<br /><em>din historie</em></h1>
+          <p>Her kan du se, hvilke oplysninger vi gemmer, hvorfor vi gør det, og hvilke rettigheder du har.</p>
+        </header>
+        <div class="privacy-body">
+          <section><h2>Hvem er ansvarlig?</h2><p>Henning Renita Yde, The Evolution of Bikes, er dataansvarlig for oplysninger, der indsendes gennem formularen.</p><p><strong>Kontakt:</strong> <a href="mailto:hyde@hyde.dk">hyde@hyde.dk</a></p></section>
+          <section><h2>Hvad gemmer vi?</h2><p>Vi gemmer den overskrift, det sted, den periode og den historie, du skriver, samt dit navn, din e-mailadresse, dit valg om kreditering og de billeder og billedoplysninger, du sender. Af hensyn til misbrugsbeskyttelse gemmes også tekniske oplysninger i begrænset form.</p></section>
+          <section><h2>Hvorfor og på hvilket grundlag?</h2><p>Oplysningerne bruges til at modtage, vurdere, undersøge og redigere historien, kontakte dig om manglende oplysninger og forberede en mulig udgivelse. Behandlingen sker på baggrund af dit samtykke. Din indsendelse bliver ikke automatisk offentliggjort, og din e-mailadresse bliver aldrig vist på hjemmesiden.</p></section>
+          <section><h2>Hvem behandler oplysningerne?</h2><p>Materialet er kun tilgængeligt for redaktionen og betroede databehandlere, der leverer den tekniske lagring. Formularens private database og billeder opbevares hos Supabase. Oplysninger sælges ikke og bruges ikke til markedsføring.</p></section>
+          <section><h2>Hvor længe gemmer vi det?</h2><p>Indsendelser, som ikke går videre, slettes senest 12 måneder efter den redaktionelle afgørelse. Hvis en historie udgives, kan materialet og den nødvendige dokumentation for tilladelser opbevares, så længe historien er udgivet, eller så længe det er nødvendigt for at dokumentere udgivelsesgrundlaget.</p></section>
+          <section><h2>Dine rettigheder</h2><p>Du kan trække dit samtykke tilbage og bede om indsigt, rettelse, sletning, begrænsning eller udlevering af dine oplysninger. Du kan også gøre indsigelse mod behandlingen. Skriv til <a href="mailto:hyde@hyde.dk">hyde@hyde.dk</a>. Tilbagetrækning ændrer ikke lovligheden af den behandling, der allerede er sket.</p><p>Du kan klage til <a href="https://www.datatilsynet.dk/borger/klage/saadan-klager-du" rel="external">Datatilsynet</a>. Der foretages ikke automatiske afgørelser eller profilering.</p></section>
+        </div>
+        <p class="privacy-updated">Senest opdateret 6. september 2026.</p>
+        <a class="privacy-back" href={`${base}/fortael-din-historie/`}>Tilbage til formularen</a>
+      </article>
+    </main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>

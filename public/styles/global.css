@@ -63,6 +63,9 @@ html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: 'DM Sans', sans-serif; }
 a { color: inherit; }
 .site-header { height: 108px; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(24px, 6vw, 96px); border-bottom: 1px solid var(--line); }
+.site-header > nav { margin-left: auto; }
+.header-story-link { margin-left: clamp(20px, 3vw, 44px); padding: 11px 15px; border: 1px solid var(--ink); color: var(--ink); font-size: 12px; font-weight: 600; line-height: 1; text-decoration: none; white-space: nowrap; transition: background-color .2s ease, color .2s ease; }
+.header-story-link:hover, .header-story-link[aria-current="page"] { background: var(--ink); color: var(--paper); }
 .brand { display: flex; gap: 14px; align-items: center; text-decoration: none; text-transform: uppercase; letter-spacing: .1em; font-size: 11px; font-weight: 600; line-height: 1.35; }
 .brand-mark { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; font-family: 'Libre Caslon Display', serif; font-size: 24px; letter-spacing: -.18em; padding-right: 4px; }
 .brand-mark span { color: var(--rust); }
@@ -793,7 +796,9 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .privacy-page { padding-top: 60px; }
   .privacy-hero { margin-bottom: 44px; }
   .privacy-body { grid-template-columns: 1fr; }
-  .site-header { height: auto; padding-top: 20px; padding-bottom: 20px; align-items: flex-start; }
+  .site-header { height: auto; padding-top: 20px; padding-bottom: 20px; align-items: flex-start; flex-wrap: wrap; row-gap: 18px; }
+  .site-header > nav { margin-left: auto; }
+  .header-story-link { flex-basis: 100%; margin-left: 0; padding: 11px; font-size: 11px; text-align: center; }
   nav { display: grid; gap: 8px; text-align: right; }
   .hero { min-height: 650px; padding-top: 80px; }
   .wheel { width: 620px; right: -390px; top: 120px; }

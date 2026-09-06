@@ -1,6 +1,7 @@
 ---
 const base = import.meta.env.BASE_URL;
-const submissionUrl = import.meta.env.PUBLIC_STORY_SUBMISSION_URL ?? '';
+const submissionUrl = import.meta.env.PUBLIC_STORY_SUBMISSION_URL
+  ?? 'https://fmxiyfhncvhnwzwipnxu.supabase.co/functions/v1/submit-reader-story';
 ---
 <!doctype html>
 <html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="Indsend din egen historie om en cykel, en rytter, et værksted eller en særlig oplevelse." /><title>Fortæl din historie · The Evolution of Bikes</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} /></head>

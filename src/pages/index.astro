@@ -55,12 +55,25 @@ const gateways = [
     </header>
 
     <main>
-      <section class="hero">
-        <p class="eyebrow">Vintagecykling fortalt gennem cyklerne, løbene og menneskene</p>
-        <h1>Kom for cyklerne.<br /><em>Bliv for historierne.</em></h1>
-        <p class="hero-copy">Et levende arkiv over cyklingens kultur – fra håndbyggede stålstel og dristig mekanik til rytterne, hjælperne og de øjeblikke, resultatlisten ikke viser.</p>
-        <a class="button" href="#fire-indgange">Vælg din indgang <span aria-hidden="true">↓</span></a>
-        <div class="wheel" aria-hidden="true"><div class="wheel-hub"></div></div>
+      <section class="hero home-hero">
+        <div class="home-hero-copy">
+          <p class="eyebrow">Vintagecykling fortalt gennem cyklerne, løbene og menneskene</p>
+          <h1>Kom for cyklerne.<br /><em>Bliv for historierne.</em></h1>
+          <p class="hero-copy">Et levende arkiv over cyklingens kultur – fra håndbyggede stålstel og dristig mekanik til rytterne, hjælperne og de øjeblikke, resultatlisten ikke viser.</p>
+          <div class="home-hero-actions">
+            <a class="button" href={featuredFallback.link}>Læs den nyeste historie <span aria-hidden="true">→</span></a>
+            <a class="home-hero-archive-link" href={`${base}/historier/`}>Se alle historier</a>
+          </div>
+        </div>
+        <a class="home-hero-feature" href={featuredFallback.link} aria-label={`Læs: ${featuredFallback.title}`}>
+          <img src={featuredFallback.image} alt="" />
+          <span class="home-hero-feature-shade" aria-hidden="true"></span>
+          <span class="home-hero-feature-copy">
+            <small>Nyeste historie · {featuredFallback.year}</small>
+            <strong>{featuredFallback.title}</strong>
+            <i>Læs historien <span aria-hidden="true">→</span></i>
+          </span>
+        </a>
       </section>
 
       <section class="home-gateways" id="fire-indgange" aria-label="Hjemmesidens fire hovedindgange">

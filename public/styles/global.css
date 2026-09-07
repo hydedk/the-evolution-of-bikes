@@ -251,6 +251,11 @@ h1 em { color: var(--rust); font-weight: 400; }
 .about-image figcaption { padding: 14px clamp(24px, 8vw, 130px); color: #aeb5ad; font-size: 11px; }
 .about-opening { display: grid; grid-template-columns: 1fr 3fr; gap: 40px; padding: 110px clamp(24px, 8vw, 130px); background: var(--ink); color: var(--paper); }
 .about-intro { margin: 0; max-width: 980px; font-family: 'Libre Caslon Display', serif; font-size: clamp(36px, 5vw, 72px); line-height: 1.15; }
+.about-collection-core { display: grid; grid-template-columns: 1fr 3fr; gap: 40px; padding: 95px clamp(24px, 8vw, 130px); background: var(--cream); }
+.about-collection-core h2 { max-width: 850px; margin: 0 0 32px; font-family: 'Libre Caslon Display', serif; font-size: clamp(44px, 5vw, 72px); font-weight: 400; line-height: 1.08; }
+.about-collection-core div { max-width: 850px; }
+.about-collection-core div p { max-width: 760px; margin: 0 0 22px; font-size: 18px; line-height: 1.75; }
+.about-collection-core div p:last-child { margin-bottom: 0; }
 .about-body { display: grid; grid-template-columns: 190px minmax(0, 760px); justify-content: center; gap: clamp(50px, 8vw, 130px); padding: 120px 24px; }
 .about-body aside { align-self: start; display: grid; justify-items: center; gap: 12px; position: sticky; top: 30px; }
 .about-body aside span { text-transform: uppercase; letter-spacing: .14em; font-size: 9px; }
@@ -900,7 +905,7 @@ footer { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr
   .anecdote-layout { grid-template-columns: 1fr; padding-top: 70px; }
   .anecdote-timeline { position: static; }
   .anecdote-pullquote { margin-left: -24px; margin-right: -24px; }
-  .about-opening, .about-body, .exhibition-contact { grid-template-columns: 1fr; }
+  .about-opening, .about-collection-core, .about-body, .exhibition-contact { grid-template-columns: 1fr; }
   .about-body aside { position: static; grid-template-columns: auto auto 1fr auto auto; align-items: center; justify-items: start; }
   .about-body aside i { width: 100%; height: 1px; }
   .about-body aside i::before, .about-body aside i::after { top: -4px; }

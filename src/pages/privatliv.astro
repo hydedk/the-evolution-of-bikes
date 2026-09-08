@@ -6,8 +6,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Sådan behandler The Evolution of Bikes personoplysninger, når du indsender en historie." />
-    <title>Privatliv ved indsendelse · The Evolution of Bikes</title>
+    <meta name="description" content="Sådan behandler The Evolution of Bikes personoplysninger ved historieindsendelse og tilmelding til nyhedsbrevet." />
+    <title>Privatliv · The Evolution of Bikes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
@@ -22,7 +22,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <article class="privacy-page">
         <header class="privacy-hero">
           <p class="section-label">Privatliv</p>
-          <h1>Når du sender<br /><em>din historie</em></h1>
+          <h1>Når du deler<br /><em>med os</em></h1>
           <p>Her kan du se, hvilke oplysninger vi gemmer, hvorfor vi gør det, og hvilke rettigheder du har.</p>
         </header>
         <div class="privacy-body">
@@ -30,11 +30,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           <section><h2>Hvad gemmer vi?</h2><p>Vi gemmer den overskrift, det sted, den periode og den historie, du skriver, samt dit navn, din e-mailadresse, dit valg om kreditering og de billeder og billedoplysninger, du sender. Af hensyn til misbrugsbeskyttelse gemmes også tekniske oplysninger i begrænset form.</p></section>
           <section><h2>Hvorfor og på hvilket grundlag?</h2><p>Oplysningerne bruges til at modtage, vurdere, undersøge og redigere historien, kontakte dig om manglende oplysninger og forberede en mulig udgivelse. Behandlingen sker på baggrund af dit samtykke. Din indsendelse bliver ikke automatisk offentliggjort, og din e-mailadresse bliver aldrig vist på hjemmesiden.</p></section>
           <section><h2>Hvem behandler oplysningerne?</h2><p>Materialet er kun tilgængeligt for redaktionen og betroede databehandlere, der leverer den tekniske lagring. Formularens private database og billeder opbevares hos Supabase. Oplysninger sælges ikke og bruges ikke til markedsføring.</p></section>
+          <section><h2>Nyhedsbrevet</h2><p>Når du tilmelder dig nyhedsbrevet, gemmer vi din e-mailadresse og dokumentation for dit samtykke. Oplysningerne bruges kun til at sende nyheder fra The Evolution of Bikes. Tilmeldingen og udsendelserne håndteres af Brevo som databehandler, og du skal bekræfte din tilmelding via e-mail.</p><p>Du kan til enhver tid trække dit samtykke tilbage via afmeldingslinket i nyhedsbrevet. Herefter ophører udsendelserne, og oplysningerne slettes eller begrænses til det, der er nødvendigt for at dokumentere den tidligere tilmelding.</p></section>
           <section><h2>Hvor længe gemmer vi det?</h2><p>Indsendelser, som ikke går videre, slettes senest 12 måneder efter den redaktionelle afgørelse. Hvis en historie udgives, kan materialet og den nødvendige dokumentation for tilladelser opbevares, så længe historien er udgivet, eller så længe det er nødvendigt for at dokumentere udgivelsesgrundlaget.</p></section>
           <section><h2>Dine rettigheder</h2><p>Du kan trække dit samtykke tilbage og bede om indsigt, rettelse, sletning, begrænsning eller udlevering af dine oplysninger. Du kan også gøre indsigelse mod behandlingen. Skriv til <a href="mailto:hyde@hyde.dk">hyde@hyde.dk</a>. Tilbagetrækning ændrer ikke lovligheden af den behandling, der allerede er sket.</p><p>Du kan klage til <a href="https://www.datatilsynet.dk/borger/klage/saadan-klager-du" rel="external">Datatilsynet</a>. Der foretages ikke automatiske afgørelser eller profilering.</p></section>
         </div>
-        <p class="privacy-updated">Senest opdateret 6. september 2026.</p>
-        <a class="privacy-back" href={`${base}/fortael-din-historie/`}>Tilbage til formularen</a>
+        <p class="privacy-updated">Senest opdateret 8. september 2026.</p>
+        <a class="privacy-back" href={`${base}/`}>Tilbage til forsiden</a>
       </article>
     </main>
     <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>

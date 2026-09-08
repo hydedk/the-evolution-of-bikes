@@ -122,6 +122,53 @@ const gateways = [
         }
       </script>
 
+      <section class="newsletter" id="nyhedsbrev" aria-labelledby="newsletter-title">
+        <div class="newsletter-copy">
+          <p class="section-label">Nyt fra arkivet</p>
+          <h2 id="newsletter-title">Cykelhistorier<br /><em>i din indbakke</em></h2>
+          <p>Et roligt nyhedsbrev med nye fortællinger, cykler fra samlingen og andre fund fra arkivet.</p>
+        </div>
+        <form class="newsletter-form" method="POST" action="https://d8a86a3c.sibforms.com/serve/MUIFADT4GimLPx-wUsPWGgzKniP3fmzWsIS3HGOXDetusA5iI6foT2aohA8UlGqsNu2d0333p3yeqd9dkDi9hinLAE1AcLHf8YkXVeVB78XyU2tMlBmS73zjH1jUSVzhKUE5i0x-T1W00SLk0Vy0qLacrlE2xGPCim7_RlC5-uBsXMIKTkT3ueUSUoVpnsCnLtj6eqhf6y2x8PHxvA==" target="newsletter-response">
+          <label for="newsletter-email">Din e-mailadresse</label>
+          <div class="newsletter-field-row">
+            <input id="newsletter-email" name="EMAIL" type="email" autocomplete="email" required placeholder="navn@eksempel.dk" />
+            <button type="submit">Tilmeld <span aria-hidden="true">→</span></button>
+          </div>
+          <label class="newsletter-consent">
+            <input type="checkbox" name="OPT_IN" value="1" required />
+            <span>Jeg accepterer at modtage nyhedsbreve fra The Evolution of Bikes og har læst <a href={`${base}/privatliv/`}>privatlivspolitikken</a>.</span>
+          </label>
+          <p class="newsletter-note">Du kan altid afmelde dig via linket nederst i nyhedsbrevet. Tilmeldingen håndteres af Brevo.</p>
+          <input class="newsletter-honeypot" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="hidden" name="locale" value="da" />
+          <input type="hidden" name="html_type" value="simple" />
+          <p class="newsletter-status" role="status" aria-live="polite" hidden></p>
+        </form>
+        <iframe class="newsletter-response" name="newsletter-response" title="Svar fra nyhedsbrevstilmelding" hidden></iframe>
+      </section>
+
+      <script>
+        const newsletterForm = document.querySelector('.newsletter-form');
+        const newsletterFrame = document.querySelector('.newsletter-response');
+        const newsletterStatus = document.querySelector('.newsletter-status');
+        let newsletterSubmitted = false;
+
+        newsletterForm?.addEventListener('submit', () => {
+          newsletterSubmitted = true;
+          if (newsletterStatus instanceof HTMLElement) {
+            newsletterStatus.hidden = false;
+            newsletterStatus.textContent = 'Sender din tilmelding …';
+          }
+        });
+
+        newsletterFrame?.addEventListener('load', () => {
+          if (!newsletterSubmitted || !(newsletterStatus instanceof HTMLElement)) return;
+          newsletterStatus.textContent = 'Tak. Tjek din indbakke og bekræft tilmeldingen via linket i e-mailen.';
+          newsletterForm?.reset();
+          newsletterSubmitted = false;
+        });
+      </script>
+
       <section class="story">
         <p class="section-label">Fra arkivet</p>
         <blockquote>“Det interessante er ikke kun, hvor gammel en cykel er — men hvilke veje den har kørt, og hvem der har passet på den.”</blockquote>

@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://hydedk.github.io',
-  base: '/the-evolution-of-bikes',
+  site: 'https://teob.dk',
+  base: '',
   output: 'static',
 });

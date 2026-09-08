@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const facts = [
   ['1930', 'Nationalhold og reklamekaravane i Touren'],
   ['1935', 'Den første Vuelta a España'],
@@ -13,7 +13,7 @@ const facts = [
     <meta charset="UTF-8" /><meta name="viewport" content="width=device-width" />
     <meta name="description" content="1930’ernes cykelsport: nationalhold, reklamekaravanen, den første Vuelta, udvendige gear og de sidste store løb før krigen." />
     <meta property="og:type" content="article" /><meta property="og:title" content="Da racercyklen blev moderne · 1930–1939" /><meta property="og:description" content="Et årti med gule standardcykler, nye etapeløb og gearskift uden at vende baghjulet." />
-    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/periods/1930-1939/romain-maes-cannes-1935.jpg" /><meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="https://teob.dk/images/periods/1930-1939/romain-maes-cannes-1935.jpg" /><meta name="twitter:card" content="summary_large_image" />
     <title>Da racercyklen blev moderne · 1930–1939</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} />
   </head>

@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const facts = [
   ['Periode', 'ca. 1919–2013'],
   ['Cykler udstillet', '12'],
@@ -19,7 +19,7 @@ const facts = [
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Tilblivelsen af samlingen · The Evolution of Bikes" />
     <meta property="og:description" content="En passion for cykling, historie og teknik." />
-    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/about/vaerksted.webp" />
+    <meta property="og:image" content="https://teob.dk/images/about/vaerksted.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Om samlingen · The Evolution of Bikes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />

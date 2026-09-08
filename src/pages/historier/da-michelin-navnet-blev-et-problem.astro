@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const image = `${base}/images/stories/michelin-navnet/michelin-aftalen.webp`;
 const pedalImage = `${base}/images/stories/michelin-navnet/michelin-pedal.jpg`;
 ---
@@ -13,7 +13,7 @@ const pedalImage = `${base}/images/stories/michelin-navnet/michelin-pedal.jpg`;
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Da Michelin-navnet næsten blev et problem" />
     <meta property="og:description" content="Fra Stella Veneta og Cambio Corsa til MICHE-navnets tilblivelse." />
-    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/stories/michelin-navnet/michelin-aftalen.webp" />
+    <meta property="og:image" content="https://teob.dk/images/stories/michelin-navnet/michelin-aftalen.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Da Michelin-navnet næsten blev et problem · The Evolution of Bikes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />

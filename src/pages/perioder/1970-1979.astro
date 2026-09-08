@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const facts = [
   ['1975', 'Første Tour-afslutning på Champs-Élysées'],
   ['1975', 'Den prikkede bjergtrøje indføres'],
@@ -16,7 +16,7 @@ const facts = [
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Mellem Kannibalen og Grævlingen · 1970–1979" />
     <meta property="og:description" content="Et årti med stålrammer, friktionsgear og et professionelt felt i forandring." />
-    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/periods/1970-1979/felt-illustration.jpg" />
+    <meta property="og:image" content="https://teob.dk/images/periods/1970-1979/felt-illustration.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Mellem Kannibalen og Grævlingen · 1970–1979</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />

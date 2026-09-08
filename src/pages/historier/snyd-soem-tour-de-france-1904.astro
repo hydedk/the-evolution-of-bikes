@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <!doctype html>
 <html lang="da">
@@ -7,7 +7,7 @@ const base = import.meta.env.BASE_URL;
     <meta charset="UTF-8" /><meta name="viewport" content="width=device-width" />
     <meta name="description" content="Tour de France begyndte med nattekørsel, skjult hjælp, fanatiske tilskuere og en skandale i 1904, der næsten standsede løbet." />
     <meta property="og:type" content="article" /><meta property="og:title" content="Snyd, søm og Tour de France i kaos" />
-    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/periods/1900-1920/rytter-ved-maal.webp" />
+    <meta property="og:image" content="https://teob.dk/images/periods/1900-1920/rytter-ved-maal.webp" />
     <title>Snyd, søm og Tour de France i kaos · The Evolution of Bikes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} />

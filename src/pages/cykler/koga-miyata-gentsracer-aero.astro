@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const imageRoot = `${base}/images/bikes/koga-miyata-gentsracer-aero`;
 ---
 <!doctype html>
@@ -11,7 +11,7 @@ const imageRoot = `${base}/images/bikes/koga-miyata-gentsracer-aero`;
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Koga-Miyata Gentsracer-Aero · The Evolution of Bikes" />
     <meta property="og:description" content="En stålcykel bygget omkring Shimanos korte forsøg på at gøre næsten hver eneste komponent mere aerodynamisk." />
-    <meta property="og:image" content={`https://hydedk.github.io/the-evolution-of-bikes/images/bikes/koga-miyata-gentsracer-aero/hero-right-side.jpg`} />
+    <meta property="og:image" content={`https://teob.dk/images/bikes/koga-miyata-gentsracer-aero/hero-right-side.jpg`} />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Koga-Miyata Gentsracer-Aero · The Evolution of Bikes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />

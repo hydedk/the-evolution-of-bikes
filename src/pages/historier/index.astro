@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 import { stories } from '../../data/stories';
 ---
 <!doctype html><html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="Historier og anekdoter fra cykelsporten og samlingen The Evolution of Bikes." /><title>Historier og anekdoter · The Evolution of Bikes</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} /></head>

@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const images = `${base}/images/bikes/cycles-france-sport`;
 const facts = [
   ['Datering', 'ca. 1916–1920'],
@@ -21,7 +21,7 @@ const facts = [
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Cycles France-Sport omkring 1919" />
     <meta property="og:description" content="Cyklen, der ventede næsten 100 år i en lade nord for Toulouse." />
-    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/bikes/cycles-france-sport/hero.webp" />
+    <meta property="og:image" content="https://teob.dk/images/bikes/cycles-france-sport/hero.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Cycles France-Sport ca. 1919 · The Evolution of Bikes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />

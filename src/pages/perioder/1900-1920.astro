@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 import { storiesForPeriod } from '../../data/stories';
 const relatedStories = storiesForPeriod('1900-1920');
 const facts = [
@@ -21,7 +21,7 @@ const facts = [
     <meta property="og:type" content="article" />
     <meta property="og:title" content="1900 til 1920’erne · Pionerer og udholdenhed" />
     <meta property="og:description" content="Da Tour de France var en brutal prøve for både mennesker og maskiner." />
-    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/periods/1900-1920/rytter-velodrom.webp" />
+    <meta property="og:image" content="https://teob.dk/images/periods/1900-1920/rytter-velodrom.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>1900 til 1920’erne · The Evolution of Bikes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />

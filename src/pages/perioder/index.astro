@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 import { storiesForPeriod } from '../../data/stories';
 const articlesFor = (period) => storiesForPeriod(period).map((story) => ({ label: `Historie · ${story.year}`, title: story.title, text: story.text, href: `${base}/historier/${story.slug}/` }));
 const periods = [{

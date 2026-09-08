@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const destination = `${base}/historier/cykelsportens-vilde-vesten/`;
 ---
-<!doctype html><html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta http-equiv="refresh" content={`0;url=${destination}`} /><link rel="canonical" href="https://hydedk.github.io/the-evolution-of-bikes/historier/cykelsportens-vilde-vesten/" /><meta name="robots" content="noindex" /><title>Historien er flyttet</title><script is:inline define:vars={{ destination }}>window.location.replace(destination);</script></head><body><p>Historien er flyttet. <a href={destination}>Læs den på den nye adresse</a>.</p></body></html>
+<!doctype html><html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta http-equiv="refresh" content={`0;url=${destination}`} /><link rel="canonical" href="https://teob.dk/historier/cykelsportens-vilde-vesten/" /><meta name="robots" content="noindex" /><title>Historien er flyttet</title><script is:inline define:vars={{ destination }}>window.location.replace(destination);</script></head><body><p>Historien er flyttet. <a href={destination}>Læs den på den nye adresse</a>.</p></body></html>

@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const facts = [
   ['Introduceret', '1978'],
   ['Producent', 'Shimano'],
@@ -19,7 +19,7 @@ const facts = [
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Shimano 600 EX Arabesque · The Evolution of Bikes" />
     <meta property="og:description" content="Da Shimano gjorde mekanik til dekoration." />
-    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/components/shimano-600-ex-arabesque/group-illustration.webp" />
+    <meta property="og:image" content="https://teob.dk/images/components/shimano-600-ex-arabesque/group-illustration.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Shimano 600 EX Arabesque · The Evolution of Bikes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />

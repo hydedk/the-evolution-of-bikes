@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const images = `${base}/images/components/campagnolo-cambio-corsa`;
 const steps = [
   ['01', 'Løsn akslen', 'Det øverste håndtag frigør hurtigspændet omkring bagakslen.'],
@@ -13,7 +13,7 @@ const steps = [
   <head>
     <meta charset="UTF-8" /><meta name="viewport" content="width=device-width" />
     <meta name="description" content="Historien om Campagnolo Cambio Corsa, gearsystemet hvor rytteren løsnede baghjulet og skiftede gear i fart." />
-    <meta property="og:type" content="article" /><meta property="og:title" content="Campagnolo Cambio Corsa – gearskiftet, der krævede mod og balance" /><meta property="og:description" content="To lange håndtag, et løst baghjul og et gearskift udført i fart." /><meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/components/campagnolo-cambio-corsa/two-levers.webp" /><meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="article" /><meta property="og:title" content="Campagnolo Cambio Corsa – gearskiftet, der krævede mod og balance" /><meta property="og:description" content="To lange håndtag, et løst baghjul og et gearskift udført i fart." /><meta property="og:image" content="https://teob.dk/images/components/campagnolo-cambio-corsa/two-levers.webp" /><meta name="twitter:card" content="summary_large_image" />
     <title>Campagnolo Cambio Corsa · The Evolution of Bikes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} />
   </head>

@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const facts = [
   ['1940', 'Coppi vinder Giroen som 20-årig'],
   ['1946', 'Giro d’Italia vender tilbage'],
@@ -16,7 +16,7 @@ const facts = [
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Da krigen lukkede landevejen · 1940–1949" />
     <meta property="og:description" content="Et årti, hvor de store løb forsvandt og vendte tilbage til et forandret Europa." />
-    <meta property="og:image" content="https://hydedk.github.io/the-evolution-of-bikes/images/periods/1940-1949/efterkrigsfelt-illustration.jpg" />
+    <meta property="og:image" content="https://teob.dk/images/periods/1940-1949/efterkrigsfelt-illustration.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Da krigen lukkede landevejen · 1940–1949</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

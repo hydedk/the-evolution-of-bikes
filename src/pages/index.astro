@@ -1,5 +1,6 @@
 ---
 import { stories } from '../data/stories';
+import { bikes } from '../data/bikes';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const featuredStories = stories.map((story) => ({
@@ -11,6 +12,11 @@ const featuredStories = stories.map((story) => ({
   link: `${base}/historier/${story.slug}/`,
 }));
 const featuredFallback = featuredStories[0];
+const heroItems = [
+  ...featuredStories.map((item) => ({ ...item, type: 'historie', label: 'Tilfældig historie', action: 'Læs historien' })),
+  ...bikes.map((bike) => ({ slug: bike.slug, year: bike.year, title: bike.title, text: bike.text, image: `${base}/${bike.image}`, link: `${base}/cykler/${bike.slug}/`, type: 'cykel', label: 'Tilfældig cykel', action: 'Se cyklen' })),
+];
+const heroFallback = heroItems[0];
 const gateways = [
   { number: '01', label: 'Fortællingerne', title: 'Historier og anekdoter', text: 'Skæve øjeblikke, glemte ryttere og de historier, resultatlisten ikke fortæller.', image: `${base}/images/stories/aldo-bini/aldo-bini-archive.webp`, link: `${base}/historier/` },
   { number: '02', label: 'Cykelløb og kulturhistorie', title: 'Perioder', text: 'Gå på opdagelse årti for årti i løbene, menneskene, vejene og cykelkulturen.', image: `${base}/images/periods/1900-1920/wild-west/track-racing.webp`, link: `${base}/perioder/` },
@@ -61,17 +67,17 @@ const gateways = [
           <h1>Kom for cyklerne.<br /><em>Bliv for historierne.</em></h1>
           <p class="hero-copy">Et levende arkiv over cyklingens kultur – fra håndbyggede stålstel og dristig mekanik til rytterne, hjælperne og de øjeblikke, resultatlisten ikke viser.</p>
           <div class="home-hero-actions">
-            <a class="button" href={featuredFallback.link}>Læs den nyeste historie <span aria-hidden="true">→</span></a>
+            <a class="button" href={heroFallback.link} data-random-hero-button>{heroFallback.action} <span aria-hidden="true">→</span></a>
             <a class="home-hero-archive-link" href={`${base}/historier/`}>Se alle historier</a>
           </div>
         </div>
-        <a class="home-hero-feature" href={featuredFallback.link} aria-label={`Læs: ${featuredFallback.title}`}>
-          <img src={featuredFallback.image} alt="" />
+        <a class="home-hero-feature" href={heroFallback.link} aria-label={`${heroFallback.action}: ${heroFallback.title}`} data-random-hero-card>
+          <img src={heroFallback.image} alt="" data-random-hero-image />
           <span class="home-hero-feature-shade" aria-hidden="true"></span>
           <span class="home-hero-feature-copy">
-            <small>Nyeste historie · {featuredFallback.year}</small>
-            <strong>{featuredFallback.title}</strong>
-            <i>Læs historien <span aria-hidden="true">→</span></i>
+            <small data-random-hero-label>{heroFallback.label} · {heroFallback.year}</small>
+            <strong data-random-hero-title>{heroFallback.title}</strong>
+            <i data-random-hero-action>{heroFallback.action} <span aria-hidden="true">→</span></i>
           </span>
         </a>
       </section>
@@ -147,6 +153,22 @@ const gateways = [
         <iframe class="newsletter-response" name="newsletter-response" title="Svar fra nyhedsbrevstilmelding" hidden></iframe>
       </section>
 
+      <script define:vars={{ heroItems }}>
+        const heroCard = document.querySelector('[data-random-hero-card]');
+        const heroButton = document.querySelector('[data-random-hero-button]');
+        if (heroCard && heroButton && heroItems.length > 1) {
+          const item = heroItems[Math.floor(Math.random() * heroItems.length)];
+          heroCard.href = item.link;
+          heroCard.setAttribute('aria-label', `${item.action}: ${item.title}`);
+          heroButton.href = item.link;
+          heroButton.firstChild.textContent = `${item.action} `;
+          heroCard.querySelector('[data-random-hero-image]').src = item.image;
+          heroCard.querySelector('[data-random-hero-label]').textContent = `${item.label} · ${item.year}`;
+          heroCard.querySelector('[data-random-hero-title]').textContent = item.title;
+          heroCard.querySelector('[data-random-hero-action]').firstChild.textContent = `${item.action} `;
+        }
+      </script>
+
       <script>
         const newsletterForm = document.querySelector('.newsletter-form');
         const newsletterFrame = document.querySelector('.newsletter-response');
@@ -172,7 +194,6 @@ const gateways = [
       <section class="story">
         <p class="section-label">Fra arkivet</p>
         <blockquote>“Det interessante er ikke kun, hvor gammel en cykel er — men hvilke veje den har kørt, og hvem der har passet på den.”</blockquote>
-        <a href="https://velovintagehyde.blogspot.com/">Besøg det tidligere arkiv på Velo Vintage Hyde <span aria-hidden="true">→</span></a>
       </section>
     </main>
 

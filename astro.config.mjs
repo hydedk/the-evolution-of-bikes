@@ -4,6 +4,11 @@ import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const siteUrl = 'https://teob.dk';
+const languagePairs = {
+  '/': '/en/', '/om/': '/en/about/', '/historier/': '/en/stories/',
+  '/perioder/': '/en/periods/', '/cykler/': '/en/bikes/', '/komponenter/': '/en/components/',
+};
+const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {
   '/historier/alfredo-binda-giro-1930/': 'Giroen betalte Binda for at blive hjemme · The Evolution of Bikes',
   '/historier/anquetil-poulidor-puy-de-dome-1964/': 'Anquetil og Poulidor på Puy de Dôme · The Evolution of Bikes',
@@ -55,7 +60,10 @@ const socialMetadata = {
         const relativePath = relative(outputDir, file).split(sep).join('/');
         const pagePath = relativePath === 'index.html' ? '/' : `/${relativePath.replace(/index\.html$/, '')}`;
         const canonical = new URL(pagePath, `${siteUrl}/`).href;
-        const type = pagePath === '/' || /\/(historier|perioder|cykler|komponenter)\/$/.test(pagePath) ? 'website' : 'article';
+        const isEnglish = pagePath.startsWith('/en/');
+        const language = isEnglish ? 'en-GB' : 'da-DK';
+        const locale = isEnglish ? 'en_GB' : 'da_DK';
+        const type = pairedPages[pagePath] ? 'website' : 'article';
         const escape = (value) => value.replace(/&(?!(?:amp|quot|#39|lt|gt);)/g, '&amp;').replace(/"/g, '&quot;');
         const pageTitle = seoTitleOverrides[pagePath] || title;
         const description = seoDescriptionOverrides[pagePath] || sourceDescription;
@@ -69,7 +77,12 @@ const socialMetadata = {
 
         const tags = [
           `<link rel="canonical" href="${canonical}">`,
-          `<meta property="og:locale" content="da_DK">`,
+          ...(pairedPages[pagePath] ? [
+            `<link rel="alternate" hreflang="da" href="${new URL(pairedPages[pagePath].da, `${siteUrl}/`).href}">`,
+            `<link rel="alternate" hreflang="en" href="${new URL(pairedPages[pagePath].en, `${siteUrl}/`).href}">`,
+            `<link rel="alternate" hreflang="x-default" href="${new URL(pairedPages[pagePath].da, `${siteUrl}/`).href}">`,
+          ] : []),
+          `<meta property="og:locale" content="${locale}">`,
           `<meta property="og:type" content="${type}">`,
           `<meta property="og:site_name" content="The Evolution of Bikes">`,
           `<meta property="og:title" content="${escape(pageTitle)}">`,
@@ -83,11 +96,11 @@ const socialMetadata = {
           `<meta name="twitter:image" content="${image}">`,
         ].join('');
 
-        const schema = pagePath === '/'
-          ? { '@context': 'https://schema.org', '@type': 'WebSite', name: 'The Evolution of Bikes', url: canonical, description, inLanguage: 'da-DK' }
+        const schema = pagePath === '/' || pagePath === '/en/'
+          ? { '@context': 'https://schema.org', '@type': 'WebSite', name: 'The Evolution of Bikes', url: canonical, description, inLanguage: language }
           : type === 'article'
-            ? { '@context': 'https://schema.org', '@type': 'Article', headline: schemaTitle, description, image, url: canonical, mainEntityOfPage: canonical, inLanguage: 'da-DK', author: { '@type': 'Person', name: 'Henning Renita Yde' }, publisher: { '@type': 'Organization', name: 'The Evolution of Bikes', url: siteUrl } }
-            : { '@context': 'https://schema.org', '@type': 'CollectionPage', name: schemaTitle, description, url: canonical, image, inLanguage: 'da-DK', isPartOf: { '@type': 'WebSite', name: 'The Evolution of Bikes', url: siteUrl } };
+            ? { '@context': 'https://schema.org', '@type': 'Article', headline: schemaTitle, description, image, url: canonical, mainEntityOfPage: canonical, inLanguage: language, author: { '@type': 'Person', name: 'Henning Renita Yde' }, publisher: { '@type': 'Organization', name: 'The Evolution of Bikes', url: siteUrl } }
+            : { '@context': 'https://schema.org', '@type': 'CollectionPage', name: schemaTitle, description, url: canonical, image, inLanguage: language, isPartOf: { '@type': 'WebSite', name: 'The Evolution of Bikes', url: siteUrl } };
         const structuredData = `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>`;
 
         html = html.replace(/<title>.*?<\/title>/is, `${tags}${structuredData}<title>${pageTitle}</title>`);

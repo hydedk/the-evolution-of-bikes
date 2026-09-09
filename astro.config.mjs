@@ -5,6 +5,10 @@ import { fileURLToPath } from 'node:url';
 
 const siteUrl = 'https://teob.dk';
 const languagePairs = {
+  '/fortael-din-historie/': '/en/share-your-story/',
+  '/privatliv/': '/en/privacy/',
+  '/perioder/1900-1920/cykelsportens-vilde-vesten-1/': '/en/periods/1900-1920/cycling-wild-west-1/',
+  '/perioder/1900-1920/cykelsportens-vilde-vesten-2/': '/en/periods/1900-1920/cycling-wild-west-2/',
   '/cykler/bernardi-ca-1980/': '/en/bikes/bernardi-ca-1980/',
   '/cykler/faggin-1986/': '/en/bikes/faggin-1986/',
   '/cykler/scapin-k6/': '/en/bikes/scapin-k6/',

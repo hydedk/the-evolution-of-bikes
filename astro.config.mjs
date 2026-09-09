@@ -12,6 +12,7 @@ const languagePairs = {
   '/historier/alfonsina-strada-giro-1924/': '/en/stories/alfonsina-strada-giro-1924/',
   '/historier/campagnolo-quick-release/': '/en/stories/campagnolo-quick-release/',
   '/historier/alfredo-binda-giro-1930/': '/en/stories/alfredo-binda-giro-1930/',
+  '/historier/da-gearene-kom-og-oel-narrede-feltet/': '/en/stories/da-gearene-kom-og-oel-narrede-feltet/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

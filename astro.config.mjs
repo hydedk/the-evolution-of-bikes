@@ -9,6 +9,8 @@ const languagePairs = {
   '/cykler/faggin-1986/': '/en/bikes/faggin-1986/',
   '/cykler/scapin-k6/': '/en/bikes/scapin-k6/',
   '/cykler/gios-super-record/': '/en/bikes/gios-super-record/',
+  '/cykler/asmussen-super-prestige/': '/en/bikes/asmussen-super-prestige/',
+  '/cykler/colnago-super-thron/': '/en/bikes/colnago-super-thron/',
   '/': '/en/', '/om/': '/en/about/', '/historier/': '/en/stories/',
   '/perioder/': '/en/periods/', '/cykler/': '/en/bikes/', '/komponenter/': '/en/components/',
   '/historier/cykelsportens-vilde-vesten/': '/en/stories/cykelsportens-vilde-vesten/',

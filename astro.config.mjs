@@ -25,6 +25,8 @@ const languagePairs = {
   '/historier/tom-simpson-mont-ventoux-1967/': '/en/stories/tom-simpson-mont-ventoux-1967/',
   '/historier/suntour-shimano-gearkrigen/': '/en/stories/suntour-shimano-gearkrigen/',
   '/historier/gunnar-asmussen-funny-bike/': '/en/stories/gunnar-asmussen-funny-bike/',
+  '/historier/skibby-koppenberg-1987/': '/en/stories/skibby-koppenberg-1987/',
+  '/historier/leroica-gamle-cykler-nye-veje/': '/en/stories/leroica-gamle-cykler-nye-veje/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

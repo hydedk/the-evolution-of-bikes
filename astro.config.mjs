@@ -22,6 +22,7 @@ const languagePairs = {
   '/historier/den-hvide-oedemark-og-hoensefarmerens-toerst/': '/en/stories/den-hvide-oedemark-og-hoensefarmerens-toerst/',
   '/historier/anquetil-poulidor-puy-de-dome-1964/': '/en/stories/anquetil-poulidor-puy-de-dome-1964/',
   '/historier/tour-feltets-dopingprotest-1966/': '/en/stories/tour-feltets-dopingprotest-1966/',
+  '/historier/tom-simpson-mont-ventoux-1967/': '/en/stories/tom-simpson-mont-ventoux-1967/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

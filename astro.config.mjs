@@ -14,6 +14,7 @@ const languagePairs = {
   '/historier/alfredo-binda-giro-1930/': '/en/stories/alfredo-binda-giro-1930/',
   '/historier/da-gearene-kom-og-oel-narrede-feltet/': '/en/stories/da-gearene-kom-og-oel-narrede-feltet/',
   '/historier/soevnloeshed-smoer-og-kolde-oel/': '/en/stories/soevnloeshed-smoer-og-kolde-oel/',
+  '/historier/aldo-bini-maglia-nera-1948/': '/en/stories/aldo-bini-maglia-nera-1948/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

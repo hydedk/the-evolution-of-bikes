@@ -20,6 +20,7 @@ const languagePairs = {
   '/historier/coppi-stelvio-1953/': '/en/stories/coppi-stelvio-1953/',
   '/historier/ivo-faltoni-mekaniker-giro-1954/': '/en/stories/ivo-faltoni-mekaniker-giro-1954/',
   '/historier/den-hvide-oedemark-og-hoensefarmerens-toerst/': '/en/stories/den-hvide-oedemark-og-hoensefarmerens-toerst/',
+  '/historier/anquetil-poulidor-puy-de-dome-1964/': '/en/stories/anquetil-poulidor-puy-de-dome-1964/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

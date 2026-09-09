@@ -13,6 +13,8 @@ const languagePairs = {
   '/cykler/colnago-super-thron/': '/en/bikes/colnago-super-thron/',
   '/cykler/giame/': '/en/bikes/giame/',
   '/cykler/stella-veneta/': '/en/bikes/stella-veneta/',
+  '/cykler/koga-miyata-gentsracer-aero/': '/en/bikes/koga-miyata-gentsracer-aero/',
+  '/cykler/atala-sanremo/': '/en/bikes/atala-sanremo/',
   '/': '/en/', '/om/': '/en/about/', '/historier/': '/en/stories/',
   '/perioder/': '/en/periods/', '/cykler/': '/en/bikes/', '/komponenter/': '/en/components/',
   '/historier/cykelsportens-vilde-vesten/': '/en/stories/cykelsportens-vilde-vesten/',

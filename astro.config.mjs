@@ -27,6 +27,8 @@ const languagePairs = {
   '/historier/gunnar-asmussen-funny-bike/': '/en/stories/gunnar-asmussen-funny-bike/',
   '/historier/skibby-koppenberg-1987/': '/en/stories/skibby-koppenberg-1987/',
   '/historier/leroica-gamle-cykler-nye-veje/': '/en/stories/leroica-gamle-cykler-nye-veje/',
+  '/historier/festina-sagen-tour-de-france-1998/': '/en/stories/festina-sagen-tour-de-france-1998/',
+  '/historier/da-regntoejet-kom-med-op-i-solen/': '/en/stories/da-regntoejet-kom-med-op-i-solen/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

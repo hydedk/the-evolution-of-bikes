@@ -31,6 +31,8 @@ const languagePairs = {
   '/historier/da-regntoejet-kom-med-op-i-solen/': '/en/stories/da-regntoejet-kom-med-op-i-solen/',
   '/perioder/1900-1920/': '/en/periods/1900-1920/',
   '/perioder/1920-1930/': '/en/periods/1920-1930/',
+  '/perioder/1930-1939/': '/en/periods/1930-1939/',
+  '/perioder/1940-1949/': '/en/periods/1940-1949/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

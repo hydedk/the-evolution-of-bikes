@@ -9,6 +9,7 @@ const languagePairs = {
   '/perioder/': '/en/periods/', '/cykler/': '/en/bikes/', '/komponenter/': '/en/components/',
   '/historier/cykelsportens-vilde-vesten/': '/en/stories/cykelsportens-vilde-vesten/',
   '/historier/snyd-soem-tour-de-france-1904/': '/en/stories/snyd-soem-tour-de-france-1904/',
+  '/historier/alfonsina-strada-giro-1924/': '/en/stories/alfonsina-strada-giro-1924/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

@@ -19,6 +19,7 @@ const languagePairs = {
   '/historier/wim-van-est-aubisque-1951/': '/en/stories/wim-van-est-aubisque-1951/',
   '/historier/coppi-stelvio-1953/': '/en/stories/coppi-stelvio-1953/',
   '/historier/ivo-faltoni-mekaniker-giro-1954/': '/en/stories/ivo-faltoni-mekaniker-giro-1954/',
+  '/historier/den-hvide-oedemark-og-hoensefarmerens-toerst/': '/en/stories/den-hvide-oedemark-og-hoensefarmerens-toerst/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

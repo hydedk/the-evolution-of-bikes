@@ -15,6 +15,8 @@ const languagePairs = {
   '/cykler/stella-veneta/': '/en/bikes/stella-veneta/',
   '/cykler/koga-miyata-gentsracer-aero/': '/en/bikes/koga-miyata-gentsracer-aero/',
   '/cykler/atala-sanremo/': '/en/bikes/atala-sanremo/',
+  '/cykler/cycles-france-sport/': '/en/bikes/cycles-france-sport/',
+  '/cykler/wonder-saint-etienne/': '/en/bikes/wonder-saint-etienne/',
   '/': '/en/', '/om/': '/en/about/', '/historier/': '/en/stories/',
   '/perioder/': '/en/periods/', '/cykler/': '/en/bikes/', '/komponenter/': '/en/components/',
   '/historier/cykelsportens-vilde-vesten/': '/en/stories/cykelsportens-vilde-vesten/',

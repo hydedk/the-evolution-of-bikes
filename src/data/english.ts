@@ -43,6 +43,7 @@ const bikeCopy: Record<string, [string, string?, string?]> = {
 
 const englishYear = (year: string) => year
   .replace('1890’erne–1930’erne', '1890s–1930s')
+  .replace('1950’erne', '1950s')
   .replace('1983-model', '1983 model')
   .replace('Begyndelsen af', 'Early')
   .replace('ca.', 'c.');

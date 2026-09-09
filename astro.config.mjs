@@ -11,6 +11,8 @@ const languagePairs = {
   '/cykler/gios-super-record/': '/en/bikes/gios-super-record/',
   '/cykler/asmussen-super-prestige/': '/en/bikes/asmussen-super-prestige/',
   '/cykler/colnago-super-thron/': '/en/bikes/colnago-super-thron/',
+  '/cykler/giame/': '/en/bikes/giame/',
+  '/cykler/stella-veneta/': '/en/bikes/stella-veneta/',
   '/': '/en/', '/om/': '/en/about/', '/historier/': '/en/stories/',
   '/perioder/': '/en/periods/', '/cykler/': '/en/bikes/', '/komponenter/': '/en/components/',
   '/historier/cykelsportens-vilde-vesten/': '/en/stories/cykelsportens-vilde-vesten/',

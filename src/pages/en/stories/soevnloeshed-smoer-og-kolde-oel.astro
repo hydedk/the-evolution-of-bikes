@@ -1,0 +1,91 @@
+---
+import EnglishHeader from '../../../components/EnglishHeader.astro';
+import EnglishFooter from '../../../components/EnglishFooter.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const facts = [
+  ['24 hours', 'Garin rode 701 km'],
+  ['45', 'chops in the famous menu'],
+  ['1935', 'Moineau won in Bordeaux'],
+  ['No rulebook', 'experience became nutrition theory'],
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Chops, hot cocoa, cigarettes and cold beer: food, superstition and imitation in the early decades of cycle racing." />
+    <meta property="og:image" content="https://teob.dk/images/stories/kost-overtro/kost-overtro-illustration.jpg" />
+    <title>Insomnia, butter and cold beer · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body>
+    <EnglishHeader current="stories" danishPath="/historier/soevnloeshed-smoer-og-kolde-oel/" />
+    <main><article class="beer-story-page">
+      <header class="beer-story-hero">
+        <p class="section-label">Food, superstition and long days of racing · 1890s–1930s</p>
+        <h1>Insomnia, butter<br />and <em>cold beer</em></h1>
+        <p>Before riders had nutrition plans, one man’s victory could turn his dinner into a new law for the entire peloton.</p>
+      </header>
+
+      <figure class="beer-story-image">
+        <img src={`${base}/images/stories/kost-overtro/kost-overtro-illustration.jpg`} alt="Illustration of three early road racers with a chop, beer, bread and eggs at an improvised feeding stop" />
+        <figcaption>AI-generated illustration of early feeding in road racing. It does not depict a particular race or named riders.</figcaption>
+      </figure>
+
+      <section class="beer-story-opening">
+        <p class="section-label">Before grams and energy gels</p>
+        <p>Food was not a calculation. It was provisions, habit and comfort — and sometimes an explanation invented after somebody had won.</p>
+      </section>
+
+      <section class="beer-story-copy">
+        <aside><strong>701 km</strong><span>Maurice Garin<br />in 24 hours</span></aside>
+        <div>
+          <p>Early road and track riders could race through an entire day and night. They did not eat small, carefully calculated portions, but whatever could be found, carried and kept down. Bread, rice, eggs, meat, soup, coffee, tea, wine and beer appear repeatedly in accounts from the period.</p>
+          <p>It is tempting to describe them as complete amateurs in matters of nutrition. Riders naturally knew that hunger and thirst could ruin a race. What they lacked was a shared language for carbohydrates, hydration and recovery. Experience was personal, and experience could easily slide into superstition.</p>
+
+          <h2>Garin and the 45 chops</h2>
+          <p>The most famous menu is associated with Maurice Garin, who later won the first Tour de France. During a 24-hour race in Paris in the 1890s, he covered 701 kilometres. A later account of his provisions lists, among other things, 45 chops, 19 litres of hot cocoa, seven litres of tea, eight eggs, tapioca, rice pudding, oysters and coffee mixed with champagne.</p>
+          <p>The quantities are so extravagant that they should be read as a historical account, not a modern food log kept with scales and a stopwatch. Yet they reveal something important: meat was associated with strength, hot drinks with endurance, and sheer quantity was itself proof of a rider’s stature.</p>
+          <blockquote>If a man could ride for a day on chops and cocoa, it was natural to think the secret lay on the plate.</blockquote>
+
+          <h2>If the winner ate it, it worked</h2>
+          <p>A “mimetic diet” was not an official term in the peloton. It is a useful name for a familiar mechanism: riders and helpers copied whatever appeared to work for a strong man. Steak for breakfast, raw eggs, buttered bread or wine in a bottle could acquire the status of a recipe long before anyone had examined why.</p>
+          <p>This produced a food culture in which the latest winner was often more convincing than the doctor. At the same time, the long stages demanded so much that almost any high-calorie food could be genuinely useful. Superstition and practical need overlapped.</p>
+        </div>
+      </section>
+
+      <section class="beer-story-turn"><p class="section-label">Lungs, courage and nicotine</p><blockquote>A cigarette could be a habit.<br />Later it became a story about <em>“opening the lungs”.</em></blockquote></section>
+
+      <section class="beer-story-copy beer-chapter-two">
+        <aside><strong>?</strong><span>Habit or<br />miracle cure</span></aside>
+        <div>
+          <p>Photographs and accounts show cyclists with cigarettes, and smoking was an ordinary part of daily life in this period. The popular explanation that riders smoked before the mountains to expand their lungs is often repeated. It is much harder, however, to connect that precise belief to named riders and contemporary statements.</p>
+          <p>The story should therefore be treated as folklore with a plausible basis in the smoking habits of the time, not as evidence that the whole peloton followed a common medical theory. A cigarette might just as easily have been for nerves, a social pause or simple addiction.</p>
+
+          <h2>Water was not always just water</h2>
+          <p>Riders could buy or receive food and drink along the route. Beer and wine supplied calories, flavour and a familiar product when the quality of local water was uncertain. Alcohol could also feel encouraging or dull pain. That does not mean every rider raced drunk, but a bottle from an inn was no strange sight.</p>
+          <p>The best beer story comes from the 1935 Tour de France. On the 224-kilometre stage from Pau to Bordeaux, Julien Moineau attacked. Near Le Barp, people stood ready with cold beer, and several rivals allowed themselves to be delayed while Moineau continued and won in Bordeaux.</p>
+          <p>Later versions turn the drinks table into a planned lure set up by Moineau’s friends. Moineau himself denied an actual plot. The victory and the enormous lead are certain; the cunning beer plan is the part that makes the story better — and less certain.</p>
+        </div>
+      </section>
+
+      <section class="beer-facts">{facts.map(([number, label]) => <div><strong>{number}</strong><span>{label}</span></div>)}</section>
+
+      <section class="beer-finish">
+        <p class="section-label">From experience to science</p>
+        <div><p>There was no single early cycling diet. A six-day track race, a Tour stage through the mountains and a one-day classic made different demands, while riders came from different countries and culinary traditions. What they shared was that explanations often came afterwards: the winner had done something right, so his food must have been right as well.</p><p>That is the peculiar part of the story. Chops, butter, cigarettes and beer were both everyday goods and small talismans. Some provided energy. Some dulled discomfort. Others were mostly useful as stories over breakfast the next morning.</p></div>
+      </section>
+
+      <section class="beer-story-closing"><blockquote>The peloton’s diet plan was not written by a nutritionist.<br />It was often written by <em>yesterday’s winner.</em></blockquote></section>
+
+      <section class="story-sources diet-story-sources"><p class="section-label">Sources and qualifications</p><ul><li>Maurice Garin’s 24-hour race and the famous menu appear in several historical surveys; the exact quantities are treated here as a later account.</li><li>L’Équipe results archive: 1935 Tour de France, stage 17, Pau–Bordeaux.</li><li>The story of Julien Moineau’s beer table comes from later journalistic accounts. The stage and his lead are documented; a prearranged plot has not been conclusively proved.</li><li>The claim that riders smoked to “open the lungs” is presented as widespread cycling folklore, not as a documented practice throughout the peloton.</li></ul></section>
+
+      <nav class="era-bottom-nav" aria-label="Further navigation"><a href={`${base}/en/stories/`}>← All stories</a><a href={`${base}/en/stories/da-gearene-kom-og-oel-narrede-feltet/`}>The full story of Moineau’s beer →</a></nav>
+    </article></main>
+    <EnglishFooter />
+  </body>
+</html>

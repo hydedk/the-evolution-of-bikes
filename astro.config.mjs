@@ -13,6 +13,7 @@ const languagePairs = {
   '/historier/campagnolo-quick-release/': '/en/stories/campagnolo-quick-release/',
   '/historier/alfredo-binda-giro-1930/': '/en/stories/alfredo-binda-giro-1930/',
   '/historier/da-gearene-kom-og-oel-narrede-feltet/': '/en/stories/da-gearene-kom-og-oel-narrede-feltet/',
+  '/historier/soevnloeshed-smoer-og-kolde-oel/': '/en/stories/soevnloeshed-smoer-og-kolde-oel/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

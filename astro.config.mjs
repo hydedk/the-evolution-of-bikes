@@ -17,6 +17,7 @@ const languagePairs = {
   '/historier/aldo-bini-maglia-nera-1948/': '/en/stories/aldo-bini-maglia-nera-1948/',
   '/historier/da-michelin-navnet-blev-et-problem/': '/en/stories/da-michelin-navnet-blev-et-problem/',
   '/historier/wim-van-est-aubisque-1951/': '/en/stories/wim-van-est-aubisque-1951/',
+  '/historier/coppi-stelvio-1953/': '/en/stories/coppi-stelvio-1953/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

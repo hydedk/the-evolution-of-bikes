@@ -29,6 +29,8 @@ const languagePairs = {
   '/historier/leroica-gamle-cykler-nye-veje/': '/en/stories/leroica-gamle-cykler-nye-veje/',
   '/historier/festina-sagen-tour-de-france-1998/': '/en/stories/festina-sagen-tour-de-france-1998/',
   '/historier/da-regntoejet-kom-med-op-i-solen/': '/en/stories/da-regntoejet-kom-med-op-i-solen/',
+  '/perioder/1900-1920/': '/en/periods/1900-1920/',
+  '/perioder/1920-1930/': '/en/periods/1920-1930/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

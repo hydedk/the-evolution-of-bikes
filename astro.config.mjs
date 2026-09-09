@@ -10,6 +10,7 @@ const languagePairs = {
   '/historier/cykelsportens-vilde-vesten/': '/en/stories/cykelsportens-vilde-vesten/',
   '/historier/snyd-soem-tour-de-france-1904/': '/en/stories/snyd-soem-tour-de-france-1904/',
   '/historier/alfonsina-strada-giro-1924/': '/en/stories/alfonsina-strada-giro-1924/',
+  '/historier/campagnolo-quick-release/': '/en/stories/campagnolo-quick-release/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

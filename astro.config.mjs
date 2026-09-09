@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 
 const siteUrl = 'https://teob.dk';
 const languagePairs = {
+  '/cykler/bernardi-ca-1980/': '/en/bikes/bernardi-ca-1980/',
+  '/cykler/faggin-1986/': '/en/bikes/faggin-1986/',
   '/': '/en/', '/om/': '/en/about/', '/historier/': '/en/stories/',
   '/perioder/': '/en/periods/', '/cykler/': '/en/bikes/', '/komponenter/': '/en/components/',
   '/historier/cykelsportens-vilde-vesten/': '/en/stories/cykelsportens-vilde-vesten/',

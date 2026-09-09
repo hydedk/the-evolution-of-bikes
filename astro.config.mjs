@@ -35,6 +35,8 @@ const languagePairs = {
   '/perioder/1940-1949/': '/en/periods/1940-1949/',
   '/perioder/1950-1959/': '/en/periods/1950-1959/',
   '/perioder/1960-1969/': '/en/periods/1960-1969/',
+  '/perioder/1970-1979/': '/en/periods/1970-1979/',
+  '/perioder/1980-1989/': '/en/periods/1980-1989/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

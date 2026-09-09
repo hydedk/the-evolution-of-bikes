@@ -18,6 +18,7 @@ const languagePairs = {
   '/historier/da-michelin-navnet-blev-et-problem/': '/en/stories/da-michelin-navnet-blev-et-problem/',
   '/historier/wim-van-est-aubisque-1951/': '/en/stories/wim-van-est-aubisque-1951/',
   '/historier/coppi-stelvio-1953/': '/en/stories/coppi-stelvio-1953/',
+  '/historier/ivo-faltoni-mekaniker-giro-1954/': '/en/stories/ivo-faltoni-mekaniker-giro-1954/',
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {

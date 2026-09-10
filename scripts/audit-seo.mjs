@@ -20,6 +20,12 @@ await collect(root);
 const pages = await Promise.all(files.map(async (file) => {
   const html = await readFile(file, 'utf8');
   const path = `/${relative(root, file).split(sep).join('/').replace(/index\.html$/, '')}`.replace('//', '/');
+  const images = [...html.matchAll(/<img\b[^>]*>/gis)].map(([tag]) => ({
+    tag,
+    src: tag.match(/\bsrc=["'](.*?)["']/is)?.[1] || '',
+    hasAlt: /\balt=["']/i.test(tag),
+    alt: unescapeHtml(tag.match(/\balt=["'](.*?)["']/is)?.[1]?.trim() || ''),
+  }));
   return {
     path,
     redirect: /http-equiv=["']refresh["']/i.test(html) || /name=["']robots["'][^>]*noindex/i.test(html),
@@ -27,6 +33,7 @@ const pages = await Promise.all(files.map(async (file) => {
     description: unescapeHtml(text(html, /<meta\s+name=["']description["'][^>]*content=["'](.*?)["'][^>]*>/is)),
     h1: (html.match(/<h1(?:\s|>)/gi) || []).length,
     canonical: text(html, /<link\s+rel=["']canonical["'][^>]*href=["'](.*?)["'][^>]*>/is),
+    images,
   };
 }));
 
@@ -38,6 +45,15 @@ for (const page of publicPages) {
   if (!page.description) errors.push(`${page.path}: mangler meta description`);
   if (page.h1 !== 1) errors.push(`${page.path}: har ${page.h1} H1-overskrifter`);
   if (!page.canonical) errors.push(`${page.path}: mangler canonical URL`);
+  for (const image of page.images) {
+    const label = image.src || 'billede uden src';
+    if (!image.hasAlt) errors.push(`${page.path}: ${label} mangler alt-attribut`);
+    else if (/^(?:image|photo|picture|billede|foto)(?:\s+af)?$/i.test(image.alt)) {
+      errors.push(`${page.path}: ${label} har generisk alt-tekst: ${image.alt}`);
+    } else if (/^(?:img[_-]?\d+|dsc[_-]?\d+|[\w-]+\.(?:jpe?g|png|webp|gif|svg))$/i.test(image.alt)) {
+      errors.push(`${page.path}: ${label} bruger et filnavn som alt-tekst: ${image.alt}`);
+    }
+  }
 }
 
 for (const field of ['title', 'description']) {
@@ -55,5 +71,6 @@ if (errors.length) {
   console.error(`SEO-kontrollen fandt ${errors.length} fejl:\n- ${errors.join('\n- ')}`);
   process.exitCode = 1;
 } else {
-  console.log(`SEO-kontrol bestået: ${publicPages.length} offentlige sider har unik titel og beskrivelse, canonical URL og præcis én H1.`);
+  const imageCount = publicPages.reduce((total, page) => total + page.images.length, 0);
+  console.log(`SEO- og billedkontrol bestået: ${publicPages.length} offentlige sider og ${imageCount} billeder har gyldige metadata.`);
 }

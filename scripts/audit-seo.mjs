@@ -26,6 +26,9 @@ const pages = await Promise.all(files.map(async (file) => {
     hasAlt: /\balt=["']/i.test(tag),
     alt: unescapeHtml(tag.match(/\balt=["'](.*?)["']/is)?.[1]?.trim() || ''),
   }));
+  const jsonLdSource = html.match(/<script\s+type=["']application\/ld\+json["'][^>]*>(.*?)<\/script>/is)?.[1];
+  let jsonLd = null;
+  try { jsonLd = jsonLdSource ? JSON.parse(jsonLdSource) : null; } catch { /* Reported below. */ }
   return {
     path,
     redirect: /http-equiv=["']refresh["']/i.test(html) || /name=["']robots["'][^>]*noindex/i.test(html),
@@ -34,6 +37,7 @@ const pages = await Promise.all(files.map(async (file) => {
     h1: (html.match(/<h1(?:\s|>)/gi) || []).length,
     canonical: text(html, /<link\s+rel=["']canonical["'][^>]*href=["'](.*?)["'][^>]*>/is),
     images,
+    jsonLd,
   };
 }));
 
@@ -45,6 +49,23 @@ for (const page of publicPages) {
   if (!page.description) errors.push(`${page.path}: mangler meta description`);
   if (page.h1 !== 1) errors.push(`${page.path}: har ${page.h1} H1-overskrifter`);
   if (!page.canonical) errors.push(`${page.path}: mangler canonical URL`);
+  if (!page.jsonLd) errors.push(`${page.path}: mangler gyldig JSON-LD`);
+  else {
+    const graph = page.jsonLd['@graph'] || [page.jsonLd];
+    const types = graph.flatMap((node) => Array.isArray(node['@type']) ? node['@type'] : [node['@type']]).filter(Boolean);
+    const expectedType = page.path === '/' || page.path === '/en/' ? 'WebSite'
+      : /^\/(?:en\/bikes|cykler)\/[^/]+\/$/.test(page.path) ? 'ItemPage'
+      : /^\/(?:en\/components|komponenter)\/[^/]+\/$/.test(page.path) ? 'TechArticle'
+      : /^\/(?:en\/(?:stories|periods)|historier|perioder)\/[^/]+\/$/.test(page.path) ? 'Article'
+      : ['/historier/', '/perioder/', '/cykler/', '/komponenter/', '/en/stories/', '/en/periods/', '/en/bikes/', '/en/components/'].includes(page.path) ? 'CollectionPage'
+      : 'WebPage';
+    if (!types.includes(expectedType)) errors.push(`${page.path}: forventede Schema.org-typen ${expectedType}, fandt ${types.join(', ')}`);
+    if (/^\/(?:en\/bikes|cykler)\/[^/]+\/$/.test(page.path)) {
+      const itemPage = graph.find((node) => node['@type'] === 'ItemPage');
+      if (itemPage?.mainEntity?.['@type'] !== 'IndividualProduct') errors.push(`${page.path}: mangler IndividualProduct som hovedgenstand`);
+    }
+    if (page.path !== '/' && page.path !== '/en/' && !types.includes('BreadcrumbList')) errors.push(`${page.path}: mangler BreadcrumbList`);
+  }
   for (const image of page.images) {
     const label = image.src || 'billede uden src';
     if (!image.hasAlt) errors.push(`${page.path}: ${label} mangler alt-attribut`);

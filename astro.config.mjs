@@ -130,11 +130,18 @@ const socialMetadata = {
         const isEnglish = pagePath.startsWith('/en/');
         const language = isEnglish ? 'en-GB' : 'da-DK';
         const locale = isEnglish ? 'en_GB' : 'da_DK';
-        const type = pairedPages[pagePath] ? 'website' : 'article';
         const escape = (value) => value.replace(/&(?!(?:amp|quot|#39|lt|gt);)/g, '&amp;').replace(/"/g, '&quot;');
         const pageTitle = seoTitleOverrides[pagePath] || title;
         const description = seoDescriptionOverrides[pagePath] || sourceDescription;
-        const schemaTitle = pageTitle.replace(/\s+·\s+The Evolution of Bikes$/, '');
+        const schemaTitle = pageTitle.replace(/\s+(?:·|–|\|)\s+The Evolution of Bikes$/, '');
+        const isHome = pagePath === '/' || pagePath === '/en/';
+        const isBike = /^\/(?:en\/bikes|cykler)\/[^/]+\/$/.test(pagePath);
+        const isStory = /^\/(?:en\/stories|historier)\/[^/]+\/$/.test(pagePath);
+        const isPeriod = /^\/(?:en\/periods|perioder)\/[^/]+\/$/.test(pagePath);
+        const isComponent = /^\/(?:en\/components|komponenter)\/[^/]+\/$/.test(pagePath);
+        const collectionPaths = new Set(['/historier/', '/perioder/', '/cykler/', '/komponenter/', '/en/stories/', '/en/periods/', '/en/bikes/', '/en/components/']);
+        const isArticle = isStory || isPeriod || isComponent;
+        const ogType = isArticle ? 'article' : 'website';
 
         html = html
           .replace(/<meta\s+name=["']description["'][^>]*>/i, `<meta name="description" content="${escape(description)}">`)
@@ -152,7 +159,7 @@ const socialMetadata = {
             `<link rel="alternate" hreflang="x-default" href="${new URL(pairedPages[pagePath].da, `${siteUrl}/`).href}">`,
           ] : []),
           `<meta property="og:locale" content="${locale}">`,
-          `<meta property="og:type" content="${type}">`,
+          `<meta property="og:type" content="${ogType}">`,
           `<meta property="og:site_name" content="The Evolution of Bikes">`,
           `<meta property="og:title" content="${escape(pageTitle)}">`,
           `<meta property="og:description" content="${escape(description)}">`,
@@ -165,11 +172,51 @@ const socialMetadata = {
           `<meta name="twitter:image" content="${image}">`,
         ].join('');
 
-        const schema = pagePath === '/' || pagePath === '/en/'
-          ? { '@context': 'https://schema.org', '@type': 'WebSite', name: 'The Evolution of Bikes', url: canonical, description, inLanguage: language }
-          : type === 'article'
-            ? { '@context': 'https://schema.org', '@type': 'Article', headline: schemaTitle, description, image, url: canonical, mainEntityOfPage: canonical, inLanguage: language, author: { '@type': 'Person', name: 'Henning Renita Yde' }, publisher: { '@type': 'Organization', name: 'The Evolution of Bikes', url: siteUrl } }
-            : { '@context': 'https://schema.org', '@type': 'CollectionPage', name: schemaTitle, description, url: canonical, image, inLanguage: language, isPartOf: { '@type': 'WebSite', name: 'The Evolution of Bikes', url: siteUrl } };
+        const publisher = { '@type': 'Organization', name: 'The Evolution of Bikes', url: siteUrl };
+        const website = { '@type': 'WebSite', '@id': `${siteUrl}/#website`, name: 'The Evolution of Bikes', url: `${siteUrl}/`, inLanguage: ['da-DK', 'en-GB'] };
+        const articleType = isComponent ? 'TechArticle' : 'Article';
+        const productionYear = schemaTitle.match(/\b(18|19|20)\d{2}\b/)?.[0];
+        const mainEntity = isHome
+          ? { ...website, description }
+          : isBike
+            ? {
+                '@type': 'ItemPage', '@id': `${canonical}#page`, name: schemaTitle, description, url: canonical, image, inLanguage: language,
+                isPartOf: { '@id': `${siteUrl}/#website` },
+                mainEntity: {
+                  '@type': 'IndividualProduct', '@id': `${canonical}#bicycle`, name: schemaTitle, description, image, url: canonical,
+                  category: isEnglish ? 'Historic racing bicycle' : 'Historisk racercykel',
+                  ...(productionYear ? { productionDate: productionYear } : {}),
+                },
+              }
+            : isArticle
+              ? {
+                  '@type': articleType, '@id': `${canonical}#article`, headline: schemaTitle, description, image, url: canonical,
+                  mainEntityOfPage: canonical, inLanguage: language, author: { '@type': 'Person', name: 'Henning Renita Yde' }, publisher,
+                }
+              : collectionPaths.has(pagePath)
+                ? { '@type': 'CollectionPage', '@id': `${canonical}#page`, name: schemaTitle, description, url: canonical, image, inLanguage: language, isPartOf: { '@id': `${siteUrl}/#website` } }
+                : { '@type': 'WebPage', '@id': `${canonical}#page`, name: schemaTitle, description, url: canonical, image, inLanguage: language, isPartOf: { '@id': `${siteUrl}/#website` } };
+
+        const sections = pagePath.split('/').filter(Boolean);
+        const sectionNames = isEnglish
+          ? { en: 'Home', stories: 'Stories', periods: 'Periods', bikes: 'Bicycles', components: 'Components', about: 'About', privacy: 'Privacy', 'share-your-story': 'Share your story' }
+          : { historier: 'Historier', perioder: 'Perioder', cykler: 'Cykler', komponenter: 'Komponenter', om: 'Om', privatliv: 'Privatliv', 'fortael-din-historie': 'Fortæl din historie' };
+        const breadcrumbs = sections.length ? {
+          '@type': 'BreadcrumbList', '@id': `${canonical}#breadcrumb`,
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: isEnglish ? 'Home' : 'Forside', item: `${siteUrl}${isEnglish ? '/en/' : '/'}` },
+            ...sections.slice(isEnglish ? 1 : 0).map((section, index, all) => {
+              const relativeSections = sections.slice(0, (isEnglish ? 1 : 0) + index + 1);
+              const isLast = index === all.length - 1;
+              return {
+                '@type': 'ListItem', position: index + 2,
+                name: isLast ? schemaTitle : (sectionNames[section] || section.replaceAll('-', ' ')),
+                item: new URL(`/${relativeSections.join('/')}/`, `${siteUrl}/`).href,
+              };
+            }),
+          ],
+        } : null;
+        const schema = { '@context': 'https://schema.org', '@graph': [mainEntity, ...(!isHome ? [website] : []), ...(breadcrumbs ? [breadcrumbs] : [])] };
         const structuredData = `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>`;
 
         html = html.replace(/<title>.*?<\/title>/is, `${tags}${structuredData}<title>${pageTitle}</title>`);

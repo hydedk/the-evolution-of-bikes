@@ -16,6 +16,7 @@ const languagePairs = {
   '/cykler/rossin-record/': '/en/bikes/rossin-record/',
   '/cykler/asmussen-super-prestige/': '/en/bikes/asmussen-super-prestige/',
   '/cykler/colnago-super-thron/': '/en/bikes/colnago-super-thron/',
+  '/cykler/colnago-1993-tange-prestige/': '/en/bikes/colnago-1993-tange-prestige/',
   '/cykler/giame/': '/en/bikes/giame/',
   '/cykler/stella-veneta/': '/en/bikes/stella-veneta/',
   '/cykler/koga-miyata-gentsracer-aero/': '/en/bikes/koga-miyata-gentsracer-aero/',

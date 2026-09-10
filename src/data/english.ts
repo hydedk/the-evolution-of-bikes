@@ -34,6 +34,7 @@ const bikeCopy: Record<string, [string, string?, string?]> = {
   'rossin-record': ['An early Italian Columbus SL racer with Campagnolo Record, pantographed details and a distinctive yellow-and-blue finish.', 'Cavenago Brianza, Italy'],
   'asmussen-super-prestige': ['A Danish custom-built time-trial bicycle with a small front wheel, low front end and Campagnolo equipment from the funny-bike period.', 'Aarhus, Denmark'],
   'colnago-super-thron': ['A classic lugged steel frame with Campagnolo Chorus and Shamal wheels — from the decade in which carbon fibre was taking over.', 'Cambiago, Italy', 'Previously in the collection'],
+  'colnago-1993-tange-prestige': ['An Italian racer in Japanese Tange Prestige steel, equipped with Shimano Dura-Ace 7400-series components and Campagnolo Shamal deep-section wheels.', 'Cambiago, Italy'],
   'giame': ['A rare Turin racer whose drilled seatpost, Simplex derailleur and surviving Giamé parts show the pursuit of low weight.', 'Turin, Italy'],
   'stella-veneta': ['An Italian racer with Campagnolo Cambio Corsa — a gear system that required two long levers, balance and a very particular sequence.', 'Conegliano, Italy'],
   'koga-miyata-gentsracer-aero': ['A silver-green steel bicycle with Shimano 600 AX and Dyna-Drive from the first major experiments with aerodynamic components.', 'Netherlands / Japan', 'Previously in the collection'],

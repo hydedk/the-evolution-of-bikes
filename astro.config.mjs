@@ -64,6 +64,19 @@ const languagePairs = {
 };
 const pairedPages = Object.fromEntries(Object.entries(languagePairs).flatMap(([da, en]) => [[da, { da, en }], [en, { da, en }]]));
 const seoTitleOverrides = {
+  '/en/bikes/asmussen-super-prestige/': 'Asmussen Super Prestige – Danish racing bicycle · The Evolution of Bikes',
+  '/en/bikes/atala-sanremo/': 'Atala Sanremo – Italian vintage racing bicycle · The Evolution of Bikes',
+  '/en/bikes/colnago-super-thron/': 'Colnago Super Thron 1995 – steel racing bicycle · The Evolution of Bikes',
+  '/en/bikes/giame/': 'Giamé – Italian vintage racing bicycle · The Evolution of Bikes',
+  '/en/bikes/gios-super-record/': 'GIOS Torino Super Record 1975 – racing bicycle · The Evolution of Bikes',
+  '/en/bikes/koga-miyata-gentsracer-aero/': 'Koga-Miyata Gentsracer-Aero – racing bicycle · The Evolution of Bikes',
+  '/en/bikes/rossin-record/': 'Rossin Record 1978 – Columbus SL racing bicycle · The Evolution of Bikes',
+  '/en/bikes/scapin-k6/': 'Scapin K6 2013 – carbon racing bicycle · The Evolution of Bikes',
+  '/en/bikes/stella-veneta/': 'Stella Veneta 1947 – Italian racing bicycle · The Evolution of Bikes',
+  '/en/bikes/wonder-saint-etienne/': 'Wonder Saint-Étienne 1937 – French racing bicycle · The Evolution of Bikes',
+  '/en/components/campagnolo-cambio-corsa/': 'Campagnolo Cambio Corsa – shifting while riding · The Evolution of Bikes',
+  '/en/components/campagnolo-valentino/': 'Campagnolo Valentino – accessible Italian gearing · The Evolution of Bikes',
+  '/en/components/shimano-600-ex-arabesque/': 'Shimano 600 EX Arabesque – indexed-era components · The Evolution of Bikes',
   '/historier/alfredo-binda-giro-1930/': 'Giroen betalte Binda for at blive hjemme · The Evolution of Bikes',
   '/historier/anquetil-poulidor-puy-de-dome-1964/': 'Anquetil og Poulidor på Puy de Dôme · The Evolution of Bikes',
   '/historier/coppi-stelvio-1953/': 'Coppi og aftalen på Stelvio · The Evolution of Bikes',

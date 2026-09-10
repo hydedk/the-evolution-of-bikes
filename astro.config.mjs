@@ -13,6 +13,7 @@ const languagePairs = {
   '/cykler/faggin-1986/': '/en/bikes/faggin-1986/',
   '/cykler/scapin-k6/': '/en/bikes/scapin-k6/',
   '/cykler/gios-super-record/': '/en/bikes/gios-super-record/',
+  '/cykler/rossin-record/': '/en/bikes/rossin-record/',
   '/cykler/asmussen-super-prestige/': '/en/bikes/asmussen-super-prestige/',
   '/cykler/colnago-super-thron/': '/en/bikes/colnago-super-thron/',
   '/cykler/giame/': '/en/bikes/giame/',

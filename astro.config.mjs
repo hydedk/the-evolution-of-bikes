@@ -125,11 +125,13 @@ const socialMetadata = {
 
         html = html
           .replace(/<meta\s+name=["']description["'][^>]*>/i, `<meta name="description" content="${escape(description)}">`)
+          .replace(/<link\s+rel=["'](?:shortcut )?icon["'][^>]*>\s*/gi, '')
           .replace(/<link\s+rel=["']canonical["'][^>]*>\s*/gi, '')
           .replace(/<meta\s+(?:property=["']og:[^"']+["']|name=["']twitter:[^"']+["'])[^>]*>\s*/gi, '')
           .replace(/<script\s+type=["']application\/ld\+json["'][^>]*>.*?<\/script>\s*/gis, '');
 
         const tags = [
+          `<link rel="icon" href="/favicon.svg" type="image/svg+xml">`,
           `<link rel="canonical" href="${canonical}">`,
           ...(pairedPages[pagePath] ? [
             `<link rel="alternate" hreflang="da" href="${new URL(pairedPages[pagePath].da, `${siteUrl}/`).href}">`,

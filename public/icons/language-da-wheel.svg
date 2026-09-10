@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" role="img" aria-label="Dansk">
+  <defs><clipPath id="wheel"><circle cx="18" cy="18" r="14.5"/></clipPath></defs>
+  <g clip-path="url(#wheel)"><path fill="#c8102e" d="M2 2h32v32H2z"/><path fill="#fff" d="M12 2h4v32h-4zM2 16h32v4H2z"/></g>
+  <circle cx="18" cy="18" r="15.5" fill="none" stroke="#17251f" stroke-width="1.8"/>
+  <circle cx="18" cy="18" r="2" fill="#f1eee4" stroke="#17251f" stroke-width="1"/>
+</svg>

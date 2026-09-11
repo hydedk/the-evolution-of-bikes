@@ -4,6 +4,7 @@ import { bikes } from './bikes';
 const storyCopy: Record<string, [string, string]> = {
   'den-hvide-oedemark-og-hoensefarmerens-toerst': ['The white wilderness and the chicken farmer’s thirst', 'The bottle was empty on Mont Ventoux. Then a Danish Tour rider from 1958 helped decide whether the reader should accept water.'],
   'tom-simpson-mont-ventoux-1967': ['The day Tom Simpson died on Mont Ventoux', 'Heat, dehydration, exhaustion and stimulants came together on the bare mountain during the 1967 Tour de France.'],
+  'beryl-burton-12-timersrekord-1967': ['Beryl Burton, twelve hours and a liquorice allsort', 'Beryl Burton rode 277.25 miles in twelve hours, broke the British men’s record and handed Mike McNamara a liquorice allsort as she passed.'],
   'tour-feltets-dopingprotest-1966': ['When the Tour peloton protested against doping controls', 'Shortly after leaving Bordeaux, the riders stopped. New doping controls had entered an old working culture.'],
   'anquetil-poulidor-puy-de-dome-1964': ['When Anquetil and Poulidor rode shoulder to shoulder', 'Poulidor won the duel on the Puy de Dôme, but Anquetil kept the yellow jersey by fourteen seconds.'],
   'da-regntoejet-kom-med-op-i-solen': ['When the rainwear came up in the sunshine', 'A rucksack full of dry clothes, long trousers and a jacket travelled about 30 kilometres up the Großglockner — in 28-degree heat.'],

@@ -39,6 +39,7 @@ const bikeCopy: Record<string, [string, string?, string?]> = {
   'colnago-1993-tange-prestige': ['An Italian racer in Japanese Tange Prestige steel, equipped with Shimano Dura-Ace 7400-series components and Campagnolo Shamal deep-section wheels.', 'Cambiago, Italy'],
   'giame': ['A rare Turin racer whose drilled seatpost, Simplex derailleur and surviving Giamé parts show the pursuit of low weight.', 'Turin, Italy'],
   'stella-veneta': ['An Italian racer with Campagnolo Cambio Corsa — a gear system that required two long levers, balance and a very particular sequence.', 'Conegliano, Italy'],
+  'schroder-1965': ['A Copenhagen-built Reynolds 531 racer whose workshop ledger links frame PS 1018 B to Gert V. Nilsen and 22 May 1965.', 'Copenhagen, Denmark'],
   'koga-miyata-gentsracer-aero': ['A silver-green steel bicycle with Shimano 600 AX and Dyna-Drive from the first major experiments with aerodynamic components.', 'Netherlands / Japan', 'Previously in the collection'],
   'atala-sanremo': ['A red Italian racer with Campagnolo, Gipiemme and a name that reaches back to the early Giro.', 'Italy', 'Previously in the collection'],
   'cycles-france-sport': ['The bicycle that waited almost 100 years in a barn — with a brass nameplate and a flyer hidden inside the handlebar.', 'Toulouse, France'],

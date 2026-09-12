@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'christian-christensen-tour-de-france-1913': ['Christian Christensen – out of the Tour, but on to Paris', 'Christian Christensen missed the time limit in the 1913 Tour. Later accounts describe how the Danish dairy worker continued to Paris outside the classification.'],
   'den-hvide-oedemark-og-hoensefarmerens-toerst': ['The white wilderness and the chicken farmer’s thirst', 'The bottle was empty on Mont Ventoux. Then a Danish Tour rider from 1958 helped decide whether the reader should accept water.'],
   'tom-simpson-mont-ventoux-1967': ['The day Tom Simpson died on Mont Ventoux', 'Heat, dehydration, exhaustion and stimulants came together on the bare mountain during the 1967 Tour de France.'],
   'beryl-burton-12-timersrekord-1967': ['Beryl Burton, twelve hours and a liquorice allsort', 'Beryl Burton rode 277.25 miles in twelve hours, broke the British men’s record and handed Mike McNamara a liquorice allsort as she passed.'],

@@ -32,6 +32,7 @@ const languagePairs = {
   '/historier/snyd-soem-tour-de-france-1904/': '/en/stories/snyd-soem-tour-de-france-1904/',
   '/historier/alfonsina-strada-giro-1924/': '/en/stories/alfonsina-strada-giro-1924/',
   '/historier/beryl-burton-12-timersrekord-1967/': '/en/stories/beryl-burton-12-timersrekord-1967/',
+  '/historier/bordeaux-paris-1965/': '/en/stories/bordeaux-paris-1965/',
   '/historier/campagnolo-quick-release/': '/en/stories/campagnolo-quick-release/',
   '/historier/alfredo-binda-giro-1930/': '/en/stories/alfredo-binda-giro-1930/',
   '/historier/da-gearene-kom-og-oel-narrede-feltet/': '/en/stories/da-gearene-kom-og-oel-narrede-feltet/',

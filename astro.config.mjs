@@ -97,9 +97,77 @@ const seoDescriptionOverrides = {
   '/om/': 'Om den personlige cykelsamling bag The Evolution of Bikes og arbejdet med at bevare cyklernes historier, teknik og menneskelige spor.',
 };
 
+const lightboxScript = `
+const initialiseLightbox = () => {
+  const images = [...document.querySelectorAll('main figure img')]
+    .filter((image) => !image.closest('a') && !image.hasAttribute('data-no-lightbox'));
+  if (!images.length || document.querySelector('[data-image-lightbox]')) return;
+
+  const isEnglish = document.documentElement.lang.startsWith('en');
+  const dialog = document.createElement('dialog');
+  dialog.className = 'image-lightbox';
+  dialog.setAttribute('data-image-lightbox', '');
+  dialog.setAttribute('aria-label', isEnglish ? 'Enlarged image' : 'Forstørret billede');
+  dialog.innerHTML = '<div class="image-lightbox__frame"><button class="image-lightbox__close" type="button"></button><img alt=""><p class="image-lightbox__caption"></p><p class="image-lightbox__hint"></p></div>';
+  document.body.append(dialog);
+
+  const fullImage = dialog.querySelector('img');
+  const caption = dialog.querySelector('.image-lightbox__caption');
+  const hint = dialog.querySelector('.image-lightbox__hint');
+  const closeButton = dialog.querySelector('.image-lightbox__close');
+  closeButton.textContent = '×';
+  closeButton.setAttribute('aria-label', isEnglish ? 'Close image' : 'Luk billede');
+  hint.textContent = isEnglish ? 'Click the image to zoom' : 'Klik på billedet for at zoome';
+  let opener;
+
+  const open = (image) => {
+    opener = image;
+    fullImage.src = image.currentSrc || image.src;
+    fullImage.alt = image.alt;
+    const figureCaption = image.closest('figure')?.querySelector('figcaption');
+    caption.textContent = figureCaption?.textContent?.trim() || image.alt;
+    caption.hidden = !caption.textContent;
+    dialog.classList.remove('is-zoomed');
+    dialog.showModal();
+    document.documentElement.classList.add('has-lightbox');
+    closeButton.focus();
+  };
+
+  images.forEach((image) => {
+    image.classList.add('lightbox-enabled');
+    image.tabIndex = 0;
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', (isEnglish ? 'Enlarge image: ' : 'Forstør billede: ') + image.alt);
+    image.addEventListener('click', () => open(image));
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        open(image);
+      }
+    });
+  });
+
+  closeButton.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  fullImage.addEventListener('click', () => dialog.classList.toggle('is-zoomed'));
+  dialog.addEventListener('close', () => {
+    document.documentElement.classList.remove('has-lightbox');
+    opener?.focus();
+  });
+};
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initialiseLightbox);
+else initialiseLightbox();
+`;
+
 const socialMetadata = {
   name: 'social-metadata',
   hooks: {
+    'astro:config:setup': ({ injectScript }) => {
+      injectScript('page', lightboxScript);
+    },
     'astro:build:done': async ({ dir }) => {
       const outputDir = fileURLToPath(dir);
       const htmlFiles = [];

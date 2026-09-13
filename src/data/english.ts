@@ -33,6 +33,7 @@ const bikeCopy: Record<string, [string, string?, string?]> = {
   'bernardi-ca-1980': ['A turquoise Italian steel racer with Campagnolo Nuovo Gran Sport, high-flange hubs and Universal brakes, preserved with an uncertain connection to Guido De Bernardi.', 'Italy', 'Previously in the collection'],
   'faggin-1986': ['An Italian Columbus Aelle racer in its original net-pattern paint, built with Shimano 600 and Cinelli — a precise meeting of two bicycle industries.', 'Padua, Italy'],
   'scapin-k6': ['A modern Italian carbon racer with Campagnolo, Fulcrum wheels and a design in which frame, equipment and riding position were conceived together.', 'Italy'],
+  'principia-evolution': ['A Danish aluminium racer with large shaped tubes, a WEAVE carbon fork and Dura-Ace components from the years around Principia’s change of ownership.', 'Denmark'],
   'gios-super-record': ['A Gios-blue Columbus racer with Campagnolo Super Record and details from the heyday of the Brooklyn team.', 'Turin, Italy'],
   'rossin-record': ['An early Italian Columbus SL racer with Campagnolo Record, pantographed details and a distinctive yellow-and-blue finish.', 'Cavenago Brianza, Italy'],
   'asmussen-super-prestige': ['A Danish custom-built time-trial bicycle with a small front wheel, low front end and Campagnolo equipment from the funny-bike period.', 'Aarhus, Denmark'],

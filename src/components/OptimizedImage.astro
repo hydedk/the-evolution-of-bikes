@@ -1,0 +1,33 @@
+---
+import { Picture, type ImageMetadata, type LocalImageProps } from 'astro:assets';
+
+type Props = Omit<LocalImageProps, 'src' | 'alt' | 'widths' | 'sizes' | 'densities'> & {
+  src: ImageMetadata;
+  alt: string;
+  widths?: number[];
+  sizes?: string;
+};
+
+const {
+  src,
+  alt,
+  widths = [480, 768, 1024, 1440, 1920],
+  sizes = '(max-width: 700px) 100vw, (max-width: 1280px) 92vw, 1180px',
+  loading = 'lazy',
+  decoding = 'async',
+  layout = 'constrained',
+  ...attributes
+} = Astro.props;
+---
+
+<Picture
+  src={src}
+  alt={alt}
+  formats={['avif', 'webp']}
+  widths={widths}
+  sizes={sizes}
+  loading={loading}
+  decoding={decoding}
+  layout={layout}
+  {...attributes}
+/>

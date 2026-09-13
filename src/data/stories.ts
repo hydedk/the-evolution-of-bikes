@@ -11,6 +11,27 @@ export type StoryMeta = {
   relatedComponents: string[];
 };
 
+export type StoryTrack = 'race' | 'people' | 'mechanics';
+
+const storyTracks: Record<string, StoryTrack> = {
+  'christian-christensen-tour-de-france-1913': 'people',
+  'den-hvide-oedemark-og-hoensefarmerens-toerst': 'people',
+  'beryl-burton-12-timersrekord-1967': 'people',
+  'da-regntoejet-kom-med-op-i-solen': 'people',
+  'soevnloeshed-smoer-og-kolde-oel': 'people',
+  'aldo-bini-maglia-nera-1948': 'people',
+  'ivo-faltoni-mekaniker-giro-1954': 'people',
+  'da-michelin-navnet-blev-et-problem': 'people',
+  'alfonsina-strada-giro-1924': 'people',
+  'campagnolo-quick-release': 'mechanics',
+  'da-gearene-kom-og-oel-narrede-feltet': 'mechanics',
+  'suntour-shimano-gearkrigen': 'mechanics',
+  'gunnar-asmussen-funny-bike': 'mechanics',
+};
+
+export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
+  storyTracks[story.slug] ?? 'race';
+
 export const stories: StoryMeta[] = [
   { slug: 'christian-christensen-tour-de-france-1913', type: 'historie', year: '1913', title: 'Christian Christensen – ude af Touren, men videre til Paris', text: 'Christian Christensen overskred tidsgrænsen i Touren 1913. Ifølge senere beretninger kørte den danske mejerist alligevel videre til Paris.', image: 'images/stories/christian-christensen-1913/christian-christensen-tour-1913.webp', periods: ['1900-1920'], topics: ['tour-de-france', 'dansk-cykling', 'tidsgrænse', 'individuelle-ryttere'], relatedBikes: [], relatedComponents: [] },
 
@@ -22,11 +43,11 @@ export const stories: StoryMeta[] = [
   { slug: 'anquetil-poulidor-puy-de-dome-1964', type: 'historie', year: '1964', title: 'Da Anquetil og Poulidor kørte skulder ved skulder', text: 'Poulidor vandt duellen på Puy de Dôme, men Anquetil beholdt den gule trøje med fjorten sekunder.', image: 'images/stories/anquetil-poulidor-1964/podium-1964.webp', periods: ['1960-1969'], topics: ['tour-de-france', 'puy-de-dome', 'rivalisering'], relatedBikes: [], relatedComponents: [] },
   { slug: 'da-regntoejet-kom-med-op-i-solen', type: 'historie', year: '2013', title: 'Da regntøjet kom med op i solen', text: 'En rygsæk fuld af tørt tøj, lange bukser og jakke kom med cirka 30 kilometer op ad Großglockner — i 28 graders varme.', image: 'images/stories/regntoejet-grossglockner/grossglockner-sving.webp', periods: ['2010-2019'], topics: ['læserhistorie', 'grossglockner', 'bjergkørsel'], relatedBikes: [], relatedComponents: [] },
   { slug: 'coppi-stelvio-1953', type: 'historie', year: '1953', title: 'Da Coppi fandt et hul i aftalen på Stelvio', text: 'Koblet førte Giroen med næsten to minutter. Så sendte Coppi en ung holdkammerat frem på Stelvio.', image: 'images/stories/coppi-stelvio-1953/coppi-stelvio-1953.webp', periods: ['1950-1959'], topics: ['giro-ditalia', 'stelvio', 'taktik'], relatedBikes: [], relatedComponents: [] },
-  { slug: 'soevnloeshed-smoer-og-kolde-oel', type: 'historie', year: '1890’erne–1930’erne', title: 'Søvnløshed, smør og kolde øl', text: 'Koteletter, cigaretter og efterligning: da én rytters måltid kunne blive til hele feltets ernæringslære.', image: 'images/stories/kost-overtro/kost-overtro-illustration.jpg', periods: ['1900-1920', '1920-1929', '1930-1939'], topics: ['kost', 'overtro', 'tour-de-france', 'anekdote'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'soevnloeshed-smoer-og-kolde-oel', type: 'historie', year: '1890’erne–1930’erne', title: 'Søvnløshed, smør og kolde øl', text: 'Koteletter, cigaretter og efterligning: da én rytters måltid kunne blive til hele feltets ernæringslære.', image: 'images/stories/kost-overtro/kost-overtro-illustration.jpg', periods: ['1900-1920', '1920-1930', '1930-1939'], topics: ['kost', 'overtro', 'tour-de-france', 'anekdote'], relatedBikes: [], relatedComponents: [] },
   { slug: 'cykelsportens-vilde-vesten', type: 'historie', year: '1890–1903', title: 'Da cykelsporten var et vildt vesten', text: 'Heltene, maskinerne, seksdagesløbene og kroppens grænser før den moderne cykelsport.', image: 'images/periods/1900-1920/wild-west/exhausted-rider.webp', periods: ['1900-1920'], topics: ['pionertid', 'banecykling', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },
   { slug: 'snyd-soem-tour-de-france-1904', type: 'historie', year: '1904', title: 'Snyd, søm og Tour de France i kaos', text: 'Skandalen, der næsten dræbte Touren, og vejen fra omrejsende cirkus til organiseret sport.', image: 'images/periods/1900-1920/rytter-ved-maal.webp', periods: ['1900-1920'], topics: ['tour-de-france', 'snyd', 'regler'], relatedBikes: [], relatedComponents: [] },
   { slug: 'da-gearene-kom-og-oel-narrede-feltet', type: 'historie', year: '1935–1937', title: 'Da gearene kom – og øl narrede feltet', text: 'Om Tourens modstand mod gear og Julien Moineaus usædvanlige udbrud mod Bordeaux.', image: 'images/stories/tour-gears-beer/drikkestation.webp', periods: ['1930-1939'], topics: ['tour-de-france', 'gear', 'anekdote'], relatedBikes: [], relatedComponents: [] },
-  { slug: 'campagnolo-quick-release', type: 'historie', year: '1927', title: 'Da kulden skabte quick release', text: 'Tullio Campagnolos fastfrosne hjulskift blev begyndelsen på en mekanisk revolution.', image: 'images/stories/campagnolo-quick-release/quick-release-detail.webp', periods: ['1920-1929'], topics: ['opfindelser', 'bjergpas'], relatedBikes: [], relatedComponents: ['campagnolo-quick-release'] },
+  { slug: 'campagnolo-quick-release', type: 'historie', year: '1927', title: 'Da kulden skabte quick release', text: 'Tullio Campagnolos fastfrosne hjulskift blev begyndelsen på en mekanisk revolution.', image: 'images/stories/campagnolo-quick-release/quick-release-detail.webp', periods: ['1920-1930'], topics: ['opfindelser', 'bjergpas'], relatedBikes: [], relatedComponents: ['campagnolo-quick-release'] },
   { slug: 'aldo-bini-maglia-nera-1948', type: 'historie', year: '1948', title: 'Stjernen der faldt fra toppen', text: 'Aldo Bini gennemførte Giro d’Italia med en brækket hånd og fandt hæder i den sorte trøje.', image: 'images/stories/aldo-bini/aldo-bini-archive.webp', periods: ['1940-1949'], topics: ['giro-ditalia', 'maglia-nera'], relatedBikes: [], relatedComponents: [] },
   { slug: 'leroica-gamle-cykler-nye-veje', type: 'historie', year: '1997', title: 'Da gamle cykler fandt nye veje', text: 'L’Eroica begyndte med 92 ryttere på Toscanas hvide grusveje.', image: 'images/stories/leroica/toscana-illustration.webp', periods: ['1990-1999'], topics: ['leroica', 'strade-bianche'], relatedBikes: [], relatedComponents: [] },
   { slug: 'skibby-koppenberg-1987', type: 'historie', year: '1987', title: 'Da løbsbilen kørte over Skibbys cykel', text: 'I Flandern Rundt 1987 førte Jesper Skibby alene på Koppenberg, da en officiel følgebil kørte over hans cykel.', image: 'images/stories/skibby-koppenberg-1987/illustration.webp', periods: ['1980-1989'], topics: ['flandern-rundt', 'koppenberg', 'dansk-cykling', 'brosten'], relatedBikes: [], relatedComponents: [] },
@@ -35,7 +56,7 @@ export const stories: StoryMeta[] = [
   { slug: 'da-michelin-navnet-blev-et-problem', type: 'historie', year: '1948', title: 'Da Michelin-navnet næsten blev et problem', text: 'Historien om Stella Veneta, Ferdinando Michelin og navnet MICHE.', image: 'images/stories/michelin-navnet/michelin-aftalen.webp', periods: ['1940-1949'], topics: ['mærker', 'italien'], relatedBikes: ['stella-veneta'], relatedComponents: [] },
   { slug: 'suntour-shimano-gearkrigen', type: 'historie', year: '1964–1990', title: 'Patenthovedpinen der varede i tyve år', text: 'SunTour fandt den skrå bevægelse. Shimano svarede med klik, kabler og et helt system, der skulle passe sammen.', image: 'images/stories/suntour-shimano-gearkrigen/suntour-honor.jpg', periods: ['1960-1969', '1970-1979', '1980-1989', '1990-1999'], topics: ['gear', 'suntour', 'shimano', 'patenter', 'sis'], relatedBikes: [], relatedComponents: [] },
   { slug: 'gunnar-asmussen-funny-bike', type: 'historie', year: '1968–1988', title: 'Da Gunnar Asmussen gjorde cyklen lavere', text: 'Fra OL-guld i Mexico City til en gul-sort funny bike fra cykelværkstedet i Aarhus.', image: 'images/bikes/asmussen-super-prestige/hero.webp', periods: ['1960-1969', '1980-1989'], topics: ['dansk-cykling', 'aerodynamik', 'enkeltstart', 'funny-bike'], relatedBikes: ['asmussen-super-prestige'], relatedComponents: [] },
-  { slug: 'alfonsina-strada-giro-1924', type: 'historie', year: '1924', title: 'Kvinden, Giroen ikke kunne slippe af med', text: 'Alfonsina Strada kom uden for tidsgrænsen i Perugia. Alligevel fortsatte hun hele vejen til Milano.', image: 'images/stories/alfonsina-strada-1924/alfonsina-strada-rulli.jpg', periods: ['1920-1929'], topics: ['giro-ditalia', 'kvindecykling', 'regler', 'mekanik'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'alfonsina-strada-giro-1924', type: 'historie', year: '1924', title: 'Kvinden, Giroen ikke kunne slippe af med', text: 'Alfonsina Strada kom uden for tidsgrænsen i Perugia. Alligevel fortsatte hun hele vejen til Milano.', image: 'images/stories/alfonsina-strada-1924/alfonsina-strada-rulli.jpg', periods: ['1920-1930'], topics: ['giro-ditalia', 'kvindecykling', 'regler', 'mekanik'], relatedBikes: [], relatedComponents: [] },
   { slug: 'wim-van-est-aubisque-1951', type: 'historie', year: '1951', title: 'Den gule trøje forsvandt ned ad bjergsiden', text: 'Wim van Est styrtede ud over Aubisque og blev trukket op med et improviseret reb af cykelslanger.', image: 'images/stories/wim-van-est-1951/wim-van-est-1951.jpg', periods: ['1950-1959'], topics: ['tour-de-france', 'aubisque', 'gul-troeje', 'mekanik'], relatedBikes: [], relatedComponents: [] },
   { slug: 'alfredo-binda-giro-1930', type: 'historie', year: '1930', title: 'Da Giroen betalte Binda for at blive hjemme', text: 'Alfredo Binda havde gjort Giroen så forudsigelig, at arrangørerne betalte ham 22.500 lire for ikke at stille op.', image: 'images/stories/alfredo-binda-giro-1930/alfredo-binda.jpg', periods: ['1930-1939'], topics: ['giro-ditalia', 'alfredo-binda', 'regler', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
 ];

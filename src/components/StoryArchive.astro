@@ -1,0 +1,120 @@
+---
+import type { StoryMeta } from '../data/stories';
+import { storyTrackFor } from '../data/stories';
+
+interface Props {
+  stories: StoryMeta[];
+  language?: 'da' | 'en';
+  translatedSlugs?: Set<string>;
+}
+
+const { stories, language = 'da', translatedSlugs = new Set<string>() } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const isEnglish = language === 'en';
+const periods = [
+  ['1900-1920', '1900–1920'], ['1920-1930', '1920–1930'],
+  ['1930-1939', '1930–1939'], ['1940-1949', '1940–1949'],
+  ['1950-1959', '1950–1959'], ['1960-1969', '1960–1969'],
+  ['1970-1979', '1970–1979'], ['1980-1989', '1980–1989'],
+  ['1990-1999', '1990–1999'], ['2000-2009', '2000–2009'],
+  ['2010-2019', '2010–2019'],
+];
+const copy = isEnglish ? {
+  search: 'Search stories', placeholder: 'Person, race, place or component…',
+  period: 'Period', allPeriods: 'All periods', track: 'Theme', allTracks: 'All themes',
+  race: 'Unusual moments in racing', people: 'People beyond the podium', mechanics: 'Mechanics with consequences',
+  sort: 'Order', oldest: 'Oldest first', newest: 'Newest first', reset: 'Clear filters',
+  reader: 'Our readers’ own stories', read: 'Read the story →', readDanish: 'Read in Danish →',
+  more: 'Show more stories', none: 'No stories match your search.', singular: 'story shown', plural: 'stories shown',
+} : {
+  search: 'Søg i historier', placeholder: 'Person, løb, sted eller komponent…',
+  period: 'Periode', allPeriods: 'Alle perioder', track: 'Tema', allTracks: 'Alle temaer',
+  race: 'Løbenes skæve øjeblikke', people: 'Menneskene uden for podiet', mechanics: 'Mekanik med konsekvenser',
+  sort: 'Rækkefølge', oldest: 'Ældste først', newest: 'Nyeste først', reset: 'Nulstil filtre',
+  reader: 'Læsernes egne fortællinger', read: 'Læs historien →', readDanish: 'Læs på dansk →',
+  more: 'Vis flere historier', none: 'Ingen historier passer til din søgning.', singular: 'historie vist', plural: 'historier vist',
+};
+---
+<section class="story-browser" data-story-browser data-language={language}>
+  <form class="story-filters" data-story-filters>
+    <label class="story-search"><span>{copy.search}</span><input type="search" placeholder={copy.placeholder} autocomplete="off" data-story-search /></label>
+    <label><span>{copy.period}</span><select data-story-period><option value="">{copy.allPeriods}</option>{periods.map(([value, label]) => <option value={value}>{label}</option>)}</select></label>
+    <label><span>{copy.track}</span><select data-story-track><option value="">{copy.allTracks}</option><option value="race">{copy.race}</option><option value="people">{copy.people}</option><option value="mechanics">{copy.mechanics}</option></select></label>
+    <label><span>{copy.sort}</span><select data-story-sort><option value="oldest">{copy.oldest}</option><option value="newest">{copy.newest}</option></select></label>
+    <button type="reset" class="story-filter-reset">{copy.reset}</button>
+  </form>
+  <p class="story-result-count" data-story-count aria-live="polite"></p>
+  <section class="story-archive" data-story-list>
+    {stories.map((story, index) => {
+      const hasEnglishPage = !isEnglish || translatedSlugs.has(story.slug);
+      const href = isEnglish && hasEnglishPage ? `${base}/en/stories/${story.slug}/` : `${base}/historier/${story.slug}/`;
+      const linkLanguage = isEnglish && !hasEnglishPage ? 'da' : language;
+      const year = story.year.match(/\d{4}/)?.[0] ?? '9999';
+      return <a href={href} lang={linkLanguage} data-story-card data-search={`${story.title} ${story.text} ${story.year} ${story.topics.join(' ')}`} data-periods={story.periods.join(',')} data-track={storyTrackFor(story)} data-year={year} data-index={index}>
+        <img src={`${base}/${story.image}`} alt="" />
+        <div><span>{story.year}</span>{story.topics.includes('læserhistorie') && <strong class="reader-story-badge">{copy.reader}</strong>}<h2>{story.title}</h2><p>{story.text}</p><b>{hasEnglishPage ? copy.read : copy.readDanish}</b></div>
+      </a>;
+    })}
+  </section>
+  <p class="story-empty" data-story-empty hidden>{copy.none}</p>
+  <button type="button" class="story-load-more" data-story-more hidden>{copy.more}</button>
+</section>
+
+<script>
+  const normalise = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+  document.querySelectorAll('[data-story-browser]').forEach((browser) => {
+    const form = browser.querySelector('[data-story-filters]');
+    const search = browser.querySelector('[data-story-search]');
+    const period = browser.querySelector('[data-story-period]');
+    const track = browser.querySelector('[data-story-track]');
+    const sort = browser.querySelector('[data-story-sort]');
+    const list = browser.querySelector('[data-story-list]');
+    const count = browser.querySelector('[data-story-count]');
+    const empty = browser.querySelector('[data-story-empty]');
+    const more = browser.querySelector('[data-story-more]');
+    const cards = [...browser.querySelectorAll('[data-story-card]')];
+    const language = browser.dataset.language;
+    const params = new URLSearchParams(window.location.search);
+    const periodKey = language === 'en' ? 'period' : 'periode';
+    const trackKey = language === 'en' ? 'theme' : 'tema';
+    const sortKey = language === 'en' ? 'sort' : 'sortering';
+    let limit = 12;
+
+    search.value = params.get('q') ?? '';
+    period.value = params.get(periodKey) ?? '';
+    track.value = params.get(trackKey) ?? '';
+    sort.value = params.get(sortKey) ?? 'oldest';
+
+    const render = () => {
+      const query = normalise(search.value);
+      const matches = cards.filter((card) => {
+        const periods = card.dataset.periods.split(',');
+        return (!query || normalise(card.dataset.search).includes(query)) && (!period.value || periods.includes(period.value)) && (!track.value || card.dataset.track === track.value);
+      }).sort((a, b) => {
+        const yearDifference = Number(a.dataset.year) - Number(b.dataset.year);
+        const direction = sort.value === 'newest' ? -1 : 1;
+        return yearDifference ? yearDifference * direction : Number(a.dataset.index) - Number(b.dataset.index);
+      });
+
+      cards.forEach((card) => card.hidden = true);
+      matches.forEach((card, index) => { card.hidden = index >= limit; list.append(card); });
+      const shown = Math.min(matches.length, limit);
+      count.textContent = `${shown} ${shown === 1 ? (language === 'en' ? 'story shown' : 'historie vist') : (language === 'en' ? 'stories shown' : 'historier vist')}`;
+      empty.hidden = matches.length !== 0;
+      more.hidden = matches.length <= limit;
+
+      const next = new URLSearchParams();
+      if (search.value.trim()) next.set('q', search.value.trim());
+      if (period.value) next.set(periodKey, period.value);
+      if (track.value) next.set(trackKey, track.value);
+      if (sort.value === 'newest') next.set(sortKey, 'newest');
+      const queryString = next.toString();
+      history.replaceState(null, '', `${location.pathname}${queryString ? `?${queryString}` : ''}`);
+    };
+
+    form.addEventListener('input', () => { limit = 12; render(); });
+    form.addEventListener('reset', () => { setTimeout(() => { limit = 12; render(); }); });
+    more.addEventListener('click', () => { limit += 12; render(); });
+    render();
+  });
+</script>

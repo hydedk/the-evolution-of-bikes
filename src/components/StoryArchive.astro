@@ -23,14 +23,14 @@ const copy = isEnglish ? {
   search: 'Search stories', placeholder: 'Person, race, place or component…',
   period: 'Period', allPeriods: 'All periods', track: 'Theme', allTracks: 'All themes',
   race: 'Unusual moments in racing', people: 'People beyond the podium', mechanics: 'Mechanics with consequences',
-  sort: 'Order', oldest: 'Oldest first', newest: 'Newest first', reset: 'Clear filters',
+  sort: 'Order', latest: 'Recently added', oldest: 'Oldest period first', newest: 'Newest period first', reset: 'Clear filters',
   reader: 'Our readers’ own stories', read: 'Read the story →', readDanish: 'Read in Danish →',
   more: 'Show more stories', none: 'No stories match your search.', singular: 'story shown', plural: 'stories shown',
 } : {
   search: 'Søg i historier', placeholder: 'Person, løb, sted eller komponent…',
   period: 'Periode', allPeriods: 'Alle perioder', track: 'Tema', allTracks: 'Alle temaer',
   race: 'Løbenes skæve øjeblikke', people: 'Menneskene uden for podiet', mechanics: 'Mekanik med konsekvenser',
-  sort: 'Rækkefølge', oldest: 'Ældste først', newest: 'Nyeste først', reset: 'Nulstil filtre',
+  sort: 'Rækkefølge', latest: 'Senest tilføjet', oldest: 'Ældste periode først', newest: 'Nyeste periode først', reset: 'Nulstil filtre',
   reader: 'Læsernes egne fortællinger', read: 'Læs historien →', readDanish: 'Læs på dansk →',
   more: 'Vis flere historier', none: 'Ingen historier passer til din søgning.', singular: 'historie vist', plural: 'historier vist',
 };
@@ -40,7 +40,7 @@ const copy = isEnglish ? {
     <label class="story-search"><span>{copy.search}</span><input type="search" placeholder={copy.placeholder} autocomplete="off" data-story-search /></label>
     <label><span>{copy.period}</span><select data-story-period><option value="">{copy.allPeriods}</option>{periods.map(([value, label]) => <option value={value}>{label}</option>)}</select></label>
     <label><span>{copy.track}</span><select data-story-track><option value="">{copy.allTracks}</option><option value="race">{copy.race}</option><option value="people">{copy.people}</option><option value="mechanics">{copy.mechanics}</option></select></label>
-    <label><span>{copy.sort}</span><select data-story-sort><option value="oldest">{copy.oldest}</option><option value="newest">{copy.newest}</option></select></label>
+    <label><span>{copy.sort}</span><select data-story-sort><option value="latest">{copy.latest}</option><option value="oldest">{copy.oldest}</option><option value="newest">{copy.newest}</option></select></label>
     <button type="reset" class="story-filter-reset">{copy.reset}</button>
   </form>
   <p class="story-result-count" data-story-count aria-live="polite"></p>
@@ -83,7 +83,7 @@ const copy = isEnglish ? {
     search.value = params.get('q') ?? '';
     period.value = params.get(periodKey) ?? '';
     track.value = params.get(trackKey) ?? '';
-    sort.value = params.get(sortKey) ?? 'oldest';
+    sort.value = params.get(sortKey) ?? 'latest';
 
     const render = () => {
       const query = normalise(search.value);
@@ -91,6 +91,7 @@ const copy = isEnglish ? {
         const periods = card.dataset.periods.split(',');
         return (!query || normalise(card.dataset.search).includes(query)) && (!period.value || periods.includes(period.value)) && (!track.value || card.dataset.track === track.value);
       }).sort((a, b) => {
+        if (sort.value === 'latest') return Number(a.dataset.index) - Number(b.dataset.index);
         const yearDifference = Number(a.dataset.year) - Number(b.dataset.year);
         const direction = sort.value === 'newest' ? -1 : 1;
         return yearDifference ? yearDifference * direction : Number(a.dataset.index) - Number(b.dataset.index);
@@ -107,7 +108,7 @@ const copy = isEnglish ? {
       if (search.value.trim()) next.set('q', search.value.trim());
       if (period.value) next.set(periodKey, period.value);
       if (track.value) next.set(trackKey, track.value);
-      if (sort.value === 'newest') next.set(sortKey, 'newest');
+      if (sort.value !== 'latest') next.set(sortKey, sort.value);
       const queryString = next.toString();
       history.replaceState(null, '', `${location.pathname}${queryString ? `?${queryString}` : ''}`);
     };

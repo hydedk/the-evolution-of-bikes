@@ -14,6 +14,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'da-tour-de-france-flyttede-ind-paa-boernevaerelset': 'people',
   'christian-christensen-tour-de-france-1913': 'people',
   'den-hvide-oedemark-og-hoensefarmerens-toerst': 'people',
   'beryl-burton-12-timersrekord-1967': 'people',
@@ -33,6 +34,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'da-tour-de-france-flyttede-ind-paa-boernevaerelset', type: 'historie', year: '1930’erne–i dag', title: 'Da Tour de France flyttede ind på børneværelset', text: 'Små støbte cykelryttere gjorde fortovet, sandkassen og gulvtæppet til etapeløb — og blev siden samlerobjekter med deres egne støbeformer og særpræg.', image: 'images/stories/miniature-cyclists/hero.webp', periods: ['1930-1939', '1940-1949', '1950-1959'], topics: ['tour-de-france', 'legetøj', 'reklamekaravane', 'miniaturer'], relatedBikes: [], relatedComponents: [] },
   { slug: 'christian-christensen-tour-de-france-1913', type: 'historie', year: '1913', title: 'Christian Christensen – ude af Touren, men videre til Paris', text: 'Christian Christensen overskred tidsgrænsen i Touren 1913. Ifølge senere beretninger kørte den danske mejerist alligevel videre til Paris.', image: 'images/stories/christian-christensen-1913/christian-christensen-tour-1913.webp', periods: ['1900-1920'], topics: ['tour-de-france', 'dansk-cykling', 'tidsgrænse', 'individuelle-ryttere'], relatedBikes: [], relatedComponents: [] },
 
   { slug: 'den-hvide-oedemark-og-hoensefarmerens-toerst', type: 'historie', year: '2003', title: 'Den hvide ødemark og hønsefarmerens tørst', text: 'Flasken var tom på Mont Ventoux. Så kom en dansk Tour-rytter fra 1958 til at bestemme, om læseren skulle tage imod vand.', image: 'images/stories/den-hvide-oedemark/mont-ventoux-2003-illustration.webp', periods: ['2000-2009'], topics: ['læserhistorie', 'mont-ventoux', 'dansk-cykling', 'væske'], relatedBikes: [], relatedComponents: [] },

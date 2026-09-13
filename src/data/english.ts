@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'da-tour-de-france-flyttede-ind-paa-boernevaerelset': ['When the Tour de France moved into the children’s room', 'Small cast cyclists turned pavements, sandpits and carpets into stage races — and later became collectibles with their own moulds, poses and peculiarities.'],
   'christian-christensen-tour-de-france-1913': ['Christian Christensen – out of the Tour, but on to Paris', 'Christian Christensen missed the time limit in the 1913 Tour. Later accounts describe how the Danish dairy worker continued to Paris outside the classification.'],
   'den-hvide-oedemark-og-hoensefarmerens-toerst': ['The white wilderness and the chicken farmer’s thirst', 'The bottle was empty on Mont Ventoux. Then a Danish Tour rider from 1958 helped decide whether the reader should accept water.'],
   'tom-simpson-mont-ventoux-1967': ['The day Tom Simpson died on Mont Ventoux', 'Heat, dehydration, exhaustion and stimulants came together on the bare mountain during the 1967 Tour de France.'],
@@ -49,6 +50,7 @@ const bikeCopy: Record<string, [string, string?, string?]> = {
 };
 
 const englishYear = (year: string) => year
+  .replace('1930’erne–i dag', '1930s–today')
   .replace('1890’erne–1930’erne', '1890s–1930s')
   .replace('1950’erne', '1950s')
   .replace('1983-model', '1983 model')

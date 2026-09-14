@@ -33,7 +33,7 @@ const digest = async (value: string) => {
   return Array.from(new Uint8Array(hash), (byte) => byte.toString(16).padStart(2, '0')).join('');
 };
 
-const notifyEditorialTeam = async (submission: { id: string; title: string; place: string }) => {
+const notifyEditorialTeam = async (submission: { id: string; title: string; place: string; type: 'story' | 'comment' }) => {
   const apiKey = Deno.env.get('RESEND_API_KEY');
   const to = Deno.env.get('EDITORIAL_NOTIFICATION_EMAIL');
   const from = Deno.env.get('EDITORIAL_FROM_EMAIL');
@@ -45,20 +45,22 @@ const notifyEditorialTeam = async (submission: { id: string; title: string; plac
       'authorization': `Bearer ${apiKey}`,
       'content-type': 'application/json',
       'user-agent': 'the-evolution-of-bikes/1.0',
-      'idempotency-key': `reader-story-${submission.id}`,
+      'idempotency-key': `reader-${submission.type}-${submission.id}`,
     },
     body: JSON.stringify({
       from,
       to: [to],
-      subject: `Ny læserhistorie: ${submission.title}`,
+      subject: `${submission.type === 'comment' ? 'Ny kommentar' : 'Ny læserhistorie'}: ${submission.title}`,
       text: [
-        'Der er modtaget en ny læserhistorie.',
+        submission.type === 'comment' ? 'Der er modtaget en ny kommentar.' : 'Der er modtaget en ny læserhistorie.',
         '',
         `Overskrift: ${submission.title}`,
         `Sted: ${submission.place}`,
         `Nummer: ${submission.id}`,
         '',
-        'Historien og billederne ligger i det private redaktionelle system.',
+        submission.type === 'comment'
+          ? 'Kommentaren ligger i det private redaktionelle system.'
+          : 'Historien og billederne ligger i det private redaktionelle system.',
       ].join('\n'),
     }),
   });
@@ -80,6 +82,7 @@ Deno.serve(async (request) => {
     if (clean(form.get('website'), 200)) return json({ ok: true }, 202, origin);
 
     const title = clean(form.get('title'), 140);
+    const submissionType = clean(form.get('submission_type'), 20) === 'comment' ? 'comment' : 'story';
     const place = clean(form.get('place'), 160);
     const period = clean(form.get('period'), 80) || null;
     const story = clean(form.get('story'), 20000);
@@ -117,10 +120,10 @@ Deno.serve(async (request) => {
     const { count } = await supabase.from('story_submissions')
       .select('id', { count: 'exact', head: true })
       .eq('source_ip_hash', ipHash).gte('created_at', oneHourAgo);
-    if ((count ?? 0) >= 5) return json({ error: 'Der er sendt for mange historier. Prøv igen senere.' }, 429, origin);
+    if ((count ?? 0) >= 5) return json({ error: 'Der er sendt for mange bidrag. Prøv igen senere.' }, 429, origin);
 
     const { data: submission, error: insertError } = await supabase.from('story_submissions').insert({
-      title, place, period, story, submitter_name: submitterName,
+      submission_type: submissionType, title, place, period, story, submitter_name: submitterName,
       submitter_email: submitterEmail, credit_preference: creditPreference,
       image_notes: imageNotes, rights_confirmed: true, editorial_consent: true,
       privacy_consent: true, terms_version: termsVersion, source_ip_hash: ipHash,
@@ -141,7 +144,7 @@ Deno.serve(async (request) => {
     }
 
     try {
-      await notifyEditorialTeam({ id: submission.id, title, place });
+      await notifyEditorialTeam({ id: submission.id, title, place, type: submissionType });
     } catch (notificationError) {
       // E-mailen er kun en besked. En allerede gemt historie må ikke gå tabt,
       // hvis mailtjenesten midlertidigt er utilgængelig.
@@ -151,6 +154,6 @@ Deno.serve(async (request) => {
     return json({ ok: true, id: submission.id }, 201, origin);
   } catch (error) {
     console.error(error);
-    return json({ error: 'Historien kunne ikke gemmes. Prøv igen senere.' }, 500, origin);
+    return json({ error: 'Bidraget kunne ikke gemmes. Prøv igen senere.' }, 500, origin);
   }
 });

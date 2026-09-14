@@ -13,8 +13,8 @@ const configured = Boolean(anonKey);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <meta name="robots" content="noindex,nofollow,noarchive" />
-  <meta name="description" content="Privat administration af indsendte læserhistorier." />
-  <title>Indsendte historier · Administration</title>
+  <meta name="description" content="Privat administration af indsendte historier og kommentarer." />
+  <title>Indsendelser · Administration</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
@@ -23,7 +23,7 @@ const configured = Boolean(anonKey);
 <body class="admin-body" data-supabase-url={supabaseUrl} data-anon-key={anonKey} data-admin-url={adminUrl}>
   <header class="admin-header">
     <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
-    <p>Redaktion · indsendte historier</p>
+    <p>Redaktion · indsendelser</p>
     <button id="sign-out" class="admin-link-button" type="button" hidden>Log ud</button>
   </header>
 
@@ -31,7 +31,7 @@ const configured = Boolean(anonKey);
     <section id="login-view" class="admin-login" aria-labelledby="login-title">
       <p class="section-label">Privat område</p>
       <h1 id="login-title">Redaktionel<br /><em>indbakke</em></h1>
-      <p>Log ind for at gennemgå historier, billeder og kontaktoplysninger.</p>
+      <p>Log ind for at gennemgå historier, kommentarer, billeder og kontaktoplysninger.</p>
       {!configured && <div class="admin-alert"><strong>Login er ikke koblet til endnu.</strong><span>Den offentlige Supabase-nøgle skal tilføjes til sidens byggeindstillinger.</span></div>}
       <form id="login-form" class="admin-login-form">
         <label>E-mail<input name="email" type="email" autocomplete="username" required /></label>
@@ -53,9 +53,14 @@ const configured = Boolean(anonKey);
 
     <section id="admin-view" class="admin-workspace" hidden aria-labelledby="workspace-title">
       <header class="admin-workspace-header">
-        <div><p class="section-label">Redaktionel indbakke</p><h1 id="workspace-title">Indsendte historier</h1></div>
-        <p id="record-count" aria-live="polite">Henter historier…</p>
+        <div><p class="section-label">Redaktionel indbakke</p><h1 id="workspace-title">Indsendelser</h1></div>
+        <p id="record-count" aria-live="polite">Henter indsendelser…</p>
       </header>
+
+      <div class="admin-type-tabs" role="tablist" aria-label="Type indsendelse">
+        <button type="button" role="tab" data-type="story" aria-selected="true">Historier <span id="story-count"></span></button>
+        <button type="button" role="tab" data-type="comment" aria-selected="false">Kommentarer <span id="comment-count"></span></button>
+      </div>
 
       <div class="admin-toolbar">
         <label class="admin-search"><span>Søg</span><input id="story-search" type="search" placeholder="Titel, navn, sted eller e-mail" /></label>
@@ -65,9 +70,9 @@ const configured = Boolean(anonKey);
 
       <p id="workspace-status" class="admin-form-status" aria-live="polite"></p>
       <div class="admin-columns">
-        <nav id="submission-list" class="admin-submission-list" aria-label="Indsendte historier"></nav>
+        <nav id="submission-list" class="admin-submission-list" aria-label="Indsendelser"></nav>
         <article id="submission-detail" class="admin-detail">
-          <div class="admin-empty"><span aria-hidden="true">↙</span><h2>Vælg en historie</h2><p>Indhold, billeder og redaktionelle noter vises her.</p></div>
+          <div class="admin-empty"><span aria-hidden="true">↙</span><h2>Vælg en indsendelse</h2><p>Indhold, kontaktoplysninger og redaktionelle noter vises her.</p></div>
         </article>
       </div>
     </section>
@@ -76,7 +81,7 @@ const configured = Boolean(anonKey);
   <template id="detail-template">
     <div class="admin-detail-content">
       <header class="admin-detail-header"><div><p class="detail-date"></p><h2 class="detail-title"></h2><p class="detail-place"></p></div><span class="detail-status"></span></header>
-      <section class="admin-detail-section"><h3>Historien</h3><div class="detail-story"></div></section>
+      <section class="admin-detail-section"><h3 class="detail-content-heading">Historien</h3><div class="detail-story"></div></section>
       <section class="admin-detail-section detail-images-section"><h3>Billeder <span class="detail-image-count"></span></h3><div class="detail-images"></div><p class="detail-image-notes"></p></section>
       <section class="admin-detail-section"><h3>Indsender</h3><dl class="detail-contact"></dl><div class="detail-consents"></div></section>
       <form class="admin-editor-form">
@@ -107,11 +112,15 @@ const configured = Boolean(anonKey);
   const list = document.querySelector('#submission-list');
   const detail = document.querySelector('#submission-detail');
   const count = document.querySelector('#record-count');
+  const typeTabs = [...document.querySelectorAll('[data-type]')];
+  const storyCount = document.querySelector('#story-count');
+  const commentCount = document.querySelector('#comment-count');
   const search = document.querySelector('#story-search');
   const filter = document.querySelector('#status-filter');
   const storageKey = 'teob-admin-session';
   let submissions = [];
   let selectedId = null;
+  let activeType = 'story';
 
   const dateTime = (value) => value ? new Intl.DateTimeFormat('da-DK', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(value)) : '—';
   const fileSize = (bytes) => bytes ? `${(bytes / 1024 / 1024).toFixed(1).replace('.', ',')} MB` : '';
@@ -159,28 +168,34 @@ const configured = Boolean(anonKey);
   }
 
   async function loadSubmissions() {
-    workspaceStatus.textContent = 'Henter historier…';
+    workspaceStatus.textContent = 'Henter indsendelser…';
     try {
       const result = await adminFetch(); submissions = result.submissions || [];
       workspaceStatus.textContent = ''; renderList();
       if (selectedId && submissions.some((item) => item.id === selectedId)) renderDetail(selectedId);
     } catch (error) {
-      workspaceStatus.textContent = error instanceof Error ? error.message : 'Historierne kunne ikke hentes.';
+      workspaceStatus.textContent = error instanceof Error ? error.message : 'Indsendelserne kunne ikke hentes.';
       if (/Log ind|adgang/.test(workspaceStatus.textContent)) showLogin(workspaceStatus.textContent);
     }
   }
 
   function filteredSubmissions() {
     const query = search.value.trim().toLocaleLowerCase('da');
-    return submissions.filter((item) => (!filter.value || item.status === filter.value) && (!query ||
+    return submissions.filter((item) => (item.submission_type || 'story') === activeType && (!filter.value || item.status === filter.value) && (!query ||
       [item.title, item.place, item.period, item.submitter_name, item.submitter_email, item.story]
         .some((value) => String(value || '').toLocaleLowerCase('da').includes(query))));
   }
 
   function renderList() {
     const visible = filteredSubmissions(); list.replaceChildren();
-    count.textContent = `${visible.length} af ${submissions.length} ${submissions.length === 1 ? 'historie' : 'historier'}`;
-    if (!visible.length) { const empty = document.createElement('p'); empty.className = 'admin-list-empty'; empty.textContent = 'Ingen historier matcher søgningen.'; list.append(empty); return; }
+    const stories = submissions.filter((item) => (item.submission_type || 'story') === 'story');
+    const comments = submissions.filter((item) => item.submission_type === 'comment');
+    storyCount.textContent = `(${stories.length})`; commentCount.textContent = `(${comments.length})`;
+    typeTabs.forEach((tab) => tab.setAttribute('aria-selected', String(tab.dataset.type === activeType)));
+    const typeTotal = activeType === 'comment' ? comments.length : stories.length;
+    const noun = activeType === 'comment' ? (typeTotal === 1 ? 'kommentar' : 'kommentarer') : (typeTotal === 1 ? 'historie' : 'historier');
+    count.textContent = `${visible.length} af ${typeTotal} ${noun}`;
+    if (!visible.length) { const empty = document.createElement('p'); empty.className = 'admin-list-empty'; empty.textContent = `Ingen ${noun} matcher søgningen.`; list.append(empty); return; }
     visible.forEach((item) => {
       const button = document.createElement('button'); button.type = 'button'; button.className = 'admin-submission-card';
       button.dataset.selected = String(item.id === selectedId); button.addEventListener('click', () => renderDetail(item.id));
@@ -189,7 +204,7 @@ const configured = Boolean(anonKey);
       const date = document.createElement('time'); date.dateTime = item.created_at; date.textContent = dateTime(item.created_at);
       const title = document.createElement('strong'); title.textContent = item.title;
       const meta = document.createElement('span'); meta.textContent = [item.submitter_name, item.place, item.period].filter(Boolean).join(' · ');
-      const images = document.createElement('span'); images.className = 'admin-card-images'; images.textContent = item.images?.length ? `${item.images.length} ${item.images.length === 1 ? 'billede' : 'billeder'}` : 'Ingen billeder';
+      const images = document.createElement('span'); images.className = 'admin-card-images'; images.textContent = activeType === 'comment' ? 'Kommentar' : (item.images?.length ? `${item.images.length} ${item.images.length === 1 ? 'billede' : 'billeder'}` : 'Ingen billeder');
       top.append(status, date); button.append(top, title, meta, images); list.append(button);
     });
   }
@@ -201,8 +216,11 @@ const configured = Boolean(anonKey);
     fragment.querySelector('.detail-date').textContent = `Modtaget ${dateTime(item.created_at)}`;
     fragment.querySelector('.detail-title').textContent = item.title;
     fragment.querySelector('.detail-place').textContent = [item.place, item.period].filter(Boolean).join(' · ');
+    fragment.querySelector('.detail-content-heading').textContent = item.submission_type === 'comment' ? 'Kommentaren' : 'Historien';
     const statusBadge = fragment.querySelector('.detail-status'); statusBadge.className = `detail-status admin-status status-${item.status}`; statusBadge.textContent = statusLabels[item.status] || item.status;
     fragment.querySelector('.detail-story').textContent = item.story;
+    const imageSection = fragment.querySelector('.detail-images-section');
+    imageSection.hidden = item.submission_type === 'comment';
     fragment.querySelector('.detail-image-count').textContent = `(${item.images?.length || 0})`;
     const imageGrid = fragment.querySelector('.detail-images');
     if (item.images?.length) item.images.forEach((image) => {
@@ -227,9 +245,18 @@ const configured = Boolean(anonKey);
       } catch (error) { saveStatus.textContent = error instanceof Error ? error.message : 'Ændringerne kunne ikke gemmes.'; }
       finally { button.disabled = false; }
     });
-    const technical = fragment.querySelector('.detail-technical'); addText(technical, 'dt', 'Indsendelsesnummer', item.id); addText(technical, 'dt', 'Vilkår', item.terms_version); addText(technical, 'dt', 'Senest ændret', dateTime(item.updated_at)); addText(technical, 'dt', 'Udgivet', dateTime(item.published_at));
+    const technical = fragment.querySelector('.detail-technical'); addText(technical, 'dt', 'Type', item.submission_type === 'comment' ? 'Kommentar' : 'Historie'); addText(technical, 'dt', 'Indsendelsesnummer', item.id); addText(technical, 'dt', 'Vilkår', item.terms_version); addText(technical, 'dt', 'Senest ændret', dateTime(item.updated_at)); addText(technical, 'dt', 'Udgivet', dateTime(item.published_at));
     detail.append(fragment); detail.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  typeTabs.forEach((tab) => tab.addEventListener('click', () => {
+    activeType = tab.dataset.type;
+    selectedId = null;
+    search.value = '';
+    filter.value = '';
+    detail.innerHTML = `<div class="admin-empty"><span aria-hidden="true">↙</span><h2>Vælg en ${activeType === 'comment' ? 'kommentar' : 'historie'}</h2><p>Indhold, kontaktoplysninger og redaktionelle noter vises her.</p></div>`;
+    renderList();
+  }));
 
   loginForm?.addEventListener('submit', async (event) => {
     event.preventDefault(); const button = loginForm.querySelector('button'); button.disabled = true; loginStatus.textContent = 'Logger ind…';
@@ -318,6 +345,10 @@ const configured = Boolean(anonKey);
   .admin-workspace-header { display: flex; align-items: end; justify-content: space-between; gap: 35px; }
   .admin-workspace-header h1 { margin: 10px 0 0; font-size: clamp(3rem, 6vw, 6rem); line-height: .9; }
   .admin-workspace-header > p { margin: 0 0 7px; color: #67645d; }
+  .admin-type-tabs { display: flex; gap: 4px; margin-top: 34px; border-bottom: 1px solid var(--line); }
+  .admin-type-tabs button { padding: 13px 19px; border: 1px solid transparent; border-bottom: 0; background: transparent; color: #67645d; font: 600 .92rem var(--sans); cursor: pointer; }
+  .admin-type-tabs button[aria-selected="true"] { margin-bottom: -1px; border-color: var(--line); background: var(--paper); color: var(--ink); }
+  .admin-type-tabs span { margin-left: 4px; font-weight: 400; }
   .admin-toolbar { display: grid; grid-template-columns: minmax(260px, 1fr) minmax(190px, .35fr) auto; gap: 14px; align-items: end; margin: 42px 0 20px; padding: 18px; background: var(--paper); border: 1px solid var(--line); }
   .admin-toolbar label span { font-size: .8rem; }
   .admin-secondary-button { min-height: 48px; padding: 10px 18px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font: 600 .88rem var(--sans); cursor: pointer; }

@@ -64,7 +64,7 @@ Deno.serve(async (request) => {
     if (request.method === 'GET') {
       const { data, error } = await supabase
         .from('story_submissions')
-        .select('id,created_at,updated_at,status,title,place,period,story,submitter_name,submitter_email,credit_preference,image_notes,rights_confirmed,editorial_consent,privacy_consent,terms_version,canonical_url,published_at,internal_notes,story_submission_images(id,created_at,original_name,mime_type,size_bytes,storage_path)')
+        .select('id,created_at,updated_at,submission_type,status,title,place,period,story,submitter_name,submitter_email,credit_preference,image_notes,rights_confirmed,editorial_consent,privacy_consent,terms_version,canonical_url,published_at,internal_notes,story_submission_images(id,created_at,original_name,mime_type,size_bytes,storage_path)')
         .order('created_at', { ascending: false })
         .limit(250);
       if (error) throw error;

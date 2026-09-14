@@ -14,6 +14,7 @@ const commentSection = (base: string) => `
     <label class="form-honeypot" aria-hidden="true">Hjemmeside<input name="website" tabindex="-1" autocomplete="off" /></label>
     <input name="title" type="hidden" />
     <input name="place" type="hidden" />
+    <input name="submission_type" type="hidden" value="comment" />
     <input name="period" type="hidden" value="Kommentar til en historie" />
     <input name="credit" type="hidden" value="name" />
     <input name="rights_confirmed" type="hidden" value="yes" />

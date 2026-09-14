@@ -111,6 +111,21 @@ Deno.serve(async (request) => {
       canonical_url: canonicalUrl,
       updated_at: new Date().toISOString(),
     };
+    if (Object.hasOwn(body, 'submitter_name') || Object.hasOwn(body, 'story')) {
+      const { data: existingSubmission, error: typeError } = await supabase
+        .from('story_submissions').select('submission_type').eq('id', id).single();
+      if (typeError) throw typeError;
+      if (existingSubmission.submission_type !== 'comment') {
+        return json({ error: 'Kun kommentarer kan redigeres her.' }, 400, origin);
+      }
+      const submitterName = cleanNullable(body.submitter_name, 160);
+      const story = cleanNullable(body.story, 20000);
+      if (!submitterName || !story || story.length < 20) {
+        return json({ error: 'Navn og en kommentar på mindst 20 tegn er påkrævet.' }, 400, origin);
+      }
+      update.submitter_name = submitterName;
+      update.story = story;
+    }
     if (status === 'udgivet') {
       const { data: existing, error: existingError } = await supabase
         .from('story_submissions').select('published_at').eq('id', id).single();
@@ -120,7 +135,7 @@ Deno.serve(async (request) => {
 
     const { data, error } = await supabase.from('story_submissions')
       .update(update).eq('id', id)
-      .select('id,updated_at,status,internal_notes,canonical_url,published_at').single();
+      .select('id,updated_at,status,internal_notes,canonical_url,published_at,submitter_name,story').single();
     if (error) throw error;
     return json({ submission: data }, 200, origin);
   } catch (error) {

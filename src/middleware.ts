@@ -2,13 +2,20 @@ import { defineMiddleware } from 'astro:middleware';
 
 const submissionUrl = import.meta.env.PUBLIC_STORY_SUBMISSION_URL
   ?? 'https://fmxiyfhncvhnwzwipnxu.supabase.co/functions/v1/submit-reader-story';
+const commentsUrl = import.meta.env.PUBLIC_STORY_COMMENTS_URL
+  ?? 'https://fmxiyfhncvhnwzwipnxu.supabase.co/functions/v1/public-story-comments';
+const anonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 
-const commentSection = (base: string) => `
-<section class="story-comments" aria-labelledby="story-comments-title" data-story-comments data-submission-url="${submissionUrl}">
+const commentSection = (base: string, canonicalUrl: string) => `
+<section class="story-comments" aria-labelledby="story-comments-title" data-story-comments data-submission-url="${submissionUrl}" data-comments-url="${commentsUrl}" data-anon-key="${anonKey}" data-canonical-url="${canonicalUrl}">
   <div class="story-comments-copy">
     <p class="section-label">Kommentarer og erindringer</p>
     <h2 id="story-comments-title">Har du noget at tilføje?</h2>
     <p>En rettelse, en detalje eller en erindring kan gøre historien bedre. Bidrag bliver læst og godkendt, før de eventuelt vises på siden.</p>
+    <div class="published-comments" aria-live="polite">
+      <p class="published-comments-status">Henter læsernes kommentarer …</p>
+      <div class="published-comments-list"></div>
+    </div>
   </div>
   <form class="story-comment-form" aria-describedby="story-comment-note story-comment-status">
     <label class="form-honeypot" aria-hidden="true">Hjemmeside<input name="website" tabindex="-1" autocomplete="off" /></label>
@@ -41,9 +48,10 @@ export const onRequest = defineMiddleware(async (context, next) => {
   if (!isStoryPage || !response.headers.get('content-type')?.includes('text/html')) return response;
 
   const base = pathname.slice(0, markerIndex);
+  const canonicalUrl = `https://teob.dk${pathname}`;
   const html = await response.text();
   const scripts = `<script src="${base}/scripts/story-comments.js" defer></script><script src="${base}/scripts/next-story.js" defer></script>`;
-  const withComments = html.replace('</main>', `${commentSection(base)}</main>`);
+  const withComments = html.replace('</main>', `${commentSection(base, canonicalUrl)}</main>`);
   const body = withComments.replace('</body>', `${scripts}</body>`);
 
   return new Response(body, {

@@ -85,7 +85,7 @@ const configured = Boolean(anonKey);
       <section class="admin-detail-section detail-images-section"><h3>Billeder <span class="detail-image-count"></span></h3><div class="detail-images"></div><p class="detail-image-notes"></p></section>
       <section class="admin-detail-section"><h3>Indsender</h3><dl class="detail-contact"></dl><div class="detail-consents"></div></section>
       <form class="admin-editor-form">
-        <section class="admin-detail-section"><h3>Redaktionelt arbejde</h3><div class="admin-editor-grid"><label>Status<select name="status"></select></label><label>Kanonisk adresse<input name="canonical_url" type="url" placeholder="https://teob.dk/historier/…" /></label></div><label>Interne noter<textarea name="internal_notes" rows="8" placeholder="Research, aftaler, manglende oplysninger og næste skridt…"></textarea></label><div class="admin-save-row"><p class="admin-save-status" aria-live="polite"></p><button type="submit">Gem ændringer</button></div></section>
+        <section class="admin-detail-section"><h3>Redaktionelt arbejde</h3><div class="admin-comment-editor" hidden><label>Navn<input name="submitter_name" maxlength="160" /></label><label>Kommentar<textarea name="story" rows="8" minlength="20" maxlength="20000"></textarea></label></div><div class="admin-editor-grid"><label>Status<select name="status"></select></label><label>Kanonisk adresse<input name="canonical_url" type="url" placeholder="https://teob.dk/historier/…" /></label></div><label>Interne noter<textarea name="internal_notes" rows="8" placeholder="Research, aftaler, manglende oplysninger og næste skridt…"></textarea></label><div class="admin-save-row"><p class="admin-save-status" aria-live="polite"></p><button type="submit">Gem ændringer</button></div></section>
       </form>
       <section class="admin-detail-section admin-technical"><h3>Registrering</h3><dl class="detail-technical"></dl></section>
     </div>
@@ -218,7 +218,7 @@ const configured = Boolean(anonKey);
     fragment.querySelector('.detail-place').textContent = [item.place, item.period].filter(Boolean).join(' · ');
     fragment.querySelector('.detail-content-heading').textContent = item.submission_type === 'comment' ? 'Kommentaren' : 'Historien';
     const statusBadge = fragment.querySelector('.detail-status'); statusBadge.className = `detail-status admin-status status-${item.status}`; statusBadge.textContent = statusLabels[item.status] || item.status;
-    fragment.querySelector('.detail-story').textContent = item.story;
+    const storyContent = fragment.querySelector('.detail-story'); storyContent.textContent = item.story;
     const imageSection = fragment.querySelector('.detail-images-section');
     imageSection.hidden = item.submission_type === 'comment';
     fragment.querySelector('.detail-image-count').textContent = `(${item.images?.length || 0})`;
@@ -231,17 +231,23 @@ const configured = Boolean(anonKey);
       link.append(img); figure.append(link, caption); imageGrid.append(figure);
     }); else { const empty = document.createElement('p'); empty.textContent = 'Der blev ikke indsendt billeder.'; imageGrid.append(empty); }
     const imageNotes = fragment.querySelector('.detail-image-notes'); imageNotes.textContent = item.image_notes || ''; imageNotes.hidden = !item.image_notes;
-    const contact = fragment.querySelector('.detail-contact'); addText(contact, 'dt', 'Navn', item.submitter_name); addText(contact, 'dt', 'E-mail', item.submitter_email); addText(contact, 'dt', 'Kreditering', creditLabels[item.credit_preference] || item.credit_preference);
+    const contact = fragment.querySelector('.detail-contact'); addText(contact, 'dt', 'Navn', item.submitter_name); addText(contact, 'dt', 'E-mail', item.submitter_email); addText(contact, 'dt', 'Kreditering', creditLabels[item.credit_preference] || item.credit_preference); const contactName = contact.querySelector('dd');
     const consents = fragment.querySelector('.detail-consents'); ['Rettigheder bekræftet', 'Redaktionel tilladelse', 'Privatliv accepteret'].forEach((text) => { const badge = document.createElement('span'); badge.textContent = `✓ ${text}`; consents.append(badge); });
     const form = fragment.querySelector('.admin-editor-form'); const statusSelect = form.elements.status;
     Object.entries(statusLabels).forEach(([value, label]) => statusSelect.append(option(value, label))); statusSelect.value = item.status;
+    const commentEditor = form.querySelector('.admin-comment-editor');
+    commentEditor.hidden = item.submission_type !== 'comment';
+    form.elements.submitter_name.value = item.submitter_name || '';
+    form.elements.story.value = item.story || '';
     form.elements.canonical_url.value = item.canonical_url || ''; form.elements.internal_notes.value = item.internal_notes || '';
     form.addEventListener('submit', async (event) => {
       event.preventDefault(); const saveStatus = form.querySelector('.admin-save-status'); const button = form.querySelector('button[type="submit"]');
       button.disabled = true; saveStatus.textContent = 'Gemmer…';
       try {
-        const result = await adminFetch({ method: 'PATCH', body: JSON.stringify({ id: item.id, status: statusSelect.value, canonical_url: form.elements.canonical_url.value, internal_notes: form.elements.internal_notes.value }) });
-        Object.assign(item, result.submission); saveStatus.textContent = `Gemt ${dateTime(item.updated_at)}`; renderList(); statusBadge.textContent = statusLabels[item.status]; statusBadge.className = `detail-status admin-status status-${item.status}`;
+        const changes = { id: item.id, status: statusSelect.value, canonical_url: form.elements.canonical_url.value, internal_notes: form.elements.internal_notes.value };
+        if (item.submission_type === 'comment') { changes.submitter_name = form.elements.submitter_name.value; changes.story = form.elements.story.value; }
+        const result = await adminFetch({ method: 'PATCH', body: JSON.stringify(changes) });
+        Object.assign(item, result.submission); saveStatus.textContent = `Gemt ${dateTime(item.updated_at)}`; renderList(); statusBadge.textContent = statusLabels[item.status]; statusBadge.className = `detail-status admin-status status-${item.status}`; storyContent.textContent = item.story; contactName.textContent = item.submitter_name;
       } catch (error) { saveStatus.textContent = error instanceof Error ? error.message : 'Ændringerne kunne ikke gemmes.'; }
       finally { button.disabled = false; }
     });
@@ -391,6 +397,8 @@ const configured = Boolean(anonKey);
   .detail-consents { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 25px; }
   .detail-consents span { padding: 7px 10px; background: #dce5d8; font-size: .75rem; }
   .admin-editor-grid { display: grid; grid-template-columns: minmax(180px, .5fr) minmax(0, 1fr); gap: 18px; margin-bottom: 20px; }
+  .admin-comment-editor { display: grid; gap: 18px; margin-bottom: 28px; padding: 22px; border-left: 3px solid var(--rust); background: #ebe6da; }
+  .admin-comment-editor[hidden] { display: none; }
   .admin-editor-form textarea { resize: vertical; line-height: 1.55; }
   .admin-save-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-top: 20px; }
   .admin-save-row button { justify-self: auto; }

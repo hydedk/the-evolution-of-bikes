@@ -39,6 +39,16 @@ const configured = Boolean(anonKey);
         <p id="login-status" class="admin-form-status" aria-live="polite"></p>
         <button type="submit" disabled={!configured}>Log ind</button>
       </form>
+      <div id="recovery-view" class="admin-recovery" hidden>
+        <h2>Vælg en ny adgangskode</h2>
+        <p>Indtast den adgangskode, du fremover vil bruge til administrationen.</p>
+        <form id="recovery-form" class="admin-login-form">
+          <label>Ny adgangskode<input name="password" type="password" autocomplete="new-password" minlength="8" required /></label>
+          <label>Gentag adgangskoden<input name="password_confirm" type="password" autocomplete="new-password" minlength="8" required /></label>
+          <p id="recovery-status" class="admin-form-status" aria-live="polite"></p>
+          <button type="submit" disabled={!configured}>Gem ny adgangskode</button>
+        </form>
+      </div>
     </section>
 
     <section id="admin-view" class="admin-workspace" hidden aria-labelledby="workspace-title">
@@ -89,6 +99,9 @@ const configured = Boolean(anonKey);
   const adminView = document.querySelector('#admin-view');
   const loginForm = document.querySelector('#login-form');
   const loginStatus = document.querySelector('#login-status');
+  const recoveryView = document.querySelector('#recovery-view');
+  const recoveryForm = document.querySelector('#recovery-form');
+  const recoveryStatus = document.querySelector('#recovery-status');
   const signOut = document.querySelector('#sign-out');
   const workspaceStatus = document.querySelector('#workspace-status');
   const list = document.querySelector('#submission-list');
@@ -228,6 +241,51 @@ const configured = Boolean(anonKey);
     } catch (error) { loginStatus.textContent = error instanceof Error ? error.message : 'Login mislykkedes.'; }
     finally { button.disabled = !config.anonKey; }
   });
+
+  const authHash = new URLSearchParams(window.location.hash.slice(1));
+  const recoveryToken = authHash.get('type') === 'recovery' ? authHash.get('access_token') : '';
+  const authError = authHash.get('error_description');
+
+  if (recoveryToken) {
+    loginForm.hidden = true;
+    recoveryView.hidden = false;
+  } else if (authError) {
+    loginStatus.textContent = `Linket kunne ikke bruges: ${authError.replaceAll('+', ' ')}`;
+    history.replaceState(null, '', window.location.pathname);
+  }
+
+  recoveryForm?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const button = recoveryForm.querySelector('button');
+    const data = new FormData(recoveryForm);
+    const password = String(data.get('password') || '');
+    const confirmation = String(data.get('password_confirm') || '');
+    if (password !== confirmation) {
+      recoveryStatus.textContent = 'De to adgangskoder er ikke ens.';
+      return;
+    }
+    button.disabled = true;
+    recoveryStatus.textContent = 'Gemmer den nye adgangskode…';
+    try {
+      const response = await fetch(`${config.supabaseUrl}/auth/v1/user`, {
+        method: 'PUT',
+        headers: { apikey: config.anonKey, authorization: `Bearer ${recoveryToken}`, 'content-type': 'application/json' },
+        body: JSON.stringify({ password }),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.msg || result.message || 'Adgangskoden kunne ikke gemmes. Bed om et nyt link.');
+      history.replaceState(null, '', window.location.pathname);
+      setSession(null);
+      recoveryForm.reset();
+      recoveryView.hidden = true;
+      loginForm.hidden = false;
+      loginStatus.textContent = 'Adgangskoden er gemt. Du kan nu logge ind.';
+    } catch (error) {
+      recoveryStatus.textContent = error instanceof Error ? error.message : 'Adgangskoden kunne ikke gemmes.';
+    } finally {
+      button.disabled = !config.anonKey;
+    }
+  });
   signOut?.addEventListener('click', () => showLogin('Du er logget ud.'));
   document.querySelector('#refresh-stories')?.addEventListener('click', loadSubmissions);
   search?.addEventListener('input', renderList); filter?.addEventListener('change', renderList);
@@ -246,6 +304,10 @@ const configured = Boolean(anonKey);
   .admin-alert { display: grid; gap: 5px; margin: 28px 0; padding: 18px; border-left: 4px solid var(--rust); background: #f5eee1; }
   .admin-alert span { color: #65625b; line-height: 1.5; }
   .admin-login-form { display: grid; gap: 18px; margin-top: 35px; }
+  .admin-login-form[hidden] { display: none; }
+  .admin-recovery { margin-top: 38px; padding-top: 30px; border-top: 1px solid var(--line); }
+  .admin-recovery h2 { margin: 0 0 12px; font-size: clamp(2rem, 5vw, 3.3rem); }
+  .admin-recovery > p { margin: 0; line-height: 1.6; }
   .admin-login-form label, .admin-toolbar label, .admin-editor-form label { display: grid; gap: 8px; font-weight: 600; }
   .admin-login-form input, .admin-toolbar input, .admin-toolbar select, .admin-editor-form input, .admin-editor-form select, .admin-editor-form textarea { width: 100%; min-height: 48px; border: 1px solid #aaa69a; border-radius: 0; background: #fff; color: var(--ink); padding: 12px 14px; font: inherit; }
   .admin-login-form input:focus, .admin-toolbar input:focus, .admin-toolbar select:focus, .admin-editor-form :is(input,select,textarea):focus { outline: 3px solid rgba(166,73,45,.2); border-color: var(--rust); }
@@ -324,4 +386,3 @@ const configured = Boolean(anonKey);
 </style>
 </body>
 </html>
-

@@ -64,7 +64,7 @@ Deno.serve(async (request) => {
     if (request.method === 'GET') {
       const { data, error } = await supabase
         .from('story_submissions')
-        .select('id,created_at,updated_at,submission_type,status,title,place,period,story,submitter_name,submitter_email,credit_preference,image_notes,rights_confirmed,editorial_consent,privacy_consent,terms_version,canonical_url,published_at,internal_notes,story_submission_images(id,created_at,original_name,mime_type,size_bytes,storage_path)')
+        .select('id,created_at,updated_at,submission_type,status,title,place,period,story,editorial_title,editorial_story,submitter_name,submitter_email,credit_preference,image_notes,rights_confirmed,editorial_consent,privacy_consent,terms_version,canonical_url,published_at,internal_notes,story_submission_images(id,created_at,original_name,mime_type,size_bytes,storage_path)')
         .order('created_at', { ascending: false })
         .limit(250);
       if (error) throw error;
@@ -111,6 +111,21 @@ Deno.serve(async (request) => {
       canonical_url: canonicalUrl,
       updated_at: new Date().toISOString(),
     };
+    if (Object.hasOwn(body, 'editorial_title') || Object.hasOwn(body, 'editorial_story')) {
+      const { data: existingSubmission, error: typeError } = await supabase
+        .from('story_submissions').select('submission_type').eq('id', id).single();
+      if (typeError) throw typeError;
+      if (existingSubmission.submission_type !== 'story') {
+        return json({ error: 'Redaktionel titel og tekst kan kun gemmes på historier.' }, 400, origin);
+      }
+      const editorialTitle = cleanNullable(body.editorial_title, 140);
+      const editorialStory = cleanNullable(body.editorial_story, 40000);
+      if (editorialStory && editorialStory.length < 20) {
+        return json({ error: 'Den redigerede historie skal være på mindst 20 tegn.' }, 400, origin);
+      }
+      update.editorial_title = editorialTitle;
+      update.editorial_story = editorialStory;
+    }
     if (Object.hasOwn(body, 'submitter_name') || Object.hasOwn(body, 'story')) {
       const { data: existingSubmission, error: typeError } = await supabase
         .from('story_submissions').select('submission_type').eq('id', id).single();
@@ -135,7 +150,7 @@ Deno.serve(async (request) => {
 
     const { data, error } = await supabase.from('story_submissions')
       .update(update).eq('id', id)
-      .select('id,updated_at,status,internal_notes,canonical_url,published_at,submitter_name,story').single();
+      .select('id,updated_at,status,internal_notes,canonical_url,published_at,submitter_name,story,editorial_title,editorial_story').single();
     if (error) throw error;
     return json({ submission: data }, 200, origin);
   } catch (error) {

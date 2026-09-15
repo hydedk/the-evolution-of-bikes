@@ -68,6 +68,44 @@ const notifyEditorialTeam = async (submission: { id: string; title: string; plac
   if (!response.ok) throw new Error(`Resend svarede med HTTP ${response.status}`);
 };
 
+const acknowledgeSubmitter = async (submission: { id: string; title: string; email: string; type: 'story' | 'comment' }) => {
+  const apiKey = Deno.env.get('RESEND_API_KEY');
+  const from = Deno.env.get('EDITORIAL_FROM_EMAIL');
+  if (!apiKey || !from) return;
+
+  const isComment = submission.type === 'comment';
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      'authorization': `Bearer ${apiKey}`,
+      'content-type': 'application/json',
+      'user-agent': 'the-evolution-of-bikes/1.0',
+      'idempotency-key': `reader-receipt-${submission.type}-${submission.id}`,
+    },
+    body: JSON.stringify({
+      from,
+      to: [submission.email],
+      subject: isComment ? 'Tak for din kommentar' : 'Tak for din historie',
+      text: [
+        isComment ? 'Tak for din kommentar.' : 'Tak for din historie.',
+        '',
+        `Overskrift: ${submission.title}`,
+        `Indsendelsesnummer: ${submission.id}`,
+        '',
+        isComment
+          ? 'Kommentaren er modtaget og bliver læst, før den eventuelt vises på hjemmesiden.'
+          : 'Historien er modtaget og bliver læst af redaktionen. Vi kontakter dig, hvis vi mangler oplysninger.',
+        'En indsendelse er ikke en garanti for offentliggørelse.',
+        '',
+        'Venlig hilsen',
+        'The Evolution of Bikes',
+      ].join('\n'),
+    }),
+  });
+
+  if (!response.ok) throw new Error(`Resend svarede med HTTP ${response.status}`);
+};
+
 Deno.serve(async (request) => {
   const requestOrigin = request.headers.get('origin') ?? '';
   const allowedOrigins = (Deno.env.get('ALLOWED_ORIGINS') ?? '')
@@ -149,6 +187,13 @@ Deno.serve(async (request) => {
       // E-mailen er kun en besked. En allerede gemt historie må ikke gå tabt,
       // hvis mailtjenesten midlertidigt er utilgængelig.
       console.error('Editorial notification failed', notificationError);
+    }
+
+    try {
+      await acknowledgeSubmitter({ id: submission.id, title, email: submitterEmail, type: submissionType });
+    } catch (receiptError) {
+      // Kvitteringen må heller ikke gøre en allerede gemt indsendelse ugyldig.
+      console.error('Submitter receipt failed', receiptError);
     }
 
     return json({ ok: true, id: submission.id }, 201, origin);

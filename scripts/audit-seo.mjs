@@ -36,6 +36,7 @@ const pages = await Promise.all(files.map(async (file) => {
     description: unescapeHtml(text(html, /<meta\s+name=["']description["'][^>]*content=["'](.*?)["'][^>]*>/is)),
     h1: (html.match(/<h1(?:\s|>)/gi) || []).length,
     canonical: text(html, /<link\s+rel=["']canonical["'][^>]*href=["'](.*?)["'][^>]*>/is),
+    links: [...html.matchAll(/<a\b[^>]*\bhref=["'](.*?)["'][^>]*>/gis)].map((match) => unescapeHtml(match[1])),
     images,
     jsonLd,
   };
@@ -44,6 +45,7 @@ const pages = await Promise.all(files.map(async (file) => {
 const publicPages = pages.filter((page) => !page.redirect);
 
 const errors = [];
+const publicPaths = new Set(publicPages.map((page) => page.path));
 for (const page of publicPages) {
   if (!page.title) errors.push(`${page.path}: mangler title`);
   if (!page.description) errors.push(`${page.path}: mangler meta description`);
@@ -74,6 +76,13 @@ for (const page of publicPages) {
     } else if (/^(?:img[_-]?\d+|dsc[_-]?\d+|[\w-]+\.(?:jpe?g|png|webp|gif|svg))$/i.test(image.alt)) {
       errors.push(`${page.path}: ${label} bruger et filnavn som alt-tekst: ${image.alt}`);
     }
+  }
+  for (const href of page.links) {
+    if (!href || href.startsWith('#') || /^(?:mailto|tel|javascript):/i.test(href)) continue;
+    let target;
+    try { target = new URL(href, `https://teob.dk${page.path}`); } catch { continue; }
+    if (target.hostname !== 'teob.dk' || !target.pathname.endsWith('/')) continue;
+    if (!publicPaths.has(target.pathname)) errors.push(`${page.path}: internt link peger på en manglende side: ${target.pathname}`);
   }
 }
 

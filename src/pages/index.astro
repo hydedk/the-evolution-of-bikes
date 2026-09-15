@@ -8,7 +8,7 @@ const featuredStories = stories.map((story) => ({
   year: story.year,
   title: story.title,
   text: story.text,
-  image: `${base}/${story.image}`,
+  image: typeof story.image === 'string' ? `${base}/${story.image}` : story.image.src,
   link: `${base}/historier/${story.slug}/`,
 }));
 const featuredFallback = featuredStories[0];

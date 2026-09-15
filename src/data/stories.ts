@@ -1,10 +1,13 @@
+import type { ImageMetadata } from 'astro';
+import parisRoubaixChallengeImage from '../assets/stories/paris-roubaix-challenge/paris-roubaix-2025-secteur-1.jpg';
+
 export type StoryMeta = {
   slug: string;
   type: 'historie';
   year: string;
   title: string;
   text: string;
-  image: string;
+  image: string | ImageMetadata;
   periods: string[];
   topics: string[];
   relatedBikes: string[];
@@ -14,6 +17,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'da-vaekkeuret-kostede-20-minutter-paa-paris-roubaix-ruten': 'people',
   'da-tour-de-france-flyttede-ind-paa-boernevaerelset': 'people',
   'christian-christensen-tour-de-france-1913': 'people',
   'den-hvide-oedemark-og-hoensefarmerens-toerst': 'people',
@@ -34,6 +38,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'da-vaekkeuret-kostede-20-minutter-paa-paris-roubaix-ruten', type: 'historie', year: '2018', title: 'Da vækkeuret kostede 20 minutter på Paris–Roubaix-ruten', text: 'Jonas B. Hansen vågnede 45 minutter for sent i Roubaix. Da han nåede starten, var de andre kørt, og resten af dagen blev én lang jagt.', image: parisRoubaixChallengeImage, periods: ['2010-2019'], topics: ['læserhistorie', 'paris-roubaix', 'brosten', 'motionscykling'], relatedBikes: [], relatedComponents: [] },
   { slug: 'da-tour-de-france-flyttede-ind-paa-boernevaerelset', type: 'historie', year: '1930’erne–i dag', title: 'Da Tour de France flyttede ind på børneværelset', text: 'Små støbte cykelryttere gjorde fortovet, sandkassen og gulvtæppet til etapeløb — og blev siden samlerobjekter med deres egne støbeformer og særpræg.', image: 'images/stories/miniature-cyclists/hero.webp', periods: ['1930-1939', '1940-1949', '1950-1959'], topics: ['tour-de-france', 'legetøj', 'reklamekaravane', 'miniaturer'], relatedBikes: [], relatedComponents: [] },
   { slug: 'christian-christensen-tour-de-france-1913', type: 'historie', year: '1913', title: 'Christian Christensen – ude af Touren, men videre til Paris', text: 'Christian Christensen overskred tidsgrænsen i Touren 1913. Ifølge senere beretninger kørte den danske mejerist alligevel videre til Paris.', image: 'images/stories/christian-christensen-1913/christian-christensen-tour-1913.webp', periods: ['1900-1920'], topics: ['tour-de-france', 'dansk-cykling', 'tidsgrænse', 'individuelle-ryttere'], relatedBikes: [], relatedComponents: [] },
 

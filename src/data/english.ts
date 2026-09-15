@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'da-vaekkeuret-kostede-20-minutter-paa-paris-roubaix-ruten': ['When the alarm clock cost twenty minutes on the Paris–Roubaix route', 'Jonas B. Hansen woke up 45 minutes late in Roubaix. By the time he reached the start, the others had left and the rest of his day became one long chase.'],
   'da-tour-de-france-flyttede-ind-paa-boernevaerelset': ['When the Tour de France moved into the children’s room', 'Small cast cyclists turned pavements, sandpits and carpets into stage races — and later became collectibles with their own moulds, poses and peculiarities.'],
   'christian-christensen-tour-de-france-1913': ['Christian Christensen – out of the Tour, but on to Paris', 'Christian Christensen missed the time limit in the 1913 Tour. Later accounts describe how the Danish dairy worker continued to Paris outside the classification.'],
   'den-hvide-oedemark-og-hoensefarmerens-toerst': ['The white wilderness and the chicken farmer’s thirst', 'The bottle was empty on Mont Ventoux. Then a Danish Tour rider from 1958 helped decide whether the reader should accept water.'],

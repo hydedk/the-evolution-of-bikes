@@ -1,6 +1,7 @@
 ---
 import type { StoryMeta } from '../data/stories';
 import { storyTrackFor } from '../data/stories';
+import OptimizedImage from './OptimizedImage.astro';
 
 interface Props {
   stories: StoryMeta[];
@@ -51,7 +52,9 @@ const copy = isEnglish ? {
       const linkLanguage = isEnglish && !hasEnglishPage ? 'da' : language;
       const year = story.year.match(/\d{4}/)?.[0] ?? '9999';
       return <a href={href} lang={linkLanguage} data-story-card data-search={`${story.title} ${story.text} ${story.year} ${story.topics.join(' ')}`} data-periods={story.periods.join(',')} data-track={storyTrackFor(story)} data-year={year} data-index={index}>
-        <img src={`${base}/${story.image}`} alt="" />
+        {typeof story.image === 'string'
+          ? <img src={`${base}/${story.image}`} alt="" />
+          : <OptimizedImage src={story.image} alt={`Billede til historien ${story.title}`} widths={[360, 560, 760]} sizes="(max-width: 700px) 100vw, 44vw" />}
         <div><span>{story.year}</span>{story.topics.includes('læserhistorie') && <strong class="reader-story-badge">{copy.reader}</strong>}<h2>{story.title}</h2><p>{story.text}</p><b>{hasEnglishPage ? copy.read : copy.readDanish}</b></div>
       </a>;
     })}

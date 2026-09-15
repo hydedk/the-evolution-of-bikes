@@ -62,6 +62,11 @@ const configured = Boolean(anonKey);
         <button type="button" role="tab" data-type="comment" aria-selected="false">Kommentarer <span id="comment-count"></span></button>
       </div>
 
+      <section class="admin-status-overview" aria-labelledby="status-overview-title">
+        <h2 id="status-overview-title">Status for historier</h2>
+        <div id="status-counts" class="admin-status-counts"></div>
+      </section>
+
       <div class="admin-toolbar">
         <label class="admin-search"><span>Søg</span><input id="story-search" type="search" placeholder="Titel, navn, sted eller e-mail" /></label>
         <label><span>Status</span><select id="status-filter"><option value="">Alle statusser</option></select></label>
@@ -115,6 +120,8 @@ const configured = Boolean(anonKey);
   const typeTabs = [...document.querySelectorAll('[data-type]')];
   const storyCount = document.querySelector('#story-count');
   const commentCount = document.querySelector('#comment-count');
+  const statusOverviewTitle = document.querySelector('#status-overview-title');
+  const statusCounts = document.querySelector('#status-counts');
   const search = document.querySelector('#story-search');
   const filter = document.querySelector('#status-filter');
   const storageKey = 'teob-admin-session';
@@ -193,7 +200,9 @@ const configured = Boolean(anonKey);
     const comments = submissions.filter((item) => item.submission_type === 'comment');
     storyCount.textContent = `(${stories.length})`; commentCount.textContent = `(${comments.length})`;
     typeTabs.forEach((tab) => tab.setAttribute('aria-selected', String(tab.dataset.type === activeType)));
-    const typeTotal = activeType === 'comment' ? comments.length : stories.length;
+    const activeSubmissions = activeType === 'comment' ? comments : stories;
+    const typeTotal = activeSubmissions.length;
+    renderStatusCounts(activeSubmissions);
     const noun = activeType === 'comment' ? (typeTotal === 1 ? 'kommentar' : 'kommentarer') : (typeTotal === 1 ? 'historie' : 'historier');
     count.textContent = `${visible.length} af ${typeTotal} ${noun}`;
     if (!visible.length) { const empty = document.createElement('p'); empty.className = 'admin-list-empty'; empty.textContent = `Ingen ${noun} matcher søgningen.`; list.append(empty); return; }
@@ -208,6 +217,33 @@ const configured = Boolean(anonKey);
       const images = document.createElement('span'); images.className = 'admin-card-images'; images.textContent = activeType === 'comment' ? 'Kommentar' : (item.images?.length ? `${item.images.length} ${item.images.length === 1 ? 'billede' : 'billeder'}` : 'Ingen billeder');
       top.append(status, date); button.append(top, title, meta, images); list.append(button);
     });
+  }
+
+  function renderStatusCounts(activeSubmissions) {
+    statusOverviewTitle.textContent = activeType === 'comment' ? 'Status for kommentarer' : 'Status for historier';
+    statusCounts.replaceChildren();
+    const totals = activeSubmissions.reduce((result, item) => {
+      result[item.status] = (result[item.status] || 0) + 1;
+      return result;
+    }, {});
+    const choices = [['', 'Alle'], ...Object.entries(statusLabels)];
+    choices.forEach(([value, label]) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = value ? `admin-status-count status-${value}` : 'admin-status-count status-all';
+      button.dataset.selected = String(filter.value === value);
+      button.setAttribute('aria-pressed', String(filter.value === value));
+      const number = document.createElement('strong'); number.textContent = String(value ? (totals[value] || 0) : activeSubmissions.length);
+      const text = document.createElement('span'); text.textContent = label;
+      button.append(number, text);
+      button.addEventListener('click', () => { filter.value = value; renderList(); });
+      statusCounts.append(button);
+      if (value) {
+        const filterOption = [...filter.options].find((item) => item.value === value);
+        if (filterOption) filterOption.textContent = `${label} (${totals[value] || 0})`;
+      }
+    });
+    filter.options[0].textContent = `Alle statusser (${activeSubmissions.length})`;
   }
 
   function renderDetail(id) {
@@ -362,7 +398,20 @@ const configured = Boolean(anonKey);
   .admin-type-tabs button { padding: 13px 19px; border: 1px solid transparent; border-bottom: 0; background: transparent; color: #67645d; font: 600 .92rem var(--sans); cursor: pointer; }
   .admin-type-tabs button[aria-selected="true"] { margin-bottom: -1px; border-color: var(--line); background: var(--paper); color: var(--ink); }
   .admin-type-tabs span { margin-left: 4px; font-weight: 400; }
-  .admin-toolbar { display: grid; grid-template-columns: minmax(260px, 1fr) minmax(190px, .35fr) auto; gap: 14px; align-items: end; margin: 42px 0 20px; padding: 18px; background: var(--paper); border: 1px solid var(--line); }
+  .admin-status-overview { margin-top: 22px; }
+  .admin-status-overview h2 { margin: 0 0 10px; color: #68665f; font: 600 .78rem var(--sans); letter-spacing: .04em; text-transform: uppercase; }
+  .admin-status-counts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .admin-status-count { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 8px; min-height: 42px; padding: 7px 11px; border: 1px solid transparent; background: #ddd7cb; color: #383631; font: inherit; cursor: pointer; }
+  .admin-status-count strong { font: 600 1.05rem var(--sans); }
+  .admin-status-count span { font-size: .72rem; }
+  .admin-status-count[data-selected="true"] { border-color: var(--ink); box-shadow: inset 0 -3px var(--ink); }
+  .admin-status-count:hover { border-color: var(--rust); }
+  .admin-status-count.status-all { background: var(--paper); border-color: var(--line); }
+  .admin-status-count.status-modtaget, .admin-status-count.status-afventer-svar { background: #ead9a9; }
+  .admin-status-count.status-under-research, .admin-status-count.status-foerste-kontrol { background: #c9d7dc; }
+  .admin-status-count.status-godkendt, .admin-status-count.status-udgivet { background: #c9d8c4; }
+  .admin-status-count.status-afvist, .admin-status-count.status-trukket-tilbage { background: #dec2bb; }
+  .admin-toolbar { display: grid; grid-template-columns: minmax(260px, 1fr) minmax(190px, .35fr) auto; gap: 14px; align-items: end; margin: 22px 0 20px; padding: 18px; background: var(--paper); border: 1px solid var(--line); }
   .admin-toolbar label span { font-size: .8rem; }
   .admin-secondary-button { min-height: 48px; padding: 10px 18px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font: 600 .88rem var(--sans); cursor: pointer; }
   .admin-columns { display: grid; grid-template-columns: minmax(280px, 390px) minmax(0, 1fr); gap: 20px; align-items: start; }

@@ -50,7 +50,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const base = pathname.slice(0, markerIndex);
   const canonicalUrl = `https://teob.dk${pathname}`;
   const html = await response.text();
-  const scripts = `<script src="${base}/scripts/story-comments.js" defer></script><script src="${base}/scripts/next-story.js" defer></script>`;
+  const scripts = `<script src="${base}/scripts/story-comments.js" defer></script>`;
   const withComments = html.replace('</main>', `${commentSection(base, canonicalUrl)}</main>`);
   const body = withComments.replace('</body>', `${scripts}</body>`);
 

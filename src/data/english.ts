@@ -2,6 +2,8 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'paris-roubaix-1949-to-vindere': ['Paris–Roubaix 1949 – one race, two winners', 'André Mahé crossed first after being misdirected at the track. Serse Coppi protested. Months later, the race had two winners.'],
+  'drillium-vaegtbesparelse': ['Drillium – when the drill became a weight-saving tool', 'Chainrings, brake levers and derailleurs went under the drill. Drillium became weight saving, workshop craft and decoration.'],
   'banecykling-ellegaard-1912': ['Three men held at the start on the Buffalo track', 'A press photograph from Paris shows Thorvald Ellegaard, André Perchicot and Gabriel Poulain in the still moment before a sprint match.'],
   'da-vaekkeuret-kostede-20-minutter-paa-paris-roubaix-ruten': ['When the alarm clock cost twenty minutes on the Paris–Roubaix route', 'Jonas B. Hansen woke up 45 minutes late in Roubaix. By the time he reached the start, the others had left and the rest of his day became one long chase.'],
   'da-tour-de-france-flyttede-ind-paa-boernevaerelset': ['When the Tour de France moved into the children’s room', 'Small cast cyclists turned pavements, sandpits and carpets into stage races — and later became collectibles with their own moulds, poses and peculiarities.'],

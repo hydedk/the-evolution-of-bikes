@@ -1,6 +1,8 @@
 import type { ImageMetadata } from 'astro';
 import parisRoubaixChallengeImage from '../assets/stories/paris-roubaix-challenge/paris-roubaix-2025-secteur-1.jpg';
 import buffaloSprintStartImage from '../assets/stories/banecykling-1912/buffalo-sprintstart-1912.jpg';
+import parisRoubaix1949Image from '../assets/stories/paris-roubaix-1949/velodrome-illustration.png';
+import drilliumImage from '../assets/stories/drillium/drillium-workshop-illustration.png';
 
 export type StoryMeta = {
   slug: string;
@@ -33,12 +35,15 @@ const storyTracks: Record<string, StoryTrack> = {
   'da-gearene-kom-og-oel-narrede-feltet': 'mechanics',
   'suntour-shimano-gearkrigen': 'mechanics',
   'gunnar-asmussen-funny-bike': 'mechanics',
+  'drillium-vaegtbesparelse': 'mechanics',
 };
 
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'paris-roubaix-1949-to-vindere', type: 'historie', year: '1949', title: 'Paris–Roubaix 1949 – ét løb, to vindere', text: 'André Mahé kom først i mål, men var blevet vist forkert ved banen. Serse Coppi protesterede. Måneder senere fik løbet to vindere.', image: parisRoubaix1949Image, periods: ['1940-1949'], topics: ['paris-roubaix', 'andre-mahe', 'serse-coppi', 'regler', 'klassikere'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'drillium-vaegtbesparelse', type: 'historie', year: '1960’erne–1970’erne', title: 'Drillium – da boret blev et værktøj til vægtbesparelse', text: 'Klinger, bremsegreb og bagskiftere kom under boret. Drillium blev både vægtjagt, værkstedshåndværk og udsmykning.', image: drilliumImage, periods: ['1960-1969', '1970-1979'], topics: ['drillium', 'vægtbesparelse', 'komponenter', 'værksted', 'eddy-merckx'], relatedBikes: [], relatedComponents: [] },
   { slug: 'banecykling-ellegaard-1912', type: 'historie', year: '1912', title: 'Tre mænd holdes fast på Buffalo-banen', text: 'Et pressefoto fra Paris viser Thorvald Ellegaard, André Perchicot og Gabriel Poulain i det stille øjeblik før en sprintmatch.', image: buffaloSprintStartImage, periods: ['1900-1920'], topics: ['banecykling', 'thorvald-ellegaard', 'sprint', 'dansk-cykling'], relatedBikes: [], relatedComponents: [] },
   { slug: 'da-vaekkeuret-kostede-20-minutter-paa-paris-roubaix-ruten', type: 'historie', year: '2018', title: 'Da vækkeuret kostede 20 minutter på Paris–Roubaix-ruten', text: 'Jonas B. Hansen vågnede 45 minutter for sent i Roubaix. Da han nåede starten, var de andre kørt, og resten af dagen blev én lang jagt.', image: parisRoubaixChallengeImage, periods: ['2010-2019'], topics: ['læserhistorie', 'paris-roubaix', 'brosten', 'motionscykling'], relatedBikes: [], relatedComponents: [] },
   { slug: 'da-tour-de-france-flyttede-ind-paa-boernevaerelset', type: 'historie', year: '1930’erne–i dag', title: 'Da Tour de France flyttede ind på børneværelset', text: 'Små støbte cykelryttere gjorde fortovet, sandkassen og gulvtæppet til etapeløb — og blev siden samlerobjekter med deres egne støbeformer og særpræg.', image: 'images/stories/miniature-cyclists/hero.webp', periods: ['1930-1939', '1940-1949', '1950-1959'], topics: ['tour-de-france', 'legetøj', 'reklamekaravane', 'miniaturer'], relatedBikes: [], relatedComponents: [] },

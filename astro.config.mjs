@@ -55,6 +55,8 @@ const languagePairs = {
   '/historier/festina-sagen-tour-de-france-1998/': '/en/stories/festina-sagen-tour-de-france-1998/',
   '/historier/da-regntoejet-kom-med-op-i-solen/': '/en/stories/da-regntoejet-kom-med-op-i-solen/',
   '/historier/banecykling-ellegaard-1912/': '/en/stories/banecykling-ellegaard-1912/',
+  '/historier/paris-roubaix-1949-to-vindere/': '/en/stories/paris-roubaix-1949-to-vindere/',
+  '/historier/drillium-vaegtbesparelse/': '/en/stories/drillium-vaegtbesparelse/',
   '/perioder/1900-1920/': '/en/periods/1900-1920/',
   '/perioder/1920-1930/': '/en/periods/1920-1930/',
   '/perioder/1930-1939/': '/en/periods/1930-1939/',

@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'paris-brest-paris-1891-charles-terront': ["Paris–Brest–Paris 1891 – Charles Terront's three days", 'Charles Terront covered 1,200 kilometres in 71 hours 37 minutes. The newspaper race tested both the rider and the young safety bicycle.'],
   'paris-roubaix-1949-to-vindere': ['Paris–Roubaix 1949 – one race, two winners', 'André Mahé crossed first after being misdirected at the track. Serse Coppi protested. Months later, the race had two winners.'],
   'drillium-vaegtbesparelse': ['Drillium – when the drill became a weight-saving tool', 'Chainrings, brake levers and derailleurs went under the drill. Drillium became weight saving, workshop craft and decoration.'],
   'banecykling-ellegaard-1912': ['Three men held at the start on the Buffalo track', 'A press photograph from Paris shows Thorvald Ellegaard, André Perchicot and Gabriel Poulain in the still moment before a sprint match.'],

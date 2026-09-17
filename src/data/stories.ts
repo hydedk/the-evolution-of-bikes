@@ -3,6 +3,7 @@ import parisRoubaixChallengeImage from '../assets/stories/paris-roubaix-challeng
 import buffaloSprintStartImage from '../assets/stories/banecykling-1912/buffalo-sprintstart-1912.jpg';
 import parisRoubaix1949Image from '../assets/stories/paris-roubaix-1949/velodrome-illustration.png';
 import drilliumImage from '../assets/stories/drillium/drillium-workshop-illustration.png';
+import parisBrest1891Image from '../assets/stories/paris-brest-paris-1891/terront-le-petit-journal-1891.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -42,6 +43,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'paris-brest-paris-1891-charles-terront', type: 'historie', year: '1891', title: 'Paris–Brest–Paris 1891 – Charles Terronts tre døgn', text: 'Charles Terront kørte 1.200 kilometer på 71 timer og 37 minutter. Avisløbet blev en prøve på både rytteren og den nye sikkerhedscykel.', image: parisBrest1891Image, periods: ['1800-1899'], topics: ['paris-brest-paris', 'charles-terront', 'langdistance', 'pneumatiske-daek'], relatedBikes: [], relatedComponents: [] },
   { slug: 'paris-roubaix-1949-to-vindere', type: 'historie', year: '1949', title: 'Paris–Roubaix 1949 – ét løb, to vindere', text: 'André Mahé kom først i mål, men var blevet vist forkert ved banen. Serse Coppi protesterede. Måneder senere fik løbet to vindere.', image: parisRoubaix1949Image, periods: ['1940-1949'], topics: ['paris-roubaix', 'andre-mahe', 'serse-coppi', 'regler', 'klassikere'], relatedBikes: [], relatedComponents: [] },
   { slug: 'drillium-vaegtbesparelse', type: 'historie', year: '1960’erne–1970’erne', title: 'Drillium – da boret blev et værktøj til vægtbesparelse', text: 'Klinger, bremsegreb og bagskiftere kom under boret. Drillium blev både vægtjagt, værkstedshåndværk og udsmykning.', image: drilliumImage, periods: ['1960-1969', '1970-1979'], topics: ['drillium', 'vægtbesparelse', 'komponenter', 'værksted', 'eddy-merckx'], relatedBikes: [], relatedComponents: [] },
   { slug: 'banecykling-ellegaard-1912', type: 'historie', year: '1912', title: 'Tre mænd holdes fast på Buffalo-banen', text: 'Et pressefoto fra Paris viser Thorvald Ellegaard, André Perchicot og Gabriel Poulain i det stille øjeblik før en sprintmatch.', image: buffaloSprintStartImage, periods: ['1900-1920'], topics: ['banecykling', 'thorvald-ellegaard', 'sprint', 'dansk-cykling'], relatedBikes: [], relatedComponents: [] },

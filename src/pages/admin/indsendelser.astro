@@ -1,4 +1,6 @@
 ---
+import editorialOverview from '../../data/editorialOverview.json';
+
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL
   ?? 'https://fmxiyfhncvhnwzwipnxu.supabase.co';
@@ -6,6 +8,25 @@ const anonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '';
 const adminUrl = import.meta.env.PUBLIC_STORY_ADMIN_URL
   ?? `${supabaseUrl}/functions/v1/admin-story-submissions`;
 const configured = Boolean(anonKey);
+const editorialStatusLabels = {
+  indbakke: 'Indbakke', vurderes: 'Vurderes', research: 'Research', udkast: 'Udkast',
+  klar: 'Klar', publiceret: 'Publiceret', paa_hold: 'På hold', sammenlagt: 'Sammenlagt',
+};
+const editorialCategoryByStatus = {
+  indbakke: 'lager', vurderes: 'lager',
+  research: 'arbejde', udkast: 'arbejde', klar: 'arbejde',
+  paa_hold: 'pause', sammenlagt: 'pause',
+  publiceret: 'publiceret',
+};
+const editorialCategories = [
+  { category: 'lager', label: 'På lager' },
+  { category: 'arbejde', label: 'I arbejde' },
+  { category: 'pause', label: 'På hold / arkiv' },
+  { category: 'publiceret', label: 'Udgivet' },
+].map((entry) => ({
+  ...entry,
+  count: editorialOverview.filter((item) => editorialCategoryByStatus[item.status] === entry.category).length,
+}));
 ---
 <!doctype html>
 <html lang="da">
@@ -57,6 +78,12 @@ const configured = Boolean(anonKey);
         <p id="record-count" aria-live="polite">Henter indsendelser…</p>
       </header>
 
+      <div class="admin-mode-tabs" role="tablist" aria-label="Administrationsområde">
+        <button type="button" role="tab" data-admin-mode="inbox" aria-selected="true">Indsendelser</button>
+        <button type="button" role="tab" data-admin-mode="stock" aria-selected="false">Redaktionelt lager <span>({editorialOverview.length})</span></button>
+      </div>
+
+      <div id="admin-inbox-panel">
       <div class="admin-type-tabs" role="tablist" aria-label="Type indsendelse">
         <button type="button" role="tab" data-type="story" aria-selected="true">Historier <span id="story-count"></span></button>
         <button type="button" role="tab" data-type="comment" aria-selected="false">Kommentarer <span id="comment-count"></span></button>
@@ -80,6 +107,34 @@ const configured = Boolean(anonKey);
           <div class="admin-empty"><span aria-hidden="true">↙</span><h2>Vælg en indsendelse</h2><p>Indhold, kontaktoplysninger og redaktionelle noter vises her.</p></div>
         </article>
       </div>
+      </div>
+
+      <section id="editorial-stock-panel" class="editorial-stock" hidden aria-labelledby="editorial-stock-title">
+        <header class="editorial-stock-header">
+          <div><p class="section-label">Idébank og artikelkø</p><h2 id="editorial-stock-title">Hvad har vi på lager?</h2></div>
+          <p>Senest genereret 19. september 2026 · {editorialOverview.length} registrerede idéer</p>
+        </header>
+        <div class="editorial-summary" aria-label="Statusfordeling">
+          {editorialCategories.map(({ category, label, count }) => <button type="button" data-stock-category={category}><strong>{count}</strong><span>{label}</span></button>)}
+        </div>
+        <div class="editorial-toolbar">
+          <label><span>Søg i lageret</span><input id="stock-search" type="search" placeholder="Titel, år, periode eller næste handling" /></label>
+          <label><span>Kategori</span><select id="stock-status"><option value="">Alle kategorier</option>{editorialCategories.map(({ category, label, count }) => <option value={category}>{label} ({count})</option>)}</select></label>
+        </div>
+        <p id="stock-count" class="editorial-stock-count" aria-live="polite"></p>
+        <div id="stock-list" class="editorial-stock-list">
+          {editorialOverview.map((item) => (
+            <article class="editorial-stock-card" data-stock-card data-category={editorialCategoryByStatus[item.status]} data-search={[item.titel, item.aar, item.periode, item.naeste_handling, item.id].filter(Boolean).join(' ').toLocaleLowerCase('da')}>
+              <header><span class={`editorial-badge editorial-${editorialCategoryByStatus[item.status]}`}>{editorialCategories.find((entry) => entry.category === editorialCategoryByStatus[item.status])?.label}</span><span>{item.id}</span></header>
+              <h3>{item.titel}</h3>
+              <p class="editorial-meta">{[item.aar, item.periode, item.prioritet].filter(Boolean).join(' · ')}</p>
+              {item.naeste_handling && <p><strong>Næste skridt:</strong> {item.naeste_handling}</p>}
+              <dl><dt>Arbejdsstatus</dt><dd>{editorialStatusLabels[item.status] ?? item.status}</dd><dt>Dokumentation</dt><dd>{item.dokumentation || '—'}</dd><dt>Faktarisiko</dt><dd>{item.faktarisiko || '—'}</dd></dl>
+              {item.kanonisk_url && <a href={`${base}${item.kanonisk_url}`} target="_blank" rel="noopener">Åbn på hjemmesiden</a>}
+            </article>
+          ))}
+        </div>
+      </section>
     </section>
   </main>
 
@@ -117,6 +172,13 @@ const configured = Boolean(anonKey);
   const list = document.querySelector('#submission-list');
   const detail = document.querySelector('#submission-detail');
   const count = document.querySelector('#record-count');
+  const modeTabs = [...document.querySelectorAll('[data-admin-mode]')];
+  const inboxPanel = document.querySelector('#admin-inbox-panel');
+  const stockPanel = document.querySelector('#editorial-stock-panel');
+  const stockSearch = document.querySelector('#stock-search');
+  const stockStatus = document.querySelector('#stock-status');
+  const stockCount = document.querySelector('#stock-count');
+  const stockCards = [...document.querySelectorAll('[data-stock-card]')];
   const typeTabs = [...document.querySelectorAll('[data-type]')];
   const storyCount = document.querySelector('#story-count');
   const commentCount = document.querySelector('#comment-count');
@@ -135,6 +197,29 @@ const configured = Boolean(anonKey);
   const setSession = (value) => value ? sessionStorage.setItem(storageKey, JSON.stringify(value)) : sessionStorage.removeItem(storageKey);
   const addText = (parent, tag, label, value) => { const term = document.createElement(tag); term.textContent = label; const description = document.createElement(tag === 'dt' ? 'dd' : 'span'); description.textContent = value || '—'; parent.append(term, description); };
   const option = (value, label) => { const item = document.createElement('option'); item.value = value; item.textContent = label; return item; };
+
+  function renderStock() {
+    const query = stockSearch?.value.trim().toLocaleLowerCase('da') || '';
+    const category = stockStatus?.value || '';
+    let visible = 0;
+    stockCards.forEach((card) => {
+      const matches = (!category || card.dataset.category === category) && (!query || card.dataset.search.includes(query));
+      card.hidden = !matches;
+      if (matches) visible += 1;
+    });
+    if (stockCount) stockCount.textContent = `${visible} af ${stockCards.length} idéer vises`;
+    document.querySelectorAll('[data-stock-category]').forEach((button) => button.dataset.selected = String(button.dataset.stockCategory === category));
+  }
+
+  function setAdminMode(mode) {
+    const stock = mode === 'stock';
+    inboxPanel.hidden = stock;
+    stockPanel.hidden = !stock;
+    modeTabs.forEach((tab) => tab.setAttribute('aria-selected', String(tab.dataset.adminMode === mode)));
+    document.querySelector('#workspace-title').textContent = stock ? 'Redaktionelt lager' : 'Indsendelser';
+    count.textContent = stock ? `${stockCards.length} idéer i alt` : count.dataset.inboxText || count.textContent;
+    if (stock) renderStock(); else renderList();
+  }
 
   Object.entries(statusLabels).forEach(([value, label]) => filter?.append(option(value, label)));
 
@@ -307,6 +392,14 @@ const configured = Boolean(anonKey);
     renderList();
   }));
 
+  modeTabs.forEach((tab) => tab.addEventListener('click', () => setAdminMode(tab.dataset.adminMode)));
+  stockSearch?.addEventListener('input', renderStock);
+  stockStatus?.addEventListener('change', renderStock);
+  document.querySelectorAll('[data-stock-category]').forEach((button) => button.addEventListener('click', () => {
+    stockStatus.value = stockStatus.value === button.dataset.stockCategory ? '' : button.dataset.stockCategory;
+    renderStock();
+  }));
+
   loginForm?.addEventListener('submit', async (event) => {
     event.preventDefault(); const button = loginForm.querySelector('button'); button.disabled = true; loginStatus.textContent = 'Logger ind…';
     const data = new FormData(loginForm);
@@ -394,6 +487,10 @@ const configured = Boolean(anonKey);
   .admin-workspace-header { display: flex; align-items: end; justify-content: space-between; gap: 35px; }
   .admin-workspace-header h1 { margin: 10px 0 0; font-size: clamp(3rem, 6vw, 6rem); line-height: .9; }
   .admin-workspace-header > p { margin: 0 0 7px; color: #67645d; }
+  .admin-mode-tabs { display: flex; gap: 10px; margin-top: 34px; }
+  .admin-mode-tabs button { padding: 12px 18px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font: 600 .88rem var(--sans); cursor: pointer; }
+  .admin-mode-tabs button[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+  .admin-mode-tabs span { font-weight: 400; }
   .admin-type-tabs { display: flex; gap: 4px; margin-top: 34px; border-bottom: 1px solid var(--line); }
   .admin-type-tabs button { padding: 13px 19px; border: 1px solid transparent; border-bottom: 0; background: transparent; color: #67645d; font: 600 .92rem var(--sans); cursor: pointer; }
   .admin-type-tabs button[aria-selected="true"] { margin-bottom: -1px; border-color: var(--line); background: var(--paper); color: var(--ink); }
@@ -460,6 +557,36 @@ const configured = Boolean(anonKey);
   .admin-save-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-top: 20px; }
   .admin-save-row button { justify-self: auto; }
   .admin-technical { background: #e7e2d7; }
+  .editorial-stock { margin-top: 34px; }
+  .editorial-stock-header { display: flex; justify-content: space-between; gap: 30px; align-items: end; padding: clamp(24px, 4vw, 48px); background: var(--ink); color: var(--paper); }
+  .editorial-stock-header h2 { margin: 10px 0 0; font: 400 clamp(2.5rem, 5vw, 5rem)/.95 var(--display); }
+  .editorial-stock-header > p { max-width: 340px; margin: 0; color: #c7c8c2; text-align: right; line-height: 1.5; }
+  .editorial-summary { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); gap: 1px; margin-top: 1px; background: var(--line); }
+  .editorial-summary button { display: grid; gap: 5px; min-height: 82px; padding: 13px; border: 0; background: var(--paper); color: var(--ink); text-align: left; cursor: pointer; }
+  .editorial-summary button:hover, .editorial-summary button[data-selected="true"] { background: #d8c8b6; box-shadow: inset 0 -4px var(--rust); }
+  .editorial-summary strong { font: 400 1.8rem var(--display); }
+  .editorial-summary span { color: #625f58; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; }
+  .editorial-toolbar { display: grid; grid-template-columns: minmax(260px, 1fr) minmax(210px, .3fr); gap: 14px; margin: 24px 0 8px; padding: 18px; border: 1px solid var(--line); background: var(--paper); }
+  .editorial-toolbar label { display: grid; gap: 8px; font-weight: 600; }
+  .editorial-toolbar label span { font-size: .8rem; }
+  .editorial-toolbar :is(input, select) { min-height: 48px; padding: 12px 14px; border: 1px solid #aaa69a; border-radius: 0; background: #fff; color: var(--ink); font: inherit; }
+  .editorial-stock-count { margin: 14px 0; color: #67645d; font-size: .85rem; }
+  .editorial-stock-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .editorial-stock-card { display: flex; flex-direction: column; min-height: 280px; padding: 22px; border: 1px solid var(--line); background: var(--paper); }
+  .editorial-stock-card[hidden] { display: none; }
+  .editorial-stock-card header { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #706d65; font-size: .72rem; }
+  .editorial-stock-card h3 { margin: 18px 0 8px; font: 400 1.65rem/1.08 var(--display); }
+  .editorial-stock-card p { margin: 8px 0; font-size: .86rem; line-height: 1.5; }
+  .editorial-stock-card .editorial-meta { color: #6c6962; }
+  .editorial-stock-card dl { display: grid; grid-template-columns: auto 1fr; gap: 5px 12px; margin: auto 0 16px; padding-top: 18px; font-size: .75rem; }
+  .editorial-stock-card dt { color: #6c6962; }
+  .editorial-stock-card dd { margin: 0; overflow-wrap: anywhere; }
+  .editorial-stock-card > a { color: var(--rust); font-size: .8rem; font-weight: 600; text-underline-offset: 3px; }
+  .editorial-badge { width: fit-content; padding: 5px 8px; background: #ddd7cb; color: #383631; font-size: .66rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
+  .editorial-publiceret { background: #c9d8c4; }
+  .editorial-arbejde { background: #c9d7dc; }
+  .editorial-lager { background: #ead9a9; }
+  .editorial-pause { background: #ddd7cb; }
   @media (max-width: 880px) {
     .admin-header { align-items: flex-start; flex-wrap: wrap; gap: 15px; }
     .admin-header > p { order: 3; width: 100%; }
@@ -468,6 +595,7 @@ const configured = Boolean(anonKey);
     .admin-search { grid-column: 1 / -1; }
     .admin-columns { grid-template-columns: 1fr; }
     .admin-submission-list { position: static; max-height: 430px; }
+    .editorial-stock-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 560px) {
     .admin-workspace { padding-inline: 14px; }
@@ -477,6 +605,11 @@ const configured = Boolean(anonKey);
     .detail-contact, .detail-technical { grid-template-columns: 1fr; }
     .detail-contact dd, .detail-technical dd { margin: -5px 0 10px; }
     .admin-save-row { align-items: stretch; flex-direction: column; }
+    .admin-mode-tabs { display: grid; }
+    .editorial-stock-header { align-items: flex-start; flex-direction: column; }
+    .editorial-stock-header > p { text-align: left; }
+    .editorial-summary { grid-template-columns: repeat(2, 1fr); }
+    .editorial-toolbar, .editorial-stock-list { grid-template-columns: 1fr; }
   }
 </style>
 </body>

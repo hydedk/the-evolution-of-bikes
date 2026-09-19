@@ -2,6 +2,8 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'mogens-frey-tour-1970': ['When Mogens Frey won after a hand on the handlebars', 'Joaquim Agostinho crossed first in Mulhouse, but the jury awarded victory to team-mate Mogens Frey after visible interference in the sprint.'],
+  'niels-fredborg-mexico-1968': ['When Fredborg equalled the world record and won silver', 'Niels Fredborg equalled the world record in the Olympic kilometre in Mexico City. Eleven starters later, Pierre Trentin went faster.'],
   'christine-lueber-tour-2015': ["When the peloton finished, Christine Lueber's working day began again", 'A day of musettes, Alpine driving, laundry and massage reveals the part of the Tour de France that the results do not measure.'],
   'colnago-magni-pedalarm-1955': ['When a bent crank gave Colnago access to the Giro', "Ernesto Colnago was 23 when a mechanical observation on Fiorenzo Magni's bicycle took him into the Giro service crew."],
   'bartali-italien-1948': ['Did Bartali really bring peace back to Italy?', 'After the attempt on Palmiro Togliatti, Gino Bartali won three consecutive Tour stages. His victories gave a political crisis its most enduring hero.'],

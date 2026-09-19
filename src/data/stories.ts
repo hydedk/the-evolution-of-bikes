@@ -6,6 +6,8 @@ import drilliumImage from '../assets/stories/drillium/drillium-workshop-illustra
 import parisBrest1891Image from '../assets/stories/paris-brest-paris-1891/terront-le-petit-journal-1891.jpg';
 import peaceRace1948Image from '../assets/stories/fredsloebet-1948/prosenik-zoric-warsaw-1948.jpg';
 import bartali1948Image from '../assets/stories/bartali-italien-1948/gino-bartali-1938.jpg';
+import colnagoMagni1955Image from '../assets/stories/colnago-magni-1955/fiorenzo-magni-1953.jpeg';
+import christineLueber2015Image from '../assets/stories/christine-lueber-tour-2015/trek-factory-racing-tour-2015.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -39,12 +41,16 @@ const storyTracks: Record<string, StoryTrack> = {
   'suntour-shimano-gearkrigen': 'mechanics',
   'gunnar-asmussen-funny-bike': 'mechanics',
   'drillium-vaegtbesparelse': 'mechanics',
+  'colnago-magni-pedalarm-1955': 'mechanics',
+  'christine-lueber-tour-2015': 'people',
 };
 
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'christine-lueber-tour-2015', type: 'historie', year: '2015', title: 'Da feltet nåede mål, begyndte Christine Luebers arbejdsdag igen', text: 'En arbejdsdag med forplejningsposer, alpekørsel, vasketøj og massage viser den del af Tour de France, som resultatlisten ikke måler.', image: christineLueber2015Image, periods: ['2010-2019'], topics: ['tour-de-france', 'soigneur', 'trek-factory-racing', 'menneskene-bag-loebet'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'colnago-magni-pedalarm-1955', type: 'historie', year: '1955', title: 'Da en skæv pedalarm gav Colnago adgang til Giroen', text: 'Ernesto Colnago var 23 år, da en mekanisk iagttagelse ved Fiorenzo Magnis cykel førte ham ind i Giroens servicehold.', image: colnagoMagni1955Image, periods: ['1950-1959'], topics: ['ernesto-colnago', 'fiorenzo-magni', 'giro-ditalia', 'mekanikere', 'pedalarm'], relatedBikes: ['colnago-super-thron', 'colnago-1993-tange-prestige'], relatedComponents: [] },
   { slug: 'bartali-italien-1948', type: 'historie', year: '1948', title: 'Vandt Bartali virkelig freden tilbage til Italien?', text: 'Efter attentatet på Palmiro Togliatti vandt Gino Bartali tre Tour-etaper i træk. Sejrene gav en politisk krise sin mest sejlivede helt.', image: bartali1948Image, periods: ['1940-1949'], topics: ['tour-de-france', 'gino-bartali', 'italien', 'politik', 'myter'], relatedBikes: ['stella-veneta'], relatedComponents: ['campagnolo-cambio-corsa'] },
   { slug: 'fredsloebet-1948', type: 'historie', year: '1948', title: 'Fredsløbet – to felter i hver sin retning', text: 'I maj 1948 kørte to felter samtidig mellem Warszawa og Prag. Det senere Fredsløb begyndte med to ruter og to jugoslaviske vindere.', image: peaceRace1948Image, periods: ['1940-1949'], topics: ['fredsloebet', 'østeuropa', 'amatørcykling', 'politik'], relatedBikes: [], relatedComponents: [] },
   { slug: 'paris-brest-paris-1891-charles-terront', type: 'historie', year: '1891', title: 'Paris–Brest–Paris 1891 – Charles Terronts tre døgn', text: 'Charles Terront kørte 1.200 kilometer på 71 timer og 37 minutter. Avisløbet blev en prøve på både rytteren og den nye sikkerhedscykel.', image: parisBrest1891Image, periods: ['1800-1899'], topics: ['paris-brest-paris', 'charles-terront', 'langdistance', 'pneumatiske-daek'], relatedBikes: [], relatedComponents: [] },

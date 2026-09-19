@@ -2,6 +2,8 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'christine-lueber-tour-2015': ["When the peloton finished, Christine Lueber's working day began again", 'A day of musettes, Alpine driving, laundry and massage reveals the part of the Tour de France that the results do not measure.'],
+  'colnago-magni-pedalarm-1955': ['When a bent crank gave Colnago access to the Giro', "Ernesto Colnago was 23 when a mechanical observation on Fiorenzo Magni's bicycle took him into the Giro service crew."],
   'bartali-italien-1948': ['Did Bartali really bring peace back to Italy?', 'After the attempt on Palmiro Togliatti, Gino Bartali won three consecutive Tour stages. His victories gave a political crisis its most enduring hero.'],
   'fredsloebet-1948': ['The Peace Race – two pelotons going opposite ways', 'In May 1948, two fields raced simultaneously between Warsaw and Prague. The future Peace Race began with two routes and two Yugoslav winners.'],
   'paris-brest-paris-1891-charles-terront': ["Paris–Brest–Paris 1891 – Charles Terront's three days", 'Charles Terront covered 1,200 kilometres in 71 hours 37 minutes. The newspaper race tested both the rider and the young safety bicycle.'],

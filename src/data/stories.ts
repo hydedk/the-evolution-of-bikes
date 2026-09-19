@@ -4,6 +4,8 @@ import buffaloSprintStartImage from '../assets/stories/banecykling-1912/buffalo-
 import parisRoubaix1949Image from '../assets/stories/paris-roubaix-1949/velodrome-illustration.png';
 import drilliumImage from '../assets/stories/drillium/drillium-workshop-illustration.png';
 import parisBrest1891Image from '../assets/stories/paris-brest-paris-1891/terront-le-petit-journal-1891.jpg';
+import peaceRace1948Image from '../assets/stories/fredsloebet-1948/prosenik-zoric-warsaw-1948.jpg';
+import bartali1948Image from '../assets/stories/bartali-italien-1948/gino-bartali-1938.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -43,6 +45,8 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'bartali-italien-1948', type: 'historie', year: '1948', title: 'Vandt Bartali virkelig freden tilbage til Italien?', text: 'Efter attentatet på Palmiro Togliatti vandt Gino Bartali tre Tour-etaper i træk. Sejrene gav en politisk krise sin mest sejlivede helt.', image: bartali1948Image, periods: ['1940-1949'], topics: ['tour-de-france', 'gino-bartali', 'italien', 'politik', 'myter'], relatedBikes: ['stella-veneta'], relatedComponents: ['campagnolo-cambio-corsa'] },
+  { slug: 'fredsloebet-1948', type: 'historie', year: '1948', title: 'Fredsløbet – to felter i hver sin retning', text: 'I maj 1948 kørte to felter samtidig mellem Warszawa og Prag. Det senere Fredsløb begyndte med to ruter og to jugoslaviske vindere.', image: peaceRace1948Image, periods: ['1940-1949'], topics: ['fredsloebet', 'østeuropa', 'amatørcykling', 'politik'], relatedBikes: [], relatedComponents: [] },
   { slug: 'paris-brest-paris-1891-charles-terront', type: 'historie', year: '1891', title: 'Paris–Brest–Paris 1891 – Charles Terronts tre døgn', text: 'Charles Terront kørte 1.200 kilometer på 71 timer og 37 minutter. Avisløbet blev en prøve på både rytteren og den nye sikkerhedscykel.', image: parisBrest1891Image, periods: ['1800-1899'], topics: ['paris-brest-paris', 'charles-terront', 'langdistance', 'pneumatiske-daek'], relatedBikes: [], relatedComponents: [] },
   { slug: 'paris-roubaix-1949-to-vindere', type: 'historie', year: '1949', title: 'Paris–Roubaix 1949 – ét løb, to vindere', text: 'André Mahé kom først i mål, men var blevet vist forkert ved banen. Serse Coppi protesterede. Måneder senere fik løbet to vindere.', image: parisRoubaix1949Image, periods: ['1940-1949'], topics: ['paris-roubaix', 'andre-mahe', 'serse-coppi', 'regler', 'klassikere'], relatedBikes: [], relatedComponents: [] },
   { slug: 'drillium-vaegtbesparelse', type: 'historie', year: '1960’erne–1970’erne', title: 'Drillium – da boret blev et værktøj til vægtbesparelse', text: 'Klinger, bremsegreb og bagskiftere kom under boret. Drillium blev både vægtjagt, værkstedshåndværk og udsmykning.', image: drilliumImage, periods: ['1960-1969', '1970-1979'], topics: ['drillium', 'vægtbesparelse', 'komponenter', 'værksted', 'eddy-merckx'], relatedBikes: [], relatedComponents: [] },

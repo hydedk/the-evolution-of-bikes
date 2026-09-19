@@ -58,6 +58,8 @@ const languagePairs = {
   '/historier/paris-roubaix-1949-to-vindere/': '/en/stories/paris-roubaix-1949-to-vindere/',
   '/historier/drillium-vaegtbesparelse/': '/en/stories/drillium-vaegtbesparelse/',
   '/historier/paris-brest-paris-1891-charles-terront/': '/en/stories/paris-brest-paris-1891-charles-terront/',
+  '/historier/fredsloebet-1948/': '/en/stories/fredsloebet-1948/',
+  '/historier/bartali-italien-1948/': '/en/stories/bartali-italien-1948/',
   '/perioder/1900-1920/': '/en/periods/1900-1920/',
   '/perioder/1920-1930/': '/en/periods/1920-1930/',
   '/perioder/1930-1939/': '/en/periods/1930-1939/',

@@ -9,6 +9,7 @@ export type BikeMeta = {
 };
 
 export const bikes: BikeMeta[] = [
+  { slug: 'olympia-1978', year: '1978, oplyst', place: 'Italien', title: 'Olympia', status: 'Tidligere i samlingen', text: 'En orange italiensk stålracer med Campagnolo Nuovo Gran Sport, Universal-bremser og Ofmega-kranksæt, dokumenteret gennem ejerens fotografier.', image: 'images/bikes/olympia-1978/hero.webp' },
   { slug: 'bernardi-ca-1980', year: 'ca. 1980', place: 'Italien', title: 'Bernardi', status: 'Tidligere i samlingen', text: 'En turkis italiensk stålracer med Campagnolo Nuovo Gran Sport, højflangenav og Universal-bremser, bevaret med en usikker forbindelse til Guido De Bernardi.', image: 'images/bikes/bernardi-ca-1980/hero.webp' },
   { slug: 'faggin-1986', year: '1986', place: 'Padova, Italien', title: 'Faggin', text: 'En italiensk Columbus Aelle-racer i original netlakering, bygget med Shimano 600 og Cinelli — et præcist møde mellem to cykelindustrier.', image: 'images/bikes/faggin-1986/hero.webp' },
   { slug: 'scapin-k6', year: '2013', place: 'Italien', title: 'Scapin K6', text: 'En moderne italiensk kulfiberracer med Campagnolo, Fulcrum-hjul og en konstruktion, hvor ramme, udstyr og position er tænkt sammen.', image: 'images/bikes/scapin-k6/hero.webp' },

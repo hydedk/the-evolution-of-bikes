@@ -42,6 +42,7 @@ const storyCopy: Record<string, [string, string]> = {
 };
 
 const bikeCopy: Record<string, [string, string?, string?]> = {
+  'olympia-1978': ['An orange Italian steel racer with Campagnolo Nuovo Gran Sport, Universal brakes and an Ofmega chainset, preserved in the owner’s photographs.', 'Italy', 'Previously in the collection'],
   'bernardi-ca-1980': ['A turquoise Italian steel racer with Campagnolo Nuovo Gran Sport, high-flange hubs and Universal brakes, preserved with an uncertain connection to Guido De Bernardi.', 'Italy', 'Previously in the collection'],
   'faggin-1986': ['An Italian Columbus Aelle racer in its original net-pattern paint, built with Shimano 600 and Cinelli — a precise meeting of two bicycle industries.', 'Padua, Italy'],
   'scapin-k6': ['A modern Italian carbon racer with Campagnolo, Fulcrum wheels and a design in which frame, equipment and riding position were conceived together.', 'Italy'],

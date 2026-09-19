@@ -1,7 +1,7 @@
 ---
 const { current = '', danishPath = '/' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const nav = [['stories','Stories'],['periods','Periods'],['bikes','Bikes'],['components','Components'],['about','About']];
+const nav = [['stories','Stories'],['bikes','Bikes'],['periods','Periods'],['about','About']];
 ---
 <header class="site-header">
   <a class="brand" href={`${base}/en/`} aria-label="The Evolution of Bikes, home"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>

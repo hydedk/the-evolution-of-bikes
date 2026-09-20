@@ -11,6 +11,7 @@ import christineLueber2015Image from '../assets/stories/christine-lueber-tour-20
 import nielsFredborg1968Image from '../assets/stories/niels-fredborg-mexico-1968/niels-fredborg-1967.jpg';
 import herningSixDay1974Image from '../assets/stories/herning-seksdagesloeb-1974/herning-1974-ai-illustration.png';
 import mogensFrey1970Image from '../assets/stories/mogens-frey-tour-1970/mogens-frey-1967.jpg';
+import marcoPantaniImage from '../assets/stories/marco-pantani-manden-bag-piraten/960px-Marco_Pantani.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -48,12 +49,14 @@ const storyTracks: Record<string, StoryTrack> = {
   'christine-lueber-tour-2015': 'people',
   'niels-fredborg-mexico-1968': 'people',
   'mogens-frey-tour-1970': 'race',
+  'marco-pantani-manden-bag-piraten': 'people',
 };
 
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'marco-pantani-manden-bag-piraten', type: 'historie', year: '1995–2004', title: 'Manden bag Piraten', text: 'Marco Pantani kom tilbage fra et knust venstre ben og vandt både Giroen og Touren. Historien om rytteren rummer også det sårbare menneske.', image: marcoPantaniImage, periods: ['1990-1999', '2000-2009'], topics: ['marco-pantani', 'giro-ditalia', 'tour-de-france', 'comeback', 'mennesket-bag-rytteren'], relatedBikes: [], relatedComponents: [] },
   { slug: 'herning-seksdagesloeb-1974', type: 'historie', year: '1974–1983', title: 'Da Herning fik sin egen træbane', text: 'En træbane fra London, et nyt seksdagesløb i Herning og Ole Ritter som det trækplaster, publikum kom for at se.', image: herningSixDay1974Image, periods: ['1970-1979', '1980-1989'], topics: ['banecykling', 'seksdagesloeb', 'dansk-cykling', 'herning'], relatedBikes: [], relatedComponents: [] },
   { slug: 'mogens-frey-tour-1970', type: 'historie', year: '1970', title: 'Da Mogens Frey vandt efter et greb i styret', text: 'Joaquim Agostinho kom først over stregen i Mulhouse, men juryen gav sejren til holdkammeraten Mogens Frey efter en synlig hindring i spurten.', image: mogensFrey1970Image, periods: ['1970-1979'], topics: ['tour-de-france', 'mogens-frey', 'joaquim-agostinho', 'holdtaktik', 'juryafgørelse'], relatedBikes: [], relatedComponents: [] },
   { slug: 'niels-fredborg-mexico-1968', type: 'historie', year: '1968', title: 'Da Fredborg tangerede verdensrekorden og fik sølv', text: 'Niels Fredborg tangerede verdensrekorden på den olympiske kilometer i Mexico City. Elleve starter senere kørte Pierre Trentin endnu hurtigere.', image: nielsFredborg1968Image, periods: ['1960-1969'], topics: ['niels-fredborg', 'banecykling', 'ol-1968', '1000-meter', 'verdensrekord'], relatedBikes: ['asmussen-super-prestige'], relatedComponents: [] },

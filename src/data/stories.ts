@@ -9,6 +9,7 @@ import bartali1948Image from '../assets/stories/bartali-italien-1948/gino-bartal
 import colnagoMagni1955Image from '../assets/stories/colnago-magni-1955/fiorenzo-magni-1953.jpeg';
 import christineLueber2015Image from '../assets/stories/christine-lueber-tour-2015/trek-factory-racing-tour-2015.jpg';
 import nielsFredborg1968Image from '../assets/stories/niels-fredborg-mexico-1968/niels-fredborg-1967.jpg';
+import herningSixDay1974Image from '../assets/stories/herning-seksdagesloeb-1974/herning-1974-ai-illustration.png';
 import mogensFrey1970Image from '../assets/stories/mogens-frey-tour-1970/mogens-frey-1967.jpg';
 
 export type StoryMeta = {
@@ -53,6 +54,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'herning-seksdagesloeb-1974', type: 'historie', year: '1974–1983', title: 'Da Herning fik sin egen træbane', text: 'En træbane fra London, et nyt seksdagesløb i Herning og Ole Ritter som det trækplaster, publikum kom for at se.', image: herningSixDay1974Image, periods: ['1970-1979', '1980-1989'], topics: ['banecykling', 'seksdagesloeb', 'dansk-cykling', 'herning'], relatedBikes: [], relatedComponents: [] },
   { slug: 'mogens-frey-tour-1970', type: 'historie', year: '1970', title: 'Da Mogens Frey vandt efter et greb i styret', text: 'Joaquim Agostinho kom først over stregen i Mulhouse, men juryen gav sejren til holdkammeraten Mogens Frey efter en synlig hindring i spurten.', image: mogensFrey1970Image, periods: ['1970-1979'], topics: ['tour-de-france', 'mogens-frey', 'joaquim-agostinho', 'holdtaktik', 'juryafgørelse'], relatedBikes: [], relatedComponents: [] },
   { slug: 'niels-fredborg-mexico-1968', type: 'historie', year: '1968', title: 'Da Fredborg tangerede verdensrekorden og fik sølv', text: 'Niels Fredborg tangerede verdensrekorden på den olympiske kilometer i Mexico City. Elleve starter senere kørte Pierre Trentin endnu hurtigere.', image: nielsFredborg1968Image, periods: ['1960-1969'], topics: ['niels-fredborg', 'banecykling', 'ol-1968', '1000-meter', 'verdensrekord'], relatedBikes: ['asmussen-super-prestige'], relatedComponents: [] },
   { slug: 'christine-lueber-tour-2015', type: 'historie', year: '2015', title: 'Da feltet nåede mål, begyndte Christine Luebers arbejdsdag igen', text: 'En arbejdsdag med forplejningsposer, alpekørsel, vasketøj og massage viser den del af Tour de France, som resultatlisten ikke måler.', image: christineLueber2015Image, periods: ['2010-2019'], topics: ['tour-de-france', 'soigneur', 'trek-factory-racing', 'menneskene-bag-loebet'], relatedBikes: [], relatedComponents: [] },

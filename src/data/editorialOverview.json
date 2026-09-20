@@ -2336,5 +2336,19 @@
     "blokeret_af": "Transferteksten er uden kilde og billedet krediteres alene til Pinterest.",
     "kanonisk_url": "",
     "fil": "hist-000167-coppi-bartali-valkenburg-1948.md"
+  },
+  {
+    "id": "hist-000168",
+    "titel": "Da Herning fik sin egen træbane",
+    "status": "publiceret",
+    "prioritet": "mellem",
+    "periode": "per-1970-1979",
+    "aar": "1974-1983",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Ingen redaktionel handling; kontrollér kun siden efter GitHub Pages-udrulningen.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/herning-seksdagesloeb-1974/",
+    "fil": "hist-000168-herning-seksdagesloeb-1974.md"
   }
 ]

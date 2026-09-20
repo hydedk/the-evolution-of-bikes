@@ -218,6 +218,7 @@ const socialMetadata = {
         const description = seoDescriptionOverrides[pagePath] || sourceDescription;
         const schemaTitle = pageTitle.replace(/\s+(?:·|–|\|)\s+The Evolution of Bikes$/, '');
         const isHome = pagePath === '/' || pagePath === '/en/';
+        const isAbout = pagePath === '/om/' || pagePath === '/en/about/';
         const isBike = /^\/(?:en\/bikes|cykler)\/[^/]+\/$/.test(pagePath);
         const isStory = /^\/(?:en\/stories|historier)\/[^/]+\/$/.test(pagePath);
         const isPeriod = /^\/(?:en\/periods|perioder)\/[^/]+\/$/.test(pagePath);
@@ -255,12 +256,24 @@ const socialMetadata = {
           `<meta name="twitter:image" content="${image}">`,
         ].join('');
 
-        const publisher = { '@type': 'Organization', name: 'The Evolution of Bikes', url: siteUrl };
+        const publisher = { '@type': 'Organization', '@id': `${siteUrl}/#organization`, name: 'The Evolution of Bikes', url: `${siteUrl}/` };
+        const curator = { '@type': 'Person', '@id': `${siteUrl}/#henning-renita-yde`, name: 'Henning Renita Yde' };
+        const collection = {
+          '@type': 'Collection', '@id': `${siteUrl}/#collection`, name: 'The Evolution of Bikes',
+          description: isEnglish ? 'A personal collection of historic racing bicycles.' : 'En personlig samling af historiske racercykler.',
+          url: `${siteUrl}/cykler/`, creator: { '@id': curator['@id'] },
+        };
         const website = { '@type': 'WebSite', '@id': `${siteUrl}/#website`, name: 'The Evolution of Bikes', url: `${siteUrl}/`, inLanguage: ['da-DK', 'en-GB'] };
         const articleType = isComponent ? 'TechArticle' : 'Article';
         const productionYear = schemaTitle.match(/\b(18|19|20)\d{2}\b/)?.[0];
         const mainEntity = isHome
           ? { ...website, description }
+          : isAbout
+            ? {
+                '@type': 'AboutPage', '@id': `${canonical}#page`, name: schemaTitle, description, url: canonical, image, inLanguage: language,
+                isPartOf: { '@id': `${siteUrl}/#website` }, breadcrumb: { '@id': `${canonical}#breadcrumb` },
+                about: { '@id': collection['@id'] }, author: { '@id': curator['@id'] }, publisher: { '@id': publisher['@id'] },
+              }
           : isBike
             ? {
                 '@type': 'ItemPage', '@id': `${canonical}#page`, name: schemaTitle, description, url: canonical, image, inLanguage: language,
@@ -299,7 +312,15 @@ const socialMetadata = {
             }),
           ],
         } : null;
-        const schema = { '@context': 'https://schema.org', '@graph': [mainEntity, ...(!isHome ? [website] : []), ...(breadcrumbs ? [breadcrumbs] : [])] };
+        const schema = {
+          '@context': 'https://schema.org',
+          '@graph': [
+            mainEntity,
+            ...(!isHome ? [website] : []),
+            ...(breadcrumbs ? [breadcrumbs] : []),
+            ...(isAbout ? [publisher, curator, collection] : []),
+          ],
+        };
         const structuredData = `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>`;
 
         html = html.replace(/<title>.*?<\/title>/is, `${tags}${structuredData}<title>${pageTitle}</title>`);

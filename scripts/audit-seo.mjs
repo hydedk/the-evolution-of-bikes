@@ -56,6 +56,7 @@ for (const page of publicPages) {
     const graph = page.jsonLd['@graph'] || [page.jsonLd];
     const types = graph.flatMap((node) => Array.isArray(node['@type']) ? node['@type'] : [node['@type']]).filter(Boolean);
     const expectedType = page.path === '/' || page.path === '/en/' ? 'WebSite'
+      : ['/om/', '/en/about/'].includes(page.path) ? 'AboutPage'
       : /^\/(?:en\/bikes|cykler)\/[^/]+\/$/.test(page.path) ? 'ItemPage'
       : /^\/(?:en\/components|komponenter)\/[^/]+\/$/.test(page.path) ? 'TechArticle'
       : /^\/(?:en\/(?:stories|periods)|historier|perioder)\/[^/]+\/$/.test(page.path) ? 'Article'
@@ -65,6 +66,14 @@ for (const page of publicPages) {
     if (/^\/(?:en\/bikes|cykler)\/[^/]+\/$/.test(page.path)) {
       const itemPage = graph.find((node) => node['@type'] === 'ItemPage');
       if (itemPage?.mainEntity?.['@type'] !== 'IndividualProduct') errors.push(`${page.path}: mangler IndividualProduct som hovedgenstand`);
+    }
+    if (['/om/', '/en/about/'].includes(page.path)) {
+      const aboutPage = graph.find((node) => node['@type'] === 'AboutPage');
+      const canonical = `https://teob.dk${page.path}`;
+      if (aboutPage?.breadcrumb?.['@id'] !== `${canonical}#breadcrumb`) errors.push(`${page.path}: AboutPage mangler reference til BreadcrumbList`);
+      if (aboutPage?.publisher?.['@id'] !== 'https://teob.dk/#organization') errors.push(`${page.path}: AboutPage mangler publisher-reference`);
+      if (aboutPage?.about?.['@id'] !== 'https://teob.dk/#collection') errors.push(`${page.path}: AboutPage mangler reference til samlingen`);
+      if (!graph.some((node) => node['@id'] === 'https://teob.dk/#henning-renita-yde' && node['@type'] === 'Person')) errors.push(`${page.path}: mangler Person-entitet for samlingens kurator`);
     }
     if (page.path !== '/' && page.path !== '/en/' && !types.includes('BreadcrumbList')) errors.push(`${page.path}: mangler BreadcrumbList`);
   }

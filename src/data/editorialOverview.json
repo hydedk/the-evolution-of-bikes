@@ -996,15 +996,15 @@
   {
     "id": "hist-000072",
     "titel": "Gemmelegen om Giroens sorte trøje",
-    "status": "indbakke",
+    "status": "publiceret",
     "prioritet": "hoej",
     "periode": "per-1940-1959",
     "aar": "1946-1951",
-    "dokumentation": "ikke-kontrolleret",
+    "dokumentation": "dokumenteret",
     "faktarisiko": "hoej",
-    "naeste_handling": "Adskil de dokumenterede episoder fra senere Maglia Nera-anekdoter",
-    "blokeret_af": "Kildefilen blander årstal og flere ryttere",
-    "kanonisk_url": "",
+    "naeste_handling": "Følg modtagelsen og ret kun ved nye dokumenterede oplysninger",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/gemmelegen-om-giroens-sorte-troeje/",
     "fil": "hist-000072-maglia-nera-gemmeleg.md"
   },
   {

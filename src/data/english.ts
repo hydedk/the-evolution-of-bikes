@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'gemmelegen-om-giroens-sorte-troeje': ["The hide-and-seek contest for the Giro's black jersey", 'Luigi Malabrocca tried to finish last in the 1949 Giro. The problem was that bricklayer Sante Carollo was already almost two hours further behind.'],
   'marco-pantani-manden-bag-piraten': ['The man behind the Pirate', 'Marco Pantani returned from a shattered left leg to win both the Giro and the Tour. The rider’s story also contains the vulnerable man.'],
   'herning-seksdagesloeb-1974': ['When Herning acquired its own wooden track', 'A wooden track from London, a new six-day race in Herning and Ole Ritter as the rider the crowd came to see.'],
   'mogens-frey-tour-1970': ['When Mogens Frey won after a hand on the handlebars', 'Joaquim Agostinho crossed first in Mulhouse, but the jury awarded victory to team-mate Mogens Frey after visible interference in the sprint.'],

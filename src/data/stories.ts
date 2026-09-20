@@ -12,6 +12,7 @@ import nielsFredborg1968Image from '../assets/stories/niels-fredborg-mexico-1968
 import herningSixDay1974Image from '../assets/stories/herning-seksdagesloeb-1974/herning-1974-ai-illustration.png';
 import mogensFrey1970Image from '../assets/stories/mogens-frey-tour-1970/mogens-frey-1967.jpg';
 import marcoPantaniImage from '../assets/stories/marco-pantani-manden-bag-piraten/960px-Marco_Pantani.jpg';
+import magliaNeraImage from '../assets/stories/maglia-nera-gemmeleg/maglia-nera-gemmeleg-illustration.png';
 
 export type StoryMeta = {
   slug: string;
@@ -50,12 +51,14 @@ const storyTracks: Record<string, StoryTrack> = {
   'niels-fredborg-mexico-1968': 'people',
   'mogens-frey-tour-1970': 'race',
   'marco-pantani-manden-bag-piraten': 'people',
+  'gemmelegen-om-giroens-sorte-troeje': 'race',
 };
 
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'gemmelegen-om-giroens-sorte-troeje', type: 'historie', year: '1946–1951', title: 'Gemmelegen om Giroens sorte trøje', text: 'Luigi Malabrocca forsøgte at blive sidst i Giroen 1949. Problemet var, at mureren Sante Carollo allerede var næsten to timer længere bagude.', image: magliaNeraImage, periods: ['1940-1949', '1950-1959'], topics: ['giro-ditalia', 'maglia-nera', 'luigi-malabrocca', 'sante-carollo', 'regler'], relatedBikes: [], relatedComponents: [] },
   { slug: 'marco-pantani-manden-bag-piraten', type: 'historie', year: '1995–2004', title: 'Manden bag Piraten', text: 'Marco Pantani kom tilbage fra et knust venstre ben og vandt både Giroen og Touren. Historien om rytteren rummer også det sårbare menneske.', image: marcoPantaniImage, periods: ['1990-1999', '2000-2009'], topics: ['marco-pantani', 'giro-ditalia', 'tour-de-france', 'comeback', 'mennesket-bag-rytteren'], relatedBikes: [], relatedComponents: [] },
   { slug: 'herning-seksdagesloeb-1974', type: 'historie', year: '1974–1983', title: 'Da Herning fik sin egen træbane', text: 'En træbane fra London, et nyt seksdagesløb i Herning og Ole Ritter som det trækplaster, publikum kom for at se.', image: herningSixDay1974Image, periods: ['1970-1979', '1980-1989'], topics: ['banecykling', 'seksdagesloeb', 'dansk-cykling', 'herning'], relatedBikes: [], relatedComponents: [] },
   { slug: 'mogens-frey-tour-1970', type: 'historie', year: '1970', title: 'Da Mogens Frey vandt efter et greb i styret', text: 'Joaquim Agostinho kom først over stregen i Mulhouse, men juryen gav sejren til holdkammeraten Mogens Frey efter en synlig hindring i spurten.', image: mogensFrey1970Image, periods: ['1970-1979'], topics: ['tour-de-france', 'mogens-frey', 'joaquim-agostinho', 'holdtaktik', 'juryafgørelse'], relatedBikes: [], relatedComponents: [] },

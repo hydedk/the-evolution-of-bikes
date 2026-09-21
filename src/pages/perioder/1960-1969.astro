@@ -1,5 +1,6 @@
 ---
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import PeriodStructure from '../../components/PeriodStructure.astro';
 const facts = [
   ['1964', 'Anquetil og Poulidor på Puy de Dôme'],
   ['1966', 'Tourens første dopingkontroller udløser protest'],
@@ -14,6 +15,8 @@ const facts = [
   <header class="wildwest-hero decade1940-hero"><div><p class="section-label">Perioden 1960–1969</p><h1>Da racercyklen fandt<br /><em>sin moderne form</em></h1></div><p>To klinger, fem tandhjul, friktionsgreb og en let stålramme. Grundformen lå fast. Rundt om cyklen blev sporten mere synlig – og dens problemer sværere at skjule.</p></header>
 
   <figure class="decade1970-hero-image"><img src={`${base}/images/periods/1960-1969/anquetil-poulidor-paris-1964.webp`} alt="Jacques Anquetil og Raymond Poulidor omgivet af mennesker efter Tour de France 1964" /><figcaption>Jacques Anquetil til venstre og Raymond Poulidor efter Tour de France 1964. Anquetil vandt løbet med 55 sekunder. Foto: Anefo / Nationaal Archief, CC0.</figcaption></figure>
+
+  <PeriodStructure language="da" period="1960-1969" />
 
   <section class="wildwest-lead decade1940-lead"><p class="section-label">Den velkendte silhuet</p><p>Fjerner man trøjen, følgebilen og avisnavnene, ligner en god racercykel fra 1969 allerede noget, mange ville kalde klassisk moderne: diamantstel, parallelogram-bagskifter, to klinger og fælgbremser.</p></section>
 

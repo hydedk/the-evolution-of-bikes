@@ -1292,6 +1292,9 @@ html.has-lightbox {
 .period-theme-items > a { display: flex; flex-direction: column; gap: .65rem; min-height: 10.5rem; padding: 1.25rem; background: #f7f3e9; text-decoration: none; }
 .period-theme-items > a.has-card-image { background-image: linear-gradient(rgba(247, 243, 233, .84), rgba(247, 243, 233, .9)), var(--card-image); background-position: center; background-size: cover; background-blend-mode: normal, luminosity; transition: background-image .2s ease; }
 .period-theme-items > a.has-card-image:hover { background-image: linear-gradient(rgba(247, 243, 233, .74), rgba(247, 243, 233, .84)), var(--card-image); }
+.period-theme-placeholder { display: grid; min-height: 10.5rem; place-items: center; background: #d8d4c9; }
+.period-card-brand { opacity: .72; }
+.period-card-brand .brand-mark { width: 58px; height: 58px; font-size: 30px; }
 .period-theme-items small { color: var(--rust); text-transform: capitalize; }
 .period-theme-items > p { grid-column: 1 / -1; margin: 0; padding: 1.25rem; background: #f7f3e9; }
 .theme-hero a, .period-search-intro a { color: var(--rust); font-weight: 600; }

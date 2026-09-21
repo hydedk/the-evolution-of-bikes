@@ -5,7 +5,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const en = language === 'en';
 const items = localizeContent(contentForPeriod(period), language);
 const itemType = (type: string) => en ? ({ historie: 'Story', cykel: 'Bicycle', komponent: 'Component' }[type] ?? type) : ({ historie: 'Historie', cykel: 'Cykel', komponent: 'Komponent' }[type] ?? type);
-const boxes = en ? [
+let boxes = en ? [
   ['The decade’s main development', 'Training, equipment and nutrition became more professional and more closely measured.'],
   ['What defined the period', 'Larger budgets, new materials, international television coverage and a growing doping shadow.'],
   ['Three changes to cycling', 'Integrated shift levers became standard. Carbon fibre gained ground. Training and fuelling became more scientific.'],
@@ -14,8 +14,8 @@ const boxes = en ? [
   ['Det kendetegnede perioden', 'Større holdbudgetter, nye materialer, international tv-dækning og en voksende dopingskygge.'],
   ['Tre ting, der ændrede cyklingen', 'Integrerede gearskiftere blev normen. Kulfiber vandt frem. Træning og kost blev mere videnskabelig.'],
 ];
-const timeline = en ? [['1990', 'Shimano introduces integrated brake and shift levers.'], ['1991', 'Miguel Indurain wins his first Tour de France.'], ['1992', 'Campagnolo launches Ergopower.'], ['1994', 'Indurain sets an hour record in Bordeaux.'], ['1996', 'Bjarne Riis wins the Tour.'], ['1997', 'The first L’Eroica is held in Tuscany.'], ['1998', 'The Festina affair brings raids and rider protests to the Tour.']] : [['1990', 'Shimano introducerer kombinerede bremse- og geargreb.'], ['1991', 'Miguel Indurain vinder sin første Tour de France.'], ['1992', 'Campagnolo lancerer Ergopower.'], ['1994', 'Indurain sætter timerekord i Bordeaux.'], ['1996', 'Bjarne Riis vinder Tour de France.'], ['1997', 'Det første L’Eroica køres i Toscana.'], ['1998', 'Festina-sagen udløser razziaer og rytterprotester i Touren.']];
-const periodThemeCopy = en ? {
+let timeline = en ? [['1990', 'Shimano introduces integrated brake and shift levers.'], ['1991', 'Miguel Indurain wins his first Tour de France.'], ['1992', 'Campagnolo launches Ergopower.'], ['1994', 'Indurain sets an hour record in Bordeaux.'], ['1996', 'Bjarne Riis wins the Tour.'], ['1997', 'The first L’Eroica is held in Tuscany.'], ['1998', 'The Festina affair brings raids and rider protests to the Tour.']] : [['1990', 'Shimano introducerer kombinerede bremse- og geargreb.'], ['1991', 'Miguel Indurain vinder sin første Tour de France.'], ['1992', 'Campagnolo lancerer Ergopower.'], ['1994', 'Indurain sætter timerekord i Bordeaux.'], ['1996', 'Bjarne Riis vinder Tour de France.'], ['1997', 'Det første L’Eroica køres i Toscana.'], ['1998', 'Festina-sagen udløser razziaer og rytterprotester i Touren.']];
+let periodThemeCopy = en ? {
   'loeb-og-store-oejeblikke': 'Indurain controlled the Tour through long time trials, while Pantani changed races in the mountains. The Festina affair made the 1998 Tour a contest shaped as much by police raids and protests as by racing.',
   ryttere: 'Indurain, Rominger, Riis and Pantani represented very different ways of winning. Their results also belong to a decade whose medical culture later altered how those performances were understood.',
   teknik: 'Integrated shift and brake levers changed the rider’s position and timing. Aluminium grew common at the top level, carbon fibre gained ground, and deep-section wheels became a visible part of the racing bicycle.',
@@ -32,12 +32,64 @@ const periodThemeCopy = en ? {
   'samfund-og-tidsaand': 'De professionelle hold blev større og mere kommercielle. I 1998 rykkede toldere, politi og retssager ind i Touren og ændrede den offentlige samtale om sporten.',
   'menneskene-bag': 'Læger, soigneurs, mekanikere og holdledere blev en del af stadig mere specialiserede organisationer. Deres arbejde prægede forberedelse, udstyr og restitution, selv om det sjældent stod i resultatlisten.',
 };
+if (period === '1960-1969') {
+  boxes = en ? [
+    ['The decade’s main development', 'The lightweight steel racing bicycle settled into a form that would remain familiar for decades.'],
+    ['What defined the period', 'Televised rivalries, international track success and the difficult beginnings of formal doping control.'],
+    ['Three changes to cycling', 'The parallelogram derailleur became standard. Aluminium spread through components. Training and physiology gained influence.'],
+  ] : [
+    ['Årtiets vigtigste udvikling', 'Den lette stålracer fandt en grundform, som skulle forblive genkendelig i årtier.'],
+    ['Det kendetegnede perioden', 'Tv-dueller, internationale baneresultater og dopingkontrollens vanskelige begyndelse.'],
+    ['Tre ting, der ændrede cyklingen', 'Parallelogram-gearet blev normen. Aluminium bredte sig i komponenterne. Træning og fysiologi fik større betydning.'],
+  ];
+  timeline = en ? [
+    ['1960', 'Jacques Anquetil wins his second Tour de France.'], ['1962', 'The Tour returns to trade teams.'],
+    ['1964', 'Anquetil and Poulidor ride shoulder to shoulder on Puy de Dôme.'], ['1966', 'The Tour’s doping controls prompt a rider protest.'],
+    ['1967', 'Niels Fredborg becomes world champion; Tom Simpson dies on Mont Ventoux.'], ['1968', 'Fredborg takes Olympic silver in Mexico City.'],
+    ['1969', 'Eddy Merckx wins his first Tour de France.'],
+  ] : [
+    ['1960', 'Jacques Anquetil vinder sin anden Tour de France.'], ['1962', 'Touren vender tilbage til firmahold.'],
+    ['1964', 'Anquetil og Poulidor kører skulder ved skulder på Puy de Dôme.'], ['1966', 'Tourens dopingkontroller udløser en rytterprotest.'],
+    ['1967', 'Niels Fredborg bliver verdensmester; Tom Simpson dør på Mont Ventoux.'], ['1968', 'Fredborg tager OL-sølv i Mexico City.'],
+    ['1969', 'Eddy Merckx vinder sin første Tour de France.'],
+  ];
+  periodThemeCopy = en ? {
+    'loeb-og-store-oejeblikke': 'Anquetil and Poulidor’s duel on Puy de Dôme, Bordeaux–Paris behind a derny and Merckx’s first Tour show a decade in which old race forms met a new television audience.',
+    ryttere: 'Anquetil’s precision, Poulidor’s persistence, Burton’s endurance, Fredborg’s speed and Merckx’s appetite made the decade unusually varied.',
+    teknik: 'Steel frames grew lighter, aluminium spread through components, and the parallelogram derailleur with down-tube friction levers became the expected arrangement.',
+    'kost-traening-og-videnskab': 'Food still followed habit and experience, but physiology and systematic training moved closer to the sport. Drugs and testing became part of the same medical discussion.',
+    cykelkultur: 'Television turned mountain duels into shared images. At the same time, inventive weight saving and specialised bicycles began to attract attention beyond the professional peloton.',
+    'samfund-og-tidsaand': 'Riders increasingly appeared as workers as well as heroes. Their 1966 protest against testing revealed a conflict over authority, health and working conditions.',
+    'menneskene-bag': 'Doctors, mechanics, officials and team staff gained influence as racing became more organised, although their daily work remained largely outside the result sheet.',
+  } : {
+    'loeb-og-store-oejeblikke': 'Anquetil og Poulidors duel på Puy de Dôme, Bordeaux–Paris bag derny og Merckx’ første Tour viser et årti, hvor gamle løbsformer mødte et nyt tv-publikum.',
+    ryttere: 'Anquetils præcision, Poulidors stædighed, Burtons udholdenhed, Fredborgs fart og Merckx’ appetit gjorde årtiet usædvanligt varieret.',
+    teknik: 'Stålrammerne blev lettere, aluminium bredte sig i komponenterne, og parallelogram-gearet med friktionsgreb på skrårøret blev den forventede løsning.',
+    'kost-traening-og-videnskab': 'Kosten fulgte stadig vane og erfaring, men fysiologi og mere systematisk træning rykkede tættere på sporten. Stoffer og kontrol blev en del af den samme medicinske diskussion.',
+    cykelkultur: 'Fjernsynet gjorde bjergdueller til fælles billeder. Samtidig begyndte opfindsom vægtbesparelse og specialcykler at tiltrække sig opmærksomhed uden for det professionelle felt.',
+    'samfund-og-tidsaand': 'Rytterne trådte tydeligere frem som arbejdere såvel som helte. Protesten mod dopingkontrol i 1966 viste en konflikt om myndighed, sundhed og arbejdsforhold.',
+    'menneskene-bag': 'Læger, mekanikere, officials og holdfolk fik større betydning, efterhånden som løbene blev mere organiserede, selv om deres arbejde sjældent stod i resultatlisten.',
+  };
+}
+const decadeName = en ? (period === '1960-1969' ? 'The 1960s' : 'The 1990s') : (period === '1960-1969' ? '1960’erne' : '1990’erne');
 ---
 <section class="period-model" aria-labelledby="period-model-title">
-  <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? 'The 1990s in three views' : '1990’erne i tre bokse'}</h2></header>
+  <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? `${decadeName} in three views` : `${decadeName} i tre bokse`}</h2></header>
   <div class="period-summary-boxes">{boxes.map(([title, text], index) => <article><span>0{index + 1}</span><h3>{title}</h3>{index === 2 ? <ul>{text.split('. ').map((line) => <li>{line.replace(/\.$/, '')}</li>)}</ul> : <p>{text}</p>}</article>)}</div>
   <div class="period-model-timeline"><header><p class="section-label">{en ? 'Selected events' : 'Udvalgte begivenheder'}</p><h2>{en ? 'A short timeline' : 'En kort tidslinje'}</h2></header><ol>{timeline.map(([year, text]) => <li><time>{year}</time><span>{text}</span></li>)}</ol></div>
   <div class="period-theme-sections"><header><p class="section-label">{en ? 'Seven fixed themes' : 'Syv faste temaer'}</p><h2>{en ? 'The decade, seen across the site' : 'Årtiet på tværs af hjemmesiden'}</h2></header>
-    {themeIds.map((id, index) => { const theme = themes[id]; const related = items.filter((item) => item.themes.includes(id)); return <section id={id} class="period-theme-row"><div><span>0{index + 1}</span><h3>{en ? theme.en : theme.da}</h3><p>{periodThemeCopy[id]}</p><a href={`${base}/${en ? 'en/themes' : 'tema'}/${id}/`}>{en ? 'Follow this theme through cycling history →' : 'Følg temaet gennem cykelhistorien →'}</a></div><div class="period-theme-items">{related.length ? related.slice(0, 4).map((item) => <a class:list={{ 'has-card-image': Boolean(item.image) }} style={item.image ? `--card-image: url('${base}${item.image}')` : undefined} href={`${base}${en ? item.englishUrl : item.canonicalUrl}`}><small>{itemType(item.type)} · {item.year}</small><strong>{item.title}</strong></a>) : <p>{en ? 'No published content has this as a primary or secondary theme yet.' : 'Der er endnu ikke udgivet indhold med temaet som primær eller sekundær mærkning.'}</p>}</div></section> })}
+    {themeIds.map((id, index) => {
+      const theme = themes[id];
+      const related = items.filter((item) => item.themes.includes(id)).slice(0, 4);
+      return <section id={id} class="period-theme-row">
+        <div><span>0{index + 1}</span><h3>{en ? theme.en : theme.da}</h3><p>{periodThemeCopy[id]}</p><a href={`${base}/${en ? 'en/themes' : 'tema'}/${id}/`}>{en ? 'Follow this theme through cycling history →' : 'Følg temaet gennem cykelhistorien →'}</a></div>
+        <div class="period-theme-items">
+          {related.length ? <>
+            {related.map((item) => <a class:list={{ 'has-card-image': Boolean(item.image) }} style={item.image ? `--card-image: url('${base}${item.image}')` : undefined} href={`${base}${en ? item.englishUrl : item.canonicalUrl}`}><small>{itemType(item.type)} · {item.year}</small><strong>{item.title}</strong></a>)}
+            {related.length % 2 === 1 && <div class="period-theme-placeholder" aria-hidden="true"><div class="brand period-card-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></div></div>}
+          </> : <p>{en ? 'No published content has this as a primary or secondary theme yet.' : 'Der er endnu ikke udgivet indhold med temaet som primær eller sekundær mærkning.'}</p>}
+        </div>
+      </section>;
+    })}
   </div>
 </section>

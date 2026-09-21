@@ -66,7 +66,7 @@ const storyClassifications: Record<string, Classification> = {
   'anquetil-poulidor-puy-de-dome-1964': { period: '1960-1969', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere'] },
   'da-regntoejet-kom-med-op-i-solen': { period: '2010-2019', primary: 'cykelkultur', secondary: ['kost-traening-og-videnskab'] },
   'coppi-stelvio-1953': { period: '1950-1959', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere'] },
-  'soevnloeshed-smoer-og-kolde-oel': { period: '1900-1920', primary: 'kost-traening-og-videnskab', secondary: ['cykelkultur'] },
+  'soevnloeshed-smoer-og-kolde-oel': { period: '1920-1930', primary: 'kost-traening-og-videnskab', secondary: ['cykelkultur'] },
   'cykelsportens-vilde-vesten': { period: '1900-1920', primary: 'samfund-og-tidsaand', secondary: ['loeb-og-store-oejeblikke', 'cykelkultur'] },
   'snyd-soem-tour-de-france-1904': { period: '1900-1920', primary: 'loeb-og-store-oejeblikke', secondary: ['samfund-og-tidsaand'] },
   'da-gearene-kom-og-oel-narrede-feltet': { period: '1930-1939', primary: 'teknik', secondary: ['loeb-og-store-oejeblikke', 'cykelkultur'] },
@@ -80,8 +80,10 @@ const storyClassifications: Record<string, Classification> = {
   'suntour-shimano-gearkrigen': { period: '1960-1969', primary: 'teknik', secondary: ['samfund-og-tidsaand'] },
   'gunnar-asmussen-funny-bike': { period: '1980-1989', primary: 'teknik', secondary: ['ryttere'] },
   'alfonsina-strada-giro-1924': { period: '1920-1930', primary: 'ryttere', secondary: ['samfund-og-tidsaand', 'loeb-og-store-oejeblikke'] },
+  'tour-de-france-1926-den-laengste': { period: '1920-1930', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },
+  'peter-schroder-vaerksted-1920': { period: '1920-1930', primary: 'menneskene-bag', secondary: ['teknik', 'cykelkultur'] },
   'wim-van-est-aubisque-1951': { period: '1950-1959', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'teknik'] },
-  'alfredo-binda-giro-1930': { period: '1930-1939', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
+  'alfredo-binda-giro-1930': { period: '1920-1930', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
 };
 
 const bikePeriods: Record<string, string> = {

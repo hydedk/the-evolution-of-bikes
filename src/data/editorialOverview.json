@@ -2227,16 +2227,16 @@
   },
   {
     "id": "hist-000160",
-    "titel": "Touren hvor kun 41 af 126 nåede Paris",
-    "status": "indbakke",
+    "titel": "Touren, der målte 5.745 kilometer",
+    "status": "publiceret",
     "prioritet": "mellem",
     "periode": "per-1920-1929",
     "aar": "1926",
-    "dokumentation": "ikke-kontrolleret",
-    "faktarisiko": "mellem",
-    "naeste_handling": "Bekræft år, samlet distance, startby, 126 startere og 41 fuldførende i Tourens samtidige resultater.",
-    "blokeret_af": "Transferteksten nævner ikke selv årstal eller kilde.",
-    "kanonisk_url": "",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Vedligehold kilder og billednoter ved nye oplysninger.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/tour-de-france-1926-den-laengste/",
     "fil": "hist-000160-tour-de-france-1926-laengste.md"
   },
   {
@@ -2378,5 +2378,19 @@
     "blokeret_af": "null",
     "kanonisk_url": "https://teob.dk/historier/to-tandhjul-og-en-skruenoegle/",
     "fil": "hist-000170-to-tandhjul-skruenoegle.md"
+  },
+  {
+    "id": "hist-000171",
+    "titel": "Da Peter Schrøder begyndte at bygge cykler på Nørrebro",
+    "status": "publiceret",
+    "prioritet": "lancering",
+    "periode": "per-1920-1929",
+    "aar": "1920",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Vedligehold kilder og billednoter ved nye oplysninger.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/peter-schroder-vaerksted-1920/",
+    "fil": "hist-000171-peter-schroder-vaerksted-1920.md"
   }
 ]

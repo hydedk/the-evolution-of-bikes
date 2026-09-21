@@ -79,6 +79,53 @@ if (period === '1900-1920') {
     'menneskene-bag': 'Redaktører og arrangører som Henri Desgrange skabte reglerne, mens Alphonse Steines fandt veje, der kunne blive til etaper. Deres beslutninger formede det, rytterne blev sat til at udholde.',
   };
 }
+if (period === '1920-1930') {
+  boxes = en ? [
+    ['The decade’s main development', 'Stage racing grew into a European mass spectacle while teams, manufacturers and organisers became more structured.'],
+    ['What defined the period', 'Enormous distances, damaged roads and strict rules existed alongside factory teams, race cars and a rapidly growing press audience.'],
+    ['Three changes to cycling', 'The Tour first started outside Paris. Practical gear systems continued to develop. Specialist frame builders became part of racing culture.'],
+  ] : [
+    ['Årtiets vigtigste udvikling', 'Etapeløbene blev europæiske massebegivenheder, mens hold, fabrikanter og arrangører fik en mere fast organisation.'],
+    ['Det kendetegnede perioden', 'Enorme distancer, nedslidte veje og stramme regler fandtes side om side med fabrikshold, løbsbiler og et voksende avispublikum.'],
+    ['Tre ting, der ændrede cyklingen', 'Touren startede for første gang uden for Paris. Praktiske gearsystemer blev videreudviklet. Specialiserede rammebyggere blev en del af løbskulturen.'],
+  ];
+  timeline = en ? [
+    ['1920', 'Peter Schrøder begins building bicycles in Copenhagen.'],
+    ['1921', 'Léon Scieur wins the Tour de France.'],
+    ['1923', 'Henri Suter wins both the Tour of Flanders and Paris–Roubaix.'],
+    ['1924', 'Alfonsina Strada starts the Giro and continues to Milan outside the classification.'],
+    ['1925', 'Alfredo Binda wins the Giro at his first attempt.'],
+    ['1926', 'The longest Tour in history covers 5,745 kilometres; Lucien Buysse wins.'],
+    ['1927', 'Binda wins twelve Giro stages; Tullio Campagnolo’s frozen wheel change becomes part of company lore.'],
+    ['1929', 'Binda wins eight Giro stages in succession and takes his fourth overall victory.'],
+  ] : [
+    ['1920', 'Peter Schrøder begynder at bygge cykler i København.'],
+    ['1921', 'Léon Scieur vinder Tour de France.'],
+    ['1923', 'Henri Suter vinder både Flandern Rundt og Paris–Roubaix.'],
+    ['1924', 'Alfonsina Strada starter Giroen og fortsætter til Milano uden for klassementet.'],
+    ['1925', 'Alfredo Binda vinder Giroen ved sit første forsøg.'],
+    ['1926', 'Historiens længste Tour køres over 5.745 kilometer; Lucien Buysse vinder.'],
+    ['1927', 'Binda vinder tolv Giro-etaper; Campagnolos fastfrosne hjulskift bliver senere en del af firmaets oprindelsesfortælling.'],
+    ['1929', 'Binda vinder otte Giro-etaper i træk og tager sin fjerde samlede sejr.'],
+  ];
+  periodThemeCopy = en ? {
+    'loeb-og-store-oejeblikke': 'The 1926 Tour stretched across 5,745 kilometres, while the classics and the Giro developed their own stars and recurring dramas. Distance was still one of the organisers’ strongest instruments. ',
+    ryttere: 'Alfonsina Strada challenged the boundaries of the Giro. Binda’s victories made dominance itself a problem, while Bottecchia and Buysse embodied the decade’s stage-race champions.',
+    teknik: 'Reversible rear wheels still offered two ratios, but freewheels and early gear systems were spreading. Frames, wooden rims, tubular tyres and hand-built details made the racing bicycle both refined and demanding.',
+    'kost-traening-og-videnskab': 'Riders ate according to availability, habit and experience. Coffee, alcohol, medicines and stimulants belonged to a poorly defined field, and later anecdotes must be separated from documented practice.',
+    cykelkultur: 'Newspapers, roadside crowds and portraits with prized bicycles made cycling part of everyday modern culture. The racing cyclist became both worker and public figure.',
+    'samfund-og-tidsaand': 'Europe still carried the damage of the First World War. Industry recovered, mass media expanded and international races offered a shared spectacle across national borders.',
+    'menneskene-bag': 'Frame builders such as Peter Schrøder, mechanics, officials and newspaper organisers shaped the sport away from the finish line. Their choices determined the machines, rules and routes.',
+  } : {
+    'loeb-og-store-oejeblikke': 'Touren i 1926 strakte sig over 5.745 kilometer, mens klassikerne og Giroen udviklede deres egne stjerner og tilbagevendende dramaer. Distancen var stadig et af arrangørernes stærkeste virkemidler.',
+    ryttere: 'Alfonsina Strada udfordrede Giroens grænser. Bindas sejre gjorde selve dominansen til et problem, mens Bottecchia og Buysse blev årtiets store etapeløbsryttere.',
+    teknik: 'Vendbare baghjul gav fortsat to udvekslinger, men friløb og tidlige gearsystemer bredte sig. Stel, træfælge, ringdæk og håndbyggede detaljer gjorde racercyklen både raffineret og krævende.',
+    'kost-traening-og-videnskab': 'Rytterne spiste efter adgang, vane og erfaring. Kaffe, alkohol, medicin og stimulanser lå i et uklart felt, og senere anekdoter må holdes adskilt fra dokumenteret praksis.',
+    cykelkultur: 'Aviser, publikum langs vejen og portrætter med den kostbare cykel gjorde cyklingen til en del af den moderne hverdagskultur. Cykelrytteren blev både arbejder og offentlig person.',
+    'samfund-og-tidsaand': 'Europa bar stadig sporene efter Første Verdenskrig. Industrien kom i gang, massemedierne voksede, og de internationale løb skabte et fælles skuespil på tværs af landegrænser.',
+    'menneskene-bag': 'Rammebyggere som Peter Schrøder, mekanikere, officials og avisernes arrangører formede sporten uden for målstregen. Deres valg bestemte maskiner, regler og ruter.',
+  };
+}
 if (period === '1960-1969') {
   boxes = en ? [
     ['The decade’s main development', 'The lightweight steel racing bicycle settled into a form that would remain familiar for decades.'],
@@ -119,8 +166,8 @@ if (period === '1960-1969') {
   };
 }
 const decadeName = en
-  ? (period === '1900-1920' ? '1900–1920' : period === '1960-1969' ? 'The 1960s' : 'The 1990s')
-  : (period === '1900-1920' ? '1900–1920' : period === '1960-1969' ? '1960’erne' : '1990’erne');
+  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1960-1969' ? 'The 1960s' : 'The 1990s')
+  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1960-1969' ? '1960’erne' : '1990’erne');
 ---
 <section class="period-model" aria-labelledby="period-model-title">
   <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? `${decadeName} in three views` : `${decadeName} i tre bokse`}</h2></header>

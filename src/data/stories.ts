@@ -59,6 +59,8 @@ const storyTracks: Record<string, StoryTrack> = {
   'henri-desgrange-og-den-selvhjulpne-rytter': 'people',
   'apoteket-paa-styret': 'people',
   'to-tandhjul-og-en-skruenoegle': 'mechanics',
+  'tour-de-france-1926-den-laengste': 'race',
+  'peter-schroder-vaerksted-1920': 'people',
 };
 
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
@@ -110,7 +112,9 @@ export const stories: StoryMeta[] = [
   { slug: 'gunnar-asmussen-funny-bike', type: 'historie', year: '1968–1988', title: 'Da Gunnar Asmussen gjorde cyklen lavere', text: 'Fra OL-guld i Mexico City til en gul-sort funny bike fra cykelværkstedet i Aarhus.', image: 'images/bikes/asmussen-super-prestige/hero.webp', periods: ['1960-1969', '1980-1989'], topics: ['dansk-cykling', 'aerodynamik', 'enkeltstart', 'funny-bike'], relatedBikes: ['asmussen-super-prestige'], relatedComponents: [] },
   { slug: 'alfonsina-strada-giro-1924', type: 'historie', year: '1924', title: 'Kvinden, Giroen ikke kunne slippe af med', text: 'Alfonsina Strada kom uden for tidsgrænsen i Perugia. Alligevel fortsatte hun hele vejen til Milano.', image: 'images/stories/alfonsina-strada-1924/alfonsina-strada-rulli.jpg', periods: ['1920-1930'], topics: ['giro-ditalia', 'kvindecykling', 'regler', 'mekanik'], relatedBikes: [], relatedComponents: [] },
   { slug: 'wim-van-est-aubisque-1951', type: 'historie', year: '1951', title: 'Den gule trøje forsvandt ned ad bjergsiden', text: 'Wim van Est styrtede ud over Aubisque og blev trukket op med et improviseret reb af cykelslanger.', image: 'images/stories/wim-van-est-1951/wim-van-est-1951.jpg', periods: ['1950-1959'], topics: ['tour-de-france', 'aubisque', 'gul-troeje', 'mekanik'], relatedBikes: [], relatedComponents: [] },
-  { slug: 'alfredo-binda-giro-1930', type: 'historie', year: '1930', title: 'Da Giroen betalte Binda for at blive hjemme', text: 'Alfredo Binda havde gjort Giroen så forudsigelig, at arrangørerne betalte ham 22.500 lire for ikke at stille op.', image: 'images/stories/alfredo-binda-giro-1930/alfredo-binda.jpg', periods: ['1930-1939'], topics: ['giro-ditalia', 'alfredo-binda', 'regler', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'alfredo-binda-giro-1930', type: 'historie', year: '1925–1930', title: 'Da Giroen betalte Binda for at blive hjemme', text: 'Efter fire Giro-sejre i 1920’erne var Alfredo Binda blevet så dominerende, at arrangørerne holdt ham ude i 1930 og betalte 22.500 lire.', image: 'images/stories/alfredo-binda-giro-1930/alfredo-binda.jpg', periods: ['1920-1930', '1930-1939'], topics: ['giro-ditalia', 'alfredo-binda', 'regler', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'tour-de-france-1926-den-laengste', type: 'historie', year: '1926', title: 'Touren, der målte 5.745 kilometer', text: 'Tour de France 1926 blev løbets længste udgave. 126 ryttere startede i Évian, og 41 nåede Paris.', image: 'images/stories/tour-1926/tour-de-france-1926.png', periods: ['1920-1930'], topics: ['tour-de-france', 'lucien-buysse', 'udholdenhed', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'peter-schroder-vaerksted-1920', type: 'historie', year: '1920', title: 'Da Peter Schrøder begyndte at bygge cykler på Nørrebro', text: 'Peter Schrøders værksted fra 1920 blev begyndelsen på et københavnsk cykelnavn med en lang forbindelse til dansk cykelsport.', image: 'images/bikes/schroder-1965/hero.jpg', periods: ['1920-1930'], topics: ['peter-schroder', 'dansk-cykling', 'rammebygning', 'værksted'], relatedBikes: ['schroder-1965'], relatedComponents: [] },
 ];
 
 export const storiesForPeriod = (period: string) => stories.filter((story) => story.periods.includes(period));

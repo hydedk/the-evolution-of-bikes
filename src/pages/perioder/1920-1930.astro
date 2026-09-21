@@ -1,6 +1,7 @@
 ---
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 import { storiesForPeriod } from '../../data/stories';
+import PeriodStructure from '../../components/PeriodStructure.astro';
 const relatedStories = storiesForPeriod('1920-1930');
 const facts = [['5.745 km', 'Tour de France 1926'], ['17 etaper', 'I den længste Tour'], ['ca. 239 timer', 'Lucien Buysses vindertid'], ['482 km', 'Les Sables-d’Olonne–Bayonne 1924']];
 ---
@@ -9,6 +10,7 @@ const facts = [['5.745 km', 'Tour de France 1926'], ['17 etaper', 'I den længst
 <main><article class="wildwest-page decade1920-page">
   <header class="wildwest-hero"><div><p class="section-label">Perioden 1920–1929</p><h1>Cykelsportens barske <em>guldalder</em></h1></div><p>Den moderne landevejscykling tog form, mens rytterne stadig blev behandlet som en blanding af atleter, mekanikere og omrejsende gladiatorer.</p></header>
   <figure class="decade1920-hero-image"><img src={`${base}/images/periods/1920-1930/mountain-stop.webp`} alt="Ryttere med reservedæk over skuldrene ved et bjergpas" /><figcaption>Et hvil på en rå bjergvej. Reservedækkene over skuldrene fortæller lige så meget om perioden som rytternes uldtrøjer. Billedets præcise datering er ikke dokumenteret i arkivet.</figcaption></figure>
+  <PeriodStructure language="da" period="1920-1930" />
   <section class="wildwest-lead"><p class="section-label">Efter krigen</p><p>Europa var mærket, vejene var nedslidte, og mange ryttere var aldrig vendt hjem. Alligevel voksede cykelsporten i 1920’erne til et af kontinentets største folkelige skuespil.</p></section>
   <section class="era-facts decade1920-facts" aria-label="Fakta om periodens Tour de France">{facts.map(([number, label]) => <div><strong>{number}</strong><span>{label}</span></div>)}</section>
 

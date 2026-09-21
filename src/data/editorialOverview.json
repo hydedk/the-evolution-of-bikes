@@ -2,15 +2,15 @@
   {
     "id": "hist-000001",
     "titel": "Christophe, den knækkede forgaffel og smedjen",
-    "status": "research",
+    "status": "publiceret",
     "prioritet": "lancering",
     "periode": "per-1900-1919",
     "aar": "1913",
-    "dokumentation": "research-paabegyndt",
+    "dokumentation": "dokumenteret",
     "faktarisiko": "mellem",
-    "naeste_handling": "Find samtidige Tour- og L'Auto-kilder til brudsted, smedje, hjælp og straf",
-    "blokeret_af": "Mangler den tidligste dokumentation for drengen ved blæsebælgen",
-    "kanonisk_url": "",
+    "naeste_handling": "Vedligehold kilder og billednoter ved nye oplysninger",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/eugene-christophe-smedjen-1913/",
     "fil": "hist-000001-christophe-forgaffel-1913.md"
   },
   {
@@ -1640,15 +1640,15 @@
   {
     "id": "hist-000118",
     "titel": "Henri Desgrange og reglerne rytterne måtte leve med",
-    "status": "indbakke",
+    "status": "publiceret",
     "prioritet": "mellem",
     "periode": "per-1900-1919",
     "aar": "1903-1936",
-    "dokumentation": "ikke-kontrolleret",
+    "dokumentation": "dokumenteret",
     "faktarisiko": "mellem",
-    "naeste_handling": "Foretag redaktionel vurdering og kontrollér kilderne i originalmaterialet",
+    "naeste_handling": "Vedligehold kilder og billednoter ved nye oplysninger",
     "blokeret_af": "null",
-    "kanonisk_url": "",
+    "kanonisk_url": "https://teob.dk/historier/henri-desgrange-og-den-selvhjulpne-rytter/",
     "fil": "hist-000118-henri-desgrange-regler.md"
   },
   {
@@ -1835,16 +1835,16 @@
   },
   {
     "id": "hist-000132",
-    "titel": "Koteletter, vin og feltets tidlige forplejning",
-    "status": "indbakke",
+    "titel": "Da apoteket kørte med på styret",
+    "status": "publiceret",
     "prioritet": "mellem",
     "periode": "per-1900-1919",
-    "aar": "1900-1959",
-    "dokumentation": "ikke-kontrolleret",
+    "aar": "1900-1924",
+    "dokumentation": "dokumenteret",
     "faktarisiko": "mellem",
-    "naeste_handling": "Foretag redaktionel vurdering og kontrollér kilderne i originalmaterialet",
+    "naeste_handling": "Vedligehold kilder og billednoter ved nye oplysninger",
     "blokeret_af": "null",
-    "kanonisk_url": "",
+    "kanonisk_url": "https://teob.dk/historier/apoteket-paa-styret/",
     "fil": "hist-000132-forplejning-foer-1960.md"
   },
   {
@@ -2350,5 +2350,33 @@
     "blokeret_af": "null",
     "kanonisk_url": "https://teob.dk/historier/herning-seksdagesloeb-1974/",
     "fil": "hist-000168-herning-seksdagesloeb-1974.md"
+  },
+  {
+    "id": "hist-000169",
+    "titel": "Stifinderen, der sendte Touren over Tourmalet",
+    "status": "publiceret",
+    "prioritet": "lancering",
+    "periode": "per-1900-1919",
+    "aar": "1910",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Vedligehold kilder og billednoter ved nye oplysninger",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/stifinderen-der-sendte-touren-over-tourmalet/",
+    "fil": "hist-000169-steines-tourmalet-1910.md"
+  },
+  {
+    "id": "hist-000170",
+    "titel": "To tandhjul og en skruenøgle",
+    "status": "publiceret",
+    "prioritet": "lancering",
+    "periode": "per-1900-1919",
+    "aar": "1916-1920",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Vedligehold kilder og billednoter ved nye oplysninger",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/to-tandhjul-og-en-skruenoegle/",
+    "fil": "hist-000170-to-tandhjul-skruenoegle.md"
   }
 ]

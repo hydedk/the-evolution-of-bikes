@@ -1,0 +1,58 @@
+---
+import { periods, themes, type ContentItem, type ThemeId } from '../data/taxonomy';
+const { items, language = 'da', initialTheme = '', initialPeriod = '', showTheme = true } = Astro.props as { items: ContentItem[]; language?: 'da' | 'en'; initialTheme?: ThemeId | ''; initialPeriod?: string; showTheme?: boolean };
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const en = language === 'en';
+const copy = en ? {
+  search: 'Search', placeholder: 'Person, race, bicycle or component…', theme: 'Theme', allThemes: 'All themes', period: 'Period', allPeriods: 'All periods', type: 'Content type', allTypes: 'Stories, bicycles and components', story: 'Story', bike: 'Bicycle', component: 'Component', reset: 'Clear filters', none: 'No content matches these filters.', result: 'items shown', read: 'Open →'
+} : {
+  search: 'Søg', placeholder: 'Person, løb, cykel eller komponent…', theme: 'Tema', allThemes: 'Alle temaer', period: 'Periode', allPeriods: 'Alle perioder', type: 'Indholdstype', allTypes: 'Historier, cykler og komponenter', story: 'Historie', bike: 'Cykel', component: 'Komponent', reset: 'Nulstil filtre', none: 'Intet indhold passer til filtrene.', result: 'elementer vist', read: 'Åbn →'
+};
+const typeLabel = (type: ContentItem['type']) => type === 'historie' ? copy.story : type === 'cykel' ? copy.bike : copy.component;
+---
+<section class="content-explorer" data-content-explorer data-language={language}>
+  <form class="content-filters" onsubmit="return false">
+    <label class="content-search"><span>{copy.search}</span><input type="search" placeholder={copy.placeholder} data-content-search /></label>
+    {showTheme && <label><span>{copy.theme}</span><select data-content-theme><option value="">{copy.allThemes}</option>{Object.entries(themes).map(([id, theme]) => <option value={id} selected={id === initialTheme}>{en ? theme.en : theme.da}</option>)}</select></label>}
+    <label><span>{copy.period}</span><select data-content-period><option value="">{copy.allPeriods}</option>{periods.map(([id, da, enLabel]) => <option value={id} selected={id === initialPeriod}>{en ? enLabel : da}</option>)}</select></label>
+    <label><span>{copy.type}</span><select data-content-type><option value="">{copy.allTypes}</option><option value="historie">{copy.story}</option><option value="cykel">{copy.bike}</option><option value="komponent">{copy.component}</option></select></label>
+    <button type="reset">{copy.reset}</button>
+  </form>
+  <p class="content-count" aria-live="polite" data-content-count></p>
+  <div class="content-results" data-content-results>
+    {items.map((item) => <a href={`${base}${en ? item.englishUrl : item.canonicalUrl}`} data-content-card data-search={`${item.title} ${item.text} ${item.year}`} data-theme={item.themes.join(',')} data-period={item.period} data-type={item.type} data-year={item.sortYear}>
+      <span>{typeLabel(item.type)} · {item.year}</span><h3>{item.title}</h3><p>{item.text}</p><b>{copy.read}</b>
+    </a>)}
+  </div>
+  <p class="content-empty" data-content-empty hidden>{copy.none}</p>
+</section>
+
+<script>
+  document.querySelectorAll('[data-content-explorer]').forEach((root) => {
+    const form = root.querySelector('form');
+    const search = root.querySelector('[data-content-search]');
+    const theme = root.querySelector('[data-content-theme]');
+    const period = root.querySelector('[data-content-period]');
+    const type = root.querySelector('[data-content-type]');
+    const count = root.querySelector('[data-content-count]');
+    const empty = root.querySelector('[data-content-empty]');
+    const cards = [...root.querySelectorAll('[data-content-card]')];
+    const normalise = (value) => value.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const render = () => {
+      let shown = 0;
+      cards.sort((a, b) => Number(a.dataset.year) - Number(b.dataset.year)).forEach((card) => {
+        const matches = (!search.value || normalise(card.dataset.search).includes(normalise(search.value)))
+          && (!theme?.value || card.dataset.theme.split(',').includes(theme.value))
+          && (!period.value || card.dataset.period === period.value)
+          && (!type.value || card.dataset.type === type.value);
+        card.hidden = !matches;
+        if (matches) shown += 1;
+      });
+      count.textContent = `${shown} ${root.dataset.language === 'en' ? 'items shown' : 'elementer vist'}`;
+      empty.hidden = shown !== 0;
+    };
+    form.addEventListener('input', render);
+    form.addEventListener('reset', () => setTimeout(render));
+    render();
+  });
+</script>

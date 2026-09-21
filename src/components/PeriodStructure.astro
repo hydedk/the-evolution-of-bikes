@@ -1,0 +1,43 @@
+---
+import { themes, themeIds, contentForPeriod, localizeContent } from '../data/taxonomy';
+const { language = 'da', period = '1990-1999' } = Astro.props as { language?: 'da' | 'en'; period?: string };
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const en = language === 'en';
+const items = localizeContent(contentForPeriod(period), language);
+const itemType = (type: string) => en ? ({ historie: 'Story', cykel: 'Bicycle', komponent: 'Component' }[type] ?? type) : ({ historie: 'Historie', cykel: 'Cykel', komponent: 'Komponent' }[type] ?? type);
+const boxes = en ? [
+  ['The decade’s main development', 'Training, equipment and nutrition became more professional and more closely measured.'],
+  ['What defined the period', 'Larger budgets, new materials, international television coverage and a growing doping shadow.'],
+  ['Three changes to cycling', 'Integrated shift levers became standard. Carbon fibre gained ground. Training and fuelling became more scientific.'],
+] : [
+  ['Årtiets vigtigste udvikling', 'Professionaliseringen af træning, udstyr og ernæring ændrede cykelsporten.'],
+  ['Det kendetegnede perioden', 'Større holdbudgetter, nye materialer, international tv-dækning og en voksende dopingskygge.'],
+  ['Tre ting, der ændrede cyklingen', 'Integrerede gearskiftere blev normen. Kulfiber vandt frem. Træning og kost blev mere videnskabelig.'],
+];
+const timeline = en ? [['1990', 'Shimano introduces integrated brake and shift levers.'], ['1991', 'Miguel Indurain wins his first Tour de France.'], ['1992', 'Campagnolo launches Ergopower.'], ['1994', 'Indurain sets an hour record in Bordeaux.'], ['1996', 'Bjarne Riis wins the Tour.'], ['1997', 'The first L’Eroica is held in Tuscany.'], ['1998', 'The Festina affair brings raids and rider protests to the Tour.']] : [['1990', 'Shimano introducerer kombinerede bremse- og geargreb.'], ['1991', 'Miguel Indurain vinder sin første Tour de France.'], ['1992', 'Campagnolo lancerer Ergopower.'], ['1994', 'Indurain sætter timerekord i Bordeaux.'], ['1996', 'Bjarne Riis vinder Tour de France.'], ['1997', 'Det første L’Eroica køres i Toscana.'], ['1998', 'Festina-sagen udløser razziaer og rytterprotester i Touren.']];
+const periodThemeCopy = en ? {
+  'loeb-og-store-oejeblikke': 'Indurain controlled the Tour through long time trials, while Pantani changed races in the mountains. The Festina affair made the 1998 Tour a contest shaped as much by police raids and protests as by racing.',
+  ryttere: 'Indurain, Rominger, Riis and Pantani represented very different ways of winning. Their results also belong to a decade whose medical culture later altered how those performances were understood.',
+  teknik: 'Integrated shift and brake levers changed the rider’s position and timing. Aluminium grew common at the top level, carbon fibre gained ground, and deep-section wheels became a visible part of the racing bicycle.',
+  'kost-traening-og-videnskab': 'Heart-rate monitors, laboratory testing and planned nutrition became more systematic. At the same time, EPO showed how sports medicine could be used for something rather different from rider health.',
+  cykelkultur: 'International television made the largest races easier to follow across borders. L’Eroica, first held in 1997, also showed the beginning of a new interest in older bicycles and unpaved roads.',
+  'samfund-og-tidsaand': 'Professional teams grew larger and more commercial. In 1998, customs officers, police investigators and legal proceedings moved into the Tour and changed the public discussion of the sport.',
+  'menneskene-bag': 'Doctors, soigneurs, mechanics and team managers became part of increasingly specialised organisations. Their work shaped preparation, equipment and recovery, although it rarely appeared in the result sheet.',
+} : {
+  'loeb-og-store-oejeblikke': 'Indurain styrede Touren gennem de lange enkeltstarter, mens Pantani kunne ændre et løb i bjergene. Festina-sagen gjorde Touren i 1998 til et løb præget af både razziaer, protester og cykelløb.',
+  ryttere: 'Indurain, Rominger, Riis og Pantani viste meget forskellige måder at vinde på. Resultaterne hører samtidig til et årti, hvor den medicinske kultur senere ændrede synet på præstationerne.',
+  teknik: 'Kombinerede gear- og bremsegreb ændrede rytternes arbejdsstilling og timing. Aluminium blev almindeligt på topniveau, kulfiber vandt frem, og højprofilhjul blev en synlig del af racercyklen.',
+  'kost-traening-og-videnskab': 'Pulsmålere, laboratorietest og planlagt ernæring blev mere systematisk. Samtidig viste EPO, at sportsmedicin også kunne bruges til noget ganske andet end rytternes sundhed.',
+  cykelkultur: 'International tv-dækning gjorde de største løb lettere at følge på tværs af lande. L’Eroica, der blev kørt første gang i 1997, viste også en ny interesse for ældre cykler og grusveje.',
+  'samfund-og-tidsaand': 'De professionelle hold blev større og mere kommercielle. I 1998 rykkede toldere, politi og retssager ind i Touren og ændrede den offentlige samtale om sporten.',
+  'menneskene-bag': 'Læger, soigneurs, mekanikere og holdledere blev en del af stadig mere specialiserede organisationer. Deres arbejde prægede forberedelse, udstyr og restitution, selv om det sjældent stod i resultatlisten.',
+};
+---
+<section class="period-model" aria-labelledby="period-model-title">
+  <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? 'The 1990s in three views' : '1990’erne i tre bokse'}</h2></header>
+  <div class="period-summary-boxes">{boxes.map(([title, text], index) => <article><span>0{index + 1}</span><h3>{title}</h3>{index === 2 ? <ul>{text.split('. ').map((line) => <li>{line.replace(/\.$/, '')}</li>)}</ul> : <p>{text}</p>}</article>)}</div>
+  <div class="period-model-timeline"><header><p class="section-label">{en ? 'Selected events' : 'Udvalgte begivenheder'}</p><h2>{en ? 'A short timeline' : 'En kort tidslinje'}</h2></header><ol>{timeline.map(([year, text]) => <li><time>{year}</time><span>{text}</span></li>)}</ol></div>
+  <div class="period-theme-sections"><header><p class="section-label">{en ? 'Seven fixed themes' : 'Syv faste temaer'}</p><h2>{en ? 'The decade, seen across the site' : 'Årtiet på tværs af hjemmesiden'}</h2></header>
+    {themeIds.map((id, index) => { const theme = themes[id]; const related = items.filter((item) => item.themes.includes(id)); return <section id={id} class="period-theme-row"><div><span>0{index + 1}</span><h3>{en ? theme.en : theme.da}</h3><p>{periodThemeCopy[id]}</p><a href={`${base}/${en ? 'en/themes' : 'tema'}/${id}/`}>{en ? 'Follow this theme through cycling history →' : 'Følg temaet gennem cykelhistorien →'}</a></div><div class="period-theme-items">{related.length ? related.slice(0, 4).map((item) => <a href={`${base}${en ? item.englishUrl : item.canonicalUrl}`}><small>{itemType(item.type)} · {item.year}</small><strong>{item.title}</strong></a>) : <p>{en ? 'No published content has this as a primary or secondary theme yet.' : 'Der er endnu ikke udgivet indhold med temaet som primær eller sekundær mærkning.'}</p>}</div></section> })}
+  </div>
+</section>

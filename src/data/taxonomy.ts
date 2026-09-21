@@ -96,10 +96,11 @@ export const components = [
 export type ContentItem = {
   id: string; type: ContentType; year: string; sortYear: number; title: string; text: string;
   period: string; primaryTheme: ThemeId; secondaryThemes: ThemeId[]; themes: ThemeId[];
-  canonicalUrl: string; englishUrl: string;
+  canonicalUrl: string; englishUrl: string; image?: string;
 };
 
 const numberFrom = (year: string) => Number(year.match(/\d{4}/)?.[0] ?? 0);
+const siteImagePath = (image: string) => /^(?:https?:)?\/\//.test(image) || image.startsWith('/') ? image : `/${image}`;
 
 const knownPeriods = new Set(periods.map(([id]) => id));
 const validateClassification = (id: string, classification: Classification) => {
@@ -115,12 +116,12 @@ export const contentItems: ContentItem[] = [
     const c = storyClassifications[story.slug];
     if (!c) throw new Error(`Historien ${story.slug} mangler periode- og temaklassifikation`);
     validateClassification(story.slug, c);
-    return { id: story.slug, type: 'historie' as const, year: story.year, sortYear: numberFrom(story.year), title: story.title, text: story.text, period: c.period, primaryTheme: c.primary, secondaryThemes: c.secondary ?? [], themes: [c.primary, ...(c.secondary ?? [])], canonicalUrl: `/historier/${story.slug}/`, englishUrl: `/en/stories/${story.slug}/` };
+    return { id: story.slug, type: 'historie' as const, year: story.year, sortYear: numberFrom(story.year), title: story.title, text: story.text, period: c.period, primaryTheme: c.primary, secondaryThemes: c.secondary ?? [], themes: [c.primary, ...(c.secondary ?? [])], canonicalUrl: `/historier/${story.slug}/`, englishUrl: `/en/stories/${story.slug}/`, image: siteImagePath(typeof story.image === 'string' ? story.image : story.image.src) };
   }),
   ...bikes.map((bike) => {
     const period = bikePeriods[bike.slug];
     if (!period || !knownPeriods.has(period as typeof periods[number][0])) throw new Error(`Cyklen ${bike.slug} mangler en gyldig periode`);
-    return { id: bike.slug, type: 'cykel' as const, year: bike.year, sortYear: numberFrom(bike.year), title: bike.title, text: bike.text, period, primaryTheme: 'teknik' as const, secondaryThemes: ['cykelkultur'] as ThemeId[], themes: ['teknik', 'cykelkultur'] as ThemeId[], canonicalUrl: `/cykler/${bike.slug}/`, englishUrl: `/en/bikes/${bike.slug}/` };
+    return { id: bike.slug, type: 'cykel' as const, year: bike.year, sortYear: numberFrom(bike.year), title: bike.title, text: bike.text, period, primaryTheme: 'teknik' as const, secondaryThemes: ['cykelkultur'] as ThemeId[], themes: ['teknik', 'cykelkultur'] as ThemeId[], canonicalUrl: `/cykler/${bike.slug}/`, englishUrl: `/en/bikes/${bike.slug}/`, image: `/${bike.image}` };
   }),
   ...components.map((component) => ({ id: component.slug, type: 'komponent' as const, year: component.year, sortYear: numberFrom(component.year), title: component.title, text: component.text, period: component.period, primaryTheme: 'teknik' as const, secondaryThemes: [] as ThemeId[], themes: ['teknik'] as ThemeId[], canonicalUrl: `/komponenter/${component.slug}/`, englishUrl: `/en/components/${component.slug}/` })),
 ];

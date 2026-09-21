@@ -1289,7 +1289,9 @@ html.has-lightbox {
 .period-theme-row p { line-height: 1.6; }
 .period-theme-row a { color: inherit; }
 .period-theme-items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); }
-.period-theme-items > a { display: flex; flex-direction: column; gap: .65rem; padding: 1.25rem; background: #f7f3e9; text-decoration: none; }
+.period-theme-items > a { display: flex; flex-direction: column; gap: .65rem; min-height: 10.5rem; padding: 1.25rem; background: #f7f3e9; text-decoration: none; }
+.period-theme-items > a.has-card-image { background-image: linear-gradient(rgba(247, 243, 233, .84), rgba(247, 243, 233, .9)), var(--card-image); background-position: center; background-size: cover; background-blend-mode: normal, luminosity; transition: background-image .2s ease; }
+.period-theme-items > a.has-card-image:hover { background-image: linear-gradient(rgba(247, 243, 233, .74), rgba(247, 243, 233, .84)), var(--card-image); }
 .period-theme-items small { color: var(--rust); text-transform: capitalize; }
 .period-theme-items > p { grid-column: 1 / -1; margin: 0; padding: 1.25rem; background: #f7f3e9; }
 .theme-hero a, .period-search-intro a { color: var(--rust); font-weight: 600; }

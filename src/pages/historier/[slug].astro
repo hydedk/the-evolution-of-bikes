@@ -1,0 +1,99 @@
+---
+import OptimizedImage from '../../components/OptimizedImage.astro';
+import steinesImage from '../../assets/stories/tourmalet-steines-1910/tour-1910-route.webp';
+import christopheImage from '../../assets/stories/eugene-christophe-1913/eugene-christophe-1912.jpg';
+import christopheGalibier from '../../assets/stories/eugene-christophe-1913/christophe-galibier-1912.jpg';
+
+const stories = {
+  'stifinderen-der-sendte-touren-over-tourmalet': {
+    year: '1910', label: 'Menneskene bag · Tour de France', title: 'Stifinderen, der sendte Touren over Tourmalet',
+    intro: 'Alphonse Steines kom ned fra et snedækket bjergpas med en historie, der var mere optimistisk end hans nat i Pyrenæerne. Et kort telegram var med til at ændre Tour de France.',
+    image: steinesImage, alt: 'Kort over ruten i Tour de France 1910 med etaperne gennem Pyrenæerne',
+    caption: 'Ruten i Tour de France 1910 førte for første gang feltet over de store pas i Pyrenæerne. Kort: Wikimedia Commons, public domain.',
+    sections: [
+      ['En vej, ingen kendte som løbsvej', 'Tour de France havde allerede sendt rytterne ud på lange og brutale etaper, men i 1910 ville arrangørerne længere. Alphonse Steines, som arbejdede tæt sammen med løbsdirektør Henri Desgrange, foreslog at føre løbet over Col du Tourmalet. For Desgrange lød planen tæt på vanvid: passet var en bjergvej, ikke en oplagt scene for et cykelløb.'],
+      ['Undersøgelsen i sneen', 'Steines rejste selv til Pyrenæerne for at prøve ruten. De dramatiske detaljer er senere blevet fortalt i flere versioner, men kernen er sikker: turen blev langt vanskeligere end en almindelig besigtigelse. Sne og mørke gjorde passagen farlig, og lokale folk hjalp med at få ham ned. Alligevel sendte han næste morgen en kort besked til Desgrange: Tourmalet var passeret, vejen var udmærket og fuldt farbar.'],
+      ['Telegrammet som arbejdsredskab', 'Ordene var ikke en nøgtern tilstandsrapport. De var et argument. Steines vidste, at Desgrange skulle overbevises, hvis bjergene skulle ind i løbet. Den officielle Tour-historie gengiver telegrammet som øjeblikket, hvor usikkerheden blev omsat til en beslutning. Det gør ikke alle senere detaljer lige sikre, men det viser Steines som andet end en hjælper: han var stifinder, producent og risikovillig redaktør på samme tid.'],
+      ['Da feltet kom året efter', 'På etapen fra Luchon til Bayonne den 21. juli 1910 ventede Peyresourde, Aspin, Tourmalet og Aubisque. Octave Lapize vandt både etapen og senere Touren. Hans berømte udbrud mod arrangørerne — ofte gengivet som “I er mordere” — findes i varierende senere versioner og knyttes både til Tourmalet og Aubisque. Det sikre er, at etapen gjorde bjergene til løbets store prøve.'],
+      ['En ny målestok', 'Tourmalet blev ikke bare endnu en vej på kortet. Passet ændrede forestillingen om, hvad Tour de France kunne kræve af ryttere og maskiner. Bag forandringen stod ikke kun manden, der vandt, men også manden, der først gik ud i sneen og bagefter valgte de ord, der fik løbet til at følge efter.']
+    ],
+    sources: [['Tour de France: The Tour to the power of 10','https://www.letour.fr/en/news/2020/the-tour-to-the-power-of-10/1283461'],['Tour de France: Por el camino','https://www.letour.fr/es/patrimonio/etapa-6/por-el-camino'],['Wikimedia Commons: Tour de France 1910 route map','https://commons.wikimedia.org/wiki/File:Tour_de_France_1910_map-fr.svg']]
+  },
+  'eugene-christophe-smedjen-1913': {
+    year: '1913', label: 'Teknik · Tour de France', title: 'Da Eugène Christophe selv måtte smede sin forgaffel',
+    intro: 'En knækket forgaffel kostede Eugène Christophe føringen i Tour de France. Reglerne gav ham ikke en ny cykel. De sendte ham til en smedje.',
+    image: christopheImage, secondaryImage: christopheGalibier, alt: 'Eugène Christophe under Tour de France 1912',
+    caption: 'Eugène Christophe under Tour de France 1912, året før forgaffelbruddet. Foto: Bibliothèque nationale de France/Wikimedia Commons, public domain.',
+    sections: [
+      ['Et brud på vej ned', 'På sjette etape af Tour de France 1913 lå Eugène Christophe godt placeret i løbet, da hans forgaffel knækkede på nedkørslen fra Tourmalet. En moderne rytter ville vente på servicebilen. Christophe måtte vende cyklen om på skulderen og gå mod Sainte-Marie-de-Campan.'],
+      ['Smeden og rytteren', 'I landsbyen fandt han en smedje. Tourens princip om selvhjulpenhed betød, at reparationen skulle udføres af rytteren selv. Under opsyn varmede, rettede og samlede han forgaflen, før han igen kunne fortsætte. Det mekaniske arbejde var ikke et indslag ved siden af løbet; det var en del af konkurrencen.'],
+      ['Drengen ved blæsebælgen', 'Den mest farverige version fortæller, at en syvårig dreng betjente blæsebælgen, og at Christophe derfor fik en tidsstraf for at have modtaget hjælp. Episoden er gentaget utallige gange, men den tidligste dokumentation for drengens alder og den præcise hjælp er vanskeligere at fastslå end selve forgaffelbruddet og smedjearbejdet. Derfor skal detaljen læses som en senere, stærkt overleveret del af historien.'],
+      ['Tabt tid, ikke tabt navn', 'Reparationen kostede Christophe flere timer og muligheden for at vinde Touren. Han fortsatte alligevel. Seks år senere blev han den første rytter til at bære Tourens gule førertrøje, da den blev indført i 1919. Men smedjen i 1913 blev billedet, der blev ved med at hænge ved.'],
+      ['Når teknik bliver skæbne', 'Historien er ikke kun en fortælling om stædighed. Den viser, hvor direkte en enkelt ståldel kunne bestemme et løbs udfald, og hvor anderledes ansvar var fordelt. Rytteren skulle både være motor, chauffør og mekaniker.']
+    ],
+    sources: [['Tour de France: Life in yellow','https://www.letour.fr/en/news/2019/life-in-yellow/1275993'],['Wikimedia Commons: Eugène Christophe 1912','https://commons.wikimedia.org/wiki/File:Eugene_Christophe_Tour_de_France_1912.jpg']],
+  },
+  'henri-desgrange-og-den-selvhjulpne-rytter': {
+    year: '1903–1920', label: 'Menneskene bag · Regler', title: 'Henri Desgrange og idealet om den selvhjulpne rytter',
+    intro: 'Tour de France skulle efter Henri Desgranges opfattelse afgøres af ryttere, som kunne klare vej, sult og mekanik uden at blive båret gennem løbet af andre.',
+    image: '/images/periods/1900-1920/wild-west/street-race-poster.webp', alt: 'Tidlig fransk cykelløbsplakat fra pionertiden',
+    caption: 'De tidlige landevejsløb blev skabt af aviser, arrangører og stærke forestillinger om den ensomme rytter. Historisk plakat, public domain.',
+    sections: [
+      ['Avisen havde brug for et løb', 'Henri Desgrange var tidligere banerytter og redaktør for sportsavisen L’Auto. Tour de France blev lanceret i 1903 som et journalistisk og kommercielt projekt, men løbet fik hurtigt sin egen ideologi. Desgrange ville ikke blot finde den hurtigste. Han ville finde den rytter, der kunne bære hele prøven selv.'],
+      ['Hjælp var en mistanke', 'Reglerne ændrede sig fra år til år, men retningen var klar. Mad og vand skulle ofte skaffes af rytteren selv, mekaniske problemer kunne ikke uden videre løses af et hold, og udskiftning af maskinen var stærkt begrænset. Den officielle Tour-historie gengiver Desgranges regler fra 1920 som en sammenfatning: rytteren skulle stilles som en mand på træning alene og måtte hverken hjælpe andre eller modtage hjælp.'],
+      ['Et ideal med en pris', 'Reglerne skabte stærke fortællinger, fordi punkteringer, brud og sult blev synlige dele af løbet. Men de var ikke neutrale. De favoriserede ryttere med penge, erfaring og adgang til bedre udstyr, selv når alle på papiret skulle klare sig selv. Samtidig kunne en arrangør gøre lidelsen til avisstof og bruge den som bevis på løbets storhed.'],
+      ['Desgrange var ikke hele Touren', 'Alphonse Steines fandt vejene, journalisterne skrev dramaet frem, og ryttere og mekanikere gjorde løbet muligt. Desgrange havde alligevel den afgørende magt til at definere prøven. Hans Tour var et løb, men også en fortælling om vilje, disciplin og individualisme.'],
+      ['Da idealet blev forladt', 'Med tiden blev service, holdtaktik og organiseret forplejning en fast del af sporten. Det gjorde ikke løbet let. Det flyttede blot ansvaret fra den enkelte rytters værktøjstaske til en hel organisation. De tidlige regler forklarer, hvorfor historier om knækkede gafler og vendte baghjul stadig virker så fremmede i dag.']
+    ],
+    sources: [['Tour de France: Sportsmen according to Desgrange','https://www.letour.fr/en/news/2020/1920-sportsmen-according-to-desgrange-2-10/1283494'],['Public Domain Review: The First Tour de France 1903','https://publicdomainreview.org/collection/the-first-tour-de-france-1903/']]
+  },
+  'apoteket-paa-styret': {
+    year: '1890’erne–1920’erne', label: 'Kost, træning og videnskab', title: 'Da apoteket kørte med på styret',
+    intro: 'Kaffe, alkohol og stærkere midler lå i samme kulturelle værktøjskasse. Før faste forbud og kontroller var grænsen mellem mad, medicin og stimulans uklar.',
+    image: '/images/periods/1900-1920/wild-west/exhausted-rider.webp', alt: 'Udmattet cykelrytter hjælpes efter et tidligt langdistanceløb',
+    caption: 'Langdistanceløbenes udmattelse skabte et marked for mad, drikke, tonika og stærkere midler. Historisk fotografi, public domain.',
+    sections: [
+      ['Ikke et moderne medicinskab', 'Når samtidens ryttere talte om noget, der kunne holde dem vågne, dæmpe smerte eller få kroppen gennem natten, brugte de ikke nødvendigvis vores skel mellem ernæring, medicin og doping. Kaffe, vin, spiritus, linimenter og forskellige stimulanser kunne optræde side om side.'],
+      ['Sporene fra 1890’erne', 'Medicinhistoriske oversigter beskriver brug af blandt andet koffein, kokain og stryknin blandt udholdenhedsatleter allerede i slutningen af 1800-tallet. Dokumentationen er ujævn, og berømte dødsfald er senere blevet knyttet til doping uden sikkert bevis. Derfor kan man ikke uden videre gøre hvert rygte til en konkret Tour-hændelse.'],
+      ['Ingen liste, ingen kontrol', 'Der fandtes ingen international forbudsliste som i dag og ingen laboratoriekontrol ved løbene. Et middel kunne være lovligt og almindeligt tilgængeligt, selv om det både var farligt og præstationsfremmende. Den historiske forskel er vigtig: brugen kan beskrives uden at lade som om rytterne brød regler, der endnu ikke fandtes.'],
+      ['Det tydelige vidnesbyrd kom senere', 'I 1924 lagde Henri og Francis Pélissier samt Maurice Ville deres beholdning frem for journalisten Albert Londres og talte om blandt andet kokain, kloroform og piller. Francis Pélissier sagde senere, at de havde drillet en journalist, som ikke kendte sporten. Interviewet er derfor både en vigtig kilde og en kilde, der skal læses kritisk.'],
+      ['Fra hemmelig blanding til regulering', 'Historien handler mindre om én mirakelkur end om en arbejdskultur. Når et løb krævede nattekørsel, kulde og udmattelse, søgte rytterne efter alt, der kunne holde dem i gang. Først langt senere blev grænsen mellem behandling og præstationsfremme gjort til et formelt regelsystem.']
+    ],
+    sources: [['WADA: Sport Physician’s Toolkit – history of doping','https://www.wada-ama.org/sites/default/files/resources/files/wada_sport_physician_toolkit_v2_en_0.pdf'],['NIH/PMC: Enhancement in Sport','https://pmc.ncbi.nlm.nih.gov/articles/PMC2742076/'],['NIH/PMC: Doping in sports – historical overview','https://pmc.ncbi.nlm.nih.gov/articles/PMC2219897/']]
+  },
+  'to-tandhjul-og-en-skruenoegle': {
+    year: 'Ca. 1919', label: 'Teknik · Samlingens cykler', title: 'To tandhjul og en skruenøgle',
+    intro: 'På Cycles France-Sport ligger gearskiftet ikke i et håndtag. Det sidder på hver sin side af baghjulet og kræver, at rytteren standser.',
+    image: '/images/bikes/cycles-france-sport/hero.webp', alt: 'Cycles France-Sport racercykel fra omkring 1919',
+    caption: 'Samlingens Cycles France-Sport, dateret til cirka 1916–1920. Foto: The Evolution of Bikes.',
+    sections: [
+      ['Et gear på hver side', 'Baghjulet på Cycles France-Sport har et tandhjul på hver side af navet. Det er ikke et gearskifte i moderne forstand. For at vælge den anden udveksling måtte rytteren stoppe, løsne hjulmøtrikkerne, tage kæden af, vende hjulet og spænde det hele igen.'],
+      ['Værktøjet var en del af kørslen', 'Systemet gjorde skruenøglen lige så nødvendig som drikkeflasken. Kæden skulle have den rigtige spænding, hjulet skulle sidde lige, og møtrikkerne skulle spændes sikkert. Et dårligt udført skift kunne give en slap kæde eller et skævt baghjul.'],
+      ['Hvorfor to tandhjul var en fordel', 'Den ene udveksling kunne vælges til flad vej, den anden til bakker. Forskellen var beskeden efter nutidens mål, men den gav rytteren et valg på en cykel uden bagskifter. Løsningen var enkel, robust og mulig at reparere langt fra et værksted.'],
+      ['Cyklen som konkret kilde', 'Cycles France-Sport kan ikke dokumentere præcis, hvad alle professionelle ryttere brugte på en bestemt Tour-etape. Den kan derimod vise den mekaniske logik fra perioden: få dele, synlige funktioner og et stort ansvar hos rytteren. Dateringen til cirka 1916–1920 bygger på stel, udstyr og mærkning og skal fortsat læses som en faglig vurdering, ikke et kendt produktionsår.'],
+      ['Før gearskiftet blev et greb', 'Senere flyttede gearmekanikken gradvist frem til håndtag og kabler, og til sidst ind i bremsegrebet. På denne cykel er udviklingen endnu helt fysisk. Skal vejen køres i et andet gear, må rytteren ned på knæ ved baghjulet.']
+    ],
+    sources: [['The Evolution of Bikes: Cycles France-Sport','https://teob.dk/cykler/cycles-france-sport/'],['Sheldon Brown: Fixed Gear Bicycles','https://www.sheldonbrown.com/fixed.html']]
+  }
+} as const;
+
+export function getStaticPaths() {
+  return [
+    'stifinderen-der-sendte-touren-over-tourmalet',
+    'eugene-christophe-smedjen-1913',
+    'henri-desgrange-og-den-selvhjulpne-rytter',
+    'apoteket-paa-styret',
+    'to-tandhjul-og-en-skruenoegle',
+  ].map((slug) => ({ params: { slug } }));
+}
+const slug = Astro.params.slug as keyof typeof stories;
+const story = stories[slug];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonical = `https://teob.dk/historier/${slug}/`;
+const imageUrl = typeof story.image === 'string' ? `https://teob.dk${story.image}` : canonical;
+const schema = { '@context':'https://schema.org', '@type':'Article', headline:story.title, description:story.intro, inLanguage:'da-DK', mainEntityOfPage:canonical, publisher:{'@type':'Organization',name:'The Evolution of Bikes',url:'https://teob.dk/'} };
+---
+<!doctype html><html lang="da"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><title>{story.title} · The Evolution of Bikes</title><meta name="description" content={story.intro}/><link rel="canonical" href={canonical}/><meta property="og:type" content="article"/><meta property="og:locale" content="da_DK"/><meta property="og:site_name" content="The Evolution of Bikes"/><meta property="og:title" content={story.title}/><meta property="og:description" content={story.intro}/><meta property="og:url" content={canonical}/><meta property="og:image" content={imageUrl}/><meta name="twitter:card" content="summary_large_image"/><script type="application/ld+json" set:html={JSON.stringify(schema)}/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet"/><link rel="stylesheet" href={`${base}/styles/global.css`}/></head><body>
+<header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`} aria-current="page">Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav><div class="header-tools"><strong>DA</strong><span aria-hidden="true">/</span><a class="language-switch" href={`${base}/en/stories/`}>EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div></header>
+<main><article class="track-page"><header class="track-hero"><p class="section-label">{story.label} · {story.year}</p><h1>{story.title}</h1><p>{story.intro}</p></header><figure class="hero-image">{typeof story.image === 'string' ? <img src={`${base}${story.image}`} alt={story.alt} loading="eager"/> : <OptimizedImage src={story.image} alt={story.alt} loading="eager" fetchpriority="high"/>}<figcaption>{story.caption}</figcaption></figure><div class="story-copy"><p class="lead">{story.intro}</p>{story.sections.map(([heading, text]) => <section><h2>{heading}</h2><p>{text}</p></section>)}{'secondaryImage' in story && <figure class="inline-figure portrait"><OptimizedImage src={story.secondaryImage} alt="Eugène Christophe går med sin cykel over Galibier under Tour de France 1912"/><figcaption>Christophe med cyklen på Galibier i 1912. Foto: Bibliothèque nationale de France/Wikimedia Commons, public domain.</figcaption></figure>}</div><section class="period-sources"><p class="section-label">Kilder og noter</p><div><p>Artiklen skelner mellem dokumenterede hændelser og senere overleverede detaljer.</p><ul>{story.sources.map(([label,url]) => <li><a href={url}>{label}</a></li>)}</ul></div></section><nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a><a href={`${base}/perioder/1900-1920/`}>Perioden 1900–1920 →</a></nav></article></main><footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></div><p>En personlig samling af vintagecykler,<br/>historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer></body></html>
+<style>.track-page{padding-top:3rem}.track-hero{max-width:1080px;margin:0 auto;padding:4rem 1.5rem 3rem}.track-hero h1{font-family:'Libre Caslon Display',serif;font-size:clamp(3rem,7vw,6.4rem);font-weight:400;line-height:1;margin:.6rem 0 1.5rem}.track-hero>p:last-child{max-width:760px;font-size:1.25rem;line-height:1.65}.hero-image{max-width:1180px;margin:0 auto 4rem}.hero-image :global(img),.hero-image>img{width:100%;max-height:760px;object-fit:cover}.hero-image figcaption,.inline-figure figcaption{font-size:.86rem;line-height:1.55;color:#625e55;margin-top:.75rem}.story-copy{max-width:760px;margin:0 auto;padding:0 1.5rem 4rem;font-size:1.08rem;line-height:1.82}.story-copy .lead{font-family:'Libre Caslon Display',serif;font-size:1.7rem;line-height:1.5}.story-copy h2{font-family:'Libre Caslon Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;margin:3rem 0 1rem}.inline-figure{margin:3.5rem 0}.inline-figure :global(img){width:100%;height:auto}.period-sources{max-width:1000px;margin:0 auto}.period-sources li{overflow-wrap:anywhere}@media(max-width:800px){.track-page{padding-top:0}.track-hero{padding-top:2.5rem}.hero-image figcaption{padding:0 1.25rem}.story-copy{font-size:1rem}.story-copy .lead{font-size:1.4rem}}</style>

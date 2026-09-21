@@ -72,7 +72,9 @@ const englishYear = (year: string) => year
   .replace('Begyndelsen af', 'Early')
   .replace('ca.', 'c.');
 
-export const englishStories = stories.map((story) => ({ ...story, year: englishYear(story.year), title: storyCopy[story.slug][0], text: storyCopy[story.slug][1] }));
+export const englishStories = stories
+  .filter((story) => storyCopy[story.slug])
+  .map((story) => ({ ...story, year: englishYear(story.year), title: storyCopy[story.slug][0], text: storyCopy[story.slug][1] }));
 export const englishBikes = bikes.map((bike) => {
   const [text, place, status] = bikeCopy[bike.slug];
   return { ...bike, text, place: place || bike.place, status, year: englishYear(bike.year) };

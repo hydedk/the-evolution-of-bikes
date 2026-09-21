@@ -1,15 +1,13 @@
 ---
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-import { storiesForPeriod } from '../../data/stories';
-const relatedStories = storiesForPeriod('1900-1920');
+import PeriodStructure from '../../components/PeriodStructure.astro';
 const facts = [
   ['1903', 'Det første Tour de France'],
   ['1910', 'Tourmalet kommer med i løbet'],
+  ['1913', 'Christophe smeder sin forgaffel'],
   ['1919', 'Den første gule førertrøje'],
-  ['5.560 km', 'Tour de France 1919'],
-  ['482 km', 'Længste etape i 1919'],
-  ['18.54.07', 'Jean Alavoines vindertid'],
 ];
+const canonical = 'https://teob.dk/perioder/1900-1920/';
 ---
 
 <!doctype html>
@@ -18,12 +16,16 @@ const facts = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="1900 til 1920’erne: pionerer, udholdenhed og Tour de France i cykelsportens hårde ungdom." />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="da" href={canonical} />
+    <link rel="alternate" hreflang="en" href="https://teob.dk/en/periods/1900-1920/" />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="1900 til 1920’erne · Pionerer og udholdenhed" />
-    <meta property="og:description" content="Da Tour de France var en brutal prøve for både mennesker og maskiner." />
+    <meta property="og:title" content="Pionerer, bjerge og selvhjulpenhed · 1900–1920" />
+    <meta property="og:description" content="Da cykelløbet blev en folkelig begivenhed, og rytteren selv måtte være mekaniker." />
     <meta property="og:image" content="https://teob.dk/images/periods/1900-1920/rytter-velodrom.webp" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>1900 til 1920’erne · The Evolution of Bikes</title>
+    <title>Pionerer, bjerge og selvhjulpenhed · 1900–1920</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
@@ -36,35 +38,37 @@ const facts = [
     </header>
 
     <main>
-      <article class="era-page">
-        <header class="era-hero">
+      <article class="wildwest-page decade1970-page">
+        <header class="wildwest-hero decade1940-hero">
           <div class="era-heading">
-            <p class="section-label">1900 til 1920’erne</p>
-            <h1>Pionerer og<br /><em>udholdenhed</em></h1>
+            <p class="section-label">Perioden 1900–1920</p>
+            <h1>Pionerer, bjerge<br /><em>og selvhjulpenhed</em></h1>
           </div>
-          <p class="era-deck">En tid, hvor cyklen var enkel, vejene ubarmhjertige, og rytterne selv måtte bringe både krop og maskine hele vejen hjem.</p>
+          <p class="era-deck">Cykelløbet blev en folkelig begivenhed. Aviser tegnede ruterne, rytterne bar værktøjet, og mekaniske problemer kunne afgøre mere end benene.</p>
         </header>
 
-        <figure class="era-main-image">
+        <figure class="decade1970-hero-image">
           <img src={`${base}/images/periods/1900-1920/rytter-velodrom.webp`} alt="Udmattet Tour de France-rytter står ved sin cykel på en velodrom" />
           <figcaption>En rytter efter strabadserne — støv, reservedele og slanger blev båret på kroppen. Arkivfoto fra periodens Tour de France.</figcaption>
         </figure>
 
-        <section class="era-opening">
-          <p class="section-label">Tour de France</p>
-          <p>Tour de France i denne periode var en brutal prøve for både mennesker og maskiner. Rytterne startede ofte før daggry og kørte gennem mørke, kulde, støv og regn på veje, der mange steder bestod af grus eller brosten.</p>
+        <PeriodStructure language="da" period="1900-1920" />
+
+        <section class="wildwest-lead decade1940-lead">
+          <p class="section-label">En sport finder sin form</p>
+          <p>Ved århundredets begyndelse var cyklen allerede et brugbart transportmiddel. Nu blev den også centrum for avisernes store landevejsløb: lange, svært kontrollerbare prøver, hvor arrangørens regler og rytterens evne til at klare sig selv blev en del af fortællingen.</p>
         </section>
 
-        <section class="period-feature">
+        <section class="period-feature decade1970-related">
           <div>
-            <p class="section-label">Relaterede historier</p>
-            <h2>Da cykelsporten var et vildt vesten på to hjul</h2>
-            <p>Før regler, følgebiler og holdradioer var cykelsporten et omrejsende eksperiment i fart, udholdenhed og opfindsomhed. Herfra kan du gå videre til periodens selvstændige fortællinger.</p>
+            <p class="section-label">To indgange til perioden</p>
+            <h2>Arrangøren og mekanikken</h2>
+            <p>Henri Desgranges regler forklarer periodens menneskesyn. Cycles France-Sports vendbare baghjul viser den samme selvhjulpenhed i metal.</p>
           </div>
-          <div class="period-feature-links">{relatedStories.map((story) => <a href={`${base}/historier/${story.slug}/`}><span>Relateret historie · {story.year}</span><strong>{story.title}</strong><b>Læs historien →</b></a>)}</div>
+          <div class="period-feature-links"><a href={`${base}/historier/henri-desgrange-og-den-selvhjulpne-rytter/`}><span>Historie · 1903–1920</span><strong>Henri Desgrange og den selvhjulpne rytter</strong><b>Læs historien →</b></a><a href={`${base}/historier/to-tandhjul-og-en-skruenoegle/`}><span>Teknik · ca. 1919</span><strong>To tandhjul og en skruenøgle</strong><b>Læs historien →</b></a></div>
         </section>
 
-        <section class="era-facts" aria-label="Fakta om perioden">
+        <section class="era-facts decade1970-facts" aria-label="Fakta om perioden">
           {facts.map(([number, label]) => <div><strong>{number}</strong><span>{label}</span></div>)}
         </section>
 

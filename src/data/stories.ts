@@ -13,6 +13,8 @@ import herningSixDay1974Image from '../assets/stories/herning-seksdagesloeb-1974
 import mogensFrey1970Image from '../assets/stories/mogens-frey-tour-1970/mogens-frey-1967.jpg';
 import marcoPantaniImage from '../assets/stories/marco-pantani-manden-bag-piraten/960px-Marco_Pantani.jpg';
 import magliaNeraImage from '../assets/stories/maglia-nera-gemmeleg/maglia-nera-gemmeleg-illustration.png';
+import steinesTourmaletImage from '../assets/stories/tourmalet-steines-1910/tour-1910-route.webp';
+import eugeneChristopheImage from '../assets/stories/eugene-christophe-1913/eugene-christophe-1912.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -52,12 +54,22 @@ const storyTracks: Record<string, StoryTrack> = {
   'mogens-frey-tour-1970': 'race',
   'marco-pantani-manden-bag-piraten': 'people',
   'gemmelegen-om-giroens-sorte-troeje': 'race',
+  'stifinderen-der-sendte-touren-over-tourmalet': 'people',
+  'eugene-christophe-smedjen-1913': 'mechanics',
+  'henri-desgrange-og-den-selvhjulpne-rytter': 'people',
+  'apoteket-paa-styret': 'people',
+  'to-tandhjul-og-en-skruenoegle': 'mechanics',
 };
 
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'stifinderen-der-sendte-touren-over-tourmalet', type: 'historie', year: '1910', title: 'Stifinderen, der sendte Touren over Tourmalet', text: 'Alphonse Steines kom ned fra sneen og sendte telegrammet, der gjorde Tourmalet til cykelløbets bjerg.', image: steinesTourmaletImage, periods: ['1900-1920'], topics: ['tour-de-france', 'tourmalet', 'alphonse-steines', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'eugene-christophe-smedjen-1913', type: 'historie', year: '1913', title: 'Da Eugène Christophe selv måtte smede sin forgaffel', text: 'En knækket forgaffel sendte Tourens førende rytter til fods og ind i en smedje i Sainte-Marie-de-Campan.', image: eugeneChristopheImage, periods: ['1900-1920'], topics: ['tour-de-france', 'eugene-christophe', 'mekanik', 'regler'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'henri-desgrange-og-den-selvhjulpne-rytter', type: 'historie', year: '1903–1920', title: 'Henri Desgrange og idealet om den selvhjulpne rytter', text: 'Tourens skaber gjorde hjælp, reparation og selvforsyning til en del af selve prøven.', image: 'images/periods/1900-1920/wild-west/street-race-poster.webp', periods: ['1900-1920'], topics: ['henri-desgrange', 'tour-de-france', 'regler', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'apoteket-paa-styret', type: 'historie', year: '1890’erne–1920’erne', title: 'Da apoteket kørte med på styret', text: 'Før forbudslisterne lå kaffe, alkohol, medicin og stimulanser i samme uklare værktøjskasse.', image: 'images/periods/1900-1920/wild-west/exhausted-rider.webp', periods: ['1900-1920', '1920-1930'], topics: ['doping', 'medicin', 'stimulanser', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'to-tandhjul-og-en-skruenoegle', type: 'historie', year: 'Ca. 1919', title: 'To tandhjul og en skruenøgle', text: 'På Cycles France-Sport krævede et gearskift, at rytteren standsede, løsnede baghjulet og vendte det.', image: 'images/bikes/cycles-france-sport/hero.webp', periods: ['1900-1920'], topics: ['gear', 'selvhjulpenhed', 'cykelmekanik', 'samlingen'], relatedBikes: ['cycles-france-sport'], relatedComponents: [] },
   { slug: 'gemmelegen-om-giroens-sorte-troeje', type: 'historie', year: '1946–1951', title: 'Gemmelegen om Giroens sorte trøje', text: 'Luigi Malabrocca forsøgte at blive sidst i Giroen 1949. Problemet var, at mureren Sante Carollo allerede var næsten to timer længere bagude.', image: magliaNeraImage, periods: ['1940-1949', '1950-1959'], topics: ['giro-ditalia', 'maglia-nera', 'luigi-malabrocca', 'sante-carollo', 'regler'], relatedBikes: [], relatedComponents: [] },
   { slug: 'marco-pantani-manden-bag-piraten', type: 'historie', year: '1995–2004', title: 'Manden bag Piraten', text: 'Marco Pantani kom tilbage fra et knust venstre ben og vandt både Giroen og Touren. Historien om rytteren rummer også det sårbare menneske.', image: marcoPantaniImage, periods: ['1990-1999', '2000-2009'], topics: ['marco-pantani', 'giro-ditalia', 'tour-de-france', 'comeback', 'mennesket-bag-rytteren'], relatedBikes: [], relatedComponents: [] },
   { slug: 'herning-seksdagesloeb-1974', type: 'historie', year: '1974–1983', title: 'Da Herning fik sin egen træbane', text: 'En træbane fra London, et nyt seksdagesløb i Herning og Ole Ritter som det trækplaster, publikum kom for at se.', image: herningSixDay1974Image, periods: ['1970-1979', '1980-1989'], topics: ['banecykling', 'seksdagesloeb', 'dansk-cykling', 'herning'], relatedBikes: [], relatedComponents: [] },

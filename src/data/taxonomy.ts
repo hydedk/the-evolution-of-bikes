@@ -37,6 +37,11 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'stifinderen-der-sendte-touren-over-tourmalet': { period: '1900-1920', primary: 'menneskene-bag', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
+  'eugene-christophe-smedjen-1913': { period: '1900-1920', primary: 'teknik', secondary: ['loeb-og-store-oejeblikke', 'ryttere'] },
+  'henri-desgrange-og-den-selvhjulpne-rytter': { period: '1900-1920', primary: 'menneskene-bag', secondary: ['samfund-og-tidsaand', 'loeb-og-store-oejeblikke'] },
+  'apoteket-paa-styret': { period: '1900-1920', primary: 'kost-traening-og-videnskab', secondary: ['cykelkultur', 'samfund-og-tidsaand'] },
+  'to-tandhjul-og-en-skruenoegle': { period: '1900-1920', primary: 'teknik', secondary: ['cykelkultur', 'menneskene-bag'] },
   'gemmelegen-om-giroens-sorte-troeje': { period: '1940-1949', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'cykelkultur'] },
   'marco-pantani-manden-bag-piraten': { period: '1990-1999', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
   'herning-seksdagesloeb-1974': { period: '1970-1979', primary: 'cykelkultur', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
@@ -132,7 +137,9 @@ export const contentForTheme = (theme: ThemeId) => contentItems.filter((item) =>
 const englishStoryBySlug = new Map(englishStories.map((item) => [item.slug, item]));
 const englishBikeBySlug = new Map(englishBikes.map((item) => [item.slug, item]));
 
-export const localizeContent = (items: ContentItem[], language: 'da' | 'en') => language === 'da' ? items : items.map((item) => {
+export const localizeContent = (items: ContentItem[], language: 'da' | 'en') => language === 'da' ? items : items
+  .filter((item) => item.type !== 'historie' || englishStoryBySlug.has(item.id))
+  .map((item) => {
   const translated = item.type === 'historie' ? englishStoryBySlug.get(item.id) : item.type === 'cykel' ? englishBikeBySlug.get(item.id) : undefined;
   const component = item.type === 'komponent' ? components.find((entry) => entry.slug === item.id) : undefined;
   return { ...item, year: translated?.year ?? item.year, title: translated?.title ?? item.title, text: translated?.text ?? component?.enText ?? item.text };

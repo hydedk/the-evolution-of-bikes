@@ -32,6 +32,53 @@ let periodThemeCopy = en ? {
   'samfund-og-tidsaand': 'De professionelle hold blev større og mere kommercielle. I 1998 rykkede toldere, politi og retssager ind i Touren og ændrede den offentlige samtale om sporten.',
   'menneskene-bag': 'Læger, soigneurs, mekanikere og holdledere blev en del af stadig mere specialiserede organisationer. Deres arbejde prægede forberedelse, udstyr og restitution, selv om det sjældent stod i resultatlisten.',
 };
+if (period === '1900-1920') {
+  boxes = en ? [
+    ['The period’s main development', 'Road racing became a mass spectacle, and the Tour de France established the stage race as a recurring national story.'],
+    ['What defined the period', 'Long distances, rough roads and strict rules made self-reliance part of both racing and its public image.'],
+    ['Three changes to cycling', 'The Tour began in 1903. High mountains entered the route. The yellow leader’s jersey appeared in 1919.'],
+  ] : [
+    ['Periodens vigtigste udvikling', 'Landevejsløbet blev en folkelig begivenhed, og Tour de France gjorde etapeløbet til en tilbagevendende national fortælling.'],
+    ['Det kendetegnede perioden', 'Lange distancer, dårlige veje og stramme regler gjorde selvhjulpenhed til en del af både løbet og dets offentlige billede.'],
+    ['Tre ting, der ændrede cyklingen', 'Tour de France begyndte i 1903. De høje bjerge kom ind på ruten. Den gule førertrøje blev indført i 1919.'],
+  ];
+  timeline = en ? [
+    ['1900', 'Track racing and long road races already draw large paying crowds.'],
+    ['1903', 'The first Tour de France is held over six stages.'],
+    ['1904', 'Spectator violence, nails and suspected cheating throw the Tour into crisis.'],
+    ['1910', 'The Tour crosses the major Pyrenean passes for the first time.'],
+    ['1912', 'Thorvald Ellegaard races the international sprint circuit as a six-time world champion.'],
+    ['1913', 'Eugène Christophe repairs his broken fork in a forge; Christian Christensen becomes the first Dane to start the Tour.'],
+    ['1919', 'The Tour returns after the war, and Christophe becomes the first wearer of the yellow jersey.'],
+    ['1920', 'Philippe Thys becomes the Tour’s first three-time winner.'],
+  ] : [
+    ['1900', 'Banecykling og lange landevejsløb samler allerede et stort betalende publikum.'],
+    ['1903', 'Det første Tour de France køres over seks etaper.'],
+    ['1904', 'Tilskueruro, søm og mistanke om snyd bringer Touren i krise.'],
+    ['1910', 'Touren krydser for første gang de store pas i Pyrenæerne.'],
+    ['1912', 'Thorvald Ellegaard kører på den internationale sprintscene som seksdobbelt verdensmester.'],
+    ['1913', 'Eugène Christophe reparerer sin knækkede forgaffel i en smedje; Christian Christensen bliver den første dansker i Touren.'],
+    ['1919', 'Touren vender tilbage efter krigen, og Christophe bliver den første i den gule førertrøje.'],
+    ['1920', 'Philippe Thys bliver Tourens første tredobbelte vinder.'],
+  ];
+  periodThemeCopy = en ? {
+    'loeb-og-store-oejeblikke': 'The first Tour in 1903, the crisis of 1904, the Pyrenees in 1910 and the return after the First World War show a race still defining its route, rules and public role.',
+    ryttere: 'Ellegaard was an international track star, Christophe became the image of persistence, and Christian Christensen travelled from a Danish dairy to the Tour without the protection of a major team.',
+    teknik: 'The bicycle was mechanically simple but demanded practical knowledge. A puncture, a broken fork or a change of ratio had to be handled with tools, time and the rider’s own hands.',
+    'kost-traening-og-videnskab': 'Food followed availability and experience rather than a common scientific plan. Coffee, alcohol, medicines and stimulants occupied a blurred field before international bans and laboratory tests.',
+    cykelkultur: 'Newspapers turned races into serial stories, velodromes created professional stars, and roadside spectators made the bicycle part of modern popular culture.',
+    'samfund-og-tidsaand': 'Industrial production, mass newspapers and new mobility helped cycling grow. The First World War interrupted the major races and marked both the riders and the landscapes when racing resumed.',
+    'menneskene-bag': 'Editors and organisers such as Henri Desgrange created the rules, while Alphonse Steines found roads that could turn into stages. Their decisions shaped what the riders were asked to endure.',
+  } : {
+    'loeb-og-store-oejeblikke': 'Det første Tour i 1903, krisen i 1904, Pyrenæerne i 1910 og genstarten efter Første Verdenskrig viser et løb, der stadig var ved at definere sin rute, sine regler og sin offentlige rolle.',
+    ryttere: 'Ellegaard var international banestjerne, Christophe blev billedet på stædighed, og Christian Christensen rejste fra et dansk mejeri til Touren uden et stort holds beskyttelse.',
+    teknik: 'Cyklen var mekanisk enkel, men krævede praktisk kunnen. En punktering, en knækket forgaffel eller et skift af udveksling måtte klares med værktøj, tid og rytterens egne hænder.',
+    'kost-traening-og-videnskab': 'Kosten fulgte adgang og erfaring frem for en fælles videnskabelig plan. Kaffe, alkohol, medicin og stimulanser lå i et uklart felt før internationale forbud og laboratoriekontrol.',
+    cykelkultur: 'Aviserne gjorde løbene til føljetoner, velodromerne skabte professionelle stjerner, og publikum langs vejene gjorde cyklen til en del af den moderne massekultur.',
+    'samfund-og-tidsaand': 'Industriproduktion, masseaviser og ny mobilitet gav cyklingen vækst. Første Verdenskrig afbrød de store løb og prægede både ryttere og landskaber, da sporten begyndte igen.',
+    'menneskene-bag': 'Redaktører og arrangører som Henri Desgrange skabte reglerne, mens Alphonse Steines fandt veje, der kunne blive til etaper. Deres beslutninger formede det, rytterne blev sat til at udholde.',
+  };
+}
 if (period === '1960-1969') {
   boxes = en ? [
     ['The decade’s main development', 'The lightweight steel racing bicycle settled into a form that would remain familiar for decades.'],
@@ -71,7 +118,9 @@ if (period === '1960-1969') {
     'menneskene-bag': 'Læger, mekanikere, officials og holdfolk fik større betydning, efterhånden som løbene blev mere organiserede, selv om deres arbejde sjældent stod i resultatlisten.',
   };
 }
-const decadeName = en ? (period === '1960-1969' ? 'The 1960s' : 'The 1990s') : (period === '1960-1969' ? '1960’erne' : '1990’erne');
+const decadeName = en
+  ? (period === '1900-1920' ? '1900–1920' : period === '1960-1969' ? 'The 1960s' : 'The 1990s')
+  : (period === '1900-1920' ? '1900–1920' : period === '1960-1969' ? '1960’erne' : '1990’erne');
 ---
 <section class="period-model" aria-labelledby="period-model-title">
   <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? `${decadeName} in three views` : `${decadeName} i tre bokse`}</h2></header>

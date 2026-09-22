@@ -1,4 +1,5 @@
 ---
+import PeriodStructure from '../../components/PeriodStructure.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const facts = [
   ['1950', 'Koblet bliver Giroens første udenlandske vinder'],
@@ -28,6 +29,8 @@ const facts = [
       <header class="wildwest-hero decade1940-hero"><div><p class="section-label">Perioden 1950–1959</p><h1>Da cykelløbet<br /><em>flyttede ind i stuen</em></h1></div><p>Moderne gear, nye bjergscener, radio og fjernsyn gjorde sporten hurtigere, mere international og langt mere synlig.</p></header>
 
       <figure class="decade1970-hero-image"><img src={`${base}/images/periods/1950-1959/felt-og-filmhold-illustration.jpg`} alt="Illustration af et cykelfelt og en kameramotorcykel på en europæisk bjergvej i 1950’erne" /><figcaption>Et generelt motiv med tidstypiske stålcykler, filmkamera og følgekaravane. AI-genereret illustration – ikke et billede af et bestemt løb eller navngivne ryttere.</figcaption></figure>
+
+      <PeriodStructure language="da" period="1950-1959" />
 
       <section class="wildwest-lead decade1940-lead"><p class="section-label">Fra efterkrigshelte til mediesport</p><p>Bartali og Coppi var stadig store navne. Men omkring dem forandrede selve sporten sig: Nye lande vandt de gamle løb, bjergene blev scener med egne navne, og kameraet begyndte at følge med.</p></section>
 

@@ -1,7 +1,6 @@
 ---
 import EnglishHeader from '../../../components/EnglishHeader.astro';
 import EnglishFooter from '../../../components/EnglishFooter.astro';
-import { englishStories } from '../../../data/english';
 const base=import.meta.env.BASE_URL.replace(/\/$/,'');
 const definitions = [
   ['1900–1920s','Pioneers and endurance','The Tour de France begins, the yellow jersey gets its colour, and riders struggle with roads, darkness and mechanics.','1900-1920','rytter-velodrom.webp'],
@@ -16,10 +15,10 @@ const definitions = [
   ['2000–2009','When cycling became a control room','Specialisation, carbon, power measurement and electronic gears met cancelled victories, raids and fading trust.','2000-2009','allos-2000.webp'],
   ['2010–2019','When the computer took over the bicycle','Team Sky, marginal gains, carbon and electronic gears shaped a decade in which even a planned Tour could still end on foot.','2010-2019','wiggins-2012.webp'],
 ];
-const periodCards = definitions.map(([years,title,text,id,image]) => ({ years,title,text,id,image:`${base}/images/periods/${id}/${image}`, stories: englishStories.filter((story) => story.periods.includes(id)) }));
+const periodCards = definitions.map(([years,title,text,id,image]) => ({ years,title,text,id,image:`${base}/images/periods/${id}/${image}` }));
 ---
 <!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content="Cycle racing and cycling culture told period by period, with links to the stories from each era."/><title>Periods · The Evolution of Bikes</title><link rel="stylesheet" href={`${base}/styles/global.css`}/></head><body><EnglishHeader current="periods" danishPath="/perioder/"/><main>
-<header class="archive-hero periods-archive-hero"><p class="section-label">The larger, connected history</p><h1>Periods</h1><p>Each chapter gives a chronological view of racing, roads, rules, mechanics and culture — with links to the individual stories from the period.</p></header>
-<section class="periods-archive">{periodCards.map((period) => <article class="period-overview"><a class="period-overview-main" href={`${base}/en/periods/${period.id}/`}><img src={period.image} alt={`Illustration from ${period.years}`}/><div><span>{period.years}</span><h2>{period.title}</h2><p>{period.text}</p><b>Read the period →</b></div></a>{period.stories.length > 0 && <div class="period-article-list"><header><span>Stories from this period</span><strong>{period.stories.length}</strong></header>{period.stories.slice(0,3).map((story,index) => <a href={`${base}/en/stories/${story.slug}/`}><span>{String(index+1).padStart(2,'0')} · Story · {story.year}</span><h3>{story.title}</h3><p>{story.text}</p><b>Read the story →</b></a>)}</div>}</article>)}</section>
+<header class="archive-hero periods-archive-hero"><p class="section-label">The larger, connected history</p><h1>Periods</h1><p>Each chapter gives a chronological view of racing, roads, rules, mechanics and culture.</p></header>
+<section class="periods-archive">{periodCards.map((period) => <article class="period-overview"><a class="period-overview-main" href={`${base}/en/periods/${period.id}/`}><img src={period.image} alt={`Illustration from ${period.years}`}/><div><span>{period.years}</span><h2>{period.title}</h2><p>{period.text}</p><b>Read the period →</b></div></a></article>)}</section>
 <section class="period-search-intro"><p class="section-label">Follow a subject through time</p><h2>Explore the seven themes</h2><p>The theme pages connect the periods without turning this chronological overview into another large archive.</p><a href={`${base}/en/themes/`}>Go to themes and search →</a></section>
 </main><EnglishFooter/></body></html>

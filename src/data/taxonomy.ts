@@ -88,6 +88,11 @@ const storyClassifications: Record<string, Classification> = {
   'gino-bartali-kurer-under-krigen': { period: '1940-1949', primary: 'menneskene-bag', secondary: ['ryttere', 'samfund-og-tidsaand'] },
   'fausto-coppi-fra-krigsfange-til-comeback': { period: '1940-1949', primary: 'ryttere', secondary: ['samfund-og-tidsaand', 'loeb-og-store-oejeblikke'] },
   'jean-robic-vender-touren-1947': { period: '1940-1949', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },
+  'campagnolo-gran-sport-parallelogram': { period: '1950-1959', primary: 'teknik', secondary: ['menneskene-bag'] },
+  'roger-walkowiak-tour-1956': { period: '1950-1959', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere'] },
+  'charly-gaul-monte-bondone-1956': { period: '1950-1959', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'kost-traening-og-videnskab'] },
+  'tour-start-amsterdam-1954': { period: '1950-1959', primary: 'samfund-og-tidsaand', secondary: ['loeb-og-store-oejeblikke', 'cykelkultur'] },
+  'fausto-coppi-la-bomba': { period: '1950-1959', primary: 'kost-traening-og-videnskab', secondary: ['ryttere', 'samfund-og-tidsaand'] },
   'wim-van-est-aubisque-1951': { period: '1950-1959', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'teknik'] },
   'alfredo-binda-giro-1930': { period: '1920-1930', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
 };

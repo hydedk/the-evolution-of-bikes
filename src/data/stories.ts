@@ -20,6 +20,9 @@ import bartali1936Image from '../assets/stories/bartali-tour-1938/gino-bartali-1
 import bartaliCourierImage from '../assets/stories/bartali-kurer-krigen/gino-bartali-1936.jpg';
 import coppiPowImage from '../assets/stories/coppi-krigsfange/fausto-coppi-1957.jpg';
 import robic1947Image from '../assets/stories/jean-robic-tour-1947/jean-robic-1947.jpg';
+import walkowiakContextImage from '../assets/stories/walkowiak-tour-1956/tour-feed-zone-1958.jpg';
+import charlyGaulImage from '../assets/stories/charly-gaul-bondone-1956/charly-gaul-tour-1958.jpg';
+import tourAmsterdamImage from '../assets/stories/tour-amsterdam-1954/tour-netherlands-1954.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -70,6 +73,11 @@ const storyTracks: Record<string, StoryTrack> = {
   'gino-bartali-kurer-under-krigen': 'people',
   'fausto-coppi-fra-krigsfange-til-comeback': 'people',
   'jean-robic-vender-touren-1947': 'race',
+  'campagnolo-gran-sport-parallelogram': 'technical',
+  'roger-walkowiak-tour-1956': 'race',
+  'charly-gaul-monte-bondone-1956': 'race',
+  'tour-start-amsterdam-1954': 'history',
+  'fausto-coppi-la-bomba': 'people',
 };
 
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
@@ -80,6 +88,11 @@ export const stories: StoryMeta[] = [
   { slug: 'gino-bartali-kurer-under-krigen', type: 'historie', year: '1943–1944', title: 'Bartalis træningsture havde et andet formål', text: 'Gino Bartali brugte sin kendte træningsrutine som dække, mens han bragte dokumenter mellem mennesker i et italiensk redningsnetværk.', image: bartaliCourierImage, periods: ['1940-1949'], topics: ['gino-bartali', 'anden-verdenskrig', 'modstand', 'italien'], relatedBikes: ['stella-veneta'], relatedComponents: [] },
   { slug: 'fausto-coppi-fra-krigsfange-til-comeback', type: 'historie', year: '1943–1949', title: 'Fra krigsfange til Giro–Tour-vinder', text: 'Fausto Coppi blev taget til fange i Nordafrika. Seks år senere blev han den første til at vinde Giroen og Touren samme år.', image: coppiPowImage, periods: ['1940-1949'], topics: ['fausto-coppi', 'anden-verdenskrig', 'giro-ditalia', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },
   { slug: 'jean-robic-vender-touren-1947', type: 'historie', year: '1947', title: 'Robic tog den gule trøje på den sidste dag', text: 'Jean Robic begyndte Tourens sidste etape som nummer tre. På vejen mod Paris angreb han og vandt løbet uden tidligere at have båret gult.', image: robic1947Image, periods: ['1940-1949'], topics: ['jean-robic', 'tour-de-france', 'comeback', 'sidste-etape'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'campagnolo-gran-sport-parallelogram', type: 'historie', year: '1951', title: 'Da gearskiftet endelig blev moderne', text: 'Campagnolo Gran Sport lod baghjulet blive siddende, mens et fjederbelastet parallelogram flyttede kæden mellem tandhjulene.', image: 'images/bikes/giame/full-bike.webp', periods: ['1950-1959'], topics: ['campagnolo', 'gran-sport', 'bagskifter', 'parallelogram'], relatedBikes: ['giame'], relatedComponents: [] },
+  { slug: 'roger-walkowiak-tour-1956', type: 'historie', year: '1956', title: 'Tour-vinderen ingen havde regnet med', text: 'Roger Walkowiak kom med i det rigtige udbrud, men vandt først Touren, fordi han siden kunne forsvare sig mod alle favoritterne.', image: walkowiakContextImage, periods: ['1950-1959'], topics: ['roger-walkowiak', 'tour-de-france', 'udbrud'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'charly-gaul-monte-bondone-1956', type: 'historie', year: '1956', title: 'Da sneen knuste Giro-feltet', text: 'På den 242 kilometer lange etape til Monte Bondone kørte Charly Gaul gennem sne og kulde fra ellevtepladsen til den lyserøde trøje.', image: charlyGaulImage, periods: ['1950-1959'], topics: ['charly-gaul', 'monte-bondone', 'giro-ditalia', 'sne'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'tour-start-amsterdam-1954', type: 'historie', year: '1954', title: 'Da Touren forlod Frankrig', text: 'Grand Départ i Amsterdam blev Tour de Frances første start uden for Frankrig og viste, at løbet var ved at blive et europæisk skuespil.', image: tourAmsterdamImage, periods: ['1950-1959'], topics: ['tour-de-france', 'amsterdam', 'grand-depart'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'fausto-coppi-la-bomba', type: 'historie', year: '1952', title: 'Når nødvendigt betød næsten altid', text: 'I et RAI-interview svarede Fausto Coppi usædvanligt åbent om feltets brug af la bomba i en tid uden effektiv dopingkontrol.', image: coppiPowImage, periods: ['1950-1959'], topics: ['fausto-coppi', 'doping', 'amfetamin', 'la-bomba'], relatedBikes: ['giame'], relatedComponents: [] },
   { slug: 'stifinderen-der-sendte-touren-over-tourmalet', type: 'historie', year: '1910', title: 'Stifinderen, der sendte Touren over Tourmalet', text: 'Alphonse Steines kom ned fra sneen og sendte telegrammet, der gjorde Tourmalet til cykelløbets bjerg.', image: steinesTourmaletImage, periods: ['1900-1920'], topics: ['tour-de-france', 'tourmalet', 'alphonse-steines', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
   { slug: 'eugene-christophe-smedjen-1913', type: 'historie', year: '1913', title: 'Da Eugène Christophe selv måtte smede sin forgaffel', text: 'En knækket forgaffel sendte Tourens førende rytter til fods og ind i en smedje i Sainte-Marie-de-Campan.', image: eugeneChristopheImage, periods: ['1900-1920'], topics: ['tour-de-france', 'eugene-christophe', 'mekanik', 'regler'], relatedBikes: [], relatedComponents: [] },
   { slug: 'henri-desgrange-og-den-selvhjulpne-rytter', type: 'historie', year: '1903–1920', title: 'Henri Desgrange og idealet om den selvhjulpne rytter', text: 'Tourens skaber gjorde hjælp, reparation og selvforsyning til en del af selve prøven.', image: 'images/periods/1900-1920/wild-west/street-race-poster.webp', periods: ['1900-1920'], topics: ['henri-desgrange', 'tour-de-france', 'regler', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },

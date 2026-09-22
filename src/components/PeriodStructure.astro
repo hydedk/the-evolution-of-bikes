@@ -220,6 +220,39 @@ if (period === '1940-1949') {
     'menneskene-bag': 'Kurerer, mekanikere, arrangører og familier holdt cyklingens netværk i live. Deres arbejde forklarer, hvordan sporten overlevede årene uden sine kendte internationale løb.',
   };
 }
+if (period === '1950-1959') {
+  boxes = en ? [
+    ['The decade’s main development','The parallelogram derailleur made shifting reliable without moving the rear wheel.'],
+    ['What defined the period','Grand tours became international media events while mountains, radio and television created shared heroes.'],
+    ['Three changes to cycling','The Tour started abroad. Gran Sport established a lasting derailleur form. Mountain-top drama became central to stage racing.'],
+  ] : [
+    ['Årtiets vigtigste udvikling','Parallelogram-bagskifteren gjorde gearskiftet pålideligt uden at flytte baghjulet.'],
+    ['Det kendetegnede perioden','De store rundture blev internationale mediebegivenheder, mens bjerge, radio og fjernsyn skabte fælles helte.'],
+    ['Tre ting, der ændrede cyklingen','Touren startede i udlandet. Gran Sport fastlagde en langtidsholdbar gearform. Bjergdramaet blev centralt i etapeløbene.'],
+  ];
+  timeline = en ? [
+    ['1950','Hugo Koblet becomes the Giro’s first foreign winner.'],['1951','Campagnolo Gran Sport brings the modern derailleur principle to the Italian racing bicycle.'],['1952','Coppi wins on Alpe d’Huez; his RAI interview discusses “la bomba”.'],['1953','Coppi turns the Giro on the Stelvio.'],['1954','The Tour starts outside France for the first time, in Amsterdam.'],['1955','Louison Bobet wins his third Tour in succession.'],['1956','Walkowiak wins the Tour; Gaul decides the Giro in the snow on Monte Bondone.'],['1957','Jacques Anquetil wins his first Tour.'],
+  ] : [
+    ['1950','Hugo Koblet bliver Giroens første udenlandske vinder.'],['1951','Campagnolo Gran Sport fører det moderne bagskifterprincip ind på den italienske racercykel.'],['1952','Coppi vinder på Alpe d’Huez; hans RAI-interview handler åbent om “la bomba”.'],['1953','Coppi vender Giroen på Stelvio.'],['1954','Touren starter for første gang uden for Frankrig, i Amsterdam.'],['1955','Louison Bobet vinder sin tredje Tour i træk.'],['1956','Walkowiak vinder Touren; Gaul afgør Giroen i sneen på Monte Bondone.'],['1957','Jacques Anquetil vinder sin første Tour.'],
+  ];
+  periodThemeCopy = en ? {
+    'loeb-og-store-oejeblikke':'Walkowiak’s unexpected Tour and Gaul’s snowbound Bondone stage show how breakaways, weather and mountains could overturn a grand tour.',
+    ryttere:'Coppi, Koblet, Bobet, Gaul, Walkowiak and the young Anquetil represented very different routes to stage-race success.',
+    teknik:'Gran Sport made the parallelogram derailleur a prestigious standard. Double chainsets, five sprockets, tubular tyres and light steel frames defined the fine racing bicycle.',
+    'kost-traening-og-videnskab':'Training grew more systematic, but food still followed experience and stimulant use remained largely outside effective control.',
+    cykelkultur:'Radio reports, film summaries and early television brought faces, riding styles and collapses into the home.',
+    'samfund-og-tidsaand':'The Amsterdam start and an increasingly international peloton reflected a European sport extending beyond its traditional national frame.',
+    'menneskene-bag':'Mechanics, soigneurs, broadcasters and organisers became more visible as the race convoy and technical support expanded.',
+  } : {
+    'loeb-og-store-oejeblikke':'Walkowiaks overraskende Tour og Gauls snedækkede Bondone-etape viser, hvordan udbrud, vejr og bjerge kunne vende et helt etapeløb.',
+    ryttere:'Coppi, Koblet, Bobet, Gaul, Walkowiak og den unge Anquetil repræsenterede meget forskellige veje til succes i etapeløbene.',
+    teknik:'Gran Sport gjorde parallelogram-bagskifteren til en prestigefyldt norm. Dobbeltklinge, fem tandhjul, ringdæk og lette stålstel formede den fine racer.',
+    'kost-traening-og-videnskab':'Træningen blev mere systematisk, men kosten fulgte fortsat erfaring, og brugen af stimulanser stod næsten uden effektiv kontrol.',
+    cykelkultur:'Radiomeldinger, filmresuméer og det tidlige fjernsyn førte ansigter, kørestil og sammenbrud ind i hjemmet.',
+    'samfund-og-tidsaand':'Starten i Amsterdam og et mere internationalt felt viste en europæisk sport, der voksede ud over sin nationale ramme.',
+    'menneskene-bag':'Mekanikere, soigneurs, journalister og arrangører blev mere synlige, efterhånden som løbskaravanen og den tekniske støtte voksede.',
+  };
+}
 if (period === '1960-1969') {
   boxes = en ? [
     ['The decade’s main development', 'The lightweight steel racing bicycle settled into a form that would remain familiar for decades.'],
@@ -260,8 +293,8 @@ if (period === '1960-1969') {
   };
 }
 const decadeName = en
-  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1960-1969' ? 'The 1960s' : 'The 1990s')
-  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1960-1969' ? '1960’erne' : '1990’erne');
+  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1950-1959' ? 'The 1950s' : period === '1960-1969' ? 'The 1960s' : 'The 1990s')
+  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1950-1959' ? '1950’erne' : period === '1960-1969' ? '1960’erne' : '1990’erne');
 ---
 <section class="period-model" aria-labelledby="period-model-title">
   <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? `${decadeName} in three views` : `${decadeName} i tre bokse`}</h2></header>

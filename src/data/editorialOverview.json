@@ -211,16 +211,16 @@
   },
   {
     "id": "hist-000016",
-    "titel": "Gule standardcykler, nationalhold og gearets sene Tour-debut",
-    "status": "vurderes",
+    "titel": "Da Touren skiftede fabrikkerne ud med nationer",
+    "status": "publiceret",
     "prioritet": "hoej",
-    "periode": "null",
-    "aar": "1930-1937",
-    "dokumentation": "ikke-kontrolleret",
-    "faktarisiko": "hoej",
-    "naeste_handling": "Afgræns vinkel og lav kildeplan",
+    "periode": "per-1930-1939",
+    "aar": "1930",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Vedligehold og genkontrollér efter behov",
     "blokeret_af": "",
-    "kanonisk_url": "",
+    "kanonisk_url": "https://teob.dk/historier/tour-1930-nationalhold-og-reklamekaravane/",
     "fil": "hist-000016-nationalhold-og-gear.md"
   },
   {
@@ -2392,5 +2392,19 @@
     "blokeret_af": "null",
     "kanonisk_url": "https://teob.dk/historier/peter-schroder-vaerksted-1920/",
     "fil": "hist-000171-peter-schroder-vaerksted-1920.md"
+  },
+  {
+    "id": "hist-000172",
+    "titel": "Gino Bartali før krigen",
+    "status": "publiceret",
+    "prioritet": "lancering",
+    "periode": "per-1930-1939",
+    "aar": "1936-1938",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Vedligehold kilder og billednoter ved nye oplysninger.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/gino-bartali-tour-1938/",
+    "fil": "hist-000172-gino-bartali-tour-1938.md"
   }
 ]

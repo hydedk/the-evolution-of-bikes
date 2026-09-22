@@ -82,6 +82,8 @@ const storyClassifications: Record<string, Classification> = {
   'alfonsina-strada-giro-1924': { period: '1920-1930', primary: 'ryttere', secondary: ['samfund-og-tidsaand', 'loeb-og-store-oejeblikke'] },
   'tour-de-france-1926-den-laengste': { period: '1920-1930', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },
   'peter-schroder-vaerksted-1920': { period: '1920-1930', primary: 'menneskene-bag', secondary: ['teknik', 'cykelkultur'] },
+  'tour-1930-nationalhold-og-reklamekaravane': { period: '1930-1939', primary: 'samfund-og-tidsaand', secondary: ['loeb-og-store-oejeblikke', 'menneskene-bag'] },
+  'gino-bartali-tour-1938': { period: '1930-1939', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
   'wim-van-est-aubisque-1951': { period: '1950-1959', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'teknik'] },
   'alfredo-binda-giro-1930': { period: '1920-1930', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
 };
@@ -102,7 +104,7 @@ export const components = [
 
 export type ContentItem = {
   id: string; type: ContentType; year: string; sortYear: number; title: string; text: string;
-  period: string; primaryTheme: ThemeId; secondaryThemes: ThemeId[]; themes: ThemeId[];
+  period: string; periods: string[]; primaryTheme: ThemeId; secondaryThemes: ThemeId[]; themes: ThemeId[];
   canonicalUrl: string; englishUrl: string; image?: string;
 };
 
@@ -123,17 +125,17 @@ export const contentItems: ContentItem[] = [
     const c = storyClassifications[story.slug];
     if (!c) throw new Error(`Historien ${story.slug} mangler periode- og temaklassifikation`);
     validateClassification(story.slug, c);
-    return { id: story.slug, type: 'historie' as const, year: story.year, sortYear: numberFrom(story.year), title: story.title, text: story.text, period: c.period, primaryTheme: c.primary, secondaryThemes: c.secondary ?? [], themes: [c.primary, ...(c.secondary ?? [])], canonicalUrl: `/historier/${story.slug}/`, englishUrl: `/en/stories/${story.slug}/`, image: siteImagePath(typeof story.image === 'string' ? story.image : story.image.src) };
+    return { id: story.slug, type: 'historie' as const, year: story.year, sortYear: numberFrom(story.year), title: story.title, text: story.text, period: c.period, periods: story.periods, primaryTheme: c.primary, secondaryThemes: c.secondary ?? [], themes: [c.primary, ...(c.secondary ?? [])], canonicalUrl: `/historier/${story.slug}/`, englishUrl: `/en/stories/${story.slug}/`, image: siteImagePath(typeof story.image === 'string' ? story.image : story.image.src) };
   }),
   ...bikes.map((bike) => {
     const period = bikePeriods[bike.slug];
     if (!period || !knownPeriods.has(period as typeof periods[number][0])) throw new Error(`Cyklen ${bike.slug} mangler en gyldig periode`);
-    return { id: bike.slug, type: 'cykel' as const, year: bike.year, sortYear: numberFrom(bike.year), title: bike.title, text: bike.text, period, primaryTheme: 'teknik' as const, secondaryThemes: ['cykelkultur'] as ThemeId[], themes: ['teknik', 'cykelkultur'] as ThemeId[], canonicalUrl: `/cykler/${bike.slug}/`, englishUrl: `/en/bikes/${bike.slug}/`, image: `/${bike.image}` };
+    return { id: bike.slug, type: 'cykel' as const, year: bike.year, sortYear: numberFrom(bike.year), title: bike.title, text: bike.text, period, periods: [period], primaryTheme: 'teknik' as const, secondaryThemes: ['cykelkultur'] as ThemeId[], themes: ['teknik', 'cykelkultur'] as ThemeId[], canonicalUrl: `/cykler/${bike.slug}/`, englishUrl: `/en/bikes/${bike.slug}/`, image: `/${bike.image}` };
   }),
-  ...components.map((component) => ({ id: component.slug, type: 'komponent' as const, year: component.year, sortYear: numberFrom(component.year), title: component.title, text: component.text, period: component.period, primaryTheme: 'teknik' as const, secondaryThemes: [] as ThemeId[], themes: ['teknik'] as ThemeId[], canonicalUrl: `/komponenter/${component.slug}/`, englishUrl: `/en/components/${component.slug}/` })),
+  ...components.map((component) => ({ id: component.slug, type: 'komponent' as const, year: component.year, sortYear: numberFrom(component.year), title: component.title, text: component.text, period: component.period, periods: [component.period], primaryTheme: 'teknik' as const, secondaryThemes: [] as ThemeId[], themes: ['teknik'] as ThemeId[], canonicalUrl: `/komponenter/${component.slug}/`, englishUrl: `/en/components/${component.slug}/` })),
 ];
 
-export const contentForPeriod = (period: string) => contentItems.filter((item) => item.period === period);
+export const contentForPeriod = (period: string) => contentItems.filter((item) => item.periods.includes(period));
 export const contentForTheme = (theme: ThemeId) => contentItems.filter((item) => item.themes.includes(theme));
 
 const englishStoryBySlug = new Map(englishStories.map((item) => [item.slug, item]));

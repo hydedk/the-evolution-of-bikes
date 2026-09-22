@@ -126,6 +126,53 @@ if (period === '1920-1930') {
     'menneskene-bag': 'Rammebyggere som Peter Schrøder, mekanikere, officials og avisernes arrangører formede sporten uden for målstregen. Deres valg bestemte maskiner, regler og ruter.',
   };
 }
+if (period === '1930-1939') {
+  boxes = en ? [
+    ['The decade’s main development', 'The racing bicycle moved from stopping to change ratio towards practical gear changes made while riding.'],
+    ['What defined the period', 'National teams, the publicity caravan and new stage races made cycling more organised, commercial and politically visible.'],
+    ['Three changes to cycling', 'The Tour introduced national teams. The first Vuelta was held. Derailleurs were admitted to the Tour.'],
+  ] : [
+    ['Årtiets vigtigste udvikling', 'Racercyklen bevægede sig fra stop og hjulvending til et praktisk gearskifte, som kunne udføres under kørslen.'],
+    ['Det kendetegnede perioden', 'Nationalhold, reklamekaravanen og nye etapeløb gjorde cykelsporten mere organiseret, kommerciel og politisk synlig.'],
+    ['Tre ting, der ændrede cyklingen', 'Touren indførte nationalhold. Den første Vuelta blev kørt. Udvendige gear blev tilladt i Touren.'],
+  ];
+  timeline = en ? [
+    ['1930', 'The Tour replaces trade teams with national selections and launches its official publicity caravan.'],
+    ['1930', 'The Giro pays Alfredo Binda not to start after four overall victories in the 1920s.'],
+    ['1933', 'Tullio Campagnolo establishes the company that grows from his wheel-release patents.'],
+    ['1935', 'The first Vuelta a España is held; Gustaaf Deloor wins.'],
+    ['1935', 'Romain Maes leads the Tour from the first stage to Paris.'],
+    ['1937', 'Derailleurs are admitted to the Tour; Roger Lapébie wins with Super Champion.'],
+    ['1938', 'Gino Bartali wins his first Tour de France.'],
+    ['1939', 'Sylvère Maes wins the final Tour before the Second World War.'],
+  ] : [
+    ['1930', 'Touren erstatter firmaholdene med nationalhold og indfører sin officielle reklamekaravane.'],
+    ['1930', 'Giroen betaler Alfredo Binda for ikke at stille op efter fire samlede sejre i 1920’erne.'],
+    ['1933', 'Tullio Campagnolo grundlægger virksomheden, der voksede ud af hans patenter på hurtigudløseren.'],
+    ['1935', 'Den første Vuelta a España køres; Gustaaf Deloor vinder.'],
+    ['1935', 'Romain Maes fører Touren fra første etape til Paris.'],
+    ['1937', 'Udvendige gear tillades i Touren; Roger Lapébie vinder med Super Champion.'],
+    ['1938', 'Gino Bartali vinder sit første Tour de France.'],
+    ['1939', 'Sylvère Maes vinder den sidste Tour før Anden Verdenskrig.'],
+  ];
+  periodThemeCopy = en ? {
+    'loeb-og-store-oejeblikke': 'The first Vuelta, Romain Maes in yellow from start to finish and the last Tour before the war made the decade far more than a technical interlude.',
+    ryttere: 'Binda’s dominance became an organisational problem, Bartali emerged as Italy’s great stage-race rider, and the Deloor brothers carried the first two Vueltas back to Belgium.',
+    teknik: 'Quick-release hubs shortened wheel changes, while Super Champion finally brought the derailleur into the Tour. The Wonder Saint-Étienne shows the transition in metal and cable.',
+    'kost-traening-og-videnskab': 'Food and drink still followed habit, availability and individual experience. Later stories about alcohol, tobacco and stimulants must be separated from documented daily practice.',
+    cykelkultur: 'The publicity caravan turned the road before the riders into a travelling advertising show. Toy cyclists later brought the spectacle into homes and onto pavements.',
+    'samfund-og-tidsaand': 'National teams made flags and politics more visible in sport. The Spanish Civil War interrupted the new Vuelta, while the 1939 Tour became the last before a far larger interruption.',
+    'menneskene-bag': 'Desgrange and his organisation changed the Tour’s economy and team structure. Inventors such as Lucien Juy changed what riders could do without stopping.',
+  } : {
+    'loeb-og-store-oejeblikke': 'Den første Vuelta, Romain Maes i gult fra start til mål og den sidste Tour før krigen gjorde årtiet til andet end et teknisk mellemspil.',
+    ryttere: 'Bindas dominans blev et organisatorisk problem, Bartali trådte frem som Italiens store etapeløbsrytter, og Deloor-brødrene tog de to første Vuelta-sejre med til Belgien.',
+    teknik: 'Hurtigudløseren forkortede hjulskiftet, mens Super Champion endelig førte det udvendige gear ind i Touren. Wonder Saint-Étienne viser overgangen i metal og kabel.',
+    'kost-traening-og-videnskab': 'Mad og drikke fulgte fortsat vane, adgang og den enkelte rytters erfaring. Senere fortællinger om alkohol, tobak og stimulanser må holdes adskilt fra dokumenteret daglig praksis.',
+    cykelkultur: 'Reklamekaravanen gjorde vejen foran rytterne til et omrejsende reklameshow. Små cykelfigurer førte siden løbet ind i hjemmet og ud på fortovet.',
+    'samfund-og-tidsaand': 'Nationalholdene gjorde flag og politik mere synlige i sporten. Den spanske borgerkrig afbrød den nye Vuelta, og Touren i 1939 blev den sidste før en langt større afbrydelse.',
+    'menneskene-bag': 'Desgrange og hans organisation ændrede Tourens økonomi og holdstruktur. Opfindere som Lucien Juy ændrede det, rytterne kunne gøre uden at standse.',
+  };
+}
 if (period === '1960-1969') {
   boxes = en ? [
     ['The decade’s main development', 'The lightweight steel racing bicycle settled into a form that would remain familiar for decades.'],
@@ -166,8 +213,8 @@ if (period === '1960-1969') {
   };
 }
 const decadeName = en
-  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1960-1969' ? 'The 1960s' : 'The 1990s')
-  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1960-1969' ? '1960’erne' : '1990’erne');
+  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1960-1969' ? 'The 1960s' : 'The 1990s')
+  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1960-1969' ? '1960’erne' : '1990’erne');
 ---
 <section class="period-model" aria-labelledby="period-model-title">
   <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? `${decadeName} in three views` : `${decadeName} i tre bokse`}</h2></header>

@@ -1,5 +1,6 @@
 ---
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import PeriodStructure from '../../components/PeriodStructure.astro';
 const facts = [
   ['1930', 'Nationalhold og reklamekaravane i Touren'],
   ['1935', 'Den første Vuelta a España'],
@@ -23,6 +24,8 @@ const facts = [
       <header class="wildwest-hero decade1930-hero"><div><p class="section-label">Perioden 1930–1939</p><h1>Da racercyklen<br />blev <em>moderne</em></h1></div><p>Touren tog kontrollen fra cykelfabrikkerne. Vueltaen blev født. Og til sidst fik rytterne lov til at skifte gear uden at vende baghjulet.</p></header>
 
       <figure class="decade1930-hero-image"><img src={`${base}/images/periods/1930-1939/romain-maes-cannes-1935.jpg`} alt="Den udmattede Romain Maes omgivet af hjælpere efter 11. etape af Tour de France 1935" /><figcaption>Romain Maes efter sejren på 11. etape mellem Nice og Cannes i 1935. Han bar den gule trøje fra første til sidste dag. Foto: anonym, <em>Le Miroir des Sports</em>/Gallica · public domain.</figcaption></figure>
+
+      <PeriodStructure language="da" period="1930-1939" />
 
       <section class="wildwest-lead decade1930-lead"><p class="section-label">En gul cykel uden fabriksnavn</p><p>I Touren fra 1930 stillede arrangøren cyklerne til rådighed. De var gule, ensartede og uden de mærkenavne, som tidligere havde styret holdene. Henri Desgrange ville have sin egen konkurrence tilbage.</p></section>
 

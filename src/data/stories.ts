@@ -15,6 +15,8 @@ import marcoPantaniImage from '../assets/stories/marco-pantani-manden-bag-pirate
 import magliaNeraImage from '../assets/stories/maglia-nera-gemmeleg/maglia-nera-gemmeleg-illustration.png';
 import steinesTourmaletImage from '../assets/stories/tourmalet-steines-1910/tour-1910-route.webp';
 import eugeneChristopheImage from '../assets/stories/eugene-christophe-1913/eugene-christophe-1912.jpg';
+import guerra1930Image from '../assets/stories/tour-1930-nationalhold/learco-guerra-tour-1930.jpg';
+import bartali1936Image from '../assets/stories/bartali-tour-1938/gino-bartali-1936.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -115,6 +117,8 @@ export const stories: StoryMeta[] = [
   { slug: 'alfredo-binda-giro-1930', type: 'historie', year: '1925–1930', title: 'Da Giroen betalte Binda for at blive hjemme', text: 'Efter fire Giro-sejre i 1920’erne var Alfredo Binda blevet så dominerende, at arrangørerne holdt ham ude i 1930 og betalte 22.500 lire.', image: 'images/stories/alfredo-binda-giro-1930/alfredo-binda.jpg', periods: ['1920-1930', '1930-1939'], topics: ['giro-ditalia', 'alfredo-binda', 'regler', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
   { slug: 'tour-de-france-1926-den-laengste', type: 'historie', year: '1926', title: 'Touren, der målte 5.745 kilometer', text: 'Tour de France 1926 blev løbets længste udgave. 126 ryttere startede i Évian, og 41 nåede Paris.', image: 'images/stories/tour-1926/tour-de-france-1926.png', periods: ['1920-1930'], topics: ['tour-de-france', 'lucien-buysse', 'udholdenhed', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
   { slug: 'peter-schroder-vaerksted-1920', type: 'historie', year: '1920', title: 'Da Peter Schrøder begyndte at bygge cykler på Nørrebro', text: 'Peter Schrøders værksted fra 1920 blev begyndelsen på et københavnsk cykelnavn med en lang forbindelse til dansk cykelsport.', image: 'images/bikes/schroder-1965/hero.jpg', periods: ['1920-1930'], topics: ['peter-schroder', 'dansk-cykling', 'rammebygning', 'værksted'], relatedBikes: ['schroder-1965'], relatedComponents: [] },
+  { slug: 'tour-1930-nationalhold-og-reklamekaravane', type: 'historie', year: '1930', title: 'Da Touren skiftede fabrikkerne ud med nationer', text: 'Nationalholdene fjernede fabriksmærkerne fra Tourens bedste ryttere. Reklamekaravanen blev sat ind for at betale den dyrere ordning.', image: guerra1930Image, periods: ['1930-1939'], topics: ['tour-de-france', 'nationalhold', 'reklamekaravane', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'gino-bartali-tour-1938', type: 'historie', year: '1936–1938', title: 'Gino Bartali før krigen', text: 'To Giro-sejre og Tour-triumfen i 1938 gjorde Bartali til Italiens store etapeløbsrytter før krigens afbrydelse.', image: bartali1936Image, periods: ['1930-1939'], topics: ['gino-bartali', 'tour-de-france', 'giro-ditalia', 'italien'], relatedBikes: [], relatedComponents: [] },
 ];
 
 export const storiesForPeriod = (period: string) => stories.filter((story) => story.periods.includes(period));

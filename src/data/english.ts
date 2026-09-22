@@ -2,6 +2,15 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'circuit-de-france-1942': ['The Tour the occupation wanted', 'The six-stage Circuit de France was meant to resemble a national revival. Instead, it showed how difficult a major bicycle race was under occupation.'],
+  'gino-bartali-kurer-under-krigen': ["Bartali's training rides had another purpose", 'During the German occupation of Italy, Gino Bartali used the familiar sight of a professional rider in training as cover while carrying material for a rescue network.'],
+  'fausto-coppi-fra-krigsfange-til-comeback': ['From prisoner of war to Giro–Tour winner', 'Fausto Coppi had already won the Giro when he was captured in North Africa. Six years later, he became the first rider to win the Giro and Tour in the same season.'],
+  'jean-robic-vender-touren-1947': ['Robic took yellow on the final day', 'Jean Robic began the last stage of the 1947 Tour in third place. On the road to Paris, he attacked and overturned the entire classification.'],
+  'campagnolo-gran-sport-parallelogram': ['When gear shifting finally became modern', 'Campagnolo Gran Sport allowed the rear wheel to stay fixed while a spring-loaded parallelogram moved the chain between sprockets.'],
+  'roger-walkowiak-tour-1956': ['The Tour winner nobody expected', 'Roger Walkowiak won no stage in the 1956 Tour. He won the race because the favourites first underestimated his breakaway and later could not drop him.'],
+  'charly-gaul-monte-bondone-1956': ['When the snow broke the Giro peloton', 'On the 242-kilometre stage to Monte Bondone, Charly Gaul rode through snow and cold from eleventh place into the pink jersey.'],
+  'tour-start-amsterdam-1954': ['When the Tour left France', 'The Grand Départ in Amsterdam was the first Tour de France start outside France and showed a race becoming a European spectacle.'],
+  'fausto-coppi-la-bomba': ['When “necessary” meant almost always', 'In a RAI interview, Fausto Coppi spoke unusually openly about the peloton’s use of “la bomba” in an age without effective doping controls.'],
   'gemmelegen-om-giroens-sorte-troeje': ["The hide-and-seek contest for the Giro's black jersey", 'Luigi Malabrocca tried to finish last in the 1949 Giro. The problem was that bricklayer Sante Carollo was already almost two hours further behind.'],
   'marco-pantani-manden-bag-piraten': ['The man behind the Pirate', 'Marco Pantani returned from a shattered left leg to win both the Giro and the Tour. The rider’s story also contains the vulnerable man.'],
   'herning-seksdagesloeb-1974': ['When Herning acquired its own wooden track', 'A wooden track from London, a new six-day race in Herning and Ole Ritter as the rider the crowd came to see.'],

@@ -7,5 +7,20 @@ const slugsFrom = (paths: string[]) => new Set(
     .filter((slug): slug is string => Boolean(slug && slug !== 'index')),
 );
 
-export const englishStorySlugs = slugsFrom(Object.keys(storyModules));
+const dynamicEnglishStorySlugs = [
+  'circuit-de-france-1942',
+  'gino-bartali-kurer-under-krigen',
+  'fausto-coppi-fra-krigsfange-til-comeback',
+  'jean-robic-vender-touren-1947',
+  'campagnolo-gran-sport-parallelogram',
+  'roger-walkowiak-tour-1956',
+  'charly-gaul-monte-bondone-1956',
+  'tour-start-amsterdam-1954',
+  'fausto-coppi-la-bomba',
+];
+
+export const englishStorySlugs = new Set([
+  ...slugsFrom(Object.keys(storyModules)),
+  ...dynamicEnglishStorySlugs,
+]);
 export const englishBikeSlugs = slugsFrom(Object.keys(bikeModules));

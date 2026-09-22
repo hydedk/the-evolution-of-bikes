@@ -1,5 +1,6 @@
 ---
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import PeriodStructure from '../../components/PeriodStructure.astro';
 const facts = [
   ['1940', 'Coppi vinder Giroen som 20-årig'],
   ['1946', 'Giro d’Italia vender tilbage'],
@@ -28,6 +29,8 @@ const facts = [
       <header class="wildwest-hero decade1940-hero"><div><p class="section-label">Perioden 1940–1949</p><h1>Da krigen lukkede<br /><em>landevejen</em></h1></div><p>De store etapeløb forsvandt. Da de vendte tilbage, blev cykelsporten et billede på både kontinuitet og genopbygning.</p></header>
 
       <figure class="decade1970-hero-image"><img src={`${base}/images/periods/1940-1949/efterkrigsfelt-illustration.jpg`} alt="Illustration af et cykelfelt på en slidt italiensk landevej kort efter Anden Verdenskrig" /><figcaption>Et generelt efterkrigsmotiv med tidstypiske cykler og dragter. AI-genereret illustration – ikke et billede af et bestemt løb eller navngivne ryttere.</figcaption></figure>
+
+      <PeriodStructure language="da" period="1940-1949" />
 
       <section class="wildwest-lead decade1940-lead"><p class="section-label">Et brud midt i kalenderen</p><p>Et årti er normalt en fortsættelse. 1940’erne blev først en afbrydelse. Løbene, fabrikkerne, aviserne og rytternes liv blev trukket ind i krigen – og sporten måtte senere bygge sin rytme op igen.</p></section>
 

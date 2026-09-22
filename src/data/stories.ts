@@ -17,6 +17,9 @@ import steinesTourmaletImage from '../assets/stories/tourmalet-steines-1910/tour
 import eugeneChristopheImage from '../assets/stories/eugene-christophe-1913/eugene-christophe-1912.jpg';
 import guerra1930Image from '../assets/stories/tour-1930-nationalhold/learco-guerra-tour-1930.jpg';
 import bartali1936Image from '../assets/stories/bartali-tour-1938/gino-bartali-1936.jpg';
+import bartaliCourierImage from '../assets/stories/bartali-kurer-krigen/gino-bartali-1936.jpg';
+import coppiPowImage from '../assets/stories/coppi-krigsfange/fausto-coppi-1957.jpg';
+import robic1947Image from '../assets/stories/jean-robic-tour-1947/jean-robic-1947.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -63,12 +66,20 @@ const storyTracks: Record<string, StoryTrack> = {
   'to-tandhjul-og-en-skruenoegle': 'mechanics',
   'tour-de-france-1926-den-laengste': 'race',
   'peter-schroder-vaerksted-1920': 'people',
+  'circuit-de-france-1942': 'race',
+  'gino-bartali-kurer-under-krigen': 'people',
+  'fausto-coppi-fra-krigsfange-til-comeback': 'people',
+  'jean-robic-vender-touren-1947': 'race',
 };
 
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'circuit-de-france-1942', type: 'historie', year: '1942', title: 'Touren, besættelsen gerne ville have', text: 'Circuit de France skulle ligne en national genkomst. Seks etaper viste i stedet, hvor vanskeligt et stort cykelløb var under besættelsen.', image: 'images/periods/1940-1949/efterkrigsfelt-illustration.jpg', periods: ['1940-1949'], topics: ['circuit-de-france', 'besættelsen', 'frankrig', 'løbsorganisation'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'gino-bartali-kurer-under-krigen', type: 'historie', year: '1943–1944', title: 'Bartalis træningsture havde et andet formål', text: 'Gino Bartali brugte sin kendte træningsrutine som dække, mens han bragte dokumenter mellem mennesker i et italiensk redningsnetværk.', image: bartaliCourierImage, periods: ['1940-1949'], topics: ['gino-bartali', 'anden-verdenskrig', 'modstand', 'italien'], relatedBikes: ['stella-veneta'], relatedComponents: [] },
+  { slug: 'fausto-coppi-fra-krigsfange-til-comeback', type: 'historie', year: '1943–1949', title: 'Fra krigsfange til Giro–Tour-vinder', text: 'Fausto Coppi blev taget til fange i Nordafrika. Seks år senere blev han den første til at vinde Giroen og Touren samme år.', image: coppiPowImage, periods: ['1940-1949'], topics: ['fausto-coppi', 'anden-verdenskrig', 'giro-ditalia', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'jean-robic-vender-touren-1947', type: 'historie', year: '1947', title: 'Robic tog den gule trøje på den sidste dag', text: 'Jean Robic begyndte Tourens sidste etape som nummer tre. På vejen mod Paris angreb han og vandt løbet uden tidligere at have båret gult.', image: robic1947Image, periods: ['1940-1949'], topics: ['jean-robic', 'tour-de-france', 'comeback', 'sidste-etape'], relatedBikes: [], relatedComponents: [] },
   { slug: 'stifinderen-der-sendte-touren-over-tourmalet', type: 'historie', year: '1910', title: 'Stifinderen, der sendte Touren over Tourmalet', text: 'Alphonse Steines kom ned fra sneen og sendte telegrammet, der gjorde Tourmalet til cykelløbets bjerg.', image: steinesTourmaletImage, periods: ['1900-1920'], topics: ['tour-de-france', 'tourmalet', 'alphonse-steines', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
   { slug: 'eugene-christophe-smedjen-1913', type: 'historie', year: '1913', title: 'Da Eugène Christophe selv måtte smede sin forgaffel', text: 'En knækket forgaffel sendte Tourens førende rytter til fods og ind i en smedje i Sainte-Marie-de-Campan.', image: eugeneChristopheImage, periods: ['1900-1920'], topics: ['tour-de-france', 'eugene-christophe', 'mekanik', 'regler'], relatedBikes: [], relatedComponents: [] },
   { slug: 'henri-desgrange-og-den-selvhjulpne-rytter', type: 'historie', year: '1903–1920', title: 'Henri Desgrange og idealet om den selvhjulpne rytter', text: 'Tourens skaber gjorde hjælp, reparation og selvforsyning til en del af selve prøven.', image: 'images/periods/1900-1920/wild-west/street-race-poster.webp', periods: ['1900-1920'], topics: ['henri-desgrange', 'tour-de-france', 'regler', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },

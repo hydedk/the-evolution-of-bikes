@@ -687,16 +687,16 @@
   },
   {
     "id": "hist-000050",
-    "titel": "Bartali som kurér under krigen",
-    "status": "vurderes",
+    "titel": "Bartalis træningsture havde et andet formål",
+    "status": "publiceret",
     "prioritet": "hoej",
     "periode": "per-1940-1959",
     "aar": "1943-1944",
-    "dokumentation": "ikke-kontrolleret",
-    "faktarisiko": "hoej",
-    "naeste_handling": "Afgræns vinkel og lav kildeplan",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "mellem",
+    "naeste_handling": "Vedligehold og genkontrollér efter behov",
     "blokeret_af": "",
-    "kanonisk_url": "",
+    "kanonisk_url": "https://teob.dk/historier/gino-bartali-kurer-under-krigen/",
     "fil": "hist-000050-bartali-kurer-krigen.md"
   },
   {
@@ -2406,5 +2406,47 @@
     "blokeret_af": "null",
     "kanonisk_url": "https://teob.dk/historier/gino-bartali-tour-1938/",
     "fil": "hist-000172-gino-bartali-tour-1938.md"
+  },
+  {
+    "id": "hist-000173",
+    "titel": "Touren, besættelsen gerne ville have",
+    "status": "publiceret",
+    "prioritet": "lancering",
+    "periode": "per-1940-1959",
+    "aar": "1942",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "mellem",
+    "naeste_handling": "Følg trafik og eventuelle redaktionelle rettelser efter publicering.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/circuit-de-france-1942/",
+    "fil": "hist-000173-circuit-de-france-1942.md"
+  },
+  {
+    "id": "hist-000174",
+    "titel": "Fra krigsfange til Giro–Tour-vinder",
+    "status": "publiceret",
+    "prioritet": "lancering",
+    "periode": "per-1940-1959",
+    "aar": "1943-1949",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Følg trafik og eventuelle redaktionelle rettelser efter publicering.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/fausto-coppi-fra-krigsfange-til-comeback/",
+    "fil": "hist-000174-fausto-coppi-krigsfange-comeback.md"
+  },
+  {
+    "id": "hist-000175",
+    "titel": "Robic tog den gule trøje på den sidste dag",
+    "status": "publiceret",
+    "prioritet": "lancering",
+    "periode": "per-1940-1959",
+    "aar": "1947",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Følg trafik og eventuelle redaktionelle rettelser efter publicering.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/jean-robic-vender-touren-1947/",
+    "fil": "hist-000175-jean-robic-tour-1947.md"
   }
 ]

@@ -84,6 +84,10 @@ const storyClassifications: Record<string, Classification> = {
   'peter-schroder-vaerksted-1920': { period: '1920-1930', primary: 'menneskene-bag', secondary: ['teknik', 'cykelkultur'] },
   'tour-1930-nationalhold-og-reklamekaravane': { period: '1930-1939', primary: 'samfund-og-tidsaand', secondary: ['loeb-og-store-oejeblikke', 'menneskene-bag'] },
   'gino-bartali-tour-1938': { period: '1930-1939', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
+  'circuit-de-france-1942': { period: '1940-1949', primary: 'samfund-og-tidsaand', secondary: ['loeb-og-store-oejeblikke', 'menneskene-bag'] },
+  'gino-bartali-kurer-under-krigen': { period: '1940-1949', primary: 'menneskene-bag', secondary: ['ryttere', 'samfund-og-tidsaand'] },
+  'fausto-coppi-fra-krigsfange-til-comeback': { period: '1940-1949', primary: 'ryttere', secondary: ['samfund-og-tidsaand', 'loeb-og-store-oejeblikke'] },
+  'jean-robic-vender-touren-1947': { period: '1940-1949', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },
   'wim-van-est-aubisque-1951': { period: '1950-1959', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'teknik'] },
   'alfredo-binda-giro-1930': { period: '1920-1930', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
 };

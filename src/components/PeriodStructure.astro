@@ -173,6 +173,53 @@ if (period === '1930-1939') {
     'menneskene-bag': 'Desgrange og hans organisation ændrede Tourens økonomi og holdstruktur. Opfindere som Lucien Juy ændrede det, rytterne kunne gøre uden at standse.',
   };
 }
+if (period === '1940-1949') {
+  boxes = en ? [
+    ['The decade’s main development', 'War interrupted the international calendar. After 1945, races, teams and bicycle production had to be assembled again.'],
+    ['What defined the period', 'Shortages, occupation and closed borders were followed by reconstruction, renewed rivalries and cycling’s return as mass entertainment.'],
+    ['Three changes to cycling', 'The grand tours disappeared and returned. The Cambio Corsa made shifting possible while riding. Coppi completed the first Giro–Tour double.'],
+  ] : [
+    ['Årtiets vigtigste udvikling', 'Krigen afbrød den internationale kalender. Efter 1945 skulle løb, hold og cykelproduktion samles igen.'],
+    ['Det kendetegnede perioden', 'Mangel, besættelse og lukkede grænser blev afløst af genopbygning, nye rivaliseringer og cykelsportens tilbagekomst som folkeforlystelse.'],
+    ['Tre ting, der ændrede cyklingen', 'De store rundture forsvandt og vendte tilbage. Cambio Corsa gjorde gearskift under kørsel muligt. Coppi tog den første Giro–Tour-double.'],
+  ];
+  timeline = en ? [
+    ['1940', 'Fausto Coppi wins the Giro d’Italia at the age of twenty.'],
+    ['1942', 'The six-stage Circuit de France attempts to replace the absent Tour.'],
+    ['1943', 'Coppi is captured in North Africa; Bartali begins courier work after the German occupation of Italy.'],
+    ['1946', 'The Giro returns; Bartali wins ahead of Coppi.'],
+    ['1947', 'Jean Robic overturns the Tour on its final stage.'],
+    ['1948', 'Bartali wins the Tour ten years after his first victory.'],
+    ['1949', 'Coppi becomes the first rider to win the Giro and Tour in the same season.'],
+    ['1949', 'Campagnolo introduces the single-lever Paris–Roubaix gear.'],
+  ] : [
+    ['1940', 'Fausto Coppi vinder Giro d’Italia som 20-årig.'],
+    ['1942', 'Det seks etaper lange Circuit de France forsøger at erstatte den fraværende Tour.'],
+    ['1943', 'Coppi tages til fange i Nordafrika; Bartali begynder sit kurérarbejde efter den tyske besættelse af Italien.'],
+    ['1946', 'Giroen vender tilbage; Bartali vinder foran Coppi.'],
+    ['1947', 'Jean Robic vender Touren på løbets sidste etape.'],
+    ['1948', 'Bartali vinder Touren ti år efter sin første sejr.'],
+    ['1949', 'Coppi bliver den første, der vinder Giroen og Touren i samme sæson.'],
+    ['1949', 'Campagnolo introducerer det enarmede Paris–Roubaix-gear.'],
+  ];
+  periodThemeCopy = en ? {
+    'loeb-og-store-oejeblikke': 'The grand tours vanished during the war. Their return produced Robic’s final-day victory in 1947, Bartali’s comeback in 1948 and Coppi’s Giro–Tour double in 1949.',
+    ryttere: 'Bartali’s courier work and Coppi’s captivity belonged to lives larger than the result sheet. When racing returned, both men became central to Italy’s sporting reconstruction.',
+    teknik: 'Cambio Corsa and the Paris–Roubaix gear still moved the rear wheel during a shift. The Stella Veneta from 1947 makes this demanding transition visible.',
+    'kost-traening-og-videnskab': 'Rationing made access to food part of the conditions. After the war, military amphetamine stocks entered civilian life and sport, but precise anecdotes require careful sourcing.',
+    cykelkultur: 'Where fuel and public transport were scarce, the bicycle remained practical transport as well as sporting equipment. Racing returned to crowds hungry for ordinary public life.',
+    'samfund-og-tidsaand': 'Occupation, persecution and reconstruction shaped every part of the decade. Cycling could serve propaganda, clandestine work and, later, a renewed shared calendar.',
+    'menneskene-bag': 'Couriers, mechanics, organisers and families kept cycling’s networks alive. Their work explains how the sport survived years without its familiar international races.',
+  } : {
+    'loeb-og-store-oejeblikke': 'De store rundture forsvandt under krigen. Genkomsten gav Robics sidste-etape-sejr i 1947, Bartalis comeback i 1948 og Coppis Giro–Tour-double i 1949.',
+    ryttere: 'Bartalis kurérarbejde og Coppis fangenskab hørte til liv, der var større end resultatlisten. Da løbene vendte tilbage, blev de begge centrale i Italiens sportslige genopbygning.',
+    teknik: 'Cambio Corsa og Paris–Roubaix-gearet flyttede stadig baghjulet under et gearskift. Stella Veneta fra 1947 gør dette krævende mellemtrin synligt.',
+    'kost-traening-og-videnskab': 'Rationering gjorde adgangen til mad til en del af vilkårene. Efter krigen fandt militære lagre af amfetamin vej til civilsamfund og sport, men de præcise anekdoter kræver forsigtige kilder.',
+    cykelkultur: 'Hvor benzin og kollektiv transport var knap, forblev cyklen både transportmiddel og sportsredskab. Løbene vendte tilbage til et publikum med behov for almindeligt offentligt liv.',
+    'samfund-og-tidsaand': 'Besættelse, forfølgelse og genopbygning prægede hele årtiet. Cyklingen kunne bruges til propaganda, illegalt arbejde og siden til en genetableret fælles kalender.',
+    'menneskene-bag': 'Kurerer, mekanikere, arrangører og familier holdt cyklingens netværk i live. Deres arbejde forklarer, hvordan sporten overlevede årene uden sine kendte internationale løb.',
+  };
+}
 if (period === '1960-1969') {
   boxes = en ? [
     ['The decade’s main development', 'The lightweight steel racing bicycle settled into a form that would remain familiar for decades.'],
@@ -213,8 +260,8 @@ if (period === '1960-1969') {
   };
 }
 const decadeName = en
-  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1960-1969' ? 'The 1960s' : 'The 1990s')
-  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1960-1969' ? '1960’erne' : '1990’erne');
+  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1960-1969' ? 'The 1960s' : 'The 1990s')
+  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1960-1969' ? '1960’erne' : '1990’erne');
 ---
 <section class="period-model" aria-labelledby="period-model-title">
   <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? `${decadeName} in three views` : `${decadeName} i tre bokse`}</h2></header>

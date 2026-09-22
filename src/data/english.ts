@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'soigneuren-og-maden-i-1970erne': ['Steak at five and coffee with cognac', 'Before gels and precise carbohydrate plans, the soigneur packed sandwiches, fruit and tarts, filled the bottles and tried to keep riders eating through a long working day.'],
   'circuit-de-france-1942': ['The Tour the occupation wanted', 'The six-stage Circuit de France was meant to resemble a national revival. Instead, it showed how difficult a major bicycle race was under occupation.'],
   'gino-bartali-kurer-under-krigen': ["Bartali's training rides had another purpose", 'During the German occupation of Italy, Gino Bartali used the familiar sight of a professional rider in training as cover while carrying material for a rescue network.'],
   'fausto-coppi-fra-krigsfange-til-comeback': ['From prisoner of war to Giro–Tour winner', 'Fausto Coppi had already won the Giro when he was captured in North Africa. Six years later, he became the first rider to win the Giro and Tour in the same season.'],

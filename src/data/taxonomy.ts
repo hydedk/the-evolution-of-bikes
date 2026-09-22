@@ -37,6 +37,7 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'soigneuren-og-maden-i-1970erne': { period: '1970-1979', primary: 'kost-traening-og-videnskab', secondary: ['menneskene-bag', 'cykelkultur'] },
   'stifinderen-der-sendte-touren-over-tourmalet': { period: '1900-1920', primary: 'menneskene-bag', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
   'eugene-christophe-smedjen-1913': { period: '1900-1920', primary: 'teknik', secondary: ['loeb-og-store-oejeblikke', 'ryttere'] },
   'henri-desgrange-og-den-selvhjulpne-rytter': { period: '1900-1920', primary: 'menneskene-bag', secondary: ['samfund-og-tidsaand', 'loeb-og-store-oejeblikke'] },

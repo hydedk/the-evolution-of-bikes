@@ -17,6 +17,7 @@ const dynamicEnglishStorySlugs = [
   'charly-gaul-monte-bondone-1956',
   'tour-start-amsterdam-1954',
   'fausto-coppi-la-bomba',
+  'soigneuren-og-maden-i-1970erne',
 ];
 
 export const englishStorySlugs = new Set([

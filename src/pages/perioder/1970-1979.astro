@@ -1,4 +1,5 @@
 ---
+import PeriodStructure from '../../components/PeriodStructure.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const facts = [
   ['1975', 'Første Tour-afslutning på Champs-Élysées'],
@@ -40,6 +41,8 @@ const facts = [
           <img src={`${base}/images/periods/1970-1979/felt-illustration.jpg`} alt="Illustration af et professionelt cykelfelt på stålcykler i 1970’erne" />
           <figcaption>En generel, tidstypisk scene fra 1970’ernes professionelle cykelsport. AI-genereret illustration – ikke et billede af et bestemt løb.</figcaption>
         </figure>
+
+        <PeriodStructure language="da" period="1970-1979" />
 
         <section class="wildwest-lead decade1970-lead"><p class="section-label">Hånden ned til skrårøret</p><p>Gearskiftet gav ikke et klik. Rytteren flyttede grebet, lyttede til kæden og rettede en anelse, hvis den støjede. Cyklerne lignede allerede moderne racercykler, men de krævede mere af hænderne.</p></section>
 

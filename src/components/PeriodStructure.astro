@@ -292,9 +292,56 @@ if (period === '1960-1969') {
     'menneskene-bag': 'Læger, mekanikere, officials og holdfolk fik større betydning, efterhånden som løbene blev mere organiserede, selv om deres arbejde sjældent stod i resultatlisten.',
   };
 }
+if (period === '1970-1979') {
+  boxes = en ? [
+    ['The decade’s main development', 'Professional teams became more organised while Japanese components began to challenge the established European makers.'],
+    ['What defined the period', 'Merckx dominated the opening years, Hinault arrived at the end, and steel bicycles with friction shifting remained the familiar professional tool.'],
+    ['Three changes to cycling', 'The Tour finished on the Champs-Élysées. The polka-dot jersey appeared. Team support, television and component competition grew.'],
+  ] : [
+    ['Årtiets vigtigste udvikling', 'De professionelle hold blev bedre organiseret, mens japanske komponenter begyndte at udfordre de etablerede europæiske producenter.'],
+    ['Det kendetegnede perioden', 'Merckx dominerede begyndelsen, Hinault kom til sidst, og stålcyklen med friktionsgear forblev feltets velkendte arbejdsredskab.'],
+    ['Tre ting, der ændrede cyklingen', 'Touren fik mål på Champs-Élysées. Den prikkede bjergtrøje kom til. Holdstøtte, fjernsyn og komponentkonkurrence voksede.'],
+  ];
+  timeline = en ? [
+    ['1970', 'Mogens Frey is awarded the Tour stage to Mulhouse after Joaquim Agostinho obstructs him in the sprint.'],
+    ['1971', 'Luis Ocaña takes yellow from Merckx, but crashes out in the Pyrenees.'],
+    ['1972', 'Eddy Merckx completes his fourth Tour victory.'],
+    ['1974', 'Herning opens its temporary wooden track for six-day racing.'],
+    ['1975', 'The Tour finishes on the Champs-Élysées for the first time; Thévenet ends Merckx’s winning run.'],
+    ['1976', 'Lucien Van Impe wins the Tour de France.'],
+    ['1978', 'Bernard Hinault wins his first Tour; Shimano introduces 600 EX Arabesque.'],
+    ['1979', 'Hinault wins the Tour again as the decade closes.'],
+  ] : [
+    ['1970', 'Mogens Frey får Tour-etapen til Mulhouse efter Joaquim Agostinhos hindring i spurten.'],
+    ['1971', 'Luis Ocaña tager den gule trøje fra Merckx, men styrter ud i Pyrenæerne.'],
+    ['1972', 'Eddy Merckx tager sin fjerde Tour-sejr.'],
+    ['1974', 'Herning åbner sin midlertidige træbane for seksdagesløb.'],
+    ['1975', 'Touren slutter for første gang på Champs-Élysées; Thévenet stopper Merckx’ sejrsrække.'],
+    ['1976', 'Lucien Van Impe vinder Tour de France.'],
+    ['1978', 'Bernard Hinault vinder sin første Tour; Shimano introducerer 600 EX Arabesque.'],
+    ['1979', 'Hinault vinder Touren igen ved årtiets afslutning.'],
+  ];
+  periodThemeCopy = en ? {
+    'loeb-og-store-oejeblikke': 'Merckx’s dominance, Ocaña’s lost lead, Thévenet’s 1975 victory and Hinault’s arrival made the decade a transition between two commanding champions.',
+    ryttere: 'Merckx, Ocaña, Thévenet, De Vlaeminck and Hinault represented different strengths, while Mogens Frey and Ole Ritter gave Danish spectators their own points of entry.',
+    teknik: 'Fine steel frames, tubular tyres, toe clips and friction levers remained standard. Japanese makers improved their position, and drillium showed how far the pursuit of low weight could go.',
+    'kost-traening-og-videnskab': 'Steak and rice still appeared at breakfast, while musettes carried sandwiches, fruit, sugar and tarts. Practice rested largely on team experience rather than precise carbohydrate targets.',
+    cykelkultur: 'Television, six-day racing in Herning and the new Champs-Élysées finish gave professional cycling recognisable stages beyond the open road.',
+    'samfund-og-tidsaand': 'Sponsors became more visible, team roles grew clearer and riders occasionally acted collectively over working conditions and punishing transfers.',
+    'menneskene-bag': 'Soigneurs prepared bottles, food, clothing and massage, while mechanics managed tubular tyres, wheels and friction shifting. Their work made the visible race possible.',
+  } : {
+    'loeb-og-store-oejeblikke': 'Merckx’ dominans, Ocañas tabte føring, Thévenets sejr i 1975 og Hinaults ankomst gjorde årtiet til en overgang mellem to dominerende mestre.',
+    ryttere: 'Merckx, Ocaña, Thévenet, De Vlaeminck og Hinault viste forskellige styrker, mens Mogens Frey og Ole Ritter gav danske tilskuere deres egne indgange til perioden.',
+    teknik: 'Fine stålstel, ringdæk, tåclips og friktionsgreb var fortsat normen. Japanske producenter rykkede frem, og drillium viste, hvor langt vægtjagten kunne gå.',
+    'kost-traening-og-videnskab': 'Bøf og ris stod stadig på morgenbordet, mens musetten kunne rumme sandwich, frugt, sukker og tærter. Praksis byggede i høj grad på holdets erfaring frem for præcise kulhydratmål.',
+    cykelkultur: 'Fjernsynet, seksdagesløbet i Herning og den nye afslutning på Champs-Élysées gav professionel cykling genkendelige scener uden for den åbne landevej.',
+    'samfund-og-tidsaand': 'Sponsorerne blev mere synlige, holdrollerne tydeligere, og rytterne optrådte enkelte gange samlet i konflikter om arbejdsforhold og hårde transfers.',
+    'menneskene-bag': 'Soigneurer gjorde flasker, mad, tøj og massage klar, mens mekanikerne håndterede ringdæk, hjul og friktionsgear. Deres arbejde gjorde det synlige løb muligt.',
+  };
+}
 const decadeName = en
-  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1950-1959' ? 'The 1950s' : period === '1960-1969' ? 'The 1960s' : 'The 1990s')
-  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1950-1959' ? '1950’erne' : period === '1960-1969' ? '1960’erne' : '1990’erne');
+  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1950-1959' ? 'The 1950s' : period === '1960-1969' ? 'The 1960s' : period === '1970-1979' ? 'The 1970s' : 'The 1990s')
+  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1950-1959' ? '1950’erne' : period === '1960-1969' ? '1960’erne' : period === '1970-1979' ? '1970’erne' : '1990’erne');
 ---
 <section class="period-model" aria-labelledby="period-model-title">
   <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? `${decadeName} in three views` : `${decadeName} i tre bokse`}</h2></header>

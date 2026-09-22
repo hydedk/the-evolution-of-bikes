@@ -23,6 +23,7 @@ import robic1947Image from '../assets/stories/jean-robic-tour-1947/jean-robic-19
 import walkowiakContextImage from '../assets/stories/walkowiak-tour-1956/tour-feed-zone-1958.jpg';
 import charlyGaulImage from '../assets/stories/charly-gaul-bondone-1956/charly-gaul-tour-1958.jpg';
 import tourAmsterdamImage from '../assets/stories/tour-amsterdam-1954/tour-netherlands-1954.jpg';
+import soigneur1970sImage from '../assets/stories/soigneur-1970s/molteni-tour-1971.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -78,12 +79,14 @@ const storyTracks: Record<string, StoryTrack> = {
   'charly-gaul-monte-bondone-1956': 'race',
   'tour-start-amsterdam-1954': 'history',
   'fausto-coppi-la-bomba': 'people',
+  'soigneuren-og-maden-i-1970erne': 'people',
 };
 
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'soigneuren-og-maden-i-1970erne', type: 'historie', year: '1970’erne', title: 'Bøf klokken fem og kaffe med cognac', text: 'Før geler og præcise kulhydratplaner pakkede soigneuren sandwich, frugt og tærter, fyldte dunkene og forsøgte at holde rytterne spisende gennem en lang arbejdsdag.', image: soigneur1970sImage, periods: ['1970-1979'], topics: ['soigneur', 'forplejning', 'musette', 'kost', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },
   { slug: 'circuit-de-france-1942', type: 'historie', year: '1942', title: 'Touren, besættelsen gerne ville have', text: 'Circuit de France skulle ligne en national genkomst. Seks etaper viste i stedet, hvor vanskeligt et stort cykelløb var under besættelsen.', image: 'images/periods/1940-1949/efterkrigsfelt-illustration.jpg', periods: ['1940-1949'], topics: ['circuit-de-france', 'besættelsen', 'frankrig', 'løbsorganisation'], relatedBikes: [], relatedComponents: [] },
   { slug: 'gino-bartali-kurer-under-krigen', type: 'historie', year: '1943–1944', title: 'Bartalis træningsture havde et andet formål', text: 'Gino Bartali brugte sin kendte træningsrutine som dække, mens han bragte dokumenter mellem mennesker i et italiensk redningsnetværk.', image: bartaliCourierImage, periods: ['1940-1949'], topics: ['gino-bartali', 'anden-verdenskrig', 'modstand', 'italien'], relatedBikes: ['stella-veneta'], relatedComponents: [] },
   { slug: 'fausto-coppi-fra-krigsfange-til-comeback', type: 'historie', year: '1943–1949', title: 'Fra krigsfange til Giro–Tour-vinder', text: 'Fausto Coppi blev taget til fange i Nordafrika. Seks år senere blev han den første til at vinde Giroen og Touren samme år.', image: coppiPowImage, periods: ['1940-1949'], topics: ['fausto-coppi', 'anden-verdenskrig', 'giro-ditalia', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },

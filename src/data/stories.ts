@@ -24,6 +24,10 @@ import walkowiakContextImage from '../assets/stories/walkowiak-tour-1956/tour-fe
 import charlyGaulImage from '../assets/stories/charly-gaul-bondone-1956/charly-gaul-tour-1958.jpg';
 import tourAmsterdamImage from '../assets/stories/tour-amsterdam-1954/tour-netherlands-1954.jpg';
 import soigneur1970sImage from '../assets/stories/soigneur-1970s/molteni-tour-1971.jpg';
+import moserHour1984Image from '../assets/stories/moser-hour-1984/moser-hour-1984-illustration.png';
+import hinaultLook1985Image from '../assets/stories/look-pedal-1985/bernard-hinault-1982.jpg';
+import gavia1988Image from '../assets/stories/gavia-1988/gavia-1988-illustration.png';
+import lemond1989Image from '../assets/stories/lemond-fignon-1989/greg-lemond-final-tt-1989.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -80,12 +84,20 @@ const storyTracks: Record<string, StoryTrack> = {
   'tour-start-amsterdam-1954': 'history',
   'fausto-coppi-la-bomba': 'people',
   'soigneuren-og-maden-i-1970erne': 'people',
+  'moser-timerekord-1984': 'mechanics',
+  'look-klikpedal-hinault-1985': 'mechanics',
+  'gavia-sneetapen-1988': 'race',
+  'lemond-fignon-otte-sekunder-1989': 'race',
 };
 
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'moser-timerekord-1984', type: 'historie', year: '1984', title: 'Da Moser kørte 51,151 kilometer på en time', text: 'I Mexico City gjorde Francesco Moser aerodynamik, skivehjul og en ny kørestilling synlige på stopuret.', image: moserHour1984Image, periods: ['1980-1989'], topics: ['francesco-moser', 'timerekord', 'aerodynamik', 'skivehjul', 'banecykling'], relatedBikes: ['asmussen-super-prestige'], relatedComponents: [] },
+  { slug: 'look-klikpedal-hinault-1985', type: 'historie', year: '1984–1985', title: 'Da tåremmen blev afløst af et klik', text: 'LOOK førte skibindingens lås over på racercyklen. Bernard Hinaults femte Tour-sejr gjorde klikpedalen synlig for hele feltet.', image: hinaultLook1985Image, periods: ['1980-1989'], topics: ['look', 'klikpedaler', 'bernard-hinault', 'tour-de-france', 'udstyr'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'gavia-sneetapen-1988', type: 'historie', year: '1988', title: 'Da sommerfeltet kørte ind i sneen', text: 'Regnen blev til sne på Passo di Gavia. Johan van der Velde nåede toppen først, Erik Breukink vandt etapen, og Andy Hampsten tog den lyserøde trøje.', image: gavia1988Image, periods: ['1980-1989'], topics: ['giro-ditalia', 'passo-gavia', 'andy-hampsten', 'erik-breukink', 'sne'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'lemond-fignon-otte-sekunder-1989', type: 'historie', year: '1989', title: 'Otte sekunder på Champs-Élysées', text: 'Greg LeMond begyndte den sidste enkeltstart 50 sekunder efter Laurent Fignon og sluttede Touren otte sekunder foran.', image: lemond1989Image, periods: ['1980-1989'], topics: ['greg-lemond', 'laurent-fignon', 'tour-de-france', 'enkeltstart', 'aerodynamik'], relatedBikes: ['asmussen-super-prestige'], relatedComponents: [] },
   { slug: 'soigneuren-og-maden-i-1970erne', type: 'historie', year: '1970’erne', title: 'Bøf klokken fem og kaffe med cognac', text: 'Før geler og præcise kulhydratplaner pakkede soigneuren sandwich, frugt og tærter, fyldte dunkene og forsøgte at holde rytterne spisende gennem en lang arbejdsdag.', image: soigneur1970sImage, periods: ['1970-1979'], topics: ['soigneur', 'forplejning', 'musette', 'kost', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },
   { slug: 'circuit-de-france-1942', type: 'historie', year: '1942', title: 'Touren, besættelsen gerne ville have', text: 'Circuit de France skulle ligne en national genkomst. Seks etaper viste i stedet, hvor vanskeligt et stort cykelløb var under besættelsen.', image: 'images/periods/1940-1949/efterkrigsfelt-illustration.jpg', periods: ['1940-1949'], topics: ['circuit-de-france', 'besættelsen', 'frankrig', 'løbsorganisation'], relatedBikes: [], relatedComponents: [] },
   { slug: 'gino-bartali-kurer-under-krigen', type: 'historie', year: '1943–1944', title: 'Bartalis træningsture havde et andet formål', text: 'Gino Bartali brugte sin kendte træningsrutine som dække, mens han bragte dokumenter mellem mennesker i et italiensk redningsnetværk.', image: bartaliCourierImage, periods: ['1940-1949'], topics: ['gino-bartali', 'anden-verdenskrig', 'modstand', 'italien'], relatedBikes: ['stella-veneta'], relatedComponents: [] },

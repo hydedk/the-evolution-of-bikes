@@ -2,6 +2,10 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'moser-timerekord-1984': ['When Moser rode 51.151 kilometres in an hour', 'In Mexico City, Francesco Moser made aerodynamics, disc wheels and a new riding position visible on the stopwatch.'],
+  'look-klikpedal-hinault-1985': ['When the toe strap gave way to a click', 'LOOK transferred the ski binding’s lock to the racing bicycle. Bernard Hinault’s fifth Tour victory made the clipless pedal visible to the whole peloton.'],
+  'gavia-sneetapen-1988': ['When the summer peloton rode into snow', 'Rain turned to snow on the Passo di Gavia. Johan van der Velde reached the summit first, Erik Breukink won the stage and Andy Hampsten took pink.'],
+  'lemond-fignon-otte-sekunder-1989': ['Eight seconds on the Champs-Élysées', 'Greg LeMond began the final time trial 50 seconds behind Laurent Fignon and finished the Tour eight seconds ahead.'],
   'soigneuren-og-maden-i-1970erne': ['Steak at five and coffee with cognac', 'Before gels and precise carbohydrate plans, the soigneur packed sandwiches, fruit and tarts, filled the bottles and tried to keep riders eating through a long working day.'],
   'circuit-de-france-1942': ['The Tour the occupation wanted', 'The six-stage Circuit de France was meant to resemble a national revival. Instead, it showed how difficult a major bicycle race was under occupation.'],
   'gino-bartali-kurer-under-krigen': ["Bartali's training rides had another purpose", 'During the German occupation of Italy, Gino Bartali used the familiar sight of a professional rider in training as cover while carrying material for a rescue network.'],

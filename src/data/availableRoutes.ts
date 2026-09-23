@@ -18,6 +18,10 @@ const dynamicEnglishStorySlugs = [
   'tour-start-amsterdam-1954',
   'fausto-coppi-la-bomba',
   'soigneuren-og-maden-i-1970erne',
+  'moser-timerekord-1984',
+  'look-klikpedal-hinault-1985',
+  'gavia-sneetapen-1988',
+  'lemond-fignon-otte-sekunder-1989',
 ];
 
 export const englishStorySlugs = new Set([

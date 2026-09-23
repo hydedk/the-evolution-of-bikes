@@ -339,9 +339,42 @@ if (period === '1970-1979') {
     'menneskene-bag': 'Soigneurer gjorde flasker, mad, tøj og massage klar, mens mekanikerne håndterede ringdæk, hjul og friktionsgear. Deres arbejde gjorde det synlige løb muligt.',
   };
 }
+if (period === '1980-1989') {
+  boxes = en ? [
+    ['The decade’s main development','Aerodynamics, indexed shifting and clipless pedals turned the complete rider–bicycle system into an object of development.'],
+    ['What defined the period','Steel still dominated, but television, international sponsors and laboratory methods changed professional racing around it.'],
+    ['Three changes to cycling','Moser made airflow visible. LOOK changed the rider’s connection to the bicycle. LeMond showed that seconds could be designed as well as ridden.'],
+  ] : [
+    ['Årtiets vigtigste udvikling','Aerodynamik, indeksgear og klikpedaler gjorde hele systemet af rytter og cykel til genstand for udvikling.'],
+    ['Det kendetegnede perioden','Stål dominerede stadig, men fjernsyn, internationale sponsorer og laboratoriemetoder ændrede den professionelle sport omkring cyklen.'],
+    ['Tre ting, der ændrede cyklingen','Moser gjorde luftmodstanden synlig. LOOK ændrede rytterens forbindelse til cyklen. LeMond viste, at sekunder kunne konstrueres såvel som køres.'],
+  ];
+  timeline = en ? [
+    ['1980','Hinault wins the Giro; steel and friction shifting still define the professional racing bicycle.'],['1982','Wireless heart-rate monitors bring training data onto the road.'],['1983','Kim Andersen becomes the first Dane to wear the Tour’s yellow jersey.'],['1984','Moser sets two hour records in Mexico City; LOOK introduces its clipless road pedal.'],['1985','Hinault wins a fifth Tour using LOOK pedals.'],['1986','Greg LeMond becomes the Tour’s first American winner.'],['1987','An official car runs over Jesper Skibby’s bicycle on the Koppenberg.'],['1988','Snow turns the Giro stage over the Gavia into a fight against cold.'],['1989','LeMond overturns 50 seconds and wins the Tour by eight.'],
+  ] : [
+    ['1980','Hinault vinder Giroen; stål og friktionsgear præger fortsat den professionelle racer.'],['1982','Trådløse pulsmålere fører træningsdata ud på landevejen.'],['1983','Kim Andersen bliver den første dansker i Tourens gule trøje.'],['1984','Moser sætter to timerekorder i Mexico City; LOOK introducerer sin klikpedal til landevej.'],['1985','Hinault vinder sin femte Tour på LOOK-pedaler.'],['1986','Greg LeMond bliver Tourens første amerikanske vinder.'],['1987','En officiel bil kører over Jesper Skibbys cykel på Koppenberg.'],['1988','Sne gør Giro-etapen over Gavia til en kamp mod kulden.'],['1989','LeMond henter 50 sekunder og vinder Touren med otte.'],
+  ];
+  periodThemeCopy = en ? {
+    'loeb-og-store-oejeblikke':'The Gavia snow stage, Skibby on the Koppenberg and the final time trial in Paris made weather, race traffic and seconds into unforgettable drama.',
+    ryttere:'Hinault, Moser, LeMond, Fignon and Hampsten represented different routes to the top, while Danish riders became increasingly visible in international racing.',
+    teknik:'Disc wheels, aero positions, clipless pedals and indexed gears appeared around steel frames. Some experiments vanished; their questions remained.',
+    'kost-traening-og-videnskab':'Heart-rate monitors and physiological testing moved the laboratory closer to daily training. Pasta and carbohydrate drinks replaced part of the older, heavier food culture.',
+    cykelkultur:'Lycra, bright colours and global sponsor names changed the peloton’s appearance. Live television made both equipment and personalities more valuable.',
+    'samfund-og-tidsaand':'American teams and riders challenged European habits, while commercial television carried professional cycling to a wider international market.',
+    'menneskene-bag':'Doctors, aerodynamicists, mechanics and soigneurs gained influence. Their work ranged from legitimate innovation and daily care to the decade’s medical grey zones.',
+  } : {
+    'loeb-og-store-oejeblikke':'Sneetapen over Gavia, Skibby på Koppenberg og den sidste enkeltstart i Paris gjorde vejr, løbstrafik og sekunder til uforglemmeligt drama.',
+    ryttere:'Hinault, Moser, LeMond, Fignon og Hampsten viste forskellige veje til toppen, mens danske ryttere blev stadig mere synlige internationalt.',
+    teknik:'Skivehjul, aeropositioner, klikpedaler og indeksgear dukkede op omkring stålstellet. Nogle forsøg forsvandt; spørgsmålene blev.',
+    'kost-traening-og-videnskab':'Pulsmålere og fysiologiske test flyttede laboratoriet tættere på den daglige træning. Pasta og kulhydratdrikke afløste dele af den ældre, tunge madkultur.',
+    cykelkultur:'Lycra, stærke farver og globale sponsornavne ændrede feltets udseende. Direkte tv gjorde både udstyr og personligheder mere værdifulde.',
+    'samfund-og-tidsaand':'Amerikanske hold og ryttere udfordrede europæiske vaner, mens kommercielt fjernsyn førte professionel cykling ud på et bredere internationalt marked.',
+    'menneskene-bag':'Læger, aerodynamikere, mekanikere og soigneurer fik større indflydelse. Arbejdet spændte fra reel udvikling og daglig omsorg til årtiets medicinske gråzoner.',
+  };
+}
 const decadeName = en
-  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1950-1959' ? 'The 1950s' : period === '1960-1969' ? 'The 1960s' : period === '1970-1979' ? 'The 1970s' : 'The 1990s')
-  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1950-1959' ? '1950’erne' : period === '1960-1969' ? '1960’erne' : period === '1970-1979' ? '1970’erne' : '1990’erne');
+  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1950-1959' ? 'The 1950s' : period === '1960-1969' ? 'The 1960s' : period === '1970-1979' ? 'The 1970s' : period === '1980-1989' ? 'The 1980s' : 'The 1990s')
+  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1950-1959' ? '1950’erne' : period === '1960-1969' ? '1960’erne' : period === '1970-1979' ? '1970’erne' : period === '1980-1989' ? '1980’erne' : '1990’erne');
 ---
 <section class="period-model" aria-labelledby="period-model-title">
   <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? `${decadeName} in three views` : `${decadeName} i tre bokse`}</h2></header>

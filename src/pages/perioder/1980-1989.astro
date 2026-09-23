@@ -1,4 +1,5 @@
 ---
+import PeriodStructure from '../../components/PeriodStructure.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const facts = [
   ['1983', 'Kim Andersen bliver første dansker i gult'],
@@ -17,6 +18,7 @@ const facts = [
 
   <section class="wildwest-lead decade1940-lead"><p class="section-label">Et greb på skrårøret</p><p>En rytter kunne begynde årtiet med tåremme og friktionsgear og slutte det med klikpedaler, indeksgear og et aerostyr. Forandringen kom del for del, ofte midt i et løb.</p></section>
   <section class="era-facts decade1970-facts" aria-label="Nedslag fra 1980’ernes cykelsport">{facts.map(([number,label]) => <div><strong>{number}</strong><span>{label}</span></div>)}</section>
+  <PeriodStructure period="1980-1989" />
 
   <section class="wildwest-copy"><div><p class="section-label">Nye magtforhold</p><h2>Fra Hinault til LeMond</h2></div><div><p>Bernard Hinault satte sig på første halvdel af årtiet. Han vandt Tour de France i 1981, 1982 og 1985 og Giro d’Italia i 1980, 1982 og 1985. Han kørte som feltets patron og blandede sig også uden for resultatlisten. Under Paris–Nice i 1984 endte et sammenstød med demonstranter i håndgemæng. Det er en bedre historie end endnu en opremsning af sejre.</p><p>La Vie Claire samlede siden Hinault og Greg LeMond på samme hold. I 1986 vandt LeMond Touren foran Hinault og blev den første amerikanske vinder. Tre år senere sluttede han årtiet med Tourens mindste sejrsmargin: otte sekunder foran Laurent Fignon.</p><p>Fignon begyndte den afsluttende enkeltstart i 1989 med 50 sekunders forspring. LeMond brugte aerostyr og en mere samlet aerodynamisk position. Styret forklarer ikke alene resultatet, men det gjorde den tekniske forskel synlig helt ind på Champs-Élysées.</p></div></section>
 

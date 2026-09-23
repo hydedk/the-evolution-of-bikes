@@ -22,6 +22,10 @@ const dynamicEnglishStorySlugs = [
   'look-klikpedal-hinault-1985',
   'gavia-sneetapen-1988',
   'lemond-fignon-otte-sekunder-1989',
+  'boonen-paris-roubaix-2009',
+  'operacion-puerto-2006',
+  'bjarne-riis-team-csc',
+  'carbon-og-68-kilo',
 ];
 
 export const englishStorySlugs = new Set([

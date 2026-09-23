@@ -88,12 +88,20 @@ const storyTracks: Record<string, StoryTrack> = {
   'look-klikpedal-hinault-1985': 'mechanics',
   'gavia-sneetapen-1988': 'race',
   'lemond-fignon-otte-sekunder-1989': 'race',
+  'boonen-paris-roubaix-2009': 'race',
+  'operacion-puerto-2006': 'people',
+  'bjarne-riis-team-csc': 'people',
+  'carbon-og-68-kilo': 'mechanics',
 };
 
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'boonen-paris-roubaix-2009', type: 'historie', year: '2009', title: 'Da Roubaix-favoritterne forsvandt én efter én', text: 'Flecha styrtede på Carrefour de l’Arbre, Hushovd ramte barriererne, og Tom Boonen kørte alene ind på velodromen til sin tredje sejr.', image: 'images/stories/boonen-roubaix-2009/boonen-roubaix-2009.jpg', periods: ['2000-2009'], topics: ['tom-boonen', 'paris-roubaix', 'carrefour-de-larbre', 'thor-hushovd', 'juan-antonio-flecha'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'operacion-puerto-2006', type: 'historie', year: '2006', title: 'Blodposerne, der ramte Touren før starten', text: 'Operación Puerto førte fra en klinik i Madrid til Tour-starten i Strasbourg, hvor Ivan Basso og Jan Ullrich aldrig kom til start.', image: 'images/periods/2000-2009/ullrich-gaillac.webp', periods: ['2000-2009'], topics: ['operacion-puerto', 'doping', 'jan-ullrich', 'ivan-basso', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'bjarne-riis-team-csc', type: 'historie', year: '2001–2009', title: 'Da Bjarne Riis byggede Team CSC', text: 'Et presset dansk hold blev gjort til en international organisation med klare roller, træningsdata og en holdånd, der også blev prøvet langt fra landevejen.', image: 'images/periods/2000-2009/sastre-2008.webp', periods: ['2000-2009'], topics: ['bjarne-riis', 'team-csc', 'carlos-sastre', 'holdledelse', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'carbon-og-68-kilo', type: 'historie', year: '2000–2009', title: 'Da carboncyklen ramte vægtgrænsen', text: 'Carbon gav rammebyggerne nye former, mens UCI’s minimum på 6,8 kilo gjorde ballast og gramjagt til en del af mekanikernes arbejde.', image: 'images/periods/2000-2009/allos-2000.webp', periods: ['2000-2009'], topics: ['carbon', 'uci', 'minimumsvaegt', 'cykelteknik', 'mekanikere'], relatedBikes: ['bianchi-via-nirone'], relatedComponents: [] },
   { slug: 'moser-timerekord-1984', type: 'historie', year: '1984', title: 'Da Moser kørte 51,151 kilometer på en time', text: 'I Mexico City gjorde Francesco Moser aerodynamik, skivehjul og en ny kørestilling synlige på stopuret.', image: moserHour1984Image, periods: ['1980-1989'], topics: ['francesco-moser', 'timerekord', 'aerodynamik', 'skivehjul', 'banecykling'], relatedBikes: ['asmussen-super-prestige'], relatedComponents: [] },
   { slug: 'look-klikpedal-hinault-1985', type: 'historie', year: '1984–1985', title: 'Da tåremmen blev afløst af et klik', text: 'LOOK førte skibindingens lås over på racercyklen. Bernard Hinaults femte Tour-sejr gjorde klikpedalen synlig for hele feltet.', image: hinaultLook1985Image, periods: ['1980-1989'], topics: ['look', 'klikpedaler', 'bernard-hinault', 'tour-de-france', 'udstyr'], relatedBikes: [], relatedComponents: [] },
   { slug: 'gavia-sneetapen-1988', type: 'historie', year: '1988', title: 'Da sommerfeltet kørte ind i sneen', text: 'Regnen blev til sne på Passo di Gavia. Johan van der Velde nåede toppen først, Erik Breukink vandt etapen, og Andy Hampsten tog den lyserøde trøje.', image: gavia1988Image, periods: ['1980-1989'], topics: ['giro-ditalia', 'passo-gavia', 'andy-hampsten', 'erik-breukink', 'sne'], relatedBikes: [], relatedComponents: [] },

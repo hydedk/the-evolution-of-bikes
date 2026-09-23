@@ -2,6 +2,10 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'boonen-paris-roubaix-2009': ['When the Roubaix favourites disappeared one by one', 'Flecha crashed at Carrefour de l’Arbre, Hushovd hit the barriers and Tom Boonen rode alone into the velodrome for his third victory.'],
+  'operacion-puerto-2006': ['The blood bags that reached the Tour before the start', 'Operación Puerto led from a Madrid clinic to the Tour start in Strasbourg, where Ivan Basso and Jan Ullrich never took the line.'],
+  'bjarne-riis-team-csc': ['When Bjarne Riis built Team CSC', 'A struggling Danish team became an international organisation built around clear roles, training data and a team spirit tested far from the road.'],
+  'carbon-og-68-kilo': ['When the carbon bicycle reached the weight limit', 'Carbon gave designers new shapes while the UCI’s 6.8-kilogram minimum made ballast and gram counting part of the mechanics’ work.'],
   'moser-timerekord-1984': ['When Moser rode 51.151 kilometres in an hour', 'In Mexico City, Francesco Moser made aerodynamics, disc wheels and a new riding position visible on the stopwatch.'],
   'look-klikpedal-hinault-1985': ['When the toe strap gave way to a click', 'LOOK transferred the ski binding’s lock to the racing bicycle. Bernard Hinault’s fifth Tour victory made the clipless pedal visible to the whole peloton.'],
   'gavia-sneetapen-1988': ['When the summer peloton rode into snow', 'Rain turned to snow on the Passo di Gavia. Johan van der Velde reached the summit first, Erik Breukink won the stage and Andy Hampsten took pink.'],

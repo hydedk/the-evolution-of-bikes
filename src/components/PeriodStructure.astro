@@ -372,9 +372,42 @@ if (period === '1980-1989') {
     'menneskene-bag':'Læger, aerodynamikere, mekanikere og soigneurer fik større indflydelse. Arbejdet spændte fra reel udvikling og daglig omsorg til årtiets medicinske gråzoner.',
   };
 }
+if (period === '2000-2009') {
+  boxes = en ? [
+    ['The decade’s main development','Carbon frames, power meters and specialist equipment made the racing bicycle part of an increasingly measured system.'],
+    ['What defined the period','Meticulous preparation, global television and major doping investigations existed side by side.'],
+    ['Three changes to cycling','Carbon became the dominant frame material. Power data moved into daily training. Electronic shifting reached professional racing.'],
+  ] : [
+    ['Årtiets vigtigste udvikling','Carbonstel, wattmålere og specialiseret udstyr gjorde racercyklen til en del af et stadig mere målt system.'],
+    ['Det kendetegnede perioden','Minutiøs forberedelse, global tv-dækning og store dopingundersøgelser eksisterede side om side.'],
+    ['Tre ting, der ændrede cyklingen','Carbon blev det dominerende stelmateriale. Wattdata rykkede ind i den daglige træning. Elektroniske gear nåede professionel cykling.'],
+  ];
+  timeline = en ? [
+    ['2000','The peloton enters the decade with aluminium, titanium and carbon still competing at the top level.'],['2001','Armstrong’s acceleration on Alpe d’Huez becomes one of the era’s defining television images.'],['2003','Beloki crashes near Gap; Armstrong escapes across a field.'],['2004','Paolo Bettini wins Olympic road gold in Athens.'],['2006','Operación Puerto removes leading riders before the Tour; Landis later loses the overall victory.'],['2007','Rabobank removes Michael Rasmussen from the Tour while he leads the race.'],['2008','Carlos Sastre wins the Tour after attacking on Alpe d’Huez.'],['2009','Boonen wins a third Paris–Roubaix; Shimano introduces Dura-Ace Di2.'],
+  ] : [
+    ['2000','Feltet går ind i årtiet med aluminium, titanium og carbon side om side på topniveau.'],['2001','Armstrongs acceleration på Alpe d’Huez bliver et af periodens mest kendte tv-billeder.'],['2003','Beloki styrter nær Gap; Armstrong undviger gennem en mark.'],['2004','Paolo Bettini vinder olympisk landevejsguld i Athen.'],['2006','Operación Puerto fjerner profiler før Touren; Landis mister senere den samlede sejr.'],['2007','Rabobank tager Michael Rasmussen ud af Touren, mens han fører løbet.'],['2008','Carlos Sastre vinder Touren efter sit angreb på Alpe d’Huez.'],['2009','Boonen vinder sin tredje Paris–Roubaix; Shimano introducerer Dura-Ace Di2.'],
+  ];
+  periodThemeCopy = en ? {
+    'loeb-og-store-oejeblikke':'Boonen on the cobbles, Sastre on Alpe d’Huez and the chaotic Tours of 2006 and 2007 show a decade shaped by both racing and events away from the road.',
+    ryttere:'Armstrong dominated the decade’s public image before his results were annulled. Boonen, Bettini, Cancellara, Contador, Sastre and Rasmussen supplied very different stories around him.',
+    teknik:'Monocoque carbon frames, deep-section wheels, ten-speed groups and electronic shifting changed the professional bicycle. The 6.8-kilogram limit became a design constraint rather than a target.',
+    'kost-traening-og-videnskab':'Power meters, laboratory tests and planned carbohydrate intake made preparation more precise. The same professional structures also formed part of organised doping programmes.',
+    cykelkultur:'Internet forums and live reporting joined television and newspapers. Equipment, training data and controversies could now be discussed while the race was still unfolding.',
+    'samfund-og-tidsaand':'Global sponsors and Asian carbon production changed the industry, while police investigations and legal cases repeatedly moved cycling beyond the sports pages.',
+    'menneskene-bag':'Team managers, doctors, aerodynamicists and mechanics gained influence. Bjarne Riis and Team CSC show how the modern team became an organisation built around planning and specialists.',
+  } : {
+    'loeb-og-store-oejeblikke':'Boonen på brostenene, Sastre på Alpe d’Huez og de kaotiske Tour-løb i 2006 og 2007 viser et årti formet af både cykelløb og begivenheder uden for vejen.',
+    ryttere:'Armstrong dominerede årtiets offentlige billede, før hans resultater blev annulleret. Boonen, Bettini, Cancellara, Contador, Sastre og Rasmussen gav meget forskellige fortællinger omkring ham.',
+    teknik:'Monocoque-carbonstel, højprofilhjul, 10-delte grupper og elektroniske gear ændrede den professionelle cykel. Vægtgrænsen på 6,8 kilo blev en konstruktionsramme frem for et mål.',
+    'kost-traening-og-videnskab':'Wattmålere, laboratorietest og planlagt kulhydratindtag gjorde forberedelsen mere præcis. De samme professionelle strukturer indgik også i organiserede dopingprogrammer.',
+    cykelkultur:'Internetfora og livedækning sluttede sig til fjernsyn og aviser. Udstyr, træningsdata og kontroverser kunne nu diskuteres, mens løbet stadig blev kørt.',
+    'samfund-og-tidsaand':'Globale sponsorer og asiatisk carbonproduktion ændrede industrien, mens politiundersøgelser og retssager gentagne gange flyttede cykelsporten ud over sportssiderne.',
+    'menneskene-bag':'Holdledere, læger, aerodynamikere og mekanikere fik større indflydelse. Bjarne Riis og Team CSC viser, hvordan det moderne hold blev en organisation bygget op omkring planlægning og specialister.',
+  };
+}
 const decadeName = en
-  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1950-1959' ? 'The 1950s' : period === '1960-1969' ? 'The 1960s' : period === '1970-1979' ? 'The 1970s' : period === '1980-1989' ? 'The 1980s' : 'The 1990s')
-  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1950-1959' ? '1950’erne' : period === '1960-1969' ? '1960’erne' : period === '1970-1979' ? '1970’erne' : period === '1980-1989' ? '1980’erne' : '1990’erne');
+  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1950-1959' ? 'The 1950s' : period === '1960-1969' ? 'The 1960s' : period === '1970-1979' ? 'The 1970s' : period === '1980-1989' ? 'The 1980s' : period === '2000-2009' ? 'The 2000s' : 'The 1990s')
+  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1950-1959' ? '1950’erne' : period === '1960-1969' ? '1960’erne' : period === '1970-1979' ? '1970’erne' : period === '1980-1989' ? '1980’erne' : period === '2000-2009' ? '2000’erne' : '1990’erne');
 ---
 <section class="period-model" aria-labelledby="period-model-title">
   <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? `${decadeName} in three views` : `${decadeName} i tre bokse`}</h2></header>

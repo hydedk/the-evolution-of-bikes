@@ -3,6 +3,7 @@ import EnglishHeader from '../../../components/EnglishHeader.astro';
 import EnglishFooter from '../../../components/EnglishFooter.astro';
 const base=import.meta.env.BASE_URL.replace(/\/$/,'');
 const definitions = [
+  ['From the first races to 1899','Cycling’s wild pioneer years','The safety bicycle, pneumatic tyre, newspaper races and velodromes turned cycling into machine, sport and public spectacle.','1800-1899','wild-west/track-racing.webp'],
   ['1900–1920s','Pioneers and endurance','The Tour de France begins, the yellow jersey gets its colour, and riders struggle with roads, darkness and mechanics.','1900-1920','rytter-velodrom.webp'],
   ['1920–1929','Cycle racing’s hard golden age','Enormous Tour stages, primitive mountain roads, reversible rear wheels and riders acting as their own mechanics.','1920-1930','mountain-stop.webp'],
   ['1930–1939','When the racing bicycle became modern','National teams, the publicity caravan, the first Vuelta and gear changes without reversing the rear wheel.','1930-1939','romain-maes-cannes-1935.jpg'],
@@ -15,7 +16,7 @@ const definitions = [
   ['2000–2009','When cycling became a control room','Specialisation, carbon, power measurement and electronic gears met cancelled victories, raids and fading trust.','2000-2009','allos-2000.webp'],
   ['2010–2019','When the computer took over the bicycle','Team Sky, marginal gains, carbon and electronic gears shaped a decade in which even a planned Tour could still end on foot.','2010-2019','wiggins-2012.webp'],
 ];
-const periodCards = definitions.map(([years,title,text,id,image]) => ({ years,title,text,id,image:`${base}/images/periods/${id}/${image}` }));
+const periodCards = definitions.map(([years,title,text,id,image]) => ({ years,title,text,id,image:`${base}/images/periods/${id === '1800-1899' ? '1900-1920' : id}/${image}` }));
 ---
 <!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content="Cycle racing and cycling culture told period by period, with links to the stories from each era."/><title>Periods · The Evolution of Bikes</title><link rel="stylesheet" href={`${base}/styles/global.css`}/></head><body><EnglishHeader current="periods" danishPath="/perioder/"/><main>
 <header class="archive-hero periods-archive-hero"><p class="section-label">The larger, connected history</p><h1>Periods</h1><p>Each chapter gives a chronological view of racing, roads, rules, mechanics and culture.</p></header>

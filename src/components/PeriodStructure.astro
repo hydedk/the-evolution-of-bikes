@@ -32,6 +32,53 @@ let periodThemeCopy = en ? {
   'samfund-og-tidsaand': 'De professionelle hold blev større og mere kommercielle. I 1998 rykkede toldere, politi og retssager ind i Touren og ændrede den offentlige samtale om sporten.',
   'menneskene-bag': 'Læger, soigneurs, mekanikere og holdledere blev en del af stadig mere specialiserede organisationer. Deres arbejde prægede forberedelse, udstyr og restitution, selv om det sjældent stod i resultatlisten.',
 };
+if (period === '1800-1899') {
+  boxes = en ? [
+    ['The period’s main development','The safety bicycle, pneumatic tyre and chain drive turned cycling from an experiment into transport, industry and organised sport.'],
+    ['What defined the period','Road races, track meetings and solo six-day contests tested riders and machines before stable rules, team cars or sports science existed.'],
+    ['Three changes to cycling','Two equal-sized wheels replaced the high wheeler. Pneumatic tyres made distance more practical. Newspapers turned races into public spectacles.'],
+  ] : [
+    ['Periodens vigtigste udvikling','Sikkerhedscyklen, det pneumatiske dæk og kædetrækket gjorde cyklen til transportmiddel, industri og organiseret sport.'],
+    ['Det kendetegnede perioden','Landevejsløb, banestævner og tidlige seksdagesløb prøvede ryttere og maskiner, før faste regler, holdbiler og idrætsvidenskab fandtes.'],
+    ['Tre ting, der ændrede cyklingen','To lige store hjul afløste væltepeteren. Luftdækket gjorde lange distancer mere mulige. Aviserne gjorde løbene til folkelige begivenheder.'],
+  ];
+  timeline = en ? [
+    ['1868','A commonly cited early organised road race is held from Paris to Rouen.'],
+    ['1885','The Rover safety bicycle establishes the chain-driven layout with two similarly sized wheels.'],
+    ['1888','John Boyd Dunlop patents a practical pneumatic tyre.'],
+    ['1891','Charles Terront wins the first Paris–Brest–Paris after 1,200 kilometres.'],
+    ['1892','The first Liège–Bastogne–Liège is held for amateurs.'],
+    ['1893','The first documented six-day solo race is held at Madison Square Garden.'],
+    ['1896','Paris–Roubaix is held for the first time.'],
+    ['1899','Major Taylor becomes world sprint champion in Montreal.'],
+  ] : [
+    ['1868','Et ofte nævnt tidligt organiseret landevejsløb køres fra Paris til Rouen.'],
+    ['1885','Rover-sikkerhedscyklen fastlægger kædetræk og to omtrent lige store hjul.'],
+    ['1888','John Boyd Dunlop patenterer et praktisk pneumatisk dæk.'],
+    ['1891','Charles Terront vinder det første Paris–Brest–Paris efter 1.200 kilometer.'],
+    ['1892','Det første Liège–Bastogne–Liège køres for amatører.'],
+    ['1893','Det første veldokumenterede seksdages sololøb køres i Madison Square Garden.'],
+    ['1896','Paris–Roubaix køres for første gang.'],
+    ['1899','Major Taylor bliver verdensmester i sprint i Montréal.'],
+  ];
+  periodThemeCopy = en ? {
+    'loeb-og-store-oejeblikke':'Paris–Brest–Paris, Liège–Bastogne–Liège and Paris–Roubaix made distance, poor roads and mechanical survival part of the competition.',
+    ryttere:'Charles Terront, Major Taylor and the six-day specialists belonged to a generation that had to invent both the athletic role and its working methods.',
+    teknik:'The safety bicycle, chain drive and pneumatic tyre created the basic machine. Brakes, freewheels and practical gearing were still unsettled questions.',
+    'kost-traening-og-videnskab':'Food, stimulants and recovery followed experience, trade custom and rumour. Modern distinctions between nutrition, medicine and doping did not yet exist.',
+    cykelkultur:'The bicycle became transport, fashionable possession and spectator sport. Newspapers promoted races while velodromes brought crowds close to the riders.',
+    'samfund-og-tidsaand':'Industrial production expanded access, but class, gender and racism shaped who could compete and under what conditions.',
+    'menneskene-bag':'Promoters, newspaper editors, inventors, pacers and mechanics created the courses, machines and spectacles around the rider.',
+  } : {
+    'loeb-og-store-oejeblikke':'Paris–Brest–Paris, Liège–Bastogne–Liège og Paris–Roubaix gjorde afstand, dårlige veje og mekanisk overlevelse til en del af konkurrencen.',
+    ryttere:'Charles Terront, Major Taylor og seksdagesrytterne tilhørte en generation, der selv måtte finde både atletens rolle og arbejdsmetoder.',
+    teknik:'Sikkerhedscyklen, kædetrækket og luftdækket skabte grundformen. Bremser, friløb og praktiske gear var endnu åbne spørgsmål.',
+    'kost-traening-og-videnskab':'Mad, stimulanser og restitution byggede på erfaring, branchevaner og rygter. Nutidens skel mellem ernæring, medicin og doping fandtes ikke.',
+    cykelkultur:'Cyklen blev transportmiddel, statussymbol og publikumssport. Aviserne skabte løb, mens velodromerne bragte publikum tæt på rytterne.',
+    'samfund-og-tidsaand':'Industrialiseringen gjorde cyklen mere tilgængelig, men klasse, køn og racisme prægede, hvem der kunne deltage og på hvilke vilkår.',
+    'menneskene-bag':'Arrangører, avisredaktører, opfindere, pacere og mekanikere skabte ruterne, maskinerne og forestillingen omkring rytteren.',
+  };
+}
 if (period === '1900-1920') {
   boxes = en ? [
     ['The period’s main development', 'Road racing became a mass spectacle, and the Tour de France established the stage race as a recurring national story.'],
@@ -439,8 +486,8 @@ if (period === '2010-2019') {
   };
 }
 const decadeName = en
-  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1950-1959' ? 'The 1950s' : period === '1960-1969' ? 'The 1960s' : period === '1970-1979' ? 'The 1970s' : period === '1980-1989' ? 'The 1980s' : period === '2000-2009' ? 'The 2000s' : period === '2010-2019' ? 'The 2010s' : 'The 1990s')
-  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1950-1959' ? '1950’erne' : period === '1960-1969' ? '1960’erne' : period === '1970-1979' ? '1970’erne' : period === '1980-1989' ? '1980’erne' : period === '2000-2009' ? '2000’erne' : period === '2010-2019' ? '2010’erne' : '1990’erne');
+  ? (period === '1800-1899' ? 'From the first races to 1899' : period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1950-1959' ? 'The 1950s' : period === '1960-1969' ? 'The 1960s' : period === '1970-1979' ? 'The 1970s' : period === '1980-1989' ? 'The 1980s' : period === '2000-2009' ? 'The 2000s' : period === '2010-2019' ? 'The 2010s' : 'The 1990s')
+  : (period === '1800-1899' ? 'Fra de første løb – 1899' : period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1950-1959' ? '1950’erne' : period === '1960-1969' ? '1960’erne' : period === '1970-1979' ? '1970’erne' : period === '1980-1989' ? '1980’erne' : period === '2000-2009' ? '2000’erne' : period === '2010-2019' ? '2010’erne' : '1990’erne');
 ---
 <section class="period-model" aria-labelledby="period-model-title">
   <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? `${decadeName} in three views` : `${decadeName} i tre bokse`}</h2></header>

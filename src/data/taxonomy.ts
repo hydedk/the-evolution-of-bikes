@@ -37,6 +37,7 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'teddy-hale-seksdagesloeb-1896': { period: '1800-1899', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'kost-traening-og-videnskab'] },
   'albert-champion-roubaix-til-taendroer': { period: '1800-1899', primary: 'menneskene-bag', secondary: ['loeb-og-store-oejeblikke', 'teknik'] },
   'soigneuren-og-maden-i-1970erne': { period: '1970-1979', primary: 'kost-traening-og-videnskab', secondary: ['menneskene-bag', 'cykelkultur'] },
   'stifinderen-der-sendte-touren-over-tourmalet': { period: '1900-1920', primary: 'menneskene-bag', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },

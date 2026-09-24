@@ -2714,5 +2714,19 @@
     "blokeret_af": "null",
     "kanonisk_url": "https://teob.dk/historier/albert-champion-roubaix-til-taendroer/",
     "fil": "hist-000194-albert-champion.md"
+  },
+  {
+    "id": "hist-000195",
+    "titel": "Teddy Hale og de 142 timer i New York",
+    "status": "publiceret",
+    "prioritet": "høj",
+    "periode": "per-1800-1899",
+    "aar": "1896-1899",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "middel",
+    "naeste_handling": "Ingen – publiceret på dansk og engelsk.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/teddy-hale-seksdagesloeb-1896/",
+    "fil": "hist-000195-teddy-hale-seksdagesloeb-1896.md"
   }
 ]

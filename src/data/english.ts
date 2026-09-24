@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'albert-champion-roubaix-til-taendroer': ['From Paris–Roubaix to spark plugs', 'Albert Champion won Paris–Roubaix at twenty. His work and a dispute over his name later produced two American spark-plug brands: Champion and AC.'],
   'froome-finestre-2018': ['When Froome attacked with 80 kilometres remaining', 'On the Colle delle Finestre, Chris Froome rode away alone and overturned a Giro he began that day 3 minutes 22 seconds from the lead.'],
   'tignes-etapen-stoppet-2019': ['When a Tour stage ended without a finish line', 'Egan Bernal attacked on the Col de l’Iseran as hail and a landslide made the road to Tignes impassable and stopped the stage.'],
   'gilbert-flandern-rundt-2017': ['When Philippe Gilbert rode away on the Oude Kwaremont', 'An attack more than 50 kilometres from the finish became a solo ride over cobbles and climbs and Gilbert’s first Tour of Flanders victory.'],

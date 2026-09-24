@@ -2700,5 +2700,19 @@
     "blokeret_af": "null",
     "kanonisk_url": "https://teob.dk/historier/sram-etap-traadloese-gear/",
     "fil": "hist-000193-sram-etap.md"
+  },
+  {
+    "id": "hist-000194",
+    "titel": "Fra Paris–Roubaix til tændrør",
+    "status": "publiceret",
+    "prioritet": "høj",
+    "periode": "per-1800-1899",
+    "aar": "1899-1927",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "middel",
+    "naeste_handling": "Ingen – publiceret på dansk og engelsk.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/albert-champion-roubaix-til-taendroer/",
+    "fil": "hist-000194-albert-champion.md"
   }
 ]

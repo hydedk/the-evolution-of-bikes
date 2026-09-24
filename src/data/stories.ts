@@ -4,6 +4,7 @@ import buffaloSprintStartImage from '../assets/stories/banecykling-1912/buffalo-
 import parisRoubaix1949Image from '../assets/stories/paris-roubaix-1949/velodrome-illustration.png';
 import drilliumImage from '../assets/stories/drillium/drillium-workshop-illustration.png';
 import parisBrest1891Image from '../assets/stories/paris-brest-paris-1891/terront-le-petit-journal-1891.jpg';
+import albertChampionImage from '../assets/stories/albert-champion/albert-champion-ung-rytter.jpg';
 import peaceRace1948Image from '../assets/stories/fredsloebet-1948/prosenik-zoric-warsaw-1948.jpg';
 import bartali1948Image from '../assets/stories/bartali-italien-1948/gino-bartali-1938.jpg';
 import colnagoMagni1955Image from '../assets/stories/colnago-magni-1955/fiorenzo-magni-1953.jpeg';
@@ -45,6 +46,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'albert-champion-roubaix-til-taendroer': 'people',
   'da-vaekkeuret-kostede-20-minutter-paa-paris-roubaix-ruten': 'people',
   'da-tour-de-france-flyttede-ind-paa-boernevaerelset': 'people',
   'christian-christensen-tour-de-france-1913': 'people',
@@ -98,6 +100,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'albert-champion-roubaix-til-taendroer', type: 'historie', year: '1899–1927', title: 'Fra Paris–Roubaix til tændrør', text: 'Albert Champion vandt Paris–Roubaix som 20-årig. Siden skabte hans arbejde og navnestrid to amerikanske tændrørsmærker: Champion og AC.', image: albertChampionImage, periods: ['1800-1899', '1900-1920', '1920-1930'], topics: ['albert-champion', 'paris-roubaix', 'motorpace', 'taendroer', 'ac-spark-plug'], relatedBikes: [], relatedComponents: [] },
   { slug: 'froome-finestre-2018', type: 'historie', year: '2018', title: 'Da Froome angreb med 80 kilometer tilbage', text: 'På Colle delle Finestre kørte Chris Froome alene og vendte et Giro-løb, som han begyndte dagen 3 minutter og 22 sekunder fra føringen.', image: 'images/periods/2010-2019/thomas-froome-2018.webp', periods: ['2010-2019'], topics: ['chris-froome', 'giro-ditalia', 'colle-delle-finestre', 'team-sky'], relatedBikes: [], relatedComponents: [] },
   { slug: 'tignes-etapen-stoppet-2019', type: 'historie', year: '2019', title: 'Da Tour-etapen sluttede uden en målstreg', text: 'Egan Bernal angreb på Col de l’Iseran, mens hagl og jordskred gjorde vejen mod Tignes ufremkommelig og standsede etapen.', image: 'images/periods/2010-2019/bernal-2019.webp', periods: ['2010-2019'], topics: ['egan-bernal', 'tour-de-france', 'tignes', 'col-de-liseran'], relatedBikes: [], relatedComponents: [] },
   { slug: 'gilbert-flandern-rundt-2017', type: 'historie', year: '2017', title: 'Da Philippe Gilbert kørte væk på Oude Kwaremont', text: 'Et angreb mere end 50 kilometer fra mål blev til en solotur over bakker og brosten og Gilberts første sejr i Flandern Rundt.', image: 'images/periods/2010-2019/wiggins-2012.webp', periods: ['2010-2019'], topics: ['philippe-gilbert', 'flandern-rundt', 'oude-kwaremont', 'quick-step'], relatedBikes: [], relatedComponents: [] },

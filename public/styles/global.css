@@ -1319,6 +1319,15 @@ html.has-lightbox {
 .content-empty { padding: 3rem; text-align: center; border: 1px solid var(--line); }
 .period-search-intro { padding-bottom: 2.5rem; }
 .theme-search-intro { padding-bottom: 2.5rem; border-top: 1px solid var(--line); }
+.period-story-feature { max-width: 1180px; margin: 0 auto; padding: clamp(5rem, 9vw, 9rem) 6vw; }
+.period-story-feature > header { max-width: 720px; margin-bottom: 2.5rem; }
+.period-story-feature h2 { margin: .5rem 0 1rem; font: 400 clamp(2.4rem, 5vw, 4.5rem)/1.02 "Libre Caslon Display", serif; }
+.period-story-feature > header > p:last-child { line-height: 1.65; }
+.period-story-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); }
+.period-story-grid > a { display: grid; grid-template-rows: 230px auto auto; align-content: start; min-width: 0; padding-bottom: 1.5rem; background: #f7f3e9; color: inherit; text-decoration: none; }
+.period-story-grid img { width: 100%; height: 230px; object-fit: cover; filter: saturate(.72); }
+.period-story-grid span { padding: 1.25rem 1.5rem 0; color: var(--rust); font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
+.period-story-grid h3 { margin: .55rem 1.5rem 0; font: 400 clamp(1.45rem, 2.5vw, 2rem)/1.14 "Libre Caslon Display", serif; }
 @media (max-width: 850px) {
   .period-summary-boxes, .content-results { grid-template-columns: 1fr; }
   .period-summary-boxes article { border-right: 1px solid var(--line); border-bottom: 0; }
@@ -1329,5 +1338,6 @@ html.has-lightbox {
   .period-theme-row, .theme-index { grid-template-columns: 1fr; }
   .content-filters { grid-template-columns: 1fr 1fr; }
   .content-search, .content-filters button { grid-column: 1 / -1; }
+  .period-story-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) { .period-theme-items, .content-filters { grid-template-columns: 1fr; } .content-search, .content-filters button { grid-column: auto; } }

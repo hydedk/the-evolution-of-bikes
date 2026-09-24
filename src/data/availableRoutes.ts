@@ -26,6 +26,10 @@ const dynamicEnglishStorySlugs = [
   'operacion-puerto-2006',
   'bjarne-riis-team-csc',
   'carbon-og-68-kilo',
+  'froome-finestre-2018',
+  'tignes-etapen-stoppet-2019',
+  'gilbert-flandern-rundt-2017',
+  'sram-etap-traadloese-gear',
 ];
 
 export const englishStorySlugs = new Set([

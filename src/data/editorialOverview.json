@@ -2644,5 +2644,61 @@
     "blokeret_af": "null",
     "kanonisk_url": "https://teob.dk/historier/carbon-og-68-kilo/",
     "fil": "hist-000189-carbon-68-kilo.md"
+  },
+  {
+    "id": "hist-000190",
+    "titel": "Da Froome angreb med 80 kilometer tilbage",
+    "status": "publiceret",
+    "prioritet": "høj",
+    "periode": "per-2010-2019",
+    "aar": "2018",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Følg op på billedet, hvis et stærkere frit foto bliver tilgængeligt.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/froome-finestre-2018/",
+    "fil": "hist-000190-froome-finestre-2018.md"
+  },
+  {
+    "id": "hist-000191",
+    "titel": "Da Tour-etapen sluttede uden en målstreg",
+    "status": "publiceret",
+    "prioritet": "høj",
+    "periode": "per-2010-2019",
+    "aar": "2019",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Ingen planlagt handling.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/tignes-etapen-stoppet-2019/",
+    "fil": "hist-000191-tignes-2019.md"
+  },
+  {
+    "id": "hist-000192",
+    "titel": "Da Philippe Gilbert kørte væk på Oude Kwaremont",
+    "status": "publiceret",
+    "prioritet": "høj",
+    "periode": "per-2010-2019",
+    "aar": "2017",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Find senere et stærkere frit billede fra Flandern Rundt 2017.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/gilbert-flandern-rundt-2017/",
+    "fil": "hist-000192-gilbert-flandern-2017.md"
+  },
+  {
+    "id": "hist-000193",
+    "titel": "Da gearkablet forsvandt",
+    "status": "publiceret",
+    "prioritet": "høj",
+    "periode": "per-2010-2019",
+    "aar": "2015",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Følg op på billedet, hvis et relevant produktfoto med fri brugsret bliver tilgængeligt.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/sram-etap-traadloese-gear/",
+    "fil": "hist-000193-sram-etap.md"
   }
 ]

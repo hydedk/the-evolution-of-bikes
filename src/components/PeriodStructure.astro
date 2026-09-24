@@ -405,9 +405,42 @@ if (period === '2000-2009') {
     'menneskene-bag':'Holdledere, læger, aerodynamikere og mekanikere fik større indflydelse. Bjarne Riis og Team CSC viser, hvordan det moderne hold blev en organisation bygget op omkring planlægning og specialister.',
   };
 }
+if (period === '2010-2019') {
+  boxes = en ? [
+    ['The decade’s main development','Carbon became a complete platform for aerodynamics, electronic shifting, disc brakes and increasingly integrated components.'],
+    ['What defined the period','Team Sky’s marginal gains, power-based racing and digital cycling culture existed beside continued argument about trust and medical practice.'],
+    ['Three changes to cycling','Electronic shifting became normal. Wireless gears removed the final cable. Strava and indoor platforms connected training, competition and social life.'],
+  ] : [
+    ['Årtiets vigtigste udvikling','Carbon blev en samlet platform for aerodynamik, elektroniske gear, skivebremser og stadig mere integrerede komponenter.'],
+    ['Det kendetegnede perioden','Team Skys marginal gains, wattstyrede løb og digital cykelkultur eksisterede side om side med fortsat debat om tillid og medicinsk praksis.'],
+    ['Tre ting, der ændrede cyklingen','Elektroniske gear blev normale. Trådløse gear fjernede det sidste kabel. Strava og indendørs platforme bandt træning, konkurrence og fællesskab sammen.'],
+  ];
+  timeline = en ? [
+    ['2010','Cancellara wins Flanders and Roubaix as aerodynamics and power data become standard tools.'],['2011','Cadel Evans becomes the first Australian Tour winner; Campagnolo launches electronic EPS.'],['2012','Bradley Wiggins becomes the first British Tour winner.'],['2013','Chris Froome wins his first Tour; the collection’s Scapin K6 represents the integrated carbon bicycle.'],['2014','Confusion over the Stelvio descent shapes the Giro; disc-brake debate grows.'],['2015','Peter Sagan begins three consecutive world titles; SRAM announces wireless RED eTap.'],['2016','Froome runs on Mont Ventoux after a crash; Mathew Hayman wins Paris–Roubaix after indoor rehabilitation.'],['2017','Gilbert attacks from distance in Flanders; Dumoulin wins the Giro.'],['2018','Froome overturns the Giro on the Finestre; Geraint Thomas wins the Tour.'],['2019','Weather stops the Tour stage to Tignes; Bernal takes yellow and wins in Paris.'],
+  ] : [
+    ['2010','Cancellara vinder Flandern og Roubaix, mens aerodynamik og wattdata bliver faste værktøjer.'],['2011','Cadel Evans bliver første australske Tour-vinder; Campagnolo lancerer elektronisk EPS.'],['2012','Bradley Wiggins bliver første britiske Tour-vinder.'],['2013','Chris Froome vinder sin første Tour; samlingens Scapin K6 viser den integrerede carboncykel.'],['2014','Uklarheden på Stelvio præger Giroen; debatten om skivebremser vokser.'],['2015','Peter Sagan indleder tre VM-sejre i træk; SRAM præsenterer trådløs RED eTap.'],['2016','Froome løber på Mont Ventoux efter et styrt; Mathew Hayman vinder Roubaix efter indendørs genoptræning.'],['2017','Gilbert angriber langt udefra i Flandern; Dumoulin vinder Giroen.'],['2018','Froome vender Giroen på Finestre; Geraint Thomas vinder Touren.'],['2019','Uvejr stopper Tour-etapen mod Tignes; Bernal tager gult og vinder i Paris.'],
+  ];
+  periodThemeCopy = en ? {
+    'loeb-og-store-oejeblikke':'Froome on the Finestre, Gilbert in Flanders and the stopped stage to Tignes show that data-rich racing could still be overturned by risk, weather and circumstance.',
+    ryttere:'Froome, Sagan, Nibali, Contador, Dumoulin, Van Avermaet, Gilbert and Bernal succeeded in different terrain, while women’s professional racing gained stronger events and visibility.',
+    teknik:'Electronic and wireless shifting, integrated carbon cockpits, aerodynamic wheels and disc brakes moved the bicycle towards a complete, manufacturer-designed system.',
+    'kost-traening-og-videnskab':'Power data, altitude camps and measured carbohydrate intake shaped preparation. Recovery routines became visible, including riders cooling down on trainers after stages.',
+    cykelkultur:'Strava, GPS computers, social media and Zwift changed how amateurs trained, shared rides and compared themselves with professionals and one another.',
+    'samfund-og-tidsaand':'Old doping accounts, biological-passport cases and medical controversies kept trust under pressure even as cycling presented a cleaner, more scientific image.',
+    'menneskene-bag':'Coaches, nutritionists, aerodynamicists, data analysts, mechanics and soigneurs became an increasingly specialised organisation around each rider.',
+  } : {
+    'loeb-og-store-oejeblikke':'Froome på Finestre, Gilbert i Flandern og den standsede etape mod Tignes viser, at wattstyrede løb stadig kunne vendes af risiko, vejr og tilfældigheder.',
+    ryttere:'Froome, Sagan, Nibali, Contador, Dumoulin, Van Avermaet, Gilbert og Bernal vandt på forskellige terræner, mens kvindernes professionelle cykling fik stærkere løb og større synlighed.',
+    teknik:'Elektroniske og trådløse gear, integrerede carboncockpits, aerohjul og skivebremser gjorde cyklen til et samlet system fra producenten.',
+    'kost-traening-og-videnskab':'Wattdata, højdetræning og beregnet kulhydratindtag prægede forberedelsen. Restitutionen blev synlig, blandt andet når ryttere kørte af på hometrainer efter etaperne.',
+    cykelkultur:'Strava, GPS-computere, sociale medier og Zwift ændrede måden motionister trænede, delte ture og sammenlignede sig med professionelle og hinanden.',
+    'samfund-og-tidsaand':'Gamle dopingregnskaber, biologiske pas-sager og medicinske kontroverser holdt tilliden under pres, selv om sporten viste et renere og mere videnskabeligt ansigt.',
+    'menneskene-bag':'Trænere, ernæringseksperter, aerodynamikere, dataanalytikere, mekanikere og soigneurer blev en stadig mere specialiseret organisation omkring rytteren.',
+  };
+}
 const decadeName = en
-  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1950-1959' ? 'The 1950s' : period === '1960-1969' ? 'The 1960s' : period === '1970-1979' ? 'The 1970s' : period === '1980-1989' ? 'The 1980s' : period === '2000-2009' ? 'The 2000s' : 'The 1990s')
-  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1950-1959' ? '1950’erne' : period === '1960-1969' ? '1960’erne' : period === '1970-1979' ? '1970’erne' : period === '1980-1989' ? '1980’erne' : period === '2000-2009' ? '2000’erne' : '1990’erne');
+  ? (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? 'The 1920s' : period === '1930-1939' ? 'The 1930s' : period === '1940-1949' ? 'The 1940s' : period === '1950-1959' ? 'The 1950s' : period === '1960-1969' ? 'The 1960s' : period === '1970-1979' ? 'The 1970s' : period === '1980-1989' ? 'The 1980s' : period === '2000-2009' ? 'The 2000s' : period === '2010-2019' ? 'The 2010s' : 'The 1990s')
+  : (period === '1900-1920' ? '1900–1920' : period === '1920-1930' ? '1920’erne' : period === '1930-1939' ? '1930’erne' : period === '1940-1949' ? '1940’erne' : period === '1950-1959' ? '1950’erne' : period === '1960-1969' ? '1960’erne' : period === '1970-1979' ? '1970’erne' : period === '1980-1989' ? '1980’erne' : period === '2000-2009' ? '2000’erne' : period === '2010-2019' ? '2010’erne' : '1990’erne');
 ---
 <section class="period-model" aria-labelledby="period-model-title">
   <header><p class="section-label">{en ? 'The common period model' : 'Periodens faste overblik'}</p><h2 id="period-model-title">{en ? `${decadeName} in three views` : `${decadeName} i tre bokse`}</h2></header>

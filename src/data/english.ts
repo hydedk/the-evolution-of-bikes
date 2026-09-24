@@ -2,6 +2,10 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'froome-finestre-2018': ['When Froome attacked with 80 kilometres remaining', 'On the Colle delle Finestre, Chris Froome rode away alone and overturned a Giro he began that day 3 minutes 22 seconds from the lead.'],
+  'tignes-etapen-stoppet-2019': ['When a Tour stage ended without a finish line', 'Egan Bernal attacked on the Col de l’Iseran as hail and a landslide made the road to Tignes impassable and stopped the stage.'],
+  'gilbert-flandern-rundt-2017': ['When Philippe Gilbert rode away on the Oude Kwaremont', 'An attack more than 50 kilometres from the finish became a solo ride over cobbles and climbs and Gilbert’s first Tour of Flanders victory.'],
+  'sram-etap-traadloese-gear': ['When the gear cable disappeared', 'SRAM RED eTap made road shifting wireless and gave riders, mechanics and frame designers a new way to think about control.'],
   'boonen-paris-roubaix-2009': ['When the Roubaix favourites disappeared one by one', 'Flecha crashed at Carrefour de l’Arbre, Hushovd hit the barriers and Tom Boonen rode alone into the velodrome for his third victory.'],
   'operacion-puerto-2006': ['The blood bags that reached the Tour before the start', 'Operación Puerto led from a Madrid clinic to the Tour start in Strasbourg, where Ivan Basso and Jan Ullrich never took the line.'],
   'bjarne-riis-team-csc': ['When Bjarne Riis built Team CSC', 'A struggling Danish team became an international organisation built around clear roles, training data and a team spirit tested far from the road.'],

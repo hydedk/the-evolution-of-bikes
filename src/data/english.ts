@@ -2,6 +2,10 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'campagnolo-cambio-corsa': ['The gear change with a loose rear wheel', 'Cambio Corsa offered several gears, but demanded two levers, back-pedalling and a moment with the rear wheel released while the bicycle was moving.'],
+  'shimano-dura-ace-ax': ['When even the pedal thread had to be aerodynamic', 'Shimano built a wind tunnel and gave Dura-Ace AX smooth forms. The idea reached all the way to the pedal and showed how far a complete system could be pushed.'],
+  'liege-bastogne-liege-1980': ['The day snow emptied Liège–Bastogne–Liège', 'A field of 174 began in the cold and only 21 finished, while Bernard Hinault rode roughly 80 kilometres alone and suffered lasting damage to his hands.'],
+  'major-taylor-verdensmester': ['Major Taylor also had to win the right to race', 'Marshall “Major” Taylor became world sprint champion in 1899. His route there passed through records, packed velodromes and a cycling establishment that repeatedly tried to exclude him.'],
   'tourmad-i-1930erne': ['When the Tour had to provide dinner', 'National teams made the Tour organiser responsible for the riders’ food and lodging. Menus were heavy, advice plentiful and nutritional science still far from the measuring cup.'],
   'faliero-masi-vigorelli': ['The tailor beneath the Vigorelli', 'Faliero Masi built bicycles beneath Milan’s velodrome and fitted them to riders including Anquetil, Van Looy and Merckx – often with another name on the down tube.'],
   'da-fjernsynet-fandt-touren': ['When television found the Tour', 'First came a live finish. In 1958 moving pictures arrived from the mountains, and a year later the helicopter joined the travelling television production.'],

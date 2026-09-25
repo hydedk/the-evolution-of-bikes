@@ -36,6 +36,10 @@ import sevenElevenImage from '../assets/stories/7-eleven-europa/7-eleven-team-bi
 import lotus108Image from '../assets/stories/lotus-108-boardman/lotus-108-barcelona.jpg';
 import keetieImage from '../assets/stories/keetie-van-oosten-hage/keetie-1979.jpg';
 import masiVigorelliImage from '../assets/stories/masi-vigorelli/jacques-anquetil-1966.jpg';
+import cambioCorsaImage from '../assets/stories/campagnolo-cambio-corsa/stella-cambio-corsa.webp';
+import duraAceAxImage from '../assets/stories/shimano-dura-ace-ax/shimano-600-ax-dyna-drive.jpg';
+import liege1980Image from '../assets/stories/liege-bastogne-liege-1980/bernard-hinault-1982.jpg';
+import majorTaylorImage from '../assets/stories/major-taylor-verdensmester/major-taylor-1906-1907.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -53,6 +57,10 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'campagnolo-cambio-corsa': 'mechanics',
+  'shimano-dura-ace-ax': 'mechanics',
+  'liege-bastogne-liege-1980': 'race',
+  'major-taylor-verdensmester': 'people',
   'tourmad-i-1930erne': 'people',
   'faliero-masi-vigorelli': 'mechanics',
   'da-fjernsynet-fandt-touren': 'people',
@@ -116,6 +124,10 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'campagnolo-cambio-corsa', type: 'historie', year: '1946', title: 'Gearskiftet med det løse baghjul', text: 'Cambio Corsa gav rytteren flere gear, men krævede to greb, baglæns pedalering og et øjeblik med baghjulet løsnet midt under kørslen.', image: cambioCorsaImage, periods: ['1940-1949'], topics: ['campagnolo', 'cambio-corsa', 'gearskifte', 'mekanik'], relatedBikes: ['stella-veneta'], relatedComponents: ['campagnolo-cambio-corsa'] },
+  { slug: 'shimano-dura-ace-ax', type: 'historie', year: '1980–1983', title: 'Da selv pedalgevindet skulle være aerodynamisk', text: 'Shimano byggede vindtunnel og gav Dura-Ace AX glatte former. Forsøget nåede helt ned i pedalen og viste, hvor langt en samlet idé kunne presses.', image: duraAceAxImage, periods: ['1980-1989'], topics: ['shimano', 'dura-ace-ax', 'aerodynamik', 'dyna-drive'], relatedBikes: ['koga-miyata-gentsracer-aero'], relatedComponents: [] },
+  { slug: 'liege-bastogne-liege-1980', type: 'historie', year: '1980', title: 'Dagen da sneen tømte Liège–Bastogne–Liège', text: '174 ryttere begyndte i kulden. Kun 21 kom frem, mens Bernard Hinault kørte omtrent 80 kilometer alene og beholdt føleforstyrrelser i hænderne.', image: liege1980Image, periods: ['1980-1989'], topics: ['liege-bastogne-liege', 'bernard-hinault', 'sne', 'kulde'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'major-taylor-verdensmester', type: 'historie', year: '1899', title: 'Major Taylor vandt også kampen om at få lov', text: 'Marshall “Major” Taylor blev verdensmester i sprint i 1899. Vejen dertil gik gennem rekorder, fyldte velodromer og en cykelsport, som ofte forsøgte at holde ham ude.', image: majorTaylorImage, periods: ['1800-1899', '1900-1920'], topics: ['major-taylor', 'banecykling', 'verdensmesterskab', 'racisme'], relatedBikes: [], relatedComponents: [] },
   { slug: 'tourmad-i-1930erne', type: 'historie', year: '1930’erne', title: 'Da Touren selv skulle sørge for middagen', text: 'Nationalholdene gjorde Tour-arrangøren ansvarlig for rytternes mad og logi. Menuerne var tunge, rådene mange og ernæringsvidenskaben endnu et stykke fra målebægeret.', image: guerra1930Image, periods: ['1930-1939'], topics: ['tour-de-france', 'kost', 'nationalhold', 'restitution'], relatedBikes: [], relatedComponents: [] },
   { slug: 'faliero-masi-vigorelli', type: 'historie', year: '1949–1969', title: 'Skrædderen under Vigorelli', text: 'Faliero Masi byggede cykler under Milanos velodrom og tilpassede dem til ryttere som Anquetil, Van Looy og Merckx – ofte med et andet navn på skrårøret.', image: masiVigorelliImage, periods: ['1950-1959', '1960-1969'], topics: ['faliero-masi', 'vigorelli', 'rammebygning', 'mekanikere'], relatedBikes: [], relatedComponents: [] },
   { slug: 'da-fjernsynet-fandt-touren', type: 'historie', year: '1948–1959', title: 'Da Touren flyttede ind i fjernsynet', text: 'Først kom en direkte målgang. I 1958 fulgte levende billeder fra bjergene, og året efter kom helikopteren med i den omrejsende tv-produktion.', image: walkowiakContextImage, periods: ['1950-1959'], topics: ['tour-de-france', 'fjernsyn', 'medier', 'helikopter'], relatedBikes: [], relatedComponents: [] },

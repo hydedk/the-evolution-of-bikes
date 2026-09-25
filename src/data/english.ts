@@ -2,6 +2,10 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'tourmad-i-1930erne': ['When the Tour had to provide dinner', 'National teams made the Tour organiser responsible for the riders’ food and lodging. Menus were heavy, advice plentiful and nutritional science still far from the measuring cup.'],
+  'faliero-masi-vigorelli': ['The tailor beneath the Vigorelli', 'Faliero Masi built bicycles beneath Milan’s velodrome and fitted them to riders including Anquetil, Van Looy and Merckx – often with another name on the down tube.'],
+  'da-fjernsynet-fandt-touren': ['When television found the Tour', 'First came a live finish. In 1958 moving pictures arrived from the mountains, and a year later the helicopter joined the travelling television production.'],
+  'keetie-van-oosten-hage': ['Keetie won almost everything that existed', 'Keetie van Oosten-Hage became world champion on road and track and set an hour record. She did it in a sport without the Olympics, a Tour or proper daily support.'],
   'annie-londonderry-verden-rundt': ['Annie Londonderry turned a bicycle journey into a performance', 'Annie Cohen Kopchovsky travelled around the world by bicycle, ship and train, making names, clothes, advertising and storytelling part of the feat.'],
   'tour-1947-rationering': ['When the Tour returned to a hungry France', 'The Tour returned after the war and had to feed a race over 4,640 kilometres while France cut the daily bread ration to 200 grams.'],
   '7-eleven-europa': ['When 7-Eleven came to Europe', 'The American team learned Europe’s unwritten rules at the Giro and became the first US-based team in the Tour de France a year later.'],

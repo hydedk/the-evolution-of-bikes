@@ -3330,5 +3330,61 @@
     "blokeret_af": "null",
     "kanonisk_url": "/historier/tour-1947-rationering/",
     "fil": "hist-000238-tour-1947-rationering.md"
+  },
+  {
+    "id": "hist-000239",
+    "titel": "Da Touren selv skulle sørge for middagen",
+    "status": "publiceret",
+    "prioritet": "hoej",
+    "periode": "per-1930-1939",
+    "aar": "1930-1939",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "middel",
+    "naeste_handling": "Følg modtagelsen og vurder senere, om historien skal udbygges med flere samtidige menukilder.",
+    "blokeret_af": "null",
+    "kanonisk_url": "/historier/tourmad-i-1930erne/",
+    "fil": "hist-000239-tourmad-i-1930erne.md"
+  },
+  {
+    "id": "hist-000240",
+    "titel": "Skrædderen under Vigorelli",
+    "status": "publiceret",
+    "prioritet": "hoej",
+    "periode": "per-1960-1969",
+    "aar": "1949-1969",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "middel",
+    "naeste_handling": "Følg modtagelsen og vurder senere et særskilt portræt af Alberto Masi.",
+    "blokeret_af": "null",
+    "kanonisk_url": "/historier/faliero-masi-vigorelli/",
+    "fil": "hist-000240-faliero-masi-vigorelli.md"
+  },
+  {
+    "id": "hist-000241",
+    "titel": "Da Touren flyttede ind i fjernsynet",
+    "status": "publiceret",
+    "prioritet": "hoej",
+    "periode": "per-1940-1959",
+    "aar": "1948-1959",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Følg modtagelsen og supplér senere med flere billeder af tv-holdets arbejde, hvis de findes med fri brugsret.",
+    "blokeret_af": "null",
+    "kanonisk_url": "/historier/da-fjernsynet-fandt-touren/",
+    "fil": "hist-000241-da-fjernsynet-fandt-touren.md"
+  },
+  {
+    "id": "hist-000242",
+    "titel": "Keetie vandt næsten alt, der fandtes",
+    "status": "publiceret",
+    "prioritet": "hoej",
+    "periode": "per-1970-1979",
+    "aar": "1968-1979",
+    "dokumentation": "dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Følg modtagelsen og vurder senere en bredere temahistorie om kvindecyklingens løbskalender.",
+    "blokeret_af": "null",
+    "kanonisk_url": "/historier/keetie-van-oosten-hage/",
+    "fil": "hist-000242-keetie-van-oosten-hage.md"
   }
 ]

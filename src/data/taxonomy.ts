@@ -37,6 +37,10 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'tourmad-i-1930erne': { period: '1930-1939', primary: 'kost-traening-og-videnskab', secondary: ['samfund-og-tidsaand', 'menneskene-bag'] },
+  'faliero-masi-vigorelli': { period: '1960-1969', primary: 'menneskene-bag', secondary: ['teknik'] },
+  'da-fjernsynet-fandt-touren': { period: '1950-1959', primary: 'samfund-og-tidsaand', secondary: ['cykelkultur', 'loeb-og-store-oejeblikke'] },
+  'keetie-van-oosten-hage': { period: '1970-1979', primary: 'ryttere', secondary: ['cykelkultur', 'menneskene-bag'] },
   'annie-londonderry-verden-rundt': { period: '1800-1899', primary: 'cykelkultur', secondary: ['samfund-og-tidsaand', 'ryttere'] },
   'tour-1947-rationering': { period: '1940-1949', primary: 'kost-traening-og-videnskab', secondary: ['samfund-og-tidsaand', 'loeb-og-store-oejeblikke'] },
   '7-eleven-europa': { period: '1980-1989', primary: 'samfund-og-tidsaand', secondary: ['cykelkultur', 'menneskene-bag'] },

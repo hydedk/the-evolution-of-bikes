@@ -34,6 +34,8 @@ import annieLondonderryImage from '../assets/stories/annie-londonderry/annie-lon
 import tour1947RationImage from '../assets/stories/tour-1947-rationering/arie-vooren-1947.jpg';
 import sevenElevenImage from '../assets/stories/7-eleven-europa/7-eleven-team-bike-1989.jpg';
 import lotus108Image from '../assets/stories/lotus-108-boardman/lotus-108-barcelona.jpg';
+import keetieImage from '../assets/stories/keetie-van-oosten-hage/keetie-1979.jpg';
+import masiVigorelliImage from '../assets/stories/masi-vigorelli/jacques-anquetil-1966.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -51,6 +53,10 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'tourmad-i-1930erne': 'people',
+  'faliero-masi-vigorelli': 'mechanics',
+  'da-fjernsynet-fandt-touren': 'people',
+  'keetie-van-oosten-hage': 'people',
   'annie-londonderry-verden-rundt': 'people',
   'tour-1947-rationering': 'people',
   '7-eleven-europa': 'people',
@@ -110,6 +116,10 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'tourmad-i-1930erne', type: 'historie', year: '1930’erne', title: 'Da Touren selv skulle sørge for middagen', text: 'Nationalholdene gjorde Tour-arrangøren ansvarlig for rytternes mad og logi. Menuerne var tunge, rådene mange og ernæringsvidenskaben endnu et stykke fra målebægeret.', image: guerra1930Image, periods: ['1930-1939'], topics: ['tour-de-france', 'kost', 'nationalhold', 'restitution'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'faliero-masi-vigorelli', type: 'historie', year: '1949–1969', title: 'Skrædderen under Vigorelli', text: 'Faliero Masi byggede cykler under Milanos velodrom og tilpassede dem til ryttere som Anquetil, Van Looy og Merckx – ofte med et andet navn på skrårøret.', image: masiVigorelliImage, periods: ['1950-1959', '1960-1969'], topics: ['faliero-masi', 'vigorelli', 'rammebygning', 'mekanikere'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'da-fjernsynet-fandt-touren', type: 'historie', year: '1948–1959', title: 'Da Touren flyttede ind i fjernsynet', text: 'Først kom en direkte målgang. I 1958 fulgte levende billeder fra bjergene, og året efter kom helikopteren med i den omrejsende tv-produktion.', image: walkowiakContextImage, periods: ['1950-1959'], topics: ['tour-de-france', 'fjernsyn', 'medier', 'helikopter'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'keetie-van-oosten-hage', type: 'historie', year: '1968–1979', title: 'Keetie vandt næsten alt, der fandtes', text: 'Keetie van Oosten-Hage blev verdensmester på vej og bane og satte timerekord. Hun gjorde det i en sport uden OL, Tour og ordentlig daglig støtte.', image: keetieImage, periods: ['1960-1969', '1970-1979'], topics: ['keetie-van-oosten-hage', 'kvindecykling', 'verdensmesterskab', 'timerekord'], relatedBikes: [], relatedComponents: [] },
   { slug: 'annie-londonderry-verden-rundt', type: 'historie', year: '1894–1895', title: 'Annie Londonderry gjorde cykelturen til en forestilling', text: 'Annie Cohen Kopchovsky rejste verden rundt med cykel, skib og tog – og gjorde navn, tøj, reklamer og fortællinger til en del af bedriften.', image: annieLondonderryImage, periods: ['1800-1899'], topics: ['annie-londonderry', 'kvinder-og-cykling', 'cykelkultur', 'reklame'], relatedBikes: [], relatedComponents: [] },
   { slug: 'tour-1947-rationering', type: 'historie', year: '1947', title: 'Da Touren vendte tilbage til et sultent Frankrig', text: 'Touren vendte tilbage efter krigen og skulle skaffe mad til et felt på 4.640 kilometer, mens Frankrig satte brødrationen ned til 200 gram.', image: tour1947RationImage, periods: ['1940-1949'], topics: ['tour-de-france', 'rationering', 'kost', 'efterkrigstiden'], relatedBikes: [], relatedComponents: [] },
   { slug: '7-eleven-europa', type: 'historie', year: '1985–1986', title: 'Da 7-Eleven kom til Europa', text: 'Det amerikanske hold lærte Europas uskrevne regler i Giroen og blev året efter det første amerikansk baserede hold i Tour de France.', image: sevenElevenImage, periods: ['1980-1989'], topics: ['7-eleven', 'jim-ochowicz', 'giro-ditalia', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },

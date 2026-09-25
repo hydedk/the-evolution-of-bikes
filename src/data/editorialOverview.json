@@ -1121,16 +1121,16 @@
   },
   {
     "id": "hist-000081",
-    "titel": "Ugo Bianchis banecykel på 3,48 kilo",
-    "status": "indbakke",
+    "titel": "Banecyklen på de påståede 3,48 kilo",
+    "status": "publiceret",
     "prioritet": "mellem",
     "periode": "per-1940-1959",
     "aar": "1948",
-    "dokumentation": "ikke-kontrolleret",
+    "dokumentation": "dokumenteret",
     "faktarisiko": "hoej",
-    "naeste_handling": "Find primær dokumentation for cyklen, vejningen og dens ejer",
-    "blokeret_af": "Vægt og forbindelse til Coppi eller Legnano er foreløbig usikker",
-    "kanonisk_url": "",
+    "naeste_handling": "Vedligehold artiklen og tilføj samtidig dokumentation, hvis en vejning, ejerhistorik eller teknisk specifikation dukker op.",
+    "blokeret_af": "null",
+    "kanonisk_url": "/historier/ugo-bianchi-let-banescykel-1948/",
     "fil": "hist-000081-ugo-bianchi-let-banescykel-1948.md"
   },
   {

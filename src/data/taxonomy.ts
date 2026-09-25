@@ -41,6 +41,7 @@ const storyClassifications: Record<string, Classification> = {
   'shimano-dura-ace-ax': { period: '1980-1989', primary: 'teknik', secondary: ['samfund-og-tidsaand', 'cykelkultur'] },
   'liege-bastogne-liege-1980': { period: '1980-1989', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'kost-traening-og-videnskab'] },
   'major-taylor-verdensmester': { period: '1800-1899', primary: 'samfund-og-tidsaand', secondary: ['ryttere', 'loeb-og-store-oejeblikke'] },
+  'ugo-bianchi-let-banescykel-1948': { period: '1940-1949', primary: 'teknik', secondary: ['menneskene-bag', 'cykelkultur'] },
   'tourmad-i-1930erne': { period: '1930-1939', primary: 'kost-traening-og-videnskab', secondary: ['samfund-og-tidsaand', 'menneskene-bag'] },
   'faliero-masi-vigorelli': { period: '1960-1969', primary: 'menneskene-bag', secondary: ['teknik'] },
   'da-fjernsynet-fandt-touren': { period: '1950-1959', primary: 'samfund-og-tidsaand', secondary: ['cykelkultur', 'loeb-og-store-oejeblikke'] },

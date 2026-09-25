@@ -41,6 +41,9 @@ import duraAceAxImage from '../assets/stories/shimano-dura-ace-ax/shimano-600-ax
 import liege1980Image from '../assets/stories/liege-bastogne-liege-1980/bernard-hinault-1982.jpg';
 import majorTaylorImage from '../assets/stories/major-taylor-verdensmester/major-taylor-1906-1907.jpg';
 import ugoBianchiImage from '../assets/stories/ugo-bianchi-let-banescykel-1948/fausto-coppi-hour-record-1942.jpg';
+import polarHeartRateImage from '../assets/stories/polar-pulsmaaler-traening/polar-heart-rate-illustration.png';
+import peppinoDraliImage from '../assets/stories/peppino-drali-bianchi/drali-workshop-illustration.png';
+import pastaCarbsImage from '../assets/stories/pasta-kulhydrater-1980erne/team-breakfast-illustration.png';
 
 export type StoryMeta = {
   slug: string;
@@ -63,6 +66,9 @@ const storyTracks: Record<string, StoryTrack> = {
   'liege-bastogne-liege-1980': 'race',
   'major-taylor-verdensmester': 'people',
   'ugo-bianchi-let-banescykel-1948': 'mechanics',
+  'da-pulsen-kom-med-ud-paa-landevejen': 'mechanics',
+  'peppino-drali-bianchi-ved-filebaenken': 'mechanics',
+  'da-pastaen-overtog-morgenbordet': 'people',
   'tourmad-i-1930erne': 'people',
   'faliero-masi-vigorelli': 'mechanics',
   'da-fjernsynet-fandt-touren': 'people',
@@ -126,6 +132,9 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'da-pulsen-kom-med-ud-paa-landevejen', type: 'historie', year: '1982–1989', title: 'Da pulsen kom med ud på landevejen', text: 'Et brystbælte og en lille modtager på håndleddet gjorde det muligt at følge hjertet uden laboratoriets ledninger. Træningen fik et nyt tal at diskutere.', image: polarHeartRateImage, periods: ['1980-1989'], topics: ['polar', 'pulsmåler', 'træning', 'fysiologi'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'peppino-drali-bianchi-ved-filebaenken', type: 'historie', year: '1946–1970’erne', title: 'Bianchi på skrårøret, Drali ved filebænken', text: 'Peppino Drali byggede specialtilpassede Bianchi-stel i Milano. Navnet på røret kom fra den store fabrik; pasformen og håndarbejdet kom fra det lille værksted.', image: peppinoDraliImage, periods: ['1940-1949', '1970-1979'], topics: ['peppino-drali', 'bianchi', 'rammebygning', 'milano'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'da-pastaen-overtog-morgenbordet', type: 'historie', year: '1980’erne', title: 'Da pastaen overtog morgenbordet', text: 'Bøffen forsvandt ikke på én morgen, men i 1980’erne blev kulhydrat noget, holdene kunne måle, blande i flasken og lægge på tallerkenen.', image: pastaCarbsImage, periods: ['1980-1989'], topics: ['kost', 'kulhydrat', 'pasta', 'sportsdrik'], relatedBikes: [], relatedComponents: [] },
   { slug: 'ugo-bianchi-let-banescykel-1948', type: 'historie', year: '1948', title: 'Banecyklen på de påståede 3,48 kilo', text: 'Ugo Bianchi byggede cykler til Legnanos bedste ryttere. En senere overlevering tilskriver ham en banecykel på blot 3,48 kilo – et tal, der fortjener både nysgerrighed og et løftet øjenbryn.', image: ugoBianchiImage, periods: ['1940-1949'], topics: ['ugo-bianchi', 'banecykling', 'vægt', 'cykelbygning'], relatedBikes: [], relatedComponents: [] },
   { slug: 'campagnolo-cambio-corsa', type: 'historie', year: '1946', title: 'Gearskiftet med det løse baghjul', text: 'Cambio Corsa gav rytteren flere gear, men krævede to greb, baglæns pedalering og et øjeblik med baghjulet løsnet midt under kørslen.', image: cambioCorsaImage, periods: ['1940-1949'], topics: ['campagnolo', 'cambio-corsa', 'gearskifte', 'mekanik'], relatedBikes: ['stella-veneta'], relatedComponents: ['campagnolo-cambio-corsa'] },
   { slug: 'shimano-dura-ace-ax', type: 'historie', year: '1980–1983', title: 'Da selv pedalgevindet skulle være aerodynamisk', text: 'Shimano byggede vindtunnel og gav Dura-Ace AX glatte former. Forsøget nåede helt ned i pedalen og viste, hvor langt en samlet idé kunne presses.', image: duraAceAxImage, periods: ['1980-1989'], topics: ['shimano', 'dura-ace-ax', 'aerodynamik', 'dyna-drive'], relatedBikes: ['koga-miyata-gentsracer-aero'], relatedComponents: [] },

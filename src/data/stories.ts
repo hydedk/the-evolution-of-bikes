@@ -30,6 +30,10 @@ import moserHour1984Image from '../assets/stories/moser-hour-1984/moser-hour-198
 import hinaultLook1985Image from '../assets/stories/look-pedal-1985/bernard-hinault-1982.jpg';
 import gavia1988Image from '../assets/stories/gavia-1988/gavia-1988-illustration.png';
 import lemond1989Image from '../assets/stories/lemond-fignon-1989/greg-lemond-final-tt-1989.jpg';
+import annieLondonderryImage from '../assets/stories/annie-londonderry/annie-londonderry-1896.jpg';
+import tour1947RationImage from '../assets/stories/tour-1947-rationering/arie-vooren-1947.jpg';
+import sevenElevenImage from '../assets/stories/7-eleven-europa/7-eleven-team-bike-1989.jpg';
+import lotus108Image from '../assets/stories/lotus-108-boardman/lotus-108-barcelona.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -47,6 +51,10 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'annie-londonderry-verden-rundt': 'people',
+  'tour-1947-rationering': 'people',
+  '7-eleven-europa': 'people',
+  'lotus-108-boardman-1992': 'mechanics',
   'teddy-hale-seksdagesloeb-1896': 'race',
   'albert-champion-roubaix-til-taendroer': 'people',
   'da-vaekkeuret-kostede-20-minutter-paa-paris-roubaix-ruten': 'people',
@@ -102,6 +110,10 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'annie-londonderry-verden-rundt', type: 'historie', year: '1894–1895', title: 'Annie Londonderry gjorde cykelturen til en forestilling', text: 'Annie Cohen Kopchovsky rejste verden rundt med cykel, skib og tog – og gjorde navn, tøj, reklamer og fortællinger til en del af bedriften.', image: annieLondonderryImage, periods: ['1800-1899'], topics: ['annie-londonderry', 'kvinder-og-cykling', 'cykelkultur', 'reklame'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'tour-1947-rationering', type: 'historie', year: '1947', title: 'Da Touren vendte tilbage til et sultent Frankrig', text: 'Touren vendte tilbage efter krigen og skulle skaffe mad til et felt på 4.640 kilometer, mens Frankrig satte brødrationen ned til 200 gram.', image: tour1947RationImage, periods: ['1940-1949'], topics: ['tour-de-france', 'rationering', 'kost', 'efterkrigstiden'], relatedBikes: [], relatedComponents: [] },
+  { slug: '7-eleven-europa', type: 'historie', year: '1985–1986', title: 'Da 7-Eleven kom til Europa', text: 'Det amerikanske hold lærte Europas uskrevne regler i Giroen og blev året efter det første amerikansk baserede hold i Tour de France.', image: sevenElevenImage, periods: ['1980-1989'], topics: ['7-eleven', 'jim-ochowicz', 'giro-ditalia', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'lotus-108-boardman-1992', type: 'historie', year: '1992', title: 'Cyklen uden den sædvanlige trekant', text: 'Mike Burrows’ monocoque-idé, Lotus’ ingeniører og Chris Boardman mødtes i en sort banecykel, som vandt OL-guld i Barcelona.', image: lotus108Image, periods: ['1990-1999'], topics: ['mike-burrows', 'chris-boardman', 'lotus-108', 'aerodynamik'], relatedBikes: [], relatedComponents: [] },
   { slug: 'teddy-hale-seksdagesloeb-1896', type: 'historie', year: '1896', title: 'Teddy Hale og de 142 timer i New York', text: 'I december 1896 vandt Teddy Hale det individuelle seksdagesløb i Madison Square Garden efter 142 timer og omkring 3.074 kilometer.', image: teddyHaleImage, periods: ['1800-1899'], topics: ['teddy-hale', 'seksdagesloeb', 'madison-square-garden', 'banecykling', 'soevnmangel'], relatedBikes: [], relatedComponents: [] },
   { slug: 'albert-champion-roubaix-til-taendroer', type: 'historie', year: '1899–1927', title: 'Fra Paris–Roubaix til tændrør', text: 'Albert Champion vandt Paris–Roubaix som 20-årig. Siden skabte hans arbejde og navnestrid to amerikanske tændrørsmærker: Champion og AC.', image: albertChampionImage, periods: ['1800-1899', '1900-1920', '1920-1930'], topics: ['albert-champion', 'paris-roubaix', 'motorpace', 'taendroer', 'ac-spark-plug'], relatedBikes: [], relatedComponents: [] },
   { slug: 'froome-finestre-2018', type: 'historie', year: '2018', title: 'Da Froome angreb med 80 kilometer tilbage', text: 'På Colle delle Finestre kørte Chris Froome alene og vendte et Giro-løb, som han begyndte dagen 3 minutter og 22 sekunder fra føringen.', image: 'images/periods/2010-2019/thomas-froome-2018.webp', periods: ['2010-2019'], topics: ['chris-froome', 'giro-ditalia', 'colle-delle-finestre', 'team-sky'], relatedBikes: [], relatedComponents: [] },

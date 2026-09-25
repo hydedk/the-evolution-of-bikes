@@ -2,6 +2,10 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'annie-londonderry-verden-rundt': ['Annie Londonderry turned a bicycle journey into a performance', 'Annie Cohen Kopchovsky travelled around the world by bicycle, ship and train, making names, clothes, advertising and storytelling part of the feat.'],
+  'tour-1947-rationering': ['When the Tour returned to a hungry France', 'The Tour returned after the war and had to feed a race over 4,640 kilometres while France cut the daily bread ration to 200 grams.'],
+  '7-eleven-europa': ['When 7-Eleven came to Europe', 'The American team learned Europe’s unwritten rules at the Giro and became the first US-based team in the Tour de France a year later.'],
+  'lotus-108-boardman-1992': ['The bicycle without the usual triangle', 'Mike Burrows’s monocoque idea, Lotus engineers and Chris Boardman met in a black track bicycle that won Olympic gold in Barcelona.'],
   'teddy-hale-seksdagesloeb-1896': ['Teddy Hale and 142 hours in New York', 'In December 1896, Teddy Hale won the individual six-day race at Madison Square Garden after 142 hours and roughly 3,074 kilometres.'],
   'albert-champion-roubaix-til-taendroer': ['From Paris–Roubaix to spark plugs', 'Albert Champion won Paris–Roubaix at twenty. His work and a dispute over his name later produced two American spark-plug brands: Champion and AC.'],
   'froome-finestre-2018': ['When Froome attacked with 80 kilometres remaining', 'On the Colle delle Finestre, Chris Froome rode away alone and overturned a Giro he began that day 3 minutes 22 seconds from the lead.'],

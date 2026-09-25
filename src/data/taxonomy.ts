@@ -37,6 +37,10 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'annie-londonderry-verden-rundt': { period: '1800-1899', primary: 'cykelkultur', secondary: ['samfund-og-tidsaand', 'ryttere'] },
+  'tour-1947-rationering': { period: '1940-1949', primary: 'kost-traening-og-videnskab', secondary: ['samfund-og-tidsaand', 'loeb-og-store-oejeblikke'] },
+  '7-eleven-europa': { period: '1980-1989', primary: 'samfund-og-tidsaand', secondary: ['cykelkultur', 'menneskene-bag'] },
+  'lotus-108-boardman-1992': { period: '1990-1999', primary: 'menneskene-bag', secondary: ['teknik', 'loeb-og-store-oejeblikke'] },
   'teddy-hale-seksdagesloeb-1896': { period: '1800-1899', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'kost-traening-og-videnskab'] },
   'albert-champion-roubaix-til-taendroer': { period: '1800-1899', primary: 'menneskene-bag', secondary: ['loeb-og-store-oejeblikke', 'teknik'] },
   'soigneuren-og-maden-i-1970erne': { period: '1970-1979', primary: 'kost-traening-og-videnskab', secondary: ['menneskene-bag', 'cykelkultur'] },

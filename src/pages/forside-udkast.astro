@@ -1,0 +1,165 @@
+---
+import { stories } from '../data/stories';
+import { bikes } from '../data/bikes';
+
+const { published = false } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const toCard = (story) => ({
+  ...story,
+  imageUrl: typeof story.image === 'string' ? `${base}/${story.image}` : story.image.src,
+  link: `${base}/historier/${story.slug}/`,
+});
+
+const storyCards = stories.map(toCard);
+const leadStory = storyCards[0];
+const latestStories = storyCards.slice(1, 4);
+const startHereSlugs = [
+  'snyd-soem-tour-de-france-1904',
+  'peppino-drali-bianchi-ved-filebaenken',
+  'soigneuren-og-maden-i-1970erne',
+];
+const startHere = startHereSlugs.map((slug) => storyCards.find((story) => story.slug === slug)).filter(Boolean);
+const rotatingBikes = bikes.filter((bike) => !bike.status);
+const featuredBike = rotatingBikes[0] ?? bikes[0];
+
+const themes = [
+  ['Løb og store øjeblikke', 'Dramaet på vejen, banen og ved målstregen.', 'loeb-og-store-oejeblikke'],
+  ['Periodens ryttere', 'Mestre, arbejdsheste og mennesker, resultatlisten næsten glemte.', 'ryttere'],
+  ['Cykler og tekniske nybrud', 'Gear, rammer og løsninger, der ændrede måden at cykle på.', 'teknik'],
+  ['Kost, træning og videnskab', 'Fra bøf og cognac til laboratorier, sportsdrik og pulsmålere.', 'kost-traening-og-videnskab'],
+  ['Cykelkultur', 'Klubber, publikum, mode og cyklens plads i hverdagen.', 'cykelkultur'],
+  ['Samfund og tidsånd', 'Krig, medier, sponsorer og de forandringer, cyklingen bar med sig.', 'samfund-og-tidsaand'],
+  ['Menneskene bag', 'Mekanikere, soigneurs, arrangører og andre uden for podiet.', 'menneskene-bag'],
+];
+
+const periods = [
+  ['Før 1900', 'De første løb', '1800-1899'], ['1900', 'Pionererne', '1900-1920'],
+  ['1920', 'Stål og støv', '1920-1930'], ['1930', 'Gear og folkefest', '1930-1939'],
+  ['1940', 'Krig og genstart', '1940-1949'], ['1950', 'Helte og hold', '1950-1959'],
+  ['1960', 'Fart og forandring', '1960-1969'], ['1970', 'Tradition i opbrud', '1970-1979'],
+  ['1980', 'Data og aerodynamik', '1980-1989'], ['1990', 'Nye materialer', '1990-1999'],
+  ['2000', 'Carbon og kriser', '2000-2009'], ['2010', 'Den digitale cykel', '2010-2019'],
+];
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    {!published && <meta name="robots" content="noindex" />}
+    <meta name="description" content={published ? 'En personlig samling af historiske racercykler og fortællinger om ryttere, løb, værksteder og cyklingens tekniske udvikling.' : 'Lokalt udkast til en mere redaktionel forside for The Evolution of Bikes.'} />
+    {published && <link rel="canonical" href="https://teob.dk/" />}
+    {published && <link rel="alternate" hreflang="da" href="https://teob.dk/" />}
+    {published && <link rel="alternate" hreflang="en" href="https://teob.dk/en/" />}
+    {published && <link rel="alternate" hreflang="x-default" href="https://teob.dk/" />}
+    {published && <meta property="og:type" content="website" />}
+    {published && <meta property="og:locale" content="da_DK" />}
+    {published && <meta property="og:site_name" content="The Evolution of Bikes" />}
+    {published && <meta property="og:title" content="Cykelhistorien har flere spor | The Evolution of Bikes" />}
+    {published && <meta property="og:description" content="Historiske racercykler og fortællinger om rytterne, løbene, værkstederne og de mekaniske valg, der ændrede cyklen." />}
+    {published && <meta property="og:url" content="https://teob.dk/" />}
+    {published && <meta property="og:image" content="https://teob.dk/og.png" />}
+    {published && <meta property="og:image:alt" content="The Evolution of Bikes – cykelhistorier og historiske racercykler" />}
+    {published && <meta name="twitter:card" content="summary_large_image" />}
+    {published && <meta name="twitter:title" content="Cykelhistorien har flere spor | The Evolution of Bikes" />}
+    {published && <meta name="twitter:description" content="Historiske racercykler og fortællinger om rytterne, løbene, værkstederne og de mekaniske valg, der ændrede cyklen." />}
+    {published && <meta name="twitter:image" content="https://teob.dk/og.png" />}
+    <title>{published ? 'Cykelhistorien har flere spor | The Evolution of Bikes' : 'Forsideudkast | The Evolution of Bikes'}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body class="editorial-home-draft">
+    <header class="site-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside">
+        <span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span>
+      </a>
+      <nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav>
+      <div class="header-tools"><strong aria-current="page">DA</strong><span aria-hidden="true">/</span><a class="language-switch" href={`${base}/en/`} lang="en" hreflang="en">EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div>
+    </header>
+
+    <main>
+      <section class="draft-lead" aria-labelledby="draft-lead-title">
+        <div class="draft-lead-intro">
+          <p class="eyebrow">Kom for cyklerne. Bliv for historierne.</p>
+          <h1 id="draft-lead-title">Cykelhistorien<br /><em>har flere spor.</em></h1>
+          <p>Her mødes en personlig samling af historiske racercykler med fortællingerne om rytterne, løbene og værkstederne, der formede dem. Vi følger sporene fra de første støvede landeveje til carbon, elektronik og moderne træning.</p>
+          <p>Gå gennem historien årti for årti, følg syv temaer på tværs af tiden – eller kom helt tæt på en cykel og de små mekaniske valg, der ændrede den undervejs.</p>
+          <a href={`${base}/historier/`}>Gå på opdagelse i alle historier →</a>
+        </div>
+        <a class="draft-lead-story" href={leadStory.link}>
+          <img src={leadStory.imageUrl} alt="" fetchpriority="high" />
+          <span class="draft-lead-overlay" aria-hidden="true"></span>
+          <span class="draft-lead-story-copy"><small>Dagens hovedhistorie · {leadStory.year}</small><strong>{leadStory.title}</strong><p>{leadStory.text}</p><i>Læs historien →</i></span>
+        </a>
+      </section>
+
+      <section class="draft-latest" aria-labelledby="draft-latest-title">
+        <header><div><p class="section-label">Nyt fra arkivet</p><h2 id="draft-latest-title">Tre nye historier</h2></div><p>Vi udgiver løbende nye fortællinger. Her er dagens øvrige veje ind i arkivet.</p></header>
+        <div class="draft-story-row">
+          {latestStories.map((story, index) => (
+            <a class="draft-story-card" href={story.link}><span class="draft-card-index">0{index + 1}</span><img src={story.imageUrl} alt="" loading="lazy" /><small>{story.year}</small><h3>{story.title}</h3><p>{story.text}</p><i>Læs historien →</i></a>
+          ))}
+        </div>
+      </section>
+
+      <aside class="draft-manifesto" aria-label="Om samlingen">
+        <span aria-hidden="true">“</span>
+        <blockquote>Det interessante er ikke kun, hvor gammel en cykel er — men hvilke veje den har kørt, hvor den kommer fra, og hvem der har kørt på den!</blockquote>
+      </aside>
+
+      <section class="draft-start" aria-labelledby="draft-start-title">
+        <header><div><p class="section-label">Ny her?</p><h2 id="draft-start-title">Begynd med tre fortællinger</h2></div><p>Tre forskellige sider af cykelhistorien: løbet, mennesket og den mekaniske detalje.</p></header>
+        <div>
+          {startHere.map((story) => (
+            <a href={story.link}><img src={story.imageUrl} alt="" loading="lazy" /><span><small>{story.year}</small><h3>{story.title}</h3><p>{story.text}</p><i>Begynd her →</i></span></a>
+          ))}
+        </div>
+      </section>
+
+      <section class="draft-periods" aria-labelledby="draft-periods-title">
+        <header><div><p class="section-label">Den lange linje</p><h2 id="draft-periods-title">Gå gennem tiden</h2></div><p>Perioderne samler løbene, cyklerne og den kultur, historierne voksede ud af.</p></header>
+        <div>{periods.map(([year, label, slug]) => <a href={`${base}/perioder/${slug}/`}><strong>{year}</strong><span>{label}</span></a>)}</div>
+      </section>
+
+      <section class="draft-themes" aria-labelledby="draft-themes-title">
+        <header><div><p class="section-label">Følg et spor</p><h2 id="draft-themes-title">Syv temaer gennem cykelhistorien</h2></div><p>Se det samme spørgsmål forandre sig fra årti til årti – fra kosten i feltet til teknikken under rytteren.</p></header>
+        <div class="draft-theme-grid">
+          {themes.map(([title, text, key], index) => (
+            <a href={`${base}/tema/${key}/`}><small>{String(index + 1).padStart(2, '0')}</small><h3>{title}</h3><p>{text}</p><i>Følg temaet →</i></a>
+          ))}
+        </div>
+      </section>
+
+      <section class="draft-bike">
+        <div class="draft-bike-image"><img id="draft-rotating-bike-image" src={`${base}/${featuredBike.image}`} alt={featuredBike.title} loading="lazy" /></div>
+        <div class="draft-bike-copy"><p class="section-label">Fra samlingen</p><p id="draft-rotating-bike-meta" class="draft-bike-meta">{featuredBike.year} · {featuredBike.place}</p><h2 id="draft-rotating-bike-title">{featuredBike.title}</h2><p id="draft-rotating-bike-text">{featuredBike.text}</p><a id="draft-rotating-bike-link" href={`${base}/cykler/${featuredBike.slug}/`}>Se cyklen og dens historie →</a><a class="draft-quiet-link" href={`${base}/cykler/`}>Se hele samlingen</a></div>
+      </section>
+
+      <section class="draft-return">
+        <p class="section-label">Der er altid et nyt spor</p><h2>En historie fører videre til den næste.</h2><p>Gå tilbage til arkivet, vælg en periode – eller begynd med en cykel fra samlingen.</p><div><a href={`${base}/historier/`}>Alle historier →</a><a href={`${base}/perioder/`}>Alle perioder →</a></div>
+      </section>
+    </main>
+
+    <footer id="om"><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+    <script is:inline define:vars={{ rotatingBikes, base }}>
+      const threeDays = 3 * 24 * 60 * 60 * 1000;
+      const bike = rotatingBikes[Math.floor(Date.now() / threeDays) % rotatingBikes.length];
+      const image = document.querySelector('#draft-rotating-bike-image');
+      const meta = document.querySelector('#draft-rotating-bike-meta');
+      const title = document.querySelector('#draft-rotating-bike-title');
+      const text = document.querySelector('#draft-rotating-bike-text');
+      const link = document.querySelector('#draft-rotating-bike-link');
+      if (bike && image && meta && title && text && link) {
+        image.src = `${base}/${bike.image}`;
+        image.alt = bike.title;
+        meta.textContent = `${bike.year} · ${bike.place}`;
+        title.textContent = bike.title;
+        text.textContent = bike.text;
+        link.href = `${base}/cykler/${bike.slug}/`;
+      }
+    </script>
+  </body>
+</html>

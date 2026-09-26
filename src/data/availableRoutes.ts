@@ -8,6 +8,8 @@ const slugsFrom = (paths: string[]) => new Set(
 );
 
 const dynamicEnglishStorySlugs = [
+  'yvonne-reynders-kulcykel-og-verdensmesterskaber',
+  'tourens-taxaregning-1926',
   'circuit-de-france-1942',
   'gino-bartali-kurer-under-krigen',
   'fausto-coppi-fra-krigsfange-til-comeback',

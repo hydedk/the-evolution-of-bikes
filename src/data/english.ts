@@ -2,6 +2,8 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'yvonne-reynders-kulcykel-og-verdensmesterskaber': ['When the coal had been delivered, training began', "Yvonne Reynders delivered coal on a three-wheeled cargo bicycle before winning seven world titles on road and track."],
+  'tourens-taxaregning-1926': ['When the Tour had to pay the taxi fare', 'Three riders stepped out of a car in Luchon and disappeared, according to a story passed down from the 1926 Tour. The driver instead took his bill to the race officials.'],
   'campagnolo-cambio-corsa': ['The gear change with a loose rear wheel', 'Cambio Corsa offered several gears, but demanded two levers, back-pedalling and a moment with the rear wheel released while the bicycle was moving.'],
   'shimano-dura-ace-ax': ['When even the pedal thread had to be aerodynamic', 'Shimano built a wind tunnel and gave Dura-Ace AX smooth forms. The idea reached all the way to the pedal and showed how far a complete system could be pushed.'],
   'liege-bastogne-liege-1980': ['The day snow emptied Liège–Bastogne–Liège', 'A field of 174 began in the cold and only 21 finished, while Bernard Hinault rode roughly 80 kilometres alone and suffered lasting damage to his hands.'],

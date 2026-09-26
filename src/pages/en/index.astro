@@ -5,17 +5,10 @@ import { englishStories as stories, englishBikes as bikes } from '../../data/eng
 import { englishBikeSlugs, englishStorySlugs } from '../../data/availableRoutes';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const homepageCopy: Record<string, [string, string]> = {
-  'yvonne-reynders-kulcykel-og-verdensmesterskaber': ['When the coal had been delivered, training began', 'Yvonne Reynders combined work delivering coal with training and became a multiple world champion on road and track.'],
-  'tourens-taxaregning-1926': ['When the Tour had to pay the taxi fare', 'Three riders disappeared from a car in Luchon, according to a story passed down from the race. The driver instead took his bill to the Tour officials.'],
-};
 const toCard = (story) => {
   const translated = englishStorySlugs.has(story.slug);
-  const localCopy = homepageCopy[story.slug];
   return {
     ...story,
-    title: localCopy?.[0] ?? story.title,
-    text: localCopy?.[1] ?? story.text,
     imageUrl: typeof story.image === 'string' ? `${base}/${story.image}` : story.image.src,
     link: `${base}/${translated ? 'en/stories' : 'historier'}/${story.slug}/`,
     language: translated ? 'en' : 'da',

@@ -37,6 +37,8 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'yvonne-reynders-kulcykel-og-verdensmesterskaber': { period: '1960-1969', primary: 'ryttere', secondary: ['cykelkultur', 'samfund-og-tidsaand'] },
+  'tourens-taxaregning-1926': { period: '1920-1930', primary: 'loeb-og-store-oejeblikke', secondary: ['menneskene-bag', 'cykelkultur'] },
   'campagnolo-cambio-corsa': { period: '1940-1949', primary: 'teknik', secondary: ['ryttere', 'menneskene-bag'] },
   'shimano-dura-ace-ax': { period: '1980-1989', primary: 'teknik', secondary: ['samfund-og-tidsaand', 'cykelkultur'] },
   'liege-bastogne-liege-1980': { period: '1980-1989', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'kost-traening-og-videnskab'] },

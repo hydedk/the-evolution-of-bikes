@@ -44,6 +44,8 @@ import ugoBianchiImage from '../assets/stories/ugo-bianchi-let-banescykel-1948/f
 import polarHeartRateImage from '../assets/stories/polar-pulsmaaler-traening/polar-heart-rate-illustration.png';
 import peppinoDraliImage from '../assets/stories/peppino-drali-bianchi/drali-workshop-illustration.png';
 import pastaCarbsImage from '../assets/stories/pasta-kulhydrater-1980erne/team-breakfast-illustration.png';
+import yvonneReyndersImage from '../assets/stories/yvonne-reynders/yvonne-reynders-track-1967.jpg';
+import tourTaxi1926Image from '../assets/stories/tour-taxi-1926/buysse-huysse-aubisque-1926.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -61,6 +63,8 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'yvonne-reynders-kulcykel-og-verdensmesterskaber': 'people',
+  'tourens-taxaregning-1926': 'race',
   'campagnolo-cambio-corsa': 'mechanics',
   'shimano-dura-ace-ax': 'mechanics',
   'liege-bastogne-liege-1980': 'race',
@@ -132,6 +136,8 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'yvonne-reynders-kulcykel-og-verdensmesterskaber', type: 'historie', year: '1959–1966', title: 'Når kullene var afleveret, begyndte træningen', text: 'Yvonne Reynders bar kul ud på en trehjulet ladcykel, før hun vandt syv verdensmesterskaber på landevej og bane.', image: yvonneReyndersImage, periods: ['1950-1959', '1960-1969'], topics: ['yvonne-reynders', 'kvindecykling', 'verdensmesterskab', 'banecykling'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'tourens-taxaregning-1926', type: 'historie', year: '1926', title: 'Da Touren måtte betale taxaregningen', text: 'Tre ryttere forsvandt fra en bil i Luchon, fortæller en overleveret historie. Chaufføren gik i stedet til Tourens dommerbord med regningen.', image: tourTaxi1926Image, periods: ['1920-1930'], topics: ['tour-de-france', 'lucien-buysse', 'tourmalet', 'anekdote'], relatedBikes: ['cycles-france-sport'], relatedComponents: [] },
   { slug: 'da-pulsen-kom-med-ud-paa-landevejen', type: 'historie', year: '1982–1989', title: 'Da pulsen kom med ud på landevejen', text: 'Et brystbælte og en lille modtager på håndleddet gjorde det muligt at følge hjertet uden laboratoriets ledninger. Træningen fik et nyt tal at diskutere.', image: polarHeartRateImage, periods: ['1980-1989'], topics: ['polar', 'pulsmåler', 'træning', 'fysiologi'], relatedBikes: [], relatedComponents: [] },
   { slug: 'peppino-drali-bianchi-ved-filebaenken', type: 'historie', year: '1946–1970’erne', title: 'Bianchi på skrårøret, Drali ved filebænken', text: 'Peppino Drali byggede specialtilpassede Bianchi-stel i Milano. Navnet på røret kom fra den store fabrik; pasformen og håndarbejdet kom fra det lille værksted.', image: peppinoDraliImage, periods: ['1940-1949', '1970-1979'], topics: ['peppino-drali', 'bianchi', 'rammebygning', 'milano'], relatedBikes: [], relatedComponents: [] },
   { slug: 'da-pastaen-overtog-morgenbordet', type: 'historie', year: '1980’erne', title: 'Da pastaen overtog morgenbordet', text: 'Bøffen forsvandt ikke på én morgen, men i 1980’erne blev kulhydrat noget, holdene kunne måle, blande i flasken og lægge på tallerkenen.', image: pastaCarbsImage, periods: ['1980-1989'], topics: ['kost', 'kulhydrat', 'pasta', 'sportsdrik'], relatedBikes: [], relatedComponents: [] },

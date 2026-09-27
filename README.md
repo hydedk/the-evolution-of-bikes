@@ -33,11 +33,17 @@ redaktionelle noter udleveres aldrig af den offentlige funktion.
 
 Før siden tages i brug:
 
-1. Kør migrationerne `202609140001_admin_story_submissions.sql` og
-   `202609140002_comment_administration.sql`.
+1. Kør migrationerne `202609140001_admin_story_submissions.sql`,
+   `202609140002_comment_administration.sql` og
+   `202609270001_editorial_planning_notes.sql`.
 2. Deploy Edge Functionerne `admin-story-submissions` og `public-story-comments`.
 3. Sæt `ADMIN_EMAILS` og den eksisterende `ALLOWED_ORIGINS` som private secrets.
 4. Opret redaktøren som bruger i Supabase Auth.
 5. Sæt `PUBLIC_SUPABASE_ANON_KEY` som GitHub Actions-variable ved build.
 
 `SUPABASE_SERVICE_ROLE_KEY` må aldrig tilføjes som en `PUBLIC_*`-variabel.
+
+Administrationen har desuden fanen **Plan og idéer**. Den bruger tabellen
+`editorial_planning_notes` til en fælles, privat oversigt over mangler, gode
+idéer og næste skridt. Noterne kan knyttes til et af hjemmesidens syv temaer,
+prioriteres og markeres som åbne, i arbejde eller afsluttede.

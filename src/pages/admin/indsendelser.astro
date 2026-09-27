@@ -12,6 +12,15 @@ const editorialStatusLabels = {
   indbakke: 'Indbakke', vurderes: 'Vurderes', research: 'Research', udkast: 'Udkast',
   klar: 'Klar', publiceret: 'Publiceret', paa_hold: 'På hold', sammenlagt: 'Sammenlagt',
 };
+const editorialThemeLabels = {
+  'loeb-og-store-oejeblikke': 'Løb og store øjeblikke', ryttere: 'Periodens ryttere',
+  teknik: 'Cykler og tekniske nybrud', 'kost-traening-og-videnskab': 'Kost, træning og videnskab',
+  cykelkultur: 'Cykelkultur og hverdagsliv', 'samfund-og-tidsaand': 'Samfund og tidsånd',
+  'menneskene-bag': 'Menneskene bag cyklingen',
+};
+const editorialThemes = Object.entries(editorialThemeLabels).map(([theme, label]) => ({
+  theme, label, count: editorialOverview.filter((item) => item.spor === theme).length,
+}));
 const editorialCategoryByStatus = {
   indbakke: 'lager', vurderes: 'lager',
   research: 'arbejde', udkast: 'arbejde', klar: 'arbejde',
@@ -81,6 +90,7 @@ const editorialCategories = [
       <div class="admin-mode-tabs" role="tablist" aria-label="Administrationsområde">
         <button type="button" role="tab" data-admin-mode="inbox" aria-selected="true">Indsendelser</button>
         <button type="button" role="tab" data-admin-mode="stock" aria-selected="false">Redaktionelt lager <span>({editorialOverview.length})</span></button>
+        <button type="button" role="tab" data-admin-mode="planning" aria-selected="false">Plan og idéer <span id="planning-tab-count"></span></button>
       </div>
 
       <div id="admin-inbox-panel">
@@ -120,19 +130,51 @@ const editorialCategories = [
         <div class="editorial-toolbar">
           <label><span>Søg i lageret</span><input id="stock-search" type="search" placeholder="Titel, år, periode eller næste handling" /></label>
           <label><span>Kategori</span><select id="stock-status"><option value="">Alle kategorier</option>{editorialCategories.map(({ category, label, count }) => <option value={category}>{label} ({count})</option>)}</select></label>
+          <label><span>Tema</span><select id="stock-theme"><option value="">Alle temaer</option>{editorialThemes.map(({ theme, label, count }) => <option value={theme}>{label} ({count})</option>)}</select></label>
         </div>
         <p id="stock-count" class="editorial-stock-count" aria-live="polite"></p>
         <div id="stock-list" class="editorial-stock-list">
           {editorialOverview.map((item) => (
-            <article class="editorial-stock-card" data-stock-card data-category={editorialCategoryByStatus[item.status]} data-search={[item.titel, item.aar, item.periode, item.naeste_handling, item.id].filter(Boolean).join(' ').toLocaleLowerCase('da')}>
+            <article class="editorial-stock-card" data-stock-card data-category={editorialCategoryByStatus[item.status]} data-theme={item.spor} data-search={[item.titel, item.aar, item.periode, item.naeste_handling, item.id, editorialThemeLabels[item.spor]].filter(Boolean).join(' ').toLocaleLowerCase('da')}>
               <header><span class={`editorial-badge editorial-${editorialCategoryByStatus[item.status]}`}>{editorialCategories.find((entry) => entry.category === editorialCategoryByStatus[item.status])?.label}</span><span>{item.id}</span></header>
               <h3>{item.titel}</h3>
-              <p class="editorial-meta">{[item.aar, item.periode, item.prioritet].filter(Boolean).join(' · ')}</p>
+              <p class="editorial-meta">{[item.aar, item.periode, editorialThemeLabels[item.spor], item.prioritet].filter(Boolean).join(' · ')}</p>
               {item.naeste_handling && <p><strong>Næste skridt:</strong> {item.naeste_handling}</p>}
               <dl><dt>Arbejdsstatus</dt><dd>{editorialStatusLabels[item.status] ?? item.status}</dd><dt>Dokumentation</dt><dd>{item.dokumentation || '—'}</dd><dt>Faktarisiko</dt><dd>{item.faktarisiko || '—'}</dd></dl>
               {item.kanonisk_url && <a href={`${base}${item.kanonisk_url}`} target="_blank" rel="noopener">Åbn på hjemmesiden</a>}
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="planning-panel" class="planning-panel" hidden aria-labelledby="planning-title">
+        <header class="editorial-stock-header">
+          <div><p class="section-label">Redaktionens opslagstavle</p><h2 id="planning-title">Hvad mangler vi?</h2></div>
+          <div class="planning-intro"><p>Gem huller, gode idéer og næste skridt ét sted.</p><button id="planning-import" class="admin-secondary-button" type="button" hidden></button></div>
+        </header>
+        <div class="planning-layout">
+          <form id="planning-form" class="planning-form">
+            <input name="id" type="hidden" />
+            <div class="planning-form-heading"><h3>Ny note</h3><button id="planning-cancel" type="button" hidden>Annuller redigering</button></div>
+            <label>Overskrift<input name="title" maxlength="180" required placeholder="Hvad skal vi huske eller undersøge?" /></label>
+            <div class="planning-form-grid">
+              <label>Type<select name="kind"><option value="mangel">Mangler</option><option value="ide">God idé</option><option value="naeste-skridt">Næste skridt</option></select></label>
+              <label>Prioritet<select name="priority"><option value="hoej">Høj</option><option value="normal" selected>Normal</option><option value="lav">Lav</option></select></label>
+              <label>Status<select name="status"><option value="aaben">Åben</option><option value="i-arbejde">I arbejde</option><option value="afsluttet">Afsluttet</option></select></label>
+              <label>Tema<select name="theme"><option value="">Intet bestemt tema</option>{Object.entries(editorialThemeLabels).map(([value, label]) => <option value={value}>{label}</option>)}</select></label>
+            </div>
+            <label>Noter<textarea name="notes" rows="7" maxlength="10000" placeholder="Skriv vinkler, mangler, kilder eller det næste konkrete skridt…"></textarea></label>
+            <div class="admin-save-row"><p id="planning-save-status" class="admin-save-status" aria-live="polite"></p><button type="submit">Gem note</button></div>
+          </form>
+          <div class="planning-overview">
+            <div class="planning-toolbar">
+              <label><span>Vis</span><select id="planning-kind-filter"><option value="">Alle typer</option><option value="mangel">Mangler</option><option value="ide">Gode idéer</option><option value="naeste-skridt">Næste skridt</option></select></label>
+              <label><span>Status</span><select id="planning-status-filter"><option value="">Alle statusser</option><option value="aaben">Åben</option><option value="i-arbejde">I arbejde</option><option value="afsluttet">Afsluttet</option></select></label>
+              <label><span>Søg</span><input id="planning-search" type="search" placeholder="Søg i oversigten" /></label>
+            </div>
+            <p id="planning-count" class="editorial-stock-count" aria-live="polite"></p>
+            <div id="planning-list" class="planning-list"></div>
+          </div>
         </div>
       </section>
     </section>
@@ -175,8 +217,19 @@ const editorialCategories = [
   const modeTabs = [...document.querySelectorAll('[data-admin-mode]')];
   const inboxPanel = document.querySelector('#admin-inbox-panel');
   const stockPanel = document.querySelector('#editorial-stock-panel');
+  const planningPanel = document.querySelector('#planning-panel');
+  const planningForm = document.querySelector('#planning-form');
+  const planningList = document.querySelector('#planning-list');
+  const planningCount = document.querySelector('#planning-count');
+  const planningTabCount = document.querySelector('#planning-tab-count');
+  const planningKindFilter = document.querySelector('#planning-kind-filter');
+  const planningStatusFilter = document.querySelector('#planning-status-filter');
+  const planningSearch = document.querySelector('#planning-search');
+  const planningCancel = document.querySelector('#planning-cancel');
+  const planningImport = document.querySelector('#planning-import');
   const stockSearch = document.querySelector('#stock-search');
   const stockStatus = document.querySelector('#stock-status');
+  const stockTheme = document.querySelector('#stock-theme');
   const stockCount = document.querySelector('#stock-count');
   const stockCards = [...document.querySelectorAll('[data-stock-card]')];
   const typeTabs = [...document.querySelectorAll('[data-type]')];
@@ -187,7 +240,9 @@ const editorialCategories = [
   const search = document.querySelector('#story-search');
   const filter = document.querySelector('#status-filter');
   const storageKey = 'teob-admin-session';
+  const planningLocalKey = 'teob-admin-planning-notes';
   let submissions = [];
+  let planningNotes = [];
   let selectedId = null;
   let activeType = 'story';
 
@@ -195,15 +250,17 @@ const editorialCategories = [
   const fileSize = (bytes) => bytes ? `${(bytes / 1024 / 1024).toFixed(1).replace('.', ',')} MB` : '';
   const session = () => { try { return JSON.parse(sessionStorage.getItem(storageKey) || 'null'); } catch { return null; } };
   const setSession = (value) => value ? sessionStorage.setItem(storageKey, JSON.stringify(value)) : sessionStorage.removeItem(storageKey);
+  const localPlanningNotes = () => { try { return JSON.parse(localStorage.getItem(planningLocalKey) || '[]'); } catch { return []; } };
   const addText = (parent, tag, label, value) => { const term = document.createElement(tag); term.textContent = label; const description = document.createElement(tag === 'dt' ? 'dd' : 'span'); description.textContent = value || '—'; parent.append(term, description); };
   const option = (value, label) => { const item = document.createElement('option'); item.value = value; item.textContent = label; return item; };
 
   function renderStock() {
     const query = stockSearch?.value.trim().toLocaleLowerCase('da') || '';
     const category = stockStatus?.value || '';
+    const theme = stockTheme?.value || '';
     let visible = 0;
     stockCards.forEach((card) => {
-      const matches = (!category || card.dataset.category === category) && (!query || card.dataset.search.includes(query));
+      const matches = (!category || card.dataset.category === category) && (!theme || card.dataset.theme === theme) && (!query || card.dataset.search.includes(query));
       card.hidden = !matches;
       if (matches) visible += 1;
     });
@@ -213,12 +270,14 @@ const editorialCategories = [
 
   function setAdminMode(mode) {
     const stock = mode === 'stock';
-    inboxPanel.hidden = stock;
+    const planning = mode === 'planning';
+    inboxPanel.hidden = stock || planning;
     stockPanel.hidden = !stock;
+    planningPanel.hidden = !planning;
     modeTabs.forEach((tab) => tab.setAttribute('aria-selected', String(tab.dataset.adminMode === mode)));
-    document.querySelector('#workspace-title').textContent = stock ? 'Redaktionelt lager' : 'Indsendelser';
-    count.textContent = stock ? `${stockCards.length} idéer i alt` : count.dataset.inboxText || count.textContent;
-    if (stock) renderStock(); else renderList();
+    document.querySelector('#workspace-title').textContent = planning ? 'Plan og idéer' : (stock ? 'Redaktionelt lager' : 'Indsendelser');
+    count.textContent = planning ? `${planningNotes.length} noter i alt` : (stock ? `${stockCards.length} idéer i alt` : count.dataset.inboxText || count.textContent);
+    if (planning) renderPlanning(); else if (stock) renderStock(); else renderList();
   }
 
   Object.entries(statusLabels).forEach(([value, label]) => filter?.append(option(value, label)));
@@ -263,13 +322,69 @@ const editorialCategories = [
   async function loadSubmissions() {
     workspaceStatus.textContent = 'Henter indsendelser…';
     try {
-      const result = await adminFetch(); submissions = result.submissions || [];
+      const result = await adminFetch(); submissions = result.submissions || []; planningNotes = result.planningNotes || [];
+      const localCount = localPlanningNotes().length;
+      planningImport.hidden = !localCount;
+      planningImport.textContent = localCount ? `Flyt ${localCount} lokale ${localCount === 1 ? 'note' : 'noter'} hertil` : '';
+      planningTabCount.textContent = `(${planningNotes.filter((item) => item.status !== 'afsluttet').length})`;
       workspaceStatus.textContent = ''; renderList();
       if (selectedId && submissions.some((item) => item.id === selectedId)) renderDetail(selectedId);
     } catch (error) {
       workspaceStatus.textContent = error instanceof Error ? error.message : 'Indsendelserne kunne ikke hentes.';
       if (/Log ind|adgang/.test(workspaceStatus.textContent)) showLogin(workspaceStatus.textContent);
     }
+  }
+
+  const planningKindLabels = { mangel: 'Mangler', ide: 'God idé', 'naeste-skridt': 'Næste skridt' };
+  const planningPriorityLabels = { hoej: 'Høj', normal: 'Normal', lav: 'Lav' };
+  const planningStatusLabels = { aaben: 'Åben', 'i-arbejde': 'I arbejde', afsluttet: 'Afsluttet' };
+  const planningThemeLabels = {
+    'loeb-og-store-oejeblikke': 'Løb og store øjeblikke', ryttere: 'Periodens ryttere', teknik: 'Cykler og tekniske nybrud',
+    'kost-traening-og-videnskab': 'Kost, træning og videnskab', cykelkultur: 'Cykelkultur og hverdagsliv',
+    'samfund-og-tidsaand': 'Samfund og tidsånd', 'menneskene-bag': 'Menneskene bag cyklingen',
+  };
+
+  function resetPlanningForm() {
+    planningForm.reset(); planningForm.elements.id.value = ''; planningForm.elements.priority.value = 'normal';
+    planningForm.elements.status.value = 'aaben'; planningForm.querySelector('h3').textContent = 'Ny note'; planningCancel.hidden = true;
+    document.querySelector('#planning-save-status').textContent = '';
+  }
+
+  function editPlanningNote(item) {
+    Object.entries(item).forEach(([key, value]) => { if (planningForm.elements[key]) planningForm.elements[key].value = value || ''; });
+    planningForm.querySelector('h3').textContent = 'Rediger note'; planningCancel.hidden = false;
+    planningForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function renderPlanning() {
+    const kind = planningKindFilter.value; const status = planningStatusFilter.value;
+    const query = planningSearch.value.trim().toLocaleLowerCase('da');
+    const visible = planningNotes.filter((item) => (!kind || item.kind === kind) && (!status || item.status === status) && (!query ||
+      [item.title, item.notes, planningThemeLabels[item.theme]].some((value) => String(value || '').toLocaleLowerCase('da').includes(query))));
+    planningCount.textContent = `${visible.length} af ${planningNotes.length} noter vises`;
+    planningList.replaceChildren();
+    if (!visible.length) { const empty = document.createElement('p'); empty.className = 'admin-list-empty'; empty.textContent = 'Der er ingen noter, som matcher filtrene.'; planningList.append(empty); return; }
+    visible.forEach((item) => {
+      const article = document.createElement('article'); article.className = `planning-card planning-${item.kind}`;
+      if (item.status === 'afsluttet') article.classList.add('planning-complete');
+      const header = document.createElement('header');
+      const type = document.createElement('span'); type.className = 'planning-kind'; type.textContent = planningKindLabels[item.kind];
+      const priority = document.createElement('span'); priority.textContent = `${planningPriorityLabels[item.priority]} prioritet`;
+      header.append(type, priority);
+      const title = document.createElement('h3'); title.textContent = item.title;
+      const meta = document.createElement('p'); meta.className = 'planning-card-meta'; meta.textContent = [planningStatusLabels[item.status], planningThemeLabels[item.theme], `Opdateret ${dateTime(item.updated_at)}`].filter(Boolean).join(' · ');
+      article.append(header, title, meta);
+      if (item.notes) { const notes = document.createElement('p'); notes.className = 'planning-card-notes'; notes.textContent = item.notes; article.append(notes); }
+      const actions = document.createElement('div'); actions.className = 'planning-actions';
+      const edit = document.createElement('button'); edit.type = 'button'; edit.textContent = 'Rediger'; edit.addEventListener('click', () => editPlanningNote(item));
+      const remove = document.createElement('button'); remove.type = 'button'; remove.textContent = 'Slet'; remove.className = 'planning-delete';
+      remove.addEventListener('click', async () => {
+        if (!confirm(`Slet “${item.title}”?`)) return;
+        try { await adminFetch({ method: 'DELETE', body: JSON.stringify({ resource: 'planning_note', id: item.id }) }); planningNotes = planningNotes.filter((note) => note.id !== item.id); renderPlanning(); }
+        catch (error) { alert(error instanceof Error ? error.message : 'Noten kunne ikke slettes.'); }
+      });
+      actions.append(edit, remove); article.append(actions); planningList.append(article);
+    });
   }
 
   function filteredSubmissions() {
@@ -395,6 +510,41 @@ const editorialCategories = [
   modeTabs.forEach((tab) => tab.addEventListener('click', () => setAdminMode(tab.dataset.adminMode)));
   stockSearch?.addEventListener('input', renderStock);
   stockStatus?.addEventListener('change', renderStock);
+  stockTheme?.addEventListener('change', renderStock);
+  planningKindFilter?.addEventListener('change', renderPlanning);
+  planningStatusFilter?.addEventListener('change', renderPlanning);
+  planningSearch?.addEventListener('input', renderPlanning);
+  planningCancel?.addEventListener('click', resetPlanningForm);
+  planningImport?.addEventListener('click', async () => {
+    const localNotes = localPlanningNotes(); if (!localNotes.length) return;
+    if (!confirm(`Flyt ${localNotes.length} lokale ${localNotes.length === 1 ? 'note' : 'noter'} til den fælles oversigt?`)) return;
+    planningImport.disabled = true; planningImport.textContent = 'Flytter…';
+    try {
+      for (const note of localNotes) {
+        const payload = { resource: 'planning_note', title: note.title, kind: note.kind, priority: note.priority, status: note.status, theme: note.theme, notes: note.notes };
+        const result = await adminFetch({ method: 'POST', body: JSON.stringify(payload) }); planningNotes.unshift(result.planningNote);
+      }
+      localStorage.removeItem(planningLocalKey); planningImport.hidden = true; renderPlanning();
+    } catch (error) { alert(error instanceof Error ? error.message : 'De lokale noter kunne ikke flyttes.'); planningImport.textContent = 'Prøv at flytte lokale noter igen'; }
+    finally { planningImport.disabled = false; }
+  });
+  planningForm?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const saveStatus = document.querySelector('#planning-save-status'); const button = planningForm.querySelector('button[type="submit"]');
+    const data = new FormData(planningForm); const id = String(data.get('id') || '');
+    const payload = { resource: 'planning_note', id, title: data.get('title'), kind: data.get('kind'), priority: data.get('priority'), status: data.get('status'), theme: data.get('theme'), notes: data.get('notes') };
+    button.disabled = true; saveStatus.textContent = 'Gemmer…';
+    try {
+      const result = await adminFetch({ method: id ? 'PATCH' : 'POST', body: JSON.stringify(payload) });
+      const savedNote = result.planningNote;
+      if (id) planningNotes = planningNotes.map((item) => item.id === id ? savedNote : item);
+      else planningNotes.unshift(savedNote);
+      planningNotes.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+      planningTabCount.textContent = `(${planningNotes.filter((item) => item.status !== 'afsluttet').length})`;
+      resetPlanningForm(); renderPlanning(); saveStatus.textContent = 'Noten er gemt i den fælles oversigt.';
+    } catch (error) { saveStatus.textContent = error instanceof Error ? error.message : 'Noten kunne ikke gemmes.'; }
+    finally { button.disabled = false; }
+  });
   document.querySelectorAll('[data-stock-category]').forEach((button) => button.addEventListener('click', () => {
     stockStatus.value = stockStatus.value === button.dataset.stockCategory ? '' : button.dataset.stockCategory;
     renderStock();
@@ -491,6 +641,34 @@ const editorialCategories = [
   .admin-mode-tabs button { padding: 12px 18px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font: 600 .88rem var(--sans); cursor: pointer; }
   .admin-mode-tabs button[aria-selected="true"] { background: var(--ink); color: var(--paper); }
   .admin-mode-tabs span { font-weight: 400; }
+  .planning-panel { margin-top: 34px; }
+  .planning-intro { display: grid; justify-items: end; gap: 12px; text-align: right; }
+  .planning-intro p { margin: 0; }
+  .planning-layout { display: grid; grid-template-columns: minmax(300px, .72fr) minmax(0, 1.28fr); gap: 24px; align-items: start; margin-top: 28px; }
+  .planning-form { position: sticky; top: 16px; display: grid; gap: 18px; padding: clamp(22px, 3vw, 34px); background: var(--paper); border: 1px solid var(--line); }
+  .planning-form-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; }
+  .planning-form-heading h3 { margin: 0; font: 400 2rem var(--display); }
+  .planning-form-heading button { border: 0; background: transparent; color: var(--rust); text-decoration: underline; cursor: pointer; }
+  .planning-form label, .planning-toolbar label { display: grid; gap: 8px; font-weight: 600; }
+  .planning-form :is(input, select, textarea), .planning-toolbar :is(input, select) { width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid #aaa69a; border-radius: 0; background: #fff; color: var(--ink); font: inherit; }
+  .planning-form textarea { resize: vertical; line-height: 1.55; }
+  .planning-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .planning-toolbar { display: grid; grid-template-columns: minmax(150px, .55fr) minmax(150px, .55fr) minmax(220px, 1fr); gap: 12px; padding: 18px; background: var(--paper); border: 1px solid var(--line); }
+  .planning-toolbar span { font-size: .8rem; }
+  .planning-list { display: grid; gap: 12px; margin-top: 14px; }
+  .planning-card { padding: 22px; border: 1px solid var(--line); border-left: 5px solid #817c70; background: var(--paper); }
+  .planning-card.planning-mangel { border-left-color: #a6492d; }
+  .planning-card.planning-ide { border-left-color: #b38a35; }
+  .planning-card.planning-naeste-skridt { border-left-color: #496d74; }
+  .planning-card.planning-complete { opacity: .62; }
+  .planning-card > header { display: flex; justify-content: space-between; gap: 16px; color: #6b675e; font-size: .74rem; text-transform: uppercase; letter-spacing: .04em; }
+  .planning-kind { color: var(--rust); font-weight: 600; }
+  .planning-card h3 { margin: 14px 0 7px; font: 400 1.65rem/1.15 var(--display); }
+  .planning-card-meta { margin: 0; color: #6b675e; font-size: .8rem; }
+  .planning-card-notes { margin: 18px 0 0; white-space: pre-wrap; line-height: 1.55; }
+  .planning-actions { display: flex; gap: 10px; margin-top: 20px; }
+  .planning-actions button { padding: 8px 13px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font: 600 .78rem var(--sans); cursor: pointer; }
+  .planning-actions .planning-delete { border-color: transparent; color: #8b321f; }
   .admin-type-tabs { display: flex; gap: 4px; margin-top: 34px; border-bottom: 1px solid var(--line); }
   .admin-type-tabs button { padding: 13px 19px; border: 1px solid transparent; border-bottom: 0; background: transparent; color: #67645d; font: 600 .92rem var(--sans); cursor: pointer; }
   .admin-type-tabs button[aria-selected="true"] { margin-bottom: -1px; border-color: var(--line); background: var(--paper); color: var(--ink); }
@@ -594,6 +772,10 @@ const editorialCategories = [
     .admin-toolbar { grid-template-columns: 1fr 1fr; }
     .admin-search { grid-column: 1 / -1; }
     .admin-columns { grid-template-columns: 1fr; }
+    .planning-layout { grid-template-columns: 1fr; }
+    .planning-form { position: static; }
+    .planning-toolbar { grid-template-columns: 1fr 1fr; }
+    .planning-toolbar label:last-child { grid-column: 1 / -1; }
     .admin-submission-list { position: static; max-height: 430px; }
     .editorial-stock-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
@@ -602,6 +784,8 @@ const editorialCategories = [
     .admin-toolbar, .admin-editor-grid { grid-template-columns: 1fr; }
     .admin-search { grid-column: auto; }
     .admin-detail-header { flex-direction: column-reverse; }
+    .planning-form-grid, .planning-toolbar { grid-template-columns: 1fr; }
+    .planning-toolbar label:last-child { grid-column: auto; }
     .detail-contact, .detail-technical { grid-template-columns: 1fr; }
     .detail-contact dd, .detail-technical dd { margin: -5px 0 10px; }
     .admin-save-row { align-items: stretch; flex-direction: column; }

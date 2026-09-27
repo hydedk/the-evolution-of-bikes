@@ -5,10 +5,18 @@ const statuses = new Set([
   'klar-til-godkendelse', 'godkendt', 'udgivet', 'afvist',
   'afventer-svar', 'trukket-tilbage',
 ]);
+const planningKinds = new Set(['mangel', 'ide', 'naeste-skridt']);
+const planningPriorities = new Set(['hoej', 'normal', 'lav']);
+const planningStatuses = new Set(['aaben', 'i-arbejde', 'afsluttet']);
+const planningThemes = new Set([
+  'loeb-og-store-oejeblikke', 'ryttere', 'teknik',
+  'kost-traening-og-videnskab', 'cykelkultur',
+  'samfund-og-tidsaand', 'menneskene-bag',
+]);
 
 const corsHeaders = (origin: string) => ({
   'access-control-allow-origin': origin,
-  'access-control-allow-methods': 'GET, PATCH, OPTIONS',
+  'access-control-allow-methods': 'GET, POST, PATCH, DELETE, OPTIONS',
   'access-control-allow-headers': 'authorization, content-type, apikey',
   'access-control-max-age': '86400',
   'cache-control': 'no-store',
@@ -36,7 +44,7 @@ Deno.serve(async (request) => {
   if (request.method === 'OPTIONS') {
     return origin ? json({}, 204, origin) : json({ error: 'Origin ikke tilladt.' }, 403, '');
   }
-  if (!origin || !['GET', 'PATCH'].includes(request.method)) {
+  if (!origin || !['GET', 'POST', 'PATCH', 'DELETE'].includes(request.method)) {
     return json({ error: 'Anmodningen blev afvist.' }, 403, origin);
   }
 
@@ -86,10 +94,52 @@ Deno.serve(async (request) => {
         return { ...safeSubmission, images };
       }));
 
-      return json({ submissions }, 200, origin);
+      const { data: planningNotes, error: planningError } = await supabase
+        .from('editorial_planning_notes')
+        .select('id,created_at,updated_at,kind,title,notes,theme,priority,status')
+        .order('updated_at', { ascending: false });
+      if (planningError) throw planningError;
+
+      return json({ submissions, planningNotes: planningNotes ?? [] }, 200, origin);
     }
 
     const body = await request.json();
+    if (body.resource === 'planning_note') {
+      if (request.method === 'DELETE') {
+        const id = typeof body.id === 'string' ? body.id : '';
+        if (!/^[0-9a-f-]{36}$/i.test(id)) return json({ error: 'Ugyldigt notenummer.' }, 400, origin);
+        const { error } = await supabase.from('editorial_planning_notes').delete().eq('id', id);
+        if (error) throw error;
+        return json({}, 204, origin);
+      }
+
+      const kind = typeof body.kind === 'string' ? body.kind : '';
+      const priority = typeof body.priority === 'string' ? body.priority : '';
+      const status = typeof body.status === 'string' ? body.status : '';
+      const theme = cleanNullable(body.theme, 80);
+      const title = cleanNullable(body.title, 180);
+      const notes = cleanNullable(body.notes, 10000);
+      if (!planningKinds.has(kind) || !planningPriorities.has(priority) || !planningStatuses.has(status) || !title || (theme && !planningThemes.has(theme))) {
+        return json({ error: 'Udfyld titel, type, prioritet og status korrekt.' }, 400, origin);
+      }
+      const values = { kind, title, notes, theme, priority, status, updated_at: new Date().toISOString() };
+
+      if (request.method === 'POST') {
+        const { data, error } = await supabase.from('editorial_planning_notes').insert(values)
+          .select('id,created_at,updated_at,kind,title,notes,theme,priority,status').single();
+        if (error) throw error;
+        return json({ planningNote: data }, 201, origin);
+      }
+
+      const id = typeof body.id === 'string' ? body.id : '';
+      if (!/^[0-9a-f-]{36}$/i.test(id)) return json({ error: 'Ugyldigt notenummer.' }, 400, origin);
+      const { data, error } = await supabase.from('editorial_planning_notes').update(values).eq('id', id)
+        .select('id,created_at,updated_at,kind,title,notes,theme,priority,status').single();
+      if (error) throw error;
+      return json({ planningNote: data }, 200, origin);
+    }
+
+    if (request.method !== 'PATCH') return json({ error: 'Anmodningen blev afvist.' }, 405, origin);
     const id = typeof body.id === 'string' ? body.id : '';
     const status = typeof body.status === 'string' ? body.status : '';
     if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(id) || !statuses.has(status)) {

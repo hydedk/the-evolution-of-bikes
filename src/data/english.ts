@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'olano-vm-1995': ['When Olano finished on a flat rear tyre', 'Abraham Olano punctured shortly before the finish at the World Championships in Duitama. Behind him, Miguel Induráin kept the chase under control.'],
   'yvonne-reynders-kulcykel-og-verdensmesterskaber': ['When the coal had been delivered, training began', "Yvonne Reynders delivered coal on a three-wheeled cargo bicycle before winning seven world titles on road and track."],
   'tourens-taxaregning-1926': ['When the Tour had to pay the taxi fare', 'Three riders stepped out of a car in Luchon and disappeared, according to a story passed down from the 1926 Tour. The driver instead took his bill to the race officials.'],
   'campagnolo-cambio-corsa': ['The gear change with a loose rear wheel', 'Cambio Corsa offered several gears, but demanded two levers, back-pedalling and a moment with the rear wheel released while the bicycle was moving.'],

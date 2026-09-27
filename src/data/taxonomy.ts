@@ -37,6 +37,7 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'olano-vm-1995': { period: '1990-1999', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'teknik'] },
   'yvonne-reynders-kulcykel-og-verdensmesterskaber': { period: '1960-1969', primary: 'ryttere', secondary: ['cykelkultur', 'samfund-og-tidsaand'] },
   'tourens-taxaregning-1926': { period: '1920-1930', primary: 'loeb-og-store-oejeblikke', secondary: ['menneskene-bag', 'cykelkultur'] },
   'campagnolo-cambio-corsa': { period: '1940-1949', primary: 'teknik', secondary: ['ryttere', 'menneskene-bag'] },

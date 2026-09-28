@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'favorit-f11-en-cykel-og-en-ungdom': ['When the bicycle left its first owner', 'A gold Favorit F11, its 1960 receipt and a meeting with the man who had kept the bicycle for more than six decades.'],
   'olano-vm-1995': ['When Olano finished on a flat rear tyre', 'Abraham Olano punctured shortly before the finish at the World Championships in Duitama. Behind him, Miguel Induráin kept the chase under control.'],
   'yvonne-reynders-kulcykel-og-verdensmesterskaber': ['When the coal had been delivered, training began', "Yvonne Reynders delivered coal on a three-wheeled cargo bicycle before winning seven world titles on road and track."],
   'tourens-taxaregning-1926': ['When the Tour had to pay the taxi fare', 'Three riders stepped out of a car in Luchon and disappeared, according to a story passed down from the 1926 Tour. The driver instead took his bill to the race officials.'],
@@ -88,6 +89,7 @@ const storyCopy: Record<string, [string, string]> = {
 };
 
 const bikeCopy: Record<string, [string, string?, string?]> = {
+  'favorit-f11-1959': ['A gold Czechoslovak Favorit racer with a documented Serbian ownership history, restored by reader Stefan Đurić.', 'Czechoslovakia / Serbia', "Reader's bicycle · Not in the collection"],
   'olympia-1978': ['An orange Italian steel racer with Campagnolo Nuovo Gran Sport, Universal brakes and an Ofmega chainset, preserved in the owner’s photographs.', 'Italy', 'Previously in the collection'],
   'bernardi-ca-1980': ['A turquoise Italian steel racer with Campagnolo Nuovo Gran Sport, high-flange hubs and Universal brakes, preserved with an uncertain connection to Guido De Bernardi.', 'Italy', 'Previously in the collection'],
   'faggin-1986': ['An Italian Columbus Aelle racer in its original net-pattern paint, built with Shimano 600 and Cinelli — a precise meeting of two bicycle industries.', 'Padua, Italy'],
@@ -118,7 +120,7 @@ const englishYear = (year: string) => year
 export const englishStories = stories
   .filter((story) => storyCopy[story.slug])
   .map((story) => ({ ...story, year: englishYear(story.year), title: storyCopy[story.slug][0], text: storyCopy[story.slug][1] }));
-export const englishBikes = bikes.map((bike) => {
+export const englishBikes = bikes.filter((bike) => bikeCopy[bike.slug]).map((bike) => {
   const [text, place, status] = bikeCopy[bike.slug];
   return { ...bike, text, place: place || bike.place, status, year: englishYear(bike.year) };
 });

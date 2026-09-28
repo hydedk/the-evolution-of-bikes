@@ -113,6 +113,7 @@ const storyClassifications: Record<string, Classification> = {
   'da-michelin-navnet-blev-et-problem': { period: '1940-1949', primary: 'menneskene-bag', secondary: ['samfund-og-tidsaand'] },
   'suntour-shimano-gearkrigen': { period: '1960-1969', primary: 'teknik', secondary: ['samfund-og-tidsaand'] },
   'gunnar-asmussen-funny-bike': { period: '1980-1989', primary: 'teknik', secondary: ['ryttere'] },
+  'favorit-f11-en-cykel-og-en-ungdom': { period: '1950-1959', primary: 'cykelkultur', secondary: ['ryttere', 'teknik'] },
   'alfonsina-strada-giro-1924': { period: '1920-1930', primary: 'ryttere', secondary: ['samfund-og-tidsaand', 'loeb-og-store-oejeblikke'] },
   'tour-de-france-1926-den-laengste': { period: '1920-1930', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },
   'peter-schroder-vaerksted-1920': { period: '1920-1930', primary: 'menneskene-bag', secondary: ['teknik', 'cykelkultur'] },
@@ -132,6 +133,7 @@ const storyClassifications: Record<string, Classification> = {
 };
 
 const bikePeriods: Record<string, string> = {
+  'favorit-f11-1959': '1950-1959',
   'olympia-1978': '1970-1979', 'bernardi-ca-1980': '1980-1989', 'faggin-1986': '1980-1989', 'scapin-k6': '2010-2019',
   'principia-evolution': '2000-2009', 'gios-super-record': '1970-1979', 'rossin-record': '1970-1979', 'asmussen-super-prestige': '1980-1989',
   'colnago-super-thron': '1990-1999', 'colnago-1993-tange-prestige': '1990-1999', 'giame': '1950-1959', 'stella-veneta': '1940-1949',
@@ -186,6 +188,7 @@ const englishBikeBySlug = new Map(englishBikes.map((item) => [item.slug, item]))
 
 export const localizeContent = (items: ContentItem[], language: 'da' | 'en') => language === 'da' ? items : items
   .filter((item) => item.type !== 'historie' || englishStoryBySlug.has(item.id))
+  .filter((item) => item.type !== 'cykel' || englishBikeBySlug.has(item.id))
   .map((item) => {
   const translated = item.type === 'historie' ? englishStoryBySlug.get(item.id) : item.type === 'cykel' ? englishBikeBySlug.get(item.id) : undefined;
   const component = item.type === 'komponent' ? components.find((entry) => entry.slug === item.id) : undefined;

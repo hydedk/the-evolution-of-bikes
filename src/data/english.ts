@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'da-brooklyn-holdet-gjorde-gios-blaa': ['When the Brooklyn team turned GIOS blue', "A sponsor's request joined the Brooklyn jersey, the GIOS Super Record and Roger De Vlaeminck's team — and the colour outlived the contract."],
   'favorit-f11-en-cykel-og-en-ungdom': ['When the bicycle left its first owner', 'A gold Favorit F11, its 1960 receipt and a meeting with the man who had kept the bicycle for more than six decades.'],
   'olano-vm-1995': ['When Olano finished on a flat rear tyre', 'Abraham Olano punctured shortly before the finish at the World Championships in Duitama. Behind him, Miguel Induráin kept the chase under control.'],
   'yvonne-reynders-kulcykel-og-verdensmesterskaber': ['When the coal had been delivered, training began', "Yvonne Reynders delivered coal on a three-wheeled cargo bicycle before winning seven world titles on road and track."],

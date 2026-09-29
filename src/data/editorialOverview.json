@@ -1937,16 +1937,16 @@
   {
     "id": "hist-000130",
     "titel": "Da Brooklyn-holdet gjorde GIOS blå",
-    "status": "indbakke",
+    "status": "publiceret",
     "prioritet": "mellem",
     "periode": "per-1970-1979",
     "aar": "1973-1977",
     "spor": "teknik",
-    "dokumentation": "ikke-kontrolleret",
+    "dokumentation": "dokumenteret",
     "faktarisiko": "mellem",
-    "naeste_handling": "Foretag redaktionel vurdering og kontrollér kilderne i originalmaterialet",
+    "naeste_handling": "Ingen; historien er publiceret på dansk og engelsk",
     "blokeret_af": "null",
-    "kanonisk_url": "",
+    "kanonisk_url": "/historier/da-brooklyn-holdet-gjorde-gios-blaa/",
     "fil": "hist-000130-gios-brooklyn-blaa.md"
   },
   {

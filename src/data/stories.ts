@@ -48,6 +48,7 @@ import yvonneReyndersImage from '../assets/stories/yvonne-reynders/yvonne-reynde
 import tourTaxi1926Image from '../assets/stories/tour-taxi-1926/buysse-huysse-aubisque-1926.jpg';
 import olano1995Image from '../assets/stories/olano-vm-1995/olano-vm-1995-illustration.png';
 import favoritF11StoryImage from '../assets/stories/favorit-f11-srbinko/historisk-rytter.jpg';
+import giosBrooklynImage from '../assets/stories/gios-brooklyn-blue/brooklyn-og-gios-troejer.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -140,6 +141,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'da-brooklyn-holdet-gjorde-gios-blaa', type: 'historie', year: '1973–1977', title: 'Da Brooklyn-holdet gjorde GIOS blå', text: 'Et sponsorønske bandt Brooklyn-trøjen, GIOS Super Record og Roger De Vlaemincks hold sammen — og farven overlevede kontrakten.', image: giosBrooklynImage, periods: ['1970-1979'], topics: ['gios', 'brooklyn', 'roger-de-vlaeminck', 'holdfarver', 'rammebygning'], relatedBikes: ['gios-super-record'], relatedComponents: [] },
   { slug: 'favorit-f11-en-cykel-og-en-ungdom', type: 'historie', year: '1959–2026', title: 'Da cyklen forlod sin første ejer', text: 'En Favorit F11, en kvittering fra 1960 og de fotografier, der bevarede forbindelsen til den første ejer.', image: favoritF11StoryImage, periods: ['1950-1959', '1960-1969'], topics: ['læserhistorie', 'favorit', 'restaurering', 'serbien', 'proveniens'], relatedBikes: ['favorit-f11-1959'], relatedComponents: [] },
   { slug: 'olano-vm-1995', type: 'historie', year: '1995', title: 'Da Olano kørte i mål på et fladt baghjul', text: 'Abraham Olano punkterede kort før mål ved VM i Duitama. Bag ham holdt Miguel Induráin forfølgerne i skak.', image: olano1995Image, periods: ['1990-1999'], topics: ['verdensmesterskab', 'abraham-olano', 'miguel-indurain', 'punktering', 'holdtaktik'], relatedBikes: [], relatedComponents: [] },
   { slug: 'yvonne-reynders-kulcykel-og-verdensmesterskaber', type: 'historie', year: '1959–1966', title: 'Når kullene var afleveret, begyndte træningen', text: 'Yvonne Reynders bar kul ud på en trehjulet ladcykel, før hun vandt syv verdensmesterskaber på landevej og bane.', image: yvonneReyndersImage, periods: ['1950-1959', '1960-1969'], topics: ['yvonne-reynders', 'kvindecykling', 'verdensmesterskab', 'banecykling'], relatedBikes: [], relatedComponents: [] },

@@ -1802,16 +1802,16 @@
   {
     "id": "hist-000121",
     "titel": "Da den neutrale servicebil blev alles mekaniker",
-    "status": "indbakke",
-    "prioritet": "mellem",
+    "status": "publiceret",
+    "prioritet": "hoej",
     "periode": "per-1970-1979",
     "aar": "1970-2026",
     "spor": "menneskene-bag",
-    "dokumentation": "ikke-kontrolleret",
+    "dokumentation": "dokumenteret",
     "faktarisiko": "mellem",
-    "naeste_handling": "Foretag redaktionel vurdering og kontrollér kilderne i originalmaterialet",
+    "naeste_handling": "Følg eventuelle læserrettelser og nye oplysninger om billedernes datering",
     "blokeret_af": "null",
-    "kanonisk_url": "",
+    "kanonisk_url": "https://teob.dk/historier/mavic-neutral-service/",
     "fil": "hist-000121-mavic-neutral-service.md"
   },
   {

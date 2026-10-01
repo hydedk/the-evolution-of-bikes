@@ -1,0 +1,174 @@
+---
+import type { ImageMetadata } from 'astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonical = 'https://teob.dk/en/stories/a-man-of-steel/';
+const imageModules = import.meta.glob('../../../assets/stories/a-man-of-steel/*.jpg', {
+  eager: true,
+  import: 'default',
+}) as Record<string, ImageMetadata>;
+const images = Object.fromEntries(
+  Object.entries(imageModules).map(([path, image]) => [path.split('/').pop()!, image]),
+) as Record<string, ImageMetadata>;
+
+const photo = (name: string) => images[name];
+const ogImage = new URL(photo('CYCLIST_CF_2_1674_retouch copy.jpg').src, canonical).href;
+
+const gallery = [
+  ['CYCLIST_CF_1_0927_retouch.jpg', 'Albert riding on a dike road beside the river'],
+  ['CYCLIST_CF_2_1643_retouch.jpg', 'Albert standing beside his yellow steel Gazelle'],
+  ['CYCLIST_D2_CF5_3824_retouch copy.jpg', 'The head badge and front brake of Albert’s yellow Gazelle'],
+  ['CYCLIST_D2_CF6_5036_retouch.jpg', 'Albert’s Rapha tights beside the handlebars in evening light'],
+  ['CYCLIST_CF_3_2820-retouch copy.jpg', 'Albert passing close to the camera beside the river'],
+  ['CYCLIST_D2_CF5_4394 copy.jpg', 'Albert standing with Dan Mawdesley and Ryan Edy'],
+  ['CYCLIST_D2_CF6_4506_retouch copy.jpg', 'Albert riding along a gravel road through flat farmland'],
+  ['CYCLIST_D2_CF6_4992_retouch copy.jpg', 'Albert standing with his bicycle in the evening light'],
+  ['DAN&ALBERT.jpg', 'Albert and Dan Mawdesley beneath an umbrella'],
+].filter(([name]) => Boolean(photo(name)));
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>A Man of Steel · The Evolution of Bikes</title>
+    <meta name="description" content="Albert is 82 and still rides every day. A photographic story of a steel bike and an iron will." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="The Evolution of Bikes" />
+    <meta property="og:title" content="A Man of Steel" />
+    <meta property="og:description" content="Albert is 82 and still rides every day. A photographic story of a steel bike and an iron will." />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content="Albert with his yellow steel Gazelle racing bicycle" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&family=Oswald:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body class="steel-page">
+    <header class="site-header steel-header">
+      <a class="brand" href={`${base}/en/`} aria-label="The Evolution of Bikes, home"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
+      <nav aria-label="Main navigation"><a href={`${base}/en/stories/`} aria-current="page">Stories</a><a href={`${base}/en/periods/`}>Periods</a><a href={`${base}/en/bikes/`}>Bikes</a><a href={`${base}/en/components/`}>Components</a><a href={`${base}/en/about/`}>About</a></nav>
+      <div class="header-tools"><span class="language-switch muted" aria-label="Danish version to follow">DA</span><span>/</span><strong>EN</strong><a class="header-story-link" href={`${base}/en/share-your-story/`}>Tell your story</a></div>
+    </header>
+
+    <main>
+      <article class="steel-story">
+        <header class="steel-hero">
+          <OptimizedImage src={photo('CYCLIST_CF_2_1674_retouch copy.jpg')} alt="Albert riding his yellow steel Gazelle beside the river" loading="eager" fetchpriority="high" widths={[768, 1200, 1600, 2000]} sizes="100vw" />
+          <div class="hero-shade"></div>
+          <div class="hero-title"><p>Albert · 82 years old · rides every day</p><h1>A Man<br />of Steel</h1></div>
+        </header>
+
+        <section class="opening-copy prose wide">
+          <p>Stuck behind a screen, I’d see Albert set off on the dike each morning, head down, pedalling into the wind, driving rain or melting mist. He rides around 60km a day through the winter. In summer, that can be 100km or more. Where did he go? Why? How far? How old was he? How old was his bike? That’s how the project and the conversations began, a story of a steel bike and an iron will. Albert is 82 and still rides every day. His generation has set the benchmark. His grit and determination to push himself on a daily basis is a standard by which we should judge ourselves, whether that’s in the saddle or life in general. The result was a photographic project, <em>A Man of Steel</em>, photographed by Ryan Edy and written by Dan Mawdesley</p>
+        </section>
+
+        <aside class="print-link prose wide">
+          <p>All the photos from this and other series are available on <a href="https://www.cyclingprints.nl/" target="_blank" rel="noopener noreferrer">www.cyclingprints.nl</a> - also as postcards, calendars etc</p>
+        </aside>
+
+        <section class="full-photo">
+          <OptimizedImage src={photo('CYCLIST_CF_1_0737_retouch copy.jpg')} alt="Albert riding in silhouette along the crest of a dike" widths={[768, 1200, 1600, 2000]} sizes="100vw" />
+        </section>
+
+        <section class="prose intro-copy">
+          <p class="display-line">Introducing Albert, he’s 82yrs old and bikes every day.</p>
+          <p>He plans his own routes, makes his own sandwiches and builds his own bikes. A cyclist’s cyclist.</p>
+          <p>This is his story.</p>
+        </section>
+
+        <section class="metric-band"><p><strong>60KM</strong><span>daily winter</span></p><p><strong>100KM</strong><span>daily summer</span></p></section>
+
+        <section class="split-story">
+          <div class="prose"><p>Watery light trickles down through leaden skies. Fields, river and road merge into one muted palette when a flash of yellow punctures the gloom.</p><p>It’s the middle of December and we’re stood on a Dutch dike waiting to meet a man who’s been cycling since he was 5 years old.</p><p>A man, who despite being in his 82nd year, still cycles almost every day, averaging around 100km in Summer and 60km in Winter. He’s a man of grit, determination, character and resourcefulness, in short, a man of steel.</p></div>
+          <OptimizedImage src={photo('CYCLIST_D2_CF5_2958_retouch copy.jpg')} alt="Albert riding away on a long, straight road" widths={[600, 900, 1200]} sizes="(max-width: 900px) 100vw, 52vw" />
+        </section>
+
+        <section class="image-pair"><OptimizedImage src={photo('CYCLIST_D2_CF5_3096_retouch copy.jpg')} alt="Albert riding towards the camera on a country lane" /><OptimizedImage src={photo('CYCLIST_D2_CF3_1829_retouch copy.jpg')} alt="Albert riding towards the camera beneath a line of trees" /></section>
+
+        <section class="prose chapter-copy">
+          <p>Born in 1935, Albert vd Bosch learned to ride his first bike at five years old. By the age of fourteen he completed his first ‘custom build’ and cycling has been an integral part of his life ever since.</p>
+          <p>We followed Albert out on one of his Winter rides, intrigued by his drive and conscious that we were witnessing history, pedalling swiftly and stoically towards us.</p>
+        </section>
+
+        <section class="type-break"><h2>A cyclist’s<br />cyclist</h2></section>
+        <section class="portrait-text"><OptimizedImage src={photo('CYCLIST_CF_3_3273-retouch copy.jpg')} alt="Albert riding towards the camera at sunset" /><div class="prose"><p>A former Brigadier in the Dutch Military, Albert bikes daily unless it’s truly impossible (heavy snow, personal issues, illness).</p><p>He’ll even head out when the local dike’s suited more to skating than cycling. A true inspiration from the ‘hard as nails’ generation.</p></div></section>
+
+        <section class="type-break rust"><h2>Wind power</h2></section>
+        <section class="prose chapter-copy"><p>Black ice, melting snow, dense mist, torrential rain and glacial winds are just some of the ‘joys’ of Lowlands cycling in Winter.</p><p>Fierce North Easterlies or stormy South Westerlies regularly rip across the polders and push back on the resolve of even the most hardened cyclist.</p><p>Which is why Albert checks the wind direction before his ride. Pedalling against the wind on the outward leg of the ride and then heading home with the wind behind him.</p></section>
+        <section class="wide-photo"><OptimizedImage src={photo('CYCLIST_CF_1_0237_retouch copy.jpg')} alt="Albert cycling on an empty rural road" /></section>
+        <section class="quote-over-photo"><OptimizedImage src={photo('CYCLIST_CF_3_2982_retouch3.jpg')} alt="Albert riding beside the river in warm evening light" /><blockquote><p>His wife, Corrie, worries about him when he’s out, “I’m careful,” he says with a wink.</p></blockquote></section>
+
+        <section class="prose chapter-copy"><p>Albert hand-built his first real racing bike back in 1949. He uses just 8 gears (“More than enough”) on his home runs in The Netherlands but he’ll make additions for the more mountainous terrain of France, Spain and Switzerland.</p><p>“Shimano or Campy?”</p><p>“Always, always, always Campagnolo.”</p></section>
+        <section class="type-break"><h2>Man of steel</h2></section>
+
+        <section class="detail-grid"><OptimizedImage src={photo('CYCLIST_D2_CF2_1288_retouch copy.jpg')} alt="The head badge and front brake of Albert’s yellow Gazelle" /><OptimizedImage src={photo('CYCLIST_D2_CF1_0760_retouch copy.jpg')} alt="Albert’s hands and the yellow Gazelle bicycle viewed from above" /><OptimizedImage src={photo('CYCLIST_D2_CF6_5003_retouch copy.jpg')} alt="The Gazelle head badge in late sunlight" /></section>
+        <section class="prose chapter-copy"><p>The bike is a custom build, its backbone is a lightweight Gazelle steel frame Albert bought in The Hague back in 1988.</p><p>Reynolds 531 tubing was the frame builder’s preferred choice at the time offering the best combination of strength, ride comfort and minimal weight.</p><p>The 24 speed Campagnolo group set (50-40-30) provides the perfect balance of power and speed. Ideal for steep ascents in countries a little more undulating than The Netherlands but it’s equally adept at zipping along the dikes and powering through the polders of Albert’s homeland.</p><p>The only parts of the bike that have been changed from the original, are the tyres. Every season (or 10,000km whichever happens sooner) sees Albert change from a Winter to a Summer pattern. There’s very little that comes between him and his daily ride.</p></section>
+        <section class="full-photo"><OptimizedImage src={photo('CYCLIST_CF_2_1674_retouch copy.jpg')} alt="Albert riding his yellow Gazelle beside the river" /></section>
+
+        <section class="prose chapter-copy"><p>Despite cycling for 75 of his 82 years, Albert’s never owned, ridden or even trialled a carbon bike. A true man of steel.</p><p>His legs feel heavier and his muscles take a little longer to recover after every ride, but remarkably in 75 years of cycling, his vision has never deteriorated.</p><p>Refreshment. What does an 82 year old cyclist keep in his water bottle to get him through a 60km ride in Winter? Water.</p><p>Remember musical chairs? Albert’s first taste of competitive cycling was a race around his Dutch village. Every lap, the slowest rider was eliminated until they were down to the last two.</p></section>
+        <section class="image-pair cinematic"><OptimizedImage src={photo('CYCLIST_CF_3_2370_retouch copy.jpg')} alt="Albert and his bicycle silhouetted against a low winter sun" /><OptimizedImage src={photo('CYCLIST_CF_3_2320_retouch copy.jpg')} alt="Albert and his bicycle silhouetted beneath bare branches" /></section>
+
+        <section class="prose chapter-copy"><p>A former Brigadier, Albert established cycling as a key category in The World Military Championships, attracting teams from Iran and Iraq as well as Belgium, France, Holland and Great Britain.</p><p>He’s cycled in South Africa, across Europe and most of the routes in The Netherlands, but France is Albert’s favourite country for cycling. “Stunning scenery and the drivers give you a lot of room on the road.”</p></section>
+        <section class="country-band"><span>Luxembourg</span><span>France</span><span>Spain</span><span>Holland</span><span>Belgium</span></section>
+        <section class="wide-photo"><OptimizedImage src={photo('CYCLIST_D2_CF5_4140_retouch.jpg')} alt="Albert riding between drainage ditches at dusk" /></section>
+
+        <section class="prose chapter-copy"><p>Albert’s longest ride was from his Dutch village down to San Sebastian. I asked if he liked the Spanish city, now widely famous for its food, “I wasn’t there long, I had to bike back.”</p><p>Back in ‘96, Albert completed the famous London to Edinburgh (&amp; back) ride in 113hrs (cut off is 115hrs). Slower than he expected as he’d unintentionally fallen asleep under a tree, “Or I’d have been far faster,” he says with a wince.</p><p>Albert’s also participated in the Cape Town Argus Race together with his son-in-law and 35,000 other competitors. This event takes in some of South Africa’s more stunning scenery but it’s not without its unique challenges. Hazards include roaming animals, bush fires, extremely high winds and road melting temperatures.</p></section>
+
+        <section class="type-break rust"><h2>Apple pie</h2></section>
+        <section class="portrait-text reverse"><OptimizedImage src={photo('CYCLIST_D2_CF6_4688_retouch copy.jpg')} alt="Albert resting beside his bicycle near the water" /><div class="prose"><p>Albert’s approach to ‘sports nutrition’ is also admirably old skool. No state-of-the-art isotonic energy drinks or micellar casein powders not even an energy bar, he’s a fan of strong, sweet fruit cordial as well as brown bread and cheese sandwiches or a few croissants when in France.</p><p>But his absolute favourite is a slice of traditional Dutch apple pie mid-way through the ride.</p></div></section>
+        <section class="image-pair"><OptimizedImage src={photo('CYCLIST_D2_CF6_4717_retouch copy.jpg')} alt="Albert resting, framed through the yellow bicycle" /><OptimizedImage src={photo('CYCLIST_D2_CF2_1499_retouch copy.jpg')} alt="Albert carrying his yellow Gazelle bicycle" /></section>
+
+        <section class="type-break"><h2>River land</h2></section>
+        <section class="split-story river"><div class="prose"><p>Based in ‘Rivierenland’ (River Land), Albert’s daily rides often follow the dikes that run along one of the major rivers in the area like the Waal, the Maas or the Lek.</p></div><OptimizedImage src={photo('CYCLIST_D2_CF1_0361_retouch copy.jpg')} alt="Albert standing with his bicycle on a small ferry" /></section>
+        <section class="image-pair"><OptimizedImage src={photo('CYCLIST_CF_1_0366_retouch copy.jpg')} alt="A blurred close view of Albert riding beside the river" /><OptimizedImage src={photo('CYCLIST_D2_CF1_0909_retouch copy.jpg')} alt="A distant view of Albert cycling along a dike" /></section>
+
+        <section class="interview-band"><p>“What was your favourite period to cycle?”</p><p>“The Fifties, because I was getting faster &amp; fitter, not slower &amp; older.”</p></section>
+        <section class="quote-panel"><p>At my age, cycling’s easier than walking.</p></section>
+        <section class="prose chapter-copy"><p>No isotonic drinks, gels or powders for 82 year old vet Albert, just strong coffee and ontbijtkoek (a traditional Dutch gently spiced ginger cake) to get him through 60k on a Winter ride. A proper chap.</p></section>
+        <section class="full-photo"><OptimizedImage src={photo('CYCLIST_D2_CF1_1080_retouch copy.jpg')} alt="Albert riding below a broad winter landscape" /></section>
+
+        <section class="type-break rust"><h2>True grit</h2></section>
+        <section class="prose chapter-copy"><p>Even in cycling friendly Holland, Albert legislates for one accident a year, which isn’t surprising if you ride each and every day as he does.</p><p>Amongst his ‘greatest hits’ are a smashed jaw and fractured cheek bone which happened after he crashed into a French rider who’d stopped without warning. Fortunately, an ambulance took him all the way back from France to his home in Holland where it took two weeks to recover.</p><p>He also smashed both knees after hitting the side of a car during a high speed descent, he now has two iron plates (one in each knee) as a souvenir to commemorate that collision. They match his iron will.</p></section>
+        <section class="image-pair cinematic"><OptimizedImage src={photo('CYCLIST_D2_CF6_5208_retouch copy.jpg')} alt="Albert riding beneath a concrete bridge" /><OptimizedImage src={photo('CYCLIST_CF_3_2252_retouch copy.jpg')} alt="Albert cycling away through a sunlit wood" /></section>
+        <section class="cancer-line"><p>In 1999, upon hearing he’d beaten cancer, the first thing he did was go for a ride.</p></section>
+        <section class="image-pair"><OptimizedImage src={photo('CYCLIST_D2_CF2_1308_retouch copy.jpg')} alt="Albert riding past a roadside memorial cross" /><OptimizedImage src={photo('CYCLIST_D2_CF3_1876_retouch copy.jpg')} alt="Albert riding through a straight avenue of trees" /></section>
+
+        <section class="prose closing-copy"><p>Stuck behind a screen, I’d see Albert set off on the dike each morning, head down, pedalling into the wind, driving rain or melting mist.</p><p>Where did he go? Why? How far? How old was he? How old was his bike? That’s how the project and the conversations began, a story of a steel bike and an iron will.</p><p>Albert and his generation have set the benchmark. His grit and determination to push himself on a daily basis is a standard by which we should judge ourselves, whether that’s in the saddle or life in general.</p></section>
+        <section class="full-photo final-ride"><OptimizedImage src={photo('CYCLIST_D2_CF5_2895_retouch copy.jpg')} alt="Albert riding away along an open road" /></section>
+        <section class="honour"><p>“Chapeau Albert, it was an honour.”</p><p>Created, Designed &amp; Produced by van North.</p><p>Photography by Ryan Edy.</p><p>Chapeau Albert, it was an honour.</p></section>
+
+        <section class="remaining-gallery" aria-label="Photographs from A Man of Steel">
+          {gallery.map(([name, alt], index) => <figure class:list={['gallery-item', index % 7 === 0 && 'gallery-wide']}><OptimizedImage src={photo(name)} alt={alt} widths={[480, 768, 1200, 1600]} sizes={index % 7 === 0 ? '100vw' : '(max-width: 800px) 100vw, 50vw'} /></figure>)}
+        </section>
+
+        <section class="credits prose">
+          <h2>Credits:</h2>
+          <p>Photography by Ryan Edy.</p>
+          <p>Created, Designed, Produced and Written by Dan Mawdesley @ van North.</p>
+          <p>All the photos from this and other series are available on <a href="https://www.cyclingprints.nl" target="_blank" rel="noopener noreferrer">www.cyclingprints.nl</a> - also as postcards, calendars etc -</p>
+          <p>Creative/Idea/ArtDirection/Copy/Production: Dan Mawdesley, I’m a Creative Director (worked on global advertising campaigns for Nikon, Vodafone, Mitsubishi Motors etc.) and run my own creative agency: <a href="https://www.vannorth.com" target="_blank" rel="noopener noreferrer">www.vannorth.com</a> and have won a few awards for advertising and photography.</p>
+          <p>Photography: Ryan Edy is a commercial lifestyle/outdoors photographer and has shot for Toyota, Aldi, GymShark, Columbia etc. also won a few awards <a href="https://www.ryanedy.com" target="_blank" rel="noopener noreferrer">www.ryanedy.com</a></p>
+          <p>Neither of us have big egos (just big kids) and loved following Albert out on his rides, shooting him on our bikes and from the back of my old LandCruiser.</p>
+        </section>
+        <section class="metric-band closing-metric"><p><strong>100km</strong><span>summer</span></p><p><strong>60km</strong><span>winter</span></p></section>
+        <nav class="steel-bottom-nav" aria-label="Continue browsing"><a href={`${base}/en/stories/`}>← All stories</a></nav>
+      </article>
+    </main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>A personal collection of vintage bicycles,<br />stories, brands and components.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>
+
+<style>
+  :global(body.steel-page){background:#ece9df;color:#171713}.steel-header{background:rgba(236,233,223,.95);backdrop-filter:blur(14px)}.steel-header .muted{opacity:.38;cursor:default}.steel-story{overflow:hidden}.steel-hero{height:min(88vh,900px);min-height:610px;position:relative;background:#181817}.steel-hero :global(picture),.steel-hero :global(img){display:block;width:100%;height:100%;object-fit:cover;object-position:center 44%}.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,9,.72),rgba(10,10,9,.08) 65%),linear-gradient(0deg,rgba(10,10,9,.25),transparent 50%)}.hero-title{position:absolute;left:max(6vw,1.5rem);bottom:8%;color:#f1efe8}.hero-title p{font:600 .78rem/1.2 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;margin:0 0 1.2rem}.hero-title h1,.type-break h2{font:600 clamp(5rem,13vw,12rem)/.78 'Oswald',sans-serif;letter-spacing:-.06em;text-transform:uppercase;margin:0}.prose{max-width:720px;margin-inline:auto;font-size:1.08rem;line-height:1.82}.prose p{margin:0 0 1.35rem}.prose.wide{max-width:920px}.opening-copy{padding:clamp(5rem,10vw,9rem) 1.5rem clamp(2.5rem,5vw,4.5rem)}.opening-copy p{font:400 clamp(1.55rem,3vw,2.5rem)/1.5 'Libre Caslon Display',serif}.print-link{box-sizing:border-box;padding:0 1.5rem clamp(4rem,8vw,7rem);font-size:.95rem;line-height:1.6}.print-link p{margin:0}.print-link a{color:inherit;text-underline-offset:.18em}.full-photo,.wide-photo{width:100%;margin:0}.full-photo :global(picture),.full-photo :global(img),.wide-photo :global(picture),.wide-photo :global(img){display:block;width:100%;height:auto}.intro-copy,.chapter-copy,.closing-copy{padding:clamp(4.5rem,8vw,7rem) 1.5rem}.display-line{font:400 clamp(2.3rem,5vw,4.7rem)/1.1 'Libre Caslon Display',serif}.metric-band{background:#28303b;color:#eeeae0;display:grid;grid-template-columns:1fr 1fr;padding:clamp(3.5rem,8vw,7rem) max(6vw,1.5rem);gap:4rem}.metric-band p{margin:0;display:flex;flex-direction:column}.metric-band strong{font:600 clamp(4.5rem,12vw,11rem)/.78 'Oswald',sans-serif;letter-spacing:-.06em}.metric-band span{font:600 clamp(1.4rem,3vw,2.6rem)/1 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.03em}.split-story,.portrait-text{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:stretch}.split-story .prose,.portrait-text .prose{box-sizing:border-box;width:100%;max-width:none;margin:0;padding:clamp(3rem,5vw,5.5rem);display:flex;flex-direction:column;justify-content:center}.split-story :global(picture),.portrait-text> :global(picture){display:block;min-width:0;width:100%;height:clamp(480px,45vw,700px);overflow:hidden}.split-story :global(img),.portrait-text> :global(img){display:block;min-width:0;width:100%;height:100%;object-fit:cover}.portrait-text:not(.reverse)> :global(picture) :global(img){object-position:78% center}.image-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.image-pair> :global(picture){display:block;min-width:0;width:100%;height:clamp(420px,48vw,720px);overflow:hidden}.image-pair :global(img){display:block;min-width:0;width:100%;height:100%;object-fit:cover}.image-pair.cinematic> :global(picture){height:clamp(360px,42vw,650px)}.type-break{background:#171713;color:#e9e5d9;padding:clamp(5rem,12vw,11rem) max(6vw,1.5rem)}.type-break.rust{background:#8d4b32}.portrait-text.reverse{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}.portrait-text.reverse> :global(picture){order:2}.portrait-text.reverse .prose{order:1}.quote-over-photo{position:relative;min-height:700px}.quote-over-photo :global(picture),.quote-over-photo :global(img){position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.quote-over-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,9,.76),transparent 75%)}.quote-over-photo blockquote{position:relative;z-index:1;margin:0;padding:clamp(5rem,10vw,10rem) max(6vw,1.5rem);max-width:730px;color:#fff;font:400 clamp(2rem,4.5vw,4.2rem)/1.2 'Libre Caslon Display',serif}.detail-grid{display:grid;grid-template-columns:1fr 1fr 1fr}.detail-grid :global(picture),.detail-grid :global(img){display:block;width:100%;height:52vw;max-height:720px;object-fit:cover}.country-band{background:#28303b;color:#ece9df;padding:clamp(4rem,9vw,8rem) max(6vw,1.5rem);display:flex;gap:1rem 3rem;flex-wrap:wrap}.country-band span{font:600 clamp(2.8rem,7vw,7rem)/.85 'Oswald',sans-serif;text-transform:uppercase}.river{background:#dad7cc;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}.interview-band{background:#171713;color:#ece9df;padding:clamp(5rem,10vw,9rem) max(6vw,1.5rem);display:grid;grid-template-columns:1fr 1fr;gap:4rem}.interview-band p{font:400 clamp(2rem,4.5vw,4rem)/1.25 'Libre Caslon Display',serif;margin:0}.quote-panel{padding:clamp(4rem,8vw,7rem) 1.5rem;text-align:center}.quote-panel p,.cancer-line p,.honour>p:first-child{font:400 clamp(3rem,7vw,7rem)/1.02 'Libre Caslon Display',serif;max-width:1100px;margin:0 auto}.quote-panel p{font-size:clamp(2.8rem,5.5vw,5.3rem)}.cancer-line{background:#8d4b32;color:#fff;padding:clamp(7rem,15vw,14rem) max(6vw,1.5rem)}.closing-copy p:first-child{font:400 clamp(1.8rem,3.5vw,3.2rem)/1.35 'Libre Caslon Display',serif}.final-ride :global(img){max-height:900px;object-fit:cover}.honour{text-align:center;padding:clamp(6rem,12vw,11rem) 1.5rem;background:#171713;color:#ece9df}.honour p{margin:.6rem 0;font-size:.9rem}.honour>p:first-child{margin-bottom:3rem}.remaining-gallery{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.gallery-item{min-width:0;margin:0;aspect-ratio:3/2;overflow:hidden}.gallery-item.gallery-wide{grid-column:1/-1;aspect-ratio:auto}.gallery-item:last-child:not(.gallery-wide){grid-column:1/-1;justify-self:center;width:min(100%,1000px)}.gallery-item :global(picture),.gallery-item :global(img){display:block;min-width:0;width:100%;height:100%;object-fit:cover}.gallery-wide :global(img){height:auto;max-height:none}.credits{padding:clamp(4rem,8vw,7rem) 1.5rem}.credits a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.2em}.closing-metric{background:#171713}.steel-bottom-nav{padding:2rem max(6vw,1.5rem) 5rem;background:#171713}.steel-bottom-nav a{color:#ece9df;text-decoration:none}.steel-bottom-nav a:hover{text-decoration:underline}
+  @media(max-width:850px){.steel-hero{height:78vh;min-height:560px}.hero-title h1{font-size:clamp(4.5rem,22vw,8rem)}.split-story,.portrait-text,.river,.interview-band{grid-template-columns:1fr}.metric-band{gap:1rem}.metric-band strong{font-size:clamp(3.4rem,17vw,6rem)}.split-story :global(picture),.portrait-text> :global(picture),.image-pair> :global(picture){height:auto}.split-story :global(img),.portrait-text> :global(img),.image-pair :global(img){height:auto;max-height:none}.portrait-text.reverse> :global(picture),.portrait-text.reverse .prose{order:initial}.image-pair,.remaining-gallery{grid-template-columns:1fr}.gallery-item{aspect-ratio:auto}.gallery-item :global(img){height:auto;max-height:none}.detail-grid{grid-template-columns:1fr}.detail-grid :global(img){height:auto;max-height:none}.interview-band{gap:2.5rem}.gallery-item.gallery-wide{grid-column:auto}.quote-over-photo{min-height:620px}}
+  @media(max-width:640px){.steel-header nav{display:none}.steel-header{position:relative}.steel-hero{min-height:540px}.hero-title{bottom:7%}.opening-copy,.intro-copy,.chapter-copy,.closing-copy{padding-top:4.5rem;padding-bottom:4.5rem}.metric-band{grid-template-columns:1fr}.country-band{padding-block:4rem}.country-band span{font-size:clamp(2.5rem,15vw,4.5rem)}}
+</style>

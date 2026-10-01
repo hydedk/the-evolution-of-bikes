@@ -1,0 +1,178 @@
+---
+import type { ImageMetadata } from 'astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonical = 'https://teob.dk/der er dette billede der er lidt mæ/';
+const englishCanonical = 'https://teob.dk/en/stories/a-man-of-steel/';
+const imageModules = import.meta.glob('../../assets/stories/a-man-of-steel/*.jpg', {
+  eager: true,
+  import: 'default',
+}) as Record<string, ImageMetadata>;
+const images = Object.fromEntries(
+  Object.entries(imageModules).map(([path, image]) => [path.split('/').pop()!, image]),
+) as Record<string, ImageMetadata>;
+
+const photo = (name: string) => images[name];
+const ogImage = new URL(photo('CYCLIST_CF_2_1674_retouch copy.jpg').src, canonical).href;
+
+const gallery = [
+  ['CYCLIST_CF_1_0927_retouch.jpg', 'Albert cykler på en digesti langs floden'],
+  ['CYCLIST_CF_2_1643_retouch.jpg', 'Albert står ved sin gule Gazelle i stål'],
+  ['CYCLIST_D2_CF5_3824_retouch copy.jpg', 'Styrskilt og forbremse på Alberts gule Gazelle'],
+  ['CYCLIST_D2_CF6_5036_retouch.jpg', 'Alberts Rapha-tights ved styret i aftenlys'],
+  ['CYCLIST_CF_3_2820-retouch copy.jpg', 'Albert passerer tæt forbi kameraet ved floden'],
+  ['CYCLIST_D2_CF5_4394 copy.jpg', 'Albert sammen med Dan Mawdesley og Ryan Edy'],
+  ['CYCLIST_D2_CF6_4506_retouch copy.jpg', 'Albert cykler ad en grusvej gennem det flade land'],
+  ['CYCLIST_D2_CF6_4992_retouch copy.jpg', 'Albert står med sin cykel i aftenlyset'],
+  ['DAN&ALBERT.jpg', 'Albert og Dan Mawdesley under en paraply'],
+].filter(([name]) => Boolean(photo(name)));
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>En mand af stål · The Evolution of Bikes</title>
+    <meta name="description" content="Albert er 82 år og cykler stadig hver dag. En fotografisk fortælling om en stålcykel og en vilje af jern." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="da" href={canonical} />
+    <link rel="alternate" hreflang="en" href={englishCanonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="da_DK" />
+    <meta property="og:site_name" content="The Evolution of Bikes" />
+    <meta property="og:title" content="En mand af stål" />
+    <meta property="og:description" content="Albert er 82 år og cykler stadig hver dag. En fotografisk fortælling om en stålcykel og en vilje af jern." />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content="Albert med sin gule Gazelle-racercykel i stål" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&family=Oswald:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body class="steel-page">
+    <header class="site-header steel-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
+      <nav aria-label="Hovednavigation"><a href={`${base}/historier/`} aria-current="page">Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/komponenter/`}>Komponenter</a><a href={`${base}/om/`}>Om</a></nav>
+      <div class="header-tools"><strong>DA</strong><span>/</span><a class="language-switch" href={`${base}/en/stories/a-man-of-steel/`} lang="en">EN</a><a class="header-story-link" href={`${base}/del-din-historie/`}>Fortæl din historie</a></div>
+    </header>
+
+    <main>
+      <article class="steel-story">
+        <header class="steel-hero">
+          <OptimizedImage src={photo('CYCLIST_CF_2_1674_retouch copy.jpg')} alt="Albert cykler på sin gule Gazelle i stål langs floden" loading="eager" fetchpriority="high" widths={[768, 1200, 1600, 2000]} sizes="100vw" />
+          <div class="hero-shade"></div>
+          <div class="hero-title"><span class="reader-story-label">Læserhistorie</span><p>Albert · 82 år · cykler hver dag</p><h1>En mand<br />af stål</h1></div>
+        </header>
+
+        <section class="opening-copy prose wide">
+          <p>Fastlåst foran en skærm så jeg hver morgen Albert tage af sted på diget, med hovedet bøjet og pedalerne i gang mod vinden, gennem slagregn eller tåge, der lettede. Om vinteren cykler han omkring 60 kilometer om dagen. Om sommeren kan det blive 100 kilometer eller mere. Hvor kørte han hen? Hvorfor? Hvor langt? Hvor gammel var han? Hvor gammel var cyklen? Sådan begyndte projektet og samtalerne – en fortælling om en stålcykel og en vilje af jern. Albert er 82 år og cykler stadig hver dag. Hans generation har sat målestokken. Hans sejhed og beslutning om at udfordre sig selv dag efter dag er en standard, vi kan måle os selv efter – både i sadlen og i livet. Resultatet blev det fotografiske projekt <em>En mand af stål</em>, fotograferet af Ryan Edy og skrevet af Dan Mawdesley.</p>
+        </section>
+
+        <aside class="print-link prose wide">
+          <p>Alle fotografierne fra denne og andre serier kan købes på <a href="https://www.cyclingprints.nl/" target="_blank" rel="noopener noreferrer">www.cyclingprints.nl</a> – også som postkort, kalendere med mere.</p>
+        </aside>
+
+        <section class="full-photo">
+          <OptimizedImage src={photo('CYCLIST_CF_1_0737_retouch copy.jpg')} alt="Albert cykler som silhuet langs toppen af et dige" widths={[768, 1200, 1600, 2000]} sizes="100vw" />
+        </section>
+
+        <section class="prose intro-copy">
+          <p class="display-line">Mød Albert. Han er 82 år og cykler hver dag.</p>
+          <p>Han planlægger selv sine ruter, smører sine egne madder og bygger sine egne cykler. En cykelrytters cykelrytter.</p>
+          <p>Dette er hans historie.</p>
+        </section>
+
+        <section class="metric-band"><p><strong>60 KM</strong><span>dagligt om vinteren</span></p><p><strong>100 KM</strong><span>dagligt om sommeren</span></p></section>
+
+        <section class="split-story">
+          <div class="prose"><p>Et vandigt lys siver ned gennem den blygrå himmel. Marker, flod og vej flyder sammen i en afdæmpet palet, indtil et gult glimt bryder mørket.</p><p>Det er midt i december, og vi står på et hollandsk dige og venter på at møde en mand, der har cyklet, siden han var fem år.</p><p>En mand, der trods sine 82 år stadig cykler næsten hver dag – omkring 100 kilometer om sommeren og 60 om vinteren. Han har sejhed, vilje, karakter og opfindsomhed. Kort sagt: en mand af stål.</p></div>
+          <OptimizedImage src={photo('CYCLIST_D2_CF5_2958_retouch copy.jpg')} alt="Albert cykler væk ad en lang, lige vej" widths={[600, 900, 1200]} sizes="(max-width: 900px) 100vw, 52vw" />
+        </section>
+
+        <section class="image-pair"><OptimizedImage src={photo('CYCLIST_D2_CF5_3096_retouch copy.jpg')} alt="Albert cykler mod kameraet på en landevej" /><OptimizedImage src={photo('CYCLIST_D2_CF3_1829_retouch copy.jpg')} alt="Albert cykler mod kameraet under en række træer" /></section>
+
+        <section class="prose chapter-copy">
+          <p>Albert van den Bosch blev født i 1935 og lærte at cykle som femårig. Som 14-årig færdiggjorde han sin første selvbyggede cykel, og siden har cyklingen været en fast del af hans liv.</p>
+          <p>Vi fulgte Albert på en af hans vinterture, fascineret af hans drivkraft og med en fornemmelse af, at vi så et stykke historie komme hurtigt og stoisk imod os.</p>
+        </section>
+
+        <section class="type-break"><h2>En cykelrytters<br />cykelrytter</h2></section>
+        <section class="portrait-text"><div class="portrait-photo"><OptimizedImage src={photo('CYCLIST_CF_3_3273-retouch copy.jpg')} alt="Albert cykler mod kameraet ved solnedgang" /></div><div class="prose"><p>Albert er tidligere brigadegeneral i det hollandske militær og cykler hver dag, medmindre det virkelig er umuligt – på grund af kraftig sne, personlige forhold eller sygdom.</p><p>Han tager endda af sted, når det lokale dige egner sig bedre til skøjter end til cykling. En sand inspiration fra den hårdføre generation.</p></div></section>
+
+        <section class="type-break rust"><h2>Vindkraft</h2></section>
+        <section class="prose chapter-copy"><p>Sort is, smeltende sne, tæt tåge, silende regn og isnende vind er blot nogle af vintercyklingens “glæder” i Nederlandene.</p><p>Hårde nordøstenvinde og stormende sydvestenvinde flår jævnligt hen over polderne og sætter selv den mest hærdede cykelrytters vilje på prøve.</p><p>Derfor tjekker Albert vindretningen, før han kører. Ud mod vinden på turens første halvdel – og hjem med vinden i ryggen.</p></section>
+        <section class="wide-photo"><OptimizedImage src={photo('CYCLIST_CF_1_0237_retouch copy.jpg')} alt="Albert cykler på en tom landevej" /></section>
+        <section class="quote-over-photo"><OptimizedImage src={photo('CYCLIST_CF_3_2982_retouch3.jpg')} alt="Albert cykler langs floden i varmt aftenlys" /><blockquote><p>Hans kone, Corrie, bekymrer sig, når han er ude. “Jeg passer på,” siger han med et blink.</p></blockquote></section>
+
+        <section class="prose chapter-copy"><p>Albert byggede sin første rigtige racercykel i hånden i 1949. På turene hjemme i Nederlandene bruger han kun otte gear – “mere end rigeligt” – men til det mere bjergrige terræn i Frankrig, Spanien og Schweiz bygger han flere på.</p><p>“Shimano eller Campy?”</p><p>“Altid, altid, altid Campagnolo.”</p></section>
+        <section class="type-break"><h2>Mand af stål</h2></section>
+
+        <section class="detail-grid"><OptimizedImage src={photo('CYCLIST_D2_CF2_1288_retouch copy.jpg')} alt="Styrskilt og forbremse på Alberts gule Gazelle" /><OptimizedImage src={photo('CYCLIST_D2_CF1_0760_retouch copy.jpg')} alt="Alberts hænder og den gule Gazelle set ovenfra" /><OptimizedImage src={photo('CYCLIST_D2_CF6_5003_retouch copy.jpg')} alt="Gazelles styrskilt i det sene sollys" /></section>
+        <section class="prose chapter-copy"><p>Cyklen er et specialbygget eksemplar med et let Gazelle-stålstel som rygrad. Albert købte stellet i Haag i 1988.</p><p>Reynolds 531-rør var dengang stelbyggernes foretrukne valg, fordi de gav en stærk kombination af styrke, kørekomfort og lav vægt.</p><p>Campagnolo-gruppen med 24 gear og klinger på 50-40-30 giver en god balance mellem kraft og fart. Den passer til stejle stigninger i lande med flere bakker end Nederlandene, men er lige så hjemme på digerne og gennem polderne i Alberts hjemland.</p><p>Dækkene er de eneste dele, der er ændret fra den oprindelige opbygning. Hver sæson – eller for hver 10.000 kilometer, alt efter hvad der kommer først – skifter Albert mellem vinter- og sommerdæk. Der er ikke meget, der kan holde ham fra den daglige tur.</p></section>
+        <section class="full-photo"><OptimizedImage src={photo('CYCLIST_CF_2_1674_retouch copy.jpg')} alt="Albert cykler på sin gule Gazelle langs floden" /></section>
+
+        <section class="prose chapter-copy"><p>Selv om Albert har cyklet i 75 af sine 82 år, har han aldrig ejet, kørt eller så meget som prøvet en carboncykel. En ægte mand af stål.</p><p>Benene føles tungere, og musklerne er lidt længere om at komme sig efter hver tur. Men efter 75 år på cyklen er hans syn bemærkelsesværdigt nok aldrig blevet dårligere.</p><p>Forfriskning. Hvad har en 82-årig cykelrytter i drikkedunken for at komme gennem 60 kilometer om vinteren? Vand.</p><p>Kan du huske stoledans? Alberts første møde med konkurrencecykling var et løb rundt i hans hollandske landsby. Efter hver omgang blev den langsomste rytter sorteret fra, indtil kun to var tilbage.</p></section>
+        <section class="image-pair cinematic"><OptimizedImage src={photo('CYCLIST_CF_3_2370_retouch copy.jpg')} alt="Albert og cyklen som silhuet mod den lave vintersol" /><OptimizedImage src={photo('CYCLIST_CF_3_2320_retouch copy.jpg')} alt="Albert og cyklen som silhuet under bare grene" /></section>
+
+        <section class="prose chapter-copy"><p>Som tidligere brigadegeneral var Albert med til at gøre cykling til en vigtig disciplin ved de militære verdensmesterskaber, hvor hold fra Iran og Irak deltog sammen med Belgien, Frankrig, Nederlandene og Storbritannien.</p><p>Han har cyklet i Sydafrika, gennem Europa og på de fleste ruter i Nederlandene. Men Frankrig er hans foretrukne cykelland. “Landskabet er fantastisk, og bilisterne giver dig god plads på vejen.”</p></section>
+        <section class="country-band"><span>Luxembourg</span><span>Frankrig</span><span>Spanien</span><span>Nederlandene</span><span>Belgien</span></section>
+        <section class="wide-photo"><OptimizedImage src={photo('CYCLIST_D2_CF5_4140_retouch.jpg')} alt="Albert cykler mellem afvandingskanaler i skumringen" /></section>
+
+        <section class="prose chapter-copy"><p>Alberts længste tur gik fra hans hollandske landsby til San Sebastián. Jeg spurgte, om han kunne lide den spanske by, der i dag er kendt for sin mad. “Jeg var der ikke længe. Jeg skulle cykle hjem igen.”</p><p>I 1996 gennemførte Albert den berømte tur fra London til Edinburgh og tilbage på 113 timer. Tidsgrænsen er 115 timer. Det gik langsommere end ventet, fordi han ved et uheld var faldet i søvn under et træ. “Ellers var jeg kommet meget hurtigere,” siger han med en grimasse.</p><p>Albert har også deltaget i Cape Town Argus Race sammen med sin svigersøn og 35.000 andre deltagere. Løbet går gennem noget af Sydafrikas smukkeste landskab, men har sine egne udfordringer: fritgående dyr, naturbrande, ekstrem vind og temperaturer, der kan få asfalten til at smelte.</p></section>
+
+        <section class="type-break rust"><h2>Æbletærte</h2></section>
+        <section class="portrait-text reverse"><OptimizedImage src={photo('CYCLIST_D2_CF6_4688_retouch copy.jpg')} alt="Albert holder pause ved sin cykel nær vandet" /><div class="prose"><p>Alberts tilgang til “sportsernæring” er også beundringsværdigt gammeldags. Ingen avancerede isotoniske energidrikke, micellært kaseinpulver eller så meget som en energibar. Han foretrækker stærk, sød frugtsaft sammen med rugbrødsmadder med ost – eller et par croissanter, når han er i Frankrig.</p><p>Men favoritten er et stykke traditionel hollandsk æbletærte halvvejs på turen.</p></div></section>
+        <section class="image-pair"><OptimizedImage src={photo('CYCLIST_D2_CF6_4717_retouch copy.jpg')} alt="Albert holder pause, indrammet af den gule cykel" /><OptimizedImage src={photo('CYCLIST_D2_CF2_1499_retouch copy.jpg')} alt="Albert bærer sin gule Gazelle" /></section>
+
+        <section class="type-break"><h2>Flodlandet</h2></section>
+        <section class="split-story river"><div class="prose"><p>Albert bor i “Rivierenland” – flodlandet – og hans daglige ture følger ofte digerne langs en af områdets store floder som Waal, Maas eller Lek.</p></div><OptimizedImage src={photo('CYCLIST_D2_CF1_0361_retouch copy.jpg')} alt="Albert står med sin cykel på en lille færge" /></section>
+        <section class="image-pair"><OptimizedImage src={photo('CYCLIST_CF_1_0366_retouch copy.jpg')} alt="Et sløret nærbillede af Albert på cyklen ved floden" /><OptimizedImage src={photo('CYCLIST_D2_CF1_0909_retouch copy.jpg')} alt="Albert cykler i det fjerne langs et dige" /></section>
+
+        <section class="interview-band"><p>“Hvilken tid var din bedste som cykelrytter?”</p><p>“Halvtredserne, for dengang blev jeg hurtigere og stærkere – ikke langsommere og ældre.”</p></section>
+        <section class="quote-panel"><p>I min alder er det lettere at cykle end at gå.</p></section>
+        <section class="prose chapter-copy"><p>Ingen isotoniske drikke, gels eller pulvere til den 82-årige veteran Albert. Bare stærk kaffe og ontbijtkoek – en traditionel hollandsk, mildt krydret kage – til at komme gennem 60 kilometer på en vintertur. En mand af den gamle skole.</p></section>
+        <section class="full-photo"><OptimizedImage src={photo('CYCLIST_D2_CF1_1080_retouch copy.jpg')} alt="Albert cykler under et vidt vinterlandskab" /></section>
+
+        <section class="type-break rust"><h2>Vilje af jern</h2></section>
+        <section class="prose chapter-copy"><p>Selv i det cykelvenlige Nederlandene regner Albert med én ulykke om året. Det er måske ikke overraskende, når man cykler hver eneste dag.</p><p>Blandt hans værste styrt er en knust kæbe og et brækket kindben efter et sammenstød med en fransk rytter, der standsede uden varsel. Heldigvis kørte en ambulance ham hele vejen fra Frankrig hjem til Nederlandene, hvor det tog to uger at komme sig.</p><p>Han har også smadret begge knæ efter at have ramt siden af en bil på en hurtig nedkørsel. I dag har han to metalplader – én i hvert knæ – som minde om sammenstødet. De passer til hans vilje af jern.</p></section>
+        <section class="image-pair cinematic"><OptimizedImage src={photo('CYCLIST_D2_CF6_5208_retouch copy.jpg')} alt="Albert cykler under en betonbro" /><OptimizedImage src={photo('CYCLIST_CF_3_2252_retouch copy.jpg')} alt="Albert cykler væk gennem en solbeskinnet skov" /></section>
+        <section class="cancer-line"><p>Da Albert i 1999 fik at vide, at han havde overvundet kræften, var det første, han gjorde, at tage ud at cykle.</p></section>
+        <section class="image-pair"><OptimizedImage src={photo('CYCLIST_D2_CF2_1308_retouch copy.jpg')} alt="Albert cykler forbi et mindekors ved vejen" /><OptimizedImage src={photo('CYCLIST_D2_CF3_1876_retouch copy.jpg')} alt="Albert cykler gennem en lige allé af træer" /></section>
+
+        <section class="prose closing-copy"><p>Fastlåst foran en skærm så jeg hver morgen Albert tage af sted på diget, med hovedet bøjet og pedalerne i gang mod vinden, gennem slagregn eller tåge, der lettede.</p><p>Hvor kørte han hen? Hvorfor? Hvor langt? Hvor gammel var han? Hvor gammel var cyklen? Sådan begyndte projektet og samtalerne – en fortælling om en stålcykel og en vilje af jern.</p><p>Albert og hans generation har sat målestokken. Hans sejhed og beslutning om at udfordre sig selv dag efter dag er en standard, vi kan måle os selv efter – både i sadlen og i livet.</p></section>
+        <section class="full-photo final-ride"><OptimizedImage src={photo('CYCLIST_D2_CF5_2895_retouch copy.jpg')} alt="Albert cykler væk ad en åben vej" /></section>
+        <section class="honour"><p>“Chapeau Albert. Det var en ære.”</p><p>Skabt, designet og produceret af van North.</p><p>Fotografi af Ryan Edy.</p><p>Chapeau Albert. Det var en ære.</p></section>
+
+        <section class="remaining-gallery" aria-label="Fotografier fra En mand af stål">
+          {gallery.map(([name, alt], index) => <figure class:list={['gallery-item', index % 7 === 0 && 'gallery-wide']}><OptimizedImage src={photo(name)} alt={alt} widths={[480, 768, 1200, 1600]} sizes={index % 7 === 0 ? '100vw' : '(max-width: 800px) 100vw, 50vw'} /></figure>)}
+        </section>
+
+        <section class="credits prose">
+          <h2>Kreditering:</h2>
+          <p>Fotografi: Ryan Edy.</p>
+          <p>Skabt, designet, produceret og skrevet af Dan Mawdesley @ van North.</p>
+          <p>Alle fotografierne fra denne og andre serier kan købes på <a href="https://www.cyclingprints.nl" target="_blank" rel="noopener noreferrer">www.cyclingprints.nl</a> – også som postkort, kalendere med mere.</p>
+          <p>Kreativ idé, art direction, tekst og produktion: Dan Mawdesley. Jeg er kreativ direktør, har arbejdet på globale reklamekampagner for blandt andre Nikon, Vodafone og Mitsubishi Motors og driver mit eget kreative bureau: <a href="https://www.vannorth.com" target="_blank" rel="noopener noreferrer">www.vannorth.com</a>. Jeg har modtaget flere priser for reklame og fotografi.</p>
+          <p>Fotografi: Ryan Edy er kommerciel fotograf med fokus på livsstil og friluftsliv. Han har fotograferet for blandt andre Toyota, Aldi, GymShark og Columbia og har også modtaget flere priser: <a href="https://www.ryanedy.com" target="_blank" rel="noopener noreferrer">www.ryanedy.com</a></p>
+          <p>Ingen af os har store egoer – vi er bare store legebørn – og vi elskede at følge Albert på hans ture og fotografere ham fra vores cykler og fra ladet på min gamle LandCruiser.</p>
+        </section>
+        <section class="metric-band closing-metric"><p><strong>100 km</strong><span>sommer</span></p><p><strong>60 km</strong><span>vinter</span></p></section>
+        <nav class="steel-bottom-nav" aria-label="Fortsæt på siden"><a href={`${base}/historier/`}>← Alle historier</a></nav>
+      </article>
+    </main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af historiske cykler,<br />fortællinger, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>
+
+<style>
+  .reader-story-label{display:inline-block;margin:0 0 .75rem;padding:.45rem .7rem;border:1px solid currentColor;font:600 .68rem/1 'DM Sans',sans-serif;letter-spacing:.15em;text-transform:uppercase}.portrait-photo{min-width:0;width:100%;height:clamp(480px,45vw,700px);overflow:hidden}.portrait-photo :global(picture),.portrait-photo :global(img){display:block!important;width:100%!important;height:100%!important;max-width:none!important}.portrait-photo :global(img){object-fit:cover!important;object-position:78% center!important}@media(max-width:850px){.portrait-photo{height:auto}.portrait-photo :global(picture),.portrait-photo :global(img){height:auto!important}}
+  :global(body.steel-page){background:#ece9df;color:#171713}.steel-header{background:rgba(236,233,223,.95);backdrop-filter:blur(14px)}.steel-header .muted{opacity:.38;cursor:default}.steel-story{overflow:hidden}.steel-hero{height:min(88vh,900px);min-height:610px;position:relative;background:#181817}.steel-hero :global(picture),.steel-hero :global(img){display:block;width:100%;height:100%;object-fit:cover;object-position:center 44%}.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,9,.72),rgba(10,10,9,.08) 65%),linear-gradient(0deg,rgba(10,10,9,.25),transparent 50%)}.hero-title{position:absolute;left:max(6vw,1.5rem);bottom:8%;color:#f1efe8}.hero-title p{font:600 .78rem/1.2 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;margin:0 0 1.2rem}.hero-title h1,.type-break h2{font:600 clamp(5rem,13vw,12rem)/.78 'Oswald',sans-serif;letter-spacing:-.06em;text-transform:uppercase;margin:0}.prose{max-width:720px;margin-inline:auto;font-size:1.08rem;line-height:1.82}.prose p{margin:0 0 1.35rem}.prose.wide{max-width:920px}.opening-copy{padding:clamp(5rem,10vw,9rem) 1.5rem clamp(2.5rem,5vw,4.5rem)}.opening-copy p{font:400 clamp(1.55rem,3vw,2.5rem)/1.5 'Libre Caslon Display',serif}.print-link{box-sizing:border-box;padding:0 1.5rem clamp(4rem,8vw,7rem);font-size:.95rem;line-height:1.6}.print-link p{margin:0}.print-link a{color:inherit;text-underline-offset:.18em}.full-photo,.wide-photo{width:100%;margin:0}.full-photo :global(picture),.full-photo :global(img),.wide-photo :global(picture),.wide-photo :global(img){display:block;width:100%;height:auto}.intro-copy,.chapter-copy,.closing-copy{padding:clamp(4.5rem,8vw,7rem) 1.5rem}.display-line{font:400 clamp(2.3rem,5vw,4.7rem)/1.1 'Libre Caslon Display',serif}.metric-band{background:#28303b;color:#eeeae0;display:grid;grid-template-columns:1fr 1fr;padding:clamp(3.5rem,8vw,7rem) max(6vw,1.5rem);gap:4rem}.metric-band p{margin:0;display:flex;flex-direction:column}.metric-band strong{font:600 clamp(4.5rem,12vw,11rem)/.78 'Oswald',sans-serif;letter-spacing:-.06em}.metric-band span{font:600 clamp(1.4rem,3vw,2.6rem)/1 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.03em}.split-story,.portrait-text{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:stretch}.split-story .prose,.portrait-text .prose{box-sizing:border-box;width:100%;max-width:none;margin:0;padding:clamp(3rem,5vw,5.5rem);display:flex;flex-direction:column;justify-content:center}.split-story :global(picture),.portrait-text> :global(picture){display:block;min-width:0;width:100%;height:clamp(480px,45vw,700px);overflow:hidden}.split-story :global(img),.portrait-text> :global(img){display:block;min-width:0;width:100%;height:100%;object-fit:cover}.portrait-text:not(.reverse)> :global(picture) :global(img){object-position:78% center}.image-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.image-pair> :global(picture){display:block;min-width:0;width:100%;height:clamp(420px,48vw,720px);overflow:hidden}.image-pair :global(img){display:block;min-width:0;width:100%;height:100%;object-fit:cover}.image-pair.cinematic> :global(picture){height:clamp(360px,42vw,650px)}.type-break{background:#171713;color:#e9e5d9;padding:clamp(5rem,12vw,11rem) max(6vw,1.5rem)}.type-break.rust{background:#8d4b32}.portrait-text.reverse{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}.portrait-text.reverse> :global(picture){order:2}.portrait-text.reverse .prose{order:1}.quote-over-photo{position:relative;min-height:700px}.quote-over-photo :global(picture),.quote-over-photo :global(img){position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.quote-over-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,9,.76),transparent 75%)}.quote-over-photo blockquote{position:relative;z-index:1;margin:0;padding:clamp(5rem,10vw,10rem) max(6vw,1.5rem);max-width:730px;color:#fff;font:400 clamp(2rem,4.5vw,4.2rem)/1.2 'Libre Caslon Display',serif}.detail-grid{display:grid;grid-template-columns:1fr 1fr 1fr}.detail-grid :global(picture),.detail-grid :global(img){display:block;width:100%;height:52vw;max-height:720px;object-fit:cover}.country-band{background:#28303b;color:#ece9df;padding:clamp(4rem,9vw,8rem) max(6vw,1.5rem);display:flex;gap:1rem 3rem;flex-wrap:wrap}.country-band span{font:600 clamp(2.8rem,7vw,7rem)/.85 'Oswald',sans-serif;text-transform:uppercase}.river{background:#dad7cc;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}.interview-band{background:#171713;color:#ece9df;padding:clamp(5rem,10vw,9rem) max(6vw,1.5rem);display:grid;grid-template-columns:1fr 1fr;gap:4rem}.interview-band p{font:400 clamp(2rem,4.5vw,4rem)/1.25 'Libre Caslon Display',serif;margin:0}.quote-panel{padding:clamp(4rem,8vw,7rem) 1.5rem;text-align:center}.quote-panel p,.cancer-line p,.honour>p:first-child{font:400 clamp(3rem,7vw,7rem)/1.02 'Libre Caslon Display',serif;max-width:1100px;margin:0 auto}.quote-panel p{font-size:clamp(2.8rem,5.5vw,5.3rem)}.cancer-line{background:#8d4b32;color:#fff;padding:clamp(7rem,15vw,14rem) max(6vw,1.5rem)}.closing-copy p:first-child{font:400 clamp(1.8rem,3.5vw,3.2rem)/1.35 'Libre Caslon Display',serif}.final-ride :global(img){max-height:900px;object-fit:cover}.honour{text-align:center;padding:clamp(6rem,12vw,11rem) 1.5rem;background:#171713;color:#ece9df}.honour p{margin:.6rem 0;font-size:.9rem}.honour>p:first-child{margin-bottom:3rem}.remaining-gallery{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.gallery-item{min-width:0;margin:0;aspect-ratio:3/2;overflow:hidden}.gallery-item.gallery-wide{grid-column:1/-1;aspect-ratio:auto}.gallery-item:last-child:not(.gallery-wide){grid-column:1/-1;justify-self:center;width:min(100%,1000px)}.gallery-item :global(picture),.gallery-item :global(img){display:block;min-width:0;width:100%;height:100%;object-fit:cover}.gallery-wide :global(img){height:auto;max-height:none}.credits{padding:clamp(4rem,8vw,7rem) 1.5rem}.credits a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.2em}.closing-metric{background:#171713}.steel-bottom-nav{padding:2rem max(6vw,1.5rem) 5rem;background:#171713}.steel-bottom-nav a{color:#ece9df;text-decoration:none}.steel-bottom-nav a:hover{text-decoration:underline}
+  @media(max-width:850px){.steel-hero{height:78vh;min-height:560px}.hero-title h1{font-size:clamp(4.5rem,22vw,8rem)}.split-story,.portrait-text,.river,.interview-band{grid-template-columns:1fr}.metric-band{gap:1rem}.metric-band strong{font-size:clamp(3.4rem,17vw,6rem)}.split-story :global(picture),.portrait-text> :global(picture),.image-pair> :global(picture){height:auto}.split-story :global(img),.portrait-text> :global(img),.image-pair :global(img){height:auto;max-height:none}.portrait-text.reverse> :global(picture),.portrait-text.reverse .prose{order:initial}.image-pair,.remaining-gallery{grid-template-columns:1fr}.gallery-item{aspect-ratio:auto}.gallery-item :global(img){height:auto;max-height:none}.detail-grid{grid-template-columns:1fr}.detail-grid :global(img){height:auto;max-height:none}.interview-band{gap:2.5rem}.gallery-item.gallery-wide{grid-column:auto}.quote-over-photo{min-height:620px}}
+  @media(max-width:640px){.steel-header nav{display:none}.steel-header{position:relative}.steel-hero{min-height:540px}.hero-title{bottom:7%}.opening-copy,.intro-copy,.chapter-copy,.closing-copy{padding-top:4.5rem;padding-bottom:4.5rem}.metric-band{grid-template-columns:1fr}.country-band{padding-block:4rem}.country-band span{font-size:clamp(2.5rem,15vw,4.5rem)}}
+</style>
+

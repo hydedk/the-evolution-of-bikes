@@ -9,6 +9,7 @@ export type BikeMeta = {
 };
 
 export const bikes: BikeMeta[] = [
+  { slug: 'vitus-992', year: '1994', place: 'Frankrig / Herning', title: 'Vitus 992', status: 'Ny i samlingen · Ikke restaureret', text: 'En fransk, limet aluminiumsracer med dansk stelnummer, Shimano 105 og Henning Jørgensens navn på rørene.', image: 'images/bikes/vitus-992/hero.jpg' },
   { slug: 'favorit-f11-1959', year: '1959', place: 'Tjekkoslovakiet / Serbien', title: 'Favorit F11', status: 'Læserens cykel · Ikke i samlingen', text: 'En guldfarvet Favorit-racer med købskvittering, klubkort og fotografier fra den første ejer, Srbinko Drakšan.', image: 'images/bikes/favorit-f11-1959/hero.webp' },
   { slug: 'olympia-1978', year: '1978, oplyst', place: 'Italien', title: 'Olympia', status: 'Tidligere i samlingen', text: 'En orange italiensk stålracer med Campagnolo Nuovo Gran Sport, Universal-bremser og Ofmega-kranksæt, dokumenteret gennem ejerens fotografier.', image: 'images/bikes/olympia-1978/hero.webp' },
   { slug: 'bernardi-ca-1980', year: 'ca. 1980', place: 'Italien', title: 'Bernardi', status: 'Tidligere i samlingen', text: 'En turkis italiensk stålracer med Campagnolo Nuovo Gran Sport, højflangenav og Universal-bremser, bevaret med en usikker forbindelse til Guido De Bernardi.', image: 'images/bikes/bernardi-ca-1980/hero.webp' },

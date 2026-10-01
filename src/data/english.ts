@@ -2,6 +2,8 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'principia-og-den-danske-aluminiumsdroem': ['Principia and the Danish aluminium dream', 'Three triathletes in Aalborg began welding the aluminium frames they could not afford to buy. Within a few years, Principia was racing far beyond the basement workshop.'],
+  'ole-ritter-timerekord-1968': ["Ole Ritter's hour in Mexico City", 'On 10 October 1968, Ole Ritter rode farther in one hour than anyone before him. The thin air of Mexico City helped the speed, but it did not make the effort easier.'],
   'mavic-neutral-service': ['When the neutral service car became everyone’s mechanic', 'A car broke down during the Dauphiné Libéré. The following year, Mavic sent out a yellow service car to help the entire field — including riders far from their own mechanic.'],
   'da-brooklyn-holdet-gjorde-gios-blaa': ['When the Brooklyn team turned GIOS blue', "A sponsor's request joined the Brooklyn jersey, the GIOS Super Record and Roger De Vlaeminck's team — and the colour outlived the contract."],
   'favorit-f11-en-cykel-og-en-ungdom': ['When the bicycle left its first owner', 'A gold Favorit F11, its 1960 receipt and a meeting with the man who had kept the bicycle for more than six decades.'],
@@ -91,6 +93,7 @@ const storyCopy: Record<string, [string, string]> = {
 };
 
 const bikeCopy: Record<string, [string, string?, string?]> = {
+  'vitus-992': ['A French bonded-aluminium racer with a Danish frame number, Shimano 105 and Henning Jørgensen’s name on the tubes.', 'France / Herning', 'New to the collection · Not restored'],
   'favorit-f11-1959': ['A gold Czechoslovak Favorit racer with a documented Serbian ownership history, restored by reader Stefan Đurić.', 'Czechoslovakia / Serbia', "Reader's bicycle · Not in the collection"],
   'olympia-1978': ['An orange Italian steel racer with Campagnolo Nuovo Gran Sport, Universal brakes and an Ofmega chainset, preserved in the owner’s photographs.', 'Italy', 'Previously in the collection'],
   'bernardi-ca-1980': ['A turquoise Italian steel racer with Campagnolo Nuovo Gran Sport, high-flange hubs and Universal brakes, preserved with an uncertain connection to Guido De Bernardi.', 'Italy', 'Previously in the collection'],

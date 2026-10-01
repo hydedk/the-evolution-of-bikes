@@ -37,6 +37,8 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'principia-og-den-danske-aluminiumsdroem': { period: '1990-1999', primary: 'teknik', secondary: ['menneskene-bag', 'cykelkultur'] },
+  'ole-ritter-timerekord-1968': { period: '1960-1969', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'teknik'] },
   'mavic-neutral-service': { period: '1970-1979', primary: 'menneskene-bag', secondary: ['teknik', 'loeb-og-store-oejeblikke'] },
   'da-brooklyn-holdet-gjorde-gios-blaa': { period: '1970-1979', primary: 'teknik', secondary: ['cykelkultur', 'menneskene-bag'] },
   'olano-vm-1995': { period: '1990-1999', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'teknik'] },
@@ -135,6 +137,7 @@ const storyClassifications: Record<string, Classification> = {
 };
 
 const bikePeriods: Record<string, string> = {
+  'vitus-992': '1990-1999',
   'favorit-f11-1959': '1950-1959',
   'olympia-1978': '1970-1979', 'bernardi-ca-1980': '1980-1989', 'faggin-1986': '1980-1989', 'scapin-k6': '2010-2019',
   'principia-evolution': '2000-2009', 'gios-super-record': '1970-1979', 'rossin-record': '1970-1979', 'asmussen-super-prestige': '1980-1989',

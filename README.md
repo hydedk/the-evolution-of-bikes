@@ -15,6 +15,21 @@ pnpm dev
 pnpm build
 ```
 
+## Google Analytics
+
+GA4 bruger det offentlige målings-id `G-VFH5KBES6L` i
+`scripts/analytics.mjs`. Det fælles samtykkevalg findes på offentlige danske
+og engelske sider; administration, noindex-sider og redirects undtages.
+Google-tagget indlæses kun efter accept og kun på `teob.dk`/`www.teob.dk`.
+Afvisning sender ingen statistik, og Cookieindstillinger i footeren giver
+mulighed for at ændre valget. Valget udløber efter 180 dage.
+
+I Analytics bør webstrømmens forbedrede måling begrænses til sidevisninger:
+slå især formularinteraktioner fra, da siden har formularer med læserbidrag.
+Vælg også den ønskede datalagringsperiode under dataopbevaring. Efter
+udgivelse kan forbindelsen kontrolleres i Realtid ved at besøge teob.dk og
+acceptere statistikcookies. Lokale besøg tælles ikke.
+
 ## Administration af læserhistorier og kommentarer
 
 Den private side ligger på `/admin/indsendelser/` og kræver en bruger i

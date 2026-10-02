@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { addAnalytics } from './scripts/analytics.mjs';
 
 const siteUrl = 'https://teob.dk';
 const languagePairs = {
@@ -324,7 +325,7 @@ const socialMetadata = {
         const structuredData = `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>`;
 
         html = html.replace(/<title>.*?<\/title>/is, `${tags}${structuredData}<title>${pageTitle}</title>`);
-        await writeFile(file, html);
+        await writeFile(file, addAnalytics(html));
         sitemapUrls.push(canonical);
       }
 

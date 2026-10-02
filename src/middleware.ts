@@ -1,4 +1,5 @@
 import { defineMiddleware } from 'astro:middleware';
+import { addAnalytics } from '../scripts/analytics.mjs';
 
 const submissionUrl = import.meta.env.PUBLIC_STORY_SUBMISSION_URL
   ?? 'https://fmxiyfhncvhnwzwipnxu.supabase.co/functions/v1/submit-reader-story';
@@ -45,14 +46,15 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const markerIndex = pathname.indexOf(marker);
   const isStoryPage = markerIndex >= 0 && /^\/[^/]+\/$/.test(pathname.slice(markerIndex + marker.length - 1));
 
-  if (!isStoryPage || !response.headers.get('content-type')?.includes('text/html')) return response;
+  if (!response.headers.get('content-type')?.includes('text/html')) return response;
 
-  const base = pathname.slice(0, markerIndex);
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const canonicalUrl = `https://teob.dk${pathname}`;
   const html = await response.text();
   const scripts = `<script src="${base}/scripts/story-comments.js" defer></script>`;
-  const withComments = html.replace('</main>', `${commentSection(base, canonicalUrl)}</main>`);
-  const body = withComments.replace('</body>', `${scripts}</body>`);
+  const withComments = isStoryPage ? html.replace('</main>', `${commentSection(base, canonicalUrl)}</main>`) : html;
+  const withScripts = isStoryPage ? withComments.replace('</body>', `${scripts}</body>`) : withComments;
+  const body = pathname.startsWith(`${base}/admin/`) ? withScripts : addAnalytics(withScripts, base);
 
   return new Response(body, {
     status: response.status,

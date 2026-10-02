@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'a-man-of-steel': ['A Man of Steel', 'Albert is 82 and still rides every day. A photographic reader story about a yellow steel Gazelle, daily kilometres and an iron will.'],
   'principia-og-den-danske-aluminiumsdroem': ['Principia and the Danish aluminium dream', 'Three triathletes in Aalborg began welding the aluminium frames they could not afford to buy. Within a few years, Principia was racing far beyond the basement workshop.'],
   'ole-ritter-timerekord-1968': ["Ole Ritter's hour in Mexico City", 'On 10 October 1968, Ole Ritter rode farther in one hour than anyone before him. The thin air of Mexico City helped the speed, but it did not make the effort easier.'],
   'mavic-neutral-service': ['When the neutral service car became everyone’s mechanic', 'A car broke down during the Dauphiné Libéré. The following year, Mavic sent out a yellow service car to help the entire field — including riders far from their own mechanic.'],

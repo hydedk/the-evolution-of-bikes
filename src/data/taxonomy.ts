@@ -37,6 +37,7 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'a-man-of-steel': { period: '2010-2019', primary: 'cykelkultur', secondary: ['ryttere', 'menneskene-bag'] },
   'principia-og-den-danske-aluminiumsdroem': { period: '1990-1999', primary: 'teknik', secondary: ['menneskene-bag', 'cykelkultur'] },
   'ole-ritter-timerekord-1968': { period: '1960-1969', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'teknik'] },
   'mavic-neutral-service': { period: '1970-1979', primary: 'menneskene-bag', secondary: ['teknik', 'loeb-og-store-oejeblikke'] },

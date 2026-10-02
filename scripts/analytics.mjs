@@ -1,4 +1,4 @@
-export const measurementId = 'G-VFH5KBES6L';
+export const measurementId = 'G-17SK11ZTPX';
 
 export function addAnalytics(html, base = '') {
   if (/name=["']robots["'][^>]*noindex/i.test(html) || /http-equiv=["']refresh["']/i.test(html) || html.includes('data-analytics-id=')) return html;

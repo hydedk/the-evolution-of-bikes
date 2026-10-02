@@ -17,7 +17,7 @@ pnpm build
 
 ## Google Analytics
 
-GA4 bruger det offentlige målings-id `G-VFH5KBES6L` i
+GA4 bruger det offentlige målings-id `G-17SK11ZTPX` i
 `scripts/analytics.mjs`. Det fælles samtykkevalg findes på offentlige danske
 og engelske sider; administration, noindex-sider og redirects undtages.
 Google-tagget indlæses kun efter accept og kun på `teob.dk`/`www.teob.dk`.

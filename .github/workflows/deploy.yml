@@ -32,6 +32,14 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: Cache Astro image assets
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.astro/assets
+          # Restore compatible images, then save new variants under this commit.
+          key: ${{ runner.os }}-astro-images-v1-${{ hashFiles('pnpm-lock.yaml', 'astro.config.mjs') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-astro-images-v1-${{ hashFiles('pnpm-lock.yaml', 'astro.config.mjs') }}-
       - name: Build
         run: pnpm build
         env:

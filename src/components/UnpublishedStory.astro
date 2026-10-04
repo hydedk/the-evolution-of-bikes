@@ -1,0 +1,53 @@
+---
+const { story } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <meta name="description" content={story.description} />
+    <title>{story.title} · kladde · The Evolution of Bikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href={`${base}/styles/global.css`} />
+  </head>
+  <body data-unpublished-story>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
+      <nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav>
+      <div class="header-tools"><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div>
+    </header>
+    <main>
+      <article class="unpublished-story" style={`--draft-accent:${story.accent}`}>
+        <p class="unpublished-story__notice">Redaktionel kladde · ikke publiceret</p>
+        <header class="unpublished-story__hero">
+          <p class="section-label">{story.label} · {story.year}</p>
+          <h1>{story.title}</h1>
+          <p>{story.intro}</p>
+        </header>
+        <div class="unpublished-story__visual" aria-hidden="true"><span>{story.year}</span><strong>{story.visual}</strong></div>
+        <section class="unpublished-story__lead"><p>{story.lead}</p></section>
+        <section class="unpublished-story__body">
+          <aside><strong>{story.year}</strong><span>{story.aside}</span></aside>
+          <div>
+            {story.sections.map((section) => <section><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</section>)}
+          </div>
+        </section>
+        <section class="unpublished-story__facts">{story.facts.map((fact) => <div><strong>{fact.value}</strong><span>{fact.label}</span></div>)}</section>
+        <section class="unpublished-story__sources">
+          <div><p class="section-label">Kilder og redaktionel status</p><h2>Kontrolleret grundlag</h2></div>
+          <div><p>{story.sourceNote}</p><ul>{story.sources.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}</ul></div>
+        </section>
+      </article>
+    </main>
+    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+  </body>
+</html>
+
+<style>
+  .unpublished-story{background:#eee9dd;color:#22201d;overflow:hidden}.unpublished-story__notice{margin:0;padding:.7rem 6vw;background:#171713;color:#eee9dd;text-align:center;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.unpublished-story__hero{max-width:1180px;margin:auto;padding:clamp(5rem,10vw,9rem) 6vw}.unpublished-story__hero h1{max-width:1050px;margin:.7rem 0 1.7rem;font:400 clamp(3.2rem,8vw,7.2rem)/.94 "Libre Caslon Display",serif;letter-spacing:-.045em}.unpublished-story__hero>p:last-child{max-width:760px;font-size:clamp(1.12rem,2vw,1.45rem);line-height:1.55}.unpublished-story__visual{min-height:clamp(310px,48vw,620px);padding:7vw;display:flex;align-items:flex-end;justify-content:space-between;background:linear-gradient(135deg,var(--draft-accent),#1d1c19 75%);color:#eee9dd}.unpublished-story__visual span{font:clamp(5rem,18vw,15rem)/.8 "Libre Caslon Display",serif;opacity:.16}.unpublished-story__visual strong{max-width:420px;text-align:right;font:400 clamp(1.5rem,3vw,2.8rem)/1.12 "Libre Caslon Display",serif}.unpublished-story__lead{max-width:980px;margin:auto;padding:clamp(4rem,8vw,7rem) 6vw;font:clamp(1.55rem,3vw,2.55rem)/1.35 "Libre Caslon Display",serif}.unpublished-story__body{display:grid;grid-template-columns:190px minmax(0,720px);gap:clamp(2rem,6vw,6rem);max-width:1060px;margin:auto;padding:0 6vw 7rem}.unpublished-story__body aside{align-self:start;border-top:2px solid var(--draft-accent);padding-top:1rem}.unpublished-story__body aside strong{display:block;color:var(--draft-accent);font:2.7rem "Libre Caslon Display",serif}.unpublished-story__body aside span{font-size:.85rem;line-height:1.45}.unpublished-story__body section+section{margin-top:3.5rem}.unpublished-story__body h2,.unpublished-story__sources h2{margin:0 0 1rem;font:400 2.2rem/1.12 "Libre Caslon Display",serif}.unpublished-story__body p{font-size:1.08rem;line-height:1.78}.unpublished-story__facts{display:grid;grid-template-columns:repeat(4,1fr);background:var(--draft-accent);color:#fff}.unpublished-story__facts div{min-height:170px;padding:2rem;border-right:1px solid #ffffff33}.unpublished-story__facts strong{display:block;font:2.4rem "Libre Caslon Display",serif}.unpublished-story__facts span{font-size:.8rem;line-height:1.4}.unpublished-story__sources{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;padding:clamp(4rem,8vw,7rem) max(6vw,calc((100vw - 1100px)/2));background:#22201d;color:#eee9dd}.unpublished-story__sources p,.unpublished-story__sources li{line-height:1.65}.unpublished-story__sources a{color:inherit;text-underline-offset:4px}@media(max-width:720px){.unpublished-story__body,.unpublished-story__sources{grid-template-columns:1fr}.unpublished-story__facts{grid-template-columns:1fr 1fr}.unpublished-story__visual{align-items:flex-start}.unpublished-story__visual strong{max-width:230px}.unpublished-story__visual span{font-size:4.5rem}}
+</style>

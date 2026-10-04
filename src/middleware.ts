@@ -51,9 +51,11 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const canonicalUrl = `https://teob.dk${pathname}`;
   const html = await response.text();
+  const isUnpublishedStory = html.includes('data-unpublished-story');
+  const shouldAddComments = isStoryPage && !isUnpublishedStory;
   const scripts = `<script src="${base}/scripts/story-comments.js" defer></script>`;
-  const withComments = isStoryPage ? html.replace('</main>', `${commentSection(base, canonicalUrl)}</main>`) : html;
-  const withScripts = isStoryPage ? withComments.replace('</body>', `${scripts}</body>`) : withComments;
+  const withComments = shouldAddComments ? html.replace('</main>', `${commentSection(base, canonicalUrl)}</main>`) : html;
+  const withScripts = shouldAddComments ? withComments.replace('</body>', `${scripts}</body>`) : withComments;
   const body = pathname.startsWith(`${base}/admin/`) ? withScripts : addAnalytics(withScripts, base);
 
   return new Response(body, {

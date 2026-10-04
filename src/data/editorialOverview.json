@@ -6688,5 +6688,20 @@
     "blokeret_af": "null",
     "kanonisk_url": "",
     "fil": "hist-000446-wilier-triestina.md"
+  },
+  {
+    "id": "hist-000447",
+    "titel": "Tilskuercyklen der kostede Lapébie Paris–Roubaix",
+    "status": "publiceret",
+    "prioritet": "hoej",
+    "periode": "per-1930-1939",
+    "aar": "1934",
+    "spor": "loeb-og-store-oejeblikke",
+    "dokumentation": "delvist-dokumenteret",
+    "faktarisiko": "lav",
+    "naeste_handling": "Følg trafik og eventuelle læserhenvendelser efter udgivelsen.",
+    "blokeret_af": "null",
+    "kanonisk_url": "https://teob.dk/historier/tilskuercyklen-der-kostede-lapebie-paris-roubaix/",
+    "fil": "hist-000447-lapebie-tilskuercykel-paris-roubaix-1934.md"
   }
 ]

@@ -1,0 +1,64 @@
+---
+import type { ImageMetadata } from 'astro';
+import { stories } from '../data/stories';
+import { englishStories } from '../data/english';
+
+type Props = { currentSlug: string; language?: 'da' | 'en' };
+const { currentSlug, language = 'da' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const hash = [...currentSlug].reduce((value, character) => ((value * 31) + character.charCodeAt(0)) >>> 0, 7);
+const localizedStories = language === 'en' ? englishStories : stories;
+const candidates = localizedStories.filter((story) => story.slug !== currentSlug);
+const firstIndex = hash % candidates.length;
+const secondIndex = (firstIndex + 17) % candidates.length;
+const selectedStories = [candidates[firstIndex], candidates[secondIndex]];
+const imageSource = (image: string | ImageMetadata) => typeof image === 'string' ? `${base}/${image.replace(/^\//, '')}` : image.src;
+
+const periodDefinitions = [
+  ['1800-1899','Fra de første løb – 1899','From the first races to 1899','Cykelsportens vilde pionerår','Cycling’s wild pioneer years','1900-1920/wild-west/track-racing.webp'],
+  ['1900-1920','1900–1920’erne','1900–1920s','Pionerer og udholdenhed','Pioneers and endurance','1900-1920/rytter-velodrom.webp'],
+  ['1920-1930','1920–1929','1920–1929','Cykelsportens barske guldalder','Cycle racing’s hard golden age','1920-1930/mountain-stop.webp'],
+  ['1930-1939','1930–1939','1930–1939','Da racercyklen blev moderne','When the racing bicycle became modern','1930-1939/romain-maes-cannes-1935.jpg'],
+  ['1940-1949','1940–1949','1940–1949','Da krigen lukkede landevejen','When war closed the roads','1940-1949/efterkrigsfelt-illustration.jpg'],
+  ['1950-1959','1950–1959','1950–1959','Da cykelløbet flyttede ind i stuen','When cycle racing entered the living room','1950-1959/felt-og-filmhold-illustration.jpg'],
+  ['1960-1969','1960–1969','1960–1969','Da racercyklen fandt sin moderne form','When the racing bicycle found its modern form','1960-1969/anquetil-poulidor-paris-1964.webp'],
+  ['1970-1979','1970–1979','1970–1979','Mellem Kannibalen og Grævlingen','Between the Cannibal and the Badger','1970-1979/felt-illustration.jpg'],
+  ['1980-1989','1980–1989','1980–1989','Da cyklen blev et laboratorium','When the bicycle became a laboratory','1980-1989/teknisk-brydningstid-illustration.webp'],
+  ['1990-1999','1990–1999','1990–1999','Da gearskiftet flyttede op på styret','When shifting moved to the handlebars','1990-1999/galibier-1993.jpg'],
+  ['2000-2009','2000–2009','2000–2009','Da cykelsporten blev et kontrolrum','When cycling became a control room','2000-2009/allos-2000.webp'],
+  ['2010-2019','2010–2019','2010–2019','Da computeren overtog cyklen','When the computer took over the bicycle','2010-2019/wiggins-2012.webp'],
+] as const;
+const period = periodDefinitions[(hash + 5) % periodDefinitions.length];
+const storyPrefix = language === 'en' ? '/en/stories' : '/historier';
+const periodPrefix = language === 'en' ? '/en/periods' : '/perioder';
+---
+<section class="related-discovery" aria-labelledby={`related-${language}`}>
+  <header><p class="section-label">{language === 'en' ? 'Continue exploring' : 'Gå videre'}</p><h2 id={`related-${language}`}>{language === 'en' ? 'More from cycling history' : 'Mere fra cykelhistorien'}</h2></header>
+  <div class="related-grid">
+    {selectedStories.map((story) => <a class="related-card" href={`${base}${storyPrefix}/${story.slug}/`}>
+      <img src={imageSource(story.image)} alt="" loading="lazy"/>
+      <div><span>{story.year}</span><h3>{story.title}</h3><p>{story.text}</p><b>{language === 'en' ? 'Read the story →' : 'Læs historien →'}</b></div>
+    </a>)}
+    <a class="related-card period-card" href={`${base}${periodPrefix}/${period[0]}/`}>
+      <img src={`${base}/images/periods/${period[5]}`} alt="" loading="lazy"/>
+      <div><span>{language === 'en' ? period[2] : period[1]}</span><h3>{language === 'en' ? period[4] : period[3]}</h3><p>{language === 'en' ? 'See the races, people, bicycles and changes that shaped the period.' : 'Se løbene, menneskene, cyklerne og forandringerne, der formede perioden.'}</p><b>{language === 'en' ? 'Explore the period →' : 'Se perioden →'}</b></div>
+    </a>
+  </div>
+</section>
+<style>
+  .related-discovery{max-width:1240px;margin:5rem auto 2rem;padding:4rem 1.5rem;border-top:1px solid var(--line)}
+  .related-discovery>header{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:1.7rem}
+  .related-discovery h2{max-width:700px;margin:0;font:400 clamp(2.2rem,4vw,3.7rem)/1.05 'Libre Caslon Display',serif}
+  .related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.15rem}
+  .related-card{display:flex;min-width:0;flex-direction:column;background:#e9e3d7;color:inherit;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+  .related-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px #2e291f1a}
+  .related-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;filter:saturate(.88)}
+  .related-card>div{display:flex;min-height:290px;flex:1;flex-direction:column;padding:1.35rem 1.4rem 1.5rem}
+  .related-card span{color:var(--rust);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  .related-card h3{margin:.75rem 0 .7rem;font:400 clamp(1.55rem,2.2vw,2.25rem)/1.08 'Libre Caslon Display',serif}
+  .related-card p{margin:0 0 1.4rem;font-size:.91rem;line-height:1.55}
+  .related-card b{margin-top:auto;color:var(--rust);font-size:.78rem;font-weight:600}
+  .period-card{background:#d9ddd5}
+  @media(max-width:900px){.related-grid{grid-template-columns:1fr 1fr}.related-card:last-child{grid-column:1/-1}.related-card:last-child{display:grid;grid-template-columns:1fr 1fr}.related-card:last-child img{height:100%;aspect-ratio:auto}.related-card>div{min-height:250px}}
+  @media(max-width:620px){.related-discovery{margin-top:3rem;padding-inline:1rem}.related-discovery>header{display:block}.related-grid{grid-template-columns:1fr}.related-card:last-child{display:flex;grid-column:auto}.related-card:last-child img{height:auto;aspect-ratio:16/9}.related-card>div{min-height:0}.related-card p{font-size:.88rem}}
+</style>

@@ -1,4 +1,5 @@
 ---
+import RelatedDiscovery from '../../../components/RelatedDiscovery.astro';
 import EnglishHeader from '../../../components/EnglishHeader.astro';
 import EnglishFooter from '../../../components/EnglishFooter.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -84,7 +85,7 @@ const facts = [
 
       <section class="story-sources diet-story-sources"><p class="section-label">Sources and qualifications</p><ul><li>Maurice Garin’s 24-hour race and the famous menu appear in several historical surveys; the exact quantities are treated here as a later account.</li><li>L’Équipe results archive: 1935 Tour de France, stage 17, Pau–Bordeaux.</li><li>The story of Julien Moineau’s beer table comes from later journalistic accounts. The stage and his lead are documented; a prearranged plot has not been conclusively proved.</li><li>The claim that riders smoked to “open the lungs” is presented as widespread cycling folklore, not as a documented practice throughout the peloton.</li></ul></section>
 
-      <nav class="era-bottom-nav" aria-label="Further navigation"><a href={`${base}/en/stories/`}>← All stories</a><a href={`${base}/en/stories/da-gearene-kom-og-oel-narrede-feltet/`}>The full story of Moineau’s beer →</a></nav>
+      <RelatedDiscovery currentSlug={'soevnloeshed-smoer-og-kolde-oel'} language="en"/><nav class="era-bottom-nav" aria-label="Further navigation"><a href={`${base}/en/stories/`}>← All stories</a><a href={`${base}/en/stories/da-gearene-kom-og-oel-narrede-feltet/`}>The full story of Moineau’s beer →</a></nav>
     </article></main>
     <EnglishFooter />
   </body>

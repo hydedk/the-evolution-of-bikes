@@ -1,4 +1,5 @@
 ---
+import RelatedDiscovery from '../../components/RelatedDiscovery.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <!doctype html>
@@ -14,5 +15,5 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <section class="reader-alps-context"><div><p class="section-label">Historien bag erindringen</p><h2>Hønsefarmeren fra Høsterkøb</h2></div><div><p>Hans Edmund Andresen fik sit tilnavn ved seksdagesløbene i Forum. Hjemme i Høsterkøb drev familien hønseri, mens han tjente sine penge som professionel rytter på vinterbanerne.</p><p>Fire danskere startede Touren i 1958. Andresen var den eneste af dem, der nåede Paris, hvor han blev nummer 62. Hans bemærkning om vandet på Ventoux blev trykt i Aftenbladet den 14. juli 1958 og er bevaret gennem Det Kgl. Biblioteks samlinger.</p><p>Læserens tur foregik 45 år senere. Rådet om at undgå vand var for længst forældet. Men gamle cykelhistorier kan dukke op på mærkelige tidspunkter — også når flasken er tom.</p></div></section>
   <p class="reader-alps-credit">Fortalt af en læser, som ønsker at være anonym. Redaktionelt bearbejdet af The Evolution of Bikes.</p>
   <section class="period-sources"><p class="section-label">Kilder og billednote</p><div><p>Turen i 2003, varmen, den tomme flaske og mødet med tilskuerne er læserens erindring. Oplysningerne om Hans Edmund Andresen og hans udtalelser bygger på Det Kgl. Biblioteks gennemgang af samtidige aviser og senere interviews. Illustrationen er en nutidig fortolkning og bruges ikke som dokumentation.</p><ul><li><a href="https://www.kb.dk/inspiration/hoensefarmeren-fra-hoesterkoeb">Det Kgl. Bibliotek: Hønsefarmeren fra Høsterkøb</a></li><li><a href="https://www.parcduventoux.fr/le-ventoux/un-peu-dhistoire/">Parc naturel régional du Mont-Ventoux: bjergets Tour-historie</a></li></ul></div></section>
-  <nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a></nav>
+  <RelatedDiscovery currentSlug={'den-hvide-oedemark-og-hoensefarmerens-toerst'}/><nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a></nav>
 </article></main><footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer></body></html>

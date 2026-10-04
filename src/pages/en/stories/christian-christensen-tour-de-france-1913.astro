@@ -1,4 +1,5 @@
 ---
+import RelatedDiscovery from '../../../components/RelatedDiscovery.astro';
 import EnglishHeader from '../../../components/EnglishHeader.astro';
 import EnglishFooter from '../../../components/EnglishFooter.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -36,7 +37,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <p>Christensen's story lies in the space between those two statements. He was out of the race in Longwy. According to the story handed down, he still had two stages he intended to ride.</p>
 </div>
 <section class="period-sources"><p class="section-label">Sources and image notes</p><div><p>The stage results have been compared with historical result databases. The wrong turn and the continuation to Paris are based on later accounts. The episode involving the soldiers has not been confirmed in a contemporary source. The smaller races before the Tour have not yet been identified through secure event names and results.</p><ol><li><a href="https://www.procyclingstats.com/rider/christian-christensen">ProCyclingStats – Christian Christensen's 1913 Tour results</a></li><li><a href="https://www.wikimanche.fr/Christian_Christensen">Wikimanche – Christian Christensen</a></li><li><a href="https://ostfynsmuseer.dk/fyn-forrest-i-feltet/">Østfyns Museer – Fyn forrest i feltet</a></li><li><a href="https://blog.myheritage.dk/2022/06/christian-christensen-fra-veflinge-var-danmarks-foerste-tour-de-france-deltager/">MyHeritage – Christian Christensen from Veflinge</a></li><li><a href="https://ruder7.dk/?p=754">Ruder 7 – Mit liv med Tour de France 1</a></li><li><a href="https://www.wikimanche.fr/Deuxi%C3%A8me_%C3%A9tape_du_Tour_de_France_1913">Wikimanche – stage two of the 1913 Tour</a></li><li><a href="https://www.procyclingstats.com/race/tour-de-france/1913/stage-3">ProCyclingStats – stage three of the 1913 Tour</a></li><li><a href="https://www.loc.gov/item/a22000891/">Library of Congress – Alsace-Lorraine</a></li><li><a href="https://storage-aso.lequipe.fr/ASO/cycling_tdf/tdf-2022-dossier-de-presse.pdf">Tour de France – 2022 press kit</a></li></ol></div></section>
-<nav class="era-bottom-nav" aria-label="Further navigation"><a href={`${base}/en/stories/`}>← All stories</a><a href={`${base}/en/periods/1900-1920/`}>Cycling 1900–1920 →</a></nav>
+<RelatedDiscovery currentSlug={'christian-christensen-tour-de-france-1913'} language="en"/><nav class="era-bottom-nav" aria-label="Further navigation"><a href={`${base}/en/stories/`}>← All stories</a><a href={`${base}/en/periods/1900-1920/`}>Cycling 1900–1920 →</a></nav>
 </article></main><EnglishFooter/></body></html>
 
 <style>

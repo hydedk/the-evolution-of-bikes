@@ -1,4 +1,5 @@
 ---
+import RelatedDiscovery from '../../components/RelatedDiscovery.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const image = `${base}/images/stories/michelin-navnet/michelin-aftalen.webp`;
 const pedalImage = `${base}/images/stories/michelin-navnet/michelin-pedal.jpg`;
@@ -113,7 +114,7 @@ const pedalImage = `${base}/images/stories/michelin-navnet/michelin-pedal.jpg`;
           <a href={`${base}/`}>← Tilbage til forsiden</a>
           <span>Historier og anekdoter · 01</span>
         </nav>
-      </article>
+      <RelatedDiscovery currentSlug={'da-michelin-navnet-blev-et-problem'}/></article>
     </main>
 
     <footer id="om">

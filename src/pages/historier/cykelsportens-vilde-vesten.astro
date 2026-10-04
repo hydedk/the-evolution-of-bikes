@@ -1,4 +1,5 @@
 ---
+import RelatedDiscovery from '../../components/RelatedDiscovery.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <!doctype html>
@@ -42,7 +43,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <section class="wildwest-copy rust"><div><p class="section-label">Den lille sorte flaske</p><h2>Kroppen skulle bare fortsætte</h2></div><div><p>Der fandtes ingen moderne antidopingregler. Koffein, alkohol, æter, kokain og små doser stryknin optræder i periodens beretninger, men dokumentationen bag de enkelte historier er ofte usikker. Grænsen mellem medicin, opkvikker og gift var uklar.</p><p>Rytteren vidste ikke altid, hvad trænerens hemmelige blanding indeholdt. Englænderen James “Choppy” Warburton blev berygtet for sin lille sorte flaske, men indholdet er aldrig fastslået sikkert. Midlerne gjorde næppe kroppen stærkere; de kunne gøre det muligt at ignorere advarselssignalerne lidt længere.</p><p>Arthur Linton omtales ofte som sportens første dopingoffer, men hans død i 1896 skyldtes ifølge samtidige oplysninger sandsynligvis sygdom. Det er en vigtig påmindelse: Pionertidens historier er dramatiske nok uden at gøre usikre myter til sikre fakta.</p></div></section>
 
         <nav class="wildwest-next" aria-label="Artikelnavigation"><a href={`${base}/historier/`}>← Alle historier</a><a href={`${base}/historier/snyd-soem-tour-de-france-1904/`}>Næste: Snyd og søm i Touren →</a></nav>
-      </article>
+      <RelatedDiscovery currentSlug={'cykelsportens-vilde-vesten'}/></article>
     </main>
     <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
   </body>

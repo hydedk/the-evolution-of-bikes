@@ -1,4 +1,5 @@
 ---
+import RelatedDiscovery from '../../components/RelatedDiscovery.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const facts = [
   ['1927', 'Idéen fødes på Croce d’Aune'],
@@ -22,5 +23,5 @@ const facts = [
   <section class="quick-consequence"><div><p class="section-label">Mere end et hurtigere hjulskift</p><h2>Opfindelsen ændrede også gearskiftet</h2></div><div><p>I begyndelsen gjorde mekanismen det langt hurtigere at vende baghjulet mellem to tandhjul. Senere blev quick release en afgørende fordel ved punkteringer og hjulskift i cykelløb.</p><p>Princippet blev også en del af Campagnolos tidlige gearsystemer. Cambio Corsa brugte et langt håndtag til at frigøre baghjulet, mens en anden arm flyttede kæden. Quick release var dermed både en selvstændig opfindelse og et skridt på vejen mod moderne gear.</p></div></section>
   <section class="quick-closing"><blockquote>En dårlig dag på et bjergpas<br />blev en god dag for <em>alle cyklister.</em></blockquote></section>
   <section class="period-sources"><p class="section-label">Kilder og noter</p><div><p>Årstallene er sammenholdt med teknikhistoriske og cykelhistoriske kilder. Fortællingen om Croce d’Aune er en central del af Campagnolos historie, men enkelte gengivelser varierer i detaljerne omkring løbet og datoen. Det øverste motiv er en illustration og ikke et samtidigt dokumentarfoto.</p><ul><li><a href="https://www.dmg-lib.org/dmglib/handler?biogr=24804004">DMG-Lib: Tullio Campagnolo</a></li><li><a href="https://www.cyclingweekly.com/news/latest-news/icons-cycling-campagnolo-record-hub-284580">Cycling Weekly: Campagnolo Record hub</a></li></ul></div></section>
-  <nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a><a href={`${base}/historier/aldo-bini-maglia-nera-1948/`}>Næste historie →</a></nav>
+  <RelatedDiscovery currentSlug={'campagnolo-quick-release'}/><nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a><a href={`${base}/historier/aldo-bini-maglia-nera-1948/`}>Næste historie →</a></nav>
 </article></main><footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer></body></html>

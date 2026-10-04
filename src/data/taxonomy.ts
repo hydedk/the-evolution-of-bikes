@@ -37,6 +37,7 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'tilskuercyklen-der-kostede-lapebie-paris-roubaix': { period: '1930-1939', primary: 'loeb-og-store-oejeblikke', secondary: ['teknik', 'ryttere'] },
   'kondomet-der-kostede-pollentier-den-gule-troeje': { period: '1970-1979', primary: 'loeb-og-store-oejeblikke', secondary: ['kost-traening-og-videnskab', 'ryttere'] },
   'a-man-of-steel': { period: '2010-2019', primary: 'cykelkultur', secondary: ['ryttere', 'menneskene-bag'] },
   'principia-og-den-danske-aluminiumsdroem': { period: '1990-1999', primary: 'teknik', secondary: ['menneskene-bag', 'cykelkultur'] },

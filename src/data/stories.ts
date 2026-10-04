@@ -54,6 +54,7 @@ import principiaEvolutionImage from '../assets/bikes/principia-evolution/complet
 import aManOfSteelImage from '../assets/stories/a-man-of-steel/CYCLIST_CF_2_1674_retouch copy.jpg';
 import oleRitter1970Image from '../assets/stories/ole-ritter-timerekord-1968/ole-ritter-1970.jpg';
 import pollentier1976Image from '../assets/stories/pollentier-1978/michel-pollentier-tour-1976.jpg';
+import lapebie1934Image from '../assets/stories/lapebie-paris-roubaix-1934/roger-lapebie-cykelkontrol-1934-bnf.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -71,6 +72,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'tilskuercyklen-der-kostede-lapebie-paris-roubaix': 'race',
   'kondomet-der-kostede-pollentier-den-gule-troeje': 'race',
   'principia-og-den-danske-aluminiumsdroem': 'mechanics',
   'ole-ritter-timerekord-1968': 'race',
@@ -150,6 +152,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'tilskuercyklen-der-kostede-lapebie-paris-roubaix', type: 'historie', year: '1934', title: 'Tilskuercyklen der kostede Lapébie Paris–Roubaix', text: 'Roger Lapébie punkterede tæt på mål, lånte en tilskuers cykel og krydsede målstregen først. Reglerne gav sejren til Gaston Rebry.', image: lapebie1934Image, periods: ['1930-1939'], topics: ['paris-roubaix', 'roger-lapebie', 'gaston-rebry', 'punktering', 'regler'], relatedBikes: [], relatedComponents: [] },
   { slug: 'kondomet-der-kostede-pollentier-den-gule-troeje', type: 'historie', year: '1978', title: 'Kondomet der kostede Pollentier den gule trøje', text: 'Michel Pollentier vandt på Alpe d’Huez og overtog den gule trøje. Samme aften afslørede dopingkontrollen en beholder med fremmed urin under hans trøje.', image: pollentier1976Image, periods: ['1970-1979'], topics: ['tour-de-france', 'michel-pollentier', 'alpe-d-huez', 'dopingkontrol', 'gul-trøje'], relatedBikes: [], relatedComponents: [] },
   { slug: 'a-man-of-steel', type: 'historie', year: '2017', title: 'A Man of Steel', text: 'Albert er 82 år og cykler stadig hver dag. En fotografisk læserhistorie om en gul Gazelle i stål, daglige kilometer og en vilje af jern.', image: aManOfSteelImage, periods: ['2010-2019'], topics: ['læserhistorie', 'cykelkultur', 'gazelle', 'stålcykel', 'holland'], relatedBikes: [], relatedComponents: [] },
   { slug: 'principia-og-den-danske-aluminiumsdroem', type: 'historie', year: '1990–2007', title: 'Principia og den danske aluminiumsdrøm', text: 'Tre triatleter i Aalborg begyndte at svejse de aluminiumsrammer, de ikke selv havde råd til. Få år senere kørte Principia i professionelle løb langt fra kælderværkstedet.', image: principiaEvolutionImage, periods: ['1990-1999', '2000-2009'], topics: ['principia', 'aluminium', 'rammebygning', 'aalborg', 'giro-ditalia'], relatedBikes: ['principia-evolution'], relatedComponents: [] },

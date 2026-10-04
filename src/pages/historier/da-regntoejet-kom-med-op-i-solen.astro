@@ -1,4 +1,5 @@
 ---
+import RelatedDiscovery from '../../components/RelatedDiscovery.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <!doctype html>
@@ -15,5 +16,5 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <section class="reader-alps-context"><div><p class="section-label">Vejen bag fortællingen</p><h2>Højfjeld og hurtige vejrskift</h2></div><div><p>Großglockner Hochalpenstraße er 48 kilometer lang og har 36 sving. Vejen går gennem højfjeldet og når ved Hochtor op i 2.504 meters højde. Den officielle vejledning advarer om hurtige vejrskift med både regn og sne i højderne.</p><p>Det var derfor ikke nogen dårlig beslutning at pakke rygsækken. Det var bare en meget varm dag at være godt forberedt på.</p></div></section>
   <p class="reader-alps-credit">Fortalt af en læser, som ønsker at være anonym. Redaktionelt bearbejdet af The Evolution of Bikes.</p>
   <section class="period-sources"><p class="section-label">Kilder og billednoter</p><div><p>Selve oplevelsen, distancen og temperaturen er læserens erindring. Vejens længde, antal sving, højde og omskiftelige vejr er kontrolleret mod Großglockner Hochalpenstraßes officielle oplysninger. Fotografierne er indsendt af læseren med bekræftede brugsrettigheder.</p><ul><li><a href="https://www.grossglockner.at/de/die-hochalpenstrasse/unterwegs-am-grossglockner/radfahren">Großglockner Hochalpenstraße: cykling</a></li><li><a href="https://www.grossglockner.at/de/die-hochalpenstrasse/unterwegs-am-grossglockner/fahrsicherheit-befahrbarkeit">Großglockner Hochalpenstraße: vej, højder og sikkerhed</a></li></ul></div></section>
-  <nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a></nav>
+  <RelatedDiscovery currentSlug={'da-regntoejet-kom-med-op-i-solen'}/><nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a></nav>
 </article></main><footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer></body></html>

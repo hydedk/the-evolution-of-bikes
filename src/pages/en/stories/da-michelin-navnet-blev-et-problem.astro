@@ -1,4 +1,5 @@
 ---
+import RelatedDiscovery from '../../../components/RelatedDiscovery.astro';
 import EnglishHeader from '../../../components/EnglishHeader.astro';
 import EnglishFooter from '../../../components/EnglishFooter.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -22,4 +23,4 @@ const pedalImage = `${base}/images/stories/michelin-navnet/michelin-pedal.jpg`;
 <h2>The name lives on</h2><p>MICHE still exists as an Italian bicycle-component manufacturer. In 2022, F.A.C. Michelin became part of the group surrounding Wilier Triestina.</p><p>There are also stories that the Italian Michelin family and the French tyre family were distantly related. I have not been able to document that with confidence. What is documented is nearly as good: the two Michelin names came close enough that their identities had to be negotiated.</p>
 <section class="story-sources"><p class="section-label">Sources and further reading</p><ul><li><a href="https://www.miche.it/en/company">MICHE — official company history</a></li><li><a href="https://www.registrostoricocicli.com/registri/registro-storico/ciclo-piave-stella-veneta/">Registro Storico Cicli — Ciclo Piave / Stella Veneta</a></li></ul></section></div></div>
 <nav class="bike-bottom-nav" aria-label="Navigation between stories"><a href={`${base}/en/stories/`}>← Back to all stories</a><span>Stories and anecdotes · 01</span></nav>
-</article></main><EnglishFooter/></body></html>
+<RelatedDiscovery currentSlug={'da-michelin-navnet-blev-et-problem'} language="en"/></article></main><EnglishFooter/></body></html>

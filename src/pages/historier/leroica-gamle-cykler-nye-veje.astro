@@ -1,4 +1,5 @@
 ---
+import RelatedDiscovery from '../../components/RelatedDiscovery.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const rules = [
   ['Byggeår', 'Senest 1987'],
@@ -22,5 +23,5 @@ const rules = [
   <section class="strade-section"><div><p class="section-label">Fra nostalgi til professionelt løb</p><h2>De hvide veje vender tilbage</h2></div><div><p>I 2007 blev et professionelt løb kørt på de samme toscanske grusveje under navnet Monte Paschi Eroica. Alexandr Kolobnev vandt den første udgave.</p><p>Løbet skiftede senere navn og kendes i dag som Strade Bianche. Et lille nostalgisk arrangement med 92 mennesker på gamle racercykler var dermed med til at bringe de hvide grusveje tilbage helt ind i moderne professionel cykelsport.</p></div></section>
   <section class="eroica-closing"><blockquote>Historie er ikke kun noget, man ser på.<br /><em>Det er også noget, man kører på.</em></blockquote></section>
   <section class="period-sources"><p class="section-label">Kilder og billednoter</p><div><p>Historien og udstyrsreglerne er kontrolleret mod L’Eroicas officielle historik og gældende regler. Forbindelsen til det professionelle løb er også beskrevet af UCI.</p><ul><li><a href="https://www.eroica.cc/en/ethos-en/">L’Eroica: historie og klassisk ethos</a></li><li><a href="https://www.eroica.cc/en/regulations-leroica/">L’Eroica: regler for historiske cykler</a></li><li><a href="https://fr.uci.org/article/les-strade-bianche-sont-l-%C3%A9quivalent-printanier-d-un-grand-%C3%A9v%C3%A9nement-m%C3%A9di%C3%A9val-d-%C3%A9t%C3%A9/3AOvPJUpp172Z9fmS5BPW3">UCI: Strade Bianches historie</a></li></ul></div></section>
-  <nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a><a href={`${base}/historier/da-michelin-navnet-blev-et-problem/`}>Næste historie →</a></nav>
+  <RelatedDiscovery currentSlug={'leroica-gamle-cykler-nye-veje'}/><nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a><a href={`${base}/historier/da-michelin-navnet-blev-et-problem/`}>Næste historie →</a></nav>
 </article></main><footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer></body></html>

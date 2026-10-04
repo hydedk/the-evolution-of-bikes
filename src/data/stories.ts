@@ -53,6 +53,7 @@ import mavicNeutralIllustration from '../assets/stories/mavic-neutral-service/ma
 import principiaEvolutionImage from '../assets/bikes/principia-evolution/complete-drive-side.jpg';
 import aManOfSteelImage from '../assets/stories/a-man-of-steel/CYCLIST_CF_2_1674_retouch copy.jpg';
 import oleRitter1970Image from '../assets/stories/ole-ritter-timerekord-1968/ole-ritter-1970.jpg';
+import pollentier1976Image from '../assets/stories/pollentier-1978/michel-pollentier-tour-1976.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -70,6 +71,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'kondomet-der-kostede-pollentier-den-gule-troeje': 'race',
   'principia-og-den-danske-aluminiumsdroem': 'mechanics',
   'ole-ritter-timerekord-1968': 'race',
   'mavic-neutral-service': 'people',
@@ -148,6 +150,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'kondomet-der-kostede-pollentier-den-gule-troeje', type: 'historie', year: '1978', title: 'Kondomet der kostede Pollentier den gule trøje', text: 'Michel Pollentier vandt på Alpe d’Huez og overtog den gule trøje. Samme aften afslørede dopingkontrollen en beholder med fremmed urin under hans trøje.', image: pollentier1976Image, periods: ['1970-1979'], topics: ['tour-de-france', 'michel-pollentier', 'alpe-d-huez', 'dopingkontrol', 'gul-trøje'], relatedBikes: [], relatedComponents: [] },
   { slug: 'a-man-of-steel', type: 'historie', year: '2017', title: 'A Man of Steel', text: 'Albert er 82 år og cykler stadig hver dag. En fotografisk læserhistorie om en gul Gazelle i stål, daglige kilometer og en vilje af jern.', image: aManOfSteelImage, periods: ['2010-2019'], topics: ['læserhistorie', 'cykelkultur', 'gazelle', 'stålcykel', 'holland'], relatedBikes: [], relatedComponents: [] },
   { slug: 'principia-og-den-danske-aluminiumsdroem', type: 'historie', year: '1990–2007', title: 'Principia og den danske aluminiumsdrøm', text: 'Tre triatleter i Aalborg begyndte at svejse de aluminiumsrammer, de ikke selv havde råd til. Få år senere kørte Principia i professionelle løb langt fra kælderværkstedet.', image: principiaEvolutionImage, periods: ['1990-1999', '2000-2009'], topics: ['principia', 'aluminium', 'rammebygning', 'aalborg', 'giro-ditalia'], relatedBikes: ['principia-evolution'], relatedComponents: [] },
   { slug: 'ole-ritter-timerekord-1968', type: 'historie', year: '1968', title: 'Ole Ritters time i Mexico City', text: 'Den 10. oktober 1968 kørte Ole Ritter længere på én time end noget menneske før ham. Den tynde luft i Mexico City hjalp farten, men gjorde ikke arbejdet lettere.', image: oleRitter1970Image, periods: ['1960-1969'], topics: ['ole-ritter', 'timerekord', 'mexico-city', 'banecykling'], relatedBikes: [], relatedComponents: [] },

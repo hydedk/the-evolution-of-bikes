@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'kondomet-der-kostede-pollentier-den-gule-troeje': ['The condom that cost Pollentier the yellow jersey', 'Michel Pollentier won on Alpe d’Huez and took the yellow jersey. That evening, the doping control revealed a container of someone else’s urine beneath his jersey.'],
   'a-man-of-steel': ['A Man of Steel', 'Albert is 82 and still rides every day. A photographic reader story about a yellow steel Gazelle, daily kilometres and an iron will.'],
   'principia-og-den-danske-aluminiumsdroem': ['Principia and the Danish aluminium dream', 'Three triathletes in Aalborg began welding the aluminium frames they could not afford to buy. Within a few years, Principia was racing far beyond the basement workshop.'],
   'ole-ritter-timerekord-1968': ["Ole Ritter's hour in Mexico City", 'On 10 October 1968, Ole Ritter rode farther in one hour than anyone before him. The thin air of Mexico City helped the speed, but it did not make the effort easier.'],

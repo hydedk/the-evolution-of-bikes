@@ -8,6 +8,7 @@ const slugsFrom = (paths: string[]) => new Set(
 );
 
 const dynamicEnglishStorySlugs = [
+  'kondomet-der-kostede-pollentier-den-gule-troeje',
   'olano-vm-1995',
   'yvonne-reynders-kulcykel-og-verdensmesterskaber',
   'tourens-taxaregning-1926',

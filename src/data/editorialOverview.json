@@ -3827,16 +3827,16 @@
   {
     "id": "hist-000256",
     "titel": "Kondomet der kostede Pollentier den gule trøje",
-    "status": "indbakke",
+    "status": "publiceret",
     "prioritet": "middel",
     "periode": "per-1970-1979",
     "aar": "1978",
-    "spor": "kost-traening-og-videnskab",
-    "dokumentation": "ikke-kontrolleret",
+    "spor": "loeb-og-store-oejeblikke",
+    "dokumentation": "delvist-dokumenteret",
     "faktarisiko": "høj",
-    "naeste_handling": "Afgræns fortællingen, kontrollér navne, årstal og kernepåstande i samtidige eller autoritative kilder, og lav billedafklaring.",
+    "naeste_handling": "Følg eventuelle læserrettelser og bidrag op gennem den modererede kommentarfunktion.",
     "blokeret_af": "null",
-    "kanonisk_url": "",
+    "kanonisk_url": "/historier/kondomet-der-kostede-pollentier-den-gule-troeje/",
     "fil": "hist-000256-pollentier-urinen-alpe-dhuez-1978.md"
   },
   {

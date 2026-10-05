@@ -1,0 +1,79 @@
+---
+import RelatedDiscovery from '../../../components/RelatedDiscovery.astro';
+import EnglishHeader from '../../../components/EnglishHeader.astro';
+import EnglishFooter from '../../../components/EnglishFooter.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+import finish1954 from '../../../assets/stories/par-nummer-syv/kay-werner-evan-klamer-aarhus-1954.jpg';
+import hall1950s from '../../../assets/stories/par-nummer-syv/seksdagesloeb-aarhus-hallen-1950erne.jpg';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const slug = 'par-nummer-syv';
+const canonical = `https://teob.dk/en/stories/${slug}/`;
+const danish = `https://teob.dk/historier/${slug}/`;
+const title = 'Why the whole Forum cheered for Pair Number 7';
+const description = 'From Kay Werner Nielsen and Evan Klamer to Michael Mørkøv and Alex Rasmussen: how one race number became Denmark’s own pair in the six-day races.';
+const ogImage = new URL(finish1954.src, canonical).href;
+const schema = {'@context':'https://schema.org','@type':'Article',headline:title,description,inLanguage:'en',mainEntityOfPage:canonical,image:ogImage,datePublished:'2026-10-05',publisher:{'@type':'Organization',name:'The Evolution of Bikes',url:'https://teob.dk/'}};
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{title} · The Evolution of Bikes</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang="da" href={danish} />
+  <link rel="alternate" hreflang="en" href={canonical} />
+  <link rel="alternate" hreflang="x-default" href={danish} />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="The Evolution of Bikes" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:alt" content="Six-day racing in Aarhus-Hallen in 1954" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href={`${base}/styles/global.css`} />
+</head>
+<body>
+<EnglishHeader current="stories" danishPath={`/historier/${slug}/`} />
+<main><article class="number-seven-story">
+  <header class="story-hero"><p class="section-label">Danish track cycling · 1950s–2019</p><h1>{title}</h1><p>A race number became the crowd’s own pair. The riders changed, but the expectation stayed with the red-and-white jersey.</p></header>
+  <figure class="story-image hero"><OptimizedImage src={finish1954} alt="Riders cross the finish line during a Madison race in Aarhus-Hallen in 1954" loading="eager" fetchpriority="high"/><figcaption>Kay Werner Nielsen and Evan Klamer won the Aarhus six-day race in January 1954 as Pair Number 7. Photograph: Børge Andre Venge, Aarhus City Archives, CC BY.</figcaption></figure>
+  <div class="story-copy">
+    <p class="lead">When Pair Number 7 was announced, the Danish crowd did not need to read the names in the programme. The number already told them whom the hall was there to support.</p>
+    <h2>Kay Werner set the number in motion</h2>
+    <p>The tradition grew around Kay Werner Nielsen in the 1950s. He first rode with Evan Klamer and later with Palle Lykke Jensen. They were not the first Danish track riders embraced by the public, but they made the number seven something special.</p>
+    <p>Kay Werner and Klamer rode together at the Copenhagen six-day race in Forum in December 1953. The following January, they won the first edition in Aarhus-Hallen as Pair Number 7. The number therefore travelled beyond Copenhagen early on and became a recognisable sign of the home favourites.</p>
+    <p>Colourful recollections survive about why Kay Werner chose seven, and about its contrast with Willy Falck Hansen’s old number 1. They belong to the lore of the winter track. What is certain is that Kay Werner created the myth with Klamer and later Palle Lykke.</p>
+    <h2>A simple point of reference in a complicated race</h2>
+    <p>A six-day race was not one long sprint. Spectators had to follow chases, points, laps won and lost, changing partnerships and late nights. A permanent favourite number made the sport easier to read. When Number 7 moved, the hall knew what was at stake.</p>
+    <p>The pair generally raced in Danish flag jerseys. That made them visible on the short track, but it also gave the role a national meaning that existed nowhere in the international rules. Pair Number 7 was a Danish tradition created jointly by organisers, riders and spectators.</p>
+  </div>
+  <figure class="story-image wide"><OptimizedImage src={hall1950s} alt="A packed Aarhus-Hallen during a six-day race in the 1950s"/><figcaption>Aarhus-Hallen during a six-day race in the 1950s. The dense crowd and short laps show the setting that turned the favourite pair into a common cause. Photograph: Børge Andre Venge, Aarhus City Archives, CC BY.</figcaption></figure>
+  <div class="story-copy">
+    <h2>The role was inherited</h2>
+    <p>Gert Frank and Hans-Henrik Ørsted carried the tradition forward. Jens Veggerby and Jimmi Madsen followed. The names changed, but the home favourites kept the number and the attention that came with it.</p>
+    <p>The support of the hall could be an advantage. It was also a pressure. Pair Number 7 was not placed in the field to remain anonymous. The crowd expected attacks, hand slings and a position near the front, regardless of who wore the number.</p>
+    <h2>Three victories in succession</h2>
+    <p>Michael Mørkøv and Alex Rasmussen gave the tradition a new golden period. Racing as Pair Number 7, they won the Copenhagen six-day race in 2009, 2010 and 2011. Three consecutive victories were a record. They won again in 2015.</p>
+    <p>Mørkøv appeared as Number 7 eleven times, more than anyone else. He also won with Lasse Norman Hansen and Kenny De Ketele, while Alex Rasmussen won with Jesper Mørkøv in 2016.</p>
+    <p>By the time the most recent Copenhagen six-day race was held in 2019, the number had survived many partners and several venues. On paper it was still merely a race number. In the hall it was a message: this was the pair the crowd had come to see.</p>
+  </div>
+  <section class="fact-strip" aria-label="In brief"><div><strong>7</strong><span>the number of the Danish favourite pair</span></div><div><strong>1950s</strong><span>the myth grew around Kay Werner</span></div><div><strong>2009–11</strong><span>Mørkøv and Rasmussen won three in succession</span></div><div><strong>11</strong><span>appearances by Mørkøv as Number 7</span></div></section>
+  <section class="period-sources"><p class="section-label">Sources and image notes</p><div><ul><li><a href="https://lex.dk/par_nr._7">Lex: Par nr. 7 (Danish)</a></li><li><a href="https://lex.dk/K%C3%B8benhavns_seksdagesl%C3%B8b">Lex: Copenhagen six-day race (Danish)</a></li><li><a href="https://www.aarhusarkivet.dk/records/000493282">Aarhus City Archives: Kay Werner Nielsen and Evan Klamer, 1954</a></li><li><a href="https://www.danskkulturarv.dk/dr/kay-werner-og-evan-klamer-i-6-dagesl%C3%B8b/">Danish Cultural Heritage/DR: Kay Werner and Evan Klamer in Forum, 1953</a></li></ul><p>The article keeps the popular origin story separate from the documented results. Both photographs were published by Aarhus City Archives under Creative Commons Attribution.</p></div></section>
+  <RelatedDiscovery currentSlug={slug} language="en" />
+  <nav class="era-bottom-nav" aria-label="Further navigation"><a href={`${base}/en/stories/`}>← All stories</a><a href={`${base}/en/periods/1950-1959/`}>The 1950–1959 period →</a></nav>
+</article></main>
+<EnglishFooter />
+</body></html>
+<style>.number-seven-story{padding-top:3rem}.story-hero{max-width:1100px;margin:auto;padding:4rem 1.5rem 3rem}.story-hero h1{font:400 clamp(3.3rem,7.5vw,7rem)/.94 'Libre Caslon Display',serif;margin:.7rem 0 1.8rem;max-width:1050px}.story-hero>p:last-child{max-width:760px;font-size:1.25rem;line-height:1.65}.story-image{max-width:900px;margin:0 auto 4rem;padding:0 1.5rem}.story-image.hero,.story-image.wide{max-width:1180px}.story-image :global(img){display:block;width:100%;height:auto}.story-image figcaption{margin-top:.75rem;color:#625e55;font-size:.84rem;line-height:1.55}.story-copy{max-width:760px;margin:auto;padding:0 1.5rem 4rem;font-size:1.08rem;line-height:1.82}.story-copy .lead{font:1.75rem/1.45 'Libre Caslon Display',serif}.story-copy h2{font:400 clamp(2rem,4vw,3rem)/1.15 'Libre Caslon Display',serif;margin:3.2rem 0 1rem}.story-copy p{margin:0 0 1.35rem}.fact-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1180px;margin:0 auto 5rem;padding:0 1.5rem;gap:1px}.fact-strip div{display:flex;min-height:170px;flex-direction:column;justify-content:space-between;background:#e4ded2;padding:1.4rem}.fact-strip strong{font:400 clamp(2.3rem,4vw,4rem)/1 'Libre Caslon Display',serif}.fact-strip span{max-width:180px;font-size:.82rem;line-height:1.45}.period-sources{max-width:1000px;margin:auto}.period-sources li{overflow-wrap:anywhere}@media(max-width:800px){.number-seven-story{padding-top:0}.story-hero{padding-top:2.5rem}.story-copy{font-size:1rem}.story-copy .lead{font-size:1.45rem}.fact-strip{grid-template-columns:1fr 1fr}.fact-strip div{min-height:145px}}@media(max-width:480px){.fact-strip{grid-template-columns:1fr}}</style>

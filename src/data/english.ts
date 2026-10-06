@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'fiorenzo-magni-slange-giro-1956': ['When Magni bit an inner tube to stay in the Giro', 'With a badly injured shoulder, Fiorenzo Magni continued the Giro with an inner tube tied between his handlebars and teeth.'],
   'tilskuercyklen-der-kostede-lapebie-paris-roubaix': ["The spectator's bicycle that cost Lapébie Paris–Roubaix", "Roger Lapébie punctured near the finish, borrowed a spectator's bicycle and crossed the line first. The rules awarded victory to Gaston Rebry."],
   'kondomet-der-kostede-pollentier-den-gule-troeje': ['The condom that cost Pollentier the yellow jersey', 'Michel Pollentier won on Alpe d’Huez and took the yellow jersey. That evening, the doping control revealed a container of someone else’s urine beneath his jersey.'],
   'a-man-of-steel': ['A Man of Steel', 'Albert is 82 and still rides every day. A photographic reader story about a yellow steel Gazelle, daily kilometres and an iron will.'],

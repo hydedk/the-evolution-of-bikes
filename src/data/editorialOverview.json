@@ -991,17 +991,17 @@
   },
   {
     "id": "hist-000067",
-    "titel": "Slangen i tænderne og Magnis brækkede skulder",
-    "status": "indbakke",
+    "titel": "Da Magni bed i en cykelslange for at blive i Giroen",
+    "status": "publiceret",
     "prioritet": "hoej",
     "periode": "per-1940-1959",
     "aar": "1956",
     "spor": "teknik",
-    "dokumentation": "ikke-kontrolleret",
+    "dokumentation": "delvist-dokumenteret",
     "faktarisiko": "mellem",
-    "naeste_handling": "Kontrollér skadens art, Colnagos rolle og placeringen i Giroen",
+    "naeste_handling": "Følg modtagelsen og foretag kun ændringer ved nye dokumenterede oplysninger",
     "blokeret_af": "null",
-    "kanonisk_url": "",
+    "kanonisk_url": "https://teob.dk/historier/fiorenzo-magni-slange-giro-1956/",
     "fil": "hist-000067-magni-slange-skulder-1956.md"
   },
   {

@@ -56,6 +56,7 @@ import oleRitter1970Image from '../assets/stories/ole-ritter-timerekord-1968/ole
 import pollentier1976Image from '../assets/stories/pollentier-1978/michel-pollentier-tour-1976.jpg';
 import lapebie1934Image from '../assets/stories/lapebie-paris-roubaix-1934/roger-lapebie-cykelkontrol-1934-bnf.jpg';
 import parNummerSyvImage from '../assets/stories/par-nummer-syv/kay-werner-evan-klamer-aarhus-1954.jpg';
+import fiorenzoMagni1956Image from '../assets/stories/fiorenzo-magni-slange-giro-1956/fiorenzo-magni-giro-1956.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -73,6 +74,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'fiorenzo-magni-slange-giro-1956': 'mechanics',
   'tilskuercyklen-der-kostede-lapebie-paris-roubaix': 'race',
   'kondomet-der-kostede-pollentier-den-gule-troeje': 'race',
   'par-nummer-syv': 'race',
@@ -154,6 +156,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'fiorenzo-magni-slange-giro-1956', type: 'historie', year: '1956', title: 'Da Magni bed i en cykelslange for at blive i Giroen', text: 'Med en alvorligt skadet skulder fortsatte Fiorenzo Magni Giroen med en slange bundet mellem styret og tænderne.', image: fiorenzoMagni1956Image, periods: ['1950-1959'], topics: ['fiorenzo-magni', 'ernesto-colnago', 'giro-ditalia', 'mekanikere', 'improvisation'], relatedBikes: [], relatedComponents: [] },
   { slug: 'par-nummer-syv', type: 'historie', year: '1953–2019', title: 'Hvorfor hele Forum råbte på Par nummer 7', text: 'Fra Kay Werner Nielsen og Evan Klamer til Michael Mørkøv og Alex Rasmussen: Et startnummer blev til det danske publikums eget par.', image: parNummerSyvImage, periods: ['1950-1959', '1960-1969', '1970-1979', '1980-1989', '1990-1999', '2000-2009', '2010-2019'], topics: ['par-nummer-syv', 'seksdagesloeb', 'banecykling', 'dansk-cykling'], relatedBikes: ['schroder-1965'], relatedComponents: [] },
   { slug: 'tilskuercyklen-der-kostede-lapebie-paris-roubaix', type: 'historie', year: '1934', title: 'Tilskuercyklen der kostede Lapébie Paris–Roubaix', text: 'Roger Lapébie punkterede tæt på mål, lånte en tilskuers cykel og krydsede målstregen først. Reglerne gav sejren til Gaston Rebry.', image: lapebie1934Image, periods: ['1930-1939'], topics: ['paris-roubaix', 'roger-lapebie', 'gaston-rebry', 'punktering', 'regler'], relatedBikes: [], relatedComponents: [] },
   { slug: 'kondomet-der-kostede-pollentier-den-gule-troeje', type: 'historie', year: '1978', title: 'Kondomet der kostede Pollentier den gule trøje', text: 'Michel Pollentier vandt på Alpe d’Huez og overtog den gule trøje. Samme aften afslørede dopingkontrollen en beholder med fremmed urin under hans trøje.', image: pollentier1976Image, periods: ['1970-1979'], topics: ['tour-de-france', 'michel-pollentier', 'alpe-d-huez', 'dopingkontrol', 'gul-trøje'], relatedBikes: [], relatedComponents: [] },

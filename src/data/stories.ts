@@ -58,6 +58,7 @@ import lapebie1934Image from '../assets/stories/lapebie-paris-roubaix-1934/roger
 import parNummerSyvImage from '../assets/stories/par-nummer-syv/kay-werner-evan-klamer-aarhus-1954.jpg';
 import fiorenzoMagni1956Image from '../assets/stories/fiorenzo-magni-slange-giro-1956/fiorenzo-magni-giro-1956.jpg';
 import jeannieLongo2011Image from '../assets/stories/jeannie-longo-fransk-mester-2011/jeannie-longo-podium-2011.jpg';
+import hinaultProtest1984Image from '../assets/stories/hinault-arbejderprotest-paris-nice-1984/bernard-hinault-1982.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -75,6 +76,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'hinault-arbejderprotest-paris-nice-1984': 'people',
   'jeannie-longo-fransk-mester-2011': 'people',
   'fiorenzo-magni-slange-giro-1956': 'mechanics',
   'tilskuercyklen-der-kostede-lapebie-paris-roubaix': 'race',
@@ -158,6 +160,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'hinault-arbejderprotest-paris-nice-1984', type: 'historie', year: '1984', title: 'Da Hinault kørte ind i arbejderprotesten', text: 'Paris–Nice mødte en vejblokade af værftsarbejdere fra La Ciotat. Bernard Hinault blev væltet, rejste sig og slog ud efter en demonstrant.', image: hinaultProtest1984Image, periods: ['1980-1989'], topics: ['bernard-hinault', 'paris-nice', 'la-ciotat', 'arbejderprotest', 'skibsvaerfter'], relatedBikes: [], relatedComponents: [] },
   { slug: 'jeannie-longo-fransk-mester-2011', type: 'historie', year: '2011', title: 'Fransk mester som 52-årig', text: 'Jeannie Longo vandt det franske mesterskab i enkeltstart i 2011, 52 år gammel og 42 sekunder foran nummer to.', image: jeannieLongo2011Image, periods: ['2010-2019'], topics: ['jeannie-longo', 'kvindecykling', 'enkeltstart', 'franske-mesterskaber'], relatedBikes: [], relatedComponents: [] },
   { slug: 'fiorenzo-magni-slange-giro-1956', type: 'historie', year: '1956', title: 'Da Magni bed i en cykelslange for at blive i Giroen', text: 'Med en alvorligt skadet skulder fortsatte Fiorenzo Magni Giroen med en slange bundet mellem styret og tænderne.', image: fiorenzoMagni1956Image, periods: ['1950-1959'], topics: ['fiorenzo-magni', 'ernesto-colnago', 'giro-ditalia', 'mekanikere', 'improvisation'], relatedBikes: [], relatedComponents: [] },
   { slug: 'par-nummer-syv', type: 'historie', year: '1953–2019', title: 'Hvorfor hele Forum råbte på Par nummer 7', text: 'Fra Kay Werner Nielsen og Evan Klamer til Michael Mørkøv og Alex Rasmussen: Et startnummer blev til det danske publikums eget par.', image: parNummerSyvImage, periods: ['1950-1959', '1960-1969', '1970-1979', '1980-1989', '1990-1999', '2000-2009', '2010-2019'], topics: ['par-nummer-syv', 'seksdagesloeb', 'banecykling', 'dansk-cykling'], relatedBikes: ['schroder-1965'], relatedComponents: [] },

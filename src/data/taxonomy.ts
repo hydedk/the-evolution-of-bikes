@@ -37,6 +37,7 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'hinault-arbejderprotest-paris-nice-1984': { period: '1980-1989', primary: 'samfund-og-tidsaand', secondary: ['ryttere', 'loeb-og-store-oejeblikke'] },
   'jeannie-longo-fransk-mester-2011': { period: '2010-2019', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
   'fiorenzo-magni-slange-giro-1956': { period: '1950-1959', primary: 'teknik', secondary: ['loeb-og-store-oejeblikke', 'menneskene-bag'] },
   'tilskuercyklen-der-kostede-lapebie-paris-roubaix': { period: '1930-1939', primary: 'loeb-og-store-oejeblikke', secondary: ['teknik', 'ryttere'] },

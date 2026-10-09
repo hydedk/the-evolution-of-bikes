@@ -59,6 +59,7 @@ import parNummerSyvImage from '../assets/stories/par-nummer-syv/kay-werner-evan-
 import fiorenzoMagni1956Image from '../assets/stories/fiorenzo-magni-slange-giro-1956/fiorenzo-magni-giro-1956.jpg';
 import jeannieLongo2011Image from '../assets/stories/jeannie-longo-fransk-mester-2011/jeannie-longo-podium-2011.jpg';
 import hinaultProtest1984Image from '../assets/stories/hinault-arbejderprotest-paris-nice-1984/bernard-hinault-1982.jpg';
+import dumoulinGiro2017Image from '../assets/stories/dumoulin-naturpause-giro-2017/tom-dumoulin-giro-2017-stage-16.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -76,6 +77,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'dumoulin-naturpause-giro-2017': 'race',
   'hinault-arbejderprotest-paris-nice-1984': 'people',
   'jeannie-longo-fransk-mester-2011': 'people',
   'fiorenzo-magni-slange-giro-1956': 'mechanics',
@@ -160,6 +162,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'dumoulin-naturpause-giro-2017', type: 'historie', year: '2017', title: 'Naturpausen der næsten kostede Dumoulin Giroen', text: 'Tom Dumoulin måtte standse med maveproblemer på Giroens 16. etape og forsvare den lyserøde førertrøje alene.', image: dumoulinGiro2017Image, periods: ['2010-2019'], topics: ['tom-dumoulin', 'giro-ditalia', 'stelvio', 'umbrailpasset', 'førertrøjen'], relatedBikes: [], relatedComponents: [] },
   { slug: 'hinault-arbejderprotest-paris-nice-1984', type: 'historie', year: '1984', title: 'Da Hinault kørte ind i arbejderprotesten', text: 'Paris–Nice mødte en vejblokade af værftsarbejdere fra La Ciotat. Bernard Hinault blev væltet, rejste sig og slog ud efter en demonstrant.', image: hinaultProtest1984Image, periods: ['1980-1989'], topics: ['bernard-hinault', 'paris-nice', 'la-ciotat', 'arbejderprotest', 'skibsvaerfter'], relatedBikes: [], relatedComponents: [] },
   { slug: 'jeannie-longo-fransk-mester-2011', type: 'historie', year: '2011', title: 'Fransk mester som 52-årig', text: 'Jeannie Longo vandt det franske mesterskab i enkeltstart i 2011, 52 år gammel og 42 sekunder foran nummer to.', image: jeannieLongo2011Image, periods: ['2010-2019'], topics: ['jeannie-longo', 'kvindecykling', 'enkeltstart', 'franske-mesterskaber'], relatedBikes: [], relatedComponents: [] },
   { slug: 'fiorenzo-magni-slange-giro-1956', type: 'historie', year: '1956', title: 'Da Magni bed i en cykelslange for at blive i Giroen', text: 'Med en alvorligt skadet skulder fortsatte Fiorenzo Magni Giroen med en slange bundet mellem styret og tænderne.', image: fiorenzoMagni1956Image, periods: ['1950-1959'], topics: ['fiorenzo-magni', 'ernesto-colnago', 'giro-ditalia', 'mekanikere', 'improvisation'], relatedBikes: [], relatedComponents: [] },

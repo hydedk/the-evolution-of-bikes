@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'dumoulin-naturpause-giro-2017': ['The comfort break that nearly cost Dumoulin the Giro', 'Tom Dumoulin had to stop with stomach trouble on stage 16 of the 2017 Giro and defend the pink jersey alone.'],
   'hinault-arbejderprotest-paris-nice-1984': ['When Hinault rode into a workers’ protest', 'Paris–Nice met a road blockade by La Ciotat shipyard workers. Bernard Hinault was knocked down, got up and struck a demonstrator.'],
   'jeannie-longo-fransk-mester-2011': ['French champion at 52', 'Jeannie Longo won the 2011 French time trial championship at the age of 52, finishing 42 seconds ahead of the runner-up.'],
   'fiorenzo-magni-slange-giro-1956': ['When Magni bit an inner tube to stay in the Giro', 'With a badly injured shoulder, Fiorenzo Magni continued the Giro with an inner tube tied between his handlebars and teeth.'],

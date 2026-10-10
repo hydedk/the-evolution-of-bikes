@@ -37,6 +37,7 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'kund-rindboel-tempoproeve-1983': { period: '1980-1989', primary: 'cykelkultur', secondary: ['ryttere', 'loeb-og-store-oejeblikke'] },
   'dumoulin-naturpause-giro-2017': { period: '2010-2019', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'kost-traening-og-videnskab'] },
   'hinault-arbejderprotest-paris-nice-1984': { period: '1980-1989', primary: 'samfund-og-tidsaand', secondary: ['ryttere', 'loeb-og-store-oejeblikke'] },
   'jeannie-longo-fransk-mester-2011': { period: '2010-2019', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },

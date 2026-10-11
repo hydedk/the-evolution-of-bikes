@@ -61,6 +61,7 @@ import jeannieLongo2011Image from '../assets/stories/jeannie-longo-fransk-mester
 import hinaultProtest1984Image from '../assets/stories/hinault-arbejderprotest-paris-nice-1984/bernard-hinault-1982.jpg';
 import dumoulinGiro2017Image from '../assets/stories/dumoulin-naturpause-giro-2017/tom-dumoulin-giro-2017-stage-16.jpg';
 import kundRindboel1983Image from '../assets/stories/kund-rindboel-tempoproeve-1983/elverdam-mod-vendepunkt.jpg';
+import jaapEdenImage from '../assets/stories/jaap-eden/jaap-eden-cycling.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -78,6 +79,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'jaap-eden-verdensmester-paa-is-og-bane': 'people',
   'kund-rindboel-tempoproeve-1983': 'people',
   'dumoulin-naturpause-giro-2017': 'race',
   'hinault-arbejderprotest-paris-nice-1984': 'people',
@@ -164,6 +166,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'jaap-eden-verdensmester-paa-is-og-bane', type: 'historie', year: '1893–1896', title: 'Verdensmesteren der skiftede skøjterne ud med en cykel', text: 'Jaap Eden blev verdensmester i både hurtigløb på skøjter og banecykling i 1890’erne — og et af Hollands første store sportsnavne.', image: jaapEdenImage, periods: ['1800-1899'], topics: ['jaap-eden', 'banecykling', 'hurtigløb-på-skøjter', 'verdensmesterskab', 'holland'], relatedBikes: [], relatedComponents: [] },
   { slug: 'kund-rindboel-tempoproeve-1983', type: 'historie', year: '1983', title: 'Kund Rindbøls tempoprøve på den gamle hovedvej', text: 'En læser husker 30 kilometer mod uret, gearingen 54 × 14 og sin mor i rabatten på hovedvejen mellem Holbæk og Roskilde.', image: kundRindboel1983Image, periods: ['1980-1989'], topics: ['enkeltstart', 'dansk-cykling', 'dbc', 'elverdammen', 'laeserhistorie'], relatedBikes: [], relatedComponents: [] },
   { slug: 'dumoulin-naturpause-giro-2017', type: 'historie', year: '2017', title: 'Naturpausen der næsten kostede Dumoulin Giroen', text: 'Tom Dumoulin måtte standse med maveproblemer på Giroens 16. etape og forsvare den lyserøde førertrøje alene.', image: dumoulinGiro2017Image, periods: ['2010-2019'], topics: ['tom-dumoulin', 'giro-ditalia', 'stelvio', 'umbrailpasset', 'førertrøjen'], relatedBikes: [], relatedComponents: [] },
   { slug: 'hinault-arbejderprotest-paris-nice-1984', type: 'historie', year: '1984', title: 'Da Hinault kørte ind i arbejderprotesten', text: 'Paris–Nice mødte en vejblokade af værftsarbejdere fra La Ciotat. Bernard Hinault blev væltet, rejste sig og slog ud efter en demonstrant.', image: hinaultProtest1984Image, periods: ['1980-1989'], topics: ['bernard-hinault', 'paris-nice', 'la-ciotat', 'arbejderprotest', 'skibsvaerfter'], relatedBikes: [], relatedComponents: [] },

@@ -29,6 +29,7 @@ const languagePairs = {
   '/komponenter/campagnolo-valentino/': '/en/components/campagnolo-valentino/',
   '/komponenter/shimano-600-ex-arabesque/': '/en/components/shimano-600-ex-arabesque/',
   '/': '/en/', '/om/': '/en/about/', '/historier/': '/en/stories/',
+  '/historier/jaap-eden-verdensmester-paa-is-og-bane/': '/en/stories/jaap-eden-verdensmester-paa-is-og-bane/',
   '/perioder/': '/en/periods/', '/cykler/': '/en/bikes/', '/komponenter/': '/en/components/',
   '/historier/cykelsportens-vilde-vesten/': '/en/stories/cykelsportens-vilde-vesten/',
   '/historier/snyd-soem-tour-de-france-1904/': '/en/stories/snyd-soem-tour-de-france-1904/',

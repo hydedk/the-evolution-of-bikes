@@ -1,0 +1,90 @@
+---
+import EnglishHeader from './EnglishHeader.astro';
+import EnglishFooter from './EnglishFooter.astro';
+import OptimizedImage from './OptimizedImage.astro';
+import portrait from '../assets/stories/jaap-eden/jaap-eden-cycling.jpg';
+
+const { language = 'da' } = Astro.props;
+const en = language === 'en';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const slug = 'jaap-eden-verdensmester-paa-is-og-bane';
+const daUrl = `https://teob.dk/historier/${slug}/`;
+const enUrl = `https://teob.dk/en/stories/${slug}/`;
+const canonical = en ? enUrl : daUrl;
+const title = en ? 'The world champion who changed from skates to bicycle' : 'Verdensmesteren der skiftede skøjterne ud med en cykel';
+const description = en
+  ? 'Jaap Eden became world champion in speed skating and track cycling in the 1890s—and one of the Netherlands’ first sporting celebrities.'
+  : 'Jaap Eden blev verdensmester i både hurtigløb på skøjter og banecykling i 1890’erne — og et af Hollands første store sportsnavne.';
+const ogImage = new URL(portrait.src, canonical).href;
+
+const copy = en ? {
+  eyebrow: 'Track cycling · 1893–1896',
+  deck: 'One winter he was the fastest man on ice. The following summer he became a cycling world champion. Jaap Eden belonged to the years before sport learned to demand specialisation.',
+  lead: 'In February 1893, Jaap Eden won the first official world allround speed skating championship. The following year, in Antwerp, he became world champion over ten kilometres on the track.',
+  sections: [
+    ['A summer sport for a skater', [
+      'Eden had grown up in Haarlem and made his name on skates. Cycling gave him a way to train and race when there was no ice. It soon became more than summer preparation.',
+      'The Dutch cycling federation records his first track world title in Antwerp in 1894, in the ten-kilometre event. In Cologne in 1895 he won the amateur sprint world championship. Those were different kinds of races: one demanded sustained speed, the other explosive acceleration and tactical timing.'
+    ]],
+    ['Five titles in three years', [
+      'The International Skating Union’s records place Eden’s allround world titles in 1893, 1895 and 1896. Added to the two cycling titles, that made five world championships across two sports in a span of only a few years.',
+      'The combination sounds unusual now because elite sport is organised around specialisation. In Eden’s time, skating and cycling shared something practical: both rewarded balance, rhythm, strong legs and the ability to hold speed.'
+    ]]
+  ],
+  quote: 'Ice in winter. Wood in summer. The same pair of legs made Jaap Eden a world champion in both.',
+  finalHeading: 'A sporting celebrity before radio',
+  final: [
+    'Amsterdam’s city archive describes Eden as a multiple world champion on skates and bicycle. His success arrived while cycle racing was becoming a public attraction and new velodromes were appearing in the city.',
+    'The surviving photograph shows him on the track at Willemspark in 1897. The pose is quiet, but by then the name was not. Eden had helped make an athlete into a national public figure before live radio, film newsreels and television could carry a victory home.'
+  ],
+  facts: [['1893', 'first official skating world title'], ['1894', 'cycling world title over 10 km'], ['1895', 'amateur sprint world title'], ['5', 'world titles in two sports']]
+} : {
+  eyebrow: 'Banecykling · 1893–1896',
+  deck: 'Den ene vinter var han verdens hurtigste på is. Sommeren efter blev han verdensmester på cykel. Jaap Eden tilhørte tiden, før sporten krævede, at man valgte én disciplin.',
+  lead: 'I februar 1893 vandt Jaap Eden det første officielle verdensmesterskab i allround på skøjter. Året efter blev han verdensmester over ti kilometer på cykelbanen i Antwerpen.',
+  sections: [
+    ['En sommersport for en skøjteløber', [
+      'Eden voksede op i Haarlem og slog først sit navn fast på skøjter. Cyklen gav ham mulighed for at træne og konkurrere, når der ikke var is. Det blev hurtigt mere end sommertræning.',
+      'Det hollandske cykelforbund registrerer hans første VM-titel på bane i Antwerpen i 1894, i løbet over ti kilometer. I Köln i 1895 vandt han amatørernes VM i sprint. Det var to forskellige opgaver: Den ene krævede vedvarende fart, den anden eksplosiv acceleration og taktisk timing.'
+    ]],
+    ['Fem titler på tre år', [
+      'Det internationale skøjteforbunds resultatlister placerer Edens allround-VM-titler i 1893, 1895 og 1896. Sammen med de to cykeltitler gav det fem verdensmesterskaber i to sportsgrene på få år.',
+      'Kombinationen virker usædvanlig i dag, fordi elitesporten er bygget op omkring specialisering. På Edens tid havde skøjteløb og cykling noget praktisk tilfælles: Begge dele belønnede balance, rytme, stærke ben og evnen til at holde fart.'
+    ]]
+  ],
+  quote: 'Is om vinteren. Træbane om sommeren. Det samme par ben gjorde Jaap Eden til verdensmester i begge dele.',
+  finalHeading: 'Sportsstjerne før radioen',
+  final: [
+    'Amsterdams stadsarkiv beskriver Eden som flere gange verdensmester på både skøjter og cykel. Hans sejre kom, mens cykelløb blev en offentlig attraktion, og nye velodromer skød op i byen.',
+    'Det bevarede fotografi viser ham på banen i Willemspark i 1897. Poseringen er rolig, men navnet var det ikke længere. Eden var med til at gøre idrætsmanden til en national offentlig person, før direkte radio, filmaviser og fjernsyn kunne sende sejren hjem.'
+  ],
+  facts: [['1893', 'første officielle VM på skøjter'], ['1894', 'VM på cykel over 10 km'], ['1895', 'amatørverdensmester i sprint'], ['5', 'VM-titler i to sportsgrene']]
+};
+---
+<!doctype html>
+<html lang={language}>
+  <head>
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/>
+    <title>{title} · The Evolution of Bikes</title><meta name="description" content={description}/>
+    <link rel="canonical" href={canonical}/><link rel="alternate" hreflang="da" href={daUrl}/><link rel="alternate" hreflang="en" href={enUrl}/><link rel="alternate" hreflang="x-default" href={daUrl}/>
+    <meta property="og:type" content="article"/><meta property="og:locale" content={en ? 'en_GB' : 'da_DK'}/><meta property="og:site_name" content="The Evolution of Bikes"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:image" content={ogImage}/><meta name="twitter:card" content="summary_large_image"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet"/><link rel="stylesheet" href={`${base}/styles/global.css`}/>
+  </head>
+  <body>
+    {en ? <EnglishHeader current="stories" danishPath={`/historier/${slug}/`}/> : <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`} aria-current="page">Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav><div class="header-tools"><strong>DA</strong><span>/</span><a href={`${base}/en/stories/${slug}/`}>EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div></header>}
+    <main><article class="eden-story">
+      <header class="story-hero"><p class="section-label">{copy.eyebrow}</p><h1>{title}</h1><p>{copy.deck}</p></header>
+      <figure class="story-image"><OptimizedImage src={portrait} alt={en ? 'Jaap Eden with his track bicycle at Willemspark in Amsterdam' : 'Jaap Eden med sin banecykel på Willemspark i Amsterdam'} widths={[480,571]} sizes="(max-width:760px) 88vw,571px" loading="eager" fetchpriority="high"/><figcaption>{en ? 'Jaap Eden at the Willemspark cycle track in Amsterdam, 1897. Photograph: Gerbrand Hoffmann, Amsterdam City Archives/Wikimedia Commons, public domain.' : 'Jaap Eden på cykelbanen i Willemspark i Amsterdam, 1897. Foto: Gerbrand Hoffmann, Amsterdam Stadsarchief/Wikimedia Commons, public domain.'}</figcaption></figure>
+      <div class="story-copy"><p class="lead">{copy.lead}</p>{copy.sections.map(([heading, paragraphs]) => <section><h2>{heading}</h2>{paragraphs.map((paragraph) => <p>{paragraph}</p>)}</section>)}</div>
+      <aside class="pull-quote"><p>{copy.quote}</p></aside>
+      <section class="closing"><h2>{copy.finalHeading}</h2>{copy.final.map((paragraph) => <p>{paragraph}</p>)}</section>
+      <section class="fact-strip">{copy.facts.map(([value, label]) => <div><strong>{value}</strong><span>{label}</span></div>)}</section>
+      <section class="period-sources"><p class="section-label">{en ? 'Sources and image notes' : 'Kilder og billednoter'}</p><div><ul><li><a href="https://www.knwu.nl/kampioenschappen/wk-baanwielrennen/historie" target="_blank" rel="noopener noreferrer">KNWU: {en ? 'Dutch track world champions' : 'hollandske verdensmestre på bane'}</a></li><li><a href="https://www.olympedia.org/athletes/890595" target="_blank" rel="noopener noreferrer">Olympedia: Jaap Eden</a></li><li><a href="https://www.amsterdam.nl/stadsarchief/stukken/beroemd/jaap-eden/" target="_blank" rel="noopener noreferrer">Stadsarchief Amsterdam: Jaap Eden</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Jaap_Eden_cycling.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons: Jaap Eden cycling</a></li></ul><p>{en ? 'The widely repeated stories about cigars, champagne and unusually large appearance fees are not used as established facts here because the available contemporary documentation is uneven.' : 'De ofte gentagne historier om cigarer, champagne og usædvanligt store startpenge bruges ikke som sikre fakta her, fordi den tilgængelige samtidige dokumentation er ujævn.'}</p><p><strong>{en ? 'Alternative illustration:' : 'Alternativ illustration:'}</strong> {en ? 'A clearly labelled period-style illustration could show the same athlete leaving an outdoor ice track and entering a wooden velodrome in the mid-1890s, without invented spectators, logos or race details.' : 'En tydeligt mærket, tidstypisk illustration kan vise den samme atlet forlade en udendørs skøjtebane og træde ind på en trævelodrom midt i 1890’erne, uden opdigtede tilskuere, logoer eller løbsdetaljer.'}</p></div></section>
+      <nav class="era-bottom-nav"><a href={`${base}/${en ? 'en/stories' : 'historier'}/`}>← {en ? 'All stories' : 'Alle historier'}</a><a href={`${base}/${en ? 'en/periods' : 'perioder'}/1800-1899/`}>{en ? 'The 1800–1899 period' : 'Perioden 1800–1899'} →</a></nav>
+    </article></main>
+    {en ? <EnglishFooter/> : <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></div><p>En personlig samling af vintagecykler,<br/>historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>}
+  </body>
+</html>
+<style>
+.story-hero{max-width:1100px;margin:auto;padding:5rem 1.5rem 3rem}.story-hero h1{font:400 clamp(3.1rem,7.5vw,7rem)/.96 'Libre Caslon Display',serif;margin:.7rem 0 1.8rem}.story-hero>p:last-child{max-width:780px;font-size:1.25rem;line-height:1.65}.story-image{max-width:620px;margin:0 auto 4rem;padding:0 1.5rem}.story-image :global(img){display:block;width:100%;height:auto}.story-image figcaption{margin-top:.75rem;color:#625e55;font-size:.84rem;line-height:1.55}.story-copy,.closing{max-width:760px;margin:auto;padding:0 1.5rem 3rem;font-size:1.08rem;line-height:1.82}.lead{font:1.75rem/1.45 'Libre Caslon Display',serif}.story-copy h2,.closing h2{font:400 clamp(2rem,4vw,3rem)/1.15 'Libre Caslon Display',serif;margin:3.2rem 0 1rem}.pull-quote{max-width:1000px;margin:1rem auto 5rem;padding:3.5rem 1.5rem;border-block:1px solid var(--line)}.pull-quote p{max-width:880px;margin:auto;font:400 clamp(2rem,4.5vw,4rem)/1.1 'Libre Caslon Display',serif}.fact-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1180px;margin:0 auto 5rem;padding:0 1.5rem;gap:1px}.fact-strip div{display:flex;min-height:170px;flex-direction:column;justify-content:space-between;background:#d8dfdd;padding:1.4rem}.fact-strip strong{font:400 clamp(2.3rem,4vw,4rem)/1 'Libre Caslon Display',serif}.fact-strip span{font-size:.82rem}.period-sources{max-width:1000px;margin:auto}.period-sources li{overflow-wrap:anywhere}@media(max-width:800px){.story-hero{padding-top:2.5rem}.fact-strip{grid-template-columns:1fr 1fr}.fact-strip div{min-height:145px}}@media(max-width:480px){.fact-strip{grid-template-columns:1fr}}
+</style>

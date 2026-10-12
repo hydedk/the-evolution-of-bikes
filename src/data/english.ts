@@ -2,6 +2,8 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'tour-of-guangxi-2026': ['Tour of Guangxi: Six days and one steep finish', 'The final stage race of the WorldTour season crosses the rolling landscape of Guangxi and is decided on the short, steep road to NongLa.'],
+  'merckx-gimondi-mendrisio-1971': ['When Gimondi opened the sprint against Merckx', 'At the 1971 World Championships in Mendrisio, Eddy Merckx and Felice Gimondi reached the finish alone. Gimondi opened, but Merckx took his second rainbow jersey.'],
   'james-moore-foerste-cykelloeb-1868': ['The race that was called the first', 'James Moore won a short race in Parc de Saint-Cloud in 1868. The day was later cast as the beginning of cycle racing—but the history is more complicated than that.'],
   'jaap-eden-verdensmester-paa-is-og-bane': ['The world champion who changed from skates to bicycle', 'Jaap Eden became world champion in speed skating and track cycling in the 1890s—and one of the Netherlands’ first sporting celebrities.'],
   'kund-rindboel-tempoproeve-1983': ["Kund Rindbøl’s time trial on the old main road", 'A reader remembers 30 kilometres against the clock, a 54 × 14 gear and his mother at the roadside between Holbæk and Roskilde.'],

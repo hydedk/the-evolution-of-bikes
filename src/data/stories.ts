@@ -63,6 +63,8 @@ import dumoulinGiro2017Image from '../assets/stories/dumoulin-naturpause-giro-20
 import kundRindboel1983Image from '../assets/stories/kund-rindboel-tempoproeve-1983/elverdam-mod-vendepunkt.jpg';
 import jaapEdenImage from '../assets/stories/jaap-eden/jaap-eden-cycling.jpg';
 import jamesMooreImage from '../assets/stories/paris-brest-paris-1891/terront-le-petit-journal-1891.jpg';
+import merckxGimondi1971Image from '../assets/stories/upcoming-week/felice-gimondi-1965.jpg';
+import tourOfGuangxi2026Image from '../assets/stories/tour-of-guangxi-2026/nongla-editorial-illustration.png';
 
 export type StoryMeta = {
   slug: string;
@@ -80,6 +82,8 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'tour-of-guangxi-2026': 'race',
+  'merckx-gimondi-mendrisio-1971': 'race',
   'james-moore-foerste-cykelloeb-1868': 'race',
   'jaap-eden-verdensmester-paa-is-og-bane': 'people',
   'kund-rindboel-tempoproeve-1983': 'people',
@@ -168,6 +172,8 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'tour-of-guangxi-2026', type: 'historie', year: '2017–2026', title: 'Tour of Guangxi: Seks dage og én stejl afslutning', text: 'WorldTour-sæsonens sidste etapeløb går gennem Guangxis kuperede landskab og afgøres på den korte, stejle vej mod NongLa.', image: tourOfGuangxi2026Image, periods: ['2010-2019'], topics: ['tour-of-guangxi', 'worldtour', 'nongla', 'kina', 'etapeloeb'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'merckx-gimondi-mendrisio-1971', type: 'historie', year: '1971', title: 'Da Gimondi åbnede spurten mod Merckx', text: 'Ved VM i Mendrisio kom Eddy Merckx og Felice Gimondi alene til mål. Italieneren åbnede, men Merckx tog sin anden regnbuetrøje.', image: merckxGimondi1971Image, periods: ['1970-1979'], topics: ['eddy-merckx', 'felice-gimondi', 'verdensmesterskab', 'mendrisio', 'landevej'], relatedBikes: [], relatedComponents: [] },
   { slug: 'james-moore-foerste-cykelloeb-1868', type: 'historie', year: '1868', title: 'Løbet der blev kaldt det første', text: 'James Moore vandt et kort løb i Parc de Saint-Cloud i 1868. Senere blev dagen gjort til cykelsportens begyndelse — men historien er mere indviklet end som så.', image: jamesMooreImage, periods: ['1800-1899'], topics: ['james-moore', 'saint-cloud', 'velocipede', 'tidlige-cykelloeb'], relatedBikes: [], relatedComponents: [] },
   { slug: 'jaap-eden-verdensmester-paa-is-og-bane', type: 'historie', year: '1893–1896', title: 'Verdensmesteren der skiftede skøjterne ud med en cykel', text: 'Jaap Eden blev verdensmester i både hurtigløb på skøjter og banecykling i 1890’erne — og et af Hollands første store sportsnavne.', image: jaapEdenImage, periods: ['1800-1899'], topics: ['jaap-eden', 'banecykling', 'hurtigløb-på-skøjter', 'verdensmesterskab', 'holland'], relatedBikes: [], relatedComponents: [] },
   { slug: 'kund-rindboel-tempoproeve-1983', type: 'historie', year: '1983', title: 'Kund Rindbøls tempoprøve på den gamle hovedvej', text: 'En læser husker 30 kilometer mod uret, gearingen 54 × 14 og sin mor i rabatten på hovedvejen mellem Holbæk og Roskilde.', image: kundRindboel1983Image, periods: ['1980-1989'], topics: ['enkeltstart', 'dansk-cykling', 'dbc', 'elverdammen', 'laeserhistorie'], relatedBikes: [], relatedComponents: [] },

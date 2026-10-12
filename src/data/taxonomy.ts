@@ -37,6 +37,8 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'tour-of-guangxi-2026': { period: '2010-2019', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },
+  'merckx-gimondi-mendrisio-1971': { period: '1970-1979', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },
   'james-moore-foerste-cykelloeb-1868': { period: '1800-1899', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },
   'jaap-eden-verdensmester-paa-is-og-bane': { period: '1800-1899', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
   'kund-rindboel-tempoproeve-1983': { period: '1980-1989', primary: 'cykelkultur', secondary: ['ryttere', 'loeb-og-store-oejeblikke'] },

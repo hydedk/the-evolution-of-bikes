@@ -1,0 +1,82 @@
+---
+import EnglishHeader from './EnglishHeader.astro';
+import EnglishFooter from './EnglishFooter.astro';
+import OptimizedImage from './OptimizedImage.astro';
+import RelatedDiscovery from './RelatedDiscovery.astro';
+import { scheduledStories } from '../data/scheduledStories';
+
+type StorySlug = keyof typeof scheduledStories;
+type Props = { slug: StorySlug; language?: 'da' | 'en' };
+const { slug, language = 'da' } = Astro.props;
+const story = scheduledStories[slug];
+const copy = story[language];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const daPath = `/historier/${slug}/`;
+const enPath = `/en/stories/${slug}/`;
+const canonicalPath = language === 'da' ? daPath : enPath;
+const canonical = new URL(`${base}${canonicalPath}`, Astro.site).toString();
+const daUrl = new URL(`${base}${daPath}`, Astro.site).toString();
+const enUrl = new URL(`${base}${enPath}`, Astro.site).toString();
+const periodPath = language === 'da' ? `/perioder/${story.period}/` : `/en/periods/${story.period}/`;
+const sourceLabel = language === 'da' ? 'Kilde og videre læsning' : 'Source and further reading';
+---
+<!doctype html>
+<html lang={language}>
+  <head>
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/>
+    <title>{copy.title} | The Evolution of Bikes</title><meta name="description" content={copy.description}/>
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="da" href={daUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={daUrl} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={copy.title} />
+    <meta property="og:description" content={copy.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(story.image.src, Astro.site).toString()} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify({ '@context':'https://schema.org', '@type':'Article', headline:copy.title, description:copy.description, inLanguage:language, mainEntityOfPage:canonical, image:new URL(story.image.src, Astro.site).toString() })} />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet"/><link rel="stylesheet" href={`${base}/styles/global.css`}/>
+  </head>
+  <body>
+  {language === 'en' ? <EnglishHeader current="stories" danishPath={daPath}/> : <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`} aria-current="page">Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav><div class="header-tools"><strong>DA</strong><span>/</span><a class="language-switch" href={`${base}${enPath}`} lang="en" hreflang="en">EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div></header>}
+  <main>
+    <article>
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">{story.year} · {language === 'da' ? 'Historie' : 'Story'}</p>
+          <h1>{copy.title}</h1>
+          <p class="deck">{copy.deck}</p>
+        </div>
+        <figure>
+          <OptimizedImage src={story.image} alt={copy.title} widths={[640,960,1280]} sizes="(max-width: 850px) 100vw, 50vw" loading="eager" fetchpriority="high" />
+          <figcaption>{story.credit}</figcaption>
+        </figure>
+      </header>
+      <div class="article-grid">
+        <aside>
+          <span>{story.year}</span>
+          <a href={`${base}${periodPath}`}>{language === 'da' ? 'Se perioden' : 'Explore the period'} →</a>
+        </aside>
+        <div class="body">
+          {copy.sections.map(([heading, paragraphs], sectionIndex) => <>
+            <section><h2>{heading}</h2>{paragraphs.map((paragraph) => <p>{paragraph}</p>)}</section>
+            {'visuals' in story && story.visuals.filter((visual) => visual.after === sectionIndex).map((visual) =>
+              <figure class="article-visual">
+                <OptimizedImage src={visual.image} alt={language === 'da' ? visual.altDa : visual.altEn} widths={[640,960,1280,1600]} sizes="(max-width: 850px) 100vw, 760px" />
+                <figcaption>{language === 'da' ? visual.captionDa : visual.captionEn}</figcaption>
+              </figure>
+            )}
+          </>)}
+          <section class="sources"><h2>{sourceLabel}</h2><p><a href={story.source} target="_blank" rel="noopener noreferrer">{new URL(story.source).hostname.replace(/^www\./, '')} ↗</a></p><p class="note">{language === 'da' ? 'Billedet er valgt som historisk kontekst. Hvor det ikke viser den konkrete begivenhed, fremgår det af billedteksten.' : 'The image provides historical context. Where it does not depict the specific event, the caption says so.'}</p></section>
+        </div>
+      </div>
+    </article>
+    <RelatedDiscovery currentSlug={slug} language={language} />
+  </main>
+  {language === 'en' ? <EnglishFooter/> : <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></div><p>En personlig samling af vintagecykler,<br/>historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>}
+  </body>
+</html>
+<style>
+  main{background:var(--paper)} article{max-width:1440px;margin:auto}.hero{display:grid;grid-template-columns:1fr 1fr;min-height:760px}.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(3rem,7vw,8rem)}.eyebrow{color:var(--rust);font-size:.78rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.hero h1{max-width:760px;margin:.8rem 0 1.6rem;font:400 clamp(3.2rem,6.3vw,7rem)/.95 'Libre Caslon Display',serif}.deck{max-width:650px;font-size:clamp(1.05rem,1.6vw,1.35rem);line-height:1.65}.hero figure{display:flex;min-width:0;flex-direction:column;margin:0;background:#d8d8cf}.hero figure :global(picture),.hero figure :global(img){width:100%;height:100%;object-fit:cover}.hero figcaption{padding:.7rem 1rem;font-size:.72rem;line-height:1.35;background:#ded8ca}.article-grid{display:grid;grid-template-columns:minmax(160px,1fr) minmax(0,760px) minmax(160px,1fr);gap:2rem;padding:clamp(4rem,8vw,8rem) 1.5rem}.article-grid aside{display:flex;flex-direction:column;gap:1rem;color:var(--rust);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}.article-grid aside a{color:inherit}.body{grid-column:2}.body section+section{margin-top:4rem}.body h2{margin:0 0 1.5rem;font:400 clamp(2rem,4vw,3.25rem)/1.05 'Libre Caslon Display',serif}.body p{font-size:1.08rem;line-height:1.8}.article-visual{margin:2.5rem 0 4rem}.article-visual :global(picture),.article-visual :global(img){display:block;width:100%;height:auto}.article-visual figcaption{padding:.8rem 0;border-bottom:1px solid var(--line);color:#5d584e;font-size:.78rem;line-height:1.5}.sources{border-top:1px solid var(--line);padding-top:2rem}.sources a{color:var(--rust)}.sources .note{font-size:.85rem;color:#5d584e}@media(max-width:850px){.hero{grid-template-columns:1fr;min-height:0}.hero-copy{padding:5rem 1.25rem 3rem}.hero figure{min-height:480px}.article-grid{grid-template-columns:1fr;padding:4rem 1.25rem}.article-grid aside,.body{grid-column:1}.article-grid aside{flex-direction:row;justify-content:space-between}.body p{font-size:1rem}.article-visual{margin:2rem 0 3rem}}@media(max-width:520px){.hero h1{font-size:3rem}.hero figure{min-height:360px}}
+</style>

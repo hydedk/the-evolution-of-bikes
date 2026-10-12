@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'james-moore-foerste-cykelloeb-1868': ['The race that was called the first', 'James Moore won a short race in Parc de Saint-Cloud in 1868. The day was later cast as the beginning of cycle racing—but the history is more complicated than that.'],
   'jaap-eden-verdensmester-paa-is-og-bane': ['The world champion who changed from skates to bicycle', 'Jaap Eden became world champion in speed skating and track cycling in the 1890s—and one of the Netherlands’ first sporting celebrities.'],
   'kund-rindboel-tempoproeve-1983': ["Kund Rindbøl’s time trial on the old main road", 'A reader remembers 30 kilometres against the clock, a 54 × 14 gear and his mother at the roadside between Holbæk and Roskilde.'],
   'dumoulin-naturpause-giro-2017': ['The comfort break that nearly cost Dumoulin the Giro', 'Tom Dumoulin had to stop with stomach trouble on stage 16 of the 2017 Giro and defend the pink jersey alone.'],

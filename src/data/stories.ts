@@ -62,6 +62,7 @@ import hinaultProtest1984Image from '../assets/stories/hinault-arbejderprotest-p
 import dumoulinGiro2017Image from '../assets/stories/dumoulin-naturpause-giro-2017/tom-dumoulin-giro-2017-stage-16.jpg';
 import kundRindboel1983Image from '../assets/stories/kund-rindboel-tempoproeve-1983/elverdam-mod-vendepunkt.jpg';
 import jaapEdenImage from '../assets/stories/jaap-eden/jaap-eden-cycling.jpg';
+import jamesMooreImage from '../assets/stories/paris-brest-paris-1891/terront-le-petit-journal-1891.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -79,6 +80,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'james-moore-foerste-cykelloeb-1868': 'race',
   'jaap-eden-verdensmester-paa-is-og-bane': 'people',
   'kund-rindboel-tempoproeve-1983': 'people',
   'dumoulin-naturpause-giro-2017': 'race',
@@ -166,6 +168,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'james-moore-foerste-cykelloeb-1868', type: 'historie', year: '1868', title: 'Løbet der blev kaldt det første', text: 'James Moore vandt et kort løb i Parc de Saint-Cloud i 1868. Senere blev dagen gjort til cykelsportens begyndelse — men historien er mere indviklet end som så.', image: jamesMooreImage, periods: ['1800-1899'], topics: ['james-moore', 'saint-cloud', 'velocipede', 'tidlige-cykelloeb'], relatedBikes: [], relatedComponents: [] },
   { slug: 'jaap-eden-verdensmester-paa-is-og-bane', type: 'historie', year: '1893–1896', title: 'Verdensmesteren der skiftede skøjterne ud med en cykel', text: 'Jaap Eden blev verdensmester i både hurtigløb på skøjter og banecykling i 1890’erne — og et af Hollands første store sportsnavne.', image: jaapEdenImage, periods: ['1800-1899'], topics: ['jaap-eden', 'banecykling', 'hurtigløb-på-skøjter', 'verdensmesterskab', 'holland'], relatedBikes: [], relatedComponents: [] },
   { slug: 'kund-rindboel-tempoproeve-1983', type: 'historie', year: '1983', title: 'Kund Rindbøls tempoprøve på den gamle hovedvej', text: 'En læser husker 30 kilometer mod uret, gearingen 54 × 14 og sin mor i rabatten på hovedvejen mellem Holbæk og Roskilde.', image: kundRindboel1983Image, periods: ['1980-1989'], topics: ['enkeltstart', 'dansk-cykling', 'dbc', 'elverdammen', 'laeserhistorie'], relatedBikes: [], relatedComponents: [] },
   { slug: 'dumoulin-naturpause-giro-2017', type: 'historie', year: '2017', title: 'Naturpausen der næsten kostede Dumoulin Giroen', text: 'Tom Dumoulin måtte standse med maveproblemer på Giroens 16. etape og forsvare den lyserøde førertrøje alene.', image: dumoulinGiro2017Image, periods: ['2010-2019'], topics: ['tom-dumoulin', 'giro-ditalia', 'stelvio', 'umbrailpasset', 'førertrøjen'], relatedBikes: [], relatedComponents: [] },

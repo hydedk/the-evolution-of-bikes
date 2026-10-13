@@ -2342,14 +2342,14 @@
   {
     "id": "hist-000157",
     "titel": "Da Gimondi åbnede spurten mod Merckx",
-    "status": "klar",
+    "status": "publiceret",
     "prioritet": "mellem",
     "periode": "per-1970-1979",
     "aar": "1971",
     "spor": "loeb-og-store-oejeblikke",
     "dokumentation": "dokumenteret",
     "faktarisiko": "hoej",
-    "naeste_handling": "Udgiv den 13. oktober 2026 og forbind den med forside, historieoversigt, periode og tema.",
+    "naeste_handling": "Publiceret og forbundet med forside, historieoversigt, periode og tema.",
     "blokeret_af": "null",
     "kanonisk_url": "/historier/merckx-gimondi-mendrisio-1971/",
     "fil": "hist-000157-merckx-gimondi-mendrisio-1971.md"
@@ -13292,14 +13292,14 @@
   {
     "id": "hist-000887",
     "titel": "Tour of Guangxi: Seks dage og én stejl afslutning",
-    "status": "klar",
+    "status": "publiceret",
     "prioritet": "mellem",
     "periode": "per-2010-2019",
     "aar": "2017-2026",
     "spor": "loeb-og-store-oejeblikke",
     "dokumentation": "dokumenteret",
     "faktarisiko": "mellem",
-    "naeste_handling": "Udgiv den 13. oktober 2026 ved løbsstart og forbind den med forside, historieoversigt, periode og tema.",
+    "naeste_handling": "Publiceret ved løbsstart og forbundet med forside, historieoversigt, periode og tema.",
     "blokeret_af": "null",
     "kanonisk_url": "/historier/tour-of-guangxi-2026/",
     "fil": "hist-000887-tour-of-guangxi-2026.md"

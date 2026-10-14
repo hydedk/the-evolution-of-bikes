@@ -65,6 +65,7 @@ import jaapEdenImage from '../assets/stories/jaap-eden/jaap-eden-cycling.jpg';
 import jamesMooreImage from '../assets/stories/paris-brest-paris-1891/terront-le-petit-journal-1891.jpg';
 import merckxGimondi1971Image from '../assets/stories/upcoming-week/felice-gimondi-1965.jpg';
 import tourOfGuangxi2026Image from '../assets/stories/tour-of-guangxi-2026/nongla-editorial-illustration.png';
+import coppiBartali1940Image from '../assets/stories/upcoming-week/coppi-bartali-1940.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -82,6 +83,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'coppi-bartali-et-delt-italien': 'people',
   'tour-of-guangxi-2026': 'race',
   'merckx-gimondi-mendrisio-1971': 'race',
   'james-moore-foerste-cykelloeb-1868': 'race',
@@ -172,6 +174,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'coppi-bartali-et-delt-italien', type: 'historie', year: '1940–1952', title: 'Coppi, Bartali og et delt Italien', text: 'Fausto Coppi og Gino Bartali begyndte som holdkammerater og blev rivaler, som efterkrigstidens Italien brugte til at fortælle om sig selv.', image: coppiBartali1940Image, periods: ['1940-1949', '1950-1959'], topics: ['fausto-coppi', 'gino-bartali', 'giro-ditalia', 'tour-de-france', 'italien'], relatedBikes: [], relatedComponents: [] },
   { slug: 'tour-of-guangxi-2026', type: 'historie', year: '2017–2026', title: 'Tour of Guangxi: Seks dage og én stejl afslutning', text: 'WorldTour-sæsonens sidste etapeløb går gennem Guangxis kuperede landskab og afgøres på den korte, stejle vej mod NongLa.', image: tourOfGuangxi2026Image, periods: ['2010-2019'], topics: ['tour-of-guangxi', 'worldtour', 'nongla', 'kina', 'etapeloeb'], relatedBikes: [], relatedComponents: [] },
   { slug: 'merckx-gimondi-mendrisio-1971', type: 'historie', year: '1971', title: 'Da Gimondi åbnede spurten mod Merckx', text: 'Ved VM i Mendrisio kom Eddy Merckx og Felice Gimondi alene til mål. Italieneren åbnede, men Merckx tog sin anden regnbuetrøje.', image: merckxGimondi1971Image, periods: ['1970-1979'], topics: ['eddy-merckx', 'felice-gimondi', 'verdensmesterskab', 'mendrisio', 'landevej'], relatedBikes: [], relatedComponents: [] },
   { slug: 'james-moore-foerste-cykelloeb-1868', type: 'historie', year: '1868', title: 'Løbet der blev kaldt det første', text: 'James Moore vandt et kort løb i Parc de Saint-Cloud i 1868. Senere blev dagen gjort til cykelsportens begyndelse — men historien er mere indviklet end som så.', image: jamesMooreImage, periods: ['1800-1899'], topics: ['james-moore', 'saint-cloud', 'velocipede', 'tidlige-cykelloeb'], relatedBikes: [], relatedComponents: [] },

@@ -1607,14 +1607,14 @@
   {
     "id": "hist-000108",
     "titel": "Coppi, Bartali og et delt Italien",
-    "status": "klar",
+    "status": "publiceret",
     "prioritet": "mellem",
     "periode": "per-1940-1959",
     "aar": "1940-1954",
     "spor": "samfund-og-tidsaand",
     "dokumentation": "delvist-dokumenteret",
     "faktarisiko": "mellem",
-    "naeste_handling": "Udgiv den 14. oktober 2026 og forbind den med forside, historieoversigt, periode og tema.",
+    "naeste_handling": "Følg eventuelle rettelser og læserbidrag.",
     "blokeret_af": "null",
     "kanonisk_url": "/historier/coppi-bartali-et-delt-italien/",
     "fil": "hist-000108-coppi-bartali-rivalisering.md"

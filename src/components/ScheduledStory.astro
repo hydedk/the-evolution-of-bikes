@@ -68,7 +68,7 @@ const sourceLabel = language === 'da' ? 'Kilde og videre læsning' : 'Source and
               </figure>
             )}
           </>)}
-          <section class="sources"><h2>{sourceLabel}</h2><p><a href={story.source} target="_blank" rel="noopener noreferrer">{new URL(story.source).hostname.replace(/^www\./, '')} ↗</a></p><p class="note">{language === 'da' ? 'Billedet er valgt som historisk kontekst. Hvor det ikke viser den konkrete begivenhed, fremgår det af billedteksten.' : 'The image provides historical context. Where it does not depict the specific event, the caption says so.'}</p></section>
+          {story.source && <section class="sources"><h2>{sourceLabel}</h2><p><a href={story.source} target="_blank" rel="noopener noreferrer">{new URL(story.source).hostname.replace(/^www\./, '')} ↗</a></p><p class="note">{language === 'da' ? 'Billedet er valgt som historisk kontekst. Hvor det ikke viser den konkrete begivenhed, fremgår det af billedteksten.' : 'The image provides historical context. Where it does not depict the specific event, the caption says so.'}</p></section>}
         </div>
       </div>
     </article>

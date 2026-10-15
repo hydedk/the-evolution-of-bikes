@@ -2762,14 +2762,14 @@
   {
     "id": "hist-000185",
     "titel": "Blodposerne ved OL i 1984",
-    "status": "klar",
+    "status": "publiceret",
     "prioritet": "høj",
     "periode": "per-1980-1989",
     "aar": "1984-1985",
     "spor": "kost-traening-og-videnskab",
     "dokumentation": "dokumenteret",
     "faktarisiko": "høj",
-    "naeste_handling": "Udgiv den 15. oktober 2026 og forbind den med forside, historieoversigt, periode og tema.",
+    "naeste_handling": "Følg eventuelle rettelser og læserbidrag.",
     "blokeret_af": "null",
     "kanonisk_url": "/historier/blodtransfusioner-ol-1984/",
     "fil": "hist-000185-blodtransfusion-ol-1984.md"

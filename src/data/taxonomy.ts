@@ -37,6 +37,7 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'blodtransfusioner-ol-1984': { period: '1980-1989', primary: 'kost-traening-og-videnskab', secondary: ['samfund-og-tidsaand', 'loeb-og-store-oejeblikke'] },
   'coppi-bartali-et-delt-italien': { period: '1940-1949', primary: 'samfund-og-tidsaand', secondary: ['ryttere', 'loeb-og-store-oejeblikke'] },
   'tour-of-guangxi-2026': { period: '2010-2019', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },
   'merckx-gimondi-mendrisio-1971': { period: '1970-1979', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },

@@ -33,6 +33,7 @@ const languagePairs = {
   '/historier/james-moore-foerste-cykelloeb-1868/': '/en/stories/james-moore-foerste-cykelloeb-1868/',
   '/historier/merckx-gimondi-mendrisio-1971/': '/en/stories/merckx-gimondi-mendrisio-1971/',
   '/historier/tour-of-guangxi-2026/': '/en/stories/tour-of-guangxi-2026/',
+  '/historier/blodtransfusioner-ol-1984/': '/en/stories/blodtransfusioner-ol-1984/',
   '/historier/coppi-bartali-et-delt-italien/': '/en/stories/coppi-bartali-et-delt-italien/',
   '/perioder/': '/en/periods/', '/cykler/': '/en/bikes/', '/komponenter/': '/en/components/',
   '/historier/cykelsportens-vilde-vesten/': '/en/stories/cykelsportens-vilde-vesten/',

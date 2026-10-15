@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'blodtransfusioner-ol-1984': ['The blood bags at the 1984 Olympics', 'The US cycling team’s transfusion programme sat between medical experiment, sporting ambition and rules that had not caught up.'],
   'coppi-bartali-et-delt-italien': ['Coppi, Bartali and a divided Italy', 'Fausto Coppi and Gino Bartali began as team-mates and became rivals through whom post-war Italy told stories about itself.'],
   'tour-of-guangxi-2026': ['Tour of Guangxi: Six days and one steep finish', 'The final stage race of the WorldTour season crosses the rolling landscape of Guangxi and is decided on the short, steep road to NongLa.'],
   'merckx-gimondi-mendrisio-1971': ['When Gimondi opened the sprint against Merckx', 'At the 1971 World Championships in Mendrisio, Eddy Merckx and Felice Gimondi reached the finish alone. Gimondi opened, but Merckx took his second rainbow jersey.'],

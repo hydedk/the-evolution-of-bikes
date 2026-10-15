@@ -1,6 +1,7 @@
 ---
 import { themes, themeIds, contentForPeriod, localizeContent } from '../data/taxonomy';
-const { language = 'da', period = '1990-1999' } = Astro.props as { language?: 'da' | 'en'; period?: string };
+const { period = '1990-1999' } = Astro.props as { language?: 'da' | 'en'; lang?: 'da' | 'en'; period?: string };
+const language = (Astro.props.language ?? Astro.props.lang ?? 'da') as 'da' | 'en';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const en = language === 'en';
 const items = localizeContent(contentForPeriod(period), language);

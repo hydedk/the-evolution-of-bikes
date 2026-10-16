@@ -2252,14 +2252,14 @@
   {
     "id": "hist-000151",
     "titel": "Centimeterne mellem Gresse og Nasq",
-    "status": "klar",
+    "status": "publiceret",
     "prioritet": "mellem",
     "periode": "per-1900-1919",
     "aar": "1900-1919",
     "spor": "teknik",
     "dokumentation": "delvist-dokumenteret",
     "faktarisiko": "hoej",
-    "naeste_handling": "Udgiv den 16. oktober 2026 og forbind den med forside, historieoversigt, periode og tema.",
+    "naeste_handling": "Publiceret 16. oktober 2026; følg kun op ved nye oplysninger om postkortets datering, sted eller de to personer.",
     "blokeret_af": "null",
     "kanonisk_url": "/historier/gresse-nasq-motorpace/",
     "fil": "hist-000151-gresse-nasq-motorpace.md"

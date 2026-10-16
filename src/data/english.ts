@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'gresse-nasq-motorpace': ['The centimetres between Gresse and Nasq', 'A surviving postcard naming stayer Gresse and pacer Nasq opens the story of motor-paced racing, where two people and two machines had to work as one.'],
   'blodtransfusioner-ol-1984': ['The blood bags at the 1984 Olympics', 'The US cycling team’s transfusion programme sat between medical experiment, sporting ambition and rules that had not caught up.'],
   'coppi-bartali-et-delt-italien': ['Coppi, Bartali and a divided Italy', 'Fausto Coppi and Gino Bartali began as team-mates and became rivals through whom post-war Italy told stories about itself.'],
   'tour-of-guangxi-2026': ['Tour of Guangxi: Six days and one steep finish', 'The final stage race of the WorldTour season crosses the rolling landscape of Guangxi and is decided on the short, steep road to NongLa.'],

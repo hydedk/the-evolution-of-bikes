@@ -35,6 +35,7 @@ const languagePairs = {
   '/historier/tour-of-guangxi-2026/': '/en/stories/tour-of-guangxi-2026/',
   '/historier/blodtransfusioner-ol-1984/': '/en/stories/blodtransfusioner-ol-1984/',
   '/historier/coppi-bartali-et-delt-italien/': '/en/stories/coppi-bartali-et-delt-italien/',
+  '/historier/gresse-nasq-motorpace/': '/en/stories/gresse-nasq-motorpace/',
   '/perioder/': '/en/periods/', '/cykler/': '/en/bikes/', '/komponenter/': '/en/components/',
   '/historier/cykelsportens-vilde-vesten/': '/en/stories/cykelsportens-vilde-vesten/',
   '/historier/snyd-soem-tour-de-france-1904/': '/en/stories/snyd-soem-tour-de-france-1904/',

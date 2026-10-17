@@ -1637,14 +1637,14 @@
   {
     "id": "hist-000110",
     "titel": "Fausto Coppis sidste rejse og den oversete malaria",
-    "status": "klar",
+    "status": "publiceret",
     "prioritet": "mellem",
     "periode": "per-1960-1969",
     "aar": "1960",
     "spor": "kost-traening-og-videnskab",
     "dokumentation": "dokumenteret",
     "faktarisiko": "mellem",
-    "naeste_handling": "Udgiv den 18. oktober 2026 og forbind den med forside, historieoversigt, periode og tema.",
+    "naeste_handling": "Publiceret på dansk og engelsk; følg almindelig vedligeholdelse.",
     "blokeret_af": "null",
     "kanonisk_url": "/historier/fausto-coppi-malaria-1960/",
     "fil": "hist-000110-coppi-doed-1960.md"

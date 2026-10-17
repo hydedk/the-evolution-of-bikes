@@ -68,6 +68,7 @@ import tourOfGuangxi2026Image from '../assets/stories/tour-of-guangxi-2026/nongl
 import coppiBartali1940Image from '../assets/stories/upcoming-week/coppi-bartali-1940.jpg';
 import olympics1984Image from '../assets/stories/upcoming-week/cycling-1984.jpg';
 import motorpaceGresseImage from '../assets/stories/upcoming-week/motorpace-bordeaux-paris.jpg';
+import coppiMalariaImage from '../assets/stories/coppi-krigsfange/fausto-coppi-1957.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -85,6 +86,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'fausto-coppi-malaria-1960': 'people',
   'bert-oosterbosch-winschoten-1985': 'people',
   'gresse-nasq-motorpace': 'mechanics',
   'blodtransfusioner-ol-1984': 'people',
@@ -179,6 +181,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'fausto-coppi-malaria-1960', type: 'historie', year: '1959–1960', title: 'Coppis sidste rejse og den oversete malaria', text: 'Fausto Coppi kom syg hjem fra Øvre Volta. Rejsefællen Raphaël Géminiani fik samme sygdom, men malaria blev erkendt for sent hos Coppi.', image: coppiMalariaImage, periods: ['1960-1969'], topics: ['fausto-coppi', 'malaria', 'sportsmedicin', 'italien'], relatedBikes: [], relatedComponents: [] },
   { slug: 'bert-oosterbosch-winschoten-1985', type: 'historie', year: '1985', title: 'Da Oosterbosch fandt enkeltstarten igen', text: 'På 6,6 våde kilometer gennem Winschoten slog Bert Oosterbosch holdkammeraten Eric Vanderaerden med 11 sekunder og fandt kortvarigt tilbage til sin specialitet.', image: olympics1984Image, periods: ['1980-1989'], topics: ['bert-oosterbosch', 'ronde-van-nederland', 'enkeltstart', 'winschoten', 'panasonic'], relatedBikes: [], relatedComponents: [] },
   { slug: 'gresse-nasq-motorpace', type: 'historie', year: 'ca. 1900', title: 'Centimeterne mellem Gresse og Nasq', text: 'Et overleveret postkort med stayeren Gresse og paceren Nasq åbner historien om motorpace, hvor to mennesker og to maskiner skulle arbejde som én.', image: motorpaceGresseImage, periods: ['1900-1920'], topics: ['motorpace', 'stayerloeb', 'banecykling', 'gresse', 'nasq'], relatedBikes: [], relatedComponents: [] },
   { slug: 'blodtransfusioner-ol-1984', type: 'historie', year: '1984', title: 'Blodposerne ved OL i 1984', text: 'Det amerikanske cykelholds transfusionsprogram lå mellem medicinsk eksperiment, sportslig ambition og regler, der endnu ikke var fulgt med.', image: olympics1984Image, periods: ['1980-1989'], topics: ['ol-1984', 'bloddoping', 'usa', 'banecykling', 'sportsmedicin'], relatedBikes: [], relatedComponents: [] },

@@ -300,5 +300,72 @@ export const scheduledStories = {
       ]
     }
   },
-  'fausto-coppi-malaria-1960': {year:'1959–1960',period:'1960-1969',track:'people',image:coppi,credit:'Fausto Coppi i 1957. Foto: Joop van Bilsen/Anefo, CC0.',source:'https://www.lemonde.fr/archives/article/1960/01/04/fausto-coppi-est-mort-a-l-hopital-de-tortona-ou-il-venait-d-etre-transporte_2096628_1819218.html',da:{title:'Coppis sidste rejse og den oversete malaria',description:'Fausto Coppi kom syg hjem fra en rejse til Øvre Volta i 1959. Malaria blev først erkendt, da behandlingen kom for sent.',deck:'Han kom hjem med feber efter en rejse til Afrika. Lægerne ledte efter andre forklaringer, mens den sygdom, rejsefællerne også bar med hjem, fik tid.',sections:[['Rejsen efter karrieren',['I december 1959 rejste Fausto Coppi med andre europæiske sportsfolk til Øvre Volta, det nuværende Burkina Faso. Turen omfattede cykelløb og jagt. Efter hjemkomsten blev flere i selskabet syge.','Coppi fik høj feber omkring jul. Hans tilstand blev først behandlet som en anden sygdom. Rejsefællen Raphaël Géminiani blev også alvorligt syg, men her førte forbindelsen til Afrika til behandling mod malaria.']],['Diagnosen kom for sent',['Da malaria blev overvejet hos Coppi, var sygdomsforløbet langt fremskredent. Han døde på hospitalet i Tortona den 2. januar 1960, 40 år gammel.','Historien er siden blevet omgivet af forklaringer om præcis hvor smitten skete, og hvem der advarede hvem. Kernen er enklere og veldokumenteret: En behandlingsbar tropesygdom blev ikke genkendt i tide. Cykelsportens største italienske navn døde ikke på cyklen, men efter en diagnose, der kom for sent.']] ]},en:{title:'Coppi’s last journey and the missed malaria',description:'Fausto Coppi returned ill from Upper Volta in 1959. Malaria was recognised only when effective treatment came too late.',deck:'He came home with fever after a journey to Africa. Doctors looked for other explanations while the illness also carried by his companions was given time.',sections:[['The journey after the season',['In December 1959 Fausto Coppi travelled with other European sportsmen to Upper Volta, now Burkina Faso. The visit included bicycle races and hunting. Several members of the party became ill after returning home.','Coppi developed a high fever around Christmas. His condition was initially treated as another illness. Fellow traveller Raphaël Géminiani also became gravely ill, but in his case the African connection led to treatment for malaria.']],['The diagnosis came too late',['By the time malaria was considered in Coppi’s case, the illness was far advanced. He died in hospital in Tortona on 2 January 1960, aged forty.','The story later accumulated claims about exactly where infection occurred and who warned whom. The core is simpler and well documented: a treatable tropical illness was not recognised in time. Italy’s greatest cycling name died not on the bicycle, but after a diagnosis that came too late.']] ]}}
+  'fausto-coppi-malaria-1960': {
+    year:'1959–1960', period:'1960-1969', track:'people', image:coppi,
+    credit:'Fausto Coppi i 1957. Foto: Joop van Bilsen/Anefo, CC0.',
+    creditEn:'Fausto Coppi in 1957. Photo: Joop van Bilsen/Anefo, CC0.',
+    source:'',
+    da:{
+      title:'Coppis sidste rejse og den oversete malaria',
+      description:'Fausto Coppi kom syg hjem fra Øvre Volta i december 1959. Rejsefællen Raphaël Géminiani fik samme sygdom, men malaria blev erkendt for sent hos Coppi.',
+      deck:'Han kom hjem med feber efter en rejse til Afrika. En rejsefælle blev behandlet for malaria, mens lægerne omkring Coppi fortsat ledte efter andre forklaringer.',
+      sections:[
+        ['Feberen efter hjemkomsten',[
+          'Den 27. december 1959 måtte Fausto Coppi gå i seng med feber. Det var ikke så mærkeligt i sig selv. Influenza gik rundt, og selv en cykelrytter med fem Giro-sejre kunne naturligvis ende under dynen som alle andre. Men feberen steg, og kroppen reagerede ikke, som lægerne ventede. Der var noget andet på spil.',
+          'Coppi var kommet hjem fra Øvre Volta, det nuværende Burkina Faso. Han havde været af sted med en gruppe europæiske ryttere, blandt andre franskmanden Raphaël Géminiani. Turen rummede et kriterium i Ouagadougou og nogle dages jagt. Det var den slags vinterrejse, som kendte ryttere tog på for honoraret, selskabet og lidt afveksling, når den europæiske sæson var forbi.'
+        ]],
+        ['En mester mellem to sæsoner',[
+          'Coppi var fyldt 40 i september. De store sejre lå bag ham, men han var endnu ikke færdig som professionel. I november havde han sagt ja til at køre for San Pellegrino-holdet under sin gamle rival Gino Bartali. Det alene siger noget om, hvor mærkelig og sejlivet en cykelkarriere kan være. To mænd, som Italien i årevis havde delt sig efter, skulle nu arbejde på samme side af holdbilen.',
+          'Rejsen til Afrika var derfor ikke en afskedstur. Coppi regnede med endnu en sæson. Den 10. december rejste han mod Ouagadougou. Et par uger senere var han hjemme igen. Ifølge den italienske encyklopædi Treccani viste sygdommen sig for alvor den 27. december. Først lignede den influenza. Det var en forståelig tanke, men det blev en farlig én.'
+        ]],
+        ['Den samme sygdom i Frankrig',[
+          'Raphaël Géminiani blev også alvorligt syg efter rejsen. I Frankrig førte lægerne hans ophold i Afrika ind i regnestykket. Han fik konstateret malaria og blev behandlet med kinin. Behandlingen var voldsom, men han overlevede. Det afgørende var ikke, at hans læger kendte cykling bedre. De fik stillet det rigtige spørgsmål i tide.',
+          'Senere beretninger fortæller om telefonopkald fra Géminianis familie til Italien og om advarsler, der ikke blev taget alvorligt. Hvem der sagde præcis hvad, er blevet gengivet forskelligt. Vi behøver heller ikke pynte på det. Det sikre er, at to mænd fra samme rejse blev syge, og at malaria blev erkendt hos den ene, mens Coppis behandling fortsatte ad et andet spor.'
+        ]],
+        ['Tiden løb den forkerte vej',[
+          'Coppis tilstand blev værre omkring nytår. Han blev indlagt på hospitalet i Tortona, men sygdommen var da langt fremskreden. Malaria skyldes parasitter, som overføres gennem myg, og den alvorlige form kan udvikle sig hurtigt. I 1959 fandtes der behandling. Problemet var at komme frem til diagnosen, mens behandlingen stadig kunne nå at virke.',
+          'Her var ingen bjergetape, hvor man kunne begrænse tabet og prøve igen næste dag. Klokken 8.45 den 2. januar 1960 døde Fausto Coppi på hospitalet. Han blev 40 år. Den samtidige omtale famlede endnu efter forklaringer som bronkopneumoni og en ukendt virus. Først bagefter stod malariaen som den centrale forklaring på forløbet.'
+        ]],
+        ['Fortællingerne efter dødsfaldet',[
+          'Et dødsfald som dette efterlader sjældent historien i fred. Der kom beretninger om myggene på rejsen, om jagten og om lægernes samtaler. Årtier senere dukkede også andre teorier op. De har fået spalteplads, men de ændrer ikke det bedst dokumenterede forløb: rejsen til Øvre Volta, feberen efter hjemkomsten, Géminianis malaria og Coppis død efter en for sen erkendelse af sygdommen.',
+          'Det er fristende at gøre enden symbolsk, når det gælder en rytter som Coppi. Det behøver vi ikke. Han havde overlevet krig, fangenskab, styrt og et liv under et ganske ubarmhjertigt italiensk blik. Til sidst blev han fældet af en sygdom, som kunne behandles, hvis blot den blev set.'
+        ]],
+        ['Den tomme plads',[
+          'Begravelsen fandt sted i Castellania den 4. januar. Mennesker stod tæt i den lille bjergby, hvor Coppi var født. De kom ikke kun for vinderen af Giroen og Touren. De kom for en mand, hvis sejre, nederlag og privatliv havde fulgt dem gennem efterkrigsårene.',
+          'Få uger tidligere havde han planlagt en ny sæson. Nu stod Bartali uden den rytter, han netop havde hentet til sit hold, og Italien uden sin mest omtalte cykelrytter. Tilbage var også den enkle, besværlige detalje: Feberen var ikke influenza. Den kom fra rejsen, og den blev forstået for sent.'
+        ]]
+      ]
+    },
+    en:{
+      title:'Coppi’s last journey and the missed malaria',
+      description:'Fausto Coppi returned ill from Upper Volta in December 1959. Fellow traveller Raphaël Géminiani had the same disease, but malaria was recognised too late in Coppi’s case.',
+      deck:'He came home with fever after a journey to Africa. A fellow traveller was treated for malaria while Coppi’s doctors continued to look for other explanations.',
+      sections:[
+        ['The fever after his return',[
+          'On 27 December 1959 Fausto Coppi took to his bed with a fever. That was not remarkable in itself. Influenza was circulating, and even a rider with five victories in the Giro could end up beneath the blankets like anyone else. But the fever rose, and his body did not respond as the doctors expected. Something else was at work.',
+          'Coppi had returned from Upper Volta, now Burkina Faso. He had travelled with a group of European riders, among them the Frenchman Raphaël Géminiani. The visit included a criterium in Ouagadougou and several days of hunting. It was the sort of winter engagement famous riders accepted for the fee, the company and a change of scenery once the European season had ended.'
+        ]],
+        ['A champion between two seasons',[
+          'Coppi had turned forty in September. His greatest victories were behind him, but his professional career was not over. In November he had agreed to ride for the San Pellegrino team under his old rival Gino Bartali. That alone says something about the strange durability of a cycling career. Two men around whom Italy had divided itself for years were about to work on the same side of the team car.',
+          'The African journey was therefore no farewell tour. Coppi expected another season. He left for Ouagadougou on 10 December and was home again a few weeks later. According to the Italian encyclopedia Treccani, the illness declared itself fully on 27 December. At first it looked like influenza. It was an understandable diagnosis, but a dangerous one.'
+        ]],
+        ['The same illness in France',[
+          'Raphaël Géminiani also became gravely ill after the journey. In France, doctors included his stay in Africa in their calculations. Malaria was diagnosed and he was treated with quinine. The treatment was severe, but he survived. The crucial difference was not that his doctors understood cycling better. They asked the right question in time.',
+          'Later accounts describe telephone calls from Géminiani’s family to Italy and warnings that were not taken seriously. Exactly who said what has been retold in different ways. There is no need to decorate it. What is certain is that two men from the same journey became ill, and malaria was recognised in one while Coppi’s treatment continued along another course.'
+        ]],
+        ['Time moved the wrong way',[
+          'Coppi’s condition worsened around New Year. He was admitted to hospital in Tortona, but by then the disease was far advanced. Malaria is caused by parasites transmitted by mosquitoes, and its severe form can develop rapidly. Treatment existed in 1959. The difficulty was reaching the diagnosis while treatment could still work.',
+          'There was no mountain stage here on which to limit the loss and try again the following day. At 8.45 on 2 January 1960, Fausto Coppi died in hospital. He was forty. Contemporary reports still reached for explanations including bronchopneumonia and an unknown virus. Only afterwards did malaria emerge as the central explanation for the course of his illness.'
+        ]],
+        ['The stories that followed',[
+          'A death like this rarely leaves its story undisturbed. Accounts appeared about mosquitoes on the journey, the hunting expedition and conversations between doctors. Decades later, other theories surfaced as well. They received attention, but they do not alter the best documented sequence: the journey to Upper Volta, the fever after returning, Géminiani’s malaria and Coppi’s death after the disease was recognised too late.',
+          'It is tempting to make the ending symbolic when the rider is Coppi. We do not have to. He had survived war, captivity, crashes and life beneath an unforgiving Italian gaze. In the end he was brought down by a disease that could be treated, if only it was seen.'
+        ]],
+        ['The empty place',[
+          'The funeral was held in Castellania on 4 January. People crowded into the small hill town where Coppi had been born. They came not only for the winner of the Giro and the Tour. They came for a man whose victories, defeats and private life had accompanied them through the post-war years.',
+          'A few weeks earlier he had been planning another season. Bartali was now without the rider he had just signed, and Italy without its most closely watched cyclist. One plain, awkward detail remained: the fever was not influenza. It came from the journey, and it was understood too late.'
+        ]]
+      ]
+    }
+  }
 } as const;

@@ -37,6 +37,7 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'bert-oosterbosch-winschoten-1985': { period: '1980-1989', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
   'gresse-nasq-motorpace': { period: '1900-1920', primary: 'teknik', secondary: ['menneskene-bag', 'cykelkultur'] },
   'blodtransfusioner-ol-1984': { period: '1980-1989', primary: 'kost-traening-og-videnskab', secondary: ['samfund-og-tidsaand', 'loeb-og-store-oejeblikke'] },
   'coppi-bartali-et-delt-italien': { period: '1940-1949', primary: 'samfund-og-tidsaand', secondary: ['ryttere', 'loeb-og-store-oejeblikke'] },

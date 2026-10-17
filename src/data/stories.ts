@@ -85,6 +85,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'bert-oosterbosch-winschoten-1985': 'people',
   'gresse-nasq-motorpace': 'mechanics',
   'blodtransfusioner-ol-1984': 'people',
   'coppi-bartali-et-delt-italien': 'people',
@@ -178,6 +179,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'bert-oosterbosch-winschoten-1985', type: 'historie', year: '1985', title: 'Da Oosterbosch fandt enkeltstarten igen', text: 'På 6,6 våde kilometer gennem Winschoten slog Bert Oosterbosch holdkammeraten Eric Vanderaerden med 11 sekunder og fandt kortvarigt tilbage til sin specialitet.', image: olympics1984Image, periods: ['1980-1989'], topics: ['bert-oosterbosch', 'ronde-van-nederland', 'enkeltstart', 'winschoten', 'panasonic'], relatedBikes: [], relatedComponents: [] },
   { slug: 'gresse-nasq-motorpace', type: 'historie', year: 'ca. 1900', title: 'Centimeterne mellem Gresse og Nasq', text: 'Et overleveret postkort med stayeren Gresse og paceren Nasq åbner historien om motorpace, hvor to mennesker og to maskiner skulle arbejde som én.', image: motorpaceGresseImage, periods: ['1900-1920'], topics: ['motorpace', 'stayerloeb', 'banecykling', 'gresse', 'nasq'], relatedBikes: [], relatedComponents: [] },
   { slug: 'blodtransfusioner-ol-1984', type: 'historie', year: '1984', title: 'Blodposerne ved OL i 1984', text: 'Det amerikanske cykelholds transfusionsprogram lå mellem medicinsk eksperiment, sportslig ambition og regler, der endnu ikke var fulgt med.', image: olympics1984Image, periods: ['1980-1989'], topics: ['ol-1984', 'bloddoping', 'usa', 'banecykling', 'sportsmedicin'], relatedBikes: [], relatedComponents: [] },
   { slug: 'coppi-bartali-et-delt-italien', type: 'historie', year: '1940–1952', title: 'Coppi, Bartali og et delt Italien', text: 'Fausto Coppi og Gino Bartali begyndte som holdkammerater og blev rivaler, som efterkrigstidens Italien brugte til at fortælle om sig selv.', image: coppiBartali1940Image, periods: ['1940-1949', '1950-1959'], topics: ['fausto-coppi', 'gino-bartali', 'giro-ditalia', 'tour-de-france', 'italien'], relatedBikes: [], relatedComponents: [] },

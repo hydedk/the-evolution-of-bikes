@@ -10,6 +10,7 @@ type Props = { slug: StorySlug; language?: 'da' | 'en' };
 const { slug, language = 'da' } = Astro.props;
 const story = scheduledStories[slug];
 const copy = story[language];
+const imageCredit = language === 'en' && 'creditEn' in story ? story.creditEn : story.credit;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const daPath = `/historier/${slug}/`;
 const enPath = `/en/stories/${slug}/`;
@@ -50,7 +51,7 @@ const sourceLabel = language === 'da' ? 'Kilde og videre læsning' : 'Source and
         </div>
         <figure>
           <OptimizedImage src={story.image} alt={copy.title} widths={[640,960,1280]} sizes="(max-width: 850px) 100vw, 50vw" loading="eager" fetchpriority="high" />
-          <figcaption>{story.credit}</figcaption>
+          <figcaption>{imageCredit}</figcaption>
         </figure>
       </header>
       <div class="article-grid">

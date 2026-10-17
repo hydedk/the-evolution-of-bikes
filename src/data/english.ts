@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'bert-oosterbosch-winschoten-1985': ['When Oosterbosch found the time trial again', 'On 6.6 wet kilometres through Winschoten, Bert Oosterbosch beat team-mate Eric Vanderaerden by eleven seconds and briefly recovered his speciality.'],
   'gresse-nasq-motorpace': ['The centimetres between Gresse and Nasq', 'A surviving postcard naming stayer Gresse and pacer Nasq opens the story of motor-paced racing, where two people and two machines had to work as one.'],
   'blodtransfusioner-ol-1984': ['The blood bags at the 1984 Olympics', 'The US cycling team’s transfusion programme sat between medical experiment, sporting ambition and rules that had not caught up.'],
   'coppi-bartali-et-delt-italien': ['Coppi, Bartali and a divided Italy', 'Fausto Coppi and Gino Bartali began as team-mates and became rivals through whom post-war Italy told stories about itself.'],

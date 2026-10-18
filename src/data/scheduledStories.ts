@@ -9,6 +9,8 @@ import guangxiTeams from '../assets/stories/tour-of-guangxi-2026/teams-2026.png'
 import guangxiStage4 from '../assets/stories/tour-of-guangxi-2026/stage-4-map.png';
 import guangxiStage6Map from '../assets/stories/tour-of-guangxi-2026/stage-6-map.png';
 import guangxiStage6Profile from '../assets/stories/tour-of-guangxi-2026/stage-6-profile.png';
+import christopheRepair from '../assets/stories/eugene-christophe-1913/eugene-christophe-1912.jpg';
+import neutralService from '../assets/stories/mavic-neutral-service/mavic-neutral-service-illustration.jpg';
 
 export const scheduledStories = {
   'tour-of-guangxi-2026': {
@@ -364,6 +366,77 @@ export const scheduledStories = {
         ['The empty place',[
           'The funeral was held in Castellania on 4 January. People crowded into the small hill town where Coppi had been born. They came not only for the winner of the Giro and the Tour. They came for a man whose victories, defeats and private life had accompanied them through the post-war years.',
           'A few weeks earlier he had been planning another season. Bartali was now without the rider he had just signed, and Italy without its most closely watched cyclist. One plain, awkward detail remained: the fever was not influenza. It came from the journey, and it was understood too late.'
+        ]]
+      ]
+    }
+  },
+  'rytteren-sin-egen-mekaniker': {
+    year:'1903–1973', period:'1900-1920', track:'mechanics', image:christopheRepair,
+    credit:'Eugène Christophe under Tour de France 1912. Foto: Agence Rol, public domain. Billedet viser ikke smedjen i 1913.',
+    creditEn:'Eugène Christophe during the 1912 Tour de France. Photo: Agence Rol, public domain. The photograph does not show the forge in 1913.',
+    source:'',
+    visuals:[
+      {after:3, image:neutralService, altDa:'Illustration af en gul neutral servicebil med reservehjul bag et cykelfelt', altEn:'Illustration of a yellow neutral-service car carrying spare wheels behind a peloton', captionDa:'Neutral service gjorde hjælpen uafhængig af rytterens eget hold. Redaktionel illustration; motivet dokumenterer ikke et bestemt løb.', captionEn:'Neutral service made assistance independent of the rider’s own team. Editorial illustration; the scene does not document a particular race.'}
+    ],
+    da:{
+      title:'Da rytteren var sin egen mekaniker',
+      description:'De første Tour-ryttere måtte selv reparere cyklen. Fra Christophe i smedjen til neutral service ændrede mekanikerhjælpen både løbet og rytternes arbejde.',
+      deck:'En knækket forgaffel kunne koste flere timer, for hænderne på værktøjet skulle være rytterens egne. Først langt senere blev mekanikeren en selvfølge ude på vejen.',
+      sections:[
+        ['En forgaffel i to stykker',[
+          'Eugène Christophe stod med en knækket forgaffel på nedkørslen fra Tourmalet i 1913. Feltet var væk, og cyklen kunne ikke rulle. Han tog den på skulderen og gik. Ikke hen til en holdbil. Sådan en stod ikke og ventede med en reservecykel. Han gik til smedjen i Sainte-Marie-de-Campan, hvor der fandtes ild, hammer og en mand, som vidste noget om varmt metal.',
+          'Reglen var enkel og ganske ubarmhjertig: Christophe skulle selv udføre reparationen. Smeden måtte forklare, men ikke overtage arbejdet. Historien går endda, at Christophe fik en tidsstraf, fordi en dreng hjalp med bælgen. Om hver detalje er gengivet ens i alle beretninger, nej. Men hovedsagen står fast. Rytteren var også mekanikeren.'
+        ]],
+        ['Cyklen skulle kunne komme hjem',[
+          'Det var ikke kun et påfund for at gøre mændene trætte. De tidlige landevejsløb var også prøver af maskinen. Fabrikanterne solgte styrke og driftssikkerhed, og arrangørerne ville se en rytter klare sig med den cykel, han havde startet på. Hjælp udefra kunne ligne en genvej og dermed snyd.',
+          'Derfor bar rytterne slanger, værktøj og reservedele. En punktering var ikke et kort stop med et hjul løftet ud af en bil. Dækket skulle af, skaden findes, reparationen laves og det hele på igen. Med kolde fingre, grus i vejkanten og uret i gang. Det var ikke kønt, men det virkede. Som regel.'
+        ]],
+        ['Da holdet kom tættere på',[
+          'Henri Desgranges forestilling om den selvhjulpne rytter holdt længe ved i Touren. I 1920 beskrev løbsledelsen stadig deltageren som en mand, der skulle køre, som om han var alene på træning, uden på forhånd arrangeret hjælp. Cyklen skulle som udgangspunkt følge ham gennem løbet, med undtagelser ved alvorlige uheld.',
+          'Men cykelsporten voksede omkring ham. Fabrikshold, sportsdirektører og mekanikere fik større betydning, og følgebilerne kom tættere på løbet. Da Touren gik over til landshold i 1930, leverede arrangøren ens cykler. Det gamle ideal forsvandt ikke på én dag, men ansvaret for materiellet flyttede gradvist fra den enkelte rytters lommer til organisationen omkring ham.'
+        ]],
+        ['Et hjul fra en holdkammerat',[
+          'René Vietto viste i Touren 1934, at hjælp stadig kunne koste dyrt på en anden måde. Da kaptajnen Antonin Magne fik problemer, vendte Vietto om og afleverede sit eget forhjul. Mekanikeren sad nu ikke nødvendigvis med hammeren i hånden; nogle gange sad han på cyklen og ofrede sit eget løb.',
+          'Servicebilen kunne være langt væk på en smal bjergvej. Derfor bar hjælperyttere stadig en praktisk reservefunktion. De afleverede hjul, cykler og chancer. Det moderne holdapparat voksede frem, men afstanden mellem uheldet og hjælpen var fortsat afgørende. En punktering foran bilen og en punktering bag bilen var to forskellige begivenheder.'
+        ]],
+        ['Hjælp uden den rigtige trøje',[
+          'Holdservice løste heller ikke alt. En rytter fra et lille hold kunne stå uden hjælp, mens de store mandskaber havde biler fulde af hjul. Her kom den neutrale service ind. Mavic begyndte at afprøve idéen i begyndelsen af 1970’erne og gjorde den til en fast del af løb som Paris–Nice: En mekaniker kunne hjælpe, uanset hvilket mærke der stod på trøjen.',
+          'I dag virker synet almindeligt. En bil eller motorcykel kommer op, et hjul skiftes, og rytteren bliver skubbet i gang. Arbejdet kræver stadig rolige hænder, men de tilhører ikke længere nødvendigvis manden med startnummeret. Den vigtigste ændring er måske netop den: Et mekanisk uheld er fortsat uheld, men det behøver ikke også være en eksamen i smedearbejde.'
+        ]],
+        ['Hammeren blev i bilen',[
+          'Christophe kom tilbage på cyklen i 1913, men reparationen kostede ham timer og muligheden for at vinde Touren. Hans tur til smedjen blev husket, fordi den samlede tidens regler i ét billede: en af løbets bedste ryttere bøjet over en forgaffel, mens konkurrenterne fortsatte.',
+          'Siden flyttede værktøjet ud i følgebilerne. Rytteren beholdt ansvaret for at mærke fejlen, stoppe det rigtige sted og komme i gang igen. Resten blev mekanikerens arbejde. Spørger du mig, så er det en ganske rimelig arbejdsdeling. En mand kan godt både køre stærkt og bruge en hammer. Han behøver ikke gøre begge dele samme eftermiddag.'
+        ]]
+      ]
+    },
+    en:{
+      title:'When the rider was his own mechanic',
+      description:'Early Tour riders had to repair their own bicycles. From Christophe at the forge to neutral service, mechanical assistance changed both racing and the rider’s work.',
+      deck:'A broken fork could cost hours because the hands on the tools had to belong to the rider. Only much later did the roadside mechanic become routine.',
+      sections:[
+        ['A fork in two pieces',[
+          'Eugène Christophe stood with a broken front fork on the descent from the Tourmalet in 1913. The race had gone and the bicycle would not roll. He put it on his shoulder and walked, not towards a team car carrying a spare bicycle, but to the forge at Sainte-Marie-de-Campan, where there was fire, a hammer and a man who understood hot metal.',
+          'The rule was simple and severe: Christophe had to perform the repair himself. The blacksmith could explain, but not take over. The story even says Christophe received a time penalty because a boy helped with the bellows. Accounts differ in their smaller details, but the central fact remains. The rider was also the mechanic.'
+        ]],
+        ['The bicycle had to come home',[
+          'This was not merely a device for making riders suffer. Early road races were tests of the machine as well as the person. Manufacturers sold strength and reliability, and organisers wanted a rider to manage with the bicycle on which he had started. Outside help could look like a shortcut and therefore like cheating.',
+          'Riders carried tubes, tools and spares. A puncture was not a brief pause while a wheel appeared from a car. The tyre came off, the damage had to be found, the repair made and everything fitted again with cold fingers, grit by the roadside and the clock still running. It was not elegant, but it worked. Usually.'
+        ]],
+        ['The team moves closer',[
+          'Henri Desgrange’s idea of the self-reliant rider survived for years. In 1920 the Tour still described a participant as a man who should ride as though training alone, without assistance prepared along the route. As a rule, the same bicycle was expected to carry him through the race, apart from serious accidents.',
+          'Yet the sport grew around him. Trade teams, directors and mechanics gained influence, while following cars moved closer to the race. When the Tour adopted national teams in 1930, the organiser supplied standard bicycles. The old ideal did not disappear overnight, but responsibility for the machinery gradually moved from the rider’s pockets to the organisation around him.'
+        ]],
+        ['A wheel from a team-mate',[
+          'René Vietto showed in the 1934 Tour that assistance could still carry another price. When team leader Antonin Magne had trouble, Vietto turned back and surrendered his own front wheel. The mechanic was not necessarily holding the hammer now; sometimes he was riding the bicycle and sacrificing his own race.',
+          'A service car could be a long way behind on a narrow mountain road. Domestiques therefore retained a practical reserve function. They handed over wheels, bicycles and opportunities. The modern team apparatus was emerging, but the distance between failure and assistance still mattered. A puncture ahead of the car and one behind it were different events.'
+        ]],
+        ['Help without the correct jersey',[
+          'Team service did not solve everything. A rider from a small squad might be stranded while major teams had cars full of wheels. Neutral service addressed that imbalance. Mavic tested the idea in the early 1970s and made it a regular feature of races such as Paris–Nice: a mechanic could help regardless of the name on the jersey.',
+          'Today the sight seems ordinary. A car or motorcycle draws alongside, a wheel is changed and the rider is pushed away. The task still demands calm hands, but they no longer have to belong to the man wearing the race number. That may be the greatest change: a mechanical failure remains bad luck, but it need not also be an examination in blacksmithing.'
+        ]],
+        ['The hammer stayed in the car',[
+          'Christophe returned to the road in 1913, but the repair cost hours and his chance of winning the Tour. His walk to the forge endured because it compressed the rules of the age into one scene: one of the race’s finest riders bent over a fork while his rivals continued.',
+          'The tools later moved into the following cars. The rider kept responsibility for feeling the fault, stopping in the right place and getting under way again. The rest became the mechanic’s work. In my view, that is a sensible division of labour. A man may be able both to race quickly and use a hammer. He need not do both on the same afternoon.'
         ]]
       ]
     }

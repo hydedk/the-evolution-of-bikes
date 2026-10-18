@@ -2041,17 +2041,17 @@
   },
   {
     "id": "hist-000137",
-    "titel": "Da rytteren ikke længere skulle være sin egen mekaniker",
-    "status": "indbakke",
+    "titel": "Da rytteren var sin egen mekaniker",
+    "status": "klar",
     "prioritet": "mellem",
     "periode": "per-1900-1919",
     "aar": "1903-1970",
     "spor": "teknik",
-    "dokumentation": "ikke-kontrolleret",
+    "dokumentation": "dokumenteret",
     "faktarisiko": "mellem",
-    "naeste_handling": "Foretag redaktionel vurdering og kontrollér kilderne i originalmaterialet",
+    "naeste_handling": "Udgiv den 19. oktober 2026 og kontrollér derefter den publicerede danske og engelske side.",
     "blokeret_af": "null",
-    "kanonisk_url": "",
+    "kanonisk_url": "/historier/rytteren-sin-egen-mekaniker/",
     "fil": "hist-000137-fra-selvreparation-til-servicebil.md"
   },
   {

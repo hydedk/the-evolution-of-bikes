@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'rytteren-sin-egen-mekaniker': ['When the rider was his own mechanic', 'Early Tour riders repaired their own bicycles. From Christophe at the forge to neutral service, the tools gradually moved into the following cars.'],
   'fausto-coppi-malaria-1960': ['Coppi’s last journey and the missed malaria', 'Fausto Coppi returned ill from Upper Volta. Fellow traveller Raphaël Géminiani had the same disease, but malaria was recognised too late in Coppi’s case.'],
   'bert-oosterbosch-winschoten-1985': ['When Oosterbosch found the time trial again', 'On 6.6 wet kilometres through Winschoten, Bert Oosterbosch beat team-mate Eric Vanderaerden by eleven seconds and briefly recovered his speciality.'],
   'gresse-nasq-motorpace': ['The centimetres between Gresse and Nasq', 'A surviving postcard naming stayer Gresse and pacer Nasq opens the story of motor-paced racing, where two people and two machines had to work as one.'],

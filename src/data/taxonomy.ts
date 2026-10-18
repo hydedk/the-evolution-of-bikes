@@ -37,6 +37,7 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'rytteren-sin-egen-mekaniker': { period: '1900-1920', primary: 'teknik', secondary: ['menneskene-bag', 'loeb-og-store-oejeblikke'] },
   'fausto-coppi-malaria-1960': { period: '1960-1969', primary: 'kost-traening-og-videnskab', secondary: ['ryttere', 'samfund-og-tidsaand'] },
   'bert-oosterbosch-winschoten-1985': { period: '1980-1989', primary: 'ryttere', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
   'gresse-nasq-motorpace': { period: '1900-1920', primary: 'teknik', secondary: ['menneskene-bag', 'cykelkultur'] },

@@ -1,3 +1,4 @@
+import janVanHoutImage from '../assets/stories/jan-van-hout-timerekord-1933/jan-van-hout-buffalo-1933.jpg';
 import type { ImageMetadata } from 'astro';
 import parisRoubaixChallengeImage from '../assets/stories/paris-roubaix-challenge/paris-roubaix-2025-secteur-1.jpg';
 import buffaloSprintStartImage from '../assets/stories/banecykling-1912/buffalo-sprintstart-1912.jpg';
@@ -87,6 +88,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'jan-van-hout-timerekord-1933': 'people',
   'rytteren-sin-egen-mekaniker': 'mechanics',
   'fausto-coppi-malaria-1960': 'people',
   'bert-oosterbosch-winschoten-1985': 'people',
@@ -183,6 +185,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  {"slug":"jan-van-hout-timerekord-1933",image:janVanHoutImage,"type":"historie","year":"1933–1945","title":"Jan van Hout og de 44.588 meter","text":"Jan van Hout kørte 44.588 meter på en time i 1933. Striden om rekorden fulgte ham; siden lukkede han sin café og gik ind i modstandsarbejdet.","periods":["1930-1939","1940-1949"],"topics":["jan-van-hout","timerekord","banecykling","modstand"],"relatedBikes":[],"relatedComponents":[]},
   { slug: 'rytteren-sin-egen-mekaniker', type: 'historie', year: '1903–1973', title: 'Da rytteren var sin egen mekaniker', text: 'De første Tour-ryttere måtte selv reparere cyklen. Fra Christophe i smedjen til neutral service flyttede værktøjet langsomt ud i følgebilerne.', image: riderMechanicImage, periods: ['1900-1920'], topics: ['eugene-christophe', 'mekanikere', 'selvreparation', 'neutral-service', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },
   { slug: 'fausto-coppi-malaria-1960', type: 'historie', year: '1959–1960', title: 'Coppis sidste rejse og den oversete malaria', text: 'Fausto Coppi kom syg hjem fra Øvre Volta. Rejsefællen Raphaël Géminiani fik samme sygdom, men malaria blev erkendt for sent hos Coppi.', image: coppiMalariaImage, periods: ['1960-1969'], topics: ['fausto-coppi', 'malaria', 'sportsmedicin', 'italien'], relatedBikes: [], relatedComponents: [] },
   { slug: 'bert-oosterbosch-winschoten-1985', type: 'historie', year: '1985', title: 'Da Oosterbosch fandt enkeltstarten igen', text: 'På 6,6 våde kilometer gennem Winschoten slog Bert Oosterbosch holdkammeraten Eric Vanderaerden med 11 sekunder og fandt kortvarigt tilbage til sin specialitet.', image: olympics1984Image, periods: ['1980-1989'], topics: ['bert-oosterbosch', 'ronde-van-nederland', 'enkeltstart', 'winschoten', 'panasonic'], relatedBikes: [], relatedComponents: [] },

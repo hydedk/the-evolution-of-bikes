@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'jan-van-hout-timerekord-1933': ["Jan van Hout and the 44,588 metres","Jan van Hout rode 44.588 kilometres in an hour in 1933. A dispute followed his ride; he later closed his café and joined the resistance."],
   'rytteren-sin-egen-mekaniker': ['When the rider was his own mechanic', 'Early Tour riders repaired their own bicycles. From Christophe at the forge to neutral service, the tools gradually moved into the following cars.'],
   'fausto-coppi-malaria-1960': ['Coppi’s last journey and the missed malaria', 'Fausto Coppi returned ill from Upper Volta. Fellow traveller Raphaël Géminiani had the same disease, but malaria was recognised too late in Coppi’s case.'],
   'bert-oosterbosch-winschoten-1985': ['When Oosterbosch found the time trial again', 'On 6.6 wet kilometres through Winschoten, Bert Oosterbosch beat team-mate Eric Vanderaerden by eleven seconds and briefly recovered his speciality.'],

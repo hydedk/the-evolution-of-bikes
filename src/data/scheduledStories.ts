@@ -1,3 +1,5 @@
+import janVanHoutImage from '../assets/stories/jan-van-hout-timerekord-1933/jan-van-hout-buffalo-1933.jpg';
+import janVanHoutShare from '../assets/stories/jan-van-hout-timerekord-1933/jan-van-hout-share.jpg';
 import james from '../assets/stories/paris-brest-paris-1891/terront-le-petit-journal-1891.jpg';
 import merckx from '../assets/stories/upcoming-week/felice-gimondi-1965.jpg';
 import coppiBartali from '../assets/stories/upcoming-week/coppi-bartali-1940.jpg';
@@ -13,6 +15,96 @@ import christopheRepair from '../assets/stories/eugene-christophe-1913/eugene-ch
 import neutralService from '../assets/stories/mavic-neutral-service/mavic-neutral-service-illustration.jpg';
 
 export const scheduledStories = {
+  'jan-van-hout-timerekord-1933': {
+  image:janVanHoutImage, shareImage:janVanHoutShare, "year": "1933–1945",
+  "period": "1930-1939",
+  "track": "people",
+  "credit": "Jan van Hout ved Buffalo-banen i august 1933, ifølge billedkilden; ikke rekordforsøget i Maasniel. Anonym fotograf / Le Miroir des Sports, 20. august 1933, via Gallica/BnF og Wikimedia Commons. Public domain.",
+  "creditEn": "Jan van Hout at the Buffalo track in August 1933, according to the image record; not the Maasniel attempt. Anonymous photographer / Le Miroir des Sports, 20 August 1933, via Gallica/BnF and Wikimedia Commons. Public domain.",
+  "source": "",
+  "imageAltDa": "Jan van Hout bøjet over styret på en banecykel, med tilskuere bag banens rækværk.",
+  "imageAltEn": "Jan van Hout leaning over the handlebars of a track bicycle, with spectators behind the track barrier.",
+  "da": {
+    "title": "Jan van Hout og de 44.588 meter",
+    "description": "Jan van Hout kørte 44.588 meter på en time i 1933. Striden om rekorden fulgte ham; siden lukkede han sin café og gik ind i modstandsarbejdet.",
+    "deck": "En time på banen gav 44.588 meter og en strid om opmålingen. Bag rekordforsøget lå et liv, der siden førte til caféen Sportpaleis og hjælpen til mennesker på flugt.",
+    "sections": [
+      [
+        "En time i Maasniel",
+        [
+          "Jan van Hout har kørt i en time på banen i Maasniel ved Roermond. Datoen er 25. august 1933, og resultatet bliver opgjort til 44 kilometer og 588 meter. Det er 341 meter længere end de 44.247 meter, schweizeren Oscar Egg havde præsteret i 1914. Nitten års ventetid er tilsyneladende slut. Så begynder diskussionen om, hvor lang banen egentlig er.",
+          "Det er en noget utaknemmelig afslutning på en timerekord. Rytteren kan sørge for farten. Han kan ikke bagefter træde banen længere, hvis nogen mener, at opmålingen er forkert. Og netop den indvending kommer fra manden, hvis resultat han har overgået."
+        ]
+      ],
+      [
+        "En omgang ad gangen",
+        [
+          "Van Hout er født i Valkenburg i 1908, men har sit cykelliv i Eindhoven. Året før forsøget i Maasniel har han allerede sat nederlandsk timerekord i Tilburg. Nu gælder det den internationale målestok, og forskellen skal findes ved at gentage den samme bevægelse, omgang efter omgang, uden at forære noget væk.",
+          "En timerekord er let at forklare og mindre behagelig at udføre. Der er ingen makker at skifte med og intet felt at gemme sig i. Starter man for hårdt, skal regningen betales, mens uret stadig går. Starter man for forsigtigt, bliver der mindre tid til at hente de manglende meter. En god omgang hjælper kun, hvis de næste også hænger sammen.",
+          "På papiret er forsøget et regnestykke med tid, omgange og banelængde. På cyklen skal rytteren levere den fart, tallene kræver. Netop derfor er opmålingen så afgørende: Det samme antal omgange kan give to forskellige distancer, hvis man begynder med to forskellige mål for banen. Benene har gjort deres arbejde; resten afhænger af målebånd og kontrol.",
+          "Van Houts opgjorte resultat placerer ham foran Egg. Men schweizeren kommer selv for at måle banen efter. Ifølge de senere beretninger mener han, at en omgang er godt tre meter kortere end angivet. Det lyder måske som småting. Gang forskellen med mere end to hundrede omgange, og den er pludselig større end hele forbedringen."
+        ]
+      ],
+      [
+        "Meterne og papirerne",
+        [
+          "Eggs indvending bliver ikke stående uimodsagt. Den nederlandske sportshistoriske publikation De Sportwereld beskriver hans beregning som forkert og fortæller samtidig, at det nederlandske forbund undlod at sende de nødvendige dokumenter til UCI. Andre senere fremstillinger lægger mere vægt på, at striden om banen aldrig blev ordentligt afklaret.",
+          "Om den præcise administrative vej er kilderne altså ikke enige. Van Houts præstation får ikke den ukomplicerede plads på rekordlisten, som distancen lægger op til. Det er værd at holde fast i begge dele: Han har en opgjort distance, og der følger en strid med den. Hvor meget af efterspillet der skyldes opmålingen, og hvor meget der skyldes papirarbejdet, lader sig vanskeligere skille ad.",
+          "Franskmanden Maurice Richard kører siden 44.777 meter i Sint-Truiden. Van Houts tal bliver dermed overgået, mens beretningen om hans eget forsøg bliver hængende mellem opmåling, papirarbejde og senere genoprejsning. Flere senere rekordoversigter medtager ham med de 44.588 meter. Sådan kan en kort time på banen få et meget langt efterspil."
+        ]
+      ],
+      [
+        "Sportpaleis lukker",
+        [
+          "Banecyklingen giver Van Hout et levebrød, blandt andet ved seksdagesløbene. Han åbner senere café i Eindhoven. Stedet får navnet Sportpaleis. En rytter kan ikke blive ved med at leve af næste startpenge, og en café er en mere håndgribelig plan for tiden efter banen.",
+          "Under den tyske besættelse lukker han forretningen. De senere beretninger fortæller, at han ikke vil servere for besættelsesmagtens soldater. Sammen med sin kone Anneke hjælper han mennesker, der må gå under jorden. Her slipper historien cykelbanen; hjælpen handler om at holde mennesker skjult.",
+          "Neuengammes digitale personregister angiver modstandsarbejde som årsag til hans arrestation. Den 10. september 1944 kommer han fra Amersfoort til koncentrationslejren Neuengamme. Han dør dér den 22. februar 1945, 36 år gammel. Anholdelsen kan derfor ikke, som nogle korte biografier hævder, først være sket i 1945.",
+          "I 2006 får Van Hout et mindesmærke i Valkenburg, afsløret med deltagelse af Anneke og Bernard Hinault. På en resultatliste fylder han en linje med navn, dato og distance. Ved mindesmærket er der grund til at blive stående lidt længere. De 44.588 meter hører stadig med. Det gør caféen og hjælpen til dem, der måtte skjule sig, også."
+        ]
+      ]
+    ]
+  },
+  "en": {
+    "title": "Jan van Hout and the 44,588 metres",
+    "description": "Jan van Hout rode 44.588 kilometres in an hour in 1933. A dispute followed his ride; he later closed his café and joined the resistance.",
+    "deck": "An hour on the track left a distance of 44,588 metres and an argument about measurement. Beyond the record lay a café in Eindhoven and the people Jan and Anneke helped into hiding.",
+    "sections": [
+      [
+        "An hour at Maasniel",
+        [
+          "Jan van Hout has ridden for an hour on the track at Maasniel, near Roermond. It is 25 August 1933, and the distance is calculated as 44 kilometres and 588 metres. That is 341 metres farther than the 44,247 metres recorded by Switzerland’s Oscar Egg in 1914. Nineteen years of waiting appear to be over. Then the argument about the length of the track begins.",
+          "It is a rather thankless ending to an hour-record attempt. A rider can provide the speed. He cannot pedal the track any longer afterwards if someone questions its measurement. And the objection comes from the very man whose distance he has surpassed."
+        ]
+      ],
+      [
+        "One lap at a time",
+        [
+          "Van Hout was born in Valkenburg in 1908, but his cycling life is based in Eindhoven. The year before Maasniel, he has already set a Dutch hour record in Tilburg. Now the target is international, and the extra distance must come from repeating the same movement, lap after lap, without giving anything away.",
+          "An hour record is easy to explain and less pleasant to ride. There is no partner to take a turn and no bunch to shelter in. Start too fast and the bill arrives while the clock is still running. Start too cautiously and there is less time to recover the missing metres. A good lap only helps if the next ones hold together too.",
+          "On paper, the attempt is a calculation involving time, laps and track length. On the bicycle, the rider must supply the required speed. That makes measurement essential: the same number of laps produces different distances if two different lengths are used. The legs have done their work. The rest depends on measuring and checking.",
+          "Van Hout’s calculated distance puts him ahead of Egg. But the Swiss rider comes to measure the track himself. Later accounts say he considers each lap more than three metres shorter than claimed. That may sound trivial. Multiply it by more than two hundred laps and it exceeds the entire improvement."
+        ]
+      ],
+      [
+        "Metres and paperwork",
+        [
+          "Egg’s objection is itself disputed. The Dutch sports-history publication De Sportwereld describes his calculation as wrong and reports that the Dutch federation failed to send the necessary documents to the UCI. Other later accounts place more weight on the unresolved argument about the track.",
+          "The precise administrative sequence remains disputed. Van Hout’s performance does not receive the straightforward place on the record list that the distance suggests. Both points matter: a distance was calculated, and a dispute followed. Separating the effects of measurement from those of paperwork is harder.",
+          "France’s Maurice Richard subsequently rides 44.777 kilometres at Sint-Truiden. Van Hout’s distance is surpassed, while his attempt remains caught between measurement, paperwork and later recognition. Several subsequent record histories include his 44,588 metres. A short hour on the track can leave a very long aftermath."
+        ]
+      ],
+      [
+        "Sportpaleis closes",
+        [
+          "Track racing provides Van Hout with a living, including appearances at six-day events. He later opens a café in Eindhoven called Sportpaleis. A rider cannot live indefinitely on the next appearance fee; a café offers a more tangible plan for life after racing.",
+          "During the German occupation, he closes the business. Later accounts say he refuses to serve the occupying soldiers. He and his wife Anneke help people into hiding. Here the story leaves the track: their work concerns keeping people concealed.",
+          "Neuengamme’s digital register records resistance activity as the reason for his arrest. He arrives from Amersfoort on 10 September 1944 and dies in Neuengamme concentration camp on 22 February 1945, aged 36. His arrest therefore cannot have occurred in 1945, as some short biographies claim.",
+          "In 2006 a memorial to Van Hout is unveiled in Valkenburg with Anneke and Bernard Hinault taking part. A results list gives him a line containing a name, a date and a distance. At the memorial there is reason to stay a little longer. The 44,588 metres still belong to the story. So do the café and the help given to people who had to hide."
+        ]
+      ]
+    ]
+  }
+},
   'tour-of-guangxi-2026': {
     year:'2017–2026', period:'2010-2019', track:'race', image:guangxi,
     credit:'Redaktionel illustration af finalen mod NongLa. Motivet er ikke et fotografi fra en bestemt etape.',

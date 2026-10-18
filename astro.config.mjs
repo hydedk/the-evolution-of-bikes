@@ -36,6 +36,7 @@ const languagePairs = {
   '/historier/blodtransfusioner-ol-1984/': '/en/stories/blodtransfusioner-ol-1984/',
   '/historier/coppi-bartali-et-delt-italien/': '/en/stories/coppi-bartali-et-delt-italien/',
   '/historier/gresse-nasq-motorpace/': '/en/stories/gresse-nasq-motorpace/',
+  '/historier/bert-oosterbosch-winschoten-1985/': '/en/stories/bert-oosterbosch-winschoten-1985/',
   '/perioder/': '/en/periods/', '/cykler/': '/en/bikes/', '/komponenter/': '/en/components/',
   '/historier/cykelsportens-vilde-vesten/': '/en/stories/cykelsportens-vilde-vesten/',
   '/historier/snyd-soem-tour-de-france-1904/': '/en/stories/snyd-soem-tour-de-france-1904/',

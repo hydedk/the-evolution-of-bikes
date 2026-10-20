@@ -13,8 +13,74 @@ import guangxiStage6Map from '../assets/stories/tour-of-guangxi-2026/stage-6-map
 import guangxiStage6Profile from '../assets/stories/tour-of-guangxi-2026/stage-6-profile.png';
 import christopheRepair from '../assets/stories/eugene-christophe-1913/eugene-christophe-1912.jpg';
 import neutralService from '../assets/stories/mavic-neutral-service/mavic-neutral-service-illustration.jpg';
+import micheleFerrari from '../assets/stories/michele-ferrari-traening-doping/traeningsmaaling-1990erne-illustration.png';
 
 export const scheduledStories = {
+  'michele-ferrari-traening-doping': {
+    image: micheleFerrari,
+    year: '1990–2012',
+    period: '1990-1999',
+    track: 'people',
+    credit: 'AI-genereret illustration af træningsmåling i et miljø inspireret af 1990’erne. Motivet viser ikke Michele Ferrari eller hans arbejdssted. Illustration / redaktionen, 2026.',
+    creditEn: 'AI-generated illustration of performance measurement in a setting inspired by the 1990s. It does not depict Michele Ferrari or his workplace. Illustration / editorial team, 2026.',
+    source: '',
+    imageAltDa: 'Illustration af en stålcykel på en hometrainer ved et bord med stopur, papirkurver og en ældre computerskærm.',
+    imageAltEn: 'Illustration of a steel racing bicycle on an indoor trainer beside a table with a stopwatch, paper charts and an older computer monitor.',
+    da: {
+      title: 'Michele Ferrari, træningslæren og dopingæraen',
+      description: 'Michele Ferrari gjorde træningen målbar og blev siden livsvarigt udelukket af USADA. Historien følger forskellen mellem målinger, forklaringer og dokumenterede dopingforhold.',
+      deck: 'Tallene kunne beskrive en rytters arbejde ganske præcist. De kunne ikke i sig selv fortælle, hvad der ellers hørte med til programmet.',
+      sections: [
+        ['Tre mand forrest', [
+          'Tre ryttere fra Gewiss-Ballan tager de tre første pladser i Flèche Wallonne i april 1994. Moreno Argentin, Giorgio Furlan og Jevgenij Berzin har gjort resten af feltet til tilskuere til deres indbyrdes afgørelse. Efter sådan et løb bliver der stillet spørgsmål. Nogle af dem havner hos holdets læge, Michele Ferrari. Hans svar kommer til at hænge ved længere end resultatlisten.',
+          'Da samtalen falder på EPO, sammenligner Ferrari faren ved overforbrug med at drikke ti liter appelsinjuice. Han afviser samtidig, at han ordinerer stoffet. Sammenligningen bliver en fast del af fortællingen om ham. En læge, der bliver spurgt til doping, har valgt en temmelig sær måde at berolige omverdenen på.'
+        ]],
+        ['Cyklen kommer ind i regnearket', [
+          'Ferrari har sin faglige baggrund i miljøet omkring Francesco Conconi ved universitetet i Ferrara. Her bliver cykelrytteren undersøgt som en krop, hvis arbejde kan måles. Puls, belastning og præstation skal kunne sættes i forbindelse med hinanden, så træningen bliver mere præcis end blot at køre langt og håbe på gode ben.',
+          'Wattmålingen passer ind i den tankegang. En puls fortæller, hvordan kroppen reagerer; effekten fortæller noget om det arbejde, rytteren leverer. På en bakke kan et bestemt træningspas derfor få en mere håndfast beskrivelse end en besked om at køre hårdt. Det ændrer også samtalen mellem rytteren og den, der lægger hans program.',
+          'Der er en praktisk forskel på at komme hjem og sige, at turen føltes tung, og at kunne vise, hvad man faktisk lavede. Tallene giver træneren noget at sammenligne fra uge til uge. Men de svarer ikke af sig selv på, hvad der foregår omkring træningen. Et præcist måleresultat gør ikke resten af forløbet gennemsigtigt.',
+          'Det er her, Ferraris historie kræver, at man holder hovedet koldt. Systematisk træning og måleudstyr er reelle arbejdsredskaber. De kan ikke bruges som bevis for doping. Omvendt kan en træners tekniske kunnen heller ikke i sig selv frikende ham for, hvad han ellers har gjort.'
+        ]],
+        ['Armstrong og lægens forklaring', [
+          'Lance Armstrong bliver en af Ferraris mest omtalte samarbejdspartnere. I et interview fra 2003 fortæller Ferrari, at Eddy Merckx introducerede dem i slutningen af 1995. Han beskriver et samarbejde om sportslig forberedelse og vedgår, at det fortsat består. Det er hans egen forklaring på arbejdet, mens hans rolle allerede bliver diskuteret offentligt.',
+          'I samme interview afviser han, at særlige markeringer i træningsplaner dækker over dopingmidler. Ifølge Ferrari handler de om vitaminer, aminosyrer og opmærksomhed på bestemte træningsdage. Netop træningsplanen bliver dermed mere end en liste over intervaller. Den bliver også noget, som andre forsøger at læse og efterprøve.'
+        ]],
+        ['En sanktion med dato på', [
+          'Den 10. juli 2012 meddeler det amerikanske antidopingagentur USADA, at Ferrari har fået livsvarig udelukkelse for overtrædelser af antidopingreglerne i sagen om US Postal. Agenturet beskriver rådgivning om EPO, medvirken ved forbudt bloddoping og træningsplaner med koder for brug af dopingmidler. Det er USADA’s konstateringer, ikke noget man kan udlede af et gammelt podiefoto.',
+          'USADA oplyser, at sanktionen følger, efter at anklagerne ikke er blevet bestridt gennem agenturets voldgiftsproces. Ferrari afviser beskyldningerne og bestrider, at han er blevet korrekt underrettet. Få dage senere gengiver Cyclingnews hans svar og anfører samtidig USADA’s oplysning om, at materialet er afleveret til de involverede eller deres advokater.',
+          'Der er altså både en udstedt sportslig sanktion og en læge, som nægter sig skyldig. Udelukkelsen skal beskrives som en antidopingsanktion. Den er ikke en italiensk straffedom, og man bør ikke lade de to ting flyde sammen, bare fordi historien så bliver lettere at fortælle.',
+          'Ferrari opfandt hverken træningsarbejdet eller hele dopingæraen. Hans forløb viser, hvorfor begge dele må undersøges konkret. På skrivebordet kan der ligge en omhyggelig plan med belastninger og hviledage. Den kan fortælle meget om, hvordan en rytter skal træne. Spørgsmålet er stadig, hvad der ellers hører med til programmet.'
+        ]]
+      ]
+    },
+    en: {
+      title: 'Michele Ferrari, training science and the doping era',
+      description: 'Michele Ferrari helped make training measurable and was later banned for life by USADA. His story separates measurement, explanation and documented doping violations.',
+      deck: 'The numbers could describe a rider’s work with considerable precision. By themselves, they could not reveal what else belonged to the programme.',
+      sections: [
+        ['Three riders in front', [
+          'Three Gewiss-Ballan riders take the first three places at Flèche Wallonne in April 1994. Moreno Argentin, Giorgio Furlan and Evgeni Berzin have reduced the rest of the field to spectators at their private finish. A performance like that brings questions. Some are put to the team doctor, Michele Ferrari. His answer will last longer than the result sheet.',
+          'When the subject turns to EPO, Ferrari compares the danger of excessive use with drinking ten litres of orange juice. At the same time, he denies prescribing the drug. The comparison becomes a permanent part of his story. A doctor asked about doping has chosen a rather peculiar way of reassuring the outside world.'
+        ]],
+        ['The bicycle enters the spreadsheet', [
+          'Ferrari’s professional background lies in the circle around Francesco Conconi at the University of Ferrara. Here the racing cyclist is examined as a body whose work can be measured. Heart rate, workload and performance are connected so that training can become more precise than simply riding long distances and hoping for good legs.',
+          'Power measurement fits that approach. Heart rate shows how the body responds; power says something about the work the rider produces. A particular session on a climb can therefore be described more firmly than an instruction to ride hard. It also changes the conversation between the rider and the person writing the programme.',
+          'There is a practical difference between returning home and saying the ride felt heavy, and being able to show what was actually done. The numbers give the coach something to compare from week to week. They do not, however, explain everything surrounding the training. A precise measurement does not make the rest of the process transparent.',
+          'This is where Ferrari’s story requires a cool head. Systematic training and measuring equipment are genuine working tools. They are not proof of doping. Equally, a coach’s technical ability cannot by itself absolve him of his other actions.'
+        ]],
+        ['Armstrong and the doctor’s account', [
+          'Lance Armstrong became one of Ferrari’s most discussed clients. In a 2003 interview Ferrari said Eddy Merckx introduced them late in 1995. He described a working relationship concerned with athletic preparation and acknowledged that it was continuing. That was his own account of the work, at a time when his role was already being publicly questioned.',
+          'In the same interview, Ferrari denied that special marks in training plans represented doping products. He said they referred to vitamins, amino acids and particular attention on selected training days. The programme thus became more than a list of intervals. It was also a document that others tried to interpret and test.'
+        ]],
+        ['A sanction with a date', [
+          'On 10 July 2012, the United States Anti-Doping Agency announced that Ferrari had received a lifetime ban for anti-doping rule violations in the US Postal case. The agency described advice concerning EPO, assistance with prohibited blood doping and training plans containing codes for doping products. Those were USADA’s findings, not conclusions that can be drawn from an old podium photograph.',
+          'USADA said the sanction followed after the charges were not contested through its arbitration process. Ferrari denied the accusations and disputed that he had been properly notified. A few days later, Cyclingnews reported his response together with USADA’s statement that the documents had been delivered to the parties involved or their lawyers.',
+          'There is therefore both a sporting sanction and a doctor who denied wrongdoing. The lifetime ban should be described as an anti-doping sanction. It was not an Italian criminal conviction, and the two should not be allowed to merge merely because that makes the story easier to tell.',
+          'Ferrari invented neither training science nor an entire doping era. His career shows why the two must be examined separately. A desk may hold a careful plan of workloads and rest days. It can say a great deal about how a rider should train. The question remains what else belongs to the programme.'
+        ]]
+      ]
+    }
+  },
   'jan-van-hout-timerekord-1933': {
   image:janVanHoutImage, shareImage:janVanHoutShare, "year": "1933–1945",
   "period": "1930-1939",

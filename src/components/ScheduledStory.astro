@@ -33,11 +33,18 @@ const sourceLabel = language === 'da' ? 'Kilde og videre læsning' : 'Source and
     <link rel="alternate" hreflang="en" href={enUrl} />
     <link rel="alternate" hreflang="x-default" href={daUrl} />
     <meta property="og:type" content="article" />
+    <meta property="og:locale" content={language === 'da' ? 'da_DK' : 'en_GB'} />
+    <meta property="og:site_name" content="The Evolution of Bikes" />
     <meta property="og:title" content={copy.title} />
     <meta property="og:description" content={copy.description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL(shareImage.src, Astro.site).toString()} />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={copy.title} />
+    <meta name="twitter:description" content={copy.description} />
+    <meta name="twitter:image" content={new URL(shareImage.src, Astro.site).toString()} />
+    <meta name="twitter:image:alt" content={imageAlt} />
     <script type="application/ld+json" set:html={JSON.stringify({ '@context':'https://schema.org', '@type':'Article', headline:copy.title, description:copy.description, inLanguage:language, mainEntityOfPage:canonical, image:new URL(shareImage.src, Astro.site).toString() })} />
     <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet"/><link rel="stylesheet" href={`${base}/styles/global.css`}/>
   </head>

@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'michele-ferrari-traening-doping': ['Michele Ferrari, training science and the doping era', 'Michele Ferrari helped make training measurable and was later banned for life by USADA. His story separates measurement, explanation and documented doping violations.'],
   'jan-van-hout-timerekord-1933': ["Jan van Hout and the 44,588 metres","Jan van Hout rode 44.588 kilometres in an hour in 1933. A dispute followed his ride; he later closed his café and joined the resistance."],
   'rytteren-sin-egen-mekaniker': ['When the rider was his own mechanic', 'Early Tour riders repaired their own bicycles. From Christophe at the forge to neutral service, the tools gradually moved into the following cars.'],
   'fausto-coppi-malaria-1960': ['Coppi’s last journey and the missed malaria', 'Fausto Coppi returned ill from Upper Volta. Fellow traveller Raphaël Géminiani had the same disease, but malaria was recognised too late in Coppi’s case.'],

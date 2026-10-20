@@ -71,6 +71,7 @@ import olympics1984Image from '../assets/stories/upcoming-week/cycling-1984.jpg'
 import motorpaceGresseImage from '../assets/stories/upcoming-week/motorpace-bordeaux-paris.jpg';
 import coppiMalariaImage from '../assets/stories/coppi-krigsfange/fausto-coppi-1957.jpg';
 import riderMechanicImage from '../assets/stories/eugene-christophe-1913/eugene-christophe-1912.jpg';
+import micheleFerrariImage from '../assets/stories/michele-ferrari-traening-doping/traeningsmaaling-1990erne-illustration.png';
 
 export type StoryMeta = {
   slug: string;
@@ -88,6 +89,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'michele-ferrari-traening-doping': 'people',
   'jan-van-hout-timerekord-1933': 'people',
   'rytteren-sin-egen-mekaniker': 'mechanics',
   'fausto-coppi-malaria-1960': 'people',
@@ -185,6 +187,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'michele-ferrari-traening-doping', type: 'historie', year: '1990–2012', title: 'Michele Ferrari, træningslæren og dopingæraen', text: 'Michele Ferrari gjorde træningen målbar og blev siden livsvarigt udelukket af USADA. Historien følger forskellen mellem målinger, forklaringer og dokumenterede dopingforhold.', image: micheleFerrariImage, periods: ['1990-1999', '2000-2009', '2010-2019'], topics: ['michele-ferrari', 'træning', 'doping', 'lance-armstrong', 'usada'], relatedBikes: [], relatedComponents: [] },
   {"slug":"jan-van-hout-timerekord-1933",image:janVanHoutImage,"type":"historie","year":"1933–1945","title":"Jan van Hout og de 44.588 meter","text":"Jan van Hout kørte 44.588 meter på en time i 1933. Striden om rekorden fulgte ham; siden lukkede han sin café og gik ind i modstandsarbejdet.","periods":["1930-1939","1940-1949"],"topics":["jan-van-hout","timerekord","banecykling","modstand"],"relatedBikes":[],"relatedComponents":[]},
   { slug: 'rytteren-sin-egen-mekaniker', type: 'historie', year: '1903–1973', title: 'Da rytteren var sin egen mekaniker', text: 'De første Tour-ryttere måtte selv reparere cyklen. Fra Christophe i smedjen til neutral service flyttede værktøjet langsomt ud i følgebilerne.', image: riderMechanicImage, periods: ['1900-1920'], topics: ['eugene-christophe', 'mekanikere', 'selvreparation', 'neutral-service', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },
   { slug: 'fausto-coppi-malaria-1960', type: 'historie', year: '1959–1960', title: 'Coppis sidste rejse og den oversete malaria', text: 'Fausto Coppi kom syg hjem fra Øvre Volta. Rejsefællen Raphaël Géminiani fik samme sygdom, men malaria blev erkendt for sent hos Coppi.', image: coppiMalariaImage, periods: ['1960-1969'], topics: ['fausto-coppi', 'malaria', 'sportsmedicin', 'italien'], relatedBikes: [], relatedComponents: [] },

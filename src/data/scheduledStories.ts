@@ -14,8 +14,78 @@ import guangxiStage6Profile from '../assets/stories/tour-of-guangxi-2026/stage-6
 import christopheRepair from '../assets/stories/eugene-christophe-1913/eugene-christophe-1912.jpg';
 import neutralService from '../assets/stories/mavic-neutral-service/mavic-neutral-service-illustration.jpg';
 import micheleFerrari from '../assets/stories/michele-ferrari-traening-doping/traeningsmaaling-1990erne-illustration.png';
+import forumSixDay from '../assets/stories/haandslyng-kabiner-144-timer-forum/forum-biludstilling-1926-holger-damgaard.jpg';
 
 export const scheduledStories = {
+  'haandslyng-kabiner-144-timer-forum': {
+    image: forumSixDay,
+    year: '1934–1939',
+    period: '1930-1939',
+    track: 'race',
+    credit: 'Forums indre ved en biludstilling, af Lex dateret til åbningen i 1926. Fotografiet viser hallen før seksdagesløbene, ikke et cykelløb. Foto: Holger Damgaard / Det Kgl. Bibliotek, DT106858. Fri af ophavsret.',
+    creditEn: 'The interior of Forum during a motor exhibition, dated by Lex to the building’s opening in 1926. The photograph shows the hall before the six-day races, not a cycle race. Photo: Holger Damgaard / Royal Danish Library, DT106858. Public domain.',
+    source: '',
+    imageAltDa: 'Ældre biler udstillet i Forums store hal under glastag og synlige tagkonstruktioner.',
+    imageAltEn: 'Early motor cars displayed inside Forum beneath its glazed roof and visible roof structure.',
+    da: {
+      title: 'Håndslyng, kabiner og 144 timer i Forum',
+      description: 'Forums små kabiner, parløbets arbejdsdeling og seks døgn på banen fortæller, hvordan det københavnske seksdagesløb fungerede i 1930’erne.',
+      deck: 'Den ene rytter arbejdede på banen, mens makkeren søgte ind i kabinen. Seksdagesløbet var lige dele cykelløb, arbejdsdeling og udholdenhed.',
+      sections: [
+        ['Ind over banen', [
+          'En gangbro førte hen over cykelbanen i Forum. På den anden side lå inderkredsen med små kabiner til rytterne og plads til de særligt indbudte gæster. Man kunne altså gå ind midt i et cykelløb. Derinde havde rytterne deres base, mens konkurrenterne fortsatte rundt udenom.',
+          'Det er en ganske god indgang til seksdagesløbet. For skal man forstå den gamle udgave, må man også se på det, der foregik mellem turene på cyklen.',
+          'I 1934 fik København sit første seksdagesløb i Forum. Hallen var åbnet med en biludstilling i 1926, og cykelsporten krævede sin egen indretning. Der skulle bygges bane og tribuner. Den første bane målte 180 meter og blev brugt frem til 1939. En kort omgang. Til gengæld var der rigelig anledning til at tage den igen.'
+        ]],
+        ['Seks døgn på skift', [
+          'Seks døgn giver 144 timer. Tallet fortæller noget om løbsformens oprindelige idé: cykelløb gennem både dag og nat. Det skal ikke læses som et præcist stopursresultat for ethvert arrangement, der har heddet et seksdagesløb.',
+          'Ingen enkelt rytter skulle sidde på sadlen hele tiden. Parløbet fordelte arbejdet mellem to mænd. Den ene holdt parret med i konkurrencen, mens den anden fik mulighed for at hvile. Derfor blev makkeren en del af ens egen udholdenhed. Brugte man alle kræfterne på en dårlig jagt, afleverede man også et problem til ham.',
+          'Kabinerne hørte til den ordning. De gav rytterne et sted at trække sig tilbage fra banen, men de lå stadig inde i hallen. Arbejdsplads og hvilested var samlet på ganske få meter. En pause i inderkredsen var noget andet end at have fri fra løbet.',
+          'Først fra slutningen af 1950’erne blev det almindeligt at neutralisere seksdagesløbene om natten. Navnet blev hængende, selv om døgnets timer efterhånden blev brugt anderledes. Derfor kan man godt kende et nyere seksdagesløb og alligevel undervurdere, hvor meget den gamle form drejede sig om at holde ud.'
+        ]],
+        ['To ryttere, ét regnskab', [
+          'For tilskueren var problemet at holde styr på, hvem der faktisk førte. Den forreste mand på langsiden var ikke nødvendigvis løbets førende rytter. Et par kunne allerede have vundet en omgang, og så lå fordelen i regnskabet, selv om deres mand befandt sig længere tilbage i feltet.',
+          'Omgangene var grundlaget. Point fra spurterne kunne skille par på samme omgangstal. Derfor var en jagt på en omgang noget andet end en kort spurt om point. Man skulle følge mere end det næste opløb for at forstå stillingen. En hurtig mand kunne tage en spurt, men parrets placering afhang også af det arbejde, der var gjort længe før den.',
+          'I dag er håndslyngen parløbets let genkendelige bevægelse: Den arbejdende rytter griber sin makkers hånd og hjælper ham op i fart, inden han selv træder ud af arbejdet. Den lille overførsel af fart gør skiftet til en del af taktikken. Makkeren skal findes og afleveringen passe, mens de øvrige par fortsætter.',
+          'Skiftene har dog udviklet sig. Den amerikanske banerytter Jack Simes har beskrevet, hvordan tidligere ryttere blandt andet brugte et skub bagi, før håndslyngen blev den kendte løsning. Et moderne parløb er derfor ikke en færdig tegning af alle bevægelserne i Forum i 1934.'
+        ]],
+        ['Musikken og de ømme hænder', [
+          'Johannes V. Jensen skrev om seksdagesløbet for Politiken i 1934. Hos ham er der både højttaler, orkester og publikum, som fløjter med. Hallen var også underholdning. Man skulle kunne komme ind og få en aften ud af det.',
+          'Han så samtidig ryttere med ømme hænder og smertende øjne, som flyttede sig på sadlen for at holde ubehaget ud. Den iagttagelse giver den lange konkurrence en mere håndgribelig målestok end timetallet alene.',
+          'Man kunne følge jagten ude på banen og musikken inde i hallen. Og midt i det hele lå kabinerne. Når den ene rytter søgte derind, fortsatte makkeren rundt på de 180 meter.'
+        ]]
+      ]
+    },
+    en: {
+      title: 'Hand slings, cabins and 144 hours in Forum',
+      description: 'Forum’s small cabins, the division of labour between partners and six days on the track reveal how Copenhagen’s six-day race worked in the 1930s.',
+      deck: 'One rider worked on the track while his partner withdrew to the cabin. The six-day was cycle race, shift work and endurance in equal measure.',
+      sections: [
+        ['Across the track', [
+          'A footbridge led across the cycle track in Forum. On the other side lay the infield, with small cabins for the riders and space for specially invited guests. A person could quite literally walk into the middle of a cycle race. The riders had their base there while their rivals continued to circle outside.',
+          'It is a useful way into the six-day race. To understand the old version, one must also look at what happened between a rider’s turns on the bicycle.',
+          'Copenhagen staged its first six-day race in Forum in 1934. The hall had opened with a motor exhibition in 1926, and cycling demanded its own arrangements. A track and grandstands had to be built. The first track measured 180 metres and remained in use until 1939. A short lap, with no shortage of opportunities to ride it again.'
+        ]],
+        ['Six days in shifts', [
+          'Six days contain 144 hours. The number says something about the original idea: a cycle race continuing through day and night. It should not be read as an exact stopwatch result for every event ever called a six-day race.',
+          'No single rider was expected to remain in the saddle throughout. The pair divided the labour between two men. One kept the team in the competition while the other had a chance to rest. A partner therefore became part of a rider’s endurance. Spend everything on a badly judged chase and the resulting problem was handed directly to him.',
+          'The cabins belonged to that arrangement. They gave riders somewhere to withdraw from the track, yet remained inside the hall. Workplace and resting place were separated by only a few metres. A pause in the infield was not the same as having time off.',
+          'Only from the late 1950s did it become common to neutralise six-day races at night. The name remained even as the hours were used differently. A spectator may therefore know the later form and still underestimate how much the early race was about simply enduring.'
+        ]],
+        ['Two riders, one account', [
+          'For the spectator, the difficulty was knowing who actually led. The first man on the straight was not necessarily the race leader. A pair might already have gained a lap, leaving its advantage in the standings even when its active rider sat farther back in the group.',
+          'Laps came first. Sprint points could separate teams on the same lap total. Chasing a lap was therefore different from a brief sprint for points. Following the race required attention to more than the next dash for the line. A fast rider might win a sprint, while his pair’s position still depended on work done much earlier.',
+          'Today the hand sling is the Madison’s most recognisable movement. The working rider takes his partner’s hand and helps accelerate him before leaving the effort himself. That small transfer of speed makes the change part of the tactics. The partner must be found and the handover timed while every other pair continues racing.',
+          'The exchanges evolved, however. American track rider Jack Simes described earlier riders using, among other methods, a push from behind before the hand sling became familiar. A modern Madison is therefore not a finished diagram of every movement made in Forum in 1934.'
+        ]],
+        ['Music and aching hands', [
+          'Johannes V. Jensen wrote about the six-day race for Politiken in 1934. His account includes a loudspeaker, an orchestra and spectators whistling along. The hall provided entertainment as well as sport. People were meant to enter and make an evening of it.',
+          'He also observed riders with aching hands and painful eyes, shifting on their saddles to endure the discomfort. That detail gives the long contest a more tangible scale than the number of hours alone.',
+          'The crowd could follow the chase on the track and the music inside the hall. In the middle stood the cabins. Whenever one rider withdrew into them, his partner continued around the 180-metre track.'
+        ]]
+      ]
+    }
+  },
   'michele-ferrari-traening-doping': {
     image: micheleFerrari,
     year: '1990–2012',
@@ -28,55 +98,51 @@ export const scheduledStories = {
     imageAltEn: 'Illustration of a steel racing bicycle on an indoor trainer beside a table with a stopwatch, paper charts and an older computer monitor.',
     da: {
       title: 'Michele Ferrari, træningslæren og dopingæraen',
-      description: 'Michele Ferrari gjorde træningen målbar og blev siden livsvarigt udelukket af USADA. Historien følger forskellen mellem målinger, forklaringer og dokumenterede dopingforhold.',
-      deck: 'Tallene kunne beskrive en rytters arbejde ganske præcist. De kunne ikke i sig selv fortælle, hvad der ellers hørte med til programmet.',
+      description: 'Michele Ferrari gjorde træningen målbar og blev siden livsvarigt udelukket af USADA. Hans historie følger tallene fra Gewiss-Ballan til Lance Armstrong og US Postal-sagen.',
+      deck: 'Han kunne måle en rytters arbejde ned i mindste detalje. Det blev vanskeligere at forklare alt det, der stod rundt om tallene.',
       sections: [
-        ['Tre mand forrest', [
-          'Tre ryttere fra Gewiss-Ballan tager de tre første pladser i Flèche Wallonne i april 1994. Moreno Argentin, Giorgio Furlan og Jevgenij Berzin har gjort resten af feltet til tilskuere til deres indbyrdes afgørelse. Efter sådan et løb bliver der stillet spørgsmål. Nogle af dem havner hos holdets læge, Michele Ferrari. Hans svar kommer til at hænge ved længere end resultatlisten.',
-          'Da samtalen falder på EPO, sammenligner Ferrari faren ved overforbrug med at drikke ti liter appelsinjuice. Han afviser samtidig, at han ordinerer stoffet. Sammenligningen bliver en fast del af fortællingen om ham. En læge, der bliver spurgt til doping, har valgt en temmelig sær måde at berolige omverdenen på.'
+        ['Ti liter appelsinjuice', [
+          'I april 1994 bliver Michele Ferrari spurgt om EPO. Hans svar er, at stoffet ikke er farligt i sig selv; det er misbruget, der er farligt. Man kan også dø af at drikke ti liter appelsinjuice, forklarer han. Samtidig afviser han, at han selv ordinerer EPO.',
+          'Bemærkningen kommer efter en dag, hvor Ferraris hold har gjort sig svært at overse. Gewiss-Ballan har taget de tre første pladser i Flèche Wallonne med Moreno Argentin, Giorgio Furlan og Jevgenij Berzin. Det er en præstation, der kalder på spørgsmål, og holdets læge har leveret et svar, som bliver husket længere end selve løbet.',
+          'Ferrari er ikke kommet ind i cykelsporten som manden med en pose tilfældige husråd. Han er uddannet læge og har arbejdet i kredsen omkring Francesco Conconi ved universitetet i Ferrara. Her bliver rytteren målt. Puls, belastning og præstation sættes i forbindelse med hinanden, så træningen kan planlægges med større præcision.'
         ]],
-        ['Cyklen kommer ind i regnearket', [
-          'Ferrari har sin faglige baggrund i miljøet omkring Francesco Conconi ved universitetet i Ferrara. Her bliver cykelrytteren undersøgt som en krop, hvis arbejde kan måles. Puls, belastning og præstation skal kunne sættes i forbindelse med hinanden, så træningen bliver mere præcis end blot at køre langt og håbe på gode ben.',
-          'Wattmålingen passer ind i den tankegang. En puls fortæller, hvordan kroppen reagerer; effekten fortæller noget om det arbejde, rytteren leverer. På en bakke kan et bestemt træningspas derfor få en mere håndfast beskrivelse end en besked om at køre hårdt. Det ændrer også samtalen mellem rytteren og den, der lægger hans program.',
-          'Der er en praktisk forskel på at komme hjem og sige, at turen føltes tung, og at kunne vise, hvad man faktisk lavede. Tallene giver træneren noget at sammenligne fra uge til uge. Men de svarer ikke af sig selv på, hvad der foregår omkring træningen. Et præcist måleresultat gør ikke resten af forløbet gennemsigtigt.',
-          'Det er her, Ferraris historie kræver, at man holder hovedet koldt. Systematisk træning og måleudstyr er reelle arbejdsredskaber. De kan ikke bruges som bevis for doping. Omvendt kan en træners tekniske kunnen heller ikke i sig selv frikende ham for, hvad han ellers har gjort.'
+        ['En ny rytter i planen', [
+          'Ferrari opfinder ikke wattmåleren, men han tager del i en tid, hvor tal flytter ind i træningen. Pulsen viser, hvordan kroppen reagerer. Effekten viser, hvilket arbejde rytteren leverer. Et interval på en stigning kan nu beskrives mere præcist end med beskeden om at køre hårdt, men ikke alt for hårdt. Det er nyttigt. Regnearket bliver aldrig træt, men det gør manden på cyklen stadig.',
+          'For rytteren betyder det, at en træningstur ikke længere kun ender som en fornemmelse i benene. Arbejdet kan sammenlignes med gårsdagens og med den indsats, der skal leveres i et løb. Ferrari kan ændre belastningen, lægge hvile ind og se, om formen bevæger sig den rigtige vej. Den slags præcision gør ham attraktiv for ryttere, der vil have mere end almindelige råd fra følgebilen.',
+          'Sidst i 1995 kommer Lance Armstrong ind i Ferraris planer. Ferrari fortæller senere, at Eddy Merckx præsenterede dem for hinanden. Armstrong er endnu ikke den rytter, der siden vinder Tour de France. For Ferrari bliver samarbejdet til gengæld det forhold, som mere end noget andet binder hans navn til US Postal-holdet.',
+          'I 2003 beskriver Ferrari fortsat arbejdet som sportslig forberedelse. Han forklarer også de særlige markeringer, der findes i træningsplanerne. De dækker ifølge ham over vitaminer, aminosyrer og dage, hvor rytteren skal være ekstra opmærksom. Planerne er ikke længere blot arbejdsark mellem læge og rytter. De bliver læst af folk, som leder efter noget andet end intervaller og hviledage.',
+          'Det er den vanskelige del af Ferraris historie. Hans arbejde med belastning, puls og effekt er håndgribeligt og brugbart. Tallene kan vise, om rytteren har udført dagens arbejde. De kan ikke vise, hvad der ellers er foregået omkring ham. Efterhånden bliver det netop indholdet uden for de almindelige træningstal, antidopingmyndighederne undersøger.'
         ]],
-        ['Armstrong og lægens forklaring', [
-          'Lance Armstrong bliver en af Ferraris mest omtalte samarbejdspartnere. I et interview fra 2003 fortæller Ferrari, at Eddy Merckx introducerede dem i slutningen af 1995. Han beskriver et samarbejde om sportslig forberedelse og vedgår, at det fortsat består. Det er hans egen forklaring på arbejdet, mens hans rolle allerede bliver diskuteret offentligt.',
-          'I samme interview afviser han, at særlige markeringer i træningsplaner dækker over dopingmidler. Ifølge Ferrari handler de om vitaminer, aminosyrer og opmærksomhed på bestemte træningsdage. Netop træningsplanen bliver dermed mere end en liste over intervaller. Den bliver også noget, som andre forsøger at læse og efterprøve.'
-        ]],
-        ['En sanktion med dato på', [
-          'Den 10. juli 2012 meddeler det amerikanske antidopingagentur USADA, at Ferrari har fået livsvarig udelukkelse for overtrædelser af antidopingreglerne i sagen om US Postal. Agenturet beskriver rådgivning om EPO, medvirken ved forbudt bloddoping og træningsplaner med koder for brug af dopingmidler. Det er USADA’s konstateringer, ikke noget man kan udlede af et gammelt podiefoto.',
-          'USADA oplyser, at sanktionen følger, efter at anklagerne ikke er blevet bestridt gennem agenturets voldgiftsproces. Ferrari afviser beskyldningerne og bestrider, at han er blevet korrekt underrettet. Få dage senere gengiver Cyclingnews hans svar og anfører samtidig USADA’s oplysning om, at materialet er afleveret til de involverede eller deres advokater.',
-          'Der er altså både en udstedt sportslig sanktion og en læge, som nægter sig skyldig. Udelukkelsen skal beskrives som en antidopingsanktion. Den er ikke en italiensk straffedom, og man bør ikke lade de to ting flyde sammen, bare fordi historien så bliver lettere at fortælle.',
-          'Ferrari opfandt hverken træningsarbejdet eller hele dopingæraen. Hans forløb viser, hvorfor begge dele må undersøges konkret. På skrivebordet kan der ligge en omhyggelig plan med belastninger og hviledage. Den kan fortælle meget om, hvordan en rytter skal træne. Spørgsmålet er stadig, hvad der ellers hører med til programmet.'
+        ['Planerne skifter hænder', [
+          'Den 10. juli 2012 kommer afgørelsen fra det amerikanske antidopingagentur USADA. Ferrari bliver livsvarigt udelukket for overtrædelser af antidopingreglerne i US Postal-sagen. Agenturet anfører, at han har rådgivet om EPO, medvirket ved forbudt bloddoping og udarbejdet træningsplaner, hvor koder dækkede over dopingmidler.',
+          'Anklagerne bliver ikke bestridt gennem USADA’s voldgiftsproces. Ferrari afviser dem og siger, at han ikke er blevet korrekt underrettet. USADA svarer, at materialet er afleveret til de involverede eller deres advokater. Den livsvarige udelukkelse er en sportslig sanktion efter antidopingreglerne, ikke en italiensk straffedom.',
+          'Dermed får planerne en anden betydning end den, Ferrari selv har givet dem. Han har beskrevet markeringerne som hjælp til vitaminer, aminosyrer og træningsdage. USADA læser dem som en del af et dopingsystem. Ferraris forklaring bliver stående, men den ændrer ikke agenturets afgørelse.',
+          'Atten år er gået siden Flèche Wallonne. Argentin, Furlan og Berzin står stadig øverst på resultatlisten, og Ferraris sammenligning med de ti liter appelsinjuice følger stadig med. Tallene fra løbet kunne skrives på få linjer. Papirerne omkring lægen kom til at fylde betydeligt mere.'
         ]]
       ]
     },
     en: {
       title: 'Michele Ferrari, training science and the doping era',
-      description: 'Michele Ferrari helped make training measurable and was later banned for life by USADA. His story separates measurement, explanation and documented doping violations.',
-      deck: 'The numbers could describe a rider’s work with considerable precision. By themselves, they could not reveal what else belonged to the programme.',
+      description: 'Michele Ferrari helped make training measurable and was later banned for life by USADA. His story follows the numbers from Gewiss-Ballan to Lance Armstrong and the US Postal case.',
+      deck: 'He could measure a rider’s work in minute detail. Explaining everything surrounding the numbers proved more difficult.',
       sections: [
-        ['Three riders in front', [
-          'Three Gewiss-Ballan riders take the first three places at Flèche Wallonne in April 1994. Moreno Argentin, Giorgio Furlan and Evgeni Berzin have reduced the rest of the field to spectators at their private finish. A performance like that brings questions. Some are put to the team doctor, Michele Ferrari. His answer will last longer than the result sheet.',
-          'When the subject turns to EPO, Ferrari compares the danger of excessive use with drinking ten litres of orange juice. At the same time, he denies prescribing the drug. The comparison becomes a permanent part of his story. A doctor asked about doping has chosen a rather peculiar way of reassuring the outside world.'
+        ['Ten litres of orange juice', [
+          'In April 1994, Michele Ferrari is asked about EPO. His answer is that the drug is not dangerous in itself; abuse is dangerous. A person can also die from drinking ten litres of orange juice, he explains. At the same time, he denies prescribing EPO.',
+          'The remark follows a day on which Ferrari’s team has been difficult to overlook. Gewiss-Ballan has taken the first three places at Flèche Wallonne with Moreno Argentin, Giorgio Furlan and Evgeni Berzin. It is a performance that brings questions, and the team doctor has supplied an answer remembered longer than the race itself.',
+          'Ferrari did not enter cycling as a man carrying a bag of random remedies. He trained as a doctor and worked in the circle around Francesco Conconi at the University of Ferrara. Here riders were measured. Heart rate, workload and performance were connected so that training could be planned with greater precision.'
         ]],
-        ['The bicycle enters the spreadsheet', [
-          'Ferrari’s professional background lies in the circle around Francesco Conconi at the University of Ferrara. Here the racing cyclist is examined as a body whose work can be measured. Heart rate, workload and performance are connected so that training can become more precise than simply riding long distances and hoping for good legs.',
-          'Power measurement fits that approach. Heart rate shows how the body responds; power says something about the work the rider produces. A particular session on a climb can therefore be described more firmly than an instruction to ride hard. It also changes the conversation between the rider and the person writing the programme.',
-          'There is a practical difference between returning home and saying the ride felt heavy, and being able to show what was actually done. The numbers give the coach something to compare from week to week. They do not, however, explain everything surrounding the training. A precise measurement does not make the rest of the process transparent.',
-          'This is where Ferrari’s story requires a cool head. Systematic training and measuring equipment are genuine working tools. They are not proof of doping. Equally, a coach’s technical ability cannot by itself absolve him of his other actions.'
+        ['A new rider in the plan', [
+          'Ferrari did not invent the power meter, but he belonged to a period in which numbers moved into training. Heart rate showed how the body responded. Power showed the work the rider produced. An interval on a climb could now be described more precisely than by telling someone to ride hard, but not too hard. This was useful. The spreadsheet never became tired, although the man on the bicycle still did.',
+          'For the rider, this meant a training ride no longer ended merely as a feeling in the legs. The work could be compared with yesterday’s effort and with what would be required in a race. Ferrari could alter the load, schedule recovery and see whether form was moving in the right direction. That precision made him attractive to riders who wanted more than ordinary advice from the team car.',
+          'Late in 1995, Lance Armstrong entered Ferrari’s plans. Ferrari later said Eddy Merckx had introduced them. Armstrong was not yet the rider who would go on to win the Tour de France. For Ferrari, however, the relationship became the one that tied his name to the US Postal team more than any other.',
+          'In 2003, Ferrari was still describing the work as athletic preparation. He also explained the special marks found in training plans. According to him, they referred to vitamins, amino acids and days on which the rider had to pay particular attention. The plans were no longer merely working papers shared by doctor and rider. They were being read by people looking for something other than intervals and rest days.',
+          'That is the difficult part of Ferrari’s story. His work with workload, heart rate and power was tangible and useful. The figures could show whether a rider had completed the day’s work. They could not show everything else happening around him. In time, it was precisely the material beyond the ordinary training numbers that the anti-doping authorities examined.'
         ]],
-        ['Armstrong and the doctor’s account', [
-          'Lance Armstrong became one of Ferrari’s most discussed clients. In a 2003 interview Ferrari said Eddy Merckx introduced them late in 1995. He described a working relationship concerned with athletic preparation and acknowledged that it was continuing. That was his own account of the work, at a time when his role was already being publicly questioned.',
-          'In the same interview, Ferrari denied that special marks in training plans represented doping products. He said they referred to vitamins, amino acids and particular attention on selected training days. The programme thus became more than a list of intervals. It was also a document that others tried to interpret and test.'
-        ]],
-        ['A sanction with a date', [
-          'On 10 July 2012, the United States Anti-Doping Agency announced that Ferrari had received a lifetime ban for anti-doping rule violations in the US Postal case. The agency described advice concerning EPO, assistance with prohibited blood doping and training plans containing codes for doping products. Those were USADA’s findings, not conclusions that can be drawn from an old podium photograph.',
-          'USADA said the sanction followed after the charges were not contested through its arbitration process. Ferrari denied the accusations and disputed that he had been properly notified. A few days later, Cyclingnews reported his response together with USADA’s statement that the documents had been delivered to the parties involved or their lawyers.',
-          'There is therefore both a sporting sanction and a doctor who denied wrongdoing. The lifetime ban should be described as an anti-doping sanction. It was not an Italian criminal conviction, and the two should not be allowed to merge merely because that makes the story easier to tell.',
-          'Ferrari invented neither training science nor an entire doping era. His career shows why the two must be examined separately. A desk may hold a careful plan of workloads and rest days. It can say a great deal about how a rider should train. The question remains what else belongs to the programme.'
+        ['The plans change hands', [
+          'On 10 July 2012, the decision came from the United States Anti-Doping Agency. Ferrari received a lifetime ban for anti-doping rule violations in the US Postal case. The agency stated that he had advised on EPO, assisted prohibited blood doping and written training plans in which codes referred to doping products.',
+          'The charges were not contested through USADA’s arbitration process. Ferrari rejected them and said he had not been properly notified. USADA replied that the material had been delivered to the people involved or their lawyers. The lifetime ban was a sporting sanction under anti-doping rules, not an Italian criminal conviction.',
+          'The plans therefore acquired a different meaning from the one Ferrari had given them. He had described the marks as aids concerning vitamins, amino acids and training days. USADA read them as part of a doping system. Ferrari’s explanation remained on record, but it did not alter the agency’s decision.',
+          'Eighteen years had passed since Flèche Wallonne. Argentin, Furlan and Berzin still occupied the first three places on the result sheet, and Ferrari’s comparison with ten litres of orange juice still followed him. The race figures fitted on a few lines. The papers surrounding the doctor grew considerably longer.'
         ]]
       ]
     }

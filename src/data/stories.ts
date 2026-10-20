@@ -72,6 +72,7 @@ import motorpaceGresseImage from '../assets/stories/upcoming-week/motorpace-bord
 import coppiMalariaImage from '../assets/stories/coppi-krigsfange/fausto-coppi-1957.jpg';
 import riderMechanicImage from '../assets/stories/eugene-christophe-1913/eugene-christophe-1912.jpg';
 import micheleFerrariImage from '../assets/stories/michele-ferrari-traening-doping/traeningsmaaling-1990erne-illustration.png';
+import forumSixDayImage from '../assets/stories/haandslyng-kabiner-144-timer-forum/forum-biludstilling-1926-holger-damgaard.jpg';
 
 export type StoryMeta = {
   slug: string;
@@ -89,6 +90,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'haandslyng-kabiner-144-timer-forum': 'race',
   'michele-ferrari-traening-doping': 'people',
   'jan-van-hout-timerekord-1933': 'people',
   'rytteren-sin-egen-mekaniker': 'mechanics',
@@ -187,6 +189,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'haandslyng-kabiner-144-timer-forum', type: 'historie', year: '1934–1939', title: 'Håndslyng, kabiner og 144 timer i Forum', text: 'Forums små kabiner, parløbets arbejdsdeling og seks døgn på banen fortæller, hvordan det københavnske seksdagesløb fungerede i 1930’erne.', image: forumSixDayImage, periods: ['1930-1939'], topics: ['seksdagesloeb', 'forum', 'banecykling', 'haandslyng', 'koebenhavn'], relatedBikes: [], relatedComponents: [] },
   { slug: 'michele-ferrari-traening-doping', type: 'historie', year: '1990–2012', title: 'Michele Ferrari, træningslæren og dopingæraen', text: 'Michele Ferrari gjorde træningen målbar og blev siden livsvarigt udelukket af USADA. Historien følger forskellen mellem målinger, forklaringer og dokumenterede dopingforhold.', image: micheleFerrariImage, periods: ['1990-1999', '2000-2009', '2010-2019'], topics: ['michele-ferrari', 'træning', 'doping', 'lance-armstrong', 'usada'], relatedBikes: [], relatedComponents: [] },
   {"slug":"jan-van-hout-timerekord-1933",image:janVanHoutImage,"type":"historie","year":"1933–1945","title":"Jan van Hout og de 44.588 meter","text":"Jan van Hout kørte 44.588 meter på en time i 1933. Striden om rekorden fulgte ham; siden lukkede han sin café og gik ind i modstandsarbejdet.","periods":["1930-1939","1940-1949"],"topics":["jan-van-hout","timerekord","banecykling","modstand"],"relatedBikes":[],"relatedComponents":[]},
   { slug: 'rytteren-sin-egen-mekaniker', type: 'historie', year: '1903–1973', title: 'Da rytteren var sin egen mekaniker', text: 'De første Tour-ryttere måtte selv reparere cyklen. Fra Christophe i smedjen til neutral service flyttede værktøjet langsomt ud i følgebilerne.', image: riderMechanicImage, periods: ['1900-1920'], topics: ['eugene-christophe', 'mekanikere', 'selvreparation', 'neutral-service', 'tour-de-france'], relatedBikes: [], relatedComponents: [] },

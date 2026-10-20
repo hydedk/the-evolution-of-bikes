@@ -2,6 +2,7 @@ import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+  'haandslyng-kabiner-144-timer-forum': ['Hand slings, cabins and 144 hours in Forum', 'Forum’s small cabins, the division of labour between partners and six days on the track reveal how Copenhagen’s six-day race worked in the 1930s.'],
   'michele-ferrari-traening-doping': ['Michele Ferrari, training science and the doping era', 'Michele Ferrari helped make training measurable and was later banned for life by USADA. His story separates measurement, explanation and documented doping violations.'],
   'jan-van-hout-timerekord-1933': ["Jan van Hout and the 44,588 metres","Jan van Hout rode 44.588 kilometres in an hour in 1933. A dispute followed his ride; he later closed his café and joined the resistance."],
   'rytteren-sin-egen-mekaniker': ['When the rider was his own mechanic', 'Early Tour riders repaired their own bicycles. From Christophe at the forge to neutral service, the tools gradually moved into the following cars.'],

@@ -37,6 +37,13 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'floyd-landis-us-postal': { period: '2000-2009', primary: 'samfund-og-tidsaand' },
+  'ugo-de-rosa-cusano-milanino': { period: '1960-1969', primary: 'menneskene-bag' },
+  'alcyon-edmond-gentil': { period: '1900-1920', primary: 'menneskene-bag' },
+  'alfredo-binda-rome-1932': { period: '1930-1939', primary: 'loeb-og-store-oejeblikke' },
+  'freddy-maertens-horse-1977': { period: '1970-1979', primary: 'loeb-og-store-oejeblikke' },
+  'wilier-triestina-code': { period: '1940-1949', primary: 'samfund-og-tidsaand' },
+  'willy-falck-hansen-forum-1934': { period: '1930-1939', primary: 'cykelkultur' },
   'colnago-c35-ferrari-1989': { period: '1980-1989', primary: 'teknik', secondary: ['menneskene-bag', 'cykelkultur'] },
   'maertens-montreal-1974': { period: '1970-1979', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },
   'haandslyng-kabiner-144-timer-forum': { period: '1930-1939', primary: 'cykelkultur', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },

@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # 07:17 UTC = 08:17 CET / 09:17 CEST; discovery uses Europe/Copenhagen.
+    - cron: '17 7 * * *'
 
 permissions:
   contents: read
@@ -40,6 +43,8 @@ jobs:
           key: ${{ runner.os }}-astro-images-v1-${{ hashFiles('pnpm-lock.yaml', 'astro.config.mjs') }}-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-astro-images-v1-${{ hashFiles('pnpm-lock.yaml', 'astro.config.mjs') }}-
+      - name: Check promotion rules
+        run: node scripts/test-story-promotion.mjs
       - name: Build
         run: pnpm build
         env:

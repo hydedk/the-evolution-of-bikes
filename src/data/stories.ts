@@ -1,3 +1,5 @@
+import promotionPlan from './storyPromotions.json';
+import { selectPromotedStories } from './storyPromotion.mjs';
 import janVanHoutImage from '../assets/stories/jan-van-hout-timerekord-1933/jan-van-hout-buffalo-1933.jpg';
 import type { ImageMetadata } from 'astro';
 import parisRoubaixChallengeImage from '../assets/stories/paris-roubaix-challenge/paris-roubaix-2025-secteur-1.jpg';
@@ -75,6 +77,13 @@ import micheleFerrariImage from '../assets/stories/michele-ferrari-traening-dopi
 import forumSixDayImage from '../assets/stories/haandslyng-kabiner-144-timer-forum/forum-biludstilling-1926-holger-damgaard.jpg';
 import maertensMontrealImage from '../assets/stories/maertens-montreal-1974/maertens-laenen-montreal-1974-maurice-terryn.jpg';
 import colnagoC35Image from '../assets/stories/colnago-c35-ferrari-1989/colnago-c35-workshop-illustration.png';
+import floydLandisImage from '../assets/stories/floyd-landis-us-postal/floyd-landis-2006.jpg';
+import ugoDeRosaImage from '../assets/stories/ugo-de-rosa-cusano-milanino/ugo-de-rosa-workshop-illustration.png';
+import alcyonGentilImage from '../assets/stories/alcyon-edmond-gentil/garrigou-alcyon-1911.jpg';
+import alfredoBindaRomeImage from '../assets/stories/alfredo-binda-rome-1932/alfredo-binda-1933.jpg';
+import freddyMaertensHorseImage from '../assets/stories/freddy-maertens-horse-1977/freddy-maertens-1974.jpg';
+import wilierTriestinaImage from '../assets/stories/wilier-triestina-code/wilier-ramato-workshop-illustration.png';
+import willyFalckHansenImage from '../assets/stories/willy-falck-hansen-forum-1934/forum-1934-illustration.png';
 
 export type StoryMeta = {
   slug: string;
@@ -92,6 +101,13 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'floyd-landis-us-postal': 'people',
+  'ugo-de-rosa-cusano-milanino': 'mechanics',
+  'alcyon-edmond-gentil': 'mechanics',
+  'alfredo-binda-rome-1932': 'race',
+  'freddy-maertens-horse-1977': 'people',
+  'wilier-triestina-code': 'mechanics',
+  'willy-falck-hansen-forum-1934': 'race',
   'colnago-c35-ferrari-1989': 'mechanics',
   'haandslyng-kabiner-144-timer-forum': 'race',
   'maertens-montreal-1974': 'race',
@@ -192,7 +208,14 @@ const storyTracks: Record<string, StoryTrack> = {
 export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
-export const stories: StoryMeta[] = [
+export const allStories: StoryMeta[] = [
+  { slug: 'floyd-landis-us-postal', type: 'historie', year: '2006–2012', title: 'Fra Landis-sagen til afsløringerne af US Postal', text: 'Floyd Landis mistede Tour-sejren fra 2006. Fire år senere blev hans oplysninger en del af sagen, der væltede Lance Armstrongs resultater.', image: floydLandisImage, periods: ['2000-2009', '2010-2019'], topics: ['doping', 'floyd-landis', 'lance-armstrong', 'tour-de-france', 'us-postal'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'ugo-de-rosa-cusano-milanino', type: 'historie', year: '1953–1976', title: 'Ugo De Rosa og værkstedet i Cusano Milanino', text: 'Ugo De Rosa begyndte i 1953 og byggede sig fra et lille værksted ind i professionel cykelsport.', image: ugoDeRosaImage, periods: ['1950-1959', '1960-1969', '1970-1979'], topics: ['de-rosa', 'rammebygning', 'eddy-merckx', 'italien', 'værksted'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'alcyon-edmond-gentil', type: 'historie', year: '1902–1906', title: 'Bruddet der blev til Alcyon', text: 'Edmond Gentil forlod Peugeot-miljøet og grundlagde Alcyon i 1902. Fire år senere brugte han landevejen som udstillingsvindue.', image: alcyonGentilImage, periods: ['1900-1920'], topics: ['alcyon', 'edmond-gentil', 'cykelindustri', 'frankrig', 'fabrikshold'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'alfredo-binda-rome-1932', type: 'historie', year: '1932', title: 'Bindas tredje verdensmesterskab i Rom', text: 'Alfredo Binda og Remo Bertoni skilte feltet ad på den sidste tur mod Rocca di Papa ved VM i 1932.', image: alfredoBindaRomeImage, periods: ['1930-1939'], topics: ['alfredo-binda', 'verdensmesterskab', 'landevej', 'italien', 'remo-bertoni'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'freddy-maertens-horse-1977', type: 'historie', year: '1977', title: 'Da Freddy Maertens kørte mod en hest', text: 'Den 13. juli 1977 stillede den skadede verdensmester op mod travhesten Fakir du Vivier i Amiens.', image: freddyMaertensHorseImage, periods: ['1970-1979'], topics: ['freddy-maertens', 'cykelkultur', 'opvisningsløb', 'amiens'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'wilier-triestina-code', type: 'historie', year: '1906–1948', title: 'Mærket der bar en fædrelandskode', text: 'Wilier-navnet blev efter krigen knyttet til Trieste, italiensk nationalfølelse og den kobberrøde Ramato-cykel.', image: wilierTriestinaImage, periods: ['1900-1920', '1940-1949'], topics: ['wilier-triestina', 'ramato', 'trieste', 'italien', 'cykelmærker'], relatedBikes: [], relatedComponents: [] },
+  { slug: 'willy-falck-hansen-forum-1934', type: 'historie', year: '1934', title: 'Spejderen fik Forum til at koge', text: 'Willy Falck Hansen og Victor Rausch vandt Københavns andet seksdagesløb i 1934.', image: willyFalckHansenImage, periods: ['1930-1939'], topics: ['willy-falck-hansen', 'seksdagesløb', 'forum', 'banecykling', 'dansk-cykling'], relatedBikes: [], relatedComponents: [] },
   { slug: 'colnago-c35-ferrari-1989', type: 'historie', year: '1986–1989', title: 'Colnago C35: Da Ferrari-projektet blev til en cykel, man kunne købe', text: 'Colnago og Ferrari begyndte et udviklingsarbejde i 1986. Tre år senere gjorde C35 kulfiberen til et salgsstel og indledte Colnagos C-serie.', image: colnagoC35Image, periods: ['1980-1989'], topics: ['colnago', 'ferrari', 'c35', 'kulfiber', 'rammebygning'], relatedBikes: ['colnago-super-thron', 'colnago-1993-tange-prestige'], relatedComponents: [] },
   { slug: 'maertens-montreal-1974', type: 'historie', year: '1974', title: 'Hvad skete der med Freddy Maertens i Montréal?', text: 'Freddy Maertens udgik af VM i Montréal og fortalte senere om en mistænkelig drikkedunk. Resultatet er sikkert; forklaringen er det ikke.', image: maertensMontrealImage, periods: ['1970-1979'], topics: ['vm', 'freddy-maertens', 'eddy-merckx', 'montreal', 'myte-og-virkelighed'], relatedBikes: [], relatedComponents: [] },
   { slug: 'haandslyng-kabiner-144-timer-forum', type: 'historie', year: '1934–1939', title: 'Håndslyng, kabiner og 144 timer i Forum', text: 'Forums små kabiner, parløbets arbejdsdeling og seks døgn på banen fortæller, hvordan det københavnske seksdagesløb fungerede i 1930’erne.', image: forumSixDayImage, periods: ['1930-1939'], topics: ['seksdagesloeb', 'forum', 'banecykling', 'haandslyng', 'koebenhavn'], relatedBikes: [], relatedComponents: [] },
@@ -316,5 +339,8 @@ export const stories: StoryMeta[] = [
   { slug: 'tour-1930-nationalhold-og-reklamekaravane', type: 'historie', year: '1930', title: 'Da Touren skiftede fabrikkerne ud med nationer', text: 'Nationalholdene fjernede fabriksmærkerne fra Tourens bedste ryttere. Reklamekaravanen blev sat ind for at betale den dyrere ordning.', image: guerra1930Image, periods: ['1930-1939'], topics: ['tour-de-france', 'nationalhold', 'reklamekaravane', 'loebsorganisation'], relatedBikes: [], relatedComponents: [] },
   { slug: 'gino-bartali-tour-1938', type: 'historie', year: '1936–1938', title: 'Gino Bartali før krigen', text: 'To Giro-sejre og Tour-triumfen i 1938 gjorde Bartali til Italiens store etapeløbsrytter før krigens afbrydelse.', image: bartali1936Image, periods: ['1930-1939'], topics: ['gino-bartali', 'tour-de-france', 'giro-ditalia', 'italien'], relatedBikes: [], relatedComponents: [] },
 ];
+
+// Only discovery is scheduled; direct article routes remain available.
+export const stories: StoryMeta[] = selectPromotedStories(allStories, promotionPlan);
 
 export const storiesForPeriod = (period: string) => stories.filter((story) => story.periods.includes(period));

@@ -17,8 +17,10 @@ import micheleFerrari from '../assets/stories/michele-ferrari-traening-doping/tr
 import forumSixDay from '../assets/stories/haandslyng-kabiner-144-timer-forum/forum-biludstilling-1926-holger-damgaard.jpg';
 import maertensMontreal from '../assets/stories/maertens-montreal-1974/maertens-laenen-montreal-1974-maurice-terryn.jpg';
 import colnagoC35 from '../assets/stories/colnago-c35-ferrari-1989/colnago-c35-workshop-illustration.png';
+import { scheduledStoriesBatch20261023 } from './scheduledStoriesBatch20261023';
 
 export const scheduledStories = {
+  ...scheduledStoriesBatch20261023,
   'colnago-c35-ferrari-1989': {
     image: colnagoC35,
     year: '1986–1989',

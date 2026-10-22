@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import { readdir, readFile, writeFile } from 'node:fs/promises';
+import { readdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { addAnalytics } from './scripts/analytics.mjs';
@@ -189,6 +189,8 @@ const socialMetadata = {
     },
     'astro:build:done': async ({ dir }) => {
       const outputDir = fileURLToPath(dir);
+      // Race pages remain local work files. Never ship their HTML or add them to sitemap.
+      await rm(join(outputDir, 'loeb'), { recursive: true, force: true });
       const htmlFiles = [];
       const sitemapUrls = [];
 

@@ -15,8 +15,136 @@ import christopheRepair from '../assets/stories/eugene-christophe-1913/eugene-ch
 import neutralService from '../assets/stories/mavic-neutral-service/mavic-neutral-service-illustration.jpg';
 import micheleFerrari from '../assets/stories/michele-ferrari-traening-doping/traeningsmaaling-1990erne-illustration.png';
 import forumSixDay from '../assets/stories/haandslyng-kabiner-144-timer-forum/forum-biludstilling-1926-holger-damgaard.jpg';
+import maertensMontreal from '../assets/stories/maertens-montreal-1974/maertens-laenen-montreal-1974-maurice-terryn.jpg';
+import colnagoC35 from '../assets/stories/colnago-c35-ferrari-1989/colnago-c35-workshop-illustration.png';
 
 export const scheduledStories = {
+  'colnago-c35-ferrari-1989': {
+    image: colnagoC35,
+    year: '1986–1989',
+    period: '1980-1989',
+    track: 'mechanics',
+    credit: 'AI-genereret illustration af en kulfiberracer i et værkstedsmiljø inspireret af slutningen af 1980’erne. Motivet er ikke et historisk fotografi og gengiver ikke en bestemt bevaret C35.',
+    creditEn: 'AI-generated illustration of a carbon road bicycle in a workshop setting inspired by the late 1980s. This is not a historical photograph and does not depict a specific surviving C35.',
+    source: '',
+    imageAltDa: 'Illustration af en mørk kulfiberracer med smalle hjul i et cykelværksted.',
+    imageAltEn: 'Illustration of a dark carbon road bicycle with narrow tyres in a bicycle workshop.',
+    da: {
+      title: 'Colnago C35: Da Ferrari-projektet blev til en cykel, man kunne købe',
+      description: 'Colnago og Ferrari begyndte et udviklingsarbejde i 1986. Tre år senere gjorde C35 kulfiberen til et salgsstel og indledte Colnagos C-serie.',
+      deck: 'Først kom forsøget og den opsigtsvækkende konceptcykel. Med C35 skulle samarbejdet omsættes til en racer, der kunne forlade udstillingen og ende hos en kunde.',
+      sections: [
+        ['Fra projekt til produkt', [
+          'I 1989 stod Colnago med en vanskelig opgave. Samarbejdet med Ferrari havde allerede vist, hvor langt en racercykel kunne flyttes væk fra de tynde stålrør. Nu skulle ideerne samles i noget mere jordnært: en cykel, der kunne fremstilles og sælges.',
+          'Resultatet fik navnet C35. Tallet markerede Colnagos 35-års jubilæum, mens bogstavet pegede frem mod den kulfiberserie, som siden kom til at fylde meget i mærkets historie. Colnago beskriver modellen som sin første serieproducerede racercykel i fuld kulfiber.',
+          'Det var en anden slags nyhed end en enkelt prototype. En konceptcykel kan få lov til at være besværlig, dyr og upraktisk, hvis den blot viser en retning. Et salgsstel skal også kunne bygges igen, udstyres og afleveres til en kunde.'
+        ]],
+        ['Ferrari kom ind i værkstedet', [
+          'Samarbejdet begyndte i 1986. Colnago ville bruge erfaringer fra Formel 1 med materialer, konstruktion og formgivning på en racercykel. Året efter blev Concept Colnago for Ferrari vist frem med løsninger, der lå langt fra en almindelig italiensk racer: kulfiber, indvendig kabelføring og særlige hjul og bremser.',
+          'Ikke alt fra konceptet skulle direkte videre. Det første serieprodukt fra samarbejdet blev i stedet Precisa-gaflen med lige ben, som kom på Colnago Master. Den var stadig forbundet med et velkendt stålstel og viste, at projektet kunne levere en konkret del uden at hele cyklen skulle opfindes på ny.',
+          'C35 tog det større skridt. Stellets former var ikke bundet til runde stålrør og klassiske muffer. Colnagos egen historik beskriver en kulfiberkonstruktion med organiske, aerodynamiske former. Den blev leveret som en kostbar jubilæumsmodel, blandt andet med en særlig udgave af Campagnolo C-Record. Dermed blev teknikken også en vare: ikke kun et samarbejdsbevis, men en cykel i sortimentet.'
+        ]],
+        ['Et mellemled, ikke en slutning', [
+          'C35 blev ikke den skabelon, som alle senere Colnago-racere fulgte. Fem år senere kom C40 med kulfiberrør og kulfibermuffer. Den konstruktion lignede på flere måder det rammebyggeri, Colnago kendte fra stålet: separate dele kunne samles i forskellige størrelser og geometrier. C40 blev samtidig knyttet til professionelle sejre i en helt anden målestok.',
+          'Det gør ikke C35 overflødig i historien. Tværtimod viser den et øjeblik, hvor kulfiber endnu ikke havde én fast form. Materialet kunne bruges til en sammenhængende, skulpturel ramme, mens efterfølgeren vendte tilbage til rør og samlinger i et nyt materiale.',
+          'Ferrari-navnet gav projektet glans, men C35 er mest interessant, når man ser forbi mærket på siden. Her forsøgte Colnago at flytte en idé fra udviklingsafdelingen og ud på markedet. Cyklen blev ikke den endelige løsning. Den blev det nødvendige salgsstel mellem forsøget og den C-serie, der fulgte.'
+        ]]
+      ]
+    },
+    en: {
+      title: 'Colnago C35: When the Ferrari project became a bicycle you could buy',
+      description: 'Colnago and Ferrari began a development project in 1986. Three years later the C35 turned carbon into a production frame and opened Colnago’s C-series.',
+      deck: 'First came the experiment and the striking concept bicycle. With the C35, the collaboration had to become a road bike that could leave the display stand and reach a customer.',
+      sections: [
+        ['From project to product', [
+          'In 1989 Colnago faced a difficult task. Its work with Ferrari had already shown how far a racing bicycle could move beyond thin steel tubes. Now those ideas had to be gathered into something more practical: a bicycle that could be made and sold.',
+          'The result was called C35. The number marked Colnago’s 35th anniversary, while the letter pointed towards the carbon series that would later occupy a large place in the company’s history. Colnago describes it as its first series-produced full-carbon road bicycle.',
+          'That made it a different kind of novelty from a single prototype. A concept bicycle may be awkward, expensive and impractical if it demonstrates a direction. A production frame must also be built again, equipped and handed to a customer.'
+        ]],
+        ['Ferrari entered the workshop', [
+          'The collaboration began in 1986. Colnago wanted to apply Formula One experience in materials, construction and form to a racing bicycle. The following year, the Concept Colnago for Ferrari appeared with solutions far removed from an ordinary Italian road bike: carbon fibre, internal cable routing and special wheels and brakes.',
+          'Not everything from the concept was meant to continue unchanged. The first production item from the collaboration was instead the straight-bladed Precisa fork fitted to the Colnago Master. It remained attached to a familiar steel frame and showed that the project could produce a practical component without reinventing the entire bicycle.',
+          'The C35 took the larger step. Its shapes were not confined by round steel tubes and traditional lugs. Colnago’s own history describes a carbon construction with organic, aerodynamic forms. It was offered as an expensive anniversary model, including a special version of Campagnolo C-Record. The technology had become merchandise: not merely evidence of a collaboration, but a bicycle in the range.'
+        ]],
+        ['A link, not an ending', [
+          'The C35 did not become the pattern followed by every later Colnago road bike. Five years later the C40 arrived with carbon tubes and carbon lugs. In several respects that construction resembled the frame building Colnago knew from steel: separate parts could be assembled in different sizes and geometries. The C40 was also connected with professional victories on an entirely different scale.',
+          'That does not make the C35 redundant in the story. It shows a moment when carbon did not yet have one settled form. The material could become a continuous, sculptural frame, while its successor returned to tubes and joints made in a new material.',
+          'The Ferrari name gave the project lustre, but the C35 becomes more interesting when we look beyond the badge. Colnago was trying to move an idea out of development and into the market. The bicycle was not the final answer. It was the necessary production frame between the experiment and the C-series that followed.'
+        ]]
+      ]
+    }
+  },
+  'maertens-montreal-1974': {
+    image: maertensMontreal,
+    year: '1974',
+    period: '1970-1979',
+    track: 'race',
+    credit: 'Freddy Maertens og Mariette Laenen på et foto, som KOERS registrerer i forbindelse med VM i Montréal i 1974. Foto: Maurice Terryn, collectie KOERS. Museum van de Wielersport (Roeselare), NEG013034026, CC-BY-SA.',
+    creditEn: 'Freddy Maertens and Mariette Laenen in a photograph catalogued by KOERS in connection with the 1974 World Championships in Montréal. Photo: Maurice Terryn, collectie KOERS. Museum van de Wielersport (Roeselare), NEG013034026, CC-BY-SA.',
+    source: '',
+    imageAltDa: 'Sort-hvidt foto af Freddy Maertens med cykel og Mariette Laenen ved siden af ham; andre ryttere og tilskuere står i baggrunden.',
+    imageAltEn: 'Black-and-white photograph of Freddy Maertens with his bicycle and Mariette Laenen beside him, with other riders and spectators in the background.',
+    da: {
+      title: 'Hvad skete der med Freddy Maertens i Montréal?',
+      description: 'Freddy Maertens udgik af VM i Montréal i 1974 og fortalte senere om en mistænkelig drikkedunk. Løbet er dokumenteret; sabotageforklaringen er hans egen beretning.',
+      deck: 'Han huskede en drikkedunk og maveproblemerne, der fulgte. Resultatlisten er sikker. Forklaringen på hans udgåen er det ikke.',
+      sections: [
+        ['En dunk, der blev ved med at vende tilbage', [
+          'Freddy Maertens huskede en drikkedunk. Den var blevet rakt til ham under VM i Montréal i 1974, og i hans senere fortælling var det dér, løbet gik galt. Efter drikken kom maveproblemerne. Han måtte opgive et verdensmesterskab, som han selv mente at have benene til at vinde.',
+          'En dunk er ellers noget af det mest hverdagsagtige i et cykelløb. Man tager imod, drikker og får den tilbage i holderen. Netop derfor blev denne ved med at dukke op, når Maertens fortalte om sin karriere.',
+          'Men vi skal holde styr på, hvem der fortæller hvad. At Maertens udgik, og at Eddy Merckx vandt, hører til løbets forløb. Forklaringen om noget i dunken er Maertens’ senere beretning. Den forskel forsvinder let, når historien bliver genfortalt.'
+        ]],
+        ['Belgierne havde noget med hjemmefra', [
+          'Året før var VM endt med belgisk ballade i Barcelona. Maertens trak spurten an for Merckx, men Merckx kunne ikke komme forbi. Det kunne Felice Gimondi. Italieneren vandt, Maertens blev nummer to, og bagefter fløj beskyldningerne mellem de belgiske lejre.',
+          'Det var altså ikke et ubeskrevet blad, der blev lagt på bordet i Canada. Her var der både landshold og interesser fra de almindelige handelshold. Merckx og Maertens havde hver deres muligheder og hver deres folk omkring sig. En belgisk trøje fjernede ikke automatisk konkurrencen mellem dem.',
+          'I Montréal angreb Bernard Thévenet og kørte alene foran. Maertens og italieneren Costantino Conti satte efter ham. De nåede ikke op, men havde stadig et forspring til feltet. Belgierne havde aftalt, at de ikke skulle sætte efter en landsmand. Med Maertens foran måtte Merckx derfor vente.',
+          'Så forsvandt Maertens ud af konkurrencen med voldsomme maveproblemer. For ham sluttede dagen dér. For de øvrige fortsatte jagten.'
+        ]],
+        ['Forklaringen kom bagefter', [
+          'I et interview fra 2011 gav Maertens sin version. Hans egen massør, Jef D’Hont, skulle have forladt sin post for at spise og bedt en anden hjælper om at give ham en dunk. Den hjælper var Gust Naessens, som var knyttet til Merckx.',
+          'Maertens fortalte også, at Naessens senere havde arbejdet for ham, og at han havde spurgt ham om Montréal. Ifølge Maertens havde Naessens da indrømmet at have puttet noget i drikken for at bremse ham.',
+          'Det er en alvorlig beskyldning, men interviewet indeholder Maertens’ gengivelse af samtalen. Det er ikke en selvstændigt dokumenteret tilståelse fra Naessens. En senere gentagelse gør heller ikke i sig selv forklaringen mere sikker.',
+          'Maertens holdt fast i den. Da KOERS interviewede ham i 2026, udpegede han igen Montréal som det løb, han gerne ville køre om. Mere end halvtreds år senere kaldte han stadig dagen sin største skuffelse.',
+          'Man kan godt fortælle den erindring uden at gøre den til en opklaret sag. Der er ikke i det gennemgåede materiale en uafhængig undersøgelse, som fastslår, hvad der var i drikken. Og Maertens’ forklaring dokumenterer ingen ordre fra Merckx.'
+        ]],
+        ['Løbet kørte videre', [
+          'Merckx og Herman Van Springel kunne nu deltage i jagten på de forreste. Thévenet blev hentet i afslutningen, og til sidst var Raymond Poulidor den eneste, der kunne følge Merckx. Belgieren vandt foran den 38-årige franskmand. Mariano Martínez tog bronze den 25. august 1974. Det var Merckx’ tredje verdensmestertitel hos de professionelle.',
+          'I den samtidige omtale stod især Merckx’ sejr og Poulidors præstation frem. Der var altså et helt cykelløb omkring Maertens’ uheld, med angreb, forfølgelse og en afgørende finale.',
+          'For Maertens blev dagen hængende ved noget langt mindre: en dunk, han havde taget imod undervejs. Resultatlisten kan fortælle, hvem der vandt. Den kan ikke fortælle os, hvad der var i den.'
+        ]]
+      ]
+    },
+    en: {
+      title: 'What happened to Freddy Maertens in Montréal?',
+      description: 'Freddy Maertens abandoned the 1974 World Championships in Montréal and later spoke of a suspicious bottle. The race is documented; the sabotage claim remains his account.',
+      deck: 'He remembered a bottle and the stomach trouble that followed. The result is certain. The explanation for his abandonment is not.',
+      sections: [
+        ['The bottle that kept returning', [
+          'Freddy Maertens remembered a bottle. It had been handed to him during the 1974 World Championships in Montréal, and in his later account that was where the race went wrong. Stomach trouble followed. He abandoned a championship he believed he had the legs to win.',
+          'A bottle is among the most ordinary objects in a bicycle race. A rider takes it, drinks and returns it to the cage. That ordinariness may be why this one kept returning whenever Maertens spoke about his career.',
+          'We must keep track of who says what. Maertens abandoned and Eddy Merckx won: those facts belong to the race. The suggestion that something was put in the bottle is Maertens’s later account. That distinction easily disappears when the story is retold.'
+        ]],
+        ['The Belgians brought unfinished business', [
+          'The previous year’s championship in Barcelona had ended in Belgian argument. Maertens led out the sprint for Merckx, but Merckx could not come past. Felice Gimondi could. The Italian won, Maertens finished second and accusations travelled between the Belgian camps afterwards.',
+          'Canada therefore did not begin with a blank sheet. There was a national team, but also the interests of the ordinary trade teams. Merckx and Maertens each had an opportunity and their own people around them. A Belgian jersey did not automatically remove the competition between them.',
+          'In Montréal Bernard Thévenet attacked alone. Maertens and the Italian Costantino Conti went after him. They did not reach Thévenet, but remained ahead of the peloton. The Belgians had agreed not to chase a compatriot. With Maertens up the road, Merckx had to wait.',
+          'Then severe stomach trouble took Maertens out of the race. His day ended there. For everyone else, the pursuit continued.'
+        ]],
+        ['The explanation came later', [
+          'In a 2011 interview Maertens gave his version. His own soigneur, Jef D’Hont, had supposedly left his post to eat and asked another helper to hand over a bottle. That helper was Gust Naessens, who was associated with Merckx.',
+          'Maertens also said that Naessens later worked for him and that he asked him about Montréal. According to Maertens, Naessens then admitted putting something in the drink to slow him down.',
+          'It is a serious accusation, but the interview contains Maertens’s retelling of the conversation. It is not an independently documented confession from Naessens. Repeating the story years later does not by itself make it more certain.',
+          'Maertens maintained the account. When KOERS interviewed him in 2026, he again chose Montréal as the race he would like to ride once more. More than fifty years later, he still called it his greatest disappointment.',
+          'The memory can be told without treating the case as solved. None of the material examined contains an independent inquiry establishing what was in the bottle. Nor does Maertens’s account document any order from Merckx.'
+        ]],
+        ['The race continued', [
+          'Merckx and Herman Van Springel could now join the pursuit. Thévenet was caught in the finale, and Raymond Poulidor was eventually the only rider able to follow Merckx. The Belgian won ahead of the 38-year-old Frenchman, with Mariano Martínez taking bronze on 25 August 1974. It was Merckx’s third professional world title.',
+          'Contemporary coverage concentrated on Merckx’s victory and Poulidor’s performance. There was an entire bicycle race around Maertens’s misfortune, with attacks, pursuit and a decisive finale.',
+          'For Maertens, the day remained attached to something much smaller: a bottle accepted during the race. The result sheet can tell us who won. It cannot tell us what was in it.'
+        ]]
+      ]
+    }
+  },
   'haandslyng-kabiner-144-timer-forum': {
     image: forumSixDay,
     year: '1934–1939',

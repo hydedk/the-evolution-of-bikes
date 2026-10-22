@@ -73,6 +73,8 @@ import coppiMalariaImage from '../assets/stories/coppi-krigsfange/fausto-coppi-1
 import riderMechanicImage from '../assets/stories/eugene-christophe-1913/eugene-christophe-1912.jpg';
 import micheleFerrariImage from '../assets/stories/michele-ferrari-traening-doping/traeningsmaaling-1990erne-illustration.png';
 import forumSixDayImage from '../assets/stories/haandslyng-kabiner-144-timer-forum/forum-biludstilling-1926-holger-damgaard.jpg';
+import maertensMontrealImage from '../assets/stories/maertens-montreal-1974/maertens-laenen-montreal-1974-maurice-terryn.jpg';
+import colnagoC35Image from '../assets/stories/colnago-c35-ferrari-1989/colnago-c35-workshop-illustration.png';
 
 export type StoryMeta = {
   slug: string;
@@ -90,7 +92,9 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'colnago-c35-ferrari-1989': 'mechanics',
   'haandslyng-kabiner-144-timer-forum': 'race',
+  'maertens-montreal-1974': 'race',
   'michele-ferrari-traening-doping': 'people',
   'jan-van-hout-timerekord-1933': 'people',
   'rytteren-sin-egen-mekaniker': 'mechanics',
@@ -189,6 +193,8 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const stories: StoryMeta[] = [
+  { slug: 'colnago-c35-ferrari-1989', type: 'historie', year: '1986–1989', title: 'Colnago C35: Da Ferrari-projektet blev til en cykel, man kunne købe', text: 'Colnago og Ferrari begyndte et udviklingsarbejde i 1986. Tre år senere gjorde C35 kulfiberen til et salgsstel og indledte Colnagos C-serie.', image: colnagoC35Image, periods: ['1980-1989'], topics: ['colnago', 'ferrari', 'c35', 'kulfiber', 'rammebygning'], relatedBikes: ['colnago-super-thron', 'colnago-1993-tange-prestige'], relatedComponents: [] },
+  { slug: 'maertens-montreal-1974', type: 'historie', year: '1974', title: 'Hvad skete der med Freddy Maertens i Montréal?', text: 'Freddy Maertens udgik af VM i Montréal og fortalte senere om en mistænkelig drikkedunk. Resultatet er sikkert; forklaringen er det ikke.', image: maertensMontrealImage, periods: ['1970-1979'], topics: ['vm', 'freddy-maertens', 'eddy-merckx', 'montreal', 'myte-og-virkelighed'], relatedBikes: [], relatedComponents: [] },
   { slug: 'haandslyng-kabiner-144-timer-forum', type: 'historie', year: '1934–1939', title: 'Håndslyng, kabiner og 144 timer i Forum', text: 'Forums små kabiner, parløbets arbejdsdeling og seks døgn på banen fortæller, hvordan det københavnske seksdagesløb fungerede i 1930’erne.', image: forumSixDayImage, periods: ['1930-1939'], topics: ['seksdagesloeb', 'forum', 'banecykling', 'haandslyng', 'koebenhavn'], relatedBikes: [], relatedComponents: [] },
   { slug: 'michele-ferrari-traening-doping', type: 'historie', year: '1990–2012', title: 'Michele Ferrari, træningslæren og dopingæraen', text: 'Michele Ferrari gjorde træningen målbar og blev siden livsvarigt udelukket af USADA. Historien følger forskellen mellem målinger, forklaringer og dokumenterede dopingforhold.', image: micheleFerrariImage, periods: ['1990-1999', '2000-2009', '2010-2019'], topics: ['michele-ferrari', 'træning', 'doping', 'lance-armstrong', 'usada'], relatedBikes: [], relatedComponents: [] },
   {"slug":"jan-van-hout-timerekord-1933",image:janVanHoutImage,"type":"historie","year":"1933–1945","title":"Jan van Hout og de 44.588 meter","text":"Jan van Hout kørte 44.588 meter på en time i 1933. Striden om rekorden fulgte ham; siden lukkede han sin café og gik ind i modstandsarbejdet.","periods":["1930-1939","1940-1949"],"topics":["jan-van-hout","timerekord","banecykling","modstand"],"relatedBikes":[],"relatedComponents":[]},

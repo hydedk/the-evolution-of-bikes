@@ -37,6 +37,8 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'colnago-c35-ferrari-1989': { period: '1980-1989', primary: 'teknik', secondary: ['menneskene-bag', 'cykelkultur'] },
+  'maertens-montreal-1974': { period: '1970-1979', primary: 'loeb-og-store-oejeblikke', secondary: ['ryttere', 'samfund-og-tidsaand'] },
   'haandslyng-kabiner-144-timer-forum': { period: '1930-1939', primary: 'cykelkultur', secondary: ['loeb-og-store-oejeblikke', 'samfund-og-tidsaand'] },
   'michele-ferrari-traening-doping': { period: '1990-1999', primary: 'kost-traening-og-videnskab', secondary: ['samfund-og-tidsaand', 'menneskene-bag'] },
   'jan-van-hout-timerekord-1933': { period:'1930-1939', primary:'ryttere', secondary:['samfund-og-tidsaand'] },

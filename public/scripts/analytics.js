@@ -62,7 +62,10 @@
   }
 
   function choose(action) {
-    const value = { statistics: action === 'granted' && banner.querySelector('[data-statistics-consent]').checked, ads: action === 'granted' && banner.querySelector('[data-ads-consent]').checked };
+    const value = {
+      statistics: action === 'all' || (action === 'granted' && banner.querySelector('[data-statistics-consent]').checked),
+      ads: action === 'all' || (action === 'granted' && banner.querySelector('[data-ads-consent]').checked),
+    };
     try { localStorage.setItem(key, JSON.stringify({ value, expires: Date.now() + lifetime })); }
     catch { /* The current choice still applies even when storage is blocked. */ }
     banner.hidden = true;

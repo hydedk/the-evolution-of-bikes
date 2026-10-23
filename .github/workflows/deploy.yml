@@ -55,7 +55,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: pnpm
+          # Dependency installation is fast; avoid the package-cache egress timeout.
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Cache Astro image assets

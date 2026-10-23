@@ -5,8 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # 07:17 UTC = 08:17 CET / 09:17 CEST; discovery uses Europe/Copenhagen.
-    - cron: '17 7 * * *'
+    # First attempt 07:17 UTC (08:17 CET / 09:17 CEST), then recovery attempts.
+    # A live deployment stamp prevents repeated image processing/builds.
+    - cron: '17,37,57 7-11 * * *'
 
 permissions:
   contents: read
@@ -18,7 +19,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  promotion-check:
+    runs-on: ubuntu-latest
+    outputs:
+      required: ${{ steps.live.outputs.required }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check live deployment
+        id: live
+        run: node scripts/promotion-deployment.mjs check
+
   build:
+    needs: promotion-check
+    if: github.event_name != 'schedule' || needs.promotion-check.outputs.required == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -44,13 +62,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-astro-images-v1-${{ hashFiles('pnpm-lock.yaml', 'astro.config.mjs') }}-
       - name: Check promotion rules
-        run: node scripts/test-story-promotion.mjs
+        run: |
+          node scripts/test-story-promotion.mjs
+          node scripts/test-promotion-deployment.mjs
       - name: Build
         run: pnpm build
         env:
           PUBLIC_SUPABASE_URL: https://fmxiyfhncvhnwzwipnxu.supabase.co
           PUBLIC_SUPABASE_ANON_KEY: ${{ vars.PUBLIC_SUPABASE_ANON_KEY }}
           PUBLIC_STORY_ADMIN_URL: https://fmxiyfhncvhnwzwipnxu.supabase.co/functions/v1/admin-story-submissions
+      - name: Stamp validated deployment
+        run: node scripts/promotion-deployment.mjs write
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:

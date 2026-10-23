@@ -1,55 +1,63 @@
 # Daglig fremhævelse
 
-Artikeloverblik.md i _vintage/redaktion er fortsat den autoritative kalender.
-Ingen datoer eller godkendelser er indlæst endnu. storyPromotions.json er et
-begrænset build-udtræk, ikke en ny redaktionel kalender.
+`_vintage/redaktion/Artikeloverblik.md` er den autoritative kalender.
+`src/data/storyPromotions.json` er et begrænset build-udtræk.
 
-Ved klargøring af de syv historier:
-1. Opret DA/EN-siderne med eksisterende komponenter og metadata i allStories i stories.ts.
-2. Registrér hvert historie-ID og slug i src/data/storyPromotions.json med dato
-   fra Artikeloverblik.md og approved: false. Gør dette i samme ændring som metadata,
-   så historien ikke lækker til oversigterne. enabled skal forblive false nu.
-3. Registrér perioder, temaer og løbsrelationer på forhånd. Brug den filtrerede
-   stories-liste til visninger; allStories er kun det komplette metadataregister.
-4. Kør build. audit-promotions stopper også hårdkodede links til ventende historier.
-5. Godkend siderne og fremhævelsesdatoerne separat. approved må først sættes true
-   efter brugerens godkendelse. En ændret artikel skal vurderes igen.
+## Klargøring og godkendelse
 
-Når aktivering senere godkendes: sæt enabled true og tilføj dagligt schedule til
-DET EKSISTERENDE deploy-workflow. Det er ikke ændret i denne opgave. Rebuild bruger
-Europe/Copenhagen. GitHub schedules kan være forsinkede; vælg et tidspunkt efter
-ønsket dansk datoskift. Ingen API-nøgle kræves til fremhævelse. Et fejlet build
-må ikke deployes. Et nyt build samme dato giver samme resultat. Ingen køfiler skrives.
+1. Opret danske og engelske artikelsider og metadata i `allStories`.
+2. Registrér historie-ID, slug og kalenderdato i `storyPromotions.json` med
+   `approved: false` i samme ændring. Bevar den aktive plans `enabled: true`.
+3. Registrér perioder og temaer. Offentlige oversigter bruger den filtrerede `stories`-liste.
+4. Kør produktionsbygning, kvalitetskontrol og visuel kontrol.
+5. Sæt først `approved: true` efter brugerens udgivelsesgodkendelse.
+   Bevar tidligere entries: fjernes de, bliver historien vist uden datofilter.
 
-En godkendt og datomoden historie kommer først i historielisten; eksisterende
-rækkefølge bevares ellers. Forside, EN, arkiv, temaer, perioder og lokale løbs-
-relationer bruger denne liste. Direkte artikelroutes og sitemap holdes tilgængelige.
-Hvis et planlagt entry mangler metadata, har forkert dato, dublet-ID eller dubletdato,
-stopper build. Kun én fremhævelse pr. dato understøttes i denne første version.
+De syv historier blev godkendt 22. oktober 2026. Deres datoer er 23., 24. og
+26.–30. oktober. Ingen er planlagt den 25.; der indsættes ingen erstatning.
+Direkte DA/EN-adresser og sitemap er tilgængelige før fremhævelsesdatoen.
 
-Løbssiderne under /loeb/ forbliver lokale arbejdsfiler: produktionsbuild fjerner
-HTML-mappen før sitemap genereres. Arbejdsfilerne og dev-visningen ændres ikke.
-Deres importerede billeder kan stadig ligge som ikke-linkede build-assets.
+## Automatisk drift
 
-Redaktionel publiceret-status sættes først efter faktisk deployment af artikelsiderne.
-Fremhævelse ændrer ikke publiceret-status. Efter publicering følges projektets
-sædvanlige efterregistrering; automatiseret tilbageskrivning til OneDrive er ikke indført.
+GitHub starter første forsøg kl. 07:17 UTC (09:17 dansk sommertid / 08:17
+vintertid). Reservestarter ligger hvert 20. minut til og med 11:57 UTC.
+Cron: `17,37,57 7-11 * * *`. GitHub kan forsinke eller miste planlagte starter;
+flere forsøg mindsker risikoen, men giver ingen garanti for et præcist tidspunkt.
 
-Kontrol: node scripts/test-story-promotion.mjs og pnpm build.
+`promotion-check` læser `https://teob.dk/promotion-deployment.json` og sammenligner
+bygningens danske dato og Git-commit. Er dagens commit allerede live, springes
+build og deployment over ved planlagte starter. Manglende eller ugyldigt mærke
+og netværksfejl tillader en genbygning. Push og manuel Run workflow genbygger altid.
+Mærket skrives først efter build, SEO-kontrol og fremhævelseskontrol er bestået.
+Billedcachen genbruges ved nødvendige bygninger; reservestarter uden bygning
+behandler ingen billeder. Ingen nye secrets kræves.
 
-Lokal kontrol 22. oktober 2026: enhedskontroller bestået; fuldt build med tom,
-deaktiveret plan bestået (333 offentlige sider). En eksisterende DA/EN-historie
-blev midlertidigt sat til 2099 i en lokal test: direkte sider blev bevaret,
-mens offentlige discovery-links forsvandt. Testen bestod. Planen blev gendannet
-til enabled: false og entries: [], og normalt build blev kørt igen med succes.
-Løbs-HTML og løbsadresser i sitemap var fraværende. Ingen workflow ændret.
+Fremhævelse bruger `Europe/Copenhagen`. En godkendt og datomoden historie
+kommer først; tidligere rækkefølge bevares ellers. Forside, DA/EN-arkiv,
+perioder og temaer følger listen. Ugyldige planer og for tidlige links stopper
+build; deploy kræver et bestået build. Kun én historie pr. dato understøttes.
 
+## Løb og registrering
 
-## Godkendt aktivering 22. oktober 2026
+Løbsoversigten og løbssiderne er arbejdsfiler. Produktionsbygningen fjerner
+`dist/loeb` før sitemap, og `audit-promotions.mjs` stopper, hvis løbssider
+alligevel indgår. Kildearbejdsfiler må ikke medtages ved udgivelse.
 
-Brugeren har godkendt publicering af de syv sider og daglig fremhævelse.
-Planens syv entries er godkendt, og enabled er true. Det eksisterende deploy-
-workflow genbygger dagligt 07:17 UTC (08:17 vintertid / 09:17 sommertid).
-Datoerne følger Artikeloverblik: 23., 24. og 26.–30. oktober. Den 25. oktober
-er ingen af disse syv historier planlagt; der indsættes ingen automatisk erstatning.
-Løbssider og løbsoversigt er fortsat arbejdsfiler og holdes ude af udgivelsen.
+Publiceret-status følger faktisk deployment af artikelsiderne. Daglig fremhævelse
+ændrer ikke denne status. Der skrives ikke automatisk tilbage til OneDrive.
+Efter ny artikelpublicering følges projektets sædvanlige efterregistrering.
+
+## Kontrol og fejlsøgning
+
+Kør `node scripts/test-story-promotion.mjs`,
+`node scripts/test-promotion-deployment.mjs` og `pnpm build`.
+På GitHub: Actions → Deploy to GitHub Pages. En kørsel med event `schedule`
+viser en automatisk start; `push` og `workflow_dispatch` beviser ikke dette.
+Et sprunget build er normalt, når `promotion-check` bekræfter dagens version.
+Ved fejl: læs det fejlede trin; brug Run workflow efter rettelse. Kontrollér
+forside, oversigter, mærkefil og at `/loeb/` stadig giver 404.
+
+23. oktober manglede morgenens schedule-event, selv om workflowet var aktivt
+på main. Der blev ikke fundet en fejlet bygning. Cron blev ændret for at
+registrere tidsplanen på ny og give reservestarter. GitHubs interne årsag kan
+ikke udledes af repositoryets logs.

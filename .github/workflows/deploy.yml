@@ -26,6 +26,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            /scripts/promotion-deployment.mjs
+            /src/data/storyPromotion.mjs
+          sparse-checkout-cone-mode: false
       - name: Setup Node
         uses: actions/setup-node@v4
         with:

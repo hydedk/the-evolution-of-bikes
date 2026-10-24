@@ -19,10 +19,17 @@ Direkte DA/EN-adresser og sitemap er tilgængelige før fremhævelsesdatoen.
 
 ## Automatisk drift
 
-GitHub starter første forsøg kl. 07:17 UTC (09:17 dansk sommertid / 08:17
-vintertid). Reservestarter ligger hvert 20. minut til og med 11:57 UTC.
-Cron: `17,37,57 7-11 * * *`. GitHub kan forsinke eller miste planlagte starter;
-flere forsøg mindsker risikoen, men giver ingen garanti for et præcist tidspunkt.
+Målet er synlig fremhævelse omkring kl. 09:17 dansk tid. GitHub forsøger
+kl. 09:15, med reserver kl. 09:20 og 09:25, alle i `Europe/Copenhagen`.
+De tre cron-entries er særskilte: `15 9 * * *`, `20 9 * * *`, `25 9 * * *`.
+Det giver omtrent to minutter til bygning og deployment og følger automatisk
+sommer- og vintertid. Den gamle UTC-plan ville starte kl. 08:17 om vinteren.
+
+GitHub kan forsinke eller miste planlagte starter; dette er et mål og ingen
+garanti for et præcist klokkeslæt. Kørslens titel viser den udløsende cron.
+Kontroljobbets log og Summary viser event, cron, tidszone, faktisk UTC-start,
+dansk dato og beslutningen om genbygning. En manglende kørsel er ikke et
+bevis på en fejl i artikelkode eller cache.
 
 `promotion-check` læser `https://teob.dk/promotion-deployment.json` og sammenligner
 bygningens danske dato og Git-commit. Er dagens commit allerede live, springes
@@ -61,3 +68,12 @@ forside, oversigter, mærkefil og at `/loeb/` stadig giver 404.
 på main. Der blev ikke fundet en fejlet bygning. Cron blev ændret for at
 registrere tidsplanen på ny og give reservestarter. GitHubs interne årsag kan
 ikke udledes af repositoryets logs.
+
+
+24. oktober blev kun én automatisk kørsel registreret: 13:59:41 dansk tid,
+med vellykket deployment 14:01:09. Den gamle cron var gyldig POSIX-syntaks;
+GitHubs API viser ikke, om dette var en forsinket tidligere trigger eller
+sidste reservestart. Den interne årsag til de manglende morgenstarter er
+ikke dokumenteret. Tidsplanen er ændret til tre særskilte morgenforsøg med
+udtrykkelig dansk tidszone og bedre diagnoselogning; ingen aftenkørsel eller
+løbsudgivelse indføres som en del af den permanente løsning.

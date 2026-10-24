@@ -1,13 +1,19 @@
 name: Deploy to GitHub Pages
+run-name: "Pages · ${{ github.event_name }} · ${{ github.event.schedule || github.sha }}"
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # First attempt 07:17 UTC (08:17 CET / 09:17 CEST), then recovery attempts.
-    # A live deployment stamp prevents repeated image processing/builds.
-    - cron: '17,37,57 7-11 * * *'
+    # Allow about two minutes for build/deploy; target visibility around 09:17.
+    # Keep separate morning triggers and handle DST in the scheduler itself.
+    - cron: '15 9 * * *'
+      timezone: Europe/Copenhagen
+    - cron: '20 9 * * *'
+      timezone: Europe/Copenhagen
+    - cron: '25 9 * * *'
+      timezone: Europe/Copenhagen
 
 permissions:
   contents: read
@@ -38,6 +44,9 @@ jobs:
       - name: Check live deployment
         id: live
         run: node scripts/promotion-deployment.mjs check
+        env:
+          PROMOTION_EVENT: ${{ github.event_name }}
+          PROMOTION_SCHEDULE: ${{ github.event.schedule }}
 
   build:
     needs: promotion-check

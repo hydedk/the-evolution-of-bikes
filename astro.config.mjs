@@ -191,6 +191,7 @@ const socialMetadata = {
       const outputDir = fileURLToPath(dir);
       // Race pages remain local work files. Never ship their HTML or add them to sitemap.
       await rm(join(outputDir, 'loeb'), { recursive: true, force: true });
+      await rm(join(outputDir, 'en', 'races'), { recursive: true, force: true });
       const htmlFiles = [];
       const sitemapUrls = [];
 

@@ -16,6 +16,7 @@ async function collect(dir) {
 }
 // A direct existence check also works with Windows file URLs.
 const top = await readdir(root);
+if ((await readdir(new URL('en/',root))).includes('races')) throw new Error('English race work pages must not ship');
 if(top.includes('loeb')) throw new Error('Race work pages must not ship');
 const { fileURLToPath } = await import('node:url');
 await collect(fileURLToPath(root));
@@ -61,5 +62,5 @@ if (latest) for (const [home,prefix] of [['','historier'],['en/','en/stories']])
   if (!html.includes(`/${prefix}/${latest.slug}/`)) throw new Error('Latest promotion missing from homepage');
 }
 const sitemap = await readFile(new URL('sitemap.xml',root),'utf8');
-if(sitemap.includes('/loeb/')) throw new Error('Race work pages in sitemap');
+if(sitemap.includes('/loeb/') || sitemap.includes('/en/races/')) throw new Error('Race work pages in sitemap');
 console.log('Promotion output check passed: direct DA/EN pages, no early discovery links, no race work pages.');

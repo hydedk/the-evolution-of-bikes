@@ -42,6 +42,48 @@
       "slug": "willy-falck-hansen-forum-1934",
       "date": "2026-10-30",
       "approved": true
+    },
+    {
+      "id": "hist-001464",
+      "slug": "arndt-schleicher-madrid-2005",
+      "date": "2026-10-25",
+      "approved": true
+    },
+    {
+      "id": "hist-001747",
+      "slug": "ivy-thorp-ctc",
+      "date": "2026-10-31",
+      "approved": true
+    },
+    {
+      "id": "hist-000197",
+      "slug": "jacques-moujica-1949-1950",
+      "date": "2026-11-01",
+      "approved": true
+    },
+    {
+      "id": "hist-000202",
+      "slug": "simplex-super-lj",
+      "date": "2026-11-02",
+      "approved": true
+    },
+    {
+      "id": "hist-000458",
+      "slug": "krankboksmuffen-foer-1950",
+      "date": "2026-11-03",
+      "approved": true
+    },
+    {
+      "id": "hist-000264",
+      "slug": "werner-grundahl-forum-1936",
+      "date": "2026-11-04",
+      "approved": true
+    },
+    {
+      "id": "hist-000199",
+      "slug": "maertens-saronni-moser-vm-1981",
+      "date": "2026-11-05",
+      "approved": true
     }
   ]
 }

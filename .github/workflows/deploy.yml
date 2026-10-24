@@ -75,6 +75,10 @@ jobs:
           key: ${{ runner.os }}-astro-images-v1-${{ hashFiles('pnpm-lock.yaml', 'astro.config.mjs') }}-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-astro-images-v1-${{ hashFiles('pnpm-lock.yaml', 'astro.config.mjs') }}-
+            ${{ runner.os }}-astro-images-v1-
+      - name: Require restored image cache
+        run: |
+          node -e "const fs = require('node:fs'); const p = 'node_modules/.astro/assets'; const n = fs.existsSync(p) ? fs.readdirSync(p).filter(f => /\.(avif|gif|jpe?g|png|svg|webp)$/i.test(f)).length : 0; console.log('Restored image variants:', n); if (!n) { console.error('Image cache is missing. Stop before regenerating the existing image archive.'); process.exit(1); }"
       - name: Check promotion rules
         run: |
           node scripts/test-story-promotion.mjs

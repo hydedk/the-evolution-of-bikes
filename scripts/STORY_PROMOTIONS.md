@@ -13,8 +13,11 @@
 5. Sæt først `approved: true` efter brugerens udgivelsesgodkendelse.
    Bevar tidligere entries: fjernes de, bliver historien vist uden datofilter.
 
-De syv historier blev godkendt 22. oktober 2026. Deres datoer er 23., 24. og
-26.–30. oktober. Ingen er planlagt den 25.; der indsættes ingen erstatning.
+De første syv historier blev godkendt 22. oktober 2026. Deres datoer er 23., 24. og
+26.–30. oktober. Den 24. oktober godkendte brugeren yderligere syv historier:
+hist-001464 den 25. oktober, hist-001747 den 31. oktober, hist-000197 den
+1. november, hist-000202 den 2. november, hist-000458 den 3. november,
+hist-000264 den 4. november og hist-000199 den 5. november, alle i 2026.
 Direkte DA/EN-adresser og sitemap er tilgængelige før fremhævelsesdatoen.
 
 ## Automatisk drift
@@ -39,6 +42,12 @@ Mærket skrives først efter build, SEO-kontrol og fremhævelseskontrol er best�
 Billedcachen genbruges ved nødvendige bygninger; reservestarter uden bygning
 behandler ingen billeder. Ingen nye secrets kræves.
 
+GitHub gendanner først billedcache med samme konfiguration og derefter en
+tidligere cache fra samme billedcache-version. Astros indholdshash og
+transformationshash afgør, hvilke billedvarianter der kan genbruges. Nye eller
+ændrede billeder og størrelser behandles ved behov. Mangler billedcachen helt,
+stopper workflowet før bygning, så det gamle billedarkiv ikke genberegnes.
+
 Fremhævelse bruger `Europe/Copenhagen`. En godkendt og datomoden historie
 kommer først; tidligere rækkefølge bevares ellers. Forside, DA/EN-arkiv,
 perioder og temaer følger listen. Ugyldige planer og for tidlige links stopper
@@ -47,7 +56,7 @@ build; deploy kræver et bestået build. Kun én historie pr. dato understøttes
 ## Løb og registrering
 
 Løbsoversigten og løbssiderne er arbejdsfiler. Produktionsbygningen fjerner
-`dist/loeb` før sitemap, og `audit-promotions.mjs` stopper, hvis løbssider
+`dist/loeb` og `dist/en/races` før sitemap, og `audit-promotions.mjs` stopper, hvis løbssider
 alligevel indgår. Kildearbejdsfiler må ikke medtages ved udgivelse.
 
 Publiceret-status følger faktisk deployment af artikelsiderne. Daglig fremhævelse

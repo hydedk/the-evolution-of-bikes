@@ -1,3 +1,4 @@
+import { scheduledStoriesBatch20261025 } from './scheduledStoriesBatch20261025';
 import promotionPlan from './storyPromotions.json';
 import { selectPromotedStories } from './storyPromotion.mjs';
 import janVanHoutImage from '../assets/stories/jan-van-hout-timerekord-1933/jan-van-hout-buffalo-1933.jpg';
@@ -101,6 +102,13 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+  'arndt-schleicher-madrid-2005': 'race',
+  'ivy-thorp-ctc': 'people',
+  'jacques-moujica-1949-1950': 'people',
+  'simplex-super-lj': 'mechanics',
+  'krankboksmuffen-foer-1950': 'mechanics',
+  'werner-grundahl-forum-1936': 'people',
+  'maertens-saronni-moser-vm-1981': 'race',
   'floyd-landis-us-postal': 'people',
   'ugo-de-rosa-cusano-milanino': 'mechanics',
   'alcyon-edmond-gentil': 'mechanics',
@@ -209,6 +217,13 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const allStories: StoryMeta[] = [
+{ slug: "arndt-schleicher-madrid-2005", type: 'historie' as const, year: "2005", title: "Verdensmesteren trak for Schleicher", text: "Ved VM i Madrid i 2005 hjalp Judith Arndt sin holdkammerat Regina Schleicher til regnbuetrøjen. Først skulle hun selv tilbage i løbet.", image: scheduledStoriesBatch20261025["arndt-schleicher-madrid-2005"].image, periods: ["2000-2009"], topics: ["kvindecykling", "vm", "judith-arndt", "regina-schleicher"], relatedBikes: [], relatedComponents: [] },
+{ slug: "ivy-thorp-ctc", type: 'historie' as const, year: "1973\u20131988", title: "Ivy Thorp og arbejdet bag klubturen", text: "Ivy Thorp blev CTC-rådets første kvindelige formand i 1973. Et jubilæumsoptog og minderne fra Devon viser noget af arbejdet bag titlen.", image: scheduledStoriesBatch20261025["ivy-thorp-ctc"].image, periods: ["1970-1979"], topics: ["kvindecykling", "klubliv", "ivy-thorp", "ctc"], relatedBikes: [], relatedComponents: [] },
+{ slug: "jacques-moujica-1949-1950", type: 'historie' as const, year: "1949\u20131950", title: "Jacques Moujicas store sæson og sidste rejse", text: "Jacques Moujica vandt Bordeaux–Paris i 1949. Året efter sluttede hans korte karriere i en bilulykke sammen med Jean Rey.", image: scheduledStoriesBatch20261025["jacques-moujica-1949-1950"].image, periods: ["1940-1949"], topics: ["jacques-moujica", "bordeaux-paris", "motorpace"], relatedBikes: [], relatedComponents: [] },
+{ slug: "simplex-super-lj", type: 'historie' as const, year: "1972\u20131976", title: "Simplex satte metallet tilbage i forgrunden", text: "Med Super LJ viste Simplex en ny letmetalgruppe i 1972. Forskifteren AV.326 gør forskellen mellem katalogets løfter og den praktiske mekanik synlig.", image: scheduledStoriesBatch20261025["simplex-super-lj"].image, periods: ["1970-1979"], topics: ["simplex", "forskifter", "materialer"], relatedBikes: [], relatedComponents: [] },
+{ slug: "krankboksmuffen-foer-1950", type: 'historie' as const, year: "1913", title: "Krankboksen skulle være lige, før lakken kom på", text: "James-kataloget fra 1913 følger stålrammen gennem lodning, rensning og opretning. Ved krankboksen mødes de krav, som lakken senere skjuler.", image: scheduledStoriesBatch20261025["krankboksmuffen-foer-1950"].image, periods: ["1900-1920"], topics: ["stelbygning", "muffer", "slaglodning"], relatedBikes: [], relatedComponents: [] },
+{ slug: "werner-grundahl-forum-1936", type: 'historie' as const, year: "1933\u20131939", title: "Grundahl vandt Forum med Albert Billiet", text: "Werner Grundahl kom fra landevejens amatørfelt og vandt Københavns seksdagesløb med belgiske Albert Billiet i 1936.", image: scheduledStoriesBatch20261025["werner-grundahl-forum-1936"].image, periods: ["1930-1939"], topics: ["werner-grundahl", "albert-billiet", "forum", "banecykling"], relatedBikes: [], relatedComponents: [] },
+{ slug: "maertens-saronni-moser-vm-1981", type: 'historie' as const, year: "1981", title: "Italienernes spurt og Maertens i Prag", text: "Italien havde flere muligheder i VM-finalen i Prag i 1981. Alligevel tog Freddy Maertens guldet foran Giuseppe Saronni og Bernard Hinault.", image: scheduledStoriesBatch20261025["maertens-saronni-moser-vm-1981"].image, periods: ["1980-1989"], topics: ["freddy-maertens", "giuseppe-saronni", "francesco-moser", "vm"], relatedBikes: [], relatedComponents: [] },
   { slug: 'floyd-landis-us-postal', type: 'historie', year: '2006–2012', title: 'Fra Landis-sagen til afsløringerne af US Postal', text: 'Floyd Landis mistede Tour-sejren fra 2006. Fire år senere blev hans oplysninger en del af sagen, der væltede Lance Armstrongs resultater.', image: floydLandisImage, periods: ['2000-2009', '2010-2019'], topics: ['doping', 'floyd-landis', 'lance-armstrong', 'tour-de-france', 'us-postal'], relatedBikes: [], relatedComponents: [] },
   { slug: 'ugo-de-rosa-cusano-milanino', type: 'historie', year: '1953–1976', title: 'Ugo De Rosa og værkstedet i Cusano Milanino', text: 'Ugo De Rosa begyndte i 1953 og byggede sig fra et lille værksted ind i professionel cykelsport.', image: ugoDeRosaImage, periods: ['1950-1959', '1960-1969', '1970-1979'], topics: ['de-rosa', 'rammebygning', 'eddy-merckx', 'italien', 'værksted'], relatedBikes: [], relatedComponents: [] },
   { slug: 'alcyon-edmond-gentil', type: 'historie', year: '1902–1906', title: 'Bruddet der blev til Alcyon', text: 'Edmond Gentil forlod Peugeot-miljøet og grundlagde Alcyon i 1902. Fire år senere brugte han landevejen som udstillingsvindue.', image: alcyonGentilImage, periods: ['1900-1920'], topics: ['alcyon', 'edmond-gentil', 'cykelindustri', 'frankrig', 'fabrikshold'], relatedBikes: [], relatedComponents: [] },

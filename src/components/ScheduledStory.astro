@@ -56,8 +56,9 @@ const addition = scheduledStoryAdditions[slug]?.[language];
   <main>
     <article>
       <header class:list={['hero', {
-        'portrait-hero': slug === 'jan-van-hout-timerekord-1933',
-        'compact-title': needsCompactTitle
+        'portrait-hero': slug === 'jan-van-hout-timerekord-1933' || ('portrait' in story && story.portrait),
+        'compact-title': needsCompactTitle,
+        'batch-title': 'portrait' in story
       }]}>
         <div class="hero-copy">
           <p class="eyebrow">{story.year} · {language === 'da' ? 'Historie' : 'Story'}</p>
@@ -66,7 +67,7 @@ const addition = scheduledStoryAdditions[slug]?.[language];
         </div>
         <figure>
           <OptimizedImage src={story.image} alt={imageAlt} widths={[640,960,1280]} sizes="(max-width: 850px) 100vw, 50vw" loading="eager" fetchpriority="high" />
-          <figcaption>{imageCredit}</figcaption>
+          <figcaption>{imageCredit}{'imageSource' in story && <> · <a href={story.imageSource}>{language === 'da' ? 'Billedside' : 'Image record'}</a> · <a href={story.imageLicenseUrl}>{story.imageLicense}</a></>}</figcaption>
         </figure>
       </header>
       <div class="article-grid">
@@ -100,4 +101,5 @@ const addition = scheduledStoryAdditions[slug]?.[language];
   main{background:var(--paper)} article{max-width:1440px;margin:auto}.hero{display:grid;grid-template-columns:1fr 1fr;min-height:760px}.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(3rem,7vw,8rem)}.eyebrow{color:var(--rust);font-size:.78rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.hero h1{max-width:760px;margin:.8rem 0 1.6rem;font:400 clamp(3.2rem,6.3vw,7rem)/.95 'Libre Caslon Display',serif}.deck{max-width:650px;font-size:clamp(1.05rem,1.6vw,1.35rem);line-height:1.65}.hero figure{display:flex;min-width:0;flex-direction:column;margin:0;background:#d8d8cf}.hero figure :global(picture),.hero figure :global(img){width:100%;height:100%;object-fit:cover}.hero figcaption{padding:.7rem 1rem;font-size:.72rem;line-height:1.35;background:#ded8ca}.article-grid{display:grid;grid-template-columns:minmax(160px,1fr) minmax(0,760px) minmax(160px,1fr);gap:2rem;padding:clamp(4rem,8vw,8rem) 1.5rem}.article-grid aside{display:flex;flex-direction:column;gap:1rem;color:var(--rust);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}.article-grid aside a{color:inherit}.body{grid-column:2}.body section+section{margin-top:4rem}.body h2{margin:0 0 1.5rem;font:400 clamp(2rem,4vw,3.25rem)/1.05 'Libre Caslon Display',serif}.body p{font-size:1.08rem;line-height:1.8}.article-visual{margin:2.5rem 0 4rem}.article-visual :global(picture),.article-visual :global(img){display:block;width:100%;height:auto}.article-visual figcaption{padding:.8rem 0;border-bottom:1px solid var(--line);color:#5d584e;font-size:.78rem;line-height:1.5}.sources{border-top:1px solid var(--line);padding-top:2rem}.sources a{color:var(--rust)}.sources .note{font-size:.85rem;color:#5d584e}@media(max-width:850px){.hero{grid-template-columns:1fr;min-height:0}.hero-copy{padding:5rem 1.25rem 3rem}.hero figure{min-height:480px}.article-grid{grid-template-columns:1fr;padding:4rem 1.25rem}.article-grid aside,.body{grid-column:1}.article-grid aside{flex-direction:row;justify-content:space-between}.body p{font-size:1rem}.article-visual{margin:2rem 0 3rem}}@media(max-width:520px){.hero h1{font-size:3rem}.hero figure{min-height:360px}}
   .hero.compact-title h1{max-width:100%;font-size:clamp(2.65rem,4.15vw,4.7rem);line-height:.98;overflow-wrap:anywhere;hyphens:auto}
   .hero.compact-title .hero-copy{padding-inline:clamp(2rem,5vw,5rem)}
+  .hero.batch-title h1{hyphens:manual;overflow-wrap:normal}
 </style>

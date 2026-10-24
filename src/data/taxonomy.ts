@@ -37,6 +37,13 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'arndt-schleicher-madrid-2005': { period: '2000-2009', primary: 'loeb-og-store-oejeblikke' },
+  'ivy-thorp-ctc': { period: '1970-1979', primary: 'samfund-og-tidsaand' },
+  'jacques-moujica-1949-1950': { period: '1940-1949', primary: 'ryttere' },
+  'simplex-super-lj': { period: '1970-1979', primary: 'teknik' },
+  'krankboksmuffen-foer-1950': { period: '1900-1920', primary: 'teknik' },
+  'werner-grundahl-forum-1936': { period: '1930-1939', primary: 'cykelkultur' },
+  'maertens-saronni-moser-vm-1981': { period: '1980-1989', primary: 'loeb-og-store-oejeblikke' },
   'floyd-landis-us-postal': { period: '2000-2009', primary: 'samfund-og-tidsaand' },
   'ugo-de-rosa-cusano-milanino': { period: '1960-1969', primary: 'menneskene-bag' },
   'alcyon-edmond-gentil': { period: '1900-1920', primary: 'menneskene-bag' },

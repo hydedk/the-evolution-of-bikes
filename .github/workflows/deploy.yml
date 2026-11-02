@@ -82,6 +82,7 @@ jobs:
       - name: Check promotion rules
         run: |
           node scripts/test-story-promotion.mjs
+          node scripts/test-approved-story-schedule.mjs
           node scripts/test-promotion-deployment.mjs
       - name: Build
         run: pnpm build

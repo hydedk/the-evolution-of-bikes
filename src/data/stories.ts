@@ -1,3 +1,5 @@
+import { approvedStories20261102 as releaseStories } from './approvedStories20261102';
+import { copenhagenDate } from './storyPromotion.mjs';
 import { scheduledStoriesBatch20261025 } from './scheduledStoriesBatch20261025';
 import promotionPlan from './storyPromotions.json';
 import { selectPromotedStories } from './storyPromotion.mjs';
@@ -102,6 +104,7 @@ export type StoryMeta = {
 export type StoryTrack = 'race' | 'people' | 'mechanics';
 
 const storyTracks: Record<string, StoryTrack> = {
+...Object.fromEntries(Object.entries(releaseStories).map(([slug,s]) => [slug,s.track as StoryTrack])),
   'arndt-schleicher-madrid-2005': 'race',
   'ivy-thorp-ctc': 'people',
   'jacques-moujica-1949-1950': 'people',
@@ -217,6 +220,7 @@ export const storyTrackFor = (story: Pick<StoryMeta, 'slug'>): StoryTrack =>
   storyTracks[story.slug] ?? 'race';
 
 export const allStories: StoryMeta[] = [
+...Object.entries(releaseStories).filter(([slug]) => slug !== 'alfonsina-strada-giro-1924').map(([slug,s]) => ({slug,type:'historie' as const,year:s.year,title:s.da.title,text:s.da.description,image:s.image,periods:s.periods,topics:[s.track === 'mechanics' ? 'teknik' : 'cykelhistorie',slug],relatedBikes:[],relatedComponents:[]})),
 { slug: "arndt-schleicher-madrid-2005", type: 'historie' as const, year: "2005", title: "Verdensmesteren trak for Schleicher", text: "Ved VM i Madrid i 2005 hjalp Judith Arndt sin holdkammerat Regina Schleicher til regnbuetrøjen. Først skulle hun selv tilbage i løbet.", image: scheduledStoriesBatch20261025["arndt-schleicher-madrid-2005"].image, periods: ["2000-2009"], topics: ["kvindecykling", "vm", "judith-arndt", "regina-schleicher"], relatedBikes: [], relatedComponents: [] },
 { slug: "ivy-thorp-ctc", type: 'historie' as const, year: "1973\u20131988", title: "Ivy Thorp og arbejdet bag klubturen", text: "Ivy Thorp blev CTC-rådets første kvindelige formand i 1973. Et jubilæumsoptog og minderne fra Devon viser noget af arbejdet bag titlen.", image: scheduledStoriesBatch20261025["ivy-thorp-ctc"].image, periods: ["1970-1979"], topics: ["kvindecykling", "klubliv", "ivy-thorp", "ctc"], relatedBikes: [], relatedComponents: [] },
 { slug: "jacques-moujica-1949-1950", type: 'historie' as const, year: "1949\u20131950", title: "Jacques Moujicas store sæson og sidste rejse", text: "Jacques Moujica vandt Bordeaux–Paris i 1949. Året efter sluttede hans korte karriere i en bilulykke sammen med Jean Rey.", image: scheduledStoriesBatch20261025["jacques-moujica-1949-1950"].image, periods: ["1940-1949"], topics: ["jacques-moujica", "bordeaux-paris", "motorpace"], relatedBikes: [], relatedComponents: [] },
@@ -356,6 +360,6 @@ export const allStories: StoryMeta[] = [
 ];
 
 // Only discovery is scheduled; direct article routes remain available.
-export const stories: StoryMeta[] = selectPromotedStories(allStories, promotionPlan);
+export const stories: StoryMeta[] = selectPromotedStories(allStories.map(s => s.slug === 'alfonsina-strada-giro-1924' && copenhagenDate() >= '2026-11-05' ? {...s,title:releaseStories[s.slug].da.title,text:releaseStories[s.slug].da.description,image:releaseStories[s.slug].image} : s), promotionPlan);
 
 export const storiesForPeriod = (period: string) => stories.filter((story) => story.periods.includes(period));

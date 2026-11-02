@@ -37,6 +37,14 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'pino-cerami-sene-sejre': { period: '1960-1969', primary: 'ryttere' },
+  'sadelpindens-diameter-staalrammer': { period: '1970-1979', primary: 'teknik' },
+  'thorvald-ellegaard-fra-fangel-til-verdensbanerne': { period: '1900-1920', primary: 'ryttere' },
+  'wattmaaleren-flyttede-laboratoriet-ud-paa-vejen': { period: '1980-1989', primary: 'kost-traening-og-videnskab' },
+  'coppi-koblet-lugano-1951': { period: '1950-1959', primary: 'loeb-og-store-oejeblikke' },
+  'forgaffelbygning-foer-1950': { period: '1900-1920', primary: 'teknik' },
+  'kay-werner-sagde-nej-til-par-nummer-et': { period: '1950-1959', primary: 'cykelkultur' },
+  'vito-di-tano-cykelcross': { period: '1970-1979', primary: 'ryttere' },
   'arndt-schleicher-madrid-2005': { period: '2000-2009', primary: 'loeb-og-store-oejeblikke' },
   'ivy-thorp-ctc': { period: '1970-1979', primary: 'samfund-og-tidsaand' },
   'jacques-moujica-1949-1950': { period: '1940-1949', primary: 'ryttere' },

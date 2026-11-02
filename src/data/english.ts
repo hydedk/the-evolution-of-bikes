@@ -1,9 +1,12 @@
+import { approvedStories20261102 as releaseStories } from './approvedStories20261102';
+import { copenhagenDate } from './storyPromotion.mjs';
 import { scheduledStoriesBatch20261025 } from './scheduledStoriesBatch20261025';
 import { scheduledStoriesBatch20261023 } from './scheduledStoriesBatch20261023';
 import { stories } from './stories';
 import { bikes } from './bikes';
 
 const storyCopy: Record<string, [string, string]> = {
+...Object.fromEntries(Object.entries(releaseStories).filter(([slug]) => slug !== 'alfonsina-strada-giro-1924').map(([slug,s]) => [slug,[s.en.title,s.en.description] as [string,string]])),
   ...Object.fromEntries(Object.entries(scheduledStoriesBatch20261025).map(([slug, story]) => [slug, [story.en.title, story.en.description] as [string, string]])),
   ...Object.fromEntries(Object.entries(scheduledStoriesBatch20261023).map(([slug, story]) => [slug, [story.en.title, story.en.description] as [string, string]])),
   'colnago-c35-ferrari-1989': ['Colnago C35: When the Ferrari project became a bicycle you could buy', 'Colnago and Ferrari began a development project in 1986. Three years later the C35 turned carbon into a production frame and opened Colnago’s C-series.'],
@@ -152,7 +155,7 @@ const englishYear = (year: string) => year
 
 export const englishStories = stories
   .filter((story) => storyCopy[story.slug])
-  .map((story) => ({ ...story, year: englishYear(story.year), title: storyCopy[story.slug][0], text: storyCopy[story.slug][1] }));
+  .map((story) => ({ ...story, year: englishYear(story.year), title: story.slug === 'alfonsina-strada-giro-1924' && copenhagenDate() >= '2026-11-05' ? releaseStories[story.slug].en.title : storyCopy[story.slug][0], text: story.slug === 'alfonsina-strada-giro-1924' && copenhagenDate() >= '2026-11-05' ? releaseStories[story.slug].en.description : storyCopy[story.slug][1] }));
 export const englishBikes = bikes.filter((bike) => bikeCopy[bike.slug]).map((bike) => {
   const [text, place, status] = bikeCopy[bike.slug];
   return { ...bike, text, place: place || bike.place, status, year: englishYear(bike.year) };

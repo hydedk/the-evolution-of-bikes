@@ -132,6 +132,30 @@
       "slug": "forgaffelbygning-foer-1950",
       "date": "2026-11-12",
       "approved": true
+    },
+    {
+      "id": "hist-000220",
+      "slug": "danguillaume-fredsloeb-1969",
+      "date": "2026-11-19",
+      "approved": true
+    },
+    {
+      "id": "hist-000254",
+      "slug": "stan-ockers-styrtet-i-antwerpen",
+      "date": "2026-11-15",
+      "approved": true
+    },
+    {
+      "id": "hist-000272",
+      "slug": "orla-nord-dansk-banepioner",
+      "date": "2026-11-18",
+      "approved": true
+    },
+    {
+      "id": "hist-000469",
+      "slug": "gaffelender-foer-1950",
+      "date": "2026-11-17",
+      "approved": true
     }
   ]
 }

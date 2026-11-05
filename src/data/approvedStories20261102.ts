@@ -1,3 +1,7 @@
+import releaseImage15 from '../assets/stories/danguillaume-fredsloeb-1969/fredsloebet-1948.jpg';
+import releaseImage16 from '../assets/stories/stan-ockers-styrtet-i-antwerpen/ockers-1951.jpg';
+import releaseImage17 from '../assets/stories/orla-nord-dansk-banepioner/buffalo-1912.jpg';
+import releaseImage18 from '../assets/stories/gaffelender-foer-1950/stella-cambio-rear.webp';
 import releaseImage0 from '../assets/stories/alfonsina-strada-giro-1924/image-1.jpg';
 import releaseImage1 from '../assets/stories/alfonsina-strada-giro-1924/image-2.jpg';
 import releaseImage2 from '../assets/stories/alfonsina-strada-giro-1924/image-3.jpg';
@@ -1592,6 +1596,507 @@ export const approvedStories20261102 = {
       {
         "heading": false,
         "text": "Making the fork thus ends with almost the same object that began the checks. The front wheel goes in once more. This time it is to remain in the completed bicycle."
+      }
+    ]
+  }
+},
+"danguillaume-fredsloeb-1969": {
+  "id": "hist-000220",
+  "slug": "danguillaume-fredsloeb-1969",
+  "date": "2026-11-19",
+  "year": "1969",
+  "period": "1960-1969",
+  "periods": [
+    "1960-1969"
+  ],
+  "track": "race",
+  "image": releaseImage15,
+  "hero": {
+    "image": releaseImage15,
+    "choice": "hero",
+    "after": -1,
+    "captionDa": "August Prosenik og Aleksandar Zorić i Warszawa, 9. maj 1948. Billedet viser en tidligere udgave af Fredsløbet.",
+    "captionEn": "August Prosenik and Aleksandar Zorić in Warsaw on 9 May 1948. The picture shows an earlier edition of the Peace Race.",
+    "altDa": "Historisk arkivfoto fra Fredsløbet i Warszawa.",
+    "altEn": "Historical archive photograph from the Peace Race in Warsaw.",
+    "creditDa": "Ukendt fotograf",
+    "creditEn": "Unknown photographer",
+    "source": "https://commons.wikimedia.org/wiki/File:August_Prosenik_and_Aleksandar_Zori%C4%87_1948.jpg",
+    "licenseUrl": "",
+    "license": "Public domain"
+  },
+  "images": [],
+  "da": {
+    "title": "Danguillaume tog gult på vejen til Cottbus",
+    "description": "En sejr mod uret gav Danguillaume føringen i Fredsløbet i 1969. I Berlin var der 42 sekunder tilbage.",
+    "deck": "En sejr mod uret gav Danguillaume føringen i Fredsløbet i 1969. I Berlin var der 42 sekunder tilbage.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "Mellem Guben og Cottbus kom Jean-Pierre Danguillaume i mål med en tid, som Ryszard Szurkowski ikke kunne matche. Det var Fredsløbet i maj 1969. De havde kørt enkeltstart, så franskmanden kunne ikke se sit forspring som en åbning i feltet. Det måtte læses på uret. Da dagens tider var gjort op, havde han vundet etapen og overtaget den gule trøje. Szurkowski var stadig nær nok i klassementet til, at trøjen skulle forsvares resten af vejen til Berlin."
+      },
+      {
+        "heading": false,
+        "text": "Den østtyske avis Neues Deutschland bragte resultatet næste dag. Den trykte 1 time, 21 minutter og 8 sekunder for Danguillaume. Senere fremstillinger giver andre tider og er heller ikke enige om, hvor meget han slog Szurkowski med på selve dagen. Det sikre er rækkefølgen og skiftet i klassementet. Tidsgevinsten på etapen og afstanden mellem de to i klassementet er to forskellige tal. I Berlin endte polakken 42 sekunder efter franskmanden."
+      },
+      {
+        "heading": true,
+        "text": "En dag med én opgave"
+      },
+      {
+        "heading": false,
+        "text": "Enkeltstarten gav Danguillaume en anden opgave end den, han havde haft i feltet. På en almindelig etape kan en rytter mærke, når en gruppe foran slipper, og tage stilling til, om han vil med. I en enkeltstart skal han selv vælge farten. Går han for hårdt ud, er der stadig langt igen, og ingen foran, som kan tage vinden. Kører han for forsigtigt, kommer de tabte sekunder heller ikke tilbage af sig selv."
+      },
+      {
+        "heading": false,
+        "text": "I det samtidige referat fortalte Danguillaume bagefter, at det var hans første sejr i en enkeltstart. Avisen beskrev også, hvordan den franske træner bød ham velkommen efter etapen. Det var ikke et forventet resultat, blot fordi vinderen bagefter viste sig at kunne holde føringen. Den ene dag havde givet ham en mulighed. Arbejdet med at bevare den begyndte næste morgen."
+      },
+      {
+        "heading": false,
+        "text": "Fredsløbet blev kørt af landshold. I 1969 gik ruten fra Warszawa til Berlin, og det år kom løbet ikke til Prag. Rytterne havde flere etaper og forskellige løbstyper at gøre arbejdet på. Et godt fransk resultat på uret havde flyttet en fransk rytter i gult, men resten af feltet var ikke blevet mindre af den grund. Szurkowski havde stadig både sine egne ben og et polsk hold at køre med."
+      },
+      {
+        "heading": false,
+        "text": "Avisen beskrev sejren som den tredje franske erobring af den gule trøje i løbets historie efter Jean-Pierre Genet og Bernard Guyot. Det var en måde at fortælle om resultatet på, som gav mening for den franske delegation. Fra det polske hold så dagen anderledes ud. En polsk leder, som avisen talte med, mente stadig, at kampen om føringen var åben. De to vurderinger kunne begge være rigtige på samme tid. Frankrig havde fået trøjen, og der var endnu ikke kørt til Berlin."
+      },
+      {
+        "heading": true,
+        "text": "De sidste 42 sekunder"
+      },
+      {
+        "heading": false,
+        "text": "Efter enkeltstarten kunne Danguillaume tillade sig at følge med, hvis polakken forsøgte at vinde tid. Det er en anden opgave end at sætte dagens hurtigste tid. Man skal holde øje med, hvilke ryttere der går med i et udbrud, og hvad det betyder, hvis gruppen kommer hjem med et forspring. En etape kan godt vindes af en anden, mens kampen om den gule trøje stadig foregår længere tilbage."
+      },
+      {
+        "heading": false,
+        "text": "Dieter Gonschorek endte på tredjepladsen efter Danguillaume og Szurkowski. I Berlin fyldte vinderen 23 år. Senere vandt han etaper i Tour de France, hvor han kunne afgøre løb på andre måder. Men her var det uret på vejen til Cottbus, der gav ham føringen. Da løbet var forbi, kunne de 42 sekunder godt se ud som et lille tal i bunden af en lang resultatliste. Det havde taget resten af løbet at få lov at beholde dem."
+      }
+    ]
+  },
+  "en": {
+    "title": "Danguillaume took yellow on the road to Cottbus",
+    "description": "A time-trial win gave Danguillaume the lead in the 1969 Peace Race. In Berlin 42 seconds remained.",
+    "deck": "A time-trial win gave Danguillaume the lead in the 1969 Peace Race. In Berlin 42 seconds remained.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "Between Guben and Cottbus, Jean-Pierre Danguillaume finished in a time Ryszard Szurkowski could not match. This was the Peace Race in May 1969. It was a time trial, so the Frenchman could not see his lead as a gap in the bunch. It had to be read from the clock. When the times were added up he had won the stage and taken the yellow jersey. Szurkowski was still close enough overall that the jersey would need defending all the way to Berlin."
+      },
+      {
+        "heading": false,
+        "text": "The East German newspaper Neues Deutschland printed the result the following day. It gave Danguillaume one hour, 21 minutes and eight seconds. Later accounts give other times and disagree about how much he took out of Szurkowski on the day. The order and the change of leader are clear. Time gained on the stage and the gap in the standings are different figures. In Berlin the Pole finished 42 seconds behind the Frenchman."
+      },
+      {
+        "heading": true,
+        "text": "A day with one job"
+      },
+      {
+        "heading": false,
+        "text": "The time trial gave Danguillaume a different job from riding in the bunch. On an ordinary stage a rider can see a group go clear and decide whether to follow. In a time trial he has to choose his own pace. Start too hard and there is still a long way to go with nobody in front to take the wind. Start too cautiously and the lost seconds do not return of their own accord."
+      },
+      {
+        "heading": false,
+        "text": "In the contemporary report Danguillaume said afterwards that this was his first time-trial win. The paper also described the French coach greeting him after the stage. It was no foregone conclusion just because the winner later managed to hold the lead. One day had given him an opportunity. The work of keeping it began the next morning."
+      },
+      {
+        "heading": false,
+        "text": "The Peace Race was ridden by national teams. In 1969 it went from Warsaw to Berlin and did not visit Prague. The riders had several stages and different kinds of racing in which to do their work. A good French result against the clock had put a Frenchman in yellow, but the rest of the field was still there. Szurkowski still had his legs and a Polish team to ride with."
+      },
+      {
+        "heading": false,
+        "text": "The newspaper placed Danguillaume after Jean-Pierre Genet and Bernard Guyot among the French riders who had taken the race lead. It was a way of telling the result that made sense for the French delegation. From the Polish team the day looked different. A Polish official interviewed by the paper still thought the contest for the lead was open. Both views could be right at once. France had the jersey, and the race had yet to reach Berlin."
+      },
+      {
+        "heading": true,
+        "text": "The final 42 seconds"
+      },
+      {
+        "heading": false,
+        "text": "After the time trial Danguillaume could afford to follow if the Pole tried to make up time. That is a different task from setting the fastest time of the day. A rider has to watch who gets into a break and what it would mean if the group reached the finish ahead. Someone else can win the stage while the contest for yellow is taking place farther back."
+      },
+      {
+        "heading": false,
+        "text": "Dieter Gonschorek finished third behind Danguillaume and Szurkowski. The winner turned 23 in Berlin. He later won Tour de France stages, settling races in other ways. Here it was the clock on the road to Cottbus that gave him the lead. Once the race was over, those 42 seconds might have looked a small figure in a long list of results. It took the rest of the race to keep them."
+      }
+    ]
+  }
+},
+"stan-ockers-styrtet-i-antwerpen": {
+  "id": "hist-000254",
+  "slug": "stan-ockers-styrtet-i-antwerpen",
+  "date": "2026-11-15",
+  "year": "1955–1956",
+  "period": "1950-1959",
+  "periods": [
+    "1950-1959"
+  ],
+  "track": "people",
+  "image": releaseImage16,
+  "hero": {
+    "image": releaseImage16,
+    "choice": "hero",
+    "after": -1,
+    "captionDa": "Stan Ockers ved Tour de France, 4. juli 1951.",
+    "captionEn": "Stan Ockers at the Tour de France, 4 July 1951.",
+    "altDa": "Sort-hvidt portræt af Stan Ockers.",
+    "altEn": "Black-and-white portrait of Stan Ockers.",
+    "creditDa": "Harry Pot / Anefo / Nationaal Archief",
+    "creditEn": "Harry Pot / Anefo / Nationaal Archief",
+    "source": "https://commons.wikimedia.org/wiki/File:Stan_Ockers_(1951).jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/nl/",
+    "license": "CC BY-SA 3.0 NL"
+  },
+  "images": [],
+  "da": {
+    "title": "Da Belgien mistede Stan Ockers",
+    "description": "Verdensmesteren vendte tilbage til banen i Antwerpen i 1956. Han havde vundet dér før.",
+    "deck": "Verdensmesteren vendte tilbage til banen i Antwerpen i 1956. Han havde vundet dér før.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "Den 29. september 1956 styrtede Stan Ockers under et banestævne i Sportpaleis i Antwerpen. Han døde af sine skader to dage senere, 36 år gammel. Han var kommet hjem til den by, hvor han var vokset op, og til en bane, hvor han kendte både løbsformen og publikum. Året før havde han vundet verdensmesterskabet på landevej. I Antwerpen var der ingen lang stigning og ingen landevejsrute mellem ham og målet. Der var et felt på en bane, og det var dér, han faldt."
+      },
+      {
+        "heading": true,
+        "text": "En sæson med plads til det hele"
+      },
+      {
+        "heading": false,
+        "text": "I foråret 1955 havde Ockers vundet både Flèche Wallonne og Liège–Bastogne–Liège. Det var to sejre, der kunne have gjort en hel sæson god for de fleste. Ockers havde stadig sommeren og verdensmesterskabet til gode. I Tour de France vandt han pointkonkurrencen, og sidst i august vandt han VM ved Frascati uden for Rom."
+      },
+      {
+        "heading": false,
+        "text": "De resultater krævede forskellige ting af ham. I et endagsløb kunne han bruge kræfter på én afgørelse. I Touren skulle han blive ved med at hente placeringer, også på dage hvor en anden fik blomsterne. Før den sæson havde han to gange været nummer to i Tourens samlede klassement. Han var med andre ord en rytter, som kunne klare både etaperne hver for sig og de uger, de tilsammen udgjorde."
+      },
+      {
+        "heading": false,
+        "text": "Regnbuetrøjen kom, da han var 35. Det var en alder, hvor han havde haft tid til at prøve det meste af det, en professionel cykelrytter kunne blive bedt om. Resultaterne fra 1955 viser, hvor meget han stadig kunne. De fortæller også, hvorfor navnet på plakaten i Antwerpen året efter betød noget."
+      },
+      {
+        "heading": true,
+        "text": "Hjemme på banen"
+      },
+      {
+        "heading": false,
+        "text": "Sportpaleis var en anden slags arbejdsplads end landevejen omkring Frascati. På en bane kommer rytterne forbi tilskuerne omgang efter omgang. Man kan se, hvem der sidder på hjul, hvem der flytter sig frem, og hvor hurtigt en afstand åbner sig. Publikum behøver ikke vente på, at et løb kommer tilbage til byen. Det hele foregår foran dem."
+      },
+      {
+        "heading": false,
+        "text": "Ockers havde kørt og vundet på banen før. Den del af karrieren kan let forsvinde bag verdensmesterskabet og Touren, fordi sejrene på landevejen står så tydeligt i resultatlisterne. Men de to arbejdspladser hørte sammen. En professionel kunne køre for placeringer i en klassiker om foråret og tage på banen, når landevejssæsonen gik på hæld. I Antwerpen havde Ockers endda vundet seksdagesløbet tidligere i 1956 med Reginald Arnold og Jean Roth. Stævnet i september var en anden begivenhed. Sejren og styrtet hører til samme bane og samme år, men til hver sit løb."
+      },
+      {
+        "heading": false,
+        "text": "Forskellen mellem de to løbsformer kan også ses i, hvad en sejr kræver. I en seksdageskonkurrence skal makkere fordele arbejdet og hjælpe hinanden gennem et helt program. På landevejen i Frascati stod Ockers alene som vinder i resultatet, selv om også et landevejs-VM køres med hold. Han kunne have holdt sig til den disciplin, han netop var blevet verdensmester i. Kalenderen og sejren i Antwerpen viser, at han fortsat tog arbejdet på banen."
+      },
+      {
+        "heading": true,
+        "text": "Det, der blev husket"
+      },
+      {
+        "heading": false,
+        "text": "Beretningerne er enige om stedet og om, at Ockers døde efter faldet. Den nøjagtige bevægelse, der udløste styrtet, er sværere at fastslå. Fortællingen behøver heller ikke at udpege et bestemt hjul eller en anden rytter. De sikre holdepunkter er datoerne, banen og konsekvensen. Ockers havde kørt løb i Antwerpen om lørdagen. Mandag den 1. oktober var han død."
+      },
+      {
+        "heading": false,
+        "text": "Antwerpens museum har siden beskrevet dødsfaldet som et vendepunkt i byens banecykling. En sportsgren forsvinder sjældent af én grund, og publikum holdt ikke op med at se cykelløb den mandag. Men for folk, der forbandt Sportpaleis med bestemte navne, var der nu et navn, som ikke kom tilbage. På lidt over et år havde Ockers vundet verdensmesterskabet ude og kørt sit sidste løb hjemme. Man kan stadig læse sejrene i den rækkefølge, de kom. Det sidste resultat står et andet sted."
+      }
+    ]
+  },
+  "en": {
+    "title": "When Belgium lost Stan Ockers",
+    "description": "The world champion returned to the Antwerp track in 1956. He had won there before.",
+    "deck": "The world champion returned to the Antwerp track in 1956. He had won there before.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "On 29 September 1956 Stan Ockers crashed at a track meeting at Antwerp's Sportpaleis. He died from his injuries two days later, aged 36. He was back in the city where he had grown up, on a track where he knew both the kind of racing and the crowd. The previous year he had won the world road championship. In Antwerp there was no long climb or stretch of open road between him and the finish. There was a field on a track, and that was where he fell."
+      },
+      {
+        "heading": true,
+        "text": "A season with room for everything"
+      },
+      {
+        "heading": false,
+        "text": "In spring 1955 Ockers won both La Flèche Wallonne and Liège–Bastogne–Liège. Those two wins would have made a good season for most riders. Ockers still had the summer and the world championships ahead of him. He won the Tour de France points competition and, in late August, the world road title at Frascati outside Rome."
+      },
+      {
+        "heading": false,
+        "text": "Those results asked different things of him. In a one-day race he could spend his energy on a single finish. In the Tour he had to keep picking up places, including on days when someone else got the flowers. He had already finished second overall in the Tour twice. He could handle both the stages on their own and the weeks they added up to."
+      },
+      {
+        "heading": false,
+        "text": "He was 35 when he earned the rainbow jersey. By then he had had time to try most of what a professional cyclist could be asked to do. His results in 1955 show how much he could still do. They also explain why the name on the bill in Antwerp the following year meant something."
+      },
+      {
+        "heading": true,
+        "text": "Back on the track"
+      },
+      {
+        "heading": false,
+        "text": "The Sportpaleis was a different place to work from the roads around Frascati. On a track, riders pass the spectators lap after lap. The crowd can see who is sitting on a wheel, who is moving up and how quickly a gap opens. They do not have to wait for the race to come back into town. It all takes place in front of them."
+      },
+      {
+        "heading": false,
+        "text": "Ockers had raced and won on the track before. That part of his career can disappear behind the world title and the Tour because the road victories stand out so clearly in the results. But the two workplaces belonged together. A professional could race for places in a spring classic and take to the track as the road season wound down. Ockers had even won the Antwerp Six Days earlier in 1956, with Reginald Arnold and Jean Roth. The September meeting was a separate event. The victory and the crash belong to the same venue and the same year, but to different races."
+      },
+      {
+        "heading": false,
+        "text": "The difference between the two kinds of racing can also be seen in what it takes to win. In a six-day meeting partners share the work across a programme. On the road at Frascati, Ockers stood alone as the winner in the results, though a road world championship is also ridden in teams. He could have stuck to the discipline in which he had just become world champion. His calendar and his win in Antwerp show that he kept racing on the track."
+      },
+      {
+        "heading": true,
+        "text": "What remained"
+      },
+      {
+        "heading": false,
+        "text": "Accounts agree on the venue and that Ockers died after the crash. It is harder to establish the precise movement that caused it. The story does not require us to single out a wheel or another rider. What is certain is the date, the venue and the outcome. Ockers raced in Antwerp on the Saturday. On Monday, 1 October, he was dead."
+      },
+      {
+        "heading": false,
+        "text": "Antwerp's museum has since described his death as a turning point for track racing in the city. A sport seldom declines for one reason, and people did not stop watching cycle races that Monday. But for those who associated the Sportpaleis with particular names, there was now one name that would not return. In a little over a year Ockers had won the world championship away from home and ridden his last race at home. The victories can still be read in the order they came. The last result is recorded elsewhere."
+      }
+    ]
+  }
+},
+"orla-nord-dansk-banepioner": {
+  "id": "hist-000272",
+  "slug": "orla-nord-dansk-banepioner",
+  "date": "2026-11-18",
+  "year": "1896–1902",
+  "period": "1900-1920",
+  "periods": [
+    "1900-1920"
+  ],
+  "track": "people",
+  "image": releaseImage17,
+  "hero": {
+    "image": releaseImage17,
+    "choice": "hero",
+    "after": -1,
+    "captionDa": "Sprintstart på Buffalo-banen 2. juni 1912 med Ellegaard, Perchicot og Poulain. Orla Nord er ikke på billedet.",
+    "captionEn": "Sprint start at Buffalo on 2 June 1912 with Ellegaard, Perchicot and Poulain. Orla Nord is not pictured.",
+    "altDa": "Tre baneryttere gør klar ved starten.",
+    "altEn": "Three track riders prepare at the start.",
+    "creditDa": "Agence Rol / Bibliothèque nationale de France",
+    "creditEn": "Agence Rol / Bibliothèque nationale de France",
+    "source": "",
+    "licenseUrl": "",
+    "license": "Public domain"
+  },
+  "images": [],
+  "da": {
+    "title": "Orla Nord fra Horsensbanen til VM i Rom",
+    "description": "En halv alen skilte Orla Nord fra andenpladsen i Horsens. Seks år senere tog han VM-bronze.",
+    "deck": "En halv alen skilte Orla Nord fra andenpladsen i Horsens. Seks år senere tog han VM-bronze.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "I Horsens den 2. august 1896 manglede Orla Nord ifølge bladet Cyclen en halv alen for at blive nummer to på en engelsk mil. Knud Nielsen fik sit forhjul foran. Ingeman Petersen var allerede kommet først over stregen. Nord fik tredjepladsen, og løbsreferatet lod ham få den lille afstand med. Omkring tredive centimeter er ikke meget, når man skal beskrive en cykelbane. Ved målstregen rækker det til en placering."
+      },
+      {
+        "heading": false,
+        "text": "Nord fik en ny chance senere samme dag. På fire kilometer med handicap blev han nummer to. Også her vandt Petersen, som ifølge referatet startede alene fra scratch. Det vil sige fra mærket uden forspring. På den korte mil var afgørelsen faldet i et slutheat. På fire kilometer var rytterne fordelt ved starten, så løbet fik et andet forløb. Referatet siger ikke, hvilket mærke Nord fik, og det er derfor ikke muligt at regne ud, hvor meget af afstanden han tog ind eller satte til undervejs."
+      },
+      {
+        "heading": true,
+        "text": "En dag med flere starter"
+      },
+      {
+        "heading": false,
+        "text": "Den dag i Horsens fortæller noget om den bane, Nord lærte at køre på. Der var løb for medlemmer, løb for provinsryttere og løb med handicap på samme program. En engelsk mil og en dansk mil var vidt forskellige distancer, selv om begge stod som mil på programmet. Den korte var godt halvanden kilometer, den lange omkring syv en halv. Man måtte altså lige se efter, hvilken mil arrangørerne mente, før man gjorde sig klar."
+      },
+      {
+        "heading": false,
+        "text": "Et referat kunne holde øje med så små forskelle som et halvt alenmål ved stregen og samtidig bruge plads på, hvor hurtigt hele programmet blev afviklet. I Horsens var det hele ifølge Cyclen overstået på under tre timer. For tilskuerne var det en eftermiddag med flere afgørelser. For rytterne kunne den næste opgave komme, før publikum var færdigt med at tale om den forrige."
+      },
+      {
+        "heading": false,
+        "text": "På Fedet ved Risskov havde Nord også været med fremme. Aarhus Cyklebane har bevaret beretningen om en vandrepokal over én dansk mil, hvor odenseaneren Axel Dahl vandt foran svenskeren Sjöberg og Nord fra København. Det er igen en tredjeplads, men den viser noget om, hvor rytterne kom fra. På en bane uden for Aarhus kunne en københavner, en odenseaner og en svensker fylde de tre første pladser. Cykelløb på bane var allerede et sted, man rejste til."
+      },
+      {
+        "heading": false,
+        "text": "Det er værd at holde de to Horsens-resultater ved siden af hinanden. Tredjepladsen på milen fortæller, hvem der havde forhjulet længst fremme efter en fælles afgørelse. Andenpladsen i handicap fortæller, hvordan rytterne kom i mål efter at være startet fra forskellige mærker. Sætter man bare tallene tre og to efter Nords navn, ser eftermiddagen enklere ud, end den var. Det er løbsformerne, der gør, at de to placeringer siger noget forskelligt."
+      },
+      {
+        "heading": true,
+        "text": "Fra Horsens til Rom"
+      },
+      {
+        "heading": false,
+        "text": "I Danmarks Cykle Unions mesterliste står Orla Nord som dansk sprintmester i 1901. Året efter tog han bronze ved amatørernes sprint-VM i Rom. Thorvald Ellegaard vandt de professionelles sprint ved samme mesterskab. Der var to løb og to forskellige medaljer. Når Ellegaards guld står forrest i erindringen om Rom, er det let at overse, at der også var en dansker på amatørernes podium."
+      },
+      {
+        "heading": false,
+        "text": "Der er huller i Nords historie mellem referatet fra Horsens og listen fra Rom. Man kan se, hvor han kørte, og hvad han opnåede, men ikke følge hver træning eller forklare, hvordan han vandt mesterskabet i 1901. Heldigvis er den halve alen i Horsens og bronzen i Rom begge bevaret. De fortæller om en rytter, man først finder midt i et dansk stævneprogram og siden i resultatlisten ved et verdensmesterskab. Det er to øjeblikke af det samme arbejde. Først skal forhjulet over stregen. Så må man se, hvad afstanden er værd."
+      }
+    ]
+  },
+  "en": {
+    "title": "Orla Nord from the Horsens track to the Rome Worlds",
+    "description": "Half a Danish ell cost Orla Nord second place at Horsens. Six years later he won world bronze.",
+    "deck": "Half a Danish ell cost Orla Nord second place at Horsens. Six years later he won world bronze.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "At Horsens on 2 August 1896, the cycling paper Cyclen reckoned that Orla Nord missed second place in the English mile by half a Danish ell. Knud Nielsen got his front wheel ahead. Ingeman Petersen had already crossed the line first. Nord was third, and the report gave him the little gap as well as the place. About thirty centimetres is very little when describing a track. At the finish line it is enough to settle a placing."
+      },
+      {
+        "heading": false,
+        "text": "Nord had another chance later that day. He finished second in the four-kilometre handicap. Petersen won this one too, starting alone from scratch, without a head start. The mile had been settled in a final heat. In the handicap the riders started from different marks, which made for a different race. The report gives no mark for Nord, so we cannot work out how much of a gap he made up or lost."
+      },
+      {
+        "heading": true,
+        "text": "Several starts in a day"
+      },
+      {
+        "heading": false,
+        "text": "That day at Horsens tells us something about the track racing Nord learned. The programme included races for club members, for riders from the provinces and for handicapped fields. An English mile and a Danish mile were very different distances, though both were called miles. The short one was a little over a kilometre and a half, the long one about seven and a half. It was worth checking which the organisers meant before getting ready."
+      },
+      {
+        "heading": false,
+        "text": "A race report could keep track of something as small as half an ell at the line and still give space to how quickly the whole meeting was run. Cyclen said the Horsens programme was over in less than three hours. For spectators it was an afternoon with several finishes. For a rider the next job could arrive before the crowd had finished talking about the last one."
+      },
+      {
+        "heading": false,
+        "text": "Nord had also been near the front at Fedet, by Risskov. Aarhus Cycle Track preserves the account of a challenge cup over one Danish mile, won by Axel Dahl of Odense ahead of the Swede Sjöberg and Nord of Copenhagen. Another third place, but it tells us where the riders came from. On a track outside Aarhus, a Copenhagener, a man from Odense and a Swede could fill the first three places. Track racing was already something riders travelled for."
+      },
+      {
+        "heading": false,
+        "text": "The two Horsens results are worth setting beside each other. Third in the mile tells us whose front wheel was ahead after a common finish. Second in the handicap tells us how the riders finished after starting from different marks. Put just the numbers three and two beside Nord's name and the afternoon looks simpler than it was. The racing formats are what make the two places mean different things."
+      },
+      {
+        "heading": true,
+        "text": "From Horsens to Rome"
+      },
+      {
+        "heading": false,
+        "text": "The Danish Cycling Union lists Orla Nord as national sprint champion in 1901. The following year he took bronze in the amateur world sprint in Rome. Thorvald Ellegaard won the professional sprint at the same championships. There were two races and two separate medals. With Ellegaard's gold so prominent in the memory of Rome, it is easy to miss the Dane on the amateur podium."
+      },
+      {
+        "heading": false,
+        "text": "There are gaps between the report from Horsens and the list from Rome. We can see where Nord raced and what he achieved, but cannot follow every training ride or explain how he won the 1901 title. Fortunately both the half-ell at Horsens and the bronze in Rome have survived. They show a rider first encountered in the middle of a Danish meeting programme and later in the results of a world championship. They are two moments in the same job. First the front wheel has to cross the line. Then you see what the gap was worth."
+      }
+    ]
+  }
+},
+"gaffelender-foer-1950": {
+  "id": "hist-000469",
+  "slug": "gaffelender-foer-1950",
+  "date": "2026-11-17",
+  "year": "1913–1947",
+  "period": "1940-1949",
+  "periods": [
+    "1940-1949",
+    "1900-1920"
+  ],
+  "track": "mechanics",
+  "image": releaseImage18,
+  "hero": {
+    "image": releaseImage18,
+    "choice": "hero",
+    "after": -1,
+    "captionDa": "Cambio Corsa på samlingens Stella Veneta fra 1947. Bagenden har plads til, at akslen kan flytte sig.",
+    "captionEn": "Cambio Corsa on the collection’s 1947 Stella Veneta. The rear end allows the axle to move.",
+    "altDa": "Bagaksel, tandkrans og kædefører set skråt bagfra.",
+    "altEn": "Rear axle, sprockets and chain guide viewed from behind.",
+    "creditDa": "The Evolution of Bikes",
+    "creditEn": "The Evolution of Bikes",
+    "source": "https://teob.dk/cykler/stella-veneta/",
+    "licenseUrl": "",
+    "license": ""
+  },
+  "images": [],
+  "da": {
+    "title": "Gaffelenderne der holdt hjulet fast",
+    "description": "De små slidser i stellet gav mekanikeren plads til at sætte hjulet lige og spænde kæden.",
+    "deck": "De små slidser i stellet gav mekanikeren plads til at sætte hjulet lige og spænde kæden.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "Når et baghjul skal tilbage i en ældre cykel med ét gear, kan det ofte flyttes lidt i stellet, før det spændes fast. Akslen sidder i to slidser, én på hver side. Trækker man hjulet tilbage, øges afstanden mellem kranken og bagakslen, og kæden strammes. Sidder den ene side længere tilbage end den anden, peger hjulet skævt. Der er ikke meget metal at se ved akslen, men det er dér, begge indstillinger mødes."
+      },
+      {
+        "heading": false,
+        "text": "Gaffelenderne havde på den måde to opgaver. De skulle give akslen et sted at sidde, og de skulle lade mekanikeren sætte hjulet rigtigt. På en cykel med møtrikker spændes akslen fast mod endernes flader. Slidsen fortæller, hvor akslen kan ligge, mens fastspændingen holder den på plads. Det er en lille forskel på papiret. Den er tydelig nok, hvis man har prøvet at sætte et hjul i og må løsne den ene møtrik igen, fordi fælgen sidder nærmere den ene kædestiver."
+      },
+      {
+        "heading": true,
+        "text": "Et hjul som mål"
+      },
+      {
+        "heading": false,
+        "text": "I den britiske værkstedsbog Cycle Repairing and Adjusting, først udgivet i 1913, indgår selve hjulet som hjælp til at prøve en forgaffel. Gaffelbenene og kronen skal passe sammen, men et monteret hjul afslører, om delene også står rigtigt i forhold til hinanden. Bogen lader værkstedet se efter, om fælgen er centreret i gaflen, og om styrerøret står rigtigt i forhold til hjulet. Det er en kontrol af en konkret samling, hvor et skævt resultat er lettere at se med hjulet på plads."
+      },
+      {
+        "heading": false,
+        "text": "På forhjulet er der ingen kæde at stramme. Dér handler placeringen om, at akslen kommer ordentligt i sæde på begge sider, og at fælgen går fri. På baghjulet kommer kædens længde med i regnestykket. På en cykel med ét tandhjul og uden en bagskifter til at optage slækket skal hjulet kunne sættes, så kæden hverken hænger løst eller bindes unødigt hårdt. Deraf nytten af en længere slids. Stellets to ender giver mulighed for justeringen, men man skal stadig gøre den færdig med hjulet i midten."
+      },
+      {
+        "heading": false,
+        "text": "Bogen beskriver også arbejdet med bagenderne. De indvendige flader skal stå parallelt, før navet spændes fast. Ellers kan akslen blive belastet, når møtrikkerne trækkes til. Værkstedet kunne prøve delene med navet på plads og se, om afstanden til fælgens kanter var ens. Her var møtrikken selv en del af kontrollen. Det var vigtigt, at delene stadig passede, når de blev spændt sammen, og ikke kun mens de lå løst på bænken."
+      },
+      {
+        "heading": true,
+        "text": "Da akslen fik en opgave mere"
+      },
+      {
+        "heading": false,
+        "text": "På Campagnolos Cambio Corsa kunne bagakslen også flytte sig under et gearskift. Det var ikke et almindeligt baghjul, som bare var løsnet lidt. Systemet havde dertil indrettede, tandede gaffelender og en aksel, der passede til dem. Rytteren kunne løsne fastspændingen med ét greb og føre kæden til et andet tandhjul med det andet, mens han trådte baglæns. Bagakslen måtte ændre stilling, så kæden kunne passe til den nye vej rundt om tandhjulet. Derefter skulle hjulet spændes fast igen."
+      },
+      {
+        "heading": false,
+        "text": "Det gør de små ender interessante. På det enkle stel justeres hjulet, mens cyklen står stille. På Cambio Corsa er bevægelsen en del af gearskiftet, og den skal foregå, mens cyklen kører. Man kan ikke bytte det ene sæt gaffelender for det andet og regne med, at resten virker af sig selv."
+      },
+      {
+        "heading": false,
+        "text": "Der fandtes flere måder at fremstille og fastgøre enderne på. Det bevarede materiale giver ikke grundlag for at gøre en bestemt pladetykkelse, legering eller loddemetode til regel for alle stel før 1950. Det, man kan følge på tværs af konstruktionerne, er hjulets vej ind i stellet. Før akslen spændes, skal der være plads til, at den kan komme på plads. Bagefter skal fælgen løbe, hvor den skal. For et stykke metal, der næsten forsvinder bag en møtrik, er det en hel del arbejde."
+      }
+    ]
+  },
+  "en": {
+    "title": "The little ends that held the wheel",
+    "description": "Small slots in the frame let a mechanic centre the wheel and set chain tension.",
+    "deck": "Small slots in the frame let a mechanic centre the wheel and set chain tension.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "When a rear wheel goes back into an older single-speed bicycle, it can often move a little in the frame before it is tightened. The axle sits in two slots, one on either side. Pull the wheel back and the distance between the crank and rear axle increases, tightening the chain. If one side sits farther back than the other, the wheel points off-centre. There is little metal to see at the axle, but that is where the two adjustments meet."
+      },
+      {
+        "heading": false,
+        "text": "The ends did two jobs. They gave the axle a place to sit and let the mechanic set the wheel correctly. On a bicycle with axle nuts, the axle is clamped against the faces of the ends. The slots determine where it can sit, while the clamping holds it there. It is a small distinction on paper. It is clear enough if you have ever fitted a wheel and had to loosen one nut again because the rim sits closer to one chainstay."
+      },
+      {
+        "heading": true,
+        "text": "A wheel as a gauge"
+      },
+      {
+        "heading": false,
+        "text": "In the British workshop book Cycle Repairing and Adjusting, first published in 1913, the wheel itself is used to check the front fork. The blades and crown must fit, but an installed wheel reveals whether the parts also sit correctly in relation to one another. The book has the mechanic check that the rim is central in the fork and that the steering tube is true with the wheel. A crooked assembly is easier to spot with the wheel in place."
+      },
+      {
+        "heading": false,
+        "text": "At the front there is no chain to tighten. The axle needs to sit properly on both sides, and the rim must run clear. At the rear, the chain length enters the calculation. A bicycle with one sprocket and no derailleur to take up slack needs enough adjustment to keep the chain from hanging loose or binding tight. That is the use of a longer slot. The two ends allow the adjustment, but the mechanic must still finish with the wheel centred."
+      },
+      {
+        "heading": false,
+        "text": "The book also describes work on the rear ends. Their inner faces should be parallel before the hub is tightened. Otherwise tightening the nuts can put strain on the axle. The workshop could test the parts with the hub in place and check the distance to each side of the rim. The nut itself was part of the check. The parts still had to fit once tightened, not just while lying loose on the bench."
+      },
+      {
+        "heading": true,
+        "text": "One more job for the axle"
+      },
+      {
+        "heading": false,
+        "text": "Campagnolo's Cambio Corsa also allowed the rear axle to move during a shift. This was not an ordinary rear wheel left a little loose. The system had purpose-made toothed ends and a matching axle. The rider could release the clamping with one lever and guide the chain onto another sprocket with the other while back-pedalling. The axle had to move to suit the chain's new route around the sprocket. Then the wheel had to be clamped again."
+      },
+      {
+        "heading": false,
+        "text": "That gives the little ends some interest. On a simple frame the wheel is adjusted with the bicycle standing still. On the Cambio Corsa, movement is part of changing gear, and it takes place while the bicycle is moving. You cannot substitute one pair of ends for the other and expect the rest to take care of itself."
+      },
+      {
+        "heading": false,
+        "text": "There were several ways to make and attach the ends. The surviving material gives no basis for making a particular plate thickness, alloy or brazing method the rule for all frames before 1950. What can be followed through the different designs is the wheel's route into the frame. Before the axle is tightened it needs room to find its seat. Afterwards the rim has to run where it belongs. That is quite a lot of work for a piece of metal almost hidden behind a nut."
       }
     ]
   }

@@ -1,3 +1,4 @@
+import releaseImage20 from '../assets/stories/zipp-motorsport-aerodynamik/zipp.jpg';
 import releaseImage19 from '../assets/stories/queen-bicycle-race-1978/freddie-mercury-1977.jpg';
 import releaseImage15 from '../assets/stories/danguillaume-fredsloeb-1969/fredsloebet-1948.jpg';
 import releaseImage16 from '../assets/stories/stan-ockers-styrtet-i-antwerpen/ockers-1951.jpg';
@@ -2267,6 +2268,135 @@ export const approvedStories20261102 = {
       {
         "heading": false,
         "text": "Queen obtained its bicycle race on film and in photographs. The single was released, and the campaign entered the band’s history. The account also retains an object rather more modest than a stadium full of bicycles: the saddle the hire firm reportedly did not want returned."
+      }
+    ]
+  }
+},
+"zipp-motorsport-aerodynamik": {
+  "id": "hist-000127",
+  "slug": "zipp-motorsport-aerodynamik",
+  "date": "2026-11-16",
+  "year": "1988–1999",
+  "period": "1980-1989",
+  "periods": [
+    "1980-1989"
+  ],
+  "track": "mechanics",
+  "image": releaseImage20,
+  "hero": {
+    "image": releaseImage20,
+    "choice": "hero",
+    "after": -1,
+    "captionDa": "Gult Zipp-pladehjul vist ved 1988-afsnittet i producentens historik. Fotoets optagedato er ikke oplyst.",
+    "captionEn": "Yellow Zipp disc shown alongside the 1988 entry in the manufacturer’s history. The date of the photograph is unrecorded.",
+    "altDa": "Gult pladehjul med et lille hul til ventilen.",
+    "altEn": "Yellow disc wheel with a small valve opening.",
+    "creditDa": "Fotograf ikke oplyst / SRAM-Zipp",
+    "creditEn": "Fotograf ikke oplyst / SRAM-Zipp",
+    "source": "https://www.sram.com/en/zipp/campaigns/zipp-history",
+    "licenseUrl": "",
+    "license": ""
+  },
+  "images": [],
+  "da": {
+    "title": "Da motorsportens aerodynamik kom ind i cykelhjulet",
+    "description": "Leigh Sargent gik fra Indy-biler til et pladehjul for et syvtrins friløb.",
+    "deck": "Leigh Sargent gik fra Indy-biler til et pladehjul for et syvtrins friløb.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "Det første hjul fra Zipp havde ingen synlige eger. Det var et pladehjul til et friløb med syv tandhjul, og man kunne få det i fire farver. I 1988 var der altså både noget ganske almindeligt og noget usædvanligt over produktet. Tandhjulene skulle stadig passe til en cykel, som folk kunne køre på. Resten af hjulet var et forsøg på at gøre mødet med luften lidt mindre kostbart."
+      },
+      {
+        "heading": false,
+        "text": "Manden bag hed Leigh Sargent. Han arbejdede med racerbiler i Indianapolis, hvor han blandt andet byggede, reparerede og ændrede dele til biler omkring Indy 500. Ifølge Zipps egen historik fik han idéen ved at undersøge pladehjul, der allerede fandtes. Han tog dermed et problem med ind på værkstedet, som cykelfolk havde arbejdet med i forvejen. Det nye var, hvad han kunne stille op med de materialer og arbejdsmetoder, han kendte fra bilerne."
+      },
+      {
+        "heading": true,
+        "text": "Hjulet skal både rulle og dreje"
+      },
+      {
+        "heading": false,
+        "text": "En fælg har en opgave, selv hvis man ser bort fra luften. Den skal holde dækket og binde hjulet sammen. På et egerhjul forbinder egerne fælgen med navet. Gør man fælgen dybere, kan man forkorte den fritliggende del af egerne og samtidig give hjulet en anden overflade mod luften. Med en fuld plade forsvinder egerne helt ud af luftstrømmen. De tre former kan løse den samme grundopgave og alligevel opføre sig forskelligt på vejen."
+      },
+      {
+        "heading": false,
+        "text": "Et hjul møder sjældent luften lige forfra. Rytterens fart og vindens retning bestemmer tilsammen, hvor den kommer fra. Et højt forhjul kan mærkes i styret, når vinden tager fat fra siden. Bagpå har rytteren en anden situation, fordi hjulet ikke drejer om styreaksen. En løsning, der ser fornuftig ud bag sadlen, behøver derfor ikke være det bedste valg foran."
+      },
+      {
+        "heading": false,
+        "text": "Det er også en af grundene til, at man ikke kan læse et hjuls egenskaber ud af fælgens dybde alene. Formen og dækket har betydning, og en rytter skal kunne holde sin linje, mens vinden ændrer sig. Motorsporten gav Sargent en måde at arbejde med form og luft på. Den gav ham ikke en bils forhold på en cykel med to hjul, hvor føreren selv er en stor del af det, vinden møder."
+      },
+      {
+        "heading": false,
+        "text": "For en mekaniker er forskellen mellem hjulene synlig, før cyklen har kørt en meter. På egerhjulet kan man se forbindelserne mellem nav og fælg og arbejde med de enkelte eger. På pladehjulet er det den lukkede flade, der møder blikket. Sargents første produkt beholdt forbindelsen til cyklen gennem et velkendt friløb. Hjulets ydre kunne ændres langt mere end den del, som skulle passe ind mellem kæden og stellet."
+      },
+      {
+        "heading": true,
+        "text": "Fra pladen til egerne"
+      },
+      {
+        "heading": false,
+        "text": "I 1989 kom Zipp med 3000, et kulfiberhjul med tre brede eger. Senere kom de dybe fælge med almindelige eger. I begyndelsen af 1990’erne var både tre-egershjulet og 440-fælgen en del af Zipps tidlige sortiment. Det var forskellige svar på, hvor meget af hjulet der skulle være en sammenhængende flade, og hvor meget der kunne stå åbent."
+      },
+      {
+        "heading": false,
+        "text": "Triatlon gav den slags hjul en synlig plads. Zipp regner Mark Allens sejr på Hawaii i 1990 for den første sejr dér på firmaets hjul. Resultatet siger, at udstyret blev brugt i en konkurrence, hvor rytteren i lange stræk måtte arbejde selv. Det siger ikke, hvor mange sekunder hjulene stod for. Der var også en mand på cyklen, og han skulle både svømme og løbe."
+      },
+      {
+        "heading": false,
+        "text": "Da firmaet flyttede til egne produktionslokaler i Speedway i 1999, blev det i nærheden af den racerbane, som arbejdsmiljøet omkring Sargent var vokset ud af. Cykelhjulet var til gengæld blevet sin egen arbejdsopgave. Det skulle passe til et dæk, et nav og en rytter, der kunne mærke et vindstød i styret. Det var den slags forhold, en racerbilsingeniør måtte lære at regne med, da han gik fra fire hjul til to."
+      }
+    ]
+  },
+  "en": {
+    "title": "When motor-racing aerodynamics reached the bicycle wheel",
+    "description": "Leigh Sargent went from Indy cars to a disc wheel for a seven-speed freewheel.",
+    "deck": "Leigh Sargent went from Indy cars to a disc wheel for a seven-speed freewheel.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "Zipp's first wheel had no visible spokes. It was a disc made for a seven-speed freewheel, and it came in four colours. In 1988 there was something both familiar and unusual about it. The sprockets still had to fit a bicycle people could ride. The rest of the wheel was an attempt to make its passage through the air a little less costly."
+      },
+      {
+        "heading": false,
+        "text": "Leigh Sargent was behind it. He worked on racing cars in Indianapolis, building, repairing and modifying parts for cars around the Indy 500. Zipp's own history says the idea came from examining bicycle disc wheels already on the market. He brought a problem into the workshop that cyclists had been working on for some time. What he brought to it were the materials and methods he knew from cars."
+      },
+      {
+        "heading": true,
+        "text": "A wheel has to roll and steer"
+      },
+      {
+        "heading": false,
+        "text": "A rim has a job even if we leave the air out of it. It holds the tyre and forms the outside of the wheel. In a spoked wheel, the spokes connect it to the hub. A deeper rim can shorten the exposed part of the spokes and present a different shape to the air. A full disc takes the spokes out of the airflow altogether. The three forms can do the same basic job and behave differently on the road."
+      },
+      {
+        "heading": false,
+        "text": "Air seldom meets the wheel head-on. The rider's speed and the direction of the wind together determine where it comes from. A deep front wheel can be felt through the bars when the wind catches it from the side. The rear wheel is different because it does not turn around the steering axis. Something that works behind the saddle need not be the best choice in front."
+      },
+      {
+        "heading": false,
+        "text": "This is also why rim depth alone cannot tell you how a wheel will behave. Its shape and tyre matter, and the rider has to hold a line while the wind changes. Motor racing gave Sargent a way to work with shape and airflow. It did not give him the conditions of a car on a two-wheeled machine whose rider accounts for so much of what the wind meets."
+      },
+      {
+        "heading": false,
+        "text": "A mechanic can see the difference between the wheels before the bicycle has moved an inch. On the spoked wheel the connections between hub and rim are visible and the individual spokes can be worked on. On the disc it is the closed face that meets the eye. Sargent's first product kept its connection to the bicycle through a familiar freewheel. The outside of the wheel could change far more than the part that had to fit between chain and frame."
+      },
+      {
+        "heading": true,
+        "text": "From disc to spokes"
+      },
+      {
+        "heading": false,
+        "text": "In 1989 Zipp introduced the 3000, a carbon wheel with three broad spokes. Deep rims with conventional spokes followed. The three-spoke wheel and the 440 rim both belonged to Zipp's early range in the early 1990s. They were different answers to the question of how much of the wheel should be a continuous surface and how much could stay open."
+      },
+      {
+        "heading": false,
+        "text": "Triathlon gave these wheels a conspicuous place. Zipp counts Mark Allen's 1990 victory in Hawaii as its first win there on the company's wheels. That tells us the equipment was used in a competition where the rider had to do much of the work alone. It does not tell us how many seconds the wheels saved. There was also a man on the bicycle, and he had to swim and run."
+      },
+      {
+        "heading": false,
+        "text": "When the company moved into its own manufacturing premises in Speedway in 1999, it stayed near the racetrack around which Sargent's working world had grown up. The bicycle wheel, meanwhile, had become a job in its own right. It had to suit a tyre, a hub and a rider who could feel a gust through the handlebars. Those were the things a racing-car engineer had to reckon with when he moved from four wheels to two."
       }
     ]
   }

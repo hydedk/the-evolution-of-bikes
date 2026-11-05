@@ -42,6 +42,7 @@ const storyClassifications: Record<string, Classification> = {
   'thorvald-ellegaard-fra-fangel-til-verdensbanerne': { period: '1900-1920', primary: 'ryttere' },
   'wattmaaleren-flyttede-laboratoriet-ud-paa-vejen': { period: '1980-1989', primary: 'kost-traening-og-videnskab' },
   'coppi-koblet-lugano-1951': { period: '1950-1959', primary: 'loeb-og-store-oejeblikke' },
+  'queen-bicycle-race-1978': { period: '1970-1979', primary: 'cykelkultur' },
   'danguillaume-fredsloeb-1969': { period: '1960-1969', primary: 'loeb-og-store-oejeblikke' },
   'stan-ockers-styrtet-i-antwerpen': { period: '1950-1959', primary: 'ryttere' },
   'orla-nord-dansk-banepioner': { period: '1900-1920', primary: 'ryttere' },

@@ -1,3 +1,4 @@
+import releaseImage19 from '../assets/stories/queen-bicycle-race-1978/freddie-mercury-1977.jpg';
 import releaseImage15 from '../assets/stories/danguillaume-fredsloeb-1969/fredsloebet-1948.jpg';
 import releaseImage16 from '../assets/stories/stan-ockers-styrtet-i-antwerpen/ockers-1951.jpg';
 import releaseImage17 from '../assets/stories/orla-nord-dansk-banepioner/buffalo-1912.jpg';
@@ -2097,6 +2098,175 @@ export const approvedStories20261102 = {
       {
         "heading": false,
         "text": "There were several ways to make and attach the ends. The surviving material gives no basis for making a particular plate thickness, alloy or brazing method the rule for all frames before 1950. What can be followed through the different designs is the wheel's route into the frame. Before the axle is tightened it needs room to find its seat. Afterwards the rim has to run where it belongs. That is quite a lot of work for a piece of metal almost hidden behind a nut."
+      }
+    ]
+  }
+},
+"queen-bicycle-race-1978": {
+  "id": "hist-000204",
+  "slug": "queen-bicycle-race-1978",
+  "date": "2026-11-11",
+  "year": "1978",
+  "period": "1970-1979",
+  "periods": [
+    "1970-1979"
+  ],
+  "track": "people",
+  "image": releaseImage19,
+  "hero": {
+    "image": releaseImage19,
+    "choice": "hero",
+    "after": -1,
+    "captionDa": "Freddie Mercury på scenen i New Haven, 16. november 1977.",
+    "captionEn": "Freddie Mercury on stage in New Haven, 16 November 1977.",
+    "altDa": "Freddie Mercury synger ved en koncert.",
+    "altEn": "Freddie Mercury singing at a concert.",
+    "creditDa": "Carl Lender",
+    "creditEn": "Carl Lender",
+    "source": "https://commons.wikimedia.org/wiki/File:Queen_-_Freddie_Mercury.jpg",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "license": "CC BY 2.0"
+  },
+  "images": [],
+  "da": {
+    "title": "Queen, cykelløbet og regningen for sadlerne",
+    "description": "Et reklameløb på Wimbledon Stadium blev til billeder for Queen og en senere historie om lejede cyklers sadler.",
+    "deck": "Et reklameløb på Wimbledon Stadium blev til billeder for Queen og en senere historie om lejede cyklers sadler.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "Den 17. september 1978 blev Wimbledon Stadium i London brugt til et cykelløb, der ikke skulle afgøre noget mesterskab. Der skulle laves billeder til Queen. Femogtres nøgne kvindelige modeller kørte på lejede cykler rundt på stadionbanen som led i arbejdet omkring sangen Bicycle Race."
+      },
+      {
+        "heading": false,
+        "text": "Det er den usædvanlige del, som stadig huskes. Men cyklerne havde også en hverdag på den anden side af kameraet. De var lånt ind til en produktion og skulle bagefter tilbage til en udlejer. Netop den aflevering gav anledning til historien om, at Queen måtte betale for sadlerne."
+      },
+      {
+        "heading": false,
+        "text": "Fotografier fra optagelsen findes i pressearkiverne med sted og dato. Her bliver kravet om betaling for sadlerne omtalt som noget, der blev rapporteret efter seancen. Selve regningen ligger ikke foran os. Den forskel får betydning, når den gode anekdote på nettet vokser til, at bandet måtte købe samtlige cykler."
+      },
+      {
+        "heading": true,
+        "text": "En cykel i en pladekampagne"
+      },
+      {
+        "heading": false,
+        "text": "Bicycle Race var skrevet af Freddie Mercury og kom på albummet Jazz. Singlen blev koblet sammen med Brian Mays Fat Bottomed Girls. Begge titler blev dermed en del af den samme kampagne i efteråret 1978, hvor musikken også skulle have billeder på omslag og i reklamefilm."
+      },
+      {
+        "heading": false,
+        "text": "Wimbledon-optagelsen gav noget helt andet end et koncertfotografi af fire musikere på en scene. Her var et felt, en bane og en bevægelse, som et kamera kunne følge. Cyklen behøvede ingen lang forklaring for at fungere i billedet. Det var deltagerne og situationen, der gjorde det til en reklame for netop denne sang."
+      },
+      {
+        "heading": false,
+        "text": "Sammenstillingen blev ikke inden for én slags udgivelse. Fotografier og film kunne bruges forskelligt, og den billedside, der ledsagede musikken, kunne møde læseren på et pladeomslag eller i en video. En optagedag kunne således levere materiale til flere led mellem bandet og den, der købte pladen."
+      },
+      {
+        "heading": false,
+        "text": "Historien om sangens tilblivelse føres ofte tilbage til Tour de France, som Mercury skal have set under arbejdet i Schweiz. Det er en senere gengivet fortælling, ikke en scene, vi her kan referere med samtaler og præcise øjeblikke. Der er ingen grund til at udstyre ham med en bestemt tanke i det sekund, feltet passerer."
+      },
+      {
+        "heading": false,
+        "text": "Den dobbelte single fik sin første registrering på den britiske singlehitliste den 28. oktober 1978."
+      },
+      {
+        "heading": true,
+        "text": "Sadlen blev hængende i fortællingen"
+      },
+      {
+        "heading": false,
+        "text": "Ifølge den overleverede beretning krævede udlejeren betaling for sadlerne, da firmaet fandt ud af, hvordan cyklerne havde været brugt. Det er en ganske anden påstand end, at alle cyklerne blev solgt til Queen. En sadel er en udskiftelig del; en hel cykel er en anden regning."
+      },
+      {
+        "heading": false,
+        "text": "Forskellen er lille nok til let at forsvinde, når anekdoten fortælles videre. Men den gør afslutningen mere konkret. En produktion med en provokerende billedidé havde brugt almindeligt udlejningsmateriel, og bagefter skulle nogen tage stilling til det udstyr, der kom retur."
+      },
+      {
+        "heading": false,
+        "text": "Vi kender ikke her regningens beløb eller et ordret svar fra udlejeren. Der bliver derfor heller ikke sat en dialog ind mellem bandet og firmaet. Historien kan godt stå på sine egne ben uden en opfundet, fornærmet cykelhandler. Det rapporterede krav om sadlerne er pudsigt nok i sig selv."
+      },
+      {
+        "heading": true,
+        "text": "Det, kameraet efterlod"
+      },
+      {
+        "heading": false,
+        "text": "Der er også grund til at være omhyggelig med de billeder, som i dag følger historien. Et fotografi af påklædte deltagere på en bane kan ikke uden videre udlægges som selve den nøgne optagelse. En billedtekst skal passe til den konkrete fil, ikke kun til sangtitlen ved siden af den."
+      },
+      {
+        "heading": false,
+        "text": "Queen fik sit cykelløb på film og fotografier. Singlen kom ud, og kampagnen blev en del af bandets historie. Tilbage i fortællingen står også en mere beskeden genstand end et stadion fuldt af cykler: sadlen, som udlejeren efter sigende ikke ville have tilbage."
+      }
+    ]
+  },
+  "en": {
+    "title": "Queen, the bicycle race and the bill for the saddles",
+    "description": "A publicity race at Wimbledon Stadium supplied Queen with images and a later story about hired bicycle saddles.",
+    "deck": "A publicity race at Wimbledon Stadium supplied Queen with images and a later story about hired bicycle saddles.",
+    "blocks": [
+      {
+        "heading": false,
+        "text": "On 17 September 1978, Wimbledon Stadium in London hosted a bicycle race that would decide no championship. Pictures were being made for Queen. Sixty-five nude female models rode hired bicycles around the stadium track as part of the work surrounding Bicycle Race."
+      },
+      {
+        "heading": false,
+        "text": "That is the unusual part people remember. The bicycles, however, also had ordinary lives beyond the camera. They had been hired for a production and were due back afterwards. Their return gave rise to the story that Queen had to pay for the saddles."
+      },
+      {
+        "heading": false,
+        "text": "Press archives preserve photographs of the shoot with a place and date. Their descriptions call the demand for saddle payment something reported after the event. We do not have the invoice before us. That distinction matters when the anecdote grows online into a claim that the band had to buy every bicycle."
+      },
+      {
+        "heading": true,
+        "text": "A bicycle in a record campaign"
+      },
+      {
+        "heading": false,
+        "text": "Bicycle Race was written by Freddie Mercury and appeared on Jazz. The single was paired with Brian May’s Fat Bottomed Girls. Both titles became part of the same autumn 1978 campaign, in which the music also needed images for sleeves and promotional films."
+      },
+      {
+        "heading": false,
+        "text": "The Wimbledon shoot offered something very different from a concert photograph of four musicians onstage. Here were a field of riders, a track and movement for a camera to follow. The bicycle needed little explanation to work visually. The participants and circumstances made the image an advertisement for this particular song."
+      },
+      {
+        "heading": false,
+        "text": "The material did not remain within a single format. Film and photographs could serve different purposes, with the music’s imagery reaching an audience through a record sleeve or a video. A day’s filming could supply several stages of the journey between band and record buyer."
+      },
+      {
+        "heading": false,
+        "text": "The song’s origin is often traced to the Tour de France, which Mercury is said to have watched while working in Switzerland. That is a subsequently repeated story, not a scene we can recount with dialogue and precise moments. There is no need to invent a particular thought as the peloton passed him."
+      },
+      {
+        "heading": false,
+        "text": "The double-sided single made its first appearance on the British singles chart on 28 October 1978."
+      },
+      {
+        "heading": true,
+        "text": "The saddle stayed in the story"
+      },
+      {
+        "heading": false,
+        "text": "According to the account handed down, the hire firm demanded payment for the saddles after discovering how the bicycles had been used. That is quite different from saying every bicycle was sold to Queen. A saddle is a replaceable component; a complete bicycle would be a different bill."
+      },
+      {
+        "heading": false,
+        "text": "The distinction is small enough to disappear as the anecdote travels. Yet it makes the ending more concrete. A production with a provocative visual idea had used ordinary hired equipment, and somebody afterwards had to consider the material returned to the supplier."
+      },
+      {
+        "heading": false,
+        "text": "We do not know the amount of the bill here, or possess a verbatim response from the firm. No dialogue between band and supplier is therefore inserted. The story works without an invented, offended bicycle dealer. The reported demand for the saddles is curious enough."
+      },
+      {
+        "heading": true,
+        "text": "What the camera left behind"
+      },
+      {
+        "heading": false,
+        "text": "Care is also needed with the pictures now attached to the story. A photograph of clothed participants on a track cannot automatically be presented as the nude shoot itself. A caption must fit the particular file, not merely the song title beside it."
+      },
+      {
+        "heading": false,
+        "text": "Queen obtained its bicycle race on film and in photographs. The single was released, and the campaign entered the band’s history. The account also retains an object rather more modest than a stadium full of bicycles: the saddle the hire firm reportedly did not want returned."
       }
     ]
   }

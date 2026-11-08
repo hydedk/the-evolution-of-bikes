@@ -189,6 +189,7 @@ const storyClassifications: Record<string, Classification> = {
 };
 
 const bikePeriods: Record<string, string> = {
+  'battaglin-oria-7020': '1990-1999',
   'vitus-992': '1990-1999',
   'favorit-f11-1959': '1950-1959',
   'olympia-1978': '1970-1979', 'bernardi-ca-1980': '1980-1989', 'faggin-1986': '1980-1989', 'scapin-k6': '2010-2019',

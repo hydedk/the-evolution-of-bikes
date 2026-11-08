@@ -9,6 +9,7 @@ export type BikeMeta = {
 };
 
 export const bikes: BikeMeta[] = [
+  { slug: 'battaglin-oria-7020', year: 'ca. 1996–1998', place: 'Marostica, Italien', title: 'Battaglin Oria 7020', status: 'Ny i samlingen', text: 'En italiensk aluminiumsracer med farvestærk 1990’er-lakering, Shimano Ultegra og Campagnolo Atlanta 1996-fælge.', image: 'images/bikes/battaglin-oria-7020/hero.webp' },
   { slug: 'vitus-992', year: '1994', place: 'Frankrig / Herning', title: 'Vitus 992', status: 'Ny i samlingen · Ikke restaureret', text: 'En fransk, limet aluminiumsracer med dansk stelnummer, Shimano 105 og Henning Jørgensens navn på rørene.', image: 'images/bikes/vitus-992/hero.jpg' },
   { slug: 'favorit-f11-1959', year: '1959', place: 'Tjekkoslovakiet / Serbien', title: 'Favorit F11', status: 'Læserens cykel · Ikke i samlingen', text: 'En guldfarvet Favorit-racer med købskvittering, klubkort og fotografier fra den første ejer, Srbinko Drakšan.', image: 'images/bikes/favorit-f11-1959/hero.webp' },
   { slug: 'olympia-1978', year: '1978, oplyst', place: 'Italien', title: 'Olympia', status: 'Tidligere i samlingen', text: 'En orange italiensk stålracer med Campagnolo Nuovo Gran Sport, Universal-bremser og Ofmega-kranksæt, dokumenteret gennem ejerens fotografier.', image: 'images/bikes/olympia-1978/hero.webp' },

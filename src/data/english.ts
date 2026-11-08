@@ -124,6 +124,7 @@ const storyCopy: Record<string, [string, string]> = {
 };
 
 const bikeCopy: Record<string, [string, string?, string?]> = {
+  'battaglin-oria-7020': ['An Italian aluminium racer with vivid 1990s paint, Shimano Ultegra and Campagnolo Atlanta 1996 rims.', 'Marostica, Italy', 'New to the collection'],
   'vitus-992': ['A French bonded-aluminium racer with a Danish frame number, Shimano 105 and Henning Jørgensen’s name on the tubes.', 'France / Herning', 'New to the collection · Not restored'],
   'favorit-f11-1959': ['A gold Czechoslovak Favorit racer with a documented Serbian ownership history, restored by reader Stefan Đurić.', 'Czechoslovakia / Serbia', "Reader's bicycle · Not in the collection"],
   'olympia-1978': ['An orange Italian steel racer with Campagnolo Nuovo Gran Sport, Universal brakes and an Ofmega chainset, preserved in the owner’s photographs.', 'Italy', 'Previously in the collection'],

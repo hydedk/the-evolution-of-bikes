@@ -1,6 +1,7 @@
 ---
 import { stories } from '../data/stories';
 import { bikes } from '../data/bikes';
+import { Image } from 'astro:assets';
 
 const { published = false } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -90,7 +91,9 @@ const periods = [
           <a href={`${base}/historier/`}>Gå på opdagelse i alle historier →</a>
         </div>
         <a class="draft-lead-story" href={leadStory.link}>
-          <img src={leadStory.imageUrl} alt="" fetchpriority="high" />
+          {typeof leadStory.image === 'string'
+            ? <img src={leadStory.imageUrl} alt={leadStory.title} fetchpriority="high" />
+            : <Image src={leadStory.image} alt={leadStory.title} widths={[720, 1080, 1440]} sizes="(max-width: 900px) 100vw, 60vw" loading="eager" fetchpriority="high" />}
           <span class="draft-lead-overlay" aria-hidden="true"></span>
           <span class="draft-lead-story-copy"><small>Dagens hovedhistorie · {leadStory.year}</small><strong>{leadStory.title}</strong><p>{leadStory.text}</p><i>Læs historien →</i></span>
         </a>
@@ -100,7 +103,7 @@ const periods = [
         <header><div><p class="section-label">Nyt fra arkivet</p><h2 id="draft-latest-title">Tre nye historier</h2></div><p>Vi udgiver løbende nye fortællinger. Her er dagens øvrige veje ind i arkivet.</p></header>
         <div class="draft-story-row">
           {latestStories.map((story, index) => (
-            <a class="draft-story-card" href={story.link}><span class="draft-card-index">0{index + 1}</span><img src={story.imageUrl} alt="" loading="lazy" /><small>{story.year}</small><h3>{story.title}</h3><p>{story.text}</p><i>Læs historien →</i></a>
+            <a class="draft-story-card" href={story.link}><span class="draft-card-index">0{index + 1}</span>{typeof story.image === 'string' ? <img src={story.imageUrl} alt={story.title} loading="lazy" /> : <Image src={story.image} alt={story.title} widths={[420, 720]} sizes="(max-width: 900px) 100vw, 33vw" loading="lazy" />}<small>{story.year}</small><h3>{story.title}</h3><p>{story.text}</p><i>Læs historien →</i></a>
           ))}
         </div>
       </section>

@@ -103,7 +103,7 @@ const periods = [
         <header><div><p class="section-label">Nyt fra arkivet</p><h2 id="draft-latest-title">Tre nye historier</h2></div><p>Vi udgiver løbende nye fortællinger. Her er dagens øvrige veje ind i arkivet.</p></header>
         <div class="draft-story-row">
           {latestStories.map((story, index) => (
-            <a class="draft-story-card" href={story.link}><span class="draft-card-index">0{index + 1}</span>{typeof story.image === 'string' ? <img src={story.imageUrl} alt={story.title} loading="lazy" /> : <Image src={story.image} alt={story.title} widths={[420, 720]} sizes="(max-width: 900px) 100vw, 33vw" loading="lazy" />}<small>{story.year}</small><h3>{story.title}</h3><p>{story.text}</p><i>Læs historien →</i></a>
+            <a class="draft-story-card" href={story.link}><span class="draft-card-index">0{index + 1}</span><span class="draft-story-card-image">{typeof story.image === 'string' ? <img src={story.imageUrl} alt={story.title} loading="lazy" /> : <Image src={story.image} alt={story.title} widths={[420, 720]} sizes="(max-width: 900px) 100vw, 33vw" loading="lazy" />}</span><small>{story.year}</small><h3>{story.title}</h3><p>{story.text}</p><i>Læs historien →</i></a>
           ))}
         </div>
       </section>

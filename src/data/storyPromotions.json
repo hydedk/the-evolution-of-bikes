@@ -189,6 +189,27 @@
       "date": "2026-11-24",
       "approved": true,
       "publishAt": "2026-11-24T09:00:00+01:00"
+    },
+    {
+      "id": "hist-000278",
+      "slug": "bausager-marcussen-to-veje-i-professionel-cykling",
+      "date": "2026-11-25",
+      "approved": true,
+      "publishAt": "2026-11-25T09:00:00+01:00"
+    },
+    {
+      "id": "hist-000480",
+      "slug": "lakeringen-foer-pulverlakken",
+      "date": "2026-11-26",
+      "approved": true,
+      "publishAt": "2026-11-26T09:00:00+01:00"
+    },
+    {
+      "id": "hist-000274",
+      "slug": "eluf-dalgaard-bane-og-landevej",
+      "date": "2026-11-27",
+      "approved": true,
+      "publishAt": "2026-11-27T09:00:00+01:00"
     }
   ]
 }

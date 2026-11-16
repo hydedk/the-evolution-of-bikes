@@ -1,3 +1,4 @@
+import { approvedStories20261125 } from './approvedStories20261125';
 import { approvedStories20261122 } from './approvedStories20261122';
 import releaseImage20 from '../assets/stories/zipp-motorsport-aerodynamik/zipp.jpg';
 import releaseImage19 from '../assets/stories/queen-bicycle-race-1978/freddie-mercury-1977.jpg';
@@ -23,6 +24,7 @@ import releaseImage14 from '../assets/stories/forgaffelbygning-foer-1950/image-1
 
 export const approvedStories20261102 = {
   ...approvedStories20261122,
+  ...approvedStories20261125,
 "alfonsina-strada-giro-1924": {
   "id": "hist-000011",
   "slug": "alfonsina-strada-giro-1924",

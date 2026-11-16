@@ -1,0 +1,8 @@
+---
+import ApprovedStory from './ApprovedStory.astro';
+
+const segments = Astro.url.pathname.split('/').filter(Boolean);
+const language = segments[0] === 'de' ? 'de' : segments[0] === 'en' ? 'en' : 'da';
+const slug = segments.at(-1) as Parameters<typeof ApprovedStory>[0]['slug'];
+---
+<ApprovedStory slug={slug} language={language} />

@@ -18,18 +18,27 @@ export function validatePromotionPlan(stories, plan) {
     if (!entry || !slugs.has(entry.slug) || seen.has(entry.slug)) throw new Error('Unknown or duplicate promotion slug');
     if (!/^hist-\d{6}$/.test(entry.id) || ids.has(entry.id)) throw new Error('Invalid or duplicate story ID');
     if (!/^\d{4}-\d{2}-\d{2}$/.test(entry.date) || !Number.isFinite(Date.parse(entry.date)) || new Date(entry.date).toISOString().slice(0, 10) !== entry.date) throw new Error('Invalid promotion date');
+    if (entry.publishAt !== undefined && (
+      typeof entry.publishAt !== 'string' || !entry.publishAt.startsWith(entry.date + 'T') ||
+      !Number.isFinite(Date.parse(entry.publishAt))
+    )) throw new Error('Invalid publication time');
     if (dates.has(entry.date)) throw new Error('Only one promotion per day is supported');
     if (typeof entry.approved !== 'boolean') throw new Error('Explicit promotion approval is required');
     seen.add(entry.slug); ids.add(entry.id); dates.add(entry.date);
   }
 }
 
-export function selectPromotedStories(stories, plan, today = copenhagenDate()) {
+export function promotionIsDue(entry, plan, now = new Date(), today = copenhagenDate(now)) {
+  return plan.enabled && entry.approved && entry.date <= today &&
+    (!entry.publishAt || Date.parse(entry.publishAt) <= Number(now));
+}
+
+export function selectPromotedStories(stories, plan, today, now = new Date()) {
   validatePromotionPlan(stories, plan);
   const entries = new Map(plan.entries.map((entry) => [entry.slug, entry]));
   const visible = stories.filter((story) => {
     const entry = entries.get(story.slug);
-    return !entry || (plan.enabled && entry.approved && entry.date <= today);
+    return !entry || promotionIsDue(entry, plan, now, today);
   });
   // Latest promoted story leads the homepage. Keep the existing archive order otherwise.
   return visible.map((story, index) => ({ story, index })).sort((a, b) => {

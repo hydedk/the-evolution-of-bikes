@@ -1,3 +1,4 @@
+import { approvedStories20261122 } from './approvedStories20261122';
 import releaseImage20 from '../assets/stories/zipp-motorsport-aerodynamik/zipp.jpg';
 import releaseImage19 from '../assets/stories/queen-bicycle-race-1978/freddie-mercury-1977.jpg';
 import releaseImage15 from '../assets/stories/danguillaume-fredsloeb-1969/fredsloebet-1948.jpg';
@@ -21,6 +22,7 @@ import releaseImage13 from '../assets/stories/sadelpindens-diameter-staalrammer/
 import releaseImage14 from '../assets/stories/forgaffelbygning-foer-1950/image-1.png';
 
 export const approvedStories20261102 = {
+  ...approvedStories20261122,
 "alfonsina-strada-giro-1924": {
   "id": "hist-000011",
   "slug": "alfonsina-strada-giro-1924",

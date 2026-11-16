@@ -1,3 +1,5 @@
+import storyPromotions from './storyPromotions.json';
+
 const storyModules = import.meta.glob('../pages/en/stories/*.astro');
 const bikeModules = import.meta.glob('../pages/en/bikes/*.astro');
 
@@ -39,5 +41,6 @@ const dynamicEnglishStorySlugs = [
 export const englishStorySlugs = new Set([
   ...slugsFrom(Object.keys(storyModules)),
   ...dynamicEnglishStorySlugs,
+  ...storyPromotions.entries.filter(entry => 'publishAt' in entry).map(entry => entry.slug),
 ]);
 export const englishBikeSlugs = slugsFrom(Object.keys(bikeModules));

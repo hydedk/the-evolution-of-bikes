@@ -168,6 +168,27 @@
       "slug": "zipp-motorsport-aerodynamik",
       "date": "2026-11-16",
       "approved": true
+    },
+    {
+      "id": "hist-000273",
+      "slug": "carl-hellemann-vm-ordrup-1903",
+      "date": "2026-11-22",
+      "approved": true,
+      "publishAt": "2026-11-22T09:00:00+01:00"
+    },
+    {
+      "id": "hist-000134",
+      "slug": "mavic-zap-mektronic-elektroniske-gear",
+      "date": "2026-11-23",
+      "approved": true,
+      "publishAt": "2026-11-23T09:00:00+01:00"
+    },
+    {
+      "id": "hist-000222",
+      "slug": "hinault-sallanches-1980",
+      "date": "2026-11-24",
+      "approved": true,
+      "publishAt": "2026-11-24T09:00:00+01:00"
     }
   ]
 }

@@ -1,9 +1,11 @@
 import { defineConfig } from 'astro/config';
+import { promotionIsDue } from './src/data/storyPromotion.mjs';
 import { readdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { addAnalytics } from './scripts/analytics.mjs';
 
+const storyPromotionPlan = JSON.parse(await readFile(new URL('./src/data/storyPromotions.json', import.meta.url), 'utf8'));
 const siteUrl = 'https://teob.dk';
 const languagePairs = {
   '/fortael-din-historie/': '/en/share-your-story/',
@@ -184,7 +186,13 @@ else initialiseLightbox();
 const socialMetadata = {
   name: 'social-metadata',
   hooks: {
-    'astro:config:setup': ({ injectScript }) => {
+    'astro:config:setup': ({ command, injectRoute, injectScript }) => {
+      for (const entry of storyPromotionPlan.entries) {
+        if (!entry.publishAt || (command !== 'dev' && !promotionIsDue(entry, storyPromotionPlan))) continue;
+        for (const prefix of ['historier', 'en/stories', 'de/geschichten']) {
+          injectRoute({ pattern: '/' + prefix + '/' + entry.slug, entrypoint: fileURLToPath(new URL('./src/components/TimedStoryPage.astro', import.meta.url)) });
+        }
+      }
       injectScript('page', lightboxScript);
     },
     'astro:build:done': async ({ dir }) => {
@@ -223,8 +231,8 @@ const socialMetadata = {
         const pagePath = relativePath === 'index.html' ? '/' : `/${relativePath.replace(/index\.html$/, '')}`;
         const canonical = new URL(pagePath, `${siteUrl}/`).href;
         const isEnglish = pagePath.startsWith('/en/');
-        const language = isEnglish ? 'en-GB' : 'da-DK';
-        const locale = isEnglish ? 'en_GB' : 'da_DK';
+        const language = pagePath.startsWith('/de/') ? 'de-DE' : isEnglish ? 'en-GB' : 'da-DK';
+        const locale = pagePath.startsWith('/de/') ? 'de_DE' : isEnglish ? 'en_GB' : 'da_DK';
         const escape = (value) => value.replace(/&(?!(?:amp|quot|#39|lt|gt);)/g, '&amp;').replace(/"/g, '&quot;');
         const pageTitle = seoTitleOverrides[pagePath] || title;
         const description = seoDescriptionOverrides[pagePath] || sourceDescription;
@@ -232,7 +240,7 @@ const socialMetadata = {
         const isHome = pagePath === '/' || pagePath === '/en/';
         const isAbout = pagePath === '/om/' || pagePath === '/en/about/';
         const isBike = /^\/(?:en\/bikes|cykler)\/[^/]+\/$/.test(pagePath);
-        const isStory = /^\/(?:en\/stories|historier)\/[^/]+\/$/.test(pagePath);
+        const isStory = /^\/(?:en\/stories|de\/geschichten|historier)\/[^/]+\/$/.test(pagePath);
         const isPeriod = /^\/(?:en\/periods|perioder)\/[^/]+\/$/.test(pagePath);
         const isComponent = /^\/(?:en\/components|komponenter)\/[^/]+\/$/.test(pagePath);
         const collectionPaths = new Set(['/historier/', '/perioder/', '/cykler/', '/komponenter/', '/en/stories/', '/en/periods/', '/en/bikes/', '/en/components/']);

@@ -1,10 +1,10 @@
-import { readFile, readdir } from 'node:fs/promises';
+import { readFile, readdir, access } from 'node:fs/promises';
 import { join } from 'node:path';
-import { copenhagenDate } from '../src/data/storyPromotion.mjs';
+import { promotionIsDue } from '../src/data/storyPromotion.mjs';
 const root = new URL('../dist/', import.meta.url);
 const plan = JSON.parse(await readFile(new URL('../src/data/storyPromotions.json',import.meta.url),'utf8'));
-const today = copenhagenDate();
-const pending = plan.entries.filter(e=>!plan.enabled || !e.approved || e.date>today);
+const now = new Date();
+const pending = plan.entries.filter(e=>!promotionIsDue(e,plan,now));
 const htmlFiles = [];
 async function collect(dir) {
   for (const entry of await readdir(dir,{withFileTypes:true})) {
@@ -21,7 +21,16 @@ if(top.includes('loeb')) throw new Error('Race work pages must not ship');
 const { fileURLToPath } = await import('node:url');
 await collect(fileURLToPath(root));
 for(const entry of plan.entries) {
-  for(const prefix of ['historier','en/stories']) {
+  const prefixes = entry.publishAt ? ['historier','en/stories','de/geschichten'] : ['historier','en/stories'];
+  if (entry.publishAt && pending.includes(entry)) {
+    for (const prefix of prefixes) {
+      const page = new URL(prefix+'/'+entry.slug+'/index.html',root);
+      const exists = await access(page).then(()=>true, error=>{ if (error.code==='ENOENT') return false; throw error; });
+      if (exists) throw new Error('Article generated before its publication time: '+page);
+    }
+    continue;
+  }
+  for(const prefix of prefixes) {
     await readFile(new URL(`${prefix}/${entry.slug}/index.html`,root));
   }
 }
@@ -40,7 +49,7 @@ for(const file of htmlFiles) {
     }
   }
 }
-const due = plan.entries.filter(e=>plan.enabled && e.approved && e.date<=today);
+const due = plan.entries.filter(e=>!pending.includes(e));
 for (const entry of due) {
   for (const [prefix, archive, period, theme] of [
     ['historier','historier','perioder','tema'],

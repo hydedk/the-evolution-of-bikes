@@ -59,7 +59,7 @@ for (const page of publicPages) {
       : ['/om/', '/en/about/'].includes(page.path) ? 'AboutPage'
       : /^\/(?:en\/bikes|cykler)\/[^/]+\/$/.test(page.path) ? 'ItemPage'
       : /^\/(?:en\/components|komponenter)\/[^/]+\/$/.test(page.path) ? 'TechArticle'
-      : /^\/(?:en\/(?:stories|periods)|historier|perioder)\/[^/]+\/$/.test(page.path) ? 'Article'
+      : /^\/(?:en\/(?:stories|periods)|de\/geschichten|historier|perioder)\/[^/]+\/$/.test(page.path) ? 'Article'
       : ['/historier/', '/perioder/', '/cykler/', '/komponenter/', '/en/stories/', '/en/periods/', '/en/bikes/', '/en/components/'].includes(page.path) ? 'CollectionPage'
       : 'WebPage';
     if (!types.includes(expectedType)) errors.push(`${page.path}: forventede Schema.org-typen ${expectedType}, fandt ${types.join(', ')}`);

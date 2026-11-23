@@ -1,4 +1,6 @@
 ---
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
 import RelatedDiscovery from '../../components/RelatedDiscovery.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const facts = [
@@ -26,7 +28,7 @@ const facts = [
     <link rel="stylesheet" href={`${base}/styles/global.css`} />
   </head>
   <body>
-    <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`} aria-current="page">Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav><div class="header-tools"><strong>DA</strong><span>/</span><a class="language-switch" href={`${base}/en/stories/da-gearene-kom-og-oel-narrede-feltet/`} lang="en">EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div></header>
+    <SiteHeader lang="da" translations={{ en: `/en/stories/da-gearene-kom-og-oel-narrede-feltet/` }} />
 
     <main><article class="beer-story-page">
       <header class="beer-story-hero">
@@ -87,6 +89,6 @@ const facts = [
       <section class="beer-story-closing"><blockquote>Først kørte Moineau fra feltet.<br />Så sørgede øllet for, at feltet <em>blev væk.</em></blockquote></section>
       <RelatedDiscovery currentSlug={'da-gearene-kom-og-oel-narrede-feltet'}/><nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/historier/`}>← Alle historier</a><a href={`${base}/historier/campagnolo-quick-release/`}>Historien om quick release →</a></nav>
     </article></main>
-    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+    <SiteFooter lang="da" />
   </body>
 </html>

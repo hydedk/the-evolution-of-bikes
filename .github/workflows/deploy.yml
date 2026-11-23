@@ -84,6 +84,7 @@ jobs:
           node scripts/test-story-promotion.mjs
           node scripts/test-approved-story-schedule.mjs
           node scripts/test-promotion-deployment.mjs
+          node --test scripts/test-publication-boundary.mjs
       - name: Build
         run: pnpm build
         env:

@@ -1,10 +1,12 @@
 ---
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const images = `${base}/images/bikes/bernardi-ca-1980`;
 ---
 <!doctype html>
 <html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="Bernardi-racer fra omkring 1980 med Campagnolo Nuovo Gran Sport, højflangenav, Universal-bremser og original turkis lakering." /><meta property="og:type" content="article" /><meta property="og:title" content="Bernardi ca. 1980 · The Evolution of Bikes" /><meta property="og:description" content="En italiensk stålracer med klassiske komponenter og et ophav, der ikke kan fastslås helt sikkert." /><meta property="og:image" content="https://teob.dk/images/bikes/bernardi-ca-1980/hero.webp" /><meta name="twitter:card" content="summary_large_image" /><title>Bernardi ca. 1980 · The Evolution of Bikes</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} /></head>
-<body><header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`} aria-current="page">Cykler</a><a href={`${base}/om/`}>Om</a></nav><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></header>
+<body><SiteHeader lang="da" />
 <main class="atala-page">
   <header class="quick-hero"><p class="section-label">Tidligere i samlingen · Italien · omkring 1980</p><h1>Bernardi</h1><p>En turkis italiensk stålracer med Campagnolo Nuovo Gran Sport, højflangenav og Universal-bremser. Cyklen er gennemgået og renoveret, men lak og hovedparten af delene er bevaret.</p></header>
 
@@ -29,4 +31,4 @@ const images = `${base}/images/bikes/bernardi-ca-1980`;
   <section class="atala-story period-sources"><div><p class="section-label">Kilder</p><h2>Grundlag</h2></div><div><p><a href="https://www.campyonly.com/history/catalogs.html">Campy Only: katalogarkiv</a> · <a href="https://classicrendezvous.com/country-of-origin/italy/italy-components/universal/">Classic Rendezvous: Universal</a> · cyklen, fotografierne og ejerens oplysninger i The Evolution of Bikes-arkivet.</p><p>Dateringen og forbindelsen til Guido De Bernardi er ikke dokumenteret gennem en samtidig producentkilde. Komponentnavnene bygger på de synlige mærkninger på cyklen.</p></div></section>
 
   <section class="atala-closing"><p>Bernardi-cyklen er ikke længere i samlingen. Billederne bevarer det, der kan siges med sikkerhed: en velholdt italiensk racer fra tiden omkring 1980, bygget med gode og tidstypiske dele. Resten må stå åbent, indtil et katalog eller et stelnummer giver et bedre svar.</p><div class="bike-bottom-nav"><a href={`${base}/cykler/`}>← Tilbage til cyklerne</a><a href={`${base}/perioder/1980-1989/`}>Se perioden 1980–1989 →</a></div></section>
-</main><footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer></body></html>
+</main><SiteFooter lang="da" /></body></html>

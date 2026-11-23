@@ -1,4 +1,6 @@
 ---
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const images = `${base}/images/components/campagnolo-cambio-corsa`;
 const steps = [
@@ -18,7 +20,7 @@ const steps = [
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} />
   </head>
   <body>
-    <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav><div class="header-tools"><strong aria-current="page">DA</strong><span aria-hidden="true">/</span><a class="language-switch" href={`${base}/en/components/campagnolo-cambio-corsa/`} lang="en" hreflang="en">EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div></header>
+    <SiteHeader lang="da" translations={{ en: `/en/components/campagnolo-cambio-corsa/` }} />
     <main><article class="cambio-page">
       <header class="cambio-hero"><p class="section-label">Campagnolo · Italien · 1946</p><h1>Cambio Corsa</h1><p>Gearskiftet, der krævede både mod og balance — og som lod rytteren løsne sit eget baghjul, mens cyklen var i bevægelse.</p></header>
 
@@ -49,6 +51,6 @@ const steps = [
       <section class="cambio-closing"><blockquote>Ikke blot et “selvmordsgear” —<br />men et dristigt mellemtrin på vej mod <em>den moderne racercykel.</em></blockquote></section>
       <nav class="era-bottom-nav" aria-label="Videre navigation"><a href={`${base}/komponenter/`}>← Alle komponenter</a><a href={`${base}/komponenter/shimano-600-ex-arabesque/`}>Shimano 600 EX Arabesque →</a></nav>
     </article></main>
-    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+    <SiteFooter lang="da" />
   </body>
 </html>

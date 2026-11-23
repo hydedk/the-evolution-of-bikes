@@ -1,10 +1,5 @@
 ---
+import SiteHeader from './SiteHeader.astro';
 const { current = '', danishPath = '/' } = Astro.props;
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const nav = [['stories','Stories'],['bikes','Bikes'],['periods','Periods'],['about','About']];
 ---
-<header class="site-header">
-  <a class="brand" href={`${base}/en/`} aria-label="The Evolution of Bikes, home"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
-  <nav aria-label="Main menu">{nav.map(([slug,label]) => <a href={`${base}/en/${slug}/`} aria-current={current === slug ? 'page' : undefined}>{label}</a>)}</nav>
-  <div class="header-tools"><a class="language-switch" href={`${base}${danishPath}`} lang="da" hreflang="da">DA</a><span aria-hidden="true">/</span><strong aria-current="page">EN</strong><a class="header-story-link" href={`${base}/en/share-your-story/`}>Share your story</a></div>
-</header>
+<SiteHeader lang="en" {current} translations={{ da: danishPath }} />

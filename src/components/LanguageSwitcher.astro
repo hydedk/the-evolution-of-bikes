@@ -1,0 +1,14 @@
+---
+import { languageNames, siteChrome, siteLanguages, type PageTranslations, type SiteLanguage } from '../data/siteChrome';
+interface Props { lang: SiteLanguage; translations: PageTranslations; }
+const { lang, translations } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const fallback = lang === 'da' && !translations.en ? { lang: 'en', path: '/en/' }
+  : lang !== 'da' && !translations.da ? { lang: 'da', path: '/' } : null;
+---
+<div class="site-languages" role="group" aria-label={siteChrome[lang].languageLabel}>
+  {siteLanguages.filter(language => language === lang || translations[language]).map(language => language === lang
+    ? <strong class="site-language" data-language={language} aria-current="page" aria-label={languageNames[language]}>{language.toUpperCase()}</strong>
+    : <a class="site-language" data-language={language} href={`${base}${translations[language]}`} lang={language} hreflang={language} aria-label={languageNames[language]}>{language.toUpperCase()}</a>)}
+  {fallback && <a class="site-language-home" href={`${base}${fallback.path}`} lang={fallback.lang}>{siteChrome[lang].homeFallback}</a>}
+</div>

@@ -1,4 +1,6 @@
 ---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 import { stories } from '../data/stories';
 import { bikes } from '../data/bikes';
 import { Image } from 'astro:assets';
@@ -73,13 +75,7 @@ const periods = [
     <link rel="stylesheet" href={`${base}/styles/global.css`} />
   </head>
   <body class="editorial-home-draft">
-    <header class="site-header">
-      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside">
-        <span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span>
-      </a>
-      <nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav>
-      <div class="header-tools"><strong aria-current="page">DA</strong><span aria-hidden="true">/</span><a class="language-switch" href={`${base}/en/`} lang="en" hreflang="en">EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div>
-    </header>
+    <SiteHeader lang="da" translations={{ en: `/en/` }} />
 
     <main>
       <section class="draft-lead" aria-labelledby="draft-lead-title">
@@ -146,7 +142,7 @@ const periods = [
       </section>
     </main>
 
-    <footer id="om"><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+    <SiteFooter lang="da" />
     <script is:inline define:vars={{ rotatingBikes, base }}>
       const threeDays = 3 * 24 * 60 * 60 * 1000;
       const bike = rotatingBikes[Math.floor(Date.now() / threeDays) % rotatingBikes.length];

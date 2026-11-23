@@ -1,4 +1,6 @@
 ---
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
 const { story } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -16,11 +18,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <link rel="stylesheet" href={`${base}/styles/global.css`} />
   </head>
   <body data-unpublished-story>
-    <header class="site-header">
-      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
-      <nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav>
-      <div class="header-tools"><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div>
-    </header>
+    <SiteHeader lang="da" />
     <main>
       <article class="unpublished-story" style={`--draft-accent:${story.accent}`}>
         <p class="unpublished-story__notice">Redaktionel kladde · ikke publiceret</p>
@@ -44,7 +42,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </section>
       </article>
     </main>
-    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+    <SiteFooter lang="da" />
   </body>
 </html>
 

@@ -1,6 +1,7 @@
 import { readFile, readdir, access } from 'node:fs/promises';
 import { join } from 'node:path';
 import { promotionIsDue } from '../src/data/storyPromotion.mjs';
+import { isUnreleasedHref } from '../src/data/publicationBoundary.mjs';
 const root = new URL('../dist/', import.meta.url);
 const plan = JSON.parse(await readFile(new URL('../src/data/storyPromotions.json',import.meta.url),'utf8'));
 const now = new Date();
@@ -39,6 +40,20 @@ for(const file of htmlFiles) {
   const normalizedPath = file.replaceAll('\\','/');
   if (normalizedPath.includes('/dist/admin/')) continue;
   const html = await readFile(file,'utf8');
+  const pagePath = '/' + normalizedPath.split('/dist/')[1].replace(/index\.html$/, '');
+  if (isUnreleasedHref(pagePath)) throw new Error('Work page must not ship: '+pagePath);
+  for (const [, href] of html.matchAll(/\bhref=["']([^"']+)["']/gi)) {
+    if (isUnreleasedHref(href)) throw new Error('Link to held section: '+href+' in '+file);
+  }
+  if (/<html\b/i.test(html) && !/name=["']robots["'][^>]*noindex/i.test(html) && !/http-equiv=["']refresh["']/i.test(html)) {
+    const lang = html.match(/<html[^>]+lang=["']([^"']+)/)?.[1];
+    const nav = html.match(/<nav\b[^>]*class=["']site-main-menu["'][^>]*>(.*?)<\/nav>/s)?.[1];
+    const destinations = [...(nav || '').matchAll(/href=["']([^"']+)/g)].map(([, href])=>href);
+    const expected = lang === 'en' ? ['/en/stories/','/en/periods/','/en/bikes/','/en/about/'] : ['/historier/','/perioder/','/cykler/','/om/'];
+    if (JSON.stringify(destinations) !== JSON.stringify(expected)) throw new Error('Unexpected public menu: '+file);
+    if ((html.match(/data-site-logo=/g)||[]).length !== 2) throw new Error('Header/footer logo missing: '+file);
+    if (/<meta[^>]+property=["']og:image["'][^>]+teob-logo-2026/i.test(html)) throw new Error('Logo used instead of article image: '+file);
+  }
   publicHtml.push({ path: normalizedPath, html });
   for(const entry of pending) {
     // The two direct article pages may link to each other via the language switch.
@@ -71,5 +86,5 @@ if (latest) for (const [home,prefix] of [['','historier'],['en/','en/stories']])
   if (!html.includes(`/${prefix}/${latest.slug}/`)) throw new Error('Latest promotion missing from homepage');
 }
 const sitemap = await readFile(new URL('sitemap.xml',root),'utf8');
-if(sitemap.includes('/loeb/') || sitemap.includes('/en/races/')) throw new Error('Race work pages in sitemap');
-console.log('Promotion output check passed: direct DA/EN pages, no early discovery links, no race work pages.');
+for (const [, url] of sitemap.matchAll(/<loc>(.*?)<\/loc>/g)) if (isUnreleasedHref(url)) throw new Error('Held section in sitemap: '+url);
+console.log('Promotion output check passed: timed publication, shared header/footer/logo, four public menu items, no held sections or links.');

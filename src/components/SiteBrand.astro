@@ -1,0 +1,15 @@
+---
+import logo from '../assets/brand/teob-logo-2026.png';
+import OptimizedImage from './OptimizedImage.astro';
+import { siteChrome, type SiteLanguage } from '../data/siteChrome';
+interface Props { lang?: SiteLanguage; placement?: 'header' | 'footer'; }
+const { lang = 'da', placement = 'header' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const copy = siteChrome[lang];
+---
+<a class:list={['site-brand', `site-brand--${placement}`]} href={`${base}${copy.home}`} aria-label={copy.homeLabel}>
+  <OptimizedImage src={logo} alt="The Evolution of Bikes — EB · teob.dk"
+    widths={[80, 96, 128, 164, 180, 192, 256, 328, 360]} sizes={placement === 'footer' ? '180px' : '(max-width: 400px) 80px, (max-width: 760px) 96px, (max-width: 1100px) 128px, 164px'}
+    width={placement === 'footer' ? 180 : 164} height={placement === 'footer' ? 180 : 164}
+    loading={placement === 'header' ? 'eager' : 'lazy'} layout="none" data-site-logo="true" />
+</a>

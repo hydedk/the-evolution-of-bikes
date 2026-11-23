@@ -1,4 +1,6 @@
 ---
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 import OptimizedImage from '../../components/OptimizedImage.astro';
 import heroImage from '../../assets/bikes/scapin-k6/complete-drive-side.jpg';
@@ -13,7 +15,7 @@ const heroSocial = new URL(heroImage.src, Astro.site ?? Astro.url).href;
 ---
 <!doctype html>
 <html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="Scapin K6 fra 2013: italiensk kulfiberracer med Campagnolo-gruppe, Fulcrum Racing Speed-hjul og integrerede aerodynamiske former." /><meta property="og:type" content="article" /><meta property="og:title" content="Scapin K6 2013 · The Evolution of Bikes" /><meta property="og:description" content="En italiensk high-end racercykel fra en tid, hvor hele cyklen blev udviklet som ét system." /><meta property="og:image" content={heroSocial} /><meta name="twitter:card" content="summary_large_image" /><title>Scapin K6 2013 · The Evolution of Bikes</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} /></head>
-<body><header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`} aria-current="page">Cykler</a><a href={`${base}/om/`}>Om</a></nav><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></header>
+<body><SiteHeader lang="da" />
 <main class="atala-page">
   <header class="quick-hero"><p class="section-label">I samlingen · Italien · 2013</p><h1>Scapin<br /><em>K6</em></h1><p>En kulfiberracer fra den periode, hvor lav vægt, stivhed, aerodynamik og rytterens position ikke længere blev behandlet som hver sin opgave.</p></header>
 
@@ -38,4 +40,4 @@ const heroSocial = new URL(heroImage.src, Astro.site ?? Astro.url).href;
   <section class="atala-story period-sources"><div><p class="section-label">Kilder</p><h2>Grundlag</h2></div><div><p><a href="https://www.scapin.com/">Scapin: producentens hjemmeside</a> · Scapins produktkatalog fra 2013 · cyklen og ejerens oplysninger i The Evolution of Bikes-samlingen.</p><p>Komponentbeskrivelserne bygger på de synlige mærkninger og konstruktioner på cyklen. Den præcise variant af Campagnolo-gruppen er ikke angivet uden yderligere dokumentation.</p></div></section>
 
   <section class="atala-closing"><p>Scapin K6 viser en periode, hvor kulfibercyklen var blevet moden, men endnu ikke lukket om sin egen teknik. Kabler, bremser og frempind kan stadig ses og justeres. Rundt om dem er rammen og hjulene allerede formet som én samlet hurtig maskine.</p><div class="bike-bottom-nav"><a href={`${base}/cykler/`}>← Tilbage til cyklerne</a><a href={`${base}/perioder/2010-2019/`}>Se perioden 2010–2019 →</a></div></section>
-</main><footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer></body></html>
+</main><SiteFooter lang="da" /></body></html>

@@ -1,4 +1,6 @@
 ---
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
 import EnglishHeader from './EnglishHeader.astro';
 import EnglishFooter from './EnglishFooter.astro';
 import OptimizedImage from './OptimizedImage.astro';
@@ -52,7 +54,7 @@ const addition = scheduledStoryAdditions[slug]?.[language];
     <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet"/><link rel="stylesheet" href={`${base}/styles/global.css`}/>
   </head>
   <body>
-  {language === 'en' ? <EnglishHeader current="stories" danishPath={daPath}/> : <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`} aria-current="page">Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav><div class="header-tools"><strong>DA</strong><span>/</span><a class="language-switch" href={`${base}${enPath}`} lang="en" hreflang="en">EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div></header>}
+  {language === 'en' ? <EnglishHeader current="stories" danishPath={daPath}/> : <SiteHeader lang="da" translations={{ en: `${enPath}` }} />}
   <main>
     <article>
       <header class:list={['hero', {
@@ -92,7 +94,7 @@ const addition = scheduledStoryAdditions[slug]?.[language];
     </article>
     <RelatedDiscovery currentSlug={slug} language={language} />
   </main>
-  {language === 'en' ? <EnglishFooter/> : <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></div><p>En personlig samling af vintagecykler,<br/>historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>}
+  {language === 'en' ? <EnglishFooter/> : <SiteFooter lang="da" />}
   </body>
 </html>
 <style>

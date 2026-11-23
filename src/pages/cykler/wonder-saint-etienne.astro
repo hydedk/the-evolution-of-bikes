@@ -1,4 +1,6 @@
 ---
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const images = `${base}/images/bikes/wonder-saint-etienne`;
 const facts = [
@@ -31,10 +33,7 @@ const facts = [
     <link rel="stylesheet" href={`${base}/styles/global.css`} />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
-      <nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`} aria-current="page">Cykler</a><a href={`${base}/om/`}>Om</a></nav><div class="header-tools"><strong aria-current="page">DA</strong><span aria-hidden="true">/</span><a class="language-switch" href={`${base}/en/bikes/wonder-saint-etienne/`} lang="en" hreflang="en">EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div>
-    </header>
+    <SiteHeader lang="da" translations={{ en: `/en/bikes/wonder-saint-etienne/` }} />
 
     <main>
       <article class="wonder-page">
@@ -133,6 +132,6 @@ const facts = [
       </article>
     </main>
 
-    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+    <SiteFooter lang="da" />
   </body>
 </html>

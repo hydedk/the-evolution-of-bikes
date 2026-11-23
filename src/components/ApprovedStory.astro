@@ -1,6 +1,6 @@
 ---
-import EnglishHeader from './EnglishHeader.astro';
-import EnglishFooter from './EnglishFooter.astro';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
 import OptimizedImage from './OptimizedImage.astro';
 import RelatedDiscovery from './RelatedDiscovery.astro';
 import { stories } from '../data/stories';
@@ -60,7 +60,7 @@ const alt = (img) => german ? img.altDe : language === 'da' ? img.altDa : img.al
     <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet"/><link rel="stylesheet" href={`${base}/styles/global.css`}/>
   </head>
   <body>
-  {german ? <header class="site-header"><a class="brand" href={base+'/'}>The Evolution of Bikes</a></header> : language === 'en' ? <EnglishHeader current="stories" danishPath={daPath}/> : <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`} aria-current="page">Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav><div class="header-tools"><strong>DA</strong><span>/</span><a class="language-switch" href={`${base}${enPath}`} lang="en" hreflang="en">EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div></header>}
+  <SiteHeader lang={language} current="stories" translations={{ da: daPath, en: enPath, ...('de' in story ? { de: `/de/geschichten/${slug}/` } : {}) }} />
   <main>
     <article>
       <header class:list={['hero', {
@@ -96,7 +96,7 @@ const alt = (img) => german ? img.altDe : language === 'da' ? img.altDa : img.al
     {related && <section class="relevant-story"><h2>{language === 'da' ? 'Læs også' : 'Read also'}</h2><a href={base + (language === 'da' ? '/historier/' : '/en/stories/') + related.slug + '/'}>{related.title} →</a></section>}
     {!german && <RelatedDiscovery currentSlug={slug} language={language === 'en' ? 'en' : 'da'} />}
   </main>
-  {german ? <footer><p>The Evolution of Bikes</p></footer> : language === 'en' ? <EnglishFooter/> : <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></div><p>En personlig samling af vintagecykler,<br/>historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>}
+  <SiteFooter lang={language} />
   </body>
 </html>
 <style>

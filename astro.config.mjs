@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
 import { promotionIsDue } from './src/data/storyPromotion.mjs';
+import { isUnreleasedHref } from './src/data/publicationBoundary.mjs';
 import { readdir, readFile, writeFile, rm } from 'node:fs/promises';
-import { join, relative, sep } from 'node:path';
+import { join, relative, sep, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { addAnalytics } from './scripts/analytics.mjs';
 
@@ -197,9 +198,18 @@ const socialMetadata = {
     },
     'astro:build:done': async ({ dir }) => {
       const outputDir = fileURLToPath(dir);
-      // Race pages remain local work files. Never ship their HTML or add them to sitemap.
-      await rm(join(outputDir, 'loeb'), { recursive: true, force: true });
-      await rm(join(outputDir, 'en', 'races'), { recursive: true, force: true });
+      // Remove every held section before metadata and sitemap generation.
+      const pruneWorkPages = async (directory) => {
+        for (const entry of await readdir(directory, { withFileTypes: true })) {
+          if (!entry.isDirectory()) continue;
+          const target = resolve(directory, entry.name);
+          const relativePath = relative(outputDir, target);
+          if (relativePath.startsWith('..') || !target.startsWith(resolve(outputDir) + sep)) throw new Error('Output path escaped dist');
+          if (isUnreleasedHref('/' + relativePath.split(sep).join('/') + '/')) await rm(target, { recursive: true, force: true });
+          else await pruneWorkPages(target);
+        }
+      };
+      await pruneWorkPages(outputDir);
       const htmlFiles = [];
       const sitemapUrls = [];
 
@@ -224,7 +234,8 @@ const socialMetadata = {
         const title = html.match(/<title>(.*?)<\/title>/is)?.[1]?.replace(/<[^>]+>/g, '').trim() || 'The Evolution of Bikes';
         const sourceDescription = metaContent('name', 'description') || 'Vintagecykling fortalt gennem cyklerne, løbene og menneskene.';
         const existingImage = metaContent('property', 'og:image');
-        const firstImage = html.match(/<img[^>]+src=["']([^"']+)["']/i)?.[1];
+        const firstContentImage = [...html.matchAll(/<img\b[^>]*>/gi)].find(([tag]) => !tag.includes('data-site-logo'))?.[0];
+        const firstImage = firstContentImage?.match(/\bsrc=["']([^"']+)["']/i)?.[1];
         const imagePath = existingImage || firstImage || '/og.png';
         const image = imagePath.startsWith('http') ? imagePath : new URL(imagePath, `${siteUrl}/`).href;
         const relativePath = relative(outputDir, file).split(sep).join('/');

@@ -1,0 +1,62 @@
+/* Shared canonical site brand, including local administration. */
+.brand { display: flex; gap: 14px; align-items: center; text-decoration: none; text-transform: uppercase; letter-spacing: .1em; font-size: 11px; font-weight: 600; line-height: 1.35; }
+.brand-mark { width: 46px; height: 46px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; line-height: 1; border: 1px solid var(--ink); border-radius: 50%; font-family: 'Libre Caslon Display', serif; font-size: 24px; letter-spacing: -.18em; padding-right: 4px; }
+.brand-mark span { color: var(--rust); }
+
+/* Approved 2026 image logo; the complete artwork is shared by header and footer. */
+.site-brand { display: block; flex-shrink: 0; width: 164px; text-decoration: none; }
+.site-brand--footer { width: 180px; }
+.site-brand picture, .site-brand img { display: block; width: 100%; height: auto; }
+.site-brand img { aspect-ratio: 1; object-fit: contain; }
+.site-brand:focus-visible, .site-language:focus-visible, .site-language-home:focus-visible { outline: 2px solid var(--rust); outline-offset: 5px; }
+.site-header.site-header--shared { display: block; height: auto; padding: 0; border: 0; background: var(--paper); }
+.site-masthead { display: grid; grid-template-columns: 164px minmax(0, 1fr) auto; align-items: center; gap: 32px; max-width: 1600px; margin-inline: auto; padding: 24px clamp(24px, 5vw, 80px); }
+.site-wordmark { padding-left: 30px; border-left: 1px solid rgba(24, 34, 28, .28); }
+.site-name { display: block; width: fit-content; color: var(--ink); text-decoration: none; font: 700 clamp(2rem, 4.2vw, 4.6rem)/.96 Georgia, 'Times New Roman', serif; text-transform: uppercase; letter-spacing: -.025em; }
+.site-name > span { display: block; white-space: nowrap; }
+.site-tagline { margin: 18px 0 0; color: var(--ink); font-size: clamp(.65rem, 1vw, .9rem); line-height: 1.6; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; }
+.site-masthead .header-tools { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; width: auto; margin: 0; gap: 20px; white-space: normal; }
+.site-masthead .header-tools .header-story-link { margin: 0; flex-basis: auto; }
+.site-header.site-header--shared > .site-main-menu { display: flex; flex-direction: row; flex-wrap: wrap; align-items: stretch; justify-content: center; gap: 0 clamp(18px, 2.1vw, 34px); margin: 0; padding: 0 clamp(24px, 5vw, 80px); background: var(--ink); color: var(--paper); text-align: center; }
+.site-main-menu > a { position: relative; display: flex; align-items: center; padding: 21px 0; color: inherit; font: 400 clamp(.95rem, 1.3vw, 1.2rem)/1.25 Georgia, 'Times New Roman', serif; text-decoration: none; white-space: nowrap; }
+.site-main-menu > a::after { content: ''; position: absolute; inset: auto 0 0; height: 4px; background: var(--rust); transform: scaleX(0); transition: transform .18s ease; }
+.site-main-menu > a[aria-current]::after, .site-main-menu > a:hover::after { transform: scaleX(1); }
+.site-main-menu > a:hover { color: #e8c795; }
+.site-main-menu > a:focus-visible { outline: 2px solid var(--paper); outline-offset: -5px; }
+.site-name:focus-visible { outline: 2px solid var(--rust); outline-offset: 5px; }
+.site-languages { display: flex; align-items: center; justify-content: center; gap: 9px; flex-wrap: wrap; }
+.site-language { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 32px; width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 50%; font-size: 11px; font-weight: 600; text-decoration: none; }
+.site-language[data-language="da"], .site-language[data-language="en"] { font-size: 0; background: center / 30px 30px no-repeat; }
+.site-language[data-language="da"] { background-image: url('/icons/language-da-wheel.svg'); }
+.site-language[data-language="en"] { background-image: url('/icons/language-en-wheel.svg'); }
+.site-language[aria-current="page"] { box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--rust); }
+.site-language-home { font-size: 11px; text-underline-offset: 3px; }
+footer.site-footer { align-items: center; }
+@media (max-width: 1100px) {
+  .site-masthead { grid-template-columns: 128px minmax(0, 1fr) auto; gap: 22px; }
+  .site-masthead > .site-brand { width: 128px; }
+  .site-wordmark { padding-left: 22px; }
+}
+@media (max-width: 900px) {
+  footer.site-footer { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 20px; padding-block: 40px; }
+  .site-footer .copyright { text-align: center; }
+}
+@media (max-width: 760px) {
+  .site-masthead { grid-template-columns: 96px minmax(0, 1fr); gap: 18px; padding: 20px 24px; }
+  .site-masthead > .site-brand { width: 96px; }
+  .site-wordmark { padding-left: 18px; }
+  .site-name { font-size: clamp(1.25rem, 5.5vw, 2.5rem); }
+  .site-tagline { margin-top: 10px; font-size: .58rem; letter-spacing: .13em; }
+  .site-masthead .header-tools { grid-column: 1 / -1; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 18px; }
+  .site-header.site-header--shared > .site-main-menu { column-gap: 16px; padding-inline: 20px; }
+  .site-main-menu > a { padding-block: 14px; font-size: .875rem; }
+  .site-main-menu > a::after { height: 3px; }
+}
+@media (max-width: 400px) {
+  .site-masthead { grid-template-columns: 80px minmax(0, 1fr); gap: 12px; padding-inline: 16px; }
+  .site-masthead > .site-brand { width: 80px; }
+  .site-wordmark { padding-left: 12px; }
+  .site-name { font-size: clamp(1.125rem, 5.5vw, 1.4rem); }
+  .site-header.site-header--shared > .site-main-menu { padding-inline: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .site-main-menu > a::after { transition: none; } }

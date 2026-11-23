@@ -1,11 +1,13 @@
 ---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const submissionUrl = import.meta.env.PUBLIC_STORY_SUBMISSION_URL
   ?? 'https://fmxiyfhncvhnwzwipnxu.supabase.co/functions/v1/submit-reader-story';
 ---
 <!doctype html>
 <html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content="Indsend din egen historie om en cykel, en rytter, et værksted eller en særlig oplevelse." /><title>Fortæl din historie · The Evolution of Bikes</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" /><link rel="stylesheet" href={`${base}/styles/global.css`} /></head>
-<body><header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`}>Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav><div class="header-tools"><strong aria-current="page">DA</strong><span aria-hidden="true">/</span><a class="language-switch" href={`${base}/en/share-your-story/`} lang="en" hreflang="en">EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`} aria-current="page">Fortæl din historie</a></div></header>
+<body><SiteHeader lang="da" translations={{ en: `/en/share-your-story/` }} />
 <main><article class="reader-story-page">
   <header class="reader-story-hero"><p class="section-label">Læsernes fortællinger</p><h1>Fortæl din<br /><em>historie</em></h1><p>Har du en fortælling om en cykel, en rytter, et værksted eller en oplevelse på landevejen? Send det, du ved. Det må gerne være en færdig historie eller blot stikord.</p></header>
   <div class="reader-story-layout">
@@ -27,7 +29,7 @@ const submissionUrl = import.meta.env.PUBLIC_STORY_SUBMISSION_URL
     <aside class="reader-story-aside"><p class="section-label">Hvad sker der bagefter?</p><ol><li><strong>Vi læser materialet</strong><span>Indsendelsen bliver ikke vist offentligt.</span></li><li><strong>Vi undersøger historien</strong><span>Navne, årstal og tekniske detaljer bliver kontrolleret.</span></li><li><strong>Vi skriver en kladde</strong><span>Erindringer og usikre oplysninger bliver markeret tydeligt.</span></li><li><strong>Ejeren godkender</strong><span>Historien udgives først efter en særskilt godkendelse.</span></li></ol><p>Vi kan kontakte dig, hvis der mangler oplysninger om historien eller billederne.</p></aside>
   </div>
 </article></main>
-<footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>En personlig samling af vintagecykler,<br />historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+<SiteFooter lang="da" />
 <script>
   const input = document.querySelector('#story-images');
   const summary = document.querySelector('#file-summary');

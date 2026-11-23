@@ -1,4 +1,6 @@
 ---
+import SiteHeader from '../../../components/SiteHeader.astro';
+import SiteFooter from '../../../components/SiteFooter.astro';
 import RelatedDiscovery from '../../../components/RelatedDiscovery.astro';
 import type { ImageMetadata } from 'astro';
 import OptimizedImage from '../../../components/OptimizedImage.astro';
@@ -55,11 +57,7 @@ const gallery = [
     <link rel="stylesheet" href={`${base}/styles/global.css`} />
   </head>
   <body class="steel-page">
-    <header class="site-header steel-header">
-      <a class="brand" href={`${base}/en/`} aria-label="The Evolution of Bikes, home"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></a>
-      <nav aria-label="Main navigation"><a href={`${base}/en/stories/`} aria-current="page">Stories</a><a href={`${base}/en/periods/`}>Periods</a><a href={`${base}/en/bikes/`}>Bikes</a><a href={`${base}/en/components/`}>Components</a><a href={`${base}/en/about/`}>About</a></nav>
-      <div class="header-tools"><a class="language-switch" href={`${base}/historier/a-man-of-steel/`} lang="da">DA</a><span>/</span><strong>EN</strong><a class="header-story-link" href={`${base}/en/share-your-story/`}>Tell your story</a></div>
-    </header>
+    <SiteHeader lang="en" translations={{ da: '/historier/a-man-of-steel/' }} />
 
     <main>
       <article class="steel-story">
@@ -165,7 +163,7 @@ const gallery = [
         <nav class="steel-bottom-nav" aria-label="Continue browsing"><a href={`${base}/en/stories/`}>← All stories</a></nav>
       <RelatedDiscovery currentSlug={'a-man-of-steel'} language="en"/></article>
     </main>
-    <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br />of Bikes</span></div><p>A personal collection of vintage bicycles,<br />stories, brands and components.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>
+    <SiteFooter lang="en" />
   </body>
 </html>
 

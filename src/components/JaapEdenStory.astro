@@ -1,4 +1,6 @@
 ---
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
 import EnglishHeader from './EnglishHeader.astro';
 import EnglishFooter from './EnglishFooter.astro';
 import OptimizedImage from './OptimizedImage.astro';
@@ -71,7 +73,7 @@ const copy = en ? {
     <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet"/><link rel="stylesheet" href={`${base}/styles/global.css`}/>
   </head>
   <body>
-    {en ? <EnglishHeader current="stories" danishPath={`/historier/${slug}/`}/> : <header class="site-header"><a class="brand" href={`${base}/`} aria-label="The Evolution of Bikes, forside"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></a><nav aria-label="Hovedmenu"><a href={`${base}/historier/`} aria-current="page">Historier</a><a href={`${base}/perioder/`}>Perioder</a><a href={`${base}/cykler/`}>Cykler</a><a href={`${base}/om/`}>Om</a></nav><div class="header-tools"><strong>DA</strong><span>/</span><a href={`${base}/en/stories/${slug}/`}>EN</a><a class="header-story-link" href={`${base}/fortael-din-historie/`}>Fortæl din historie</a></div></header>}
+    {en ? <EnglishHeader current="stories" danishPath={`/historier/${slug}/`}/> : <SiteHeader lang="da" translations={{ en: `/en/stories/${slug}/` }} />}
     <main><article class="eden-story">
       <header class="story-hero"><p class="section-label">{copy.eyebrow}</p><h1>{title}</h1><p>{copy.deck}</p></header>
       <figure class="story-image"><OptimizedImage src={portrait} alt={en ? 'Jaap Eden with his track bicycle at Willemspark in Amsterdam' : 'Jaap Eden med sin banecykel på Willemspark i Amsterdam'} widths={[480,571]} sizes="(max-width:760px) 88vw,571px" loading="eager" fetchpriority="high"/><figcaption>{en ? 'Jaap Eden at the Willemspark cycle track in Amsterdam, 1897. Photograph: Gerbrand Hoffmann, Amsterdam City Archives/Wikimedia Commons, public domain.' : 'Jaap Eden på cykelbanen i Willemspark i Amsterdam, 1897. Foto: Gerbrand Hoffmann, Amsterdam Stadsarchief/Wikimedia Commons, public domain.'}</figcaption></figure>
@@ -82,7 +84,7 @@ const copy = en ? {
       <section class="period-sources"><p class="section-label">{en ? 'Sources and image notes' : 'Kilder og billednoter'}</p><div><ul><li><a href="https://www.knwu.nl/kampioenschappen/wk-baanwielrennen/historie" target="_blank" rel="noopener noreferrer">KNWU: {en ? 'Dutch track world champions' : 'hollandske verdensmestre på bane'}</a></li><li><a href="https://www.olympedia.org/athletes/890595" target="_blank" rel="noopener noreferrer">Olympedia: Jaap Eden</a></li><li><a href="https://www.amsterdam.nl/stadsarchief/stukken/beroemd/jaap-eden/" target="_blank" rel="noopener noreferrer">Stadsarchief Amsterdam: Jaap Eden</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Jaap_Eden_cycling.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons: Jaap Eden cycling</a></li></ul><p>{en ? 'The widely repeated stories about cigars, champagne and unusually large appearance fees are not used as established facts here because the available contemporary documentation is uneven.' : 'De ofte gentagne historier om cigarer, champagne og usædvanligt store startpenge bruges ikke som sikre fakta her, fordi den tilgængelige samtidige dokumentation er ujævn.'}</p><p><strong>{en ? 'Alternative illustration:' : 'Alternativ illustration:'}</strong> {en ? 'A clearly labelled period-style illustration could show the same athlete leaving an outdoor ice track and entering a wooden velodrome in the mid-1890s, without invented spectators, logos or race details.' : 'En tydeligt mærket, tidstypisk illustration kan vise den samme atlet forlade en udendørs skøjtebane og træde ind på en trævelodrom midt i 1890’erne, uden opdigtede tilskuere, logoer eller løbsdetaljer.'}</p></div></section>
       <nav class="era-bottom-nav"><a href={`${base}/${en ? 'en/stories' : 'historier'}/`}>← {en ? 'All stories' : 'Alle historier'}</a><a href={`${base}/${en ? 'en/periods' : 'perioder'}/1800-1899/`}>{en ? 'The 1800–1899 period' : 'Perioden 1800–1899'} →</a></nav>
     </article></main>
-    {en ? <EnglishFooter/> : <footer><div class="brand footer-brand"><span class="brand-mark">E<span>B</span></span><span>The Evolution<br/>of Bikes</span></div><p>En personlig samling af vintagecykler,<br/>historier, mærker og komponenter.</p><p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p></footer>}
+    {en ? <EnglishFooter/> : <SiteFooter lang="da" />}
   </body>
 </html>
 <style>

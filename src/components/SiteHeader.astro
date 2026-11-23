@@ -1,0 +1,33 @@
+---
+import SiteBrand from './SiteBrand.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { isUnreleasedHref } from '../data/publicationBoundary.mjs';
+import { pageTranslations, sectionForPath, siteChrome, type PageTranslations, type SiteLanguage } from '../data/siteChrome';
+interface Props { lang?: SiteLanguage; current?: string; translations?: PageTranslations; }
+const { lang = 'da', current = '', translations = {} } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const path = Astro.url.pathname.slice(base.length) || '/';
+const copy = siteChrome[lang];
+const languages = pageTranslations(lang, path, translations);
+const preview = import.meta.env.DEV && isUnreleasedHref(path);
+const navigation = preview ? copy.previewNavigation : copy.navigation;
+const active = current || (preview ? sectionForPath(path) : navigation.find(([, , href]) => path.startsWith(href))?.[0]);
+---
+<header class="site-header site-header--shared">
+  <div class="site-masthead">
+    <SiteBrand {lang} />
+    <div class="site-wordmark">
+      <a class="site-name" href={`${base}${copy.home}`} aria-label={copy.homeLabel}>
+        <span>The Evolution</span><span>of Bikes</span>
+      </a>
+      <p class="site-tagline">{copy.tagline}</p>
+    </div>
+    <div class="header-tools">
+      <LanguageSwitcher {lang} translations={languages} />
+      {copy.story && <a class="header-story-link" href={`${base}${copy.story.path}`} aria-current={path === copy.story.path ? 'page' : undefined}>{copy.story.label}</a>}
+    </div>
+  </div>
+  <nav class="site-main-menu" aria-label={copy.menuLabel}>
+    {navigation.map(([key, label, href]) => <a href={`${base}${href}`} aria-current={active === key ? (path === href ? 'page' : 'location') : undefined}>{label}</a>)}
+  </nav>
+</header>

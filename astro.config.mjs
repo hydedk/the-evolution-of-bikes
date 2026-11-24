@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import { promotionIsDue } from './src/data/storyPromotion.mjs';
+import { promotionIsDue, promotionLanguages } from './src/data/storyPromotion.mjs';
 import { isUnreleasedHref } from './src/data/publicationBoundary.mjs';
 import { readdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { join, relative, sep, resolve } from 'node:path';
@@ -190,7 +190,8 @@ const socialMetadata = {
     'astro:config:setup': ({ command, injectRoute, injectScript }) => {
       for (const entry of storyPromotionPlan.entries) {
         if (!entry.publishAt || (command !== 'dev' && !promotionIsDue(entry, storyPromotionPlan))) continue;
-        for (const prefix of ['historier', 'en/stories', 'de/geschichten']) {
+        for (const language of promotionLanguages(entry)) {
+          const prefix = { da: 'historier', en: 'en/stories', de: 'de/geschichten' }[language];
           injectRoute({ pattern: '/' + prefix + '/' + entry.slug, entrypoint: fileURLToPath(new URL('./src/components/TimedStoryPage.astro', import.meta.url)) });
         }
       }
@@ -198,6 +199,7 @@ const socialMetadata = {
     },
     'astro:build:done': async ({ dir }) => {
       const outputDir = fileURLToPath(dir);
+      await rm(join(outputDir, 'admin'), { recursive: true, force: true });
       // Remove every held section before metadata and sitemap generation.
       const pruneWorkPages = async (directory) => {
         for (const entry of await readdir(directory, { withFileTypes: true })) {

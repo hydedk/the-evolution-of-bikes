@@ -13,7 +13,7 @@ const preview = import.meta.env.DEV && isUnreleasedHref(path);
 const navigation = preview ? copy.previewNavigation : copy.navigation;
 const active = current || (preview ? sectionForPath(path) : navigation.find(([, , href]) => path.startsWith(href))?.[0]);
 ---
-<header class="site-header site-header--shared">
+<header data-site-header="shared" class="site-header site-header--shared">
   <div class="site-masthead">
     <SiteBrand {lang} />
     <div class="site-wordmark">

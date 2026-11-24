@@ -5,11 +5,14 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/audit-seo.mjs && node scripts/audit-promotions.mjs",
+    "build": "node --test scripts/test-site-chrome-build.mjs && node scripts/test-scheduled-story-languages.mjs && astro build && node scripts/audit-seo.mjs && node scripts/audit-site-chrome-build.mjs && node scripts/audit-promotions.mjs && node scripts/audit-private-output.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
     "astro": "latest",
     "sharp": "^0.35.4"
+  },
+  "devDependencies": {
+    "ultrahtml": "1.7.0"
   }
 }

@@ -5,7 +5,7 @@ interface Props { lang?: SiteLanguage; }
 const { lang = 'da' } = Astro.props;
 const copy = siteChrome[lang];
 ---
-<footer class="site-footer">
+<footer data-site-footer="shared" class="site-footer">
   <SiteBrand {lang} placement="footer" />
   <p>{copy.footer[0]}<br />{copy.footer[1]}</p>
   <p class="copyright">© {new Date().getFullYear()} The Evolution of Bikes</p>

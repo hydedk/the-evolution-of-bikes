@@ -210,6 +210,83 @@
       "date": "2026-11-27",
       "approved": true,
       "publishAt": "2026-11-27T09:00:00+01:00"
+    },
+    {
+      "id": "hist-000228",
+      "slug": "vm-ronse-1988",
+      "date": "2026-11-28",
+      "approved": true,
+      "publishAt": "2026-11-28T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000280",
+      "slug": "soeren-lilholt-angrebslyst",
+      "date": "2026-11-29",
+      "approved": true,
+      "publishAt": "2026-11-29T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000128",
+      "slug": "hjelm-regler-sikkerhed",
+      "date": "2026-11-30",
+      "approved": true,
+      "publishAt": "2026-11-30T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000482",
+      "slug": "muffer-lugs-staalramme",
+      "date": "2026-12-01",
+      "approved": true,
+      "publishAt": "2026-12-01T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000275",
+      "slug": "kaj-allan-olsen-fritz-ravn-makkerskab",
+      "date": "2026-12-02",
+      "approved": true,
+      "publishAt": "2026-12-02T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000281",
+      "slug": "rolf-soerensen-klassikernes-dansker",
+      "date": "2026-12-04",
+      "approved": true,
+      "publishAt": "2026-12-04T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000485",
+      "slug": "bremsekabler-foer-1950",
+      "date": "2026-12-05",
+      "approved": true,
+      "publishAt": "2026-12-05T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
     }
   ]
 }

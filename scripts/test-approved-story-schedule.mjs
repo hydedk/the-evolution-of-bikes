@@ -22,6 +22,13 @@ assert.deepEqual(timed.map(({id,publishAt})=>[id,publishAt]), [
   ['hist-000278','2026-11-25T09:00:00+01:00'],
   ['hist-000480','2026-11-26T09:00:00+01:00'],
   ['hist-000274','2026-11-27T09:00:00+01:00'],
+  ['hist-000228','2026-11-28T09:00:00+01:00'],
+  ['hist-000280','2026-11-29T09:00:00+01:00'],
+  ['hist-000128','2026-11-30T09:00:00+01:00'],
+  ['hist-000482','2026-12-01T09:00:00+01:00'],
+  ['hist-000275','2026-12-02T09:00:00+01:00'],
+  ['hist-000281','2026-12-04T09:00:00+01:00'],
+  ['hist-000485','2026-12-05T09:00:00+01:00'],
 ]);
 for (const entry of timed) {
   const exact = new Date(entry.publishAt);
@@ -32,4 +39,4 @@ for (const entry of timed) {
   assert(selectPromotedStories(stories, plan, entry.date, exact).some(s=>s.slug===entry.slug));
   assert(!promotionIsDue(entry, {...plan,enabled:false}, exact));
 }
-console.log('Publication time checked for the six approved stories.');
+console.log('Publication time checked for the thirteen approved stories.');

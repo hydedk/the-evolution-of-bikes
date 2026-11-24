@@ -1,6 +1,6 @@
 import { readFile, readdir, access } from 'node:fs/promises';
 import { join } from 'node:path';
-import { promotionIsDue } from '../src/data/storyPromotion.mjs';
+import { promotionIsDue, promotionLanguages } from '../src/data/storyPromotion.mjs';
 import { isUnreleasedHref } from '../src/data/publicationBoundary.mjs';
 const root = new URL('../dist/', import.meta.url);
 const plan = JSON.parse(await readFile(new URL('../src/data/storyPromotions.json',import.meta.url),'utf8'));
@@ -22,7 +22,10 @@ if(top.includes('loeb')) throw new Error('Race work pages must not ship');
 const { fileURLToPath } = await import('node:url');
 await collect(fileURLToPath(root));
 for(const entry of plan.entries) {
-  const prefixes = entry.publishAt ? ['historier','en/stories','de/geschichten'] : ['historier','en/stories'];
+  const prefixes = entry.publishAt ? promotionLanguages(entry).map(lang=>({da:'historier',en:'en/stories',de:'de/geschichten'}[lang])) : ['historier','en/stories'];
+  if (entry.languages && !entry.languages.includes('de')) {
+    if (await access(new URL('de/geschichten/'+entry.slug+'/index.html',root)).then(()=>true,()=>false)) throw Error('Unapproved German story generated: '+entry.slug);
+  }
   if (entry.publishAt && pending.includes(entry)) {
     for (const prefix of prefixes) {
       const page = new URL(prefix+'/'+entry.slug+'/index.html',root);

@@ -22,11 +22,14 @@ export function validatePromotionPlan(stories, plan) {
       typeof entry.publishAt !== 'string' || !entry.publishAt.startsWith(entry.date + 'T') ||
       !Number.isFinite(Date.parse(entry.publishAt))
     )) throw new Error('Invalid publication time');
+    if (entry.languages !== undefined && (!Array.isArray(entry.languages) || !entry.languages.length || new Set(entry.languages).size !== entry.languages.length || entry.languages.some(lang => !['da','en','de'].includes(lang)))) throw new Error('Invalid publication languages');
     if (dates.has(entry.date)) throw new Error('Only one promotion per day is supported');
     if (typeof entry.approved !== 'boolean') throw new Error('Explicit promotion approval is required');
     seen.add(entry.slug); ids.add(entry.id); dates.add(entry.date);
   }
 }
+
+export function promotionLanguages(entry) { return entry.languages ?? ['da', 'en', 'de']; }
 
 export function promotionIsDue(entry, plan, now = new Date(), today = copenhagenDate(now)) {
   return plan.enabled && entry.approved && entry.date <= today &&

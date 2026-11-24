@@ -14,6 +14,10 @@ importers:
       sharp:
         specifier: ^0.35.4
         version: 0.35.4
+    devDependencies:
+      ultrahtml:
+        specifier: 1.7.0
+        version: 1.7.0
 
 packages:
 

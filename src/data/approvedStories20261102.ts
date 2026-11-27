@@ -1,3 +1,4 @@
+import { approvedStories20261206 } from './approvedStories20261206';
 import { approvedStories20261128 } from './approvedStories20261128';
 import { approvedStories20261125 } from './approvedStories20261125';
 import { approvedStories20261122 } from './approvedStories20261122';
@@ -27,6 +28,7 @@ export const approvedStories20261102 = {
   ...approvedStories20261122,
   ...approvedStories20261125,
   ...approvedStories20261128,
+  ...approvedStories20261206,
 "alfonsina-strada-giro-1924": {
   "id": "hist-000011",
   "slug": "alfonsina-strada-giro-1924",
@@ -1609,126 +1611,126 @@ export const approvedStories20261102 = {
   }
 },
 "danguillaume-fredsloeb-1969": {
-  "id": "hist-000220",
-  "slug": "danguillaume-fredsloeb-1969",
-  "date": "2026-11-19",
-  "year": "1969",
-  "period": "1960-1969",
-  "periods": [
-    "1960-1969"
-  ],
-  "track": "race",
-  "image": releaseImage15,
-  "hero": {
+    "id": "hist-000220",
+    "slug": "danguillaume-fredsloeb-1969",
+    "date": "2026-11-19",
+    "year": "1969",
+    "period": "1960-1969",
+    "periods": [
+      "1960-1969"
+    ],
+    "track": "race",
     "image": releaseImage15,
-    "choice": "hero",
-    "after": -1,
-    "captionDa": "August Prosenik og Aleksandar Zorić i Warszawa, 9. maj 1948. Billedet viser en tidligere udgave af Fredsløbet.",
-    "captionEn": "August Prosenik and Aleksandar Zorić in Warsaw on 9 May 1948. The picture shows an earlier edition of the Peace Race.",
-    "altDa": "Historisk arkivfoto fra Fredsløbet i Warszawa.",
-    "altEn": "Historical archive photograph from the Peace Race in Warsaw.",
-    "creditDa": "Ukendt fotograf",
-    "creditEn": "Unknown photographer",
-    "source": "https://commons.wikimedia.org/wiki/File:August_Prosenik_and_Aleksandar_Zori%C4%87_1948.jpg",
-    "licenseUrl": "",
-    "license": "Public domain"
+    "hero": {
+      "image": releaseImage15,
+      "choice": "hero",
+      "after": -1,
+      "captionDa": "August Prosenik og Aleksandar Zorić i Warszawa, 9. maj 1948. Billedet viser en tidligere udgave af Fredsløbet.",
+      "captionEn": "August Prosenik and Aleksandar Zorić in Warsaw on 9 May 1948. The picture shows an earlier edition of the Peace Race.",
+      "altDa": "Historisk arkivfoto fra Fredsløbet i Warszawa.",
+      "altEn": "Historical archive photograph from the Peace Race in Warsaw.",
+      "creditDa": "Ukendt fotograf",
+      "creditEn": "Unknown photographer",
+      "source": "https://commons.wikimedia.org/wiki/File:August_Prosenik_and_Aleksandar_Zori%C4%87_1948.jpg",
+      "licenseUrl": "",
+      "license": "Public domain"
+    },
+    "images": [],
+    "da": {
+      "title": "Danguillaume tog gult på vejen til Cottbus",
+      "description": "En sejr mod uret gav Danguillaume føringen i Fredsløbet i 1969. I Berlin var der 42 sekunder tilbage.",
+      "deck": "En sejr mod uret gav Danguillaume føringen i Fredsløbet i 1969. I Berlin var der 42 sekunder tilbage.",
+      "blocks": [
+        {
+          "heading": false,
+          "text": "Mellem Guben og Cottbus kom Jean-Pierre Danguillaume i mål med en tid, som Ryszard Szurkowski ikke kunne matche. Det var Fredsløbet i maj 1969. På enkeltstarten blev forspringet målt i sekunder. Da dagens tider var gjort op, havde franskmanden vundet både etapen og føringen i klassementet. Han skulle nu køre i den gule trøje. Szurkowski var stadig nær nok i klassementet til, at trøjen skulle forsvares resten af vejen til Berlin."
+        },
+        {
+          "heading": false,
+          "text": "Den østtyske avis Neues Deutschland bragte resultatet næste dag. Den trykte 1 time, 21 minutter og 8 sekunder for Danguillaume. Senere fremstillinger angiver andre tider og forskellige tidsforskelle mellem ham og Szurkowski på etapen. Der er dog enighed om, at Danguillaume vandt enkeltstarten og overtog føringen. I det endelige klassement i Berlin var polakken 42 sekunder efter. Den afstand gjaldt hele løbet, ikke enkeltstarten alene."
+        },
+        {
+          "heading": true,
+          "text": "En dag med én opgave"
+        },
+        {
+          "heading": false,
+          "text": "I feltet kunne Danguillaume følge et angreb, tage en føring eller spare kræfter på hjul. På enkeltstarten skulle han selv finde tempoet og holde det. Et for hårdt udlæg kunne koste dyrt senere på ruten. Kørte han for forsigtigt, tabte han sekunder, som også ville være vanskelige at hente igen."
+        },
+        {
+          "heading": false,
+          "text": "I det samtidige referat fortalte Danguillaume bagefter, at det var hans første sejr i en enkeltstart. Avisen beskrev også, hvordan den franske træner bød ham velkommen efter etapen. Sejren havde givet ham føringen, men ikke afgjort løbet. Fra næste morgen skulle den gule trøje forsvares."
+        },
+        {
+          "heading": false,
+          "text": "Fredsløbet blev kørt af landshold. I 1969 gik ruten fra Warszawa til Berlin, og det år kom løbet ikke til Prag. Der ventede stadig etaper, hvor Szurkowski kunne forsøge at vinde tiden tilbage med hjælp fra sit polske hold. Danguillaumes sejr mod uret havde ændret klassementet, men ikke fjernet konkurrenterne fra vejen."
+        },
+        {
+          "heading": false,
+          "text": "Avisen beskrev Danguillaume som den tredje franske rytter i løbets historie, der havde erobret den gule trøje, efter Jean-Pierre Genet og Bernard Guyot. Det polske hold havde dog ikke opgivet at vinde den tilbage. En polsk leder sagde til avisen, at kampen om føringen stadig var åben. Der var endnu et stykke vej til Berlin."
+        },
+        {
+          "heading": true,
+          "text": "De sidste 42 sekunder"
+        },
+        {
+          "heading": false,
+          "text": "Efter enkeltstarten kunne Danguillaume tillade sig at følge med, hvis polakken forsøgte at vinde tid. Nu gjaldt det om at bevogte føringen frem for at sætte dagens bedste tid. Han måtte holde øje med, hvem der gik med i udbrud, og om de truede hans placering. Andre kunne vinde etaper, så længe Szurkowski og de øvrige nærmeste konkurrenter ikke hentede den tabte tid."
+        },
+        {
+          "heading": false,
+          "text": "Dieter Gonschorek endte som nummer tre efter Danguillaume og Szurkowski. Senere vandt franskmanden etaper i Tour de France, men i Fredsløbet var det enkeltstarten til Cottbus, der havde givet ham føringen. I Berlin havde han stadig 42 sekunder til Szurkowski. På sin 23-års fødselsdag stod han som samlet vinder."
+        }
+      ]
+    },
+    "en": {
+      "title": "Danguillaume took yellow on the road to Cottbus",
+      "description": "A time-trial win gave Danguillaume the lead in the 1969 Peace Race. In Berlin 42 seconds remained.",
+      "deck": "A time-trial win gave Danguillaume the lead in the 1969 Peace Race. In Berlin 42 seconds remained.",
+      "blocks": [
+        {
+          "heading": false,
+          "text": "Between Guben and Cottbus Jean-Pierre Danguillaume finished in a time Ryszard Szurkowski could not match. It was the Peace Race in May 1969. The time trial advantage was measured in seconds. Once the times were calculated, the Frenchman had won both the stage and the overall lead. He would wear yellow. Szurkowski remained close enough that the jersey needed defending all the way to Berlin."
+        },
+        {
+          "heading": false,
+          "text": "East Germany’s Neues Deutschland published the results the following day, printing 1 hour, 21 minutes and 8 seconds for Danguillaume. Later accounts give different stage times and margins between him and Szurkowski. They agree that Danguillaume won the time trial and took the lead. At the final classification in Berlin the Pole was 42 seconds behind. That gap concerned the entire race, not the time trial alone."
+        },
+        {
+          "heading": true,
+          "text": "One day with one task"
+        },
+        {
+          "heading": false,
+          "text": "In the peloton Danguillaume could follow an attack, take a turn or save energy behind a wheel. In the time trial he had to find and maintain his own pace. Starting too hard could prove costly later. Riding too cautiously lost seconds equally difficult to recover."
+        },
+        {
+          "heading": false,
+          "text": "In the contemporary report Danguillaume said afterwards that it was his first time trial victory. The newspaper also described the French coach welcoming him after the stage. Victory had given him the lead without deciding the race. From the following morning yellow needed defending."
+        },
+        {
+          "heading": false,
+          "text": "National teams rode the Peace Race. In 1969 the route ran from Warsaw to Berlin, without visiting Prague that year. Stages remained for Szurkowski to regain time with Polish support. Danguillaume’s victory against the clock had changed the standings without removing opponents from the road."
+        },
+        {
+          "heading": false,
+          "text": "The newspaper described him as the third French rider to take yellow in the race’s history, after Jean-Pierre Genet and Bernard Guyot. The Polish team had not abandoned its attempt to regain it. A Polish official told the newspaper the fight for the lead remained open. Berlin was still some distance away."
+        },
+        {
+          "heading": true,
+          "text": "The final 42 seconds"
+        },
+        {
+          "heading": false,
+          "text": "After the time trial Danguillaume could follow if the Pole tried gaining time. Protecting the lead now mattered more than setting the day’s fastest time. He had to watch who joined breakaways and whether they threatened his position. Others could win stages provided Szurkowski and his closest rivals did not recover their losses."
+        },
+        {
+          "heading": false,
+          "text": "Dieter Gonschorek finished third behind Danguillaume and Szurkowski. The Frenchman later won Tour de France stages, but in the Peace Race the Cottbus time trial had given him the lead. In Berlin he still held 42 seconds over Szurkowski. On his twenty-third birthday he stood as overall winner."
+        }
+      ]
+    }
   },
-  "images": [],
-  "da": {
-    "title": "Danguillaume tog gult på vejen til Cottbus",
-    "description": "En sejr mod uret gav Danguillaume føringen i Fredsløbet i 1969. I Berlin var der 42 sekunder tilbage.",
-    "deck": "En sejr mod uret gav Danguillaume føringen i Fredsløbet i 1969. I Berlin var der 42 sekunder tilbage.",
-    "blocks": [
-      {
-        "heading": false,
-        "text": "Mellem Guben og Cottbus kom Jean-Pierre Danguillaume i mål med en tid, som Ryszard Szurkowski ikke kunne matche. Det var Fredsløbet i maj 1969. De havde kørt enkeltstart, så franskmanden kunne ikke se sit forspring som en åbning i feltet. Det måtte læses på uret. Da dagens tider var gjort op, havde han vundet etapen og overtaget den gule trøje. Szurkowski var stadig nær nok i klassementet til, at trøjen skulle forsvares resten af vejen til Berlin."
-      },
-      {
-        "heading": false,
-        "text": "Den østtyske avis Neues Deutschland bragte resultatet næste dag. Den trykte 1 time, 21 minutter og 8 sekunder for Danguillaume. Senere fremstillinger giver andre tider og er heller ikke enige om, hvor meget han slog Szurkowski med på selve dagen. Det sikre er rækkefølgen og skiftet i klassementet. Tidsgevinsten på etapen og afstanden mellem de to i klassementet er to forskellige tal. I Berlin endte polakken 42 sekunder efter franskmanden."
-      },
-      {
-        "heading": true,
-        "text": "En dag med én opgave"
-      },
-      {
-        "heading": false,
-        "text": "Enkeltstarten gav Danguillaume en anden opgave end den, han havde haft i feltet. På en almindelig etape kan en rytter mærke, når en gruppe foran slipper, og tage stilling til, om han vil med. I en enkeltstart skal han selv vælge farten. Går han for hårdt ud, er der stadig langt igen, og ingen foran, som kan tage vinden. Kører han for forsigtigt, kommer de tabte sekunder heller ikke tilbage af sig selv."
-      },
-      {
-        "heading": false,
-        "text": "I det samtidige referat fortalte Danguillaume bagefter, at det var hans første sejr i en enkeltstart. Avisen beskrev også, hvordan den franske træner bød ham velkommen efter etapen. Det var ikke et forventet resultat, blot fordi vinderen bagefter viste sig at kunne holde føringen. Den ene dag havde givet ham en mulighed. Arbejdet med at bevare den begyndte næste morgen."
-      },
-      {
-        "heading": false,
-        "text": "Fredsløbet blev kørt af landshold. I 1969 gik ruten fra Warszawa til Berlin, og det år kom løbet ikke til Prag. Rytterne havde flere etaper og forskellige løbstyper at gøre arbejdet på. Et godt fransk resultat på uret havde flyttet en fransk rytter i gult, men resten af feltet var ikke blevet mindre af den grund. Szurkowski havde stadig både sine egne ben og et polsk hold at køre med."
-      },
-      {
-        "heading": false,
-        "text": "Avisen beskrev sejren som den tredje franske erobring af den gule trøje i løbets historie efter Jean-Pierre Genet og Bernard Guyot. Det var en måde at fortælle om resultatet på, som gav mening for den franske delegation. Fra det polske hold så dagen anderledes ud. En polsk leder, som avisen talte med, mente stadig, at kampen om føringen var åben. De to vurderinger kunne begge være rigtige på samme tid. Frankrig havde fået trøjen, og der var endnu ikke kørt til Berlin."
-      },
-      {
-        "heading": true,
-        "text": "De sidste 42 sekunder"
-      },
-      {
-        "heading": false,
-        "text": "Efter enkeltstarten kunne Danguillaume tillade sig at følge med, hvis polakken forsøgte at vinde tid. Det er en anden opgave end at sætte dagens hurtigste tid. Man skal holde øje med, hvilke ryttere der går med i et udbrud, og hvad det betyder, hvis gruppen kommer hjem med et forspring. En etape kan godt vindes af en anden, mens kampen om den gule trøje stadig foregår længere tilbage."
-      },
-      {
-        "heading": false,
-        "text": "Dieter Gonschorek endte på tredjepladsen efter Danguillaume og Szurkowski. I Berlin fyldte vinderen 23 år. Senere vandt han etaper i Tour de France, hvor han kunne afgøre løb på andre måder. Men her var det uret på vejen til Cottbus, der gav ham føringen. Da løbet var forbi, kunne de 42 sekunder godt se ud som et lille tal i bunden af en lang resultatliste. Det havde taget resten af løbet at få lov at beholde dem."
-      }
-    ]
-  },
-  "en": {
-    "title": "Danguillaume took yellow on the road to Cottbus",
-    "description": "A time-trial win gave Danguillaume the lead in the 1969 Peace Race. In Berlin 42 seconds remained.",
-    "deck": "A time-trial win gave Danguillaume the lead in the 1969 Peace Race. In Berlin 42 seconds remained.",
-    "blocks": [
-      {
-        "heading": false,
-        "text": "Between Guben and Cottbus, Jean-Pierre Danguillaume finished in a time Ryszard Szurkowski could not match. This was the Peace Race in May 1969. It was a time trial, so the Frenchman could not see his lead as a gap in the bunch. It had to be read from the clock. When the times were added up he had won the stage and taken the yellow jersey. Szurkowski was still close enough overall that the jersey would need defending all the way to Berlin."
-      },
-      {
-        "heading": false,
-        "text": "The East German newspaper Neues Deutschland printed the result the following day. It gave Danguillaume one hour, 21 minutes and eight seconds. Later accounts give other times and disagree about how much he took out of Szurkowski on the day. The order and the change of leader are clear. Time gained on the stage and the gap in the standings are different figures. In Berlin the Pole finished 42 seconds behind the Frenchman."
-      },
-      {
-        "heading": true,
-        "text": "A day with one job"
-      },
-      {
-        "heading": false,
-        "text": "The time trial gave Danguillaume a different job from riding in the bunch. On an ordinary stage a rider can see a group go clear and decide whether to follow. In a time trial he has to choose his own pace. Start too hard and there is still a long way to go with nobody in front to take the wind. Start too cautiously and the lost seconds do not return of their own accord."
-      },
-      {
-        "heading": false,
-        "text": "In the contemporary report Danguillaume said afterwards that this was his first time-trial win. The paper also described the French coach greeting him after the stage. It was no foregone conclusion just because the winner later managed to hold the lead. One day had given him an opportunity. The work of keeping it began the next morning."
-      },
-      {
-        "heading": false,
-        "text": "The Peace Race was ridden by national teams. In 1969 it went from Warsaw to Berlin and did not visit Prague. The riders had several stages and different kinds of racing in which to do their work. A good French result against the clock had put a Frenchman in yellow, but the rest of the field was still there. Szurkowski still had his legs and a Polish team to ride with."
-      },
-      {
-        "heading": false,
-        "text": "The newspaper placed Danguillaume after Jean-Pierre Genet and Bernard Guyot among the French riders who had taken the race lead. It was a way of telling the result that made sense for the French delegation. From the Polish team the day looked different. A Polish official interviewed by the paper still thought the contest for the lead was open. Both views could be right at once. France had the jersey, and the race had yet to reach Berlin."
-      },
-      {
-        "heading": true,
-        "text": "The final 42 seconds"
-      },
-      {
-        "heading": false,
-        "text": "After the time trial Danguillaume could afford to follow if the Pole tried to make up time. That is a different task from setting the fastest time of the day. A rider has to watch who gets into a break and what it would mean if the group reached the finish ahead. Someone else can win the stage while the contest for yellow is taking place farther back."
-      },
-      {
-        "heading": false,
-        "text": "Dieter Gonschorek finished third behind Danguillaume and Szurkowski. The winner turned 23 in Berlin. He later won Tour de France stages, settling races in other ways. Here it was the clock on the road to Cottbus that gave him the lead. Once the race was over, those 42 seconds might have looked a small figure in a long list of results. It took the rest of the race to keep them."
-      }
-    ]
-  }
-},
 "stan-ockers-styrtet-i-antwerpen": {
   "id": "hist-000254",
   "slug": "stan-ockers-styrtet-i-antwerpen",

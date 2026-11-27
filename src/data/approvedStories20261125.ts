@@ -444,11 +444,11 @@ export const approvedStories20261125 = {
       "blocks": [
         {
           "heading": false,
-          "text": "På et fotografi fra 1952 er Eluf Dalgaard bøjet over styret i et banesving. Cyklen hælder ind mod banens midte, og baggrunden fortæller mindre om manden end stillingen på cyklen. To år senere førte han Fredsløbet på landevejene i Polen, Østtyskland og Tjekkoslovakiet. En polsk avis kunne meddele, at danskeren skulle køre næste etape i gult. Billedet og avisen fanger den samme rytter i to ret forskellige slags arbejde."
+          "text": "På et fotografi fra 1952 sidder Eluf Dalgaard bøjet over styret i et banesving. Cyklen hælder ind mod banens midte. To år senere førte han Fredsløbet på landevejene i Polen, Østtyskland og Tjekkoslovakiet. Her kunne en polsk avis fortælle, at danskeren skulle køre næste etape i gult. Dalgaard kunne holde farten både på banen og i et langt etapeløb, men kræfterne skulle fordeles forskelligt."
         },
         {
           "heading": false,
-          "text": "I Vejle var Dalgaard allerede et navn, folk kendte. Stadsarkivet har et foto af modtagelsen i byen i 1952 efter et dansk tredagesløb. Han kom fra et arbejdsliv på andelsslagteriet, og samme år flyttede han ifølge HistorieLab til Uppsala, hvor han arbejdede som cykelmontør. Han havde vundet det svenske seksdagesløb på landevej. Cyklen var blevet både noget, han kørte stærkt på, og noget, han kunne få arbejde ved at samle."
+          "text": "Hjemme i Vejle kendte man allerede Dalgaard. Stadsarkivet har et fotografi af modtagelsen i byen i 1952 efter et dansk tredagesløb. Han havde arbejdet på andelsslagteriet, men flyttede samme år ifølge HistorieLab til Uppsala og fik arbejde som cykelmontør. Han havde vundet det svenske seksdagesløb på landevej. Nu kunne han også tjene til dagen ved at samle cykler."
         },
         {
           "heading": true,
@@ -456,11 +456,11 @@ export const approvedStories20261125 = {
         },
         {
           "heading": false,
-          "text": "Danmarks Cykle Unions mesterskabslister har Dalgaard som dansk mester i individuelt forfølgelsesløb i 1953 og 1957. På banen starter de to ryttere med afstand imellem sig. Opgaven er at køre sin distance hurtigt, mens modstanderen forsøger det samme. Den, der går for hårdt ud, skal stadig rundt om de sidste sving, når den første fart er brugt op. Uret giver den enkelte rytters indsats en klar form."
+          "text": "Dalgaard blev dansk mester i individuelt forfølgelsesløb i 1953 og 1957. I den disciplin starter rytterne med afstand imellem sig og skal hver især holde det højest mulige tempo over hele distancen. Et for hårdt udlæg kan koste på de sidste omgange. Der er ingen makker at sende ind og ingen modstander at søge læ bag."
         },
         {
           "heading": false,
-          "text": "På landevejen kunne Dalgaard bruge evnen til at holde trykket i pedalerne, men de andre sad omkring ham. Her ændrer arbejdet sig, når én rytter glider af sted, eller et felt vælger at lade en gruppe få et forspring. Den, der fører et etapeløb, kan heller ikke nøjes med at se på, hvem der først kommer over stregen. Han skal vide, hvem der kan tage tid fra ham."
+          "text": "På landevejen kunne Dalgaard bruge den samme evne til at holde et højt tempo, men her sad modstanderne omkring ham. Et angreb eller et udbrud kunne ændre, hvad han måtte bruge kræfterne på. Som førende rytter skulle han især holde øje med dem, der kunne tage tid fra ham i klassementet. Dagens etapevinder behøvede ikke at være den farligste."
         },
         {
           "heading": true,
@@ -468,11 +468,15 @@ export const approvedStories20261125 = {
         },
         {
           "heading": false,
-          "text": "I 1954 strakte Fredsløbet sig fra Warszawa over Berlin til Prag. Den 10. maj skrev den polske avis Głos Robotniczy, at Dalgaard skulle bære den gule trøje på ottende etape. Avisen nævnte også den blå trøje for det førende hold. Man kunne altså følge to stillinger på én gang. Den gule trøje viste, hvem der havde den bedste samlede tid. Holdstillingen fortalte noget andet om, hvordan rytterne fra hvert land klarede sig."
+          "text": "I 1954 strakte Fredsløbet sig fra Warszawa over Berlin til Prag. Den 10. maj skrev den polske avis Głos Robotniczy, at Dalgaard skulle bære den gule trøje på ottende etape. Avisen nævnte også den blå trøje for det førende hold. Den gule gjaldt den enkelte rytters samlede tid, mens den blå viste, hvilket landshold der førte. Dalgaards placering og danskernes holdresultat var altså hver sin konkurrence."
         },
         {
           "heading": false,
-          "text": "Dalgaard vandt løbet samlet. Ifølge den østtyske avis Neues Deutschland tog han den gule trøje tilbage på løbets sidste dag. Tjekkoslovakken Vlastimil Růžička blev nummer to. Dermed lå en afgørende del af fortællingen stadig ude på vejen til Prag, efter at avisen en uge tidligere havde annonceret Dalgaard som rytter i gult. Der findes senere fortællinger om store menneskemængder omkring målet, men hans bedrift behøver ikke et bestemt tilskuertal for at kunne ses. Ved mesterskaberne på banen havde han skullet fordele kræfterne over én distance. Her lå den afgørende tid spredt over mange dage. Samme sommer blev han dansk mester på landevej foran Hans E. Andresen og Helge Hansen. Han tog landevejstitlen igen i 1957, det samme år som sin anden titel i forfølgelsesløb."
+          "text": "Dalgaard vandt løbet samlet. Ifølge den østtyske avis Neues Deutschland tog han den gule trøje tilbage på løbets sidste dag. Tjekkoslovakken Vlastimil Růžička blev nummer to. Trøjen havde dermed skiftet ejer undervejs, siden den polske avis en uge tidligere havde nævnt danskeren som den førende. Først på den sidste dag sikrede han sig sejren."
+        },
+        {
+          "heading": false,
+          "text": "På banen havde han skullet fordele kræfterne over én fast distance. I Fredsløbet skulle han holde til mange dage og stadig kunne afgøre løbet på vejen til Prag. Samme sommer blev han dansk landevejsmester foran Hans E. Andresen og Helge Hansen. Han vandt landevejstitlen igen i 1957, samme år som sit andet mesterskab i forfølgelsesløb."
         },
         {
           "heading": true,
@@ -480,11 +484,11 @@ export const approvedStories20261125 = {
         },
         {
           "heading": false,
-          "text": "Dalgaard kom også til Tour de France. I 1958 stillede han op sammen med tre andre danskere på et internationalt hold. På femte etape fra Versailles mod Caen måtte han udgå. Det Kongelige Biblioteks fortælling om Hans E. Andresen sætter de fire danskeres deltagelse i sammenhæng. Andresen var den eneste af dem, der kom hele vejen til Paris."
+          "text": "Dalgaard kom også til Tour de France. I 1958 stillede han op sammen med tre andre danskere på et internationalt hold. På femte etape fra Versailles mod Caen måtte han udgå. Af de fire danskere kom kun Hans E. Andresen hele vejen til Paris."
         },
         {
           "heading": false,
-          "text": "Dalgaard stoppede karrieren i 1959 og vendte hjem til Vejle. Der havde folk kendt ham, længe før et fransk løbsprogram satte hans navn på tryk. Forfølgelsesløbene, turen til Prag og den femte etape i Frankrig stiller forskellige krav til den, der sidder på cyklen. Det er netop spændet mellem dem, der gør det gamle banefoto værd at se på. I svinget er der kun plads til én rytter i billedet. Hans løbshistorie fortsætter langt uden for det."
+          "text": "Året efter, i 1959, sluttede Dalgaard karrieren og vendte hjem til Vejle. Syv år efter modtagelsen, som stadsarkivets fotografi viser, var han tilbage i byen, hvor han havde arbejdet på slagteriet."
         }
       ]
     },
@@ -495,35 +499,39 @@ export const approvedStories20261125 = {
       "blocks": [
         {
           "heading": false,
-          "text": "In a photograph from 1952, Eluf Dalgaard is bent over the handlebars on a track bend. The bicycle leans into the centre of the track, and the background tells us less about the man than his position on the bike. Two years later he was leading the Peace Race on the roads of Poland, East Germany and Czechoslovakia. A Polish newspaper could report that the Dane would ride the next stage in yellow. The picture and the paper catch the same rider doing two rather different jobs."
+          "text": "A 1952 photograph shows Eluf Dalgaard bent over the handlebars in a track bend. His bicycle leans towards the track’s centre. Two years later he led the Peace Race on roads through Poland, East Germany and Czechoslovakia. A Polish newspaper could report that the Dane would ride the next stage in yellow. Dalgaard could sustain speed on a track and through a long stage race, but needed to distribute his strength differently."
         },
         {
           "heading": false,
-          "text": "Dalgaard was already a familiar name in Vejle. The city archive holds a picture of his welcome in 1952 after a Danish three-day race. He had worked at the cooperative slaughterhouse, and that year he moved to Uppsala, where, according to HistorieLab, he worked assembling bicycles. He had won the Swedish six-day road race. The bicycle was both something he could ride fast and something he could earn a living putting together."
+          "text": "Back in Vejle he was already known. The municipal archive holds a photograph of his reception in 1952 after a Danish three-day race. He had worked at the cooperative slaughterhouse but, according to HistorieLab, moved to Uppsala that year and found work assembling bicycles. He had won Sweden’s six-day road race. Now building bicycles could also earn his living."
         },
         {
           "heading": true,
-          "text": "Two ways to hold speed"
+          "text": "Two ways to maintain speed"
         },
         {
           "heading": false,
-          "text": "The Danish Cycling Union’s championship records list Dalgaard as national individual pursuit champion in 1953 and 1957. On the track, the riders start apart. Each has to cover the distance fast while the other tries to do the same. Start too hard and there are still bends to ride after that first speed has gone. The clock gives each rider’s effort a clear shape."
+          "text": "Dalgaard became Danish individual pursuit champion in 1953 and 1957. Riders start separated and each must maintain the highest possible pace throughout the distance. Opening too hard can cost time in the final laps. There is no partner to send in and no opponent to shelter behind."
         },
         {
           "heading": false,
-          "text": "On the road, Dalgaard could use that ability to keep pressure on the pedals, but there were riders all around him. The job changes when someone slips away or the bunch lets a group build a lead. The leader of a stage race cannot watch only who crosses the line first. He needs to know who can take time out of him."
+          "text": "On the road he could use that same sustained speed, but opponents surrounded him. An attack or breakaway could change where his energy went. As race leader he particularly needed to watch riders able to take overall time from him. The day’s stage winner was not necessarily the greatest danger."
         },
         {
           "heading": true,
-          "text": "Taking yellow to Prague"
+          "text": "Yellow had to reach Prague"
         },
         {
           "heading": false,
-          "text": "In 1954 the Peace Race went from Warsaw via Berlin to Prague. On 10 May the Polish newspaper Głos Robotniczy reported that Dalgaard would wear yellow on stage eight. It also mentioned the blue jersey for the leading team. A reader could follow two contests at once. Yellow showed the rider with the best aggregate time. The team standings told a different story about how each country’s riders were doing."
+          "text": "The 1954 Peace Race ran from Warsaw through Berlin to Prague. On 10 May the Polish newspaper Głos Robotniczy reported Dalgaard would wear yellow on stage eight. It also mentioned the blue jersey for the leading team. Yellow concerned an individual rider’s overall time; blue showed the leading national team. Dalgaard’s position and Denmark’s team result were separate competitions."
         },
         {
           "heading": false,
-          "text": "Dalgaard won the race overall. According to the East German newspaper Neues Deutschland, he took back yellow on the final day. Czechoslovakia’s Vlastimil Růžička finished second. An important part of the story was still out on the road to Prague a week after the Polish paper had named Dalgaard as the rider in yellow. Later accounts describe large crowds at the finish, but the achievement does not depend on a particular attendance figure. In the pursuit he had to pace one effort. Here the decisive time was spread over many days. That summer he was also Danish road champion, ahead of Hans E. Andresen and Helge Hansen. He won the road title again in 1957, the year of his second pursuit title."
+          "text": "Dalgaard won overall. According to East Germany’s Neues Deutschland, he regained yellow on the final day. Czechoslovakia’s Vlastimil Růžička finished second. The jersey had changed hands since the Polish newspaper had named the Dane as leader a week earlier. Only on the last day did he secure victory."
+        },
+        {
+          "heading": false,
+          "text": "On the track he had distributed his strength over one fixed distance. The Peace Race required surviving many days and still deciding the race on the way to Prague. That summer he became Danish road champion ahead of Hans E. Andresen and Helge Hansen. He won the road title again in 1957, the year of his second pursuit championship."
         },
         {
           "heading": true,
@@ -531,11 +539,11 @@ export const approvedStories20261125 = {
         },
         {
           "heading": false,
-          "text": "Dalgaard also made it to the Tour de France. In 1958 he started with three other Danes on an international team. He abandoned on stage five from Versailles towards Caen. The Royal Danish Library’s account of Hans E. Andresen puts the four Danes’ start in context. Andresen was the only one of them to make it all the way to Paris."
+          "text": "Dalgaard also reached the Tour de France. In 1958 he started with three other Danes on an international team. He abandoned on stage five from Versailles towards Caen. Only Hans E. Andresen of the four reached Paris."
         },
         {
           "heading": false,
-          "text": "Dalgaard retired in 1959 and returned home to Vejle. People there had known him long before a French race programme printed his name. The pursuits, the road to Prague and the fifth stage in France made different demands on him. That range is what makes the old track photograph worth looking at. There is room for one rider in the bend. His racing life goes on well beyond the frame."
+          "text": "In 1959 Dalgaard ended his career and returned to Vejle. Seven years after the reception recorded by the archive’s photograph, he was back in the town where he had worked at the slaughterhouse."
         }
       ]
     },

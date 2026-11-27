@@ -1,5 +1,7 @@
 ---
 import SiteHeader from './SiteHeader.astro';
+import promotionPlan from '../data/storyPromotions.json';
+import { promotionLanguages } from '../data/storyPromotion.mjs';
 import SiteFooter from './SiteFooter.astro';
 import OptimizedImage from './OptimizedImage.astro';
 import RelatedDiscovery from './RelatedDiscovery.astro';
@@ -12,6 +14,8 @@ type StorySlug = keyof typeof scheduledStories;
 type Props = { slug: StorySlug; language?: 'da' | 'en' | 'de' };
 const { slug, language = 'da' } = Astro.props;
 const story = scheduledStories[slug];
+const promotion = promotionPlan.entries.find(entry => entry.slug === slug);
+const showGermanTranslation = 'de' in story && (import.meta.env.DEV || !promotion || promotionLanguages(promotion).includes('de'));
 const german = language === 'de';
 const copy = german && 'de' in story ? story.de : story[language === 'en' ? 'en' : 'da'];
 const shareImage = story.image;
@@ -27,7 +31,7 @@ const daUrl = new URL(`${base}${daPath}`, Astro.site).toString();
 const enUrl = new URL(`${base}${enPath}`, Astro.site).toString();
 const periodPath = language === 'da' ? `/perioder/${story.period}/` : `/en/periods/${story.period}/`;
 const localizedYear = language === 'en' ? story.year.replaceAll('’erne','s') : story.year;
-const preferred = {"vm-ronse-1988":"maertens-saronni-moser-vm-1981","soeren-lilholt-angrebslyst":"lemond-fignon-otte-sekunder-1989","hjelm-regler-sikkerhed":"wattmaaleren-flyttede-laboratoriet-ud-paa-vejen","muffer-lugs-staalramme":"forgaffelbygning-foer-1950","kaj-allan-olsen-fritz-ravn-makkerskab":"christian-christensen-tour-de-france-1913","rolf-soerensen-klassikernes-dansker":"boonen-paris-roubaix-2009","bausager-marcussen-to-veje-i-professionel-cykling":"maertens-saronni-moser-vm-1981","lakeringen-foer-pulverlakken":"forgaffelbygning-foer-1950","eluf-dalgaard-bane-og-landevej":"fredsloebet-1948","carl-hellemann-vm-ordrup-1903":"orla-nord-dansk-banepioner","mavic-zap-mektronic-elektroniske-gear":"mavic-neutral-service","hinault-sallanches-1980":"maertens-saronni-moser-vm-1981","alfonsina-strada-giro-1924":"eugene-christophe-smedjen-1913","pino-cerami-sene-sejre":"jacques-moujica-1949-1950","sadelpindens-diameter-staalrammer":"drillium-vaegtbesparelse","thorvald-ellegaard-fra-fangel-til-verdensbanerne":"banecykling-ellegaard-1912","wattmaaleren-flyttede-laboratoriet-ud-paa-vejen":"polar-pulsmaaler-traening","coppi-koblet-lugano-1951":"coppi-bartali-et-delt-italien","forgaffelbygning-foer-1950":"krankboksmuffen-foer-1950","kay-werner-sagde-nej-til-par-nummer-et":"par-nummer-syv","vito-di-tano-cykelcross":"keetie-van-oosten-hage","danguillaume-fredsloeb-1969":"fredsloebet-1948","stan-ockers-styrtet-i-antwerpen":"maertens-saronni-moser-vm-1981","orla-nord-dansk-banepioner":"banecykling-ellegaard-1912","gaffelender-foer-1950":"forgaffelbygning-foer-1950","zipp-motorsport-aerodynamik":"wattmaaleren-flyttede-laboratoriet-ud-paa-vejen"};
+const preferred = {"klamer-lykke-kay-werners-makkere":"par-nummer-syv","guimard-tre-tour-kaptajner":"hinault-sallanches-1980","montreal-vm-1974-merckx":"maertens-montreal-1974","hans-henrik-oersted-forfoelgelse":"par-nummer-syv","vm-ronse-1988":"maertens-saronni-moser-vm-1981","soeren-lilholt-angrebslyst":"lemond-fignon-otte-sekunder-1989","hjelm-regler-sikkerhed":"wattmaaleren-flyttede-laboratoriet-ud-paa-vejen","muffer-lugs-staalramme":"forgaffelbygning-foer-1950","kaj-allan-olsen-fritz-ravn-makkerskab":"christian-christensen-tour-de-france-1913","rolf-soerensen-klassikernes-dansker":"boonen-paris-roubaix-2009","bausager-marcussen-to-veje-i-professionel-cykling":"maertens-saronni-moser-vm-1981","lakeringen-foer-pulverlakken":"forgaffelbygning-foer-1950","eluf-dalgaard-bane-og-landevej":"fredsloebet-1948","carl-hellemann-vm-ordrup-1903":"orla-nord-dansk-banepioner","mavic-zap-mektronic-elektroniske-gear":"mavic-neutral-service","hinault-sallanches-1980":"maertens-saronni-moser-vm-1981","alfonsina-strada-giro-1924":"eugene-christophe-smedjen-1913","pino-cerami-sene-sejre":"jacques-moujica-1949-1950","sadelpindens-diameter-staalrammer":"drillium-vaegtbesparelse","thorvald-ellegaard-fra-fangel-til-verdensbanerne":"banecykling-ellegaard-1912","wattmaaleren-flyttede-laboratoriet-ud-paa-vejen":"polar-pulsmaaler-traening","coppi-koblet-lugano-1951":"coppi-bartali-et-delt-italien","forgaffelbygning-foer-1950":"krankboksmuffen-foer-1950","kay-werner-sagde-nej-til-par-nummer-et":"par-nummer-syv","vito-di-tano-cykelcross":"keetie-van-oosten-hage","danguillaume-fredsloeb-1969":"fredsloebet-1948","stan-ockers-styrtet-i-antwerpen":"maertens-saronni-moser-vm-1981","orla-nord-dansk-banepioner":"banecykling-ellegaard-1912","gaffelender-foer-1950":"forgaffelbygning-foer-1950","zipp-motorsport-aerodynamik":"wattmaaleren-flyttede-laboratoriet-ud-paa-vejen"};
 const related = !german && (language === 'da' ? stories : englishStories).find(s => s.slug === preferred[slug]);
 const needsCompactTitle = copy.title.length > 31;
 const caption = (img) => german ? img.captionDe : language === 'da' ? img.captionDa : img.captionEn;
@@ -60,7 +64,7 @@ const alt = (img) => german ? img.altDe : language === 'da' ? img.altDa : img.al
     <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet"/><link rel="stylesheet" href={`${base}/styles/global.css`}/>
   </head>
   <body>
-  <SiteHeader lang={language} current="stories" translations={{ da: daPath, en: enPath, ...('de' in story ? { de: `/de/geschichten/${slug}/` } : {}) }} />
+  <SiteHeader lang={language} current="stories" translations={{ da: daPath, en: enPath, ...(showGermanTranslation ? { de: `/de/geschichten/${slug}/` } : {}) }} />
   <main>
     <article>
       <header class:list={['hero', {

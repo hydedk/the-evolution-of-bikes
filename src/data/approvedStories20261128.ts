@@ -41,15 +41,11 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "Maurizio Fondriest sad bag de to andre, da VM i Ronse i 1988 skulle afgøres. Foran ham åbnede Steve Bauer spurten. Claude Criquielion forsøgte at komme forbi på canadierens højre side, hvor der var tilskuere og afspærring. De to fik kontakt. Belgieren ramte afspærringen og styrtede, og den plads, han havde kæmpet om, blev pludselig fri."
+          "text": "Maurizio Fondriest sad bag de to andre, da VM i Ronse i 1988 skulle afgøres. Foran ham åbnede Steve Bauer spurten. Claude Criquielion forsøgte at komme forbi på canadierens højre side, hvor der var tilskuere og afspærring. De to fik kontakt. Belgieren ramte afspærringen og styrtede. Fondriest slap forbi."
         },
         {
           "heading": false,
-          "text": "Fondriest kom forbi. Han kørte over stregen som verdensmester, mens Bauer fulgte efter. Få øjeblikke tidligere havde italieneren været den, der så ud til at skulle nøjes med tredjepladsen. Nu var det hans navn, der skulle stå øverst. Der var bare stadig en jury, en væltet cykel og et hjemmepublikum, som havde set noget ganske andet end den afslutning, det havde håbet på."
-        },
-        {
-          "heading": false,
-          "text": "To helt andre ryttere skulle derfor ende med at træde op til medaljeoverrækkelsen, selv om de var kørt i mål til helt andre pladser på vejen."
+          "text": "Italieneren kørte først over stregen med Bauer efter sig. Få øjeblikke tidligere havde han lignet en kommende bronzevinder. Nu havde han vundet VM, mens juryen skulle tage stilling til sammenstødet bag ham. Dens afgørelse skulle få betydning for resten af podiet."
         },
         {
           "heading": true,
@@ -57,19 +53,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Løbet blev kørt den 28. august. Criquielion havde vundet VM i 1984, og i Ronse havde han muligheden på belgisk grund. Bauer havde taget OL-sølv samme år. Fondriest var den unge italiener, der havde holdt sig med frem til den afgørende gruppe. Deres navne og trøjer viste tre forskellige landes interesser på de sidste meter."
+          "text": "Løbet blev kørt den 28. august. Criquielion havde vundet VM i 1984, og i Ronse havde han muligheden på belgisk grund. Bauer havde taget OL-sølv samme år. Fondriest var den unge italiener, der havde holdt sig med frem til den afgørende gruppe. Til sidst var det de tre, der skulle køre om medaljerne."
         },
         {
           "heading": false,
-          "text": "På en lige resultatliste er en spurt enkel. Den, der først får forhjulet over stregen, har vundet. På vejen fylder rytterne, og deres linjer kan ændre sig, mens de træder. Criquielion søgte plads mellem Bauer og vejkanten. Bauer bevægede sig mod højre. Filmoptagelserne viser kontakten og faldet, men de giver ingen adgang til, hvad de to tænkte i det øjeblik."
+          "text": "Criquielion søgte plads mellem Bauer og vejkanten, samtidig med at canadieren bevægede sig mod højre. Filmoptagelserne viser kontakten og styrtet. Hensigten bag Bauers bevægelse blev siden et stridspunkt, men i spurten havde den en umiddelbar følge: Criquielion mistede sin mulighed for at køre om sejren."
         },
         {
           "heading": false,
-          "text": "På optagelserne er der en skulder og en bevægelse mod vejkanten. Hensigten bag bevægelsen blev et stridspunkt længe efter løbet. For den rytter, der ligger bagved, er spørgsmålet mere umiddelbart. Han skal finde vej igennem, mens de andre mister fart eller forsvinder fra hans linje. Fondriest slap forbi sammenstødet og havde fri vej til mål."
-        },
-        {
-          "heading": false,
-          "text": "De to verdensmestre i situationen havde meget forskellige eftermiddage. Criquielion, som allerede kendte regnbuetrøjen, kom aldrig til at fuldføre den spurt, han var begyndt på. Fondriest nåede den samme streg uden at styrte. Bag dem fortsatte løbet om de næste pladser, selv om publikum stadig havde blikket ved afspærringen."
+          "text": "Fondriest havde siddet bag de to og kom fri af sammenstødet. Foran ham var vejen til mål åben. Criquielion kom ikke til at fuldføre sin spurt, og Bauer kunne ikke forhindre italieneren i at komme først over stregen. Længere tilbage fortsatte de øvrige ryttere kampen om placeringerne."
         },
         {
           "heading": true,
@@ -77,11 +69,11 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Bauer kom ind som nummer to, men blev diskvalificeret af løbets jury. Sølvet gik til franskmanden Martial Gayant, og bronzen til spanieren Juan Fernández. De var kommet ind bag den afgørende gruppe, men blev nu flyttet frem på podiet. Gayant var 27 sekunder efter Fondriest, Fernández 41. Afstandene viser, hvor meget de tre forreste havde haft at køre om, inden de nåede den sidste stribe vej."
+          "text": "Bauer kom ind som nummer to, men blev diskvalificeret af løbets jury. Sølvet gik til franskmanden Martial Gayant, og bronzen til spanieren Juan Fernández. De var kommet i mål bag den afgørende gruppe og rykkede nu frem på podiet. Gayant havde været 27 sekunder efter Fondriest, Fernández 41. Ingen af dem havde været med i kampen om sejren på de sidste meter, men sammenstødet og diskvalifikationen gav dem hver en medalje."
         },
         {
           "heading": false,
-          "text": "Criquielion måtte videre efter styrtet, mens medaljerne var væk. For ham var det en tabt chance for endnu et verdensmesterskab. For Bauer var det en placering, som først stod på vejen og derefter blev fjernet. Fondriests sejr blev stående. Juryen kunne ændre resultatlisten, men den kunne hverken give belgieren de sidste meter tilbage eller lade spurten begynde igen."
+          "text": "Criquielion stod uden medalje efter styrtet. Muligheden for endnu et verdensmesterskab var væk. Bauer mistede andenpladsen, mens Fondriests sejr blev stående. Juryens afgørelse ændrede resultatlisten, men gav ingen af de to andre en ny chance på vejen."
         },
         {
           "heading": true,
@@ -89,15 +81,11 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Sagen endte siden ved domstolene. I marts 1992 blev Bauer frifundet i en straffesag om hændelsen. Det var en anden slags afgørelse end juryens. Domstolen skulle behandle en anklage, mens løbsjuryen skulle vurdere en spurt under cykelløbets regler. De to resultater behøver derfor ikke have samme ordlyd."
+          "text": "Sagen endte siden ved domstolene. I marts 1992 blev Bauer frifundet i en straffesag om hændelsen. Frifindelsen gjaldt den strafferetlige anklage. Juryens diskvalifikation efter løbets regler blev stående."
         },
         {
           "heading": false,
-          "text": "Det er ofte styrtet, der bliver vist igen, når Ronse nævnes. Men billedet af Fondriest fortæller også noget om cykelløb. Han havde kørt hele dagen for at være blandt de sidste, der kunne vinde. Da de to foran kom i vanskeligheder, var han stadig på cyklen og kunne fortsætte."
-        },
-        {
-          "heading": false,
-          "text": "På podiet var der én verdensmester. På den sidste vejstribe havde der et øjeblik været tre mulige. Bauer og Criquielion blev hængende i den samme diskussion i årene efter. Fondriest fik regnbuetrøjen med hjem."
+          "text": "Sammenstødet kom til at følge både Bauer og Criquielion i årene efter. Fondriest havde kørt sig med i den gruppe, der skulle afgøre løbet, og var sluppet forbi, da de to andre fik kontakt. På podiet stod han med Gayant og Fernández ved sin side. Regnbuetrøjen tog han med hjem."
         }
       ]
     },
@@ -108,15 +96,11 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "Maurizio Fondriest was behind the other two when the 1988 world championship in Ronse came down to its final sprint. Steve Bauer opened the sprint ahead of him. Claude Criquielion tried to pass on the Canadian's right, beside the spectators and barriers. The two made contact. The Belgian struck the barrier and fell, and the position he had been fighting for suddenly opened up."
+          "text": "Maurizio Fondriest was behind the other two when the 1988 world championship in Ronse came down to its finish. Steve Bauer opened the sprint ahead of him. Claude Criquielion tried to pass on the Canadian’s right, beside the spectators and barriers. They made contact. The Belgian hit the barrier and crashed. Fondriest slipped past."
         },
         {
           "heading": false,
-          "text": "Fondriest went past and crossed the line as world champion, with Bauer following. Moments earlier the Italian had looked likely to finish third. Now his name would head the results. There was still a jury, a fallen bicycle and a home crowd that had witnessed a very different finish from the one it had hoped for."
-        },
-        {
-          "heading": false,
-          "text": "Two different riders would therefore reach the medal ceremony, having crossed the line in entirely different positions on the road."
+          "text": "The Italian crossed the line first, with Bauer behind him. Moments earlier he had looked like the likely bronze medallist. Now he had won the world championship, while the jury had to consider the collision behind him. Its decision would affect the rest of the podium."
         },
         {
           "heading": true,
@@ -124,47 +108,39 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "The race took place on 28 August. Criquielion had won the world title in 1984 and now had his chance on Belgian roads. Bauer had taken Olympic silver that same year. Fondriest was the young Italian who had stayed with them to the decisive group. Three countries had an interest in those last metres."
+          "text": "The race took place on 28 August. Criquielion had won the 1984 world title and now had his opportunity on Belgian soil. Bauer had taken Olympic silver that same year. Fondriest was the young Italian who had stayed with the decisive group. Finally those three were left to contest the medals."
         },
         {
           "heading": false,
-          "text": "On a results sheet a sprint looks straightforward: the first front wheel across the line wins. On the road, riders occupy space and their lines can change while they pedal. Criquielion sought a gap between Bauer and the roadside. Bauer moved right. The film shows the contact and the fall, but it cannot reveal what either rider was thinking."
+          "text": "Criquielion looked for room between Bauer and the roadside as the Canadian moved right. The film shows the contact and crash. The intention behind Bauer’s movement later became disputed, but in the sprint it had an immediate consequence: Criquielion lost his chance to race for victory."
         },
         {
           "heading": false,
-          "text": "The footage contains a shoulder and a movement towards the edge. The intention behind that movement remained disputed long afterwards. For the man behind, the immediate task was to find a way through as the riders ahead lost speed or disappeared from his path. Fondriest avoided the collision and continued to the finish."
-        },
-        {
-          "heading": false,
-          "text": "The two world champions involved had very different afternoons. Criquielion already knew the rainbow jersey, but never completed the sprint he had started. Fondriest reached the same line without falling. Behind them, the race for the next places continued while spectators were still looking towards the barrier."
+          "text": "Fondriest had been sitting behind them and escaped the collision. The road to the finish was open. Criquielion could not complete his sprint, and Bauer could not prevent the Italian crossing first. Further back, the other riders continued fighting for places."
         },
         {
           "heading": true,
-          "text": "A decision beyond the finishing order"
+          "text": "A different verdict from the finish line"
         },
         {
           "heading": false,
-          "text": "Bauer crossed second but was disqualified by the jury. Silver went to France's Martial Gayant and bronze to Spain's Juan Fernández. They had finished behind the leading group and now moved onto the podium. Gayant was 27 seconds behind Fondriest, Fernández 41. Those gaps show how much the three leaders had at stake before reaching that last strip of road."
+          "text": "Bauer finished second but was disqualified by the race jury. Silver went to France’s Martial Gayant and bronze to Spain’s Juan Fernández. They had finished behind the decisive group and now moved onto the podium. Gayant had been 27 seconds behind Fondriest, Fernández 41. Neither had contested victory in the final metres, but the collision and disqualification gave each a medal."
         },
         {
           "heading": false,
-          "text": "Criquielion had to continue after the crash, with the medals gone. For him it was a lost chance at another world championship. For Bauer it was a placing earned on the road and then removed. Fondriest's victory stood. The jury could amend the results, but it could neither give the Belgian back his last metres nor restart the sprint."
+          "text": "Criquielion was left without one after the crash. His chance of another world title was gone. Bauer lost second place, while Fondriest’s victory stood. The jury changed the results without giving either of the other two another opportunity on the road."
         },
         {
           "heading": true,
-          "text": "The aftermath away from the road"
+          "text": "The aftermath off the road"
         },
         {
           "heading": false,
-          "text": "The affair later reached the courts. In March 1992 Bauer was acquitted in a criminal case arising from the incident. That was a different decision from the jury's: the court considered a criminal accusation, while the race officials had ruled on a sprint under sporting rules. Their decisions consequently did not have to match."
+          "text": "The case subsequently reached the courts. In March 1992 Bauer was acquitted in a criminal case concerning the incident. The acquittal concerned the criminal charge. The jury’s disqualification under the race rules remained."
         },
         {
           "heading": false,
-          "text": "The crash is the sequence most often replayed when Ronse is mentioned. Yet the photograph of Fondriest tells another part of the race. He had ridden all day to remain among those who could win. When the two men ahead ran into trouble, he was still on his bicycle and able to continue."
-        },
-        {
-          "heading": false,
-          "text": "There was one world champion on the podium. On the last stretch of road there had briefly been three possible winners. Bauer and Criquielion remained caught in the same dispute for years. Fondriest took the rainbow jersey home."
+          "text": "The collision followed both Bauer and Criquielion in the years afterwards. Fondriest had ridden into the group that would decide the race and escaped when the other two made contact. On the podium Gayant and Fernández stood beside him. He took the rainbow jersey home."
         }
       ]
     }
@@ -202,11 +178,11 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "Søren Lilholt havde den grønne trøje på i Tour de France. Det skete både i 1988 og 1989, og mange år senere fortalte han stadig om arbejdet med at forsvare den. I hans egen erindring var Sean Kelly en særdeles utilfreds modstander. Det er en god detalje fra en rytter, som de store navne ikke bare kunne regne med at finde bag sig."
+          "text": "Søren Lilholt havde den grønne trøje på i Tour de France. Det skete både i 1988 og 1989. Mange år senere fortalte han stadig om arbejdet med at forsvare den. I Lilholts egen erindring var Sean Kelly en særdeles utilfreds modstander. Danskeren havde blandet sig i en konkurrence, hvor også de store navne ville være med."
         },
         {
           "heading": false,
-          "text": "Trøjen var midlertidig. Lilholt vandt aldrig Tourens samlede pointkonkurrence. Men han fik den på, og dermed fik hans forsøg også en synlig form. Når han næste dag stillede til start, var han ikke længere blot danskeren i et udbrud. Der var en trøje at tage fra ham og en konkurrence, som andre havde deres egne planer for."
+          "text": "Lilholt vandt aldrig Tourens samlede pointkonkurrence. Undervejs var føringen dog hans, og næste dag skulle den forsvares. Konkurrenterne ville tage både point og trøje fra ham."
         },
         {
           "heading": true,
@@ -214,15 +190,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "På landevejen kan en rytter ligge langt fra den samlede føring og stadig have noget at komme tidligt frem efter. Point i indlagte spurter og ved mål giver en anden stilling end tiden. Det åbner et løb inde i løbet. En hurtig mand kan vente på en samlet spurt. En angrebslysten mand kan prøve at få pointene, før de hurtigste overhovedet kommer frem."
+          "text": "Selv en rytter langt fra den samlede føring kan have grund til at komme tidligt af sted. Point ved mål og i indlagte spurter tæller i en anden konkurrence end den samlede tid. En sprinter kan vente på en samlet afslutning. En angrebslysten rytter kan forsøge at tage pointene undervejs, mens sprinterne endnu sidder i feltet."
         },
         {
           "heading": false,
-          "text": "Lilholt havde også kørt i den røde trøje, der dengang blev uddelt for Tourens indlagte spurter. Den findes ikke længere i løbets program. Det gør billederne fra hans Tour-år lidt vanskeligere at læse i dag. En rød trøje var ikke et andet holds farve, og grøn betød ikke, at han havde vundet en etape. De viste, at hans arbejde havde givet ham en føring i en bestemt konkurrence."
+          "text": "Lilholt havde også kørt i den røde trøje, der dengang blev uddelt for Tourens indlagte spurter. Den konkurrence findes ikke længere. På billederne fra hans Tour-år viser den røde trøje derfor en føring, som man ikke finder i nutidens løbsprogram. Den grønne viste føringen i pointkonkurrencen og var heller ikke i sig selv tegn på en etapesejr."
         },
         {
           "heading": false,
-          "text": "Han blev dansk professionel landevejsmester i 1988. Danmarks Cykle Unions liste placerer Bjarne Riis og Kim Eriksen efter ham. Her var der ingen trøje, der skulle afleveres ved næste Tour-etape. Mesterskabet gjaldt, til næste års løb havde fundet en ny vinder. Han kunne derfor både have en dags opgave og et resultat, som fulgte ham gennem sæsonen."
+          "text": "I 1988 blev Lilholt også dansk professionel landevejsmester foran Bjarne Riis og Kim Eriksen. Den mesterskabstrøje beholdt han frem til næste års løb. Hvor en førertrøje i Touren kunne skifte ejer fra dag til dag, fulgte det danske mesterskab ham gennem sæsonen."
         },
         {
           "heading": true,
@@ -230,31 +206,27 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Den 24. marts 1990 vandt Lilholt E3-løbet i Harelbeke. Fabio Roscioli blev nummer to og Adrie van der Poel nummer tre. For en dansker, der ofte er husket for at prøve, er det en placering, som ikke behøver nogen forklaring om næsten at have holdt hjem. Denne gang stod hans navn øverst."
+          "text": "Den 24. marts 1990 vandt Lilholt E3-løbet i Harelbeke. Fabio Roscioli blev nummer to og Adrie van der Poel nummer tre. Danskeren, der ofte blev bemærket for sine angreb, havde denne gang holdt hele vejen hjem."
         },
         {
           "heading": false,
-          "text": "Han kørte for Histor-Sigma. Sejren kom på de belgiske veje, hvor de korte stigninger og skiftende grupper giver rytterne mange anledninger til at bruge kræfterne forkert. Lilholt kom alene i mål. I sin senere genfortælling af 1990-sæsonen fremhævede han netop sejren foran Roscioli og Van der Poel. Her var der ingen gruppe tilbage at spurte imod, da han nåede stregen."
+          "text": "Han kørte for Histor-Sigma. På de belgiske veje gav de korte stigninger og skiftende grupper mange muligheder for at angribe, men også for at bruge kræfterne for tidligt. Lilholt kom alene i mål. Da han senere fortalte om 1990-sæsonen, fremhævede han sejren foran Roscioli og Van der Poel. Ved stregen var der ingen af dem at spurte imod."
         },
         {
           "heading": false,
-          "text": "Det sikre er, at han fik de to andre efter sig på listen og vandt et løb med en række af belgiske klassikernavne blandt de tidligere vindere. Hans grønne Tour-trøje var blevet afleveret igen. Sejren i Harelbeke kunne han beholde."
-        },
-        {
-          "heading": false,
-          "text": "For holdet gav en konkurrenceføring også en opgave næste dag. Pointene var allerede kørt hjem, men stillingen kunne ændres igen. At bære trøjen og at vinde den samlede konkurrence var derfor to forskellige resultater. Lilholts navn hører til blandt dem, der faktisk havde den på."
+          "text": "Med sejren kom han på vinderlisten i et løb, som mange af de belgiske klassikerryttere havde vundet før ham. Her blev resultatet stående, da dagens løb var forbi. Der ventede ingen ny etape, hvor føringen kunne skifte ejer."
         },
         {
           "heading": true,
-          "text": "Den synlige del af et forsøg"
+          "text": "Fem år i Touren"
         },
         {
           "heading": false,
-          "text": "Lilholt startede Tour de France fem gange fra 1988 til 1992. Et langt etapeløb giver en rytter mange dage til at forsøge noget og mange dage, hvor forsøget bliver lukket. Tilskueren ser måske et navn foran feltet en halv time og så ikke mere. Rytteren må stadig være klar ved næste start."
+          "text": "Lilholt startede Tour de France fem gange fra 1988 til 1992. De lange etapeløb gav ham mange dage at angribe på, men også mange dage, hvor udbruddene blev hentet. Et mislykket forsøg fjernede ikke næste dags etape fra programmet. Der skulle stadig køres videre, også når kræfterne var brugt på et udbrud, som feltet havde lukket."
         },
         {
           "heading": false,
-          "text": "Det er den del af hans karriere, der binder de forskellige trøjer sammen. For at få noget ud af point, spurter eller et endagsløb skulle han frem i den del af feltet, hvor noget kunne afgøres. Nogle dage gav det en trøje, andre en sejr. Da han stod øverst i Harelbeke, havde navnet på podiet derfor allerede været at se mange gange ude på vejen."
+          "text": "I Touren gav forsøgene ham både den røde og den grønne trøje undervejs. I Harelbeke i 1990 rakte kræfterne til at komme helt fri. Da han nåede mål, var Roscioli og Van der Poel stadig bag ham."
         }
       ]
     },
@@ -265,11 +237,11 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "Søren Lilholt wore the green jersey in the Tour de France, both in 1988 and in 1989. Many years later he still spoke about the work involved in defending it. In his recollection, Sean Kelly was a distinctly dissatisfied opponent. It is a telling detail from a rider whom the biggest names could not simply expect to find behind them."
+          "text": "Søren Lilholt wore the green jersey in the Tour de France, both in 1988 and in 1989. Many years later he still described the work of defending it. In Lilholt’s own recollection Sean Kelly was a particularly dissatisfied opponent. The Dane had become involved in a competition the biggest names wanted to win too."
         },
         {
           "heading": false,
-          "text": "The jersey was temporary. Lilholt never won the Tour's final points classification. But he wore it, making his efforts visible. At the next start he was no longer just a Dane in a breakaway. There was a jersey to take from him and a competition in which other riders had plans of their own."
+          "text": "Lilholt never won the Tour’s final points classification. During the race, however, the lead belonged to him, and the following day it needed defending. His opponents wanted both the points and his jersey."
         },
         {
           "heading": true,
@@ -277,15 +249,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "A rider can be far from the overall lead and still have something to gain by going up the road early. Points at intermediate sprints and finishes create a different classification from elapsed time. A fast rider can wait for a bunch sprint. An attacking rider can try to collect points before the fastest men get there."
+          "text": "Even a rider far from the overall lead can have reason to go early. Points at the finish and intermediate sprints count towards a different competition from overall time. A sprinter can wait for a bunch finish. An attacking rider can try taking points along the way while the sprinters remain in the peloton."
         },
         {
           "heading": false,
-          "text": "Lilholt also wore the red jersey then awarded for intermediate sprints. That competition no longer exists in the Tour. It makes photographs from his Tour years slightly harder to read today. Red was not another team's colour, and green did not mean that he had won a stage. They showed that his work had put him ahead in a particular competition."
+          "text": "Lilholt had also worn the red jersey then awarded for the Tour’s intermediate sprints. That competition no longer exists. In photographs from his Tour years, red therefore represents a lead absent from today’s race programme. Green showed the lead in the points classification and did not by itself indicate a stage victory either."
         },
         {
           "heading": false,
-          "text": "He became Denmark's professional road champion in 1988. The Danish cycling federation's list places Bjarne Riis and Kim Eriksen behind him. This jersey would not be surrendered at the next Tour stage: the title lasted until the following year's race produced another winner. His season could contain both a day's task and a result that stayed with him."
+          "text": "In 1988 Lilholt also became Danish professional road champion ahead of Bjarne Riis and Kim Eriksen. He retained that championship jersey until the following year’s race. A Tour leader’s jersey could change hands daily; the Danish title stayed with him through the season."
         },
         {
           "heading": true,
@@ -293,31 +265,27 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "On 24 March 1990 Lilholt won the E3 race in Harelbeke. Fabio Roscioli finished second and Adrie van der Poel third. For a Dane often remembered for trying, it is a result that needs no explanation about almost staying away. This time his name was first."
+          "text": "On 24 March 1990 Lilholt won the E3 race in Harelbeke. Fabio Roscioli finished second and Adrie van der Poel third. The Dane, often noticed for his attacks, had made it all the way home this time."
         },
         {
           "heading": false,
-          "text": "He rode for Histor-Sigma. The win came on Belgian roads, where short climbs and changing groups offer plenty of opportunities to spend energy badly. Lilholt finished alone. In his later account of the 1990 season he highlighted the victory ahead of Roscioli and Van der Poel. There was no group left to sprint against when he reached the line."
+          "text": "He rode for Histor-Sigma. Short climbs and changing groups on Belgian roads offered opportunities to attack, but also to spend energy too early. Lilholt finished alone. Recalling the 1990 season later, he highlighted the victory ahead of Roscioli and Van der Poel. Neither was there to sprint against at the line."
         },
         {
           "heading": false,
-          "text": "What is certain is that he finished ahead of the other two and won a race whose previous winners included many Belgian classics specialists. His green Tour jersey had been handed over again. The victory in Harelbeke was his to keep."
-        },
-        {
-          "heading": false,
-          "text": "A competition lead also gave the team a task on the following day. Points had been earned, but the standings could change again. Wearing the jersey and winning the final classification were different achievements. Lilholt belongs among those who actually wore it."
+          "text": "The victory put him on the winners’ list of a race many Belgian Classics riders had won before him. Here the result stood once the day’s racing ended. No further stage waited for the lead to change hands."
         },
         {
           "heading": true,
-          "text": "The visible part of an attempt"
+          "text": "Five years in the Tour"
         },
         {
           "heading": false,
-          "text": "Lilholt started the Tour five times, from 1988 to 1992. A long stage race gives a rider many days to try something and many days when the attempt is brought back. A spectator might see a name ahead of the bunch for half an hour and then no more. The rider still has to be ready for the next start."
+          "text": "Lilholt started the Tour five times between 1988 and 1992. Long stage races offered many days to attack, and many when breakaways were caught. A failed attempt did not remove tomorrow’s stage from the programme. The race still continued after energy had been spent in a move the bunch closed down."
         },
         {
           "heading": false,
-          "text": "That part of his career connects the different jerseys. To gain something from points, sprints or a one-day race, he had to reach the part of the field where decisions were made. Some days it brought a jersey, others a victory. By the time he stood on the top step in Harelbeke, his name had already appeared up the road many times."
+          "text": "In the Tour his attempts brought both the red and green jerseys along the way. In Harelbeke in 1990 his strength was enough to escape completely. When he reached the finish, Roscioli and Van der Poel were still behind him."
         }
       ]
     }
@@ -355,31 +323,31 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "Jacky Durand kom til start med sin sædvanlige læderhjelm, da firedagesløbet ved Dunkerque begyndte i maj 2003. Fem kilometer inde i løbet bad en UCI-kommissær ham ifølge det samtidige referat skifte til en rigtig styrthjelm. Han skiftede. Den lille episode viser ganske præcist, hvad der havde ændret sig. Det var blevet en regel, man rent faktisk kunne blive standset for at overtræde."
+          "text": "Jacky Durand kom til start med sin sædvanlige læderhjelm, da firedagesløbet ved Dunkerque begyndte i maj 2003. Fem kilometer inde i løbet bad en UCI-kommissær ham ifølge det samtidige referat skifte til en hjelm med hård skal. Durand skiftede og kørte videre. Den læderhjelm, han plejede at bruge, opfyldte ikke længere reglerne."
         },
         {
           "heading": false,
-          "text": "To måneder tidligere, den 11. marts, var Andrej Kivilev styrtet under Paris–Nice. Han døde af sine hovedskader dagen efter. Han havde kørt uden hovedbeskyttelse. Derfra gik det hurtigt med et krav, som sporten længe havde haft svært ved at få igennem. Fra 5. maj skulle de professionelle mænd i de omfattede UCI-løb bære en hjelm med hård skal."
+          "text": "To måneder tidligere, den 11. marts, var Andrej Kivilev styrtet under Paris–Nice. Han døde af sine hovedskader dagen efter. Kivilev havde kørt uden hovedbeskyttelse. Efter hans død gik det hurtigt med et hjelmkrav, som sporten længe havde haft svært ved at få gennemført. Fra 5. maj skulle de professionelle mænd i de omfattede UCI-løb bære en hjelm med hård skal."
         },
         {
           "heading": false,
-          "text": "Reglens ordlyd handlede nu om udstyr ved starten og under løbet, ikke om et personligt valg for den enkelte rytter."
+          "text": "Hjelmen var dermed blevet en betingelse for at stille op og fortsætte i løbet. Den enkelte rytter kunne ikke længere selv vælge, om han ville bære den."
         },
         {
           "heading": true,
-          "text": "Et spørgsmål, der allerede var stillet"
+          "text": "Modstanden mod et påbud"
         },
         {
           "heading": false,
-          "text": "Kivilevs død var ikke det første tab, der fik ryttere og arrangører til at tale om hjelme. Fabio Casartelli var død efter et styrt på nedkørslen fra Col de Portet-d’Aspet under Tour de France i 1995. Mindet om ham blev knyttet til et bestemt sted på en fransk bjergvej. Men hovedet var stadig bart på mange ryttere, når de næste store løb begyndte."
+          "text": "Kivilevs død var ikke det første tab, der fik ryttere og arrangører til at tale om hjelme. Fabio Casartelli var død efter et styrt på nedkørslen fra Col de Portet-d’Aspet under Tour de France i 1995. Der blev sat en mindeplade ved bjergvejen, men mange ryttere fortsatte med at køre barhovedet i de store løb."
         },
         {
           "heading": false,
-          "text": "Det er fristende at læse et ulykkesforløb baglæns og give en bestemt hjelm rollen som den løsning, der med sikkerhed havde ændret udfaldet. Den sikkerhed har vi ikke. Et styrt består af fart, retning, underlag og det, man rammer. Det ændrer ikke spørgsmålet om, hvilket udstyr et felt skal være forpligtet til at bruge. Det adskiller blot spørgsmålet om, hvad der kunne have reddet ét liv, fra spørgsmålet om, hvordan man beskytter feltet fremover."
+          "text": "Om en hjelm ville have ændret udfaldet af en bestemt ulykke, kan ikke fastslås med sikkerhed. Fart, underlag og selve sammenstødet spiller ind. Debatten om et påbud gjaldt, hvilket udstyr rytterne fremover skulle være forpligtet til at bruge."
         },
         {
           "heading": false,
-          "text": "Der havde været modstand mod et påbud. Hjelmen blev blandt andet diskuteret som en varm og besværlig del af arbejdet, især opad. I foråret 2003 forhandlede UCI med repræsentanter for hold og ryttere. Reglen kom før Giro-starten, og derfor mødte rytterne en ændret betingelse, allerede inden det første italienske rygnummer skulle sættes på."
+          "text": "Der havde været modstand mod et påbud. Hjelmen blev blandt andet diskuteret som en varm og besværlig del af arbejdet, især opad. I foråret 2003 forhandlede UCI med repræsentanter for hold og ryttere. Påbuddet kom før Giro-starten, så rytterne skulle have udstyret i orden, allerede inden de tog fat på det italienske etapeløb."
         },
         {
           "heading": true,
@@ -387,27 +355,27 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Det første påbud havde et kompromis. Hvis målet lå på toppen af en stigning på mindst fem kilometer, kunne rytterne tage hjelmen af på den afsluttende opstigning. De kunne altså være tvunget til at bære den gennem dagens veje og nedkørsler og alligevel køre over målstregen uden. Et fotografi fra en bjergafslutning i 2003 kan derfor se ældre ud end reglen."
+          "text": "Det første påbud havde et kompromis. Hvis målet lå på toppen af en stigning på mindst fem kilometer, kunne rytterne tage hjelmen af på den afsluttende opstigning. De skulle altså bære den på dagens veje og nedkørsler, men kunne stadig nå målstregen barhovedet. På billeder fra bjergafslutninger i 2003 kan ryttere derfor ses uden hjelm, selv om påbuddet var trådt i kraft."
         },
         {
           "heading": false,
-          "text": "Den engelske tekst i det japanske cykelforbunds regelmeddelelse fra juni gengiver undtagelsen. Den står som et konkret vidnesbyrd om, hvordan den første regel var skruet sammen. Obligatorisk hjelmbrug begyndte ikke som ét færdigt krav, der dækkede alle situationer på samme måde."
+          "text": "Undtagelsen fremgår af den engelske regeltekst, som det japanske cykelforbund udsendte i juni. Det første påbud krævede dermed hjelm i det meste af løbet, men gav rytterne lov til at tage den af på visse afsluttende stigninger."
         },
         {
           "heading": false,
-          "text": "I Touren samme sommer bemærkede journalister også hjelme med åbne remme. En UCI-repræsentant forklarede dengang, at rytterne forventedes at have dem spændt, men at kommissærerne endnu ikke slog hårdt ned på alle tilfælde. Der kunne således være afstand mellem et nyt stykke udstyr på hovedet og den måde, det faktisk blev brugt på."
+          "text": "I Touren samme sommer bemærkede journalister også hjelme med åbne remme. En UCI-repræsentant forklarede dengang, at rytterne forventedes at have dem spændt, men at kommissærerne endnu ikke slog hårdt ned på alle tilfælde. Kommissærernes håndhævelse skulle altså også følge med de nye regler."
         },
         {
           "heading": true,
-          "text": "Det, der skulle sidde der ved starten"
+          "text": "Læderstrimlerne var ikke længere nok"
         },
         {
           "heading": false,
-          "text": "Durands læderhjelm var synlig nok. Den bestod af polstrede strimler, som mange ældre banebilleder også viser. Men den opfyldte ikke det nye krav om en hård skal. Kommissæren kunne derfor bede ham skifte uden først at diskutere, om han plejede at styrte, eller hvordan vejret var."
+          "text": "Durands læderhjelm bestod af polstrede strimler af den slags, man også ser på mange ældre banebilleder. De var lette at genkende, men opfyldte ikke det nye krav om en hård skal. Derfor måtte han skifte."
         },
         {
           "heading": false,
-          "text": "I efteråret bekræftede UCI, at påbuddet skulle fortsætte i 2004. Hjelmen var blevet en del af betingelserne for at stille op. På mindepladen ved den franske bjergvej står stadig et navn fra 1995. Kort efter en løbsstart i 2003 måtte en anden rytter rette på sit udstyr og køre videre."
+          "text": "I efteråret bekræftede UCI, at påbuddet skulle fortsætte i 2004. Hjelmen var blevet en del af betingelserne for at stille op. Durand havde allerede mærket forskellen på vejen ved Dunkerque. Fem kilometer inde i løbet måtte læderstrimlerne vige for en hjelm med hård skal."
         }
       ]
     },
@@ -418,31 +386,31 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "Jacky Durand started with his usual leather helmet when the Four Days of Dunkirk began in May 2003. Five kilometres into the race, according to the contemporary report, a UCI commissaire asked him to change to a proper crash helmet. He changed. The small incident shows what had changed: a rule now existed that an official could intervene to enforce."
+          "text": "Jacky Durand started in his usual leather helmet when the Four Days of Dunkirk began in May 2003. Five kilometres into the race, according to the contemporary report, a UCI commissaire asked him to change to a hard-shell helmet. Durand changed and continued. His usual headgear no longer met the rules."
         },
         {
           "heading": false,
-          "text": "Two months earlier, on 11 March, Andrei Kivilev had crashed during Paris–Nice. He died of his head injuries the following day. He had been riding without a helmet. A requirement that the sport had long struggled to introduce followed quickly. From 5 May professional men in the relevant UCI races had to wear a hard-shell helmet."
+          "text": "Two months earlier, on 11 March, Andrei Kivilev had crashed during Paris–Nice. He died from his head injuries the following day. Kivilev had been riding without head protection. After his death a helmet requirement long resisted in cycling advanced quickly. From 5 May professional men in the relevant UCI races had to wear hard-shell helmets."
         },
         {
           "heading": false,
-          "text": "The wording now concerned equipment at the start and during the race, rather than a personal choice for the individual rider."
+          "text": "A helmet had become a condition of starting and continuing in the race. Individual riders could no longer decide whether to wear one."
         },
         {
           "heading": true,
-          "text": "A question already asked"
+          "text": "Resistance to a requirement"
         },
         {
           "heading": false,
-          "text": "Kivilev's death was not the first loss to prompt discussion about helmets. Fabio Casartelli died after crashing on the descent of the Col de Portet-d'Aspet during the 1995 Tour de France. His memory became attached to a particular place on a French mountain road. Yet many riders still started subsequent major races bareheaded."
+          "text": "Kivilev’s death was not the first loss to prompt discussion of helmets among riders and organisers. Fabio Casartelli had died after crashing on the descent of the Col de Portet-d’Aspet during the 1995 Tour de France. A memorial plaque was placed beside the mountain road, but many riders continued racing bareheaded in major events."
         },
         {
           "heading": false,
-          "text": "It is tempting to read an accident backwards and assign a helmet the role of something that would certainly have changed its outcome. We do not have that certainty. Speed, direction, surface and the object struck all form part of a crash. That leaves the separate question of what equipment riders should be required to use in future races."
+          "text": "Whether a helmet would have changed a particular accident’s outcome cannot be established with certainty. Speed, the surface and the collision itself matter. The debate over compulsion concerned what equipment riders would be required to use in future."
         },
         {
           "heading": false,
-          "text": "There had been opposition to compulsion. Helmets were discussed as hot and cumbersome, particularly uphill. In spring 2003 the UCI negotiated with representatives of teams and riders. The rule arrived before the Giro, so riders faced a changed condition before attaching their first Italian race numbers."
+          "text": "There had been resistance. Helmets were discussed as a hot, inconvenient part of the job, particularly uphill. During spring 2003 the UCI negotiated with team and rider representatives. The requirement arrived before the Giro started, so riders needed their equipment in order before beginning the Italian stage race."
         },
         {
           "heading": true,
@@ -450,27 +418,27 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "The first requirement included a compromise. Where a finish stood at the top of a climb at least five kilometres long, riders could remove their helmets on the final ascent. They might be required to wear them through the day's roads and descents yet cross the finishing line without them. A photograph from a mountain finish in 2003 can therefore look older than the rule."
+          "text": "The first requirement included a compromise. If the finish stood atop a climb at least five kilometres long, riders could remove their helmets on that final ascent. They had to wear them on the day’s roads and descents but could still reach the line bareheaded. Photographs of mountain finishes in 2003 can therefore show helmetless riders after the requirement took effect."
         },
         {
           "heading": false,
-          "text": "The English text reproduced in the Japanese cycling federation's June rule bulletin includes that exception. This small piece of paperwork fixes the first provision in its historical setting. Compulsory helmets did not begin as one final requirement covering every situation in the same way."
+          "text": "The exception appears in the English rules circulated by the Japanese federation in June. The initial requirement thus covered most of the race while allowing riders to remove their helmets on certain final climbs."
         },
         {
           "heading": false,
-          "text": "During that summer's Tour, reporters also noted helmets with unfastened straps. A UCI representative explained that riders were expected to fasten them, but commissaires were not yet penalising every instance strictly. There could be a gap between putting new equipment on one's head and using it as intended."
+          "text": "During that summer’s Tour, journalists also noticed unfastened helmet straps. A UCI representative explained that riders were expected to fasten them, but commissaires were not yet acting firmly in every case. Enforcement also had to catch up with the new rules."
         },
         {
           "heading": true,
-          "text": "What had to be there at the start"
+          "text": "Leather strips were no longer enough"
         },
         {
           "heading": false,
-          "text": "Durand's leather helmet was visible enough. It consisted of padded strips, familiar from many older track photographs. It did not meet the new hard-shell requirement. The commissaire could ask him to change without first debating how often he crashed or what the weather was like."
+          "text": "Durand’s helmet consisted of padded leather strips, familiar from many older track photographs. They were easily recognised but did not meet the new hard-shell requirement. That was why he had to change."
         },
         {
           "heading": false,
-          "text": "In the autumn the UCI confirmed that the requirement would continue in 2004. The helmet had become a condition of starting. The memorial plaque beside the French mountain road still carries a name from 1995. Shortly after a race start in 2003 another rider had to adjust his equipment and ride on."
+          "text": "In the autumn the UCI confirmed the requirement would continue in 2004. Helmets had become part of the conditions for racing. Durand had already experienced the difference on the road near Dunkirk. Five kilometres into the race, leather strips had to give way to a hard shell."
         }
       ]
     }
@@ -508,7 +476,7 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "Et stålrør stopper ikke bare ved kronrøret på en gammel racer. Det forsvinder ind under en kant, som kan være skåret i en spids eller ført rundt i en bue. På samlingens Wonder fra 1937 kan man følge de synlige overgange mellem stellets rør. Malingen samler fladerne, men kanterne røber, at der ligger et ekstra stykke stål udenpå."
+          "text": "Ved kronrøret på en gammel racer forsvinder stålrøret ind under muffens kant. Kanten kan ende i en spids eller være formet som en bue. På samlingens Wonder fra 1937 kan man følge de synlige overgange mellem stellets rør. Under lakken kan man stadig se kanterne af det ekstra stykke stål, der omslutter rørene ved samlingen."
         },
         {
           "heading": false,
@@ -520,15 +488,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "I sin beskrivelse af cykelfabrikken fra 1921 fører W. F. Grew læseren fra lageret ind i produktionen. På lageret lå både stålrør og støbte eller pressede emner til muffer. De kom altså ikke nødvendigvis til verden ved det samme arbejdsbord. Cykelfabrikken samlede en række halvfabrikata, som hver især stadig krævede bearbejdning."
+          "text": "I sin beskrivelse af cykelfabrikken fra 1921 fører W. F. Grew læseren fra lageret ind i produktionen. På lageret lå både stålrør og støbte eller pressede emner til muffer. Fabrikken samlede altså stel af halvfabrikata fra forskellige produktionsled. Både rør og muffeemner skulle bearbejdes, før de kunne bruges sammen."
         },
         {
           "heading": false,
-          "text": "Et rør skulle afkortes, og enden tilpasses det rør, det skulle møde. Muffen lå udenom forbindelsen. Hvis delene ikke passede, kunne byggeren ikke ordne det ved blot at lægge en stor klat loddemetal på den synlige kant. Det var inde i overlapningen, samlingen skulle hænge sammen. Pasningen bestemte derfor meget af det arbejde, som den færdige cykel senere skjulte."
+          "text": "Et rør skulle afkortes, og enden tilpasses det rør, det skulle møde. Muffen omsluttede samlingen. Hvis delene ikke passede, kunne byggeren ikke ordne det ved blot at lægge en stor klat loddemetal på den synlige kant. Samlingen skulle bindes sammen inde under muffen. Derfor var en nøjagtig pasning vigtig, selv om det meste af arbejdet senere blev skjult."
         },
         {
           "heading": false,
-          "text": "På en tegning kan stellet se ud som nogle få streger. Ved arbejdsbordet havde stregerne en diameter og en godstykkelse. Muffens åbninger skulle passe til dem, og vinklerne skulle passe til den ønskede cykel. En ekstra udskæring i en muffe ændrede ikke et forkert skåret rør til et rigtigt. Filen havde både en praktisk og en synlig opgave."
+          "text": "Rørenes diameter og godstykkelse stillede krav til samlingen. Muffens åbninger skulle passe omkring rørene, og vinklerne skulle svare til stellets geometri. Byggeren brugte filen til at tilpasse delene og forme de synlige kanter. En dekorativ udskæring kunne ikke rette op på et rør, der var skåret forkert."
         },
         {
           "heading": true,
@@ -540,11 +508,11 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Varmen skulle føres til samlingen med omtanke. Det var hverken en konkurrence om den største flamme eller et spørgsmål om at få hele stellet til at gløde. Rør, muffe og loddemateriale skulle afstemmes i arbejdsprocessen. Derfor giver det heller ikke mening at udpege én temperatur, som alle gamle stålstel skulle have været samlet ved."
+          "text": "Byggeren skulle styre varmen efter rørene, muffen og det valgte loddemateriale. Samlingen skulle varmes tilstrækkeligt op, uden at delene tog skade. Der fandtes derfor ikke én loddetemperatur, som gjaldt for alle gamle stålstel."
         },
         {
           "heading": false,
-          "text": "Reynolds beskriver selv, at 531-stel blev samlet både med muffer og med muffefri slaglodning, hvor en loddefuge bygges op omkring samlingen. Den anden metode er en nyttig påmindelse, når man står med et gammelt stel. Tynde stålrør var ikke afhængige af muffer for overhovedet at kunne samles. Mufferne var en udbredt løsning med deres egne krav til pasning og arbejde."
+          "text": "Reynolds beskriver selv, at 531-stel blev samlet både med muffer og med muffefri slaglodning, hvor en loddefuge bygges op omkring samlingen. Tynde stålrør kunne altså også samles uden muffer. De to metoder stillede forskellige krav til tilpasning og lodning."
         },
         {
           "heading": true,
@@ -552,15 +520,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Da samlingen var kølet af, var arbejdet stadig ikke færdigt. Lodderester og flusmiddel skulle væk, og stellet skulle kontrolleres og gøres klar til den videre behandling. En flot kant kunne ikke fortælle, om der var loddet ordentligt hele vejen inde under den. Overfladen og den skjulte samling var to dele af samme håndværk."
+          "text": "Da samlingen var kølet af, var arbejdet stadig ikke færdigt. Lodderester og flusmiddel skulle væk, og stellet skulle kontrolleres og gøres klar til den videre behandling. En pænt formet kant var ingen garanti for, at loddemetallet havde bundet hele vejen inde under muffen. Både den synlige afslutning og den skjulte forbindelse skulle være i orden."
         },
         {
           "heading": false,
-          "text": "Til gengæld blev kanten ved med at være synlig. Nogle muffer havde korte, enkle flige, andre mere udtrukne former eller åbninger. Der kunne bruges tid på at forme dem, men formen alene røber ikke med sikkerhed, hvem der har bygget stellet. Muffer blev også købt som emner, og de samme grundformer kunne ende hos flere værksteder."
+          "text": "Til gengæld blev kanten ved med at være synlig. Nogle muffer havde korte, enkle flige, andre mere udtrukne former eller åbninger. Byggeren kunne bruge lang tid på at forme dem. Alligevel kan formen ikke alene identificere værkstedet. Muffer blev også købt som emner, og flere byggere kunne arbejde med de samme grundformer."
         },
         {
           "heading": false,
-          "text": "På Wonder-cyklen kan man stadig se, hvor rør og muffe mødes, selv om cyklen for længst er blevet færdig, monteret og kørt på. Et sæt hjul eller et styr kan skiftes, uden at de kanter forsvinder. De følger stellet. Man kan gå tættere på dem med øjnene, men man kan ikke se ind til det loddemetal, der holder røret fast."
+          "text": "På Wonder-cyklen fra 1937 er overgangen mellem rør og muffe stadig synlig. Hjul og styr kan udskiftes, men muffernes kanter følger stellet. Under dem ligger det loddemetal, der binder rørene sammen."
         }
       ]
     },
@@ -571,11 +539,11 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "A steel tube does not simply stop at the head tube of an old racing bicycle. It disappears beneath an edge that may form a point or curve around the joint. On the collection's 1937 Wonder, the visible transitions can be followed from one frame tube to another. Paint unifies the surfaces, but the edges reveal an extra piece of steel outside them."
+          "text": "At the head tube of an old racing bicycle, the steel tube disappears beneath a lug’s edge. That edge may end in a point or curve. On the collection’s 1937 Wonder, the visible transitions between frame tubes can be followed. Beneath the paint the edges of the extra steel surrounding the tubes at each joint remain visible."
         },
         {
           "heading": false,
-          "text": "Before the paint, the tubes had to fit those pieces. A lug had sockets for the tubes meeting at the joint and held them at a particular angle. Before the bicycle could carry a rider, its builder had to turn separate components into one frame. That work began long before the filler metal became hot."
+          "text": "Before painting, the tubes had to fit inside the lugs. A lug had openings for the tubes meeting there and held them at a particular angle to one another. Before the bicycle could carry a rider, the builder had to turn loose parts into one frame. That work began long before the filler metal became hot."
         },
         {
           "heading": true,
@@ -583,31 +551,31 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "In his 1921 account of a bicycle factory, W. F. Grew takes the reader from the stores into production. The stores contained steel tubing as well as castings and stampings for lugs. They did not necessarily originate at the same workbench. A factory brought together partly finished components that still needed machining and fitting."
+          "text": "In his 1921 account of a cycle factory, W. F. Grew takes the reader from stores into production. Steel tubing and cast or pressed lug blanks lay in stock. The factory assembled frames from semi-finished products originating in different production processes. Tubes and lug blanks both needed work before they could be used together."
         },
         {
           "heading": false,
-          "text": "A tube had to be cut to length and its end shaped to meet another tube. The lug surrounded the connection. Poor fitting could not be remedied merely by putting a large blob of braze around the visible edge. The joint had to bond inside the overlap. Much of the work would disappear beneath the finished surface."
+          "text": "A tube needed cutting to length and its end fitting to the tube it would meet. The lug enclosed the joint. If the parts did not fit, a large blob of filler on the visible edge could not put things right. The connection had to be made inside the lug. Accurate fitting mattered even though most of the work would later be hidden."
         },
         {
           "heading": false,
-          "text": "On a drawing a frame can look like a few lines. At the bench those lines had diameters and wall thicknesses. The sockets had to fit them, and their angles had to suit the intended bicycle. Another cut-out in a lug could not correct a badly cut tube. The file had both a practical and a visible task."
+          "text": "Tube diameter and wall thickness placed demands on the joint. Lug openings had to fit around the tubes, with angles matching the frame geometry. The builder used a file to fit the parts and shape their visible edges. A decorative cutout could not correct a badly cut tube."
         },
         {
           "heading": true,
-          "text": "Metal between the parts"
+          "text": "Brazed between the parts"
         },
         {
           "heading": false,
-          "text": "In brazing the filler melts while the steel tubes remain solid. In a suitable gap the liquid filler can flow between tube and lug by capillary action. Flux helps keep oxides away from the joining surfaces during heating. What remains between the parts bonds them after cooling."
+          "text": "In brazing, the filler metal melts while the steel tubes remain solid. In a suitable gap, molten filler can flow between lug and tube by capillary action. Flux helps keep the joining surfaces free from oxides during heating. The metal remaining between the parts binds them after cooling."
         },
         {
           "heading": false,
-          "text": "Heat had to be applied with care. This was neither a competition for the largest flame nor a reason to make the whole frame glow. Tube, lug and filler belonged to one working process. There is consequently no single temperature at which every old steel frame must have been assembled."
+          "text": "The builder had to control the heat for the tubes, lug and chosen filler. The joint needed sufficient heat without damaging the parts. There was therefore no single brazing temperature applying to every old steel frame."
         },
         {
           "heading": false,
-          "text": "Reynolds explains that 531 frames were assembled both with lugs and by fillet brazing, building a fillet around a joint without a lug. This is useful to remember when examining an old frame. Thin steel tubes did not require lugs in order to be joined at all. Lugs were a common method with their own requirements for fit and workmanship."
+          "text": "Reynolds describes 531 frames being joined both with lugs and by lugless fillet brazing, building a fillet around the joint. Thin steel tubes could be joined without lugs too. The two methods placed different demands on fitting and brazing."
         },
         {
           "heading": true,
@@ -615,15 +583,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Cooling did not finish the work. Residual filler and flux had to be removed, and the frame checked and prepared for further treatment. A handsome edge could not show whether the bond was sound throughout the hidden overlap. Surface finish and the concealed joint were two parts of the same craft."
+          "text": "Cooling did not finish the job. Excess filler and flux needed removing, and the frame had to be checked and prepared for further treatment. A neatly shaped edge did not guarantee the filler had bonded throughout the hidden joint. Both the visible finish and the enclosed connection had to be sound."
         },
         {
           "heading": false,
-          "text": "The edge remained visible, however. Some lugs had short, plain points, others longer forms or openings. A builder might spend time shaping them, but shape alone does not identify a maker reliably. Lugs were also bought as blanks, and the same basic forms could reach several workshops."
+          "text": "The edge nevertheless remained visible. Some lugs had short, simple points; others had elongated shapes or cutouts. A builder could spend considerable time shaping them. Their outline alone cannot identify a workshop, however. Lug blanks were bought in, and different builders could use the same basic shapes."
         },
         {
           "heading": false,
-          "text": "On the Wonder the meeting of tube and lug is still visible, although the bicycle was finished, assembled and ridden long ago. Wheels or handlebars can be replaced without removing those edges. They stay with the frame. One can inspect them more closely, but cannot see the braze holding the tube inside."
+          "text": "On the 1937 Wonder the transition between tube and lug remains visible. Wheels and handlebars can be replaced, but the lug edges stay with the frame. Beneath them lies the filler metal binding the tubes together."
         }
       ]
     }
@@ -661,11 +629,11 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "Fritz Ravn kom ikke videre fra første etape i Tour de France i 1958. Turen fra Bruxelles til Gent havde givet ham punkteringer og en defekt kæde. Ifølge Det Kgl. Biblioteks gennemgang blev han også overset af holdets servicebil. Da han endelig nåede frem, var tidsfristen udløbet. Der var stadig et næsten helt Tour-program tilbage, men hans deltagelse var slut."
+          "text": "Fritz Ravn kom ikke videre fra første etape i Tour de France i 1958. Turen fra Bruxelles til Gent havde givet ham punkteringer og en defekt kæde. Ifølge Det Kgl. Biblioteks gennemgang blev han også overset af holdets servicebil. Da han endelig nåede frem, var tidsfristen udløbet. Næsten hele Touren lå endnu foran feltet. For Ravn var løbet slut."
         },
         {
           "heading": false,
-          "text": "Kaj Allan Olsen var blandt de tre andre danskere, der kunne stille til start igen. De havde rejst til det samme løb, men kom nu til at opleve det fra hver sin side af resultatlisten. Ravn var ude efter én dag. Olsen skulle fortsætte, indtil et beskadiget håndled og bjergene gjorde hans egen opgave for stor."
+          "text": "Kaj Allan Olsen var blandt de tre andre danskere, der kunne stille til start igen. Ravn var ude efter én dag, mens Olsen fortsatte. Først senere skulle et skadet håndled og bjergene sætte en stopper for hans Tour."
         },
         {
           "heading": true,
@@ -673,15 +641,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "De to havde allerede været med ved Schweiz Rundt i 1957 sammen med Eluf Dalgaard og Hans E. Andresen. Året efter kom alle fire med i Touren på et internationalt sammensat hold. Touren blev kørt med landshold og regionale hold, ikke med firmahold som i dag. Det gav plads til en sammensætning, som samlede ryttere fra flere lande."
+          "text": "De to havde allerede været med ved Schweiz Rundt i 1957 sammen med Eluf Dalgaard og Hans E. Andresen. Året efter kom alle fire med i Touren på et internationalt hold med ryttere fra flere lande. Touren blev dengang kørt med landshold og regionale hold, ikke med firmahold som i dag."
         },
         {
           "heading": false,
-          "text": "De danske navne var ikke ukendte hjemmefra. Olsen havde vundet Fredsløbet i 1951, og hans navn stod på en anden slags lang rejse gennem et etapeløb. På et fotografi fra det års løb får han førertrøjen efter en etape i Tjekkoslovakiet. Der er syv år mellem det billede og Tour-starten. Den tidligere triumf sikrede ham ikke et hurtigt reservehjul på de franske landeveje."
+          "text": "Hjemmefra havde Olsen allerede en stor etapeløbssejr med sig. Han havde vundet Fredsløbet i 1951. På et fotografi fra det års løb får han førertrøjen efter en etape i Tjekkoslovakiet. Syv år senere skulle han forsøge sig i Touren, hvor både modstanderne og hjælpen fra holdet var anderledes."
         },
         {
           "heading": false,
-          "text": "Vinterbanens leder Jørgen Beyerholm havde ifølge bibliotekets fremstilling hjulpet danskerne ind i Touren gennem sine internationale forbindelser. De kom fra et cykelmiljø, hvor baneprogrammet fyldte meget i de professionelles arbejdsliv. Nu skulle de indrette sig efter et løb, som hver morgen flyttede hele arbejdspladsen videre til næste by."
+          "text": "Vinterbanens leder Jørgen Beyerholm havde ifølge bibliotekets fremstilling hjulpet danskerne ind i Touren gennem sine internationale forbindelser. De kom fra et cykelmiljø, hvor baneprogrammet fyldte meget i de professionelles arbejdsliv. I Touren ventede etaper dag efter dag med skiftende start- og målbyer."
         },
         {
           "heading": true,
@@ -689,15 +657,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Ravns første dag viste, hvor meget en servicebil betød. En defekt kæde er et problem, uanset hvem man kører for, men den tid, der går med at få cyklen kørende, bliver forskellig alt efter, om hjælpen er ved siden af rytteren eller et andet sted på vejen. Et holdnavn på startlisten var ikke det samme som en mekaniker ved baghjulet."
+          "text": "Ravns første dag viste, hvor meget en servicebil betød. Med en defekt kæde kunne rytteren kun komme videre, hvis han fik cyklen i orden. Var servicebilen langt væk, gik der tid med at vente eller forsøge at reparere selv. Ravn havde en plads på holdet, men ifølge bibliotekets fremstilling blev han overset af bilen."
         },
         {
           "heading": false,
-          "text": "Det Kgl. Bibliotek beskriver danskernes materiel og hjælp som beskedne sammenlignet med de store cykelnationers. Andresen fortalte senere, at han kørte med en ekstra ring om halsen, så han kunne skifte selv. Det var hans erindring om sin egen løsning. Den fortæller noget om vilkårene, men den giver ikke belæg for at antage, at Ravn gjorde det samme ved sine punkteringer."
+          "text": "Det Kgl. Bibliotek beskriver danskernes materiel og hjælp som beskedne sammenlignet med de store cykelnationers. Andresen fortalte senere, at han kørte med en ekstra ring om halsen, så han kunne skifte selv. Det var Andresens egen løsning; om Ravn havde en ring med ved sine punkteringer, fremgår ikke af beretningen."
         },
         {
           "heading": false,
-          "text": "Efter femte etape var også Dalgaard ude. Dermed var Olsen og Andresen tilbage af de fire. Hvor Ravn var røget ud helt fra begyndelsen, havde Olsen kørt sig gennem en række etaper. Hver gennemført dag gav adgang til den næste. Der blev ikke udleveret en samlet reserve af tid, som kunne bruges senere, hvis kroppen eller cyklen svigtede."
+          "text": "Efter femte etape var også Dalgaard ude. Dermed var Olsen og Andresen tilbage af de fire. Olsen havde nu klaret flere etaper, end Ravn nåede, men skulle stadig overholde tidsgrænsen hver dag. De gennemførte etaper gav ingen ekstra tid, hvis en skade eller en defekt forsinkede ham senere."
         },
         {
           "heading": true,
@@ -705,15 +673,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Olsen havde slået sit håndled ved et styrt. På 15. etape nåede han ikke inden for tidsgrænsen. Hans Tour sluttede dermed også før Paris, men efter et helt andet forløb end Ravns. En mekanisk vanskelighed havde standset den ene tidligt; den anden havde fortsat med en skade, indtil han ikke længere kom tidsnok frem."
+          "text": "Olsen havde slået sit håndled ved et styrt. På 15. etape nåede han ikke inden for tidsgrænsen. Hans Tour sluttede dermed også før Paris, men efter et helt andet forløb end Ravns. Punkteringer og en defekt kæde havde kostet den ene løbet fra begyndelsen. Den anden var fortsat med sit skadede håndled, indtil han heller ikke nåede frem i tide."
         },
         {
           "heading": false,
-          "text": "Andresen blev den eneste af de fire danskere, der gennemførte. Hans historie har fået sin egen plads som den første danske fuldførelse. Ved siden af den står de andre deltageres kortere forløb, som forklarer, hvorfor den bedrift ikke var nogen selvfølgelig afslutning på en fælles rejse."
+          "text": "Andresen blev den eneste af de fire danskere, der gennemførte. Dermed blev han den første dansker, der nåede Paris i Tour de France. De tre andre var faldet fra undervejs, selv om de var rejst ud sammen og havde fået plads på det samme hold."
         },
         {
           "heading": false,
-          "text": "I resultatarkivet står Ravn ved første etape og Olsen ved den femtende. De var holdkammerater i det samme Tour-forsøg, med to meget forskellige dage, hvor løbet ikke ventede."
+          "text": "Ravn havde måttet opgive efter punkteringerne og den defekte kæde på første etape. Olsen havde holdt sig i løbet i to uger, men endte ligesom holdkammeraten uden for tidsgrænsen."
         }
       ]
     },
@@ -724,43 +692,43 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "Fritz Ravn did not get beyond the first stage of the 1958 Tour de France. The ride from Brussels to Ghent brought punctures and a faulty chain. According to the Royal Danish Library's account, his team's service car also missed him. By the time he arrived the time limit had expired. Almost the entire Tour remained, but his participation was over."
+          "text": "Fritz Ravn did not get beyond the first stage of the 1958 Tour de France. The ride from Brussels to Ghent brought punctures and a faulty chain. According to the Royal Danish Library’s account, the team service car also overlooked him. By the time he arrived, the time limit had expired. Almost the entire Tour still lay ahead of the field. Ravn’s race was over."
         },
         {
           "heading": false,
-          "text": "Kaj Allan Olsen was one of the other three Danes able to start again. They had travelled to the same race but would now experience it from opposite sides of the results sheet. Ravn was out after one day. Olsen continued until an injured wrist and the mountains made his own task too much."
+          "text": "Kaj Allan Olsen was among the other three Danes able to start again. Ravn was out after one day; Olsen continued. A damaged wrist and the mountains would end his Tour later."
         },
         {
           "heading": true,
-          "text": "Four Danes in an international team"
+          "text": "Four Danes on an international team"
         },
         {
           "heading": false,
-          "text": "They had already ridden the 1957 Tour de Suisse with Eluf Dalgaard and Hans E. Andresen. The following year all four joined an international team in the Tour. The race used national and regional teams rather than today's normal commercial teams. That allowed a squad bringing together riders from several countries."
+          "text": "The two had already ridden the 1957 Tour de Suisse with Eluf Dalgaard and Hans E. Andresen. All four entered the following year’s Tour on an international team containing riders from several countries. The Tour then used national and regional teams rather than today’s trade teams."
         },
         {
           "heading": false,
-          "text": "The Danish names were not unknown at home. Olsen had won the Peace Race in 1951, another long journey through a stage race. In a photograph from that edition he receives the leader's jersey after a stage in Czechoslovakia. Seven years separate that image from the Tour start. The earlier victory could not deliver a spare wheel on the French route."
+          "text": "Olsen already had a major stage-race victory. He had won the 1951 Peace Race. A photograph from that race shows him receiving the leader’s jersey after a stage in Czechoslovakia. Seven years later he would attempt the Tour, where both the opponents and support were different."
         },
         {
           "heading": false,
-          "text": "According to the library, winter-track director Jørgen Beyerholm helped the Danes enter the Tour through his international connections. They came from a cycling environment in which the track programme occupied much of a professional's working life. Now they faced a race that moved the whole workplace to another town each morning."
+          "text": "According to the library, winter-track manager Jørgen Beyerholm had helped the Danes enter the Tour through his international contacts. They came from a cycling environment where track programmes occupied much of a professional’s working life. The Tour offered stages day after day with changing start and finish towns."
         },
         {
           "heading": true,
-          "text": "When assistance did not arrive"
+          "text": "When help did not arrive"
         },
         {
           "heading": false,
-          "text": "Ravn's first day showed what a service car meant. A faulty chain is a problem whatever team one rides for. The time spent getting moving again changes depending on whether help is beside the rider or elsewhere on the road. A team name on the start list was not a mechanic beside the rear wheel."
+          "text": "Ravn’s first day showed how much a service car mattered. With a faulty chain a rider could continue only after getting the bicycle working. If the car was far away, time disappeared while waiting or attempting repairs. Ravn had a place on the team but, according to the library’s account, was overlooked by the car."
         },
         {
           "heading": false,
-          "text": "The Royal Danish Library describes the Danes' equipment and support as modest beside those of the larger cycling nations. Andresen later recalled carrying a spare tubular around his neck so that he could change it himself. That was his recollection of his own solution. It illuminates the conditions but does not justify assigning the same action to Ravn during his punctures."
+          "text": "The library describes the Danes’ equipment and support as modest compared with the major cycling nations’. Andresen later recalled carrying a spare tubular around his neck so he could replace it himself. That was Andresen’s solution; the account does not say whether Ravn carried one when he punctured."
         },
         {
           "heading": false,
-          "text": "Dalgaard was also out after stage five. Olsen and Andresen remained of the four. Where Ravn had lost the race at the beginning, Olsen had completed a succession of stages. Each finished day gave access to the next. There was no reserve of time to spend later if body or bicycle failed."
+          "text": "Dalgaard was out after stage five. That left Olsen and Andresen of the four. Olsen had completed more stages than Ravn managed, but still had to meet each day’s time limit. Completed stages earned no spare time if injury or a mechanical delayed him later."
         },
         {
           "heading": true,
@@ -768,15 +736,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Olsen had injured his wrist in a crash. On stage fifteen he finished outside the time limit. His Tour also ended before Paris, but after a very different course of events from Ravn's. A mechanical difficulty had stopped one man early; the other had continued with an injury until he could no longer arrive in time."
+          "text": "Olsen had hurt his wrist in a crash. On stage fifteen he missed the time limit. His Tour also ended before Paris, after a very different sequence from Ravn’s. Punctures and a faulty chain had ended one man’s race at the outset. The other continued with an injured wrist until he too failed to arrive in time."
         },
         {
           "heading": false,
-          "text": "Andresen was the only one of the four Danes to finish. His achievement has its own place as the first Danish completion. Alongside it stand the shorter journeys of his teammates, explaining why finishing was no inevitable conclusion to their shared trip."
+          "text": "Andresen alone of the four completed the race, becoming the first Dane to reach Paris in the Tour. The other three had dropped out along the way despite travelling together and securing places on the same team."
         },
         {
           "heading": false,
-          "text": "The results archive places Ravn at stage one and Olsen at stage fifteen. They were teammates in the same Tour attempt, with two very different days when the race did not wait."
+          "text": "Ravn had stopped after punctures and the chain problem on the opening stage. Olsen lasted two weeks, but ended outside the time limit like his teammate."
         }
       ]
     }
@@ -818,7 +786,7 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Han kom alene hjem i Rabobanks trøje. Moncassin blev nummer to, Ballerini nummer tre. Den officielle resultatliste gav franskmanden syv sekunders efterslæb. Efter knap seks timer var det ganske lidt på uret, men tilstrækkeligt til, at der ikke skulle køres en spurt om førstepladsen. Sørensen havde fået sin afgørelse, før den del begyndte."
+          "text": "Han kom alene hjem i Rabobanks trøje. Moncassin blev nummer to, Ballerini nummer tre. Den officielle resultatliste gav franskmanden syv sekunders efterslæb. Efter knap seks timer havde syv sekunder været nok. Sørensen var kommet fri, før de to andre kunne tvinge ham ud i en spurt."
         },
         {
           "heading": true,
@@ -826,15 +794,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Vejen dertil havde ikke været én ubrudt solotur. På de korte stigninger og brostensstykker blev grupperne samlet og delt igen. Sørensen var fremme sammen med Laurent Jalabert, men det samarbejde holdt ikke hele vejen. På Berendries mistede franskmanden kontakten med de forreste. De mænd, danskeren skulle slå, blev ved med at skifte."
+          "text": "Vejen dertil havde ikke været én ubrudt solotur. På de korte stigninger og brostensstykker blev grupperne samlet og delt igen. Sørensen var fremme sammen med Laurent Jalabert, men det samarbejde holdt ikke hele vejen. På Berendries mistede franskmanden kontakten med de forreste. Danskeren blev fremme, mens gruppen omkring ham skiftede."
         },
         {
           "heading": false,
-          "text": "Bag dem styrtede favoritten Johan Museeuw sammen med Bruno Boscardin. Det kostede belgieren muligheden for at vinde sit tredje Flandern Rundt i træk. Styrtet tog den største favorit ud af ligningen, men det gav ingen fri vej til mål – Sørensen havde stadig farlige modstandere at holde øje med."
+          "text": "Bag dem styrtede favoritten Johan Museeuw sammen med Bruno Boscardin. Det kostede belgieren muligheden for at vinde sit tredje Flandern Rundt i træk. Museeuw var ude af kampen, men Sørensen havde stadig stærke modstandere omkring sig."
         },
         {
           "heading": false,
-          "text": "Omkring de sidste stigninger fandt blandt andre Peter Van Petegem, Ballerini og Sørensen sammen. Så blev de hentet. Det samtidige løbsreferat viser et forløb, hvor et forspring kunne eksistere på én bakke og være væk ved den næste. Den, der ville vinde, måtte derfor både være stærk nok til at komme frem og blive ved med at reagere, når løbet ændrede form."
+          "text": "Omkring de sidste stigninger fandt blandt andre Peter Van Petegem, Ballerini og Sørensen sammen. Også den gruppe blev hentet. Forspring blev skabt og lukket, efterhånden som bakkerne blev passeret. Sørensen måtte blive ved med at svare på nye angreb, hvis han ville være med, når det afgørende udbrud gik."
         },
         {
           "heading": true,
@@ -842,15 +810,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Efter Bosberg kom Moncassins angreb. Sørensen og Ballerini fulgte med, og de tre holdt de øvrige bag sig på vej mod afslutningen. Nu var der færre ryttere at forholde sig til. Til gengæld kom hver eneste føring og hvert eneste ryk til at fylde mere. Den mand, der lukkede et hul, brugte kræfter, som han ikke kunne gemme til sin egen afslutning."
+          "text": "Efter Bosberg kom Moncassins angreb. Sørensen og Ballerini fulgte med, og de tre holdt de øvrige bag sig på vej mod afslutningen. Nu var de kun tre om føringerne og de sidste angreb. Den, der lukkede et hul, måtte bruge kræfter, som han også kunne få brug for i sin egen afslutning."
         },
         {
           "heading": false,
-          "text": "Moncassin havde en hurtig spurt. Sørensen forklarede umiddelbart efter løbet, at franskmandens tilstedeværelse gjorde det nødvendigt for ham at forsøge sig i den sidste kilometer. Hans forklaring kom, efter at forsøget var lykkedes. Den passer til det synlige forløb: Ballerinis forsøg, Moncassins svar og derefter Sørensens ryk."
+          "text": "Moncassin havde en hurtig spurt. Sørensen forklarede umiddelbart efter løbet, at franskmandens tilstedeværelse gjorde det nødvendigt for ham at forsøge sig i den sidste kilometer. Afslutningen gav ham muligheden: Først angreb Ballerini, så lukkede Moncassin, og derefter rykkede Sørensen."
         },
         {
           "heading": false,
-          "text": "Da Moncassin havde svaret på italienerens angreb, fik danskeren sin åbning. De forrige kilometer havde sørget for, at han var med i den rigtige gruppe. De sidste meter krævede, at han også kom fri af den."
+          "text": "Moncassin havde netop brugt kræfter på italienerens angreb, da danskeren satte sit eget ind. Sørensen slog hul, og denne gang blev han ikke hentet."
         },
         {
           "heading": true,
@@ -858,15 +826,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Sørensen var blevet professionel i Italien og havde allerede vundet Liège–Bastogne–Liège i 1993. Flandern var derfor ikke hans første store endagssejr. Men brostenene og de korte belgiske bakker stillede en anden opgave end Ardennernes løb. I 1997 kørte han på et nederlandsk hold med mange års erfaring fra det italienske cykelmiljø i bagagen."
+          "text": "Sørensen var blevet professionel i Italien og havde allerede vundet Liège–Bastogne–Liège i 1993. Flandern var derfor ikke hans første store endagssejr. Men brostenene og de korte belgiske bakker stillede en anden opgave end Ardennernes løb. I 1997 kørte han for det nederlandske Rabobank, efter at han selv havde tilbragt mange år i det italienske cykelmiljø."
         },
         {
           "heading": false,
-          "text": "Resultatet gjorde ham til den første danske vinder af Flandern Rundt. Det sendte ham også til tops i den daværende World Cup-stilling. Begge dele kunne noteres i statistikkerne bagefter. På vejen var det stadig nødvendigt at få nogle meter til to bestemte modstandere, som begge var kommet lige så langt gennem dagens løb."
+          "text": "Sørensen blev den første danske vinder af Flandern Rundt og overtog samtidig føringen i den daværende World Cup-stilling. Rykket på den sidste kilometer havde givet ham både sejren og pointene til at gå i spidsen for sæsonens konkurrence."
         },
         {
           "heading": false,
-          "text": "Fotografiet ved historien er fra Paris–Tours året efter og viser ham i Rabobanks farver. Det er ikke et billede af afgørelsen i Meerbeke. Der kunne man til sidst se Sørensen alene foran de to andre. De syv sekunder blev stående på resultatlisten."
+          "text": "Fotografiet ved historien er fra Paris–Tours året efter og viser ham i Rabobanks farver. Det viser ham ikke i afgørelsen i Meerbeke. Der nåede han stregen alene, mens Moncassin og Ballerini stadig var på vej. De syv sekunder blev stående."
         }
       ]
     },
@@ -877,27 +845,27 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "Franco Ballerini tried to get away in the final kilometre. Frédéric Moncassin closed the gap, and then Rolf Sørensen attacked. On 6 April 1997 the Tour of Flanders had been reduced to three men ahead of the rest, but had not yet found its winner. The Dane opened a gap that the other two did not close before the line in Meerbeke."
+          "text": "Franco Ballerini tried to get away in the final kilometre. Frédéric Moncassin closed the gap, and then Rolf Sørensen attacked. On 6 April 1997 the Tour of Flanders had come down to three men ahead of the rest, but no winner had emerged. The Dane opened a gap the other two did not close before the line in Meerbeke."
         },
         {
           "heading": false,
-          "text": "He arrived alone in Rabobank colours. Moncassin finished second, Ballerini third. The official result gave the Frenchman a deficit of seven seconds. After almost six hours it was little on the clock, but enough to prevent a sprint for first place. Sørensen had settled that question before the sprint began."
+          "text": "He finished alone in Rabobank colours. Moncassin was second, Ballerini third. The official results gave the Frenchman a seven-second deficit. After almost six hours, seven seconds had been enough. Sørensen had escaped before the others could force him into a sprint."
         },
         {
           "heading": true,
-          "text": "At the front as the groups changed"
+          "text": "Up front as the groups changed"
         },
         {
           "heading": false,
-          "text": "Getting there had not been one continuous solo ride. Short climbs and cobbled sections split and reunited the groups. Sørensen rode ahead with Laurent Jalabert, but that partnership did not last to the finish. The Frenchman lost contact on the Berendries. The men the Dane needed to beat kept changing."
+          "text": "It had not been an uninterrupted solo ride. Short climbs and cobbled stretches brought groups together and split them again. Sørensen was up front with Laurent Jalabert, but their cooperation did not last to the finish. The Frenchman lost contact with the leaders on the Berendries. The Dane remained ahead as the group around him changed."
         },
         {
           "heading": false,
-          "text": "Behind them, favourite Johan Museeuw crashed with Bruno Boscardin. It cost the Belgian his chance of a third consecutive Flanders victory. The crash removed a major opponent from the decisive action, but Sørensen still had others to watch. Delaying the favourite did not clear the road to the finish."
+          "text": "Behind them favourite Johan Museeuw crashed with Bruno Boscardin. It cost the Belgian his chance of a third consecutive Flanders victory. Museeuw was out of contention, but Sørensen still had strong opponents around him."
         },
         {
           "heading": false,
-          "text": "Around the final climbs, riders including Peter Van Petegem, Ballerini and Sørensen came together, then were caught. Contemporary reporting shows a lead existing on one hill and disappearing by the next. A potential winner needed strength to reach the front and the ability to respond when the race changed shape."
+          "text": "Around the final climbs Peter Van Petegem, Ballerini and Sørensen were among those who came together. That group was caught too. Gaps opened and closed as the hills passed. Sørensen had to keep answering attacks to remain involved when the decisive move went."
         },
         {
           "heading": true,
@@ -905,31 +873,31 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Moncassin attacked after the Bosberg. Sørensen and Ballerini followed, and the three held off the others towards the finish. There were fewer riders to consider, but each turn and attack mattered more. Closing a gap used energy that could not be saved for one's own finish."
+          "text": "Moncassin attacked after the Bosberg. Sørensen and Ballerini followed, and the three kept the rest behind on the way towards the finish. Only three now shared the turns and final attacks. Anyone closing a gap spent strength he might need for his own finish."
         },
         {
           "heading": false,
-          "text": "Moncassin was fast at the finish. Immediately afterwards Sørensen explained that the Frenchman's presence had made a final-kilometre move necessary. His explanation followed a successful attempt and fits the visible sequence: Ballerini's move, Moncassin's response, then Sørensen's acceleration."
+          "text": "Moncassin had a fast sprint. Immediately after the race Sørensen explained that the Frenchman’s presence had made a final-kilometre attack necessary. The finish gave him his opening: Ballerini attacked first, Moncassin closed, then Sørensen went."
         },
         {
           "heading": false,
-          "text": "When Moncassin answered the Italian, the Dane found his opportunity. The preceding kilometres had put him in the right group. The final metres required him to leave it."
+          "text": "Moncassin had just spent energy on the Italian’s attack when the Dane launched his own. Sørensen opened a gap and this time was not caught."
         },
         {
           "heading": true,
-          "text": "A victory without a shared sprint"
+          "text": "Victory without a shared sprint"
         },
         {
           "heading": false,
-          "text": "Sørensen had turned professional in Italy and already won Liège–Bastogne–Liège in 1993. Flanders was not his first major one-day victory. Its cobbles and short Belgian climbs presented a different task from the Ardennes race. In 1997 he rode for a Dutch team, with his years in Italian cycling part of the same career behind him."
+          "text": "Sørensen had turned professional in Italy and already won Liège–Bastogne–Liège in 1993. Flanders was not his first major one-day victory. Its cobbles and short Belgian hills nevertheless presented a different task from the Ardennes races. In 1997 he rode for the Dutch Rabobank team after spending many years in Italian cycling."
         },
         {
           "heading": false,
-          "text": "He became the first Danish winner of the Tour of Flanders. The result also took him to the top of the World Cup standings. Both facts could be entered in a summary afterwards. On the road he still had to gain metres on two specific opponents who had ridden just as far through the day's race."
+          "text": "He became the first Danish winner of the Tour of Flanders and simultaneously took the lead in the World Cup standings. His final-kilometre attack had brought the victory and the points to lead the season-long competition."
         },
         {
           "heading": false,
-          "text": "The photograph accompanying this story comes from Paris–Tours the following year and shows his Rabobank colours. It does not show the decision in Meerbeke. There Sørensen finally appeared alone ahead of the other two. The seven seconds remained on the results sheet."
+          "text": "The accompanying photograph comes from Paris–Tours the following year and shows his Rabobank colours. It does not show the finish in Meerbeke. There he reached the line alone while Moncassin and Ballerini were still approaching. The seven seconds stood."
         }
       ]
     }
@@ -982,11 +950,11 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "På Wonder-raceren fra 1937 står kabelbuerne op over styret. Man kan følge dem med øjnene fra bremsegrebene, før de søger videre mod bremserne. Kablerne løber frit i luften foran rytteren. På nærbilledet er de en del af cyklens silhuet, lige så synlige som frempinden og grebenes metal."
+          "text": "På Wonder-raceren fra 1937 står kabelbuerne op over styret. Fra bremsegrebene løber de op i frie buer, før de fortsætter mod bremserne. På nærbilledet er de lige så synlige som frempinden og grebenes metal."
         },
         {
           "heading": false,
-          "text": "Det er let at se dem som et gammelt udseende, der siden blev ryddet væk. Men buen havde en opgave. Grebet skulle trække i bremsen, samtidig med at styret kunne dreje. De to bevægelser måtte ikke komme til at bestemme over hinanden. Cyklen skulle kunne drejes til siden, uden at det i sig selv strammede kablet og trak bremseklodserne ind mod fælgen."
+          "text": "Buerne gav plads til, at styret kunne dreje, mens grebene stadig trak i bremserne. Kabeltrækket og styringen skulle fungere uafhængigt af hinanden. Cyklen skulle kunne drejes til siden, uden at det i sig selv strammede kablet og trak bremseklodserne ind mod fælgen."
         },
         {
           "heading": false,
@@ -998,15 +966,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Når rytteren trak grebet ind, bevægede inderkablet sig i forhold til yderhylstret. Hylstret gav kablet en vej, der kunne bøje, og en modholdende forbindelse mellem enderne. Ved bremsen blev trækket omsat til en bevægelse af bremsearmene. Klodserne skulle presses ind mod fælgen og vende tilbage igen, når rytteren slap grebet."
+          "text": "Når rytteren trak grebet ind, bevægede inderkablet sig i forhold til yderhylstret. Yderhylstret kunne bøje og gav samtidig det modhold, som inderkablets træk krævede. Ved bremsen blev trækket omsat til en bevægelse af bremsearmene. Klodserne skulle presses ind mod fælgen og vende tilbage igen, når rytteren slap grebet."
         },
         {
           "heading": false,
-          "text": "En bue var derfor ikke kun overskydende længde. Der skulle være plads til bevægelse, men heller ikke så meget hylster, at det dannede unødvendige omveje. En for kort længde kunne trække, når styret blev drejet. En skarp bøjning kunne øge modstanden, når inderkablet skulle glide. Længden skulle passe til netop det styr, de greb og den bremse, der sad på cyklen."
+          "text": "Buerne skulle have den rette længde. For lidt hylster kunne stramme kablet, når styret blev drejet, mens for meget gav unødvendige omveje. En skarp bøjning kunne øge modstanden, når inderkablet skulle glide. Længden skulle passe til netop det styr, de greb og den bremse, der sad på cyklen."
         },
         {
           "heading": false,
-          "text": "På et fotografi kan man se føringen, men ikke, hvor let inderkablet bevæger sig. Et tilsyneladende pænt kabel kan være slidt eller beskadiget indvendigt. Derfor dokumenterer billeder af en bevaret racer alene den synlige opbygning. De er ikke en bremseprøve og heller ikke et bevis for, at alle delene stadig er de først monterede."
+          "text": "Et fotografi viser føringen, men ikke, hvor let inderkablet glider. Kablet kan være slidt indvendigt, selv om det ser pænt ud. På en bevaret cykel kan det desuden være udskiftet undervejs. Billedet viser derfor den nuværende opbygning, ikke nødvendigvis den oprindelige montering."
         },
         {
           "heading": true,
@@ -1014,15 +982,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "På den gamle løsning forlader kablet grebet opad. Yderhylstret får sin bue fri af styret, inden føringen fortsætter. Mekanikeren kan se, hvor det ligger, og nå det uden først at tage hele styrbeviklingen af. Det gør selve føringen let at følge, også mange år efter at cyklen blev bygget."
+          "text": "På den gamle løsning forlader kablet grebet opad. Yderhylstret får sin bue fri af styret, inden føringen fortsætter. Mekanikeren kan se, hvor det ligger, og nå det uden først at tage hele styrbeviklingen af. Et kabelskift kræver derfor ikke i sig selv, at styret vikles af."
         },
         {
           "heading": false,
-          "text": "Bagbremsekablet har længere vej end forbremsens. Det skal videre fra det bevægelige styr og frem til den del af bremsesystemet, der sidder bag rytteren. På forskellige stel findes forskellige holdere og stop. Man må derfor se på den konkrete cykel, før man forklarer, hvor hylstret slutter, og hvor et frit kabelstykke begynder."
+          "text": "Bagbremsekablet har længere vej end forbremsens. Det skal forbinde det bevægelige styr med bremsen bag rytteren. På forskellige stel findes forskellige holdere og stop. Man må derfor se på den konkrete cykel, før man forklarer, hvor hylstret slutter, og hvor et frit kabelstykke begynder."
         },
         {
           "heading": false,
-          "text": "Wonder-cyklens nærbillede er nyttigt, fordi det fastholder netop én løsning. Det skal ikke bære en regel om, at ingen cykel før et bestemt år kunne have haft en anden. Cykler blev bygget, ændret og repareret af mange hænder. En bevaret detalje er et bedre udgangspunkt end en altomfattende påstand om alle tidens værksteder."
+          "text": "Wonder-cyklens nærbillede viser én af de måder, kablerne kunne føres på. Andre stel, greb og bremser kunne kræve en anden løsning. Dertil kom de ændringer, som ejere og mekanikere foretog, når cyklerne blev repareret eller bygget om."
         },
         {
           "heading": true,
@@ -1030,15 +998,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Omkring 1980 blev aerodynamik et tydeligt udviklingsspor hos Shimano. Fabrikanten daterer sin Dura-Ace AX-serie til 1980. I begyndelsen af 1980'ernes kataloger ses bremsegreb, hvor kablet føres tilbage langs styret i stedet for op i den gamle frie bue. Grebets konstruktion var med til at bestemme, hvor kablet kunne gå."
+          "text": "Omkring 1980 blev aerodynamik et tydeligt udviklingsspor hos Shimano. Fabrikanten daterer sin Dura-Ace AX-serie til 1980. I begyndelsen af 1980'ernes kataloger ses bremsegreb, hvor kablet føres tilbage langs styret i stedet for op i den gamle frie bue. Den nye føring krævede, at kablet kunne forlade grebet i den rigtige retning."
         },
         {
           "heading": false,
-          "text": "Det var altså ikke tilstrækkeligt blot at presse den gamle bue ind under tapen. Udløbet fra grebet og forløbet rundt på styret skulle fungere sammen. En skjult føring havde stadig brug for den længde og de bøjninger, som lod trækket bevæge sig. Den mekaniske opgave fortsatte, selv om noget af forbindelsen forsvandt fra øjet."
+          "text": "Det var altså ikke tilstrækkeligt blot at presse den gamle bue ind under tapen. Udløbet fra grebet og forløbet rundt på styret skulle fungere sammen. Også under beviklingen skulle hylstret have den rette længde og bløde bøjninger, så inderkablet kunne glide let."
         },
         {
           "heading": false,
-          "text": "På Wonder-raceren kan man stadig følge buerne uden at løsne noget. Ved siden af en senere racer med skjulte bremsekabler bliver forskellen tydelig oppe ved grebene. Hånden trækker stadig et kabel mod en bremse. På cyklen fra 1937 ligger den første del af rejsen helt åbent."
+          "text": "På Wonder-raceren kan man stadig følge buerne uden at løsne noget. Ved siden af en senere racer med skjulte bremsekabler bliver forskellen tydelig oppe ved grebene. Begge løsninger overfører håndens træk til bremsearmene. På cyklen fra 1937 står yderhylstret i en fri bue. På den senere løsning følger det styret under beviklingen."
         }
       ]
     },
@@ -1049,15 +1017,15 @@ export const approvedStories20261128 = {
       "blocks": [
         {
           "heading": false,
-          "text": "On the 1937 Wonder racing bicycle, the cable loops rise above the handlebars. The eye can follow them from the brake levers before they continue towards the brakes. The cables run openly in front of and above the bars. In the close-up they form part of the bicycle's outline, as visible as its stem and metal levers."
+          "text": "On the 1937 Wonder racing bicycle, cable loops rise above the handlebars. From the brake levers they curve freely upwards before continuing towards the brakes. In the close-up they are as visible as the stem and metal levers."
         },
         {
           "heading": false,
-          "text": "It is easy to see them as an old appearance that was later tidied away. Yet the loop had a job. The lever needed to pull the brake while the handlebars remained free to turn. Those two movements could not be allowed to control each other. Turning the bars should not itself tighten the cable and bring the pads against the rim."
+          "text": "The loops allowed the handlebars to turn while the levers still operated the brakes. Steering and cable operation had to work independently. Turning the bicycle to one side should not itself tighten a cable and pull the brake blocks against the rim."
         },
         {
           "heading": false,
-          "text": "The front brake sits close to the fork, while the rear cable continues along the frame. Both connections begin at the rider’s hands, but their routes soon differ after leaving the bars."
+          "text": "The front brake sits near the fork, while the rear cable continues along the frame. Both connections begin at the rider’s hands, but their routes soon diverge after leaving the bars."
         },
         {
           "heading": true,
@@ -1065,15 +1033,15 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "Pulling the lever moved the inner cable relative to its housing. The housing provided a flexible route and a resisting connection between its ends. At the brake the pull became movement of the arms. The pads needed to reach the rim and release it when the rider released the lever."
+          "text": "Pulling the lever moved the inner cable relative to its housing. The housing could bend while providing the reaction needed for the inner cable’s pull. At the brake that pull moved the arms. The blocks had to press against the rim and return when the rider released the lever."
         },
         {
           "heading": false,
-          "text": "A loop was not merely surplus length. There had to be room for movement without so much housing that it took unnecessary detours. Too little length could pull when the bars turned. A sharp bend could increase resistance as the inner cable slid. Length had to suit the particular bars, levers and brake fitted to that bicycle."
+          "text": "The loops needed the right length. Too little housing could tighten the cable when the bars turned; too much created unnecessary detours. A sharp bend could increase resistance as the inner cable slid. Length had to suit that particular handlebar, lever and brake."
         },
         {
           "heading": false,
-          "text": "A photograph shows the route, not how freely the inner cable moves. An apparently tidy cable can be worn or damaged inside. Images of a preserved racer document its visible arrangement first of all. They are neither a brake test nor proof that every component remains the one originally fitted."
+          "text": "A photograph shows the route, not how easily the inner cable slides. Internal wear may exist despite a tidy appearance. On a preserved bicycle the cable may have been replaced. The picture therefore records the current arrangement, not necessarily the original installation."
         },
         {
           "heading": true,
@@ -1081,31 +1049,31 @@ export const approvedStories20261128 = {
         },
         {
           "heading": false,
-          "text": "In the older arrangement the cable leaves the lever upwards. The housing forms its loop clear of the bars before continuing. A mechanic can see the route and reach it without first removing all the handlebar wrapping. Its course remains easy to follow many years after the bicycle was built."
+          "text": "In the older arrangement the cable leaves the lever upwards. The housing forms a loop clear of the bars before continuing onwards. A mechanic can see and reach it without removing all the handlebar tape. Replacing a cable does not itself require unwrapping the bars."
         },
         {
           "heading": false,
-          "text": "The rear cable travels further than the front. It must get from the moving handlebar to the part of the braking system behind the rider. Different frames have different guides and stops. The particular bicycle must therefore be examined before explaining where the housing ends and an exposed section begins."
+          "text": "The rear cable travels further than the front. It connects the moving handlebar to the brake behind the rider. Frames use different guides and stops. The particular bicycle must therefore be examined before explaining where housing ends and an exposed section begins."
         },
         {
           "heading": false,
-          "text": "The Wonder close-up is useful because it records one arrangement. It should not become a rule that no bicycle before a particular year could have used something else. Bicycles were built, altered and repaired by many hands. A surviving detail offers a better starting point than a sweeping claim about every contemporary workshop."
+          "text": "The Wonder close-up shows one possible arrangement. Other frames, levers and brakes could require another solution. Repairs and rebuilding by owners and mechanics brought further changes."
         },
         {
           "heading": true,
-          "text": "The cable went beneath the wrapping"
+          "text": "The cable went beneath the tape"
         },
         {
           "heading": false,
-          "text": "Around 1980 aerodynamics became a clear development theme at Shimano. The manufacturer dates its Dura-Ace AX series to 1980. Early-1980s catalogues show brake levers whose cables run backwards along the bars rather than upwards in the old open loop. The lever's construction helped determine where its cable could go."
+          "text": "Around 1980 aerodynamics became a prominent development direction at Shimano. The manufacturer dates its Dura-Ace AX series to 1980. Early-1980s catalogues show levers routing cables backwards along the bars rather than upwards in the old free loop. The new route required the cable to leave the lever in the right direction."
         },
         {
           "heading": false,
-          "text": "Simply pressing the old loop under the tape was not enough. The lever outlet and the route around the bar had to work together. Hidden routing still needed the length and bends that allowed the pull to move. The mechanical task continued even when part of the connection disappeared from sight."
+          "text": "Simply pressing an old loop beneath the tape was therefore insufficient. The lever outlet and route around the bars needed to work together. Beneath the wrapping, housing still needed the right length and gentle bends for the inner cable to slide easily."
         },
         {
           "heading": false,
-          "text": "On the Wonder the loops can still be followed without undoing anything. Beside a later racer with concealed brake cables, the difference is clear at the levers. A hand still pulls a cable towards a brake. On the 1937 bicycle the first part of that journey remains in plain view."
+          "text": "On the Wonder the loops can still be followed without loosening anything. Beside a later racer with concealed brake cables, the difference appears at the levers. Both arrangements transfer the hand’s pull to the brake arms. On the 1937 bicycle the housing stands in a free curve. On the later arrangement it follows the bars beneath the tape."
         }
       ]
     }

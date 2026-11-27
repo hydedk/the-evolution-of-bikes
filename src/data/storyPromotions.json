@@ -209,7 +209,11 @@
       "slug": "eluf-dalgaard-bane-og-landevej",
       "date": "2026-11-27",
       "approved": true,
-      "publishAt": "2026-11-27T09:00:00+01:00"
+      "publishAt": "2026-11-27T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
     },
     {
       "id": "hist-000228",
@@ -283,6 +287,83 @@
       "date": "2026-12-05",
       "approved": true,
       "publishAt": "2026-12-05T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000276",
+      "slug": "klamer-lykke-kay-werners-makkere",
+      "date": "2026-12-06",
+      "approved": true,
+      "publishAt": "2026-12-06T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000408",
+      "slug": "guimard-tre-tour-kaptajner",
+      "date": "2026-12-07",
+      "approved": true,
+      "publishAt": "2026-12-07T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000262",
+      "slug": "montreal-vm-1974-merckx",
+      "date": "2026-12-08",
+      "approved": true,
+      "publishAt": "2026-12-08T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000436",
+      "slug": "bottecchia-sidste-tur-1927",
+      "date": "2026-12-09",
+      "approved": true,
+      "publishAt": "2026-12-09T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000486",
+      "slug": "shimano-600-arabesque",
+      "date": "2026-12-10",
+      "approved": true,
+      "publishAt": "2026-12-10T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000282",
+      "slug": "hans-henrik-oersted-forfoelgelse",
+      "date": "2026-12-11",
+      "approved": true,
+      "publishAt": "2026-12-11T09:00:00+01:00",
+      "languages": [
+        "da",
+        "en"
+      ]
+    },
+    {
+      "id": "hist-000277",
+      "slug": "leif-mortensen-amatoer-til-professionel",
+      "date": "2026-12-12",
+      "approved": true,
+      "publishAt": "2026-12-12T09:00:00+01:00",
       "languages": [
         "da",
         "en"

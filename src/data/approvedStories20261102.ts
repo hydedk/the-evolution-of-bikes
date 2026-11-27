@@ -1,3 +1,4 @@
+import { approvedStories20261213 } from './approvedStories20261213';
 import { approvedStories20261206 } from './approvedStories20261206';
 import { approvedStories20261128 } from './approvedStories20261128';
 import { approvedStories20261125 } from './approvedStories20261125';
@@ -29,6 +30,7 @@ export const approvedStories20261102 = {
   ...approvedStories20261125,
   ...approvedStories20261128,
   ...approvedStories20261206,
+  ...approvedStories20261213,
 "alfonsina-strada-giro-1924": {
   "id": "hist-000011",
   "slug": "alfonsina-strada-giro-1924",

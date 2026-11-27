@@ -37,6 +37,13 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'eileen-gray-kvindernes-startplads': { period: '1970-1979', primary: 'menneskene-bag' },
+  'rammebyggeren-bag-sponsorens-navn': { period: '1970-1979', primary: 'teknik' },
+  'styr-frempind-foer-1950': { period: '1930-1939', primary: 'teknik' },
+  'banecyklen-fast-gear-uden-bremser': { period: '1950-1959', primary: 'loeb-og-store-oejeblikke' },
+  'coppi-verdensmester-lugano-1953': { period: '1950-1959', primary: 'loeb-og-store-oejeblikke' },
+  'sarah-maddock-cyklede-i-nederdel': { period: '1800-1899', primary: 'samfund-og-tidsaand' },
+  'styrtape-foer-1950': { period: '1930-1939', primary: 'teknik' },
   'pino-cerami-sene-sejre': { period: '1960-1969', primary: 'ryttere' },
   'sadelpindens-diameter-staalrammer': { period: '1970-1979', primary: 'teknik' },
   'thorvald-ellegaard-fra-fangel-til-verdensbanerne': { period: '1900-1920', primary: 'ryttere' },

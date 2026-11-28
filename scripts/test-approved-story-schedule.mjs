@@ -43,6 +43,7 @@ assert.deepEqual(timed.map(({id,publishAt})=>[id,publishAt]), [
   ['hist-000448','2026-12-17T09:00:00+01:00'],
   ['hist-000531','2026-12-18T09:00:00+01:00'],
   ['hist-000488','2026-12-19T09:00:00+01:00'],
+  ['hist-000540','2026-12-22T09:00:00+01:00'],
 ]);
 for (const entry of timed) {
   const exact = new Date(entry.publishAt);
@@ -53,4 +54,17 @@ for (const entry of timed) {
   assert(selectPromotedStories(stories, plan, entry.date, exact).some(s=>s.slug===entry.slug));
   assert(!promotionIsDue(entry, {...plan,enabled:false}, exact));
 }
-console.log('Publication time checked for the twenty-seven approved stories.');
+console.log('Publication time checked for the twenty-eight approved stories.');
+
+const willard = plan.entries.find(entry => entry.id === 'hist-000540');
+assert.deepEqual(willard,{id:'hist-000540',slug:'frances-willard-gladys',date:'2026-12-22',approved:true,publishAt:'2026-12-22T09:00:00+01:00',languages:['da','en','de']});
+const release = new Date(willard.publishAt);
+assert.equal(release.toISOString(),'2026-12-22T08:00:00.000Z');
+for (const instant of ['2026-11-28T12:00:00+01:00','2026-12-21T23:59:59+01:00','2026-12-22T08:59:59.999+01:00']) {
+  assert(!promotionIsDue(willard,plan,new Date(instant)));
+  assert(!selectPromotedStories(stories,plan,instant.slice(0,10),new Date(instant)).some(s=>s.slug===willard.slug));
+}
+assert(promotionIsDue(willard,plan,release));
+assert(selectPromotedStories(stories,plan,willard.date,release).some(s=>s.slug===willard.slug));
+assert(!promotionIsDue({...willard,approved:false},plan,new Date('2050-01-01')));
+console.log('Willard DA/EN/DE and its German period are approved only from 22 December 2026, 09:00 Europe/Copenhagen.');

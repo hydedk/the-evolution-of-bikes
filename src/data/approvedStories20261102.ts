@@ -1,3 +1,4 @@
+import { approvedStoriesWillard20261128 } from './approvedStoriesWillard20261128';
 import { approvedStories20261213 } from './approvedStories20261213';
 import { approvedStories20261206 } from './approvedStories20261206';
 import { approvedStories20261128 } from './approvedStories20261128';
@@ -26,6 +27,7 @@ import releaseImage13 from '../assets/stories/sadelpindens-diameter-staalrammer/
 import releaseImage14 from '../assets/stories/forgaffelbygning-foer-1950/image-1.png';
 
 export const approvedStories20261102 = {
+  ...approvedStoriesWillard20261128,
   ...approvedStories20261122,
   ...approvedStories20261125,
   ...approvedStories20261128,

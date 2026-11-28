@@ -156,7 +156,7 @@ const englishYear = (year: string) => year
 
 export const englishStories = stories
   .filter((story) => storyCopy[story.slug])
-  .map((story) => ({ ...story, year: englishYear(story.year), title: story.slug === 'alfonsina-strada-giro-1924' && copenhagenDate() >= '2026-11-05' ? releaseStories[story.slug].en.title : storyCopy[story.slug][0], text: story.slug === 'alfonsina-strada-giro-1924' && copenhagenDate() >= '2026-11-05' ? releaseStories[story.slug].en.description : storyCopy[story.slug][1] }));
+  .map((story) => ({ ...story, year: story.slug === 'frances-willard-gladys' ? releaseStories[story.slug].en.year : englishYear(story.year), title: story.slug === 'alfonsina-strada-giro-1924' && copenhagenDate() >= '2026-11-05' ? releaseStories[story.slug].en.title : storyCopy[story.slug][0], text: story.slug === 'alfonsina-strada-giro-1924' && copenhagenDate() >= '2026-11-05' ? releaseStories[story.slug].en.description : storyCopy[story.slug][1] }));
 export const englishBikes = bikes.filter((bike) => bikeCopy[bike.slug]).map((bike) => {
   const [text, place, status] = bikeCopy[bike.slug];
   return { ...bike, text, place: place || bike.place, status, year: englishYear(bike.year) };

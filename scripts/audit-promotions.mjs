@@ -91,3 +91,26 @@ if (latest) for (const [home,prefix] of [['','historier'],['en/','en/stories']])
 const sitemap = await readFile(new URL('sitemap.xml',root),'utf8');
 for (const [, url] of sitemap.matchAll(/<loc>(.*?)<\/loc>/g)) if (isUnreleasedHref(url)) throw new Error('Held section in sitemap: '+url);
 console.log('Promotion output check passed: timed publication, shared header/footer/logo, four public menu items, no held sections or links.');
+
+// All four pages in the approved Willard package share one release boundary.
+const willard=plan.entries.find(entry=>entry.id==='hist-000540');
+if(willard){
+  const paths=['historier/frances-willard-gladys/','en/stories/frances-willard-gladys/','de/geschichten/frances-willard-gladys/','de/epochen/1800-1899/'];
+  const released=promotionIsDue(willard,plan,now);
+  for(const path of paths){
+    const present=await access(new URL(path+'index.html',root)).then(()=>true,error=>{if(error.code==='ENOENT')return false;throw error;});
+    if(present!==released)throw Error('Willard package release boundary mismatch: '+path);
+    if(!released && publicHtml.some(page=>page.html.includes('/'+path)))throw Error('Premature Willard package link: '+path);
+    if(released){
+      const html=await readFile(new URL(path+'index.html',root),'utf8');
+      for(const lang of ['da','en','de','x-default'])if(!html.includes('hreflang="'+lang+'"'))throw Error('Willard alternate missing: '+path+' '+lang);
+    }
+  }
+  if(released){
+    const german=await readFile(new URL(paths[2]+'index.html',root),'utf8');
+    const period=await readFile(new URL(paths[3]+'index.html',root),'utf8');
+    if(!german.includes('/'+paths[3])||!period.includes('/'+paths[2]))throw Error('Willard and German period must link to each other.');
+    for(const path of ['perioder/1800-1899/','en/periods/1800-1899/'])if(!(await readFile(new URL(path+'index.html',root),'utf8')).includes('/'+paths[3]))throw Error('Reciprocal German period link missing: '+path);
+  }
+  console.log('Willard package: all three story languages and German period obey the same release boundary.');
+}

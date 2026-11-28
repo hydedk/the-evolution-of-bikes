@@ -37,6 +37,7 @@ export const periods = [
 type Classification = { period: string; primary: ThemeId; secondary?: ThemeId[] };
 
 const storyClassifications: Record<string, Classification> = {
+  'frances-willard-gladys': { period: '1800-1899', primary: 'samfund-og-tidsaand', secondary: ['cykelkultur'] },
   'eileen-gray-kvindernes-startplads': { period: '1970-1979', primary: 'menneskene-bag' },
   'rammebyggeren-bag-sponsorens-navn': { period: '1970-1979', primary: 'teknik' },
   'styr-frempind-foer-1950': { period: '1930-1939', primary: 'teknik' },

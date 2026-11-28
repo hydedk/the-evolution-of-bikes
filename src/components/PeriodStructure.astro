@@ -1,4 +1,8 @@
 ---
+import promotionPlan from '../data/storyPromotions.json';
+import { promotionIsDue } from '../data/storyPromotion.mjs';
+const willardEntry = promotionPlan.entries.find(entry => entry.id === 'hist-000540');
+const willardReady = import.meta.env.DEV || (willardEntry && promotionIsDue(willardEntry, promotionPlan));
 import { themes, themeIds, contentForPeriod, localizeContent } from '../data/taxonomy';
 const { period = '1990-1999' } = Astro.props as { language?: 'da' | 'en'; lang?: 'da' | 'en'; period?: string };
 const language = (Astro.props.language ?? Astro.props.lang ?? 'da') as 'da' | 'en';
@@ -44,21 +48,21 @@ if (period === '1800-1899') {
     ['Tre ting, der ændrede cyklingen','To lige store hjul afløste væltepeteren. Luftdækket gjorde lange distancer mere mulige. Aviserne gjorde løbene til folkelige begivenheder.'],
   ];
   timeline = en ? [
-    ['1868','A commonly cited early organised road race is held from Paris to Rouen.'],
+    ['1869','A commonly cited early organised road race is held from Paris to Rouen.'],
     ['1885','The Rover safety bicycle establishes the chain-driven layout with two similarly sized wheels.'],
     ['1888','John Boyd Dunlop patents a practical pneumatic tyre.'],
     ['1891','Charles Terront wins the first Paris–Brest–Paris after 1,200 kilometres.'],
+    ['1891','Six-day racing is held at Madison Square Garden.'],
     ['1892','The first Liège–Bastogne–Liège is held for amateurs.'],
-    ['1893','The first documented six-day solo race is held at Madison Square Garden.'],
     ['1896','Paris–Roubaix is held for the first time.'],
     ['1899','Major Taylor becomes world sprint champion in Montreal.'],
   ] : [
-    ['1868','Et ofte nævnt tidligt organiseret landevejsløb køres fra Paris til Rouen.'],
+    ['1869','Et ofte nævnt tidligt organiseret landevejsløb køres fra Paris til Rouen.'],
     ['1885','Rover-sikkerhedscyklen fastlægger kædetræk og to omtrent lige store hjul.'],
     ['1888','John Boyd Dunlop patenterer et praktisk pneumatisk dæk.'],
     ['1891','Charles Terront vinder det første Paris–Brest–Paris efter 1.200 kilometer.'],
+    ['1891','Der køres seksdagesløb i Madison Square Garden.'],
     ['1892','Det første Liège–Bastogne–Liège køres for amatører.'],
-    ['1893','Det første veldokumenterede seksdages sololøb køres i Madison Square Garden.'],
     ['1896','Paris–Roubaix køres for første gang.'],
     ['1899','Major Taylor bliver verdensmester i sprint i Montréal.'],
   ];
@@ -79,6 +83,28 @@ if (period === '1800-1899') {
     'samfund-og-tidsaand':'Industrialiseringen gjorde cyklen mere tilgængelig, men klasse, køn og racisme prægede, hvem der kunne deltage og på hvilke vilkår.',
     'menneskene-bag':'Arrangører, avisredaktører, opfindere, pacere og mekanikere skabte ruterne, maskinerne og forestillingen omkring rytteren.',
   };
+}
+// Keep the existing public overview unchanged until the approved Willard package is due.
+if (period === '1800-1899' && !willardReady) {
+  timeline = en ? [
+    ['1868','A commonly cited early organised road race is held from Paris to Rouen.'],
+    ['1885','The Rover safety bicycle establishes the chain-driven layout with two similarly sized wheels.'],
+    ['1888','John Boyd Dunlop patents a practical pneumatic tyre.'],
+    ['1891','Charles Terront wins the first Paris–Brest–Paris after 1,200 kilometres.'],
+    ['1892','The first Liège–Bastogne–Liège is held for amateurs.'],
+    ['1893','The first documented six-day solo race is held at Madison Square Garden.'],
+    ['1896','Paris–Roubaix is held for the first time.'],
+    ['1899','Major Taylor becomes world sprint champion in Montreal.'],
+  ] : [
+    ['1868','Et ofte nævnt tidligt organiseret landevejsløb køres fra Paris til Rouen.'],
+    ['1885','Rover-sikkerhedscyklen fastlægger kædetræk og to omtrent lige store hjul.'],
+    ['1888','John Boyd Dunlop patenterer et praktisk pneumatisk dæk.'],
+    ['1891','Charles Terront vinder det første Paris–Brest–Paris efter 1.200 kilometer.'],
+    ['1892','Det første Liège–Bastogne–Liège køres for amatører.'],
+    ['1893','Det første veldokumenterede seksdages sololøb køres i Madison Square Garden.'],
+    ['1896','Paris–Roubaix køres for første gang.'],
+    ['1899','Major Taylor bliver verdensmester i sprint i Montréal.'],
+  ];
 }
 if (period === '1900-1920') {
   boxes = en ? [

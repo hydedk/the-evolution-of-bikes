@@ -193,6 +193,7 @@ const socialMetadata = {
         for (const language of promotionLanguages(entry)) {
           const prefix = { da: 'historier', en: 'en/stories', de: 'de/geschichten' }[language];
           injectRoute({ pattern: '/' + prefix + '/' + entry.slug, entrypoint: fileURLToPath(new URL('./src/components/TimedStoryPage.astro', import.meta.url)) });
+          if (entry.id === 'hist-000540' && language === 'de') injectRoute({ pattern: '/de/epochen/1800-1899', entrypoint: fileURLToPath(new URL('./src/components/WillardPeriodDe.astro', import.meta.url)) });
         }
       }
       injectScript('page', lightboxScript);
